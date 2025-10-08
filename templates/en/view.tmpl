@@ -1,0 +1,10 @@
+{{define "title"}}{{.app.name}}{{end}}
+{{template "head" .}}
+<p class="header"><a href="/">Mochi</a> | <a href="/apps">Apps</a> | {{.app.name}}</p>
+
+<h2>{{.app.name}}</h2>
+<p>ID: {{.app.id}}<br/>
+Fingerprint: {{.app.fingerprint}}<br/>
+Version: {{.app.version}}</p>
+
+{{template "foot" .}}

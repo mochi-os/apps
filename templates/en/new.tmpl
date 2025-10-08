@@ -1,0 +1,11 @@
+{{define "title"}}Install an app{{end}}
+{{template "head" .}}
+<p class="header"><a href="/">Mochi</a> | <a href="/apps">Apps</a> | Install an app
+
+<p>
+<form id="form" method="post" action="/app/created">
+<input type="submit" value="Create app"/>
+</form>
+</p>
+
+{{template "foot" .}}

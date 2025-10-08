@@ -1,0 +1,22 @@
+{
+	"name": "apps",
+	"version": "1.0",
+
+	"engine": {"architecture": "starlark", "version": "1"},
+	"files": [ "apps.star" ],
+
+	"icons": [
+		{"path": "apps", "name": "Apps", "icon": "apps.png"}
+	],
+
+	"paths": {
+		"apps": {
+			"actions": {
+				"": {"function": "action_list"},
+				"new": {"function": "action_new"},
+				":app": {"function": "action_view"},
+				":app/:name": {"function": "action_view"}
+			}
+		}
+	}
+}
