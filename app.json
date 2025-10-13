@@ -1,12 +1,12 @@
 {
-	"name": "apps",
 	"version": "1.0",
-
+	"label": "app_name",
 	"engine": {"architecture": "starlark", "version": "1"},
 	"files": [ "apps.star" ],
+	"requires": {"role": "administrator"},
 
 	"icons": [
-		{"path": "apps", "name": "Apps", "icon": "apps.png"}
+		{"path": "apps", "label": "app_name", "icon": "apps.png"}
 	],
 
 	"paths": {
