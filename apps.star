@@ -14,7 +14,7 @@ def action_install_entity(action, inputs):
 # Install an app from a .zip file
 def action_install_file(action, inputs):
 	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
-	mochi.action.file.write("file", file)
+	mochi.action.file.upload("file", file)
 	mochi.app.install.file("", file)
 	mochi.file.delete(file)
 	mochi.action.write("install", action["format"])
