@@ -2,34 +2,56 @@
 # Copyright Alistair Cunningham 2025
 
 # List apps
-def action_list(action, inputs):
-	mochi.action.write("list", action["format"], mochi.app.list())
+def action_list(a):
+	a.template("list", mochi.app.list())
 
 # Install an app given its publisher's entity
-#TODO action_install_entity()
-def action_install_entity(action, inputs):
-	mochi.app.install.entity(inputs.get("entity"), inputs.get("version"))
-	mochi.action.write("install", action["format"])
+def action_install_entity(a):
+	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
+	s = mochi.stream({"from": a.identity.id, "to": a.input("id"), "service": "app", "event": "get"}, {"version": a.input("version")})
+	r = s.read()
+	if r.get("status") != "200":
+		a.error(r.get("message"))
+		return
+
+	s.read_to_file(file)
+	mochi.app.install(a.input("id"), file)
+	mochi.file.delete(file)
+
+	a.template("install")
 
 # Install an app from a .zip file
-def action_install_file(action, inputs):
+def action_install_file(a):
 	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
-	mochi.action.file.upload("file", file)
-	mochi.app.install.file("", file)
+	a.upload("file", file)
+	mochi.app.install("", file)
 	mochi.file.delete(file)
-	mochi.action.write("install", action["format"])
+	a.template("install")
+
+# Get information about an an app from its publisher's entity
+def action_information(a):
+	s = mochi.stream({"from": a.identity.id, "to": a.input("entity"), "service": "app", "event": "information"}, {})
+	r = s.read()
+	if r.get("status") != "200":
+		a.error(r.get("message"))
+		return
+
+	app = s.read()
+	fingerprint = mochi.entity.fingerprint(app["id"], True)
+
+	a.template("information", {"app": app, "fingerprint": fingerprint, "tracks": s.read()})
 
 # Enter details of new app
-def action_new(action, inputs):
-	mochi.action.write("new", action["format"])
+def action_new(a):
+	a.template("new")
 
 # View an app
-def action_view(action, inputs):
-	app = mochi.app.get(inputs.get("app"))
+def action_view(a):
+	app = mochi.app.get(a.input("app"))
 	if not app:
 		mochi.action.error(404, "App not found")
 		return
 	
 	app["fingerprint"] = mochi.entity.fingerprint(app["id"], True)
 	
-	mochi.action.write("view", action["format"], {"app": app})
+	a.template("view", {"app": app})
