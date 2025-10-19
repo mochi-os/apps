@@ -8,7 +8,7 @@ def action_list(a):
 # Install an app given its publisher's entity
 def action_install_entity(a):
 	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
-	s = mochi.stream({"from": a.identity.id, "to": a.input("id"), "service": "app", "event": "get"}, {"version": a.input("version")})
+	s = mochi.stream({"from": a.user.identity.id, "to": a.input("id"), "service": "app", "event": "get"}, {"version": a.input("version")})
 	r = s.read()
 	if r.get("status") != "200":
 		a.error(r.get("message"))
@@ -30,7 +30,7 @@ def action_install_file(a):
 
 # Get information about an an app from its publisher's entity
 def action_information(a):
-	s = mochi.stream({"from": a.identity.id, "to": a.input("entity"), "service": "app", "event": "information"}, {})
+	s = mochi.stream({"from": a.user.identity.id, "to": a.input("entity"), "service": "app", "event": "information"}, {})
 	r = s.read()
 	if r.get("status") != "200":
 		a.error(r.get("message"))
@@ -47,6 +47,7 @@ def action_new(a):
 
 # View an app
 def action_view(a):
+	a.dump()
 	app = mochi.app.get(a.input("app"))
 	if not app:
 		mochi.action.error(404, "App not found")
