@@ -20,14 +20,6 @@ def action_install_entity(a):
 
 	a.template("install")
 
-# Install an app from a .zip file
-def action_install_file(a):
-	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
-	a.upload("file", file)
-	mochi.app.install("", file)
-	mochi.file.delete(file)
-	a.template("install")
-
 # Get information about an an app from its publisher's entity
 def action_information(a):
 	s = mochi.stream({"from": a.user.identity.id, "to": a.input("entity"), "service": "app", "event": "information"}, {})

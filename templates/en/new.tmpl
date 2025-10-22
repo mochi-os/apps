@@ -2,20 +2,12 @@
 {{template "head" .}}
 <p class="header"><a href="/">Mochi</a> | <a href="/apps">Apps</a> | Install an app
 
-<h3>Install from an external source</h3>
+<h3>Install from an app publisher</h3>
+<p>Will automatically update when the app publisher publishes a new version.</p>
 <p>
 <form method="get" action="/apps/information">
 <label for="entity">Entity:</label><input type="text" name="entity" size="51" maxlength="51"/><br/>
 <input type="submit" value="Next &raquo;"/>
-</form>
-</p>
-
-<h3>Install from a .zip file</h3>
-<p>
-<form method="post" enctype="multipart/form-data" action="/apps/file">
-<label for="file">.zip file to upload:</label>
-<input type="file" name="file" accept=".zip"><br/>
-<input type="submit" value="Install"/>
 </form>
 </p>
 
