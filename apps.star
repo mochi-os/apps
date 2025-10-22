@@ -47,7 +47,6 @@ def action_new(a):
 
 # View an app
 def action_view(a):
-	a.dump()
 	app = mochi.app.get(a.input("app"))
 	if not app:
 		mochi.action.error(404, "App not found")
