@@ -3,7 +3,7 @@
 
 # List apps
 def action_list(a):
-	a.template("list", mochi.app.list())
+	a.template("list", {"apps": mochi.app.list()})
 
 # Install an app given its publisher's entity
 def action_install_entity(a):
@@ -22,7 +22,7 @@ def action_install_entity(a):
 
 # Get information about an an app from its publisher's entity
 def action_information(a):
-	s = mochi.stream({"from": a.user.identity.id, "to": a.input("entity"), "service": "app", "event": "information"}, {})
+	s = mochi.stream({"from": a.user.identity.id, "to": a.input("id"), "service": "app", "event": "information"}, {})
 	r = s.read()
 	if r.get("status") != "200":
 		a.error(r)
@@ -35,11 +35,22 @@ def action_information(a):
 
 # Enter details of new app
 def action_new(a):
-	a.template("new")
+	s = mochi.stream({"from": a.user.identity.id, "to": "12EgGkuXYabmPAv1jRp4z4Cgx9WM1U22Q5xBVLuATmTFdPdk7WK", "service": "app-market", "event": "list"}, {"language": "en"})
+	r = s.read()
+	if r.get("status") != "200":
+		a.error(r)
+		return
+
+	market = []
+	for app in s.read():
+		if not mochi.app.get(app["id"]):
+			market.append(app)
+
+	a.template("new", {"market": market})
 
 # View an app
 def action_view(a):
-	app = mochi.app.get(a.input("app"))
+	app = mochi.app.get(a.input("id"))
 	if not app:
 		mochi.action.error(404, "App not found")
 		return

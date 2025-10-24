@@ -14,10 +14,12 @@
 			"actions": {
 				"": {"function": "action_list"},
 				"information": {"function": "action_information"},
+				"information/:id": {"function": "action_information"},
+				"information/:id/:name": {"function": "action_information"},
 				"install": {"function": "action_install_entity"},
 				"new": {"function": "action_new"},
-				":app": {"function": "action_view"},
-				":app/:name": {"function": "action_view"}
+				":id": {"function": "action_view"},
+				":id/:name": {"function": "action_view"}
 			}
 		}
 	}
