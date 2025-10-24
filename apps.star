@@ -25,7 +25,7 @@ def action_information(a):
 	s = mochi.stream({"from": a.user.identity.id, "to": a.input("entity"), "service": "app", "event": "information"}, {})
 	r = s.read()
 	if r.get("status") != "200":
-		a.error(r.get("message"))
+		a.error(r)
 		return
 
 	app = s.read()
