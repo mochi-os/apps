@@ -2,7 +2,7 @@
 {{template "head" .}}
 <p class="header"><a href="/">Mochi</a> | Apps</p>
 
-<p>{{if len .apps}}{{range .apps}}<a href="/apps/{{.id}}/{{.name}}">{{.name}} {{.latest}}</a><br/>{{end}}
+<p>{{if len .apps}}<ul>{{range .apps}}<li><a href="/apps/{{.id}}/{{.name}}">{{.name}} {{.latest}}</a></li>{{end}}</ul>
 {{else}}No apps are installed{{end}}</p>
 
 <p><a href="/apps/new">Install an app</a></p>
