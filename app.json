@@ -1,26 +1,24 @@
 {
 	"version": "1.0",
 	"label": "app_name",
-	"engine": {"architecture": "starlark", "version": 2},
-	"files": [ "apps.star" ],
+	"paths": ["apps"],
+
+	"architecture": {"engine": "starlark", "version": 2},
+	"execute": ["apps.star"],
 	"requires": {"role": "administrator"},
 
 	"icons": [
-		{"path": "apps", "label": "app_name", "icon": "apps.png"}
+		{"action": "", "label": "app_name", "file": "apps.png"}
 	],
 
-	"paths": {
-		"apps": {
-			"actions": {
-				"": {"function": "action_list"},
-				"information": {"function": "action_information"},
-				"information/:id": {"function": "action_information"},
-				"information/:id/:name": {"function": "action_information"},
-				"install": {"function": "action_install_entity"},
-				"new": {"function": "action_new"},
-				":id": {"function": "action_view"},
-				":id/:name": {"function": "action_view"}
-			}
-		}
+	"actions": {
+		"": {"function": "action_list"},
+		"information": {"function": "action_information"},
+		"information/:id": {"function": "action_information"},
+		"information/:id/:name": {"function": "action_information"},
+		"install": {"function": "action_install_entity"},
+		"new": {"function": "action_new"},
+		":id": {"function": "action_view"},
+		":id/:name": {"function": "action_view"}
 	}
 }
