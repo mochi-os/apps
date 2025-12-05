@@ -11,13 +11,12 @@
 	],
 
 	"actions": {
-		"": {"function": "action_list"},
+		"": {"file": "web/dist/index.html"},
+		"assets": {"files": "web/dist/assets"},
+		"list": {"function": "action_list"},
+		"market": {"function": "action_market"},
 		"information": {"function": "action_information"},
-		"information/:id": {"function": "action_information"},
-		"information/:id/:name": {"function": "action_information"},
-		"install": {"function": "action_install_entity"},
-		"new": {"function": "action_new"},
-		":id": {"function": "action_view"},
-		":id/:name": {"function": "action_view"}
+		"install": {"function": "action_install"},
+		":id": {"function": "action_view"}
 	}
 }

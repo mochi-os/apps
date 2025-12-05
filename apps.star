@@ -1,60 +1,71 @@
 # Mochi Apps app
 # Copyright Alistair Cunningham 2025
 
-# List apps
+# List installed apps
 def action_list(a):
-	a.template("list", {"apps": mochi.app.list()})
+	apps = mochi.app.list()
+	for app in apps:
+		app["fingerprint"] = mochi.entity.fingerprint(app["id"], True)
+	return {"data": {"apps": apps}}
 
-# Install an app given its publisher's entity
-def action_install_entity(a):
-	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
-	s = mochi.stream({"from": a.user.identity.id, "to": a.input("id"), "service": "app", "event": "get"}, {"version": a.input("version")})
-	r = s.read()
-	if r.get("status") != "200":
-		a.error(r.get("message"))
-		return
+# View a single installed app
+def action_view(a):
+	id = a.input("id")
+	app = mochi.app.get(id)
+	if not app:
+		return {"status": 404, "error": "App not found", "data": {}}
 
-	s.read_to_file(file)
-	mochi.app.install(a.input("id"), file)
-	mochi.file.delete(file)
+	app["fingerprint"] = mochi.entity.fingerprint(app["id"], True)
+	return {"data": {"app": app}}
 
-	a.template("install")
-
-# Get information about an an app from its publisher's entity
-def action_information(a):
-	s = mochi.stream({"from": a.user.identity.id, "to": a.input("id"), "service": "app", "event": "information"}, {})
-	r = s.read()
-	if r.get("status") != "200":
-		a.error(r)
-		return
-
-	app = s.read()
-	fingerprint = mochi.entity.fingerprint(app["id"], True)
-
-	a.template("information", {"app": app, "fingerprint": fingerprint, "tracks": s.read()})
-
-# Enter details of new app
-def action_new(a):
+# Get available apps from the App Market that are not installed
+def action_market(a):
 	s = mochi.stream({"from": a.user.identity.id, "to": "12EgGkuXYabmPAv1jRp4z4Cgx9WM1U22Q5xBVLuATmTFdPdk7WK", "service": "app-market", "event": "list"}, {"language": "en"})
 	r = s.read()
 	if r.get("status") != "200":
-		a.error(r)
-		return
+		return {"status": 500, "error": "Failed to connect to App Market", "data": {}}
 
 	market = []
 	for app in s.read():
 		if not mochi.app.get(app["id"]):
 			market.append(app)
 
-	a.template("new", {"market": market})
+	return {"data": {"apps": market}}
 
-# View an app
-def action_view(a):
-	app = mochi.app.get(a.input("id"))
-	if not app:
-		mochi.action.error(404, "App not found")
-		return
-	
-	app["fingerprint"] = mochi.entity.fingerprint(app["id"], True)
-	
-	a.template("view", {"app": app})
+# Get information about an app from its publisher's entity
+def action_information(a):
+	id = a.input("id")
+	if not id:
+		return {"status": 400, "error": "App ID is required", "data": {}}
+
+	s = mochi.stream({"from": a.user.identity.id, "to": id, "service": "app", "event": "information"}, {})
+	r = s.read()
+	if r.get("status") != "200":
+		return {"status": 500, "error": "Failed to get app information", "data": {}}
+
+	app = s.read()
+	fingerprint = mochi.entity.fingerprint(app["id"], True)
+	tracks = s.read()
+
+	return {"data": {"app": app, "fingerprint": fingerprint, "tracks": tracks}}
+
+# Install an app given its publisher's entity
+def action_install(a):
+	id = a.input("id")
+	version = a.input("version")
+	if not id:
+		return {"status": 400, "error": "App ID is required", "data": {}}
+	if not version:
+		return {"status": 400, "error": "Version is required", "data": {}}
+
+	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
+	s = mochi.stream({"from": a.user.identity.id, "to": id, "service": "app", "event": "get"}, {"version": version})
+	r = s.read()
+	if r.get("status") != "200":
+		return {"status": 500, "error": r.get("message", "Failed to download app"), "data": {}}
+
+	s.read_to_file(file)
+	mochi.app.install(id, file)
+	mochi.file.delete(file)
+
+	return {"data": {"installed": True, "id": id, "version": version}}

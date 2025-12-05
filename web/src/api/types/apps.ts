@@ -1,0 +1,59 @@
+export interface InstalledApp {
+  id: string
+  name: string
+  latest: string
+  fingerprint: string
+}
+
+export interface MarketApp {
+  id: string
+  language: string
+  name: string
+  blurb: string
+  description: string
+}
+
+export interface AppInfo {
+  id: string
+  name: string
+  description: string
+}
+
+export interface Track {
+  track: string
+  version: string
+}
+
+export interface InstalledAppsResponse {
+  data: {
+    apps: InstalledApp[]
+  }
+}
+
+export interface InstalledAppResponse {
+  data: {
+    app: InstalledApp
+  }
+}
+
+export interface MarketAppsResponse {
+  data: {
+    apps: MarketApp[]
+  }
+}
+
+export interface AppInfoResponse {
+  data: {
+    app: AppInfo
+    fingerprint: string
+    tracks: Track[]
+  }
+}
+
+export interface InstallResponse {
+  data: {
+    installed: boolean
+    id: string
+    version: string
+  }
+}
