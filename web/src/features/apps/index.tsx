@@ -98,7 +98,7 @@ export function Apps() {
   if (isLoadingInstalled && !installedApps) {
     return (
       <>
-        <Header>
+        <Header fixed>
           <h1 className="text-lg font-semibold">Apps</h1>
         </Header>
         <Main>

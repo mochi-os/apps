@@ -1,4 +1,5 @@
-import { createFileRoute, Outlet } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
+import { AuthenticatedLayout } from '@/components/layout/authenticated-layout'
 import { useAuthStore } from '@/stores/auth-store'
 import { getCookie } from '@/lib/cookies'
 
@@ -13,19 +14,15 @@ export const Route = createFileRoute('/_authenticated')({
     const token = getCookie('token') || store.token
 
     if (!token) {
-      const returnUrl = encodeURIComponent(location.href)
+      const returnUrl = encodeURIComponent(
+        location.href || window.location.pathname + window.location.search + window.location.hash
+      )
       const redirectUrl = `${import.meta.env.VITE_AUTH_LOGIN_URL}?redirect=${returnUrl}`
-
       window.location.href = redirectUrl
-
       return
     }
 
     return
   },
-  component: () => (
-    <div className="min-h-screen bg-background">
-      <Outlet />
-    </div>
-  ),
+  component: AuthenticatedLayout,
 })
