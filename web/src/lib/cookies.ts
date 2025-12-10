@@ -1,17 +1,25 @@
 import Cookies from 'js-cookie'
 
-export const getCookie = (name: string): string | undefined => {
+export interface CookieOptions {
+  maxAge?: number
+  httpOnly?: boolean
+  secure?: boolean
+  sameSite?: 'strict' | 'lax' | 'none'
+  path?: string
+}
+
+export function getCookie(name: string): string | undefined {
   return Cookies.get(name)
 }
 
-export const setCookie = (
+export function setCookie(
   name: string,
   value: string,
-  options?: Cookies.CookieAttributes
-): void => {
+  options: CookieOptions = {}
+): void {
   Cookies.set(name, value, options)
 }
 
-export const removeCookie = (name: string): void => {
-  Cookies.remove(name)
+export function removeCookie(name: string, path: string = '/'): void {
+  Cookies.remove(name, { path })
 }
