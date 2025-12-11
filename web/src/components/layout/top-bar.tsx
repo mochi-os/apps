@@ -65,7 +65,7 @@ export function TopBar() {
           </a>
 
           {/* Title */}
-          <h1 className="absolute left-1/2 -translate-x-1/2 text-xl font-light tracking-tight" style={{ fontFamily: 'Nunito, sans-serif' }}>App Manager</h1>
+          <h1 className="absolute left-1/2 -translate-x-1/2 text-xl font-light tracking-tight"  >App Manager</h1>
 
           <div className="flex-1" />
 
