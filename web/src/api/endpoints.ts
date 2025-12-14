@@ -1,16 +1,16 @@
 const endpoints = {
   auth: {
-    code: '/_/code',
-    verify: '/_/verify',
-    identity: '/_/identity',
-    logout: '/_/logout',
+    code: '_/code',
+    verify: '_/verify',
+    identity: '_/identity',
+    logout: '_/logout',
   },
   apps: {
-    list: '/apps/list',
-    get: (id: string) => `/apps/${id}`,
-    market: '/apps/market',
-    information: '/apps/information',
-    install: '/apps/install',
+    list: 'list',
+    get: (id: string) => `${id}`,
+    market: 'market',
+    information: 'information',
+    install: 'install',
   },
 } as const
 

@@ -1,6 +1,6 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router'
 import { Toaster } from 'sonner'
-import { NavigationProgress } from '@/components/navigation-progress'
+import { NavigationProgress } from '@mochi/common'
 
 export const Route = createRootRoute({
   component: () => (

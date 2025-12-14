@@ -6,8 +6,8 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@/components/ui/dialog'
-import { Button } from '@/components/ui/button'
+  Button,
+} from '@mochi/common'
 import { Download } from 'lucide-react'
 
 interface InstallDialogProps {
