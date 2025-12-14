@@ -12,7 +12,7 @@ export function AuthenticatedLayout({ children }: AuthenticatedLayoutProps) {
   return (
     <LayoutProvider>
       <div className="flex h-svh flex-col">
-        <TopBar title="Apps" />
+        <TopBar title="App Manager" />
         <SidebarProvider defaultOpen={defaultOpen} className="flex-1 overflow-hidden">
           <AppSidebar />
           <SidebarInset
