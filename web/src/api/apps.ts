@@ -5,7 +5,7 @@ import type {
   AppInfo,
   Track,
 } from '@/api/types/apps'
-import { requestHelpers } from '@/lib/request'
+import { requestHelpers } from '@mochi/common'
 
 const listInstalledApps = async (): Promise<InstalledApp[]> => {
   const response = await requestHelpers.get<{ apps: InstalledApp[] }>(

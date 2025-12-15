@@ -24,7 +24,6 @@ import {
   CardHeader,
   CardTitle,
   Input,
-  Header,
   Main,
 } from '@mochi/common'
 import { InstallDialog } from './components/install-dialog'
@@ -308,10 +307,12 @@ function InstalledAppCard({ app }: { app: InstalledApp }) {
             <span className="font-medium text-foreground">Version:</span>{' '}
             {app.latest}
           </p>
-          <p className="truncate">
-            <span className="font-medium text-foreground">Fingerprint:</span>{' '}
-            {app.fingerprint}
-          </p>
+          {app.fingerprint && (
+            <p className="truncate">
+              <span className="font-medium text-foreground">Fingerprint:</span>{' '}
+              {app.fingerprint}
+            </p>
+          )}
         </div>
       </CardContent>
     </Card>

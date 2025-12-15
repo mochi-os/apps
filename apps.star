@@ -1,11 +1,18 @@
 # Mochi Apps app
 # Copyright Alistair Cunningham 2025
 
+# Check if an ID looks like an entity ID (50-51 chars)
+def is_entity_id(id):
+	return len(id) >= 50 and len(id) <= 51
+
 # List installed apps
 def action_list(a):
 	apps = mochi.app.list()
 	for app in apps:
-		app["fingerprint"] = mochi.entity.fingerprint(app["id"], True)
+		if is_entity_id(app["id"]):
+			app["fingerprint"] = mochi.entity.fingerprint(app["id"], True)
+		else:
+			app["fingerprint"] = ""
 	return {"data": {"apps": apps}}
 
 # View a single installed app
@@ -15,7 +22,10 @@ def action_view(a):
 	if not app:
 		return {"status": 404, "error": "App not found", "data": {}}
 
-	app["fingerprint"] = mochi.entity.fingerprint(app["id"], True)
+	if is_entity_id(app["id"]):
+		app["fingerprint"] = mochi.entity.fingerprint(app["id"], True)
+	else:
+		app["fingerprint"] = ""
 	return {"data": {"app": app}}
 
 # Get available apps from the App Market that are not installed

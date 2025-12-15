@@ -1,9 +1,9 @@
 const endpoints = {
   auth: {
-    code: '_/code',
-    verify: '_/verify',
-    identity: '_/identity',
-    logout: '_/logout',
+    code: '/_/code',
+    verify: '/_/verify',
+    identity: '/_/identity',
+    logout: '/_/logout',
   },
   apps: {
     list: 'list',
