@@ -2,11 +2,15 @@ import { requestHelpers } from '@mochi/common'
 import endpoints from '@/api/endpoints'
 import type { InstalledApp, MarketApp, AppInfo, Track } from '@/api/types/apps'
 
-const listInstalledApps = async (): Promise<InstalledApp[]> => {
-  const response = await requestHelpers.get<{ apps: InstalledApp[] }>(
-    endpoints.apps.list
-  )
-  return response.apps
+const listInstalledApps = async (): Promise<{
+  installed: InstalledApp[]
+  development: InstalledApp[]
+}> => {
+  const response = await requestHelpers.get<{
+    installed: InstalledApp[]
+    development: InstalledApp[]
+  }>(endpoints.apps.list)
+  return response
 }
 
 const getApp = async (id: string): Promise<InstalledApp> => {

@@ -39,14 +39,20 @@ export function Apps() {
   const [publisherId, setPublisherId] = useState('')
   const [selectedAppId, setSelectedAppId] = useState<string | null>(null)
 
-  const { data: installedApps, isLoading: isLoadingInstalled } =
+  const { data: appsData, isLoading: isLoadingInstalled } =
     useInstalledAppsQuery()
   const { data: marketApps, isLoading: isLoadingMarket } = useMarketAppsQuery()
   const { data: appInfo, isLoading: isLoadingInfo } =
     useAppInfoQuery(selectedAppId)
   const installMutation = useInstallAppMutation()
 
-  const filteredInstalledApps = installedApps?.filter(
+  const filteredInstalledApps = appsData?.installed?.filter(
+    (app) =>
+      app.name.toLowerCase().includes(search.toLowerCase()) ||
+      app.id.toLowerCase().includes(search.toLowerCase())
+  )
+
+  const filteredDevelopmentApps = appsData?.development?.filter(
     (app) =>
       app.name.toLowerCase().includes(search.toLowerCase()) ||
       app.id.toLowerCase().includes(search.toLowerCase())
@@ -94,7 +100,7 @@ export function Apps() {
     setPublisherId('')
   }
 
-  if (isLoadingInstalled && !installedApps) {
+  if (isLoadingInstalled && !appsData) {
     return (
       <>
         <Main>
@@ -130,7 +136,7 @@ export function Apps() {
 
         {/* Installed Apps Section */}
         <section className='mb-8'>
-          <h2 className='mb-4 text-xl font-semibold'>Installed</h2>
+          <h2 className='mb-4 text-xl font-semibold'>Installed apps</h2>
           {filteredInstalledApps?.length === 0 ? (
             <Card>
               <CardContent className='py-8'>
@@ -152,6 +158,23 @@ export function Apps() {
             </div>
           )}
         </section>
+
+        {/* Development Apps Section - only show if there are any */}
+        {filteredDevelopmentApps && filteredDevelopmentApps.length > 0 && (
+          <section className='mb-8'>
+            <h2 className='mb-4 text-xl font-semibold'>Development apps</h2>
+            <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+              {filteredDevelopmentApps.map((app) => (
+                <InstalledAppCard
+                  key={app.id}
+                  app={app}
+                  onClick={() => setSelectedInstalledApp(app)}
+                  showId
+                />
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Market Apps Section */}
         <section>
@@ -282,9 +305,11 @@ export function Apps() {
 function InstalledAppCard({
   app,
   onClick,
+  showId,
 }: {
   app: InstalledApp
   onClick: () => void
+  showId?: boolean
 }) {
   return (
     <Card
@@ -293,6 +318,9 @@ function InstalledAppCard({
     >
       <CardHeader>
         <CardTitle className='truncate text-lg'>{app.name}</CardTitle>
+        {showId && (
+          <p className='text-muted-foreground truncate text-sm'>{app.id}</p>
+        )}
       </CardHeader>
     </Card>
   )

@@ -26,7 +26,8 @@ export interface Track {
 
 export interface InstalledAppsResponse {
   data: {
-    apps: InstalledApp[]
+    installed: InstalledApp[]
+    development: InstalledApp[]
   }
 }
 

@@ -8,16 +8,18 @@ def is_entity_id(id):
 # List installed apps (only Starlark apps)
 def action_list(a):
 	all_apps = mochi.app.list()
-	apps = []
+	installed = []
+	development = []
 	for app in all_apps:
 		if app.get("engine") != "starlark":
 			continue
 		if is_entity_id(app["id"]):
 			app["fingerprint"] = mochi.entity.fingerprint(app["id"], True)
+			installed.append(app)
 		else:
 			app["fingerprint"] = ""
-		apps.append(app)
-	return {"data": {"apps": apps}}
+			development.append(app)
+	return {"data": {"installed": installed, "development": development}}
 
 # View a single installed app
 def action_view(a):
