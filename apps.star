@@ -19,7 +19,11 @@ def action_list(a):
 		else:
 			app["fingerprint"] = ""
 			development.append(app)
-	return {"data": {"installed": installed, "development": development}}
+
+	# Check if user can install apps
+	can_install = a.user.role == "administrator" or mochi.setting.get("apps_install_user") == "true"
+
+	return {"data": {"installed": installed, "development": development, "can_install": can_install}}
 
 # View a single installed app
 def action_view(a):
@@ -69,6 +73,11 @@ def action_information(a):
 
 # Install an app given its publisher's entity
 def action_install(a):
+	# Check if user is allowed to install apps
+	if a.user.role != "administrator":
+		if mochi.setting.get("apps_install_user") != "true":
+			return {"status": 403, "error": "App installation is restricted to administrators", "data": {}}
+
 	id = a.input("id")
 	version = a.input("version")
 	if not id:

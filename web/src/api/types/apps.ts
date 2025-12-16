@@ -28,6 +28,7 @@ export interface InstalledAppsResponse {
   data: {
     installed: InstalledApp[]
     development: InstalledApp[]
+    can_install: boolean
   }
 }
 

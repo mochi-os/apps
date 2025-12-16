@@ -125,13 +125,15 @@ export function Apps() {
               className='pl-9'
             />
           </div>
-          <Button
-            variant='outline'
-            onClick={() => setInstallFromPublisher(true)}
-          >
-            <ExternalLink className='mr-2 h-4 w-4' />
-            Install from publisher
-          </Button>
+          {appsData?.can_install && (
+            <Button
+              variant='outline'
+              onClick={() => setInstallFromPublisher(true)}
+            >
+              <ExternalLink className='mr-2 h-4 w-4' />
+              Install from publisher
+            </Button>
+          )}
         </div>
 
         {/* Installed Apps Section */}
@@ -176,45 +178,47 @@ export function Apps() {
           </section>
         )}
 
-        {/* Market Apps Section */}
-        <section>
-          <h2 className='mb-4 text-xl font-semibold'>Market</h2>
-          {isLoadingMarket ? (
-            <div className='flex h-32 items-center justify-center'>
-              <div className='text-muted-foreground'>Loading market...</div>
-            </div>
-          ) : filteredMarketApps?.length === 0 ? (
-            <Card>
-              <CardContent className='py-8'>
-                <div className='text-muted-foreground text-center'>
-                  <Package className='mx-auto mb-4 h-12 w-12 opacity-50' />
-                  <p className='font-medium'>No apps available</p>
-                </div>
-              </CardContent>
-            </Card>
-          ) : (
-            <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-              {filteredMarketApps?.map((app) => (
-                <Card
-                  key={app.id}
-                  className='flex cursor-pointer flex-col transition-shadow hover:shadow-md'
-                  onClick={() => handleMarketAppClick(app)}
-                >
-                  <CardHeader className='pb-3'>
-                    <CardTitle className='truncate text-lg'>
-                      {app.name}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className='flex-1'>
-                    <p className='text-muted-foreground line-clamp-2 text-sm'>
-                      {app.blurb || 'No description'}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          )}
-        </section>
+        {/* Market Apps Section - only show if user can install */}
+        {appsData?.can_install && (
+          <section>
+            <h2 className='mb-4 text-xl font-semibold'>Market</h2>
+            {isLoadingMarket ? (
+              <div className='flex h-32 items-center justify-center'>
+                <div className='text-muted-foreground'>Loading market...</div>
+              </div>
+            ) : filteredMarketApps?.length === 0 ? (
+              <Card>
+                <CardContent className='py-8'>
+                  <div className='text-muted-foreground text-center'>
+                    <Package className='mx-auto mb-4 h-12 w-12 opacity-50' />
+                    <p className='font-medium'>No apps available</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ) : (
+              <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+                {filteredMarketApps?.map((app) => (
+                  <Card
+                    key={app.id}
+                    className='flex cursor-pointer flex-col transition-shadow hover:shadow-md'
+                    onClick={() => handleMarketAppClick(app)}
+                  >
+                    <CardHeader className='pb-3'>
+                      <CardTitle className='truncate text-lg'>
+                        {app.name}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className='flex-1'>
+                      <p className='text-muted-foreground line-clamp-2 text-sm'>
+                        {app.blurb || 'No description'}
+                      </p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+          </section>
+        )}
 
         <AlertDialog
           open={installFromPublisher}

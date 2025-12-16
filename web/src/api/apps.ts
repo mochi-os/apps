@@ -5,10 +5,12 @@ import type { InstalledApp, MarketApp, AppInfo, Track } from '@/api/types/apps'
 const listInstalledApps = async (): Promise<{
   installed: InstalledApp[]
   development: InstalledApp[]
+  can_install: boolean
 }> => {
   const response = await requestHelpers.get<{
     installed: InstalledApp[]
     development: InstalledApp[]
+    can_install: boolean
   }>(endpoints.apps.list)
   return response
 }
