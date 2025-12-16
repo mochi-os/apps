@@ -1,11 +1,6 @@
-import endpoints from '@/api/endpoints'
-import type {
-  InstalledApp,
-  MarketApp,
-  AppInfo,
-  Track,
-} from '@/api/types/apps'
 import { requestHelpers } from '@mochi/common'
+import endpoints from '@/api/endpoints'
+import type { InstalledApp, MarketApp, AppInfo, Track } from '@/api/types/apps'
 
 const listInstalledApps = async (): Promise<InstalledApp[]> => {
   const response = await requestHelpers.get<{ apps: InstalledApp[] }>(
@@ -31,10 +26,11 @@ const getMarketApps = async (): Promise<MarketApp[]> => {
 const getAppInfo = async (
   id: string
 ): Promise<{ app: AppInfo; fingerprint: string; tracks: Track[] }> => {
-  const response = await requestHelpers.get<{ app: AppInfo; fingerprint: string; tracks: Track[] }>(
-    endpoints.apps.information,
-    { params: { id } }
-  )
+  const response = await requestHelpers.get<{
+    app: AppInfo
+    fingerprint: string
+    tracks: Track[]
+  }>(endpoints.apps.information, { params: { id } })
   return response
 }
 
@@ -42,14 +38,15 @@ const installApp = async (
   id: string,
   version: string
 ): Promise<{ installed: boolean; id: string; version: string }> => {
-  const response = await requestHelpers.get<{ installed: boolean; id: string; version: string }>(
-    endpoints.apps.install,
-    { params: { id, version } }
-  )
+  const response = await requestHelpers.get<{
+    installed: boolean
+    id: string
+    version: string
+  }>(endpoints.apps.install, { params: { id, version } })
   return response
 }
 
-export const appsApi = {
+const appsApi = {
   listInstalled: listInstalledApps,
   get: getApp,
   getMarket: getMarketApps,

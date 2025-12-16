@@ -1,4 +1,3 @@
-import type { MarketApp, AppInfo, Track } from '@/api/types/apps'
 import {
   Dialog,
   DialogContent,
@@ -9,6 +8,7 @@ import {
   Button,
 } from '@mochi/common'
 import { Download } from 'lucide-react'
+import type { MarketApp, AppInfo, Track } from '@/api/types/apps'
 
 interface InstallDialogProps {
   open: boolean
@@ -39,54 +39,54 @@ export function InstallDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className='sm:max-w-md'>
         <DialogHeader>
           <DialogTitle>{marketApp.name}</DialogTitle>
-          <DialogDescription className="font-mono text-xs">
+          <DialogDescription className='font-mono text-xs'>
             {marketApp.id}
           </DialogDescription>
         </DialogHeader>
 
-        <div className="space-y-4 py-4">
+        <div className='space-y-4 py-4'>
           {marketApp.blurb && (
-            <p className="text-sm text-muted-foreground">{marketApp.blurb}</p>
+            <p className='text-muted-foreground text-sm'>{marketApp.blurb}</p>
           )}
 
           {marketApp.description && (
-            <p className="text-sm">{marketApp.description}</p>
+            <p className='text-sm'>{marketApp.description}</p>
           )}
 
           {isLoading ? (
-            <div className="py-4 text-center text-sm text-muted-foreground">
+            <div className='text-muted-foreground py-4 text-center text-sm'>
               Loading version information...
             </div>
           ) : appInfo ? (
-            <div className="space-y-3">
-              <p className="text-sm">
-                <span className="font-medium">Fingerprint:</span>{' '}
-                <span className="font-mono text-xs">{appInfo.fingerprint}</span>
+            <div className='space-y-3'>
+              <p className='text-sm'>
+                <span className='font-medium'>Fingerprint:</span>{' '}
+                <span className='font-mono text-xs'>{appInfo.fingerprint}</span>
               </p>
 
               <div>
-                <p className="mb-2 text-sm font-medium">Available versions:</p>
-                <div className="space-y-2">
+                <p className='mb-2 text-sm font-medium'>Available versions:</p>
+                <div className='space-y-2'>
                   {appInfo.tracks.map((track) => (
                     <div
                       key={track.track}
-                      className="flex items-center justify-between rounded-lg border p-3"
+                      className='flex items-center justify-between rounded-lg border p-3'
                     >
                       <div>
-                        <p className="font-medium">{track.track}</p>
-                        <p className="text-sm text-muted-foreground">
+                        <p className='font-medium'>{track.track}</p>
+                        <p className='text-muted-foreground text-sm'>
                           Version {track.version}
                         </p>
                       </div>
                       <Button
-                        size="sm"
+                        size='sm'
                         onClick={() => onInstall(track.version)}
                         disabled={isInstalling}
                       >
-                        <Download className="mr-2 h-4 w-4" />
+                        <Download className='mr-2 h-4 w-4' />
                         {isInstalling ? 'Installing...' : 'Install'}
                       </Button>
                     </div>
@@ -95,14 +95,14 @@ export function InstallDialog({
               </div>
             </div>
           ) : (
-            <div className="py-4 text-center text-sm text-muted-foreground">
+            <div className='text-muted-foreground py-4 text-center text-sm'>
               Unable to load version information
             </div>
           )}
         </div>
 
         <DialogFooter>
-          <Button variant="outline" onClick={() => onOpenChange(false)}>
+          <Button variant='outline' onClick={() => onOpenChange(false)}>
             Cancel
           </Button>
         </DialogFooter>

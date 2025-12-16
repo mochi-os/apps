@@ -13,7 +13,10 @@ export const Route = createFileRoute('/_authenticated')({
 
     if (!token) {
       const returnUrl = encodeURIComponent(
-        location.href || window.location.pathname + window.location.search + window.location.hash
+        location.href ||
+          window.location.pathname +
+            window.location.search +
+            window.location.hash
       )
       const redirectUrl = `${import.meta.env.VITE_AUTH_LOGIN_URL}?redirect=${returnUrl}`
       window.location.href = redirectUrl
@@ -22,5 +25,5 @@ export const Route = createFileRoute('/_authenticated')({
 
     return
   },
-  component: () => <AuthenticatedLayout title="Apps" />,
+  component: () => <AuthenticatedLayout title='App Manager' />,
 })

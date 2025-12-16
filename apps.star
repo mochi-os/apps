@@ -5,14 +5,18 @@
 def is_entity_id(id):
 	return len(id) >= 50 and len(id) <= 51
 
-# List installed apps
+# List installed apps (only Starlark apps)
 def action_list(a):
-	apps = mochi.app.list()
-	for app in apps:
+	all_apps = mochi.app.list()
+	apps = []
+	for app in all_apps:
+		if app.get("engine") != "starlark":
+			continue
 		if is_entity_id(app["id"]):
 			app["fingerprint"] = mochi.entity.fingerprint(app["id"], True)
 		else:
 			app["fingerprint"] = ""
+		apps.append(app)
 	return {"data": {"apps": apps}}
 
 # View a single installed app
@@ -47,6 +51,8 @@ def action_information(a):
 	id = a.input("id")
 	if not id:
 		return {"status": 400, "error": "App ID is required", "data": {}}
+	if len(id) > 51:
+		return {"status": 400, "error": "Invalid app ID", "data": {}}
 
 	s = mochi.stream({"from": a.user.identity.id, "to": id, "service": "app", "event": "information"}, {})
 	r = s.read()
@@ -65,8 +71,12 @@ def action_install(a):
 	version = a.input("version")
 	if not id:
 		return {"status": 400, "error": "App ID is required", "data": {}}
+	if len(id) > 51:
+		return {"status": 400, "error": "Invalid app ID", "data": {}}
 	if not version:
 		return {"status": 400, "error": "Version is required", "data": {}}
+	if not mochi.valid(version, "version"):
+		return {"status": 400, "error": "Invalid version format", "data": {}}
 
 	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
 	s = mochi.stream({"from": a.user.identity.id, "to": id, "service": "app", "event": "get"}, {"version": version})
