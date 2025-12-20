@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { usePageTitle } from '@/hooks/usePageTitle'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -29,6 +30,7 @@ import { AppInfoDialog } from './components/app-info-dialog'
 import { InstallDialog } from './components/install-dialog'
 
 export function Apps() {
+  usePageTitle('Apps')
   const [search, setSearch] = useState('')
   const [selectedMarketApp, setSelectedMarketApp] = useState<MarketApp | null>(
     null
@@ -41,7 +43,7 @@ export function Apps() {
 
   const { data: appsData, isLoading: isLoadingInstalled } =
     useInstalledAppsQuery()
-  const { data: marketApps, isLoading: isLoadingMarket } = useMarketAppsQuery()
+  const { data: marketApps, isLoading: isLoadingMarket, isError: isMarketError } = useMarketAppsQuery()
   const { data: appInfo, isLoading: isLoadingInfo } =
     useAppInfoQuery(selectedAppId)
   const installMutation = useInstallAppMutation()
@@ -186,6 +188,15 @@ export function Apps() {
               <div className='flex h-32 items-center justify-center'>
                 <div className='text-muted-foreground'>Loading market...</div>
               </div>
+            ) : isMarketError ? (
+              <Card>
+                <CardContent className='py-8'>
+                  <div className='text-muted-foreground text-center'>
+                    <Package className='mx-auto mb-4 h-12 w-12 opacity-50' />
+                    <p className='font-medium'>App Market unavailable</p>
+                  </div>
+                </CardContent>
+              </Card>
             ) : filteredMarketApps?.length === 0 ? (
               <Card>
                 <CardContent className='py-8'>

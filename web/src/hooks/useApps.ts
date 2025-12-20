@@ -18,6 +18,7 @@ export const useMarketAppsQuery = () =>
   useQuery({
     queryKey: appKeys.market(),
     queryFn: () => appsApi.getMarket(),
+    retry: false,
   })
 
 export const useAppInfoQuery = (id: string | null) =>
