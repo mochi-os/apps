@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { usePageTitle } from '@/hooks/usePageTitle'
+import { usePageTitle } from '@mochi/common'
 import {
   AlertDialog,
   AlertDialogAction,
