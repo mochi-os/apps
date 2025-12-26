@@ -42,7 +42,13 @@ export const useInstallFromPublisherMutation = () => {
 export const useInstallFromFileMutation = () => {
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: ({ file }: { file: File }) => appsApi.installFromFile(file),
+    mutationFn: ({
+      file,
+      privacy,
+    }: {
+      file: File
+      privacy: 'public' | 'private'
+    }) => appsApi.installFromFile(file, privacy),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: appKeys.all() })
     },

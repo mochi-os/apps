@@ -121,6 +121,10 @@ def action_install_file(a):
 	if not file.endswith(".zip"):
 		return {"status": 400, "error": "File must be a .zip archive", "data": {}}
 
+	privacy = a.input("privacy", "private")
+	if privacy != "public" and privacy != "private":
+		return {"status": 400, "error": "Privacy must be 'public' or 'private'", "data": {}}
+
 	# Save uploaded file
 	a.upload("file", file)
 
@@ -131,7 +135,7 @@ def action_install_file(a):
 		return {"status": 400, "error": "Failed to read app info from archive", "data": {}}
 
 	# Create an entity for this app using the name from the archive
-	entity = mochi.entity.create("app", info["name"], "private")
+	entity = mochi.entity.create("app", info["name"], privacy)
 	if not entity:
 		mochi.file.delete(file)
 		return {"status": 500, "error": "Failed to create app entity", "data": {}}

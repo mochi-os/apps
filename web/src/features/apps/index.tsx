@@ -43,6 +43,7 @@ export function Apps() {
   const [publisherId, setPublisherId] = useState('')
   const [selectedAppId, setSelectedAppId] = useState<string | null>(null)
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
+  const [filePrivacy, setFilePrivacy] = useState<'public' | 'private'>('private')
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const { data: appsData, isLoading: isLoadingInstalled } =
@@ -121,7 +122,7 @@ export function Apps() {
     if (!selectedFile) return
 
     installFromFileMutation.mutate(
-      { file: selectedFile },
+      { file: selectedFile, privacy: filePrivacy },
       {
         onSuccess: () => {
           toast.success('App installed', {
@@ -129,6 +130,7 @@ export function Apps() {
           })
           setInstallFromFile(false)
           setSelectedFile(null)
+          setFilePrivacy('private')
         },
         onError: () => {
           toast.error('Failed to install app')
@@ -318,6 +320,7 @@ export function Apps() {
             setInstallFromFile(open)
             if (!open) {
               setSelectedFile(null)
+              setFilePrivacy('private')
             }
           }}
         >
@@ -325,10 +328,29 @@ export function Apps() {
             <AlertDialogHeader>
               <AlertDialogTitle>Install from file</AlertDialogTitle>
             </AlertDialogHeader>
-            <div className='py-4'>
+            <div className='space-y-4 py-4'>
               <p className='text-sm'>
                 <span className='font-medium'>File:</span> {selectedFile?.name}
               </p>
+              <div className='space-y-2'>
+                <label htmlFor='privacy' className='text-sm font-medium'>
+                  Privacy
+                </label>
+                <select
+                  id='privacy'
+                  value={filePrivacy}
+                  onChange={(e) =>
+                    setFilePrivacy(e.target.value as 'public' | 'private')
+                  }
+                  className='border-input bg-background flex h-10 w-full rounded-md border px-3 py-2 text-sm'
+                >
+                  <option value='private'>Private</option>
+                  <option value='public'>Public</option>
+                </select>
+                <p className='text-muted-foreground text-xs'>
+                  Public apps are discoverable by other instances
+                </p>
+              </div>
             </div>
             <AlertDialogFooter>
               <AlertDialogCancel>Cancel</AlertDialogCancel>

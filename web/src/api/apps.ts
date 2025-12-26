@@ -53,10 +53,12 @@ const installFromPublisher = async (
 }
 
 const installFromFile = async (
-  file: File
+  file: File,
+  privacy: 'public' | 'private' = 'private'
 ): Promise<{ installed: boolean; id: string; version: string }> => {
   const formData = new FormData()
   formData.append('file', file, file.name)
+  formData.append('privacy', privacy)
   const response = await requestHelpers.post<{
     installed: boolean
     id: string
