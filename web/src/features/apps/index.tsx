@@ -324,10 +324,6 @@ export function Apps() {
           <AlertDialogContent>
             <AlertDialogHeader>
               <AlertDialogTitle>Install from file</AlertDialogTitle>
-              <AlertDialogDescription>
-                Install an app from a .zip file. A new entity will be created
-                for this app.
-              </AlertDialogDescription>
             </AlertDialogHeader>
             <div className='py-4'>
               <p className='text-sm'>
