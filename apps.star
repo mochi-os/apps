@@ -137,7 +137,7 @@ def action_install_file(a):
 		return {"status": 500, "error": "Failed to create app entity", "data": {}}
 
 	# Install the app
-	version = mochi.app.file.install(entity["id"], file)
+	version = mochi.app.file.install(entity, file)
 	mochi.file.delete(file)
 
-	return {"data": {"installed": True, "id": entity["id"], "version": version}}
+	return {"data": {"installed": True, "id": entity, "version": version}}
