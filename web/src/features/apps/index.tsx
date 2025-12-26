@@ -15,7 +15,9 @@ import {
   CardHeader,
   CardTitle,
   Input,
+  Label,
   Main,
+  Switch,
 } from '@mochi/common'
 import { Package, ExternalLink, Search, Upload } from 'lucide-react'
 import { toast } from 'sonner'
@@ -43,7 +45,7 @@ export function Apps() {
   const [publisherId, setPublisherId] = useState('')
   const [selectedAppId, setSelectedAppId] = useState<string | null>(null)
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
-  const [filePrivacy, setFilePrivacy] = useState<'public' | 'private'>('private')
+  const [allowDiscovery, setAllowDiscovery] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const { data: appsData, isLoading: isLoadingInstalled } =
@@ -122,7 +124,7 @@ export function Apps() {
     if (!selectedFile) return
 
     installFromFileMutation.mutate(
-      { file: selectedFile, privacy: filePrivacy },
+      { file: selectedFile, privacy: allowDiscovery ? 'public' : 'private' },
       {
         onSuccess: () => {
           toast.success('App installed', {
@@ -130,7 +132,7 @@ export function Apps() {
           })
           setInstallFromFile(false)
           setSelectedFile(null)
-          setFilePrivacy('private')
+          setAllowDiscovery(false)
         },
         onError: () => {
           toast.error('Failed to install app')
@@ -320,7 +322,7 @@ export function Apps() {
             setInstallFromFile(open)
             if (!open) {
               setSelectedFile(null)
-              setFilePrivacy('private')
+              setAllowDiscovery(false)
             }
           }}
         >
@@ -332,24 +334,16 @@ export function Apps() {
               <p className='text-sm'>
                 <span className='font-medium'>File:</span> {selectedFile?.name}
               </p>
-              <div className='space-y-2'>
-                <label htmlFor='privacy' className='text-sm font-medium'>
-                  Privacy
-                </label>
-                <select
-                  id='privacy'
-                  value={filePrivacy}
-                  onChange={(e) =>
-                    setFilePrivacy(e.target.value as 'public' | 'private')
-                  }
-                  className='border-input bg-background flex h-10 w-full rounded-md border px-3 py-2 text-sm'
-                >
-                  <option value='private'>Private</option>
-                  <option value='public'>Public</option>
-                </select>
-                <p className='text-muted-foreground text-xs'>
-                  Public apps are discoverable by other instances
-                </p>
+              <div className='flex items-center justify-between rounded-[8px] border px-4 py-3'>
+                <Label htmlFor='allow-discovery' className='text-sm font-medium'>
+                  Allow other instances to discover this app
+                </Label>
+                <Switch
+                  id='allow-discovery'
+                  checked={allowDiscovery}
+                  onCheckedChange={setAllowDiscovery}
+                  disabled={installFromFileMutation.isPending}
+                />
               </div>
             </div>
             <AlertDialogFooter>
