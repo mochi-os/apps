@@ -40,7 +40,7 @@ def action_view(a):
 
 # Get available apps from the App Market that are not installed
 def action_market(a):
-	s = mochi.remote.stream("12EgGkuXYabmPAv1jRp4z4Cgx9WM1U22Q5xBVLuATmTFdPdk7WK", "list", {"language": "en"})
+	s = mochi.remote.stream("1JYmMpQU7fxvTrwHpNpiwKCgUg3odWqX7s9t1cLswSMAro5M2P", "list", {"language": "en"})
 	if not s:
 		return {"status": 500, "error": "Failed to connect to App Market", "data": {}}
 	r = s.read()
