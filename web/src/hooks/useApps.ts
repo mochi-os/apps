@@ -28,11 +28,21 @@ export const useAppInfoQuery = (id: string | null) =>
     enabled: !!id,
   })
 
-export const useInstallAppMutation = () => {
+export const useInstallFromPublisherMutation = () => {
   const queryClient = useQueryClient()
   return useMutation({
     mutationFn: ({ id, version }: { id: string; version: string }) =>
-      appsApi.install(id, version),
+      appsApi.installFromPublisher(id, version),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: appKeys.all() })
+    },
+  })
+}
+
+export const useInstallFromFileMutation = () => {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: ({ file }: { file: File }) => appsApi.installFromFile(file),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: appKeys.all() })
     },

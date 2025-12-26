@@ -10,7 +10,8 @@ const endpoints = {
     get: (id: string) => `${id}`,
     market: 'market',
     information: 'information',
-    install: 'install',
+    installPublisher: 'install/publisher',
+    installFile: 'install/file',
   },
 } as const
 

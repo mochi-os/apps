@@ -75,8 +75,8 @@ def action_information(a):
 
 	return {"data": {"app": app, "fingerprint": fingerprint, "tracks": tracks}}
 
-# Install an app given its publisher's entity
-def action_install(a):
+# Install an app from a publisher entity
+def action_install_publisher(a):
 	# Check if user is allowed to install apps
 	if a.user.role != "administrator":
 		if mochi.setting.get("apps_install_user") != "true":
@@ -106,3 +106,38 @@ def action_install(a):
 	mochi.file.delete(file)
 
 	return {"data": {"installed": True, "id": id, "version": version}}
+
+# Install an app from an uploaded zip file
+def action_install_file(a):
+	# Only administrators can install apps from files
+	if a.user.role != "administrator":
+		return {"status": 403, "error": "App installation is restricted to administrators", "data": {}}
+
+	file = a.input("file")
+	if not file:
+		return {"status": 400, "error": "No file provided", "data": {}}
+	if not mochi.valid(file, "filename"):
+		return {"status": 400, "error": "Invalid filename", "data": {}}
+	if not file.endswith(".zip"):
+		return {"status": 400, "error": "File must be a .zip archive", "data": {}}
+
+	# Save uploaded file
+	a.upload("file", file)
+
+	# Get app info from the zip file
+	info = mochi.app.file.get(file)
+	if not info:
+		mochi.file.delete(file)
+		return {"status": 400, "error": "Failed to read app info from archive", "data": {}}
+
+	# Create an entity for this app using the name from the archive
+	entity = mochi.entity.create("app", info["name"], "private")
+	if not entity:
+		mochi.file.delete(file)
+		return {"status": 500, "error": "Failed to create app entity", "data": {}}
+
+	# Install the app
+	version = mochi.app.file.install(entity["id"], file)
+	mochi.file.delete(file)
+
+	return {"data": {"installed": True, "id": entity["id"], "version": version}}

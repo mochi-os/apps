@@ -2,7 +2,7 @@
 // Copyright Alistair Cunningham 2025
 
 {
-	"version": "1.0",
+	"version": "1.2",
 	"label": "app_name",
 	"paths": ["apps"],
 
@@ -20,7 +20,8 @@
 		"list": {"function": "action_list"},
 		"market": {"function": "action_market"},
 		"information": {"function": "action_information"},
-		"install": {"function": "action_install"},
+		"install/publisher": {"function": "action_install_publisher"},
+		"install/file": {"function": "action_install_file"},
 		":id": {"function": "action_view"}
 	}
 }

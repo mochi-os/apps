@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { usePageTitle } from '@mochi/common'
 import {
   AlertDialog,
@@ -17,14 +17,15 @@ import {
   Input,
   Main,
 } from '@mochi/common'
-import { Package, ExternalLink, Search } from 'lucide-react'
+import { Package, ExternalLink, Search, Upload } from 'lucide-react'
 import { toast } from 'sonner'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
 import {
   useInstalledAppsQuery,
   useMarketAppsQuery,
   useAppInfoQuery,
-  useInstallAppMutation,
+  useInstallFromPublisherMutation,
+  useInstallFromFileMutation,
 } from '@/hooks/useApps'
 import { AppInfoDialog } from './components/app-info-dialog'
 import { InstallDialog } from './components/install-dialog'
@@ -38,15 +39,19 @@ export function Apps() {
   const [selectedInstalledApp, setSelectedInstalledApp] =
     useState<InstalledApp | null>(null)
   const [installFromPublisher, setInstallFromPublisher] = useState(false)
+  const [installFromFile, setInstallFromFile] = useState(false)
   const [publisherId, setPublisherId] = useState('')
   const [selectedAppId, setSelectedAppId] = useState<string | null>(null)
+  const [selectedFile, setSelectedFile] = useState<File | null>(null)
+  const fileInputRef = useRef<HTMLInputElement>(null)
 
   const { data: appsData, isLoading: isLoadingInstalled } =
     useInstalledAppsQuery()
   const { data: marketApps, isLoading: isLoadingMarket, isError: isMarketError } = useMarketAppsQuery()
   const { data: appInfo, isLoading: isLoadingInfo } =
     useAppInfoQuery(selectedAppId)
-  const installMutation = useInstallAppMutation()
+  const installFromPublisherMutation = useInstallFromPublisherMutation()
+  const installFromFileMutation = useInstallFromFileMutation()
 
   const filteredInstalledApps = appsData?.installed?.filter(
     (app) =>
@@ -70,7 +75,7 @@ export function Apps() {
   const handleInstall = (version: string) => {
     if (!selectedAppId) return
 
-    installMutation.mutate(
+    installFromPublisherMutation.mutate(
       { id: selectedAppId, version },
       {
         onSuccess: () => {
@@ -102,6 +107,36 @@ export function Apps() {
     setPublisherId('')
   }
 
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (file) {
+      setSelectedFile(file)
+      setInstallFromFile(true)
+    }
+    // Reset input so same file can be selected again
+    e.target.value = ''
+  }
+
+  const handleFileInstall = () => {
+    if (!selectedFile) return
+
+    installFromFileMutation.mutate(
+      { file: selectedFile },
+      {
+        onSuccess: () => {
+          toast.success('App installed', {
+            description: 'The app has been installed successfully.',
+          })
+          setInstallFromFile(false)
+          setSelectedFile(null)
+        },
+        onError: () => {
+          toast.error('Failed to install app')
+        },
+      }
+    )
+  }
+
   if (isLoadingInstalled && !appsData) {
     return (
       <>
@@ -128,13 +163,29 @@ export function Apps() {
             />
           </div>
           {appsData?.can_install && (
-            <Button
-              variant='outline'
-              onClick={() => setInstallFromPublisher(true)}
-            >
-              <ExternalLink className='mr-2 h-4 w-4' />
-              Install from publisher
-            </Button>
+            <>
+              <input
+                type='file'
+                ref={fileInputRef}
+                onChange={handleFileSelect}
+                accept='.zip'
+                className='hidden'
+              />
+              <Button
+                variant='outline'
+                onClick={() => fileInputRef.current?.click()}
+              >
+                <Upload className='mr-2 h-4 w-4' />
+                Install from file
+              </Button>
+              <Button
+                variant='outline'
+                onClick={() => setInstallFromPublisher(true)}
+              >
+                <ExternalLink className='mr-2 h-4 w-4' />
+                Install from publisher
+              </Button>
+            </>
           )}
         </div>
 
@@ -237,7 +288,7 @@ export function Apps() {
         >
           <AlertDialogContent>
             <AlertDialogHeader>
-              <AlertDialogTitle>Install from Publisher</AlertDialogTitle>
+              <AlertDialogTitle>Install from publisher</AlertDialogTitle>
               <AlertDialogDescription>
                 Apps installed directly from a publisher have not been vetted
                 and may be malware. Apps will automatically update when the
@@ -261,13 +312,47 @@ export function Apps() {
           </AlertDialogContent>
         </AlertDialog>
 
+        <AlertDialog
+          open={installFromFile}
+          onOpenChange={(open) => {
+            setInstallFromFile(open)
+            if (!open) {
+              setSelectedFile(null)
+            }
+          }}
+        >
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Install from file</AlertDialogTitle>
+              <AlertDialogDescription>
+                Install an app from a .zip file. A new entity will be created
+                for this app.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <div className='py-4'>
+              <p className='text-sm'>
+                <span className='font-medium'>File:</span> {selectedFile?.name}
+              </p>
+            </div>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancel</AlertDialogCancel>
+              <AlertDialogAction
+                onClick={handleFileInstall}
+                disabled={installFromFileMutation.isPending}
+              >
+                {installFromFileMutation.isPending ? 'Installing...' : 'Install'}
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+
         <AppInfoDialog
           open={!!selectedAppId && !selectedMarketApp}
           onOpenChange={(open) => !open && setSelectedAppId(null)}
           appInfo={appInfo}
           isLoading={isLoadingInfo}
           onInstall={handleInstall}
-          isInstalling={installMutation.isPending}
+          isInstalling={installFromPublisherMutation.isPending}
         />
 
         <InstallDialog
@@ -282,7 +367,7 @@ export function Apps() {
           appInfo={appInfo}
           isLoading={isLoadingInfo}
           onInstall={handleInstall}
-          isInstalling={installMutation.isPending}
+          isInstalling={installFromPublisherMutation.isPending}
         />
 
         <AlertDialog
@@ -333,9 +418,10 @@ function InstalledAppCard({
     >
       <CardHeader>
         <CardTitle className='truncate text-lg'>{app.name}</CardTitle>
-        {showId && (
-          <p className='text-muted-foreground truncate text-sm'>{app.id}</p>
-        )}
+        <p className='text-muted-foreground truncate text-sm'>
+          {app.latest}
+          {showId && <> · {app.id}</>}
+        </p>
       </CardHeader>
     </Card>
   )

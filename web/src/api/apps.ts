@@ -40,7 +40,7 @@ const getAppInfo = async (
   return response
 }
 
-const installApp = async (
+const installFromPublisher = async (
   id: string,
   version: string
 ): Promise<{ installed: boolean; id: string; version: string }> => {
@@ -48,7 +48,20 @@ const installApp = async (
     installed: boolean
     id: string
     version: string
-  }>(endpoints.apps.install, { params: { id, version } })
+  }>(endpoints.apps.installPublisher, { params: { id, version } })
+  return response
+}
+
+const installFromFile = async (
+  file: File
+): Promise<{ installed: boolean; id: string; version: string }> => {
+  const formData = new FormData()
+  formData.append('file', file, file.name)
+  const response = await requestHelpers.post<{
+    installed: boolean
+    id: string
+    version: string
+  }>(endpoints.apps.installFile, formData)
   return response
 }
 
@@ -57,7 +70,8 @@ const appsApi = {
   get: getApp,
   getMarket: getMarketApps,
   getInfo: getAppInfo,
-  install: installApp,
+  installFromPublisher,
+  installFromFile,
 }
 
 export default appsApi
