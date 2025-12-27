@@ -40,7 +40,7 @@ def action_view(a):
 
 # Get available apps from the App Market that are not installed
 def action_market(a):
-	s = mochi.remote.stream("1JYmMpQU7fxvTrwHpNpiwKCgUg3odWqX7s9t1cLswSMAro5M2P", "list", {"language": "en"})
+	s = mochi.remote.stream("1JYmMpQU7fxvTrwHpNpiwKCgUg3odWqX7s9t1cLswSMAro5M2P", "app-market", "list", {"language": "en"})
 	if not s:
 		return {"status": 500, "error": "Failed to connect to App Market", "data": {}}
 	r = s.read()
@@ -62,7 +62,7 @@ def action_information(a):
 	if len(id) > 51:
 		return {"status": 400, "error": "Invalid app ID", "data": {}}
 
-	s = mochi.remote.stream(id, "information", {})
+	s = mochi.remote.stream(id, "publisher", "information", {})
 	if not s:
 		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
 	r = s.read()
@@ -94,7 +94,7 @@ def action_install_publisher(a):
 		return {"status": 400, "error": "Invalid version format", "data": {}}
 
 	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
-	s = mochi.remote.stream(id, "get", {"version": version})
+	s = mochi.remote.stream(id, "publisher", "get", {"version": version})
 	if not s:
 		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
 	r = s.read()
@@ -102,7 +102,7 @@ def action_install_publisher(a):
 		return {"status": 500, "error": r.get("message", "Failed to download app"), "data": {}}
 
 	s.read_to_file(file)
-	mochi.app.install(id, file)
+	mochi.app.file.install(id, file)
 	mochi.file.delete(file)
 
 	return {"data": {"installed": True, "id": id, "version": version}}

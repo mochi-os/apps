@@ -1,13 +1,12 @@
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  Button,
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
 } from '@mochi/common'
-import { Download } from 'lucide-react'
 import type { MarketApp, AppInfo, Track } from '@/api/types/apps'
 
 interface InstallDialogProps {
@@ -38,62 +37,44 @@ export function InstallDialog({
   if (!marketApp) return null
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className='sm:max-w-md'>
-        <DialogHeader>
-          <DialogTitle>{marketApp.name}</DialogTitle>
-          <DialogDescription className='font-mono text-xs'>
-            {marketApp.id}
-          </DialogDescription>
-        </DialogHeader>
-
-        <div className='space-y-4 py-4'>
+    <AlertDialog open={open} onOpenChange={onOpenChange}>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>{marketApp.name}</AlertDialogTitle>
           {marketApp.blurb && (
-            <p className='text-muted-foreground text-sm'>{marketApp.blurb}</p>
+            <p className='text-sm'>{marketApp.blurb}</p>
+          )}
+        </AlertDialogHeader>
+
+        <div className='min-h-[160px] space-y-3'>
+          {marketApp.description && (
+            <>
+              <hr />
+              <p className='text-muted-foreground text-sm'>{marketApp.description}</p>
+            </>
           )}
 
-          {marketApp.description && (
-            <p className='text-sm'>{marketApp.description}</p>
-          )}
+          <hr />
 
           {isLoading ? (
             <div className='text-muted-foreground py-4 text-center text-sm'>
               Loading version information...
             </div>
           ) : appInfo ? (
-            <div className='space-y-3'>
+            <>
+              <p className='text-sm'>
+                <span className='font-medium'>Available version:</span>{' '}
+                {appInfo.tracks[0]?.version}
+              </p>
               <p className='text-sm'>
                 <span className='font-medium'>Fingerprint:</span>{' '}
                 <span className='font-mono text-xs'>{appInfo.fingerprint}</span>
               </p>
-
-              <div>
-                <p className='mb-2 text-sm font-medium'>Available versions:</p>
-                <div className='space-y-2'>
-                  {appInfo.tracks.map((track) => (
-                    <div
-                      key={track.track}
-                      className='flex items-center justify-between rounded-lg border p-3'
-                    >
-                      <div>
-                        <p className='font-medium'>{track.track}</p>
-                        <p className='text-muted-foreground text-sm'>
-                          Version {track.version}
-                        </p>
-                      </div>
-                      <Button
-                        size='sm'
-                        onClick={() => onInstall(track.version)}
-                        disabled={isInstalling}
-                      >
-                        <Download className='mr-2 h-4 w-4' />
-                        {isInstalling ? 'Installing...' : 'Install'}
-                      </Button>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+              <p className='text-sm'>
+                <span className='font-medium'>Entity:</span>{' '}
+                <span className='font-mono text-xs break-all'>{marketApp.id}</span>
+              </p>
+            </>
           ) : (
             <div className='text-muted-foreground py-4 text-center text-sm'>
               Unable to load version information
@@ -101,12 +82,17 @@ export function InstallDialog({
           )}
         </div>
 
-        <DialogFooter>
-          <Button variant='outline' onClick={() => onOpenChange(false)}>
-            Cancel
-          </Button>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
+        <AlertDialogFooter>
+          <AlertDialogCancel className='border-0 bg-transparent shadow-none hover:bg-accent'>Cancel</AlertDialogCancel>
+          <AlertDialogAction
+            autoFocus
+            onClick={() => appInfo && onInstall(appInfo.tracks[0]?.version)}
+            disabled={isLoading || isInstalling || !appInfo?.tracks[0]}
+          >
+            {isInstalling ? 'Installing...' : 'Install'}
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
   )
 }
