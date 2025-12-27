@@ -62,7 +62,15 @@ def action_information(a):
 	if len(id) > 51:
 		return {"status": 400, "error": "Invalid app ID", "data": {}}
 
-	s = mochi.remote.stream(id, "publisher", "information", {})
+	# If URL is provided, resolve it to a peer ID
+	url = a.input("url")
+	peer = ""
+	if url:
+		peer = mochi.remote.peer(url)
+		if not peer:
+			return {"status": 500, "error": "Failed to connect to server at " + url, "data": {}}
+
+	s = mochi.remote.stream(id, "publisher", "information", {}, peer)
 	if not s:
 		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
 	r = s.read()
@@ -73,7 +81,7 @@ def action_information(a):
 	fingerprint = mochi.entity.fingerprint(app["id"], True)
 	tracks = s.read()
 
-	return {"data": {"app": app, "fingerprint": fingerprint, "tracks": tracks}}
+	return {"data": {"app": app, "fingerprint": fingerprint, "tracks": tracks, "peer": peer}}
 
 # Install an app from a publisher entity
 def action_install_publisher(a):
@@ -84,6 +92,7 @@ def action_install_publisher(a):
 
 	id = a.input("id")
 	version = a.input("version")
+	peer = a.input("peer")
 	if not id:
 		return {"status": 400, "error": "App ID is required", "data": {}}
 	if len(id) > 51:
@@ -94,7 +103,7 @@ def action_install_publisher(a):
 		return {"status": 400, "error": "Invalid version format", "data": {}}
 
 	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
-	s = mochi.remote.stream(id, "publisher", "get", {"version": version})
+	s = mochi.remote.stream(id, "publisher", "get", {"version": version}, peer)
 	if not s:
 		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
 	r = s.read()
@@ -102,7 +111,7 @@ def action_install_publisher(a):
 		return {"status": 500, "error": r.get("message", "Failed to download app"), "data": {}}
 
 	s.read_to_file(file)
-	mochi.app.file.install(id, file)
+	mochi.app.file.install(id, file, False, peer)
 	mochi.file.delete(file)
 
 	return {"data": {"installed": True, "id": id, "version": version}}

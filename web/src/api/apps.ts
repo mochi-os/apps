@@ -30,25 +30,28 @@ const getMarketApps = async (): Promise<MarketApp[]> => {
 }
 
 const getAppInfo = async (
-  id: string
-): Promise<{ app: AppInfo; fingerprint: string; tracks: Track[] }> => {
+  id: string,
+  url?: string
+): Promise<{ app: AppInfo; fingerprint: string; tracks: Track[]; peer?: string }> => {
   const response = await requestHelpers.get<{
     app: AppInfo
     fingerprint: string
     tracks: Track[]
-  }>(endpoints.apps.information, { params: { id } })
+    peer?: string
+  }>(endpoints.apps.information, { params: { id, url } })
   return response
 }
 
 const installFromPublisher = async (
   id: string,
-  version: string
+  version: string,
+  peer?: string
 ): Promise<{ installed: boolean; id: string; version: string }> => {
   const response = await requestHelpers.get<{
     installed: boolean
     id: string
     version: string
-  }>(endpoints.apps.installPublisher, { params: { id, version } })
+  }>(endpoints.apps.installPublisher, { params: { id, version, peer } })
   return response
 }
 

@@ -43,6 +43,7 @@ export function Apps() {
   const [installFromPublisher, setInstallFromPublisher] = useState(false)
   const [installFromFile, setInstallFromFile] = useState(false)
   const [publisherId, setPublisherId] = useState('')
+  const [publisherUrl, setPublisherUrl] = useState('')
   const [selectedAppId, setSelectedAppId] = useState<string | null>(null)
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
   const [allowDiscovery, setAllowDiscovery] = useState(false)
@@ -52,7 +53,7 @@ export function Apps() {
     useInstalledAppsQuery()
   const { data: marketApps, isLoading: isLoadingMarket, isError: isMarketError } = useMarketAppsQuery()
   const { data: appInfo, isLoading: isLoadingInfo } =
-    useAppInfoQuery(selectedAppId)
+    useAppInfoQuery(selectedAppId, publisherUrl || undefined)
   const installFromPublisherMutation = useInstallFromPublisherMutation()
   const installFromFileMutation = useInstallFromFileMutation()
 
@@ -79,7 +80,7 @@ export function Apps() {
     if (!selectedAppId) return
 
     installFromPublisherMutation.mutate(
-      { id: selectedAppId, version },
+      { id: selectedAppId, version, peer: appInfo?.peer },
       {
         onSuccess: () => {
           toast.success('App installed', {
@@ -87,6 +88,8 @@ export function Apps() {
           })
           setSelectedAppId(null)
           setSelectedMarketApp(null)
+          setPublisherId('')
+          setPublisherUrl('')
         },
         onError: () => {
           toast.error('Failed to install app')
@@ -105,9 +108,12 @@ export function Apps() {
       toast.error('Please enter an app ID')
       return
     }
+    if (!publisherUrl.trim()) {
+      toast.error('Please enter a server URL')
+      return
+    }
     setSelectedAppId(publisherId.trim())
     setInstallFromPublisher(false)
-    setPublisherId('')
   }
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -288,7 +294,13 @@ export function Apps() {
 
         <AlertDialog
           open={installFromPublisher}
-          onOpenChange={setInstallFromPublisher}
+          onOpenChange={(open) => {
+            setInstallFromPublisher(open)
+            if (!open) {
+              setPublisherId('')
+              setPublisherUrl('')
+            }
+          }}
         >
           <AlertDialogContent>
             <AlertDialogHeader>
@@ -299,9 +311,14 @@ export function Apps() {
                 publisher releases a new version.
               </AlertDialogDescription>
             </AlertDialogHeader>
-            <div className='py-4'>
+            <div className='space-y-3 py-4'>
               <Input
-                placeholder='App ID'
+                placeholder='Server URL'
+                value={publisherUrl}
+                onChange={(e) => setPublisherUrl(e.target.value)}
+              />
+              <Input
+                placeholder='Entity ID'
                 value={publisherId}
                 onChange={(e) => setPublisherId(e.target.value)}
                 maxLength={51}

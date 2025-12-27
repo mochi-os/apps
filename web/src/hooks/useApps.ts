@@ -21,18 +21,18 @@ export const useMarketAppsQuery = () =>
     retry: false,
   })
 
-export const useAppInfoQuery = (id: string | null) =>
+export const useAppInfoQuery = (id: string | null, url?: string) =>
   useQuery({
     queryKey: appKeys.info(id ?? ''),
-    queryFn: () => appsApi.getInfo(id!),
+    queryFn: () => appsApi.getInfo(id!, url),
     enabled: !!id,
   })
 
 export const useInstallFromPublisherMutation = () => {
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: ({ id, version }: { id: string; version: string }) =>
-      appsApi.installFromPublisher(id, version),
+    mutationFn: ({ id, version, peer }: { id: string; version: string; peer?: string }) =>
+      appsApi.installFromPublisher(id, version, peer),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: appKeys.all() })
     },
