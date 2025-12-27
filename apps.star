@@ -178,14 +178,14 @@ def action_install_id(a):
 	if publisher and len(publisher) > 51:
 		return {"status": 400, "error": "Invalid publisher ID", "data": {}}
 
-	# For public apps without publisher, try directory lookup
-	if not publisher:
+	# Get app information - route to publisher if known, otherwise use directory
+	if publisher:
+		s = mochi.remote.stream(publisher, "publisher", "information", {"app": id})
+	else:
 		entry = mochi.directory.get(id)
 		if not entry:
 			return {"status": 404, "error": "App not found. For private apps use format: app_id@publisher", "data": {}}
-
-	# Get app information
-	s = mochi.remote.stream(id, "publisher", "information", {}, publisher)
+		s = mochi.remote.stream(id, "publisher", "information", {"app": id})
 	if not s:
 		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
 	r = s.read()
@@ -207,7 +207,10 @@ def action_install_id(a):
 
 	# Download and install
 	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
-	s = mochi.remote.stream(id, "publisher", "get", {"version": version}, publisher)
+	if publisher:
+		s = mochi.remote.stream(publisher, "publisher", "get", {"app": id, "version": version})
+	else:
+		s = mochi.remote.stream(id, "publisher", "get", {"app": id, "version": version})
 	if not s:
 		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
 	r = s.read()
@@ -241,8 +244,11 @@ def action_updates(a):
 			if not entry:
 				continue  # Not in directory, skip
 
-		# Query for latest version
-		s = mochi.remote.stream(app["id"], "publisher", "version", {"track": "production"}, publisher)
+		# Query for latest version - route to publisher, pass app ID in content
+		if publisher:
+			s = mochi.remote.stream(publisher, "publisher", "version", {"app": app["id"], "track": "production"})
+		else:
+			s = mochi.remote.stream(app["id"], "publisher", "version", {"app": app["id"], "track": "production"})
 		if not s:
 			continue
 		r = s.read()
@@ -292,9 +298,12 @@ def action_upgrade(a):
 		if not entry:
 			return {"status": 400, "error": "Cannot upgrade: publisher unknown", "data": {}}
 
-	# Download and install
+	# Download and install - route to publisher, pass app ID in content
 	file = "upgrade_" + mochi.random.alphanumeric(8) + ".zip"
-	s = mochi.remote.stream(id, "publisher", "get", {"version": version}, publisher)
+	if publisher:
+		s = mochi.remote.stream(publisher, "publisher", "get", {"app": id, "version": version})
+	else:
+		s = mochi.remote.stream(id, "publisher", "get", {"app": id, "version": version})
 	if not s:
 		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
 	r = s.read()
