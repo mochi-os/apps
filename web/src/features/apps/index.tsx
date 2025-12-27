@@ -372,13 +372,12 @@ export function Apps() {
             <AlertDialogHeader>
               <AlertDialogTitle>Install from publisher</AlertDialogTitle>
               <AlertDialogDescription>
-                Enter the app ID to install. For public apps, enter just the ID.
-                For private apps, use the format: app_id@publisher_id
+                Enter the app entity to install. For private apps, use the
+                format: app@publisher.
               </AlertDialogDescription>
             </AlertDialogHeader>
             <div className='space-y-3 py-4'>
               <Input
-                placeholder='App ID or App ID@Publisher'
                 value={appIdInput}
                 onChange={(e) => setAppIdInput(e.target.value)}
                 disabled={installByIdMutation.isPending}
