@@ -70,6 +70,51 @@ const installFromFile = async (
   return response
 }
 
+const installById = async (
+  id: string
+): Promise<{ installed: boolean; id: string; version: string; name: string }> => {
+  const response = await requestHelpers.get<{
+    installed: boolean
+    id: string
+    version: string
+    name: string
+  }>(endpoints.apps.installId, { params: { id } })
+  return response
+}
+
+const getUpdates = async (): Promise<{
+  updates: {
+    id: string
+    name: string
+    current: string
+    available: string
+    publisher: string
+  }[]
+}> => {
+  const response = await requestHelpers.get<{
+    updates: {
+      id: string
+      name: string
+      current: string
+      available: string
+      publisher: string
+    }[]
+  }>(endpoints.apps.updates)
+  return response
+}
+
+const upgrade = async (
+  id: string,
+  version: string
+): Promise<{ upgraded: boolean; id: string; version: string }> => {
+  const response = await requestHelpers.get<{
+    upgraded: boolean
+    id: string
+    version: string
+  }>(endpoints.apps.upgrade, { params: { id, version } })
+  return response
+}
+
 const appsApi = {
   listInstalled: listInstalledApps,
   get: getApp,
@@ -77,6 +122,9 @@ const appsApi = {
   getInfo: getAppInfo,
   installFromPublisher,
   installFromFile,
+  installById,
+  getUpdates,
+  upgrade,
 }
 
 export default appsApi

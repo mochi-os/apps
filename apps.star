@@ -154,3 +154,155 @@ def action_install_file(a):
 	mochi.file.delete(file)
 
 	return {"data": {"installed": True, "id": entity, "version": version}}
+
+# Install an app by ID (public) or ID@publisher (private)
+def action_install_id(a):
+	if a.user.role != "administrator":
+		if mochi.setting.get("apps_install_user") != "true":
+			return {"status": 403, "error": "App installation is restricted to administrators", "data": {}}
+
+	input = a.input("id")
+	if not input:
+		return {"status": 400, "error": "App ID is required", "data": {}}
+
+	# Parse app@publisher format
+	publisher = ""
+	id = input
+	if "@" in input:
+		parts = input.split("@", 1)
+		id = parts[0]
+		publisher = parts[1]
+
+	if len(id) > 51:
+		return {"status": 400, "error": "Invalid app ID", "data": {}}
+	if publisher and len(publisher) > 51:
+		return {"status": 400, "error": "Invalid publisher ID", "data": {}}
+
+	# For public apps without publisher, try directory lookup
+	if not publisher:
+		entry = mochi.directory.get(id)
+		if not entry:
+			return {"status": 404, "error": "App not found. For private apps use format: app_id@publisher", "data": {}}
+
+	# Get app information
+	s = mochi.remote.stream(id, "publisher", "information", {}, publisher)
+	if not s:
+		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
+	r = s.read()
+	if r.get("status") != "200":
+		return {"status": 500, "error": r.get("message", "Failed to get app information"), "data": {}}
+
+	app = s.read()
+	tracks = s.read()
+
+	# Find production version
+	version = ""
+	for t in tracks:
+		if t.get("track") == "production":
+			version = t.get("version")
+			break
+
+	if not version:
+		return {"status": 404, "error": "No production version available", "data": {}}
+
+	# Download and install
+	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
+	s = mochi.remote.stream(id, "publisher", "get", {"version": version}, publisher)
+	if not s:
+		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
+	r = s.read()
+	if r.get("status") != "200":
+		return {"status": 500, "error": r.get("message", "Failed to download app"), "data": {}}
+
+	s.read_to_file(file)
+	mochi.app.file.install(id, file, False, publisher)
+	mochi.file.delete(file)
+
+	return {"data": {"installed": True, "id": id, "version": version, "name": app.get("name", "")}}
+
+# Check for updates for all installed apps
+def action_updates(a):
+	all_apps = mochi.app.list()
+	updates = []
+
+	for app in all_apps:
+		if app.get("engine") != "starlark":
+			continue
+		if not is_entity_id(app["id"]):
+			continue  # Skip development apps
+
+		# Determine publisher: app.json first, then directory
+		publisher = ""
+		pub_config = app.get("publisher")
+		if pub_config and pub_config.get("entity"):
+			publisher = pub_config["entity"]
+		else:
+			entry = mochi.directory.get(app["id"])
+			if not entry:
+				continue  # Not in directory, skip
+
+		# Query for latest version
+		s = mochi.remote.stream(app["id"], "publisher", "version", {"track": "production"}, publisher)
+		if not s:
+			continue
+		r = s.read()
+		if r.get("status") != "200":
+			continue
+
+		remote = s.read()
+		remote_version = remote.get("version", "")
+
+		if remote_version and remote_version != app.get("version"):
+			updates.append({
+				"id": app["id"],
+				"name": app.get("name", app["id"]),
+				"current": app.get("version"),
+				"available": remote_version,
+				"publisher": publisher
+			})
+
+	return {"data": {"updates": updates}}
+
+# Upgrade a single app to a specific version
+def action_upgrade(a):
+	if a.user.role != "administrator":
+		if mochi.setting.get("apps_install_user") != "true":
+			return {"status": 403, "error": "App upgrades restricted to administrators", "data": {}}
+
+	id = a.input("id")
+	version = a.input("version")
+
+	if not id or len(id) > 51:
+		return {"status": 400, "error": "Invalid app ID", "data": {}}
+	if not version or not mochi.valid(version, "version"):
+		return {"status": 400, "error": "Invalid version", "data": {}}
+
+	# Get current app to find publisher
+	app = mochi.app.get(id)
+	if not app:
+		return {"status": 404, "error": "App not installed", "data": {}}
+
+	# Determine publisher
+	publisher = ""
+	pub_config = app.get("publisher")
+	if pub_config and pub_config.get("entity"):
+		publisher = pub_config["entity"]
+	else:
+		entry = mochi.directory.get(id)
+		if not entry:
+			return {"status": 400, "error": "Cannot upgrade: publisher unknown", "data": {}}
+
+	# Download and install
+	file = "upgrade_" + mochi.random.alphanumeric(8) + ".zip"
+	s = mochi.remote.stream(id, "publisher", "get", {"version": version}, publisher)
+	if not s:
+		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
+	r = s.read()
+	if r.get("status") != "200":
+		return {"status": 500, "error": r.get("message", "Failed to download app"), "data": {}}
+
+	s.read_to_file(file)
+	mochi.app.file.install(id, file, False, publisher)
+	mochi.file.delete(file)
+
+	return {"data": {"upgraded": True, "id": id, "version": version}}

@@ -6,6 +6,7 @@ const appKeys = {
   installed: () => ['apps', 'installed'] as const,
   market: () => ['apps', 'market'] as const,
   info: (id: string) => ['apps', 'info', id] as const,
+  updates: () => ['apps', 'updates'] as const,
 }
 
 export const useInstalledAppsQuery = () =>
@@ -26,6 +27,13 @@ export const useAppInfoQuery = (id: string | null, url?: string) =>
     queryKey: appKeys.info(id ?? ''),
     queryFn: () => appsApi.getInfo(id!, url),
     enabled: !!id,
+  })
+
+export const useUpdatesQuery = () =>
+  useQuery({
+    queryKey: appKeys.updates(),
+    queryFn: () => appsApi.getUpdates(),
+    retry: false,
   })
 
 export const useInstallFromPublisherMutation = () => {
@@ -49,6 +57,27 @@ export const useInstallFromFileMutation = () => {
       file: File
       privacy: 'public' | 'private'
     }) => appsApi.installFromFile(file, privacy),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: appKeys.all() })
+    },
+  })
+}
+
+export const useInstallByIdMutation = () => {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: ({ id }: { id: string }) => appsApi.installById(id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: appKeys.all() })
+    },
+  })
+}
+
+export const useUpgradeMutation = () => {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: ({ id, version }: { id: string; version: string }) =>
+      appsApi.upgrade(id, version),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: appKeys.all() })
     },

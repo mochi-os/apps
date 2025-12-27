@@ -12,6 +12,9 @@ const endpoints = {
     information: 'information',
     installPublisher: 'install/publisher',
     installFile: 'install/file',
+    installId: 'install/id',
+    updates: 'updates',
+    upgrade: 'upgrade',
   },
 } as const
 

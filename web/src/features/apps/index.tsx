@@ -19,7 +19,7 @@ import {
   Main,
   Switch,
 } from '@mochi/common'
-import { Package, ExternalLink, Search, Upload } from 'lucide-react'
+import { Package, ExternalLink, Search, Upload, RefreshCw } from 'lucide-react'
 import { toast } from 'sonner'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
 import {
@@ -28,6 +28,9 @@ import {
   useAppInfoQuery,
   useInstallFromPublisherMutation,
   useInstallFromFileMutation,
+  useInstallByIdMutation,
+  useUpdatesQuery,
+  useUpgradeMutation,
 } from '@/hooks/useApps'
 import { AppInfoDialog } from './components/app-info-dialog'
 import { InstallDialog } from './components/install-dialog'
@@ -42,8 +45,7 @@ export function Apps() {
     useState<InstalledApp | null>(null)
   const [installFromPublisher, setInstallFromPublisher] = useState(false)
   const [installFromFile, setInstallFromFile] = useState(false)
-  const [publisherId, setPublisherId] = useState('')
-  const [publisherUrl, setPublisherUrl] = useState('')
+  const [appIdInput, setAppIdInput] = useState('')
   const [selectedAppId, setSelectedAppId] = useState<string | null>(null)
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
   const [allowDiscovery, setAllowDiscovery] = useState(false)
@@ -53,9 +55,12 @@ export function Apps() {
     useInstalledAppsQuery()
   const { data: marketApps, isLoading: isLoadingMarket, isError: isMarketError } = useMarketAppsQuery()
   const { data: appInfo, isLoading: isLoadingInfo } =
-    useAppInfoQuery(selectedAppId, publisherUrl || undefined)
+    useAppInfoQuery(selectedAppId)
+  const { data: updatesData } = useUpdatesQuery()
   const installFromPublisherMutation = useInstallFromPublisherMutation()
   const installFromFileMutation = useInstallFromFileMutation()
+  const installByIdMutation = useInstallByIdMutation()
+  const upgradeMutation = useUpgradeMutation()
 
   const filteredInstalledApps = appsData?.installed?.filter(
     (app) =>
@@ -88,8 +93,6 @@ export function Apps() {
           })
           setSelectedAppId(null)
           setSelectedMarketApp(null)
-          setPublisherId('')
-          setPublisherUrl('')
         },
         onError: () => {
           toast.error('Failed to install app')
@@ -104,16 +107,46 @@ export function Apps() {
   }
 
   const handlePublisherInstall = () => {
-    if (!publisherId.trim()) {
+    if (!appIdInput.trim()) {
       toast.error('Please enter an app ID')
       return
     }
-    if (!publisherUrl.trim()) {
-      toast.error('Please enter a server URL')
-      return
-    }
-    setSelectedAppId(publisherId.trim())
-    setInstallFromPublisher(false)
+
+    installByIdMutation.mutate(
+      { id: appIdInput.trim() },
+      {
+        onSuccess: (data) => {
+          toast.success('App installed', {
+            description: `${data.name || 'App'} v${data.version} has been installed.`,
+          })
+          setInstallFromPublisher(false)
+          setAppIdInput('')
+        },
+        onError: (error: Error) => {
+          toast.error('Failed to install app', {
+            description: error.message,
+          })
+        },
+      }
+    )
+  }
+
+  const handleUpgrade = (id: string, version: string, name: string) => {
+    upgradeMutation.mutate(
+      { id, version },
+      {
+        onSuccess: () => {
+          toast.success('App upgraded', {
+            description: `${name} has been upgraded to v${version}.`,
+          })
+        },
+        onError: (error: Error) => {
+          toast.error('Failed to upgrade app', {
+            description: error.message,
+          })
+        },
+      }
+    )
   }
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -224,6 +257,40 @@ export function Apps() {
           )}
         </section>
 
+        {/* Updates Section - only show if there are updates available */}
+        {updatesData?.updates && updatesData.updates.length > 0 && (
+          <section className='mb-8'>
+            <h2 className='mb-4 text-xl font-semibold'>Updates available</h2>
+            <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+              {updatesData.updates.map((update) => (
+                <Card key={update.id} className='flex flex-col'>
+                  <CardHeader className='pb-3'>
+                    <CardTitle className='truncate text-lg'>
+                      {update.name}
+                    </CardTitle>
+                    <p className='text-muted-foreground text-sm'>
+                      {update.current} → {update.available}
+                    </p>
+                  </CardHeader>
+                  <CardContent className='flex-1'>
+                    <Button
+                      variant='outline'
+                      size='sm'
+                      onClick={() =>
+                        handleUpgrade(update.id, update.available, update.name)
+                      }
+                      disabled={upgradeMutation.isPending}
+                    >
+                      <RefreshCw className='mr-2 h-4 w-4' />
+                      {upgradeMutation.isPending ? 'Upgrading...' : 'Upgrade'}
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Development Apps Section - only show if there are any */}
         {filteredDevelopmentApps && filteredDevelopmentApps.length > 0 && (
           <section className='mb-8'>
@@ -297,8 +364,7 @@ export function Apps() {
           onOpenChange={(open) => {
             setInstallFromPublisher(open)
             if (!open) {
-              setPublisherId('')
-              setPublisherUrl('')
+              setAppIdInput('')
             }
           }}
         >
@@ -306,28 +372,27 @@ export function Apps() {
             <AlertDialogHeader>
               <AlertDialogTitle>Install from publisher</AlertDialogTitle>
               <AlertDialogDescription>
-                Apps installed directly from a publisher have not been vetted
-                and may be malware. Apps will automatically update when the
-                publisher releases a new version.
+                Enter the app ID to install. For public apps, enter just the ID.
+                For private apps, use the format: app_id@publisher_id
               </AlertDialogDescription>
             </AlertDialogHeader>
             <div className='space-y-3 py-4'>
               <Input
-                placeholder='Server URL'
-                value={publisherUrl}
-                onChange={(e) => setPublisherUrl(e.target.value)}
-              />
-              <Input
-                placeholder='Entity ID'
-                value={publisherId}
-                onChange={(e) => setPublisherId(e.target.value)}
-                maxLength={51}
+                placeholder='App ID or App ID@Publisher'
+                value={appIdInput}
+                onChange={(e) => setAppIdInput(e.target.value)}
+                disabled={installByIdMutation.isPending}
               />
             </div>
             <AlertDialogFooter>
-              <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction onClick={handlePublisherInstall}>
-                Continue
+              <AlertDialogCancel disabled={installByIdMutation.isPending}>
+                Cancel
+              </AlertDialogCancel>
+              <AlertDialogAction
+                onClick={handlePublisherInstall}
+                disabled={installByIdMutation.isPending}
+              >
+                {installByIdMutation.isPending ? 'Installing...' : 'Install'}
               </AlertDialogAction>
             </AlertDialogFooter>
           </AlertDialogContent>

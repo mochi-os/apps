@@ -2,7 +2,7 @@
 // Copyright Alistair Cunningham 2025
 
 {
-	"version": "2.0",
+	"version": "2.1",
 	"label": "app_name",
 	"paths": ["apps"],
 
@@ -22,6 +22,9 @@
 		"information": {"function": "action_information"},
 		"install/publisher": {"function": "action_install_publisher"},
 		"install/file": {"function": "action_install_file"},
+		"install/id": {"function": "action_install_id"},
+		"updates": {"function": "action_updates"},
+		"upgrade": {"function": "action_upgrade"},
 		":id": {"function": "action_view"}
 	}
 }
