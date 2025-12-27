@@ -83,7 +83,7 @@ export function InstallDialog({
         </div>
 
         <AlertDialogFooter>
-          <AlertDialogCancel className='border-0 bg-transparent shadow-none hover:bg-accent'>Cancel</AlertDialogCancel>
+          <AlertDialogCancel className='border border-input bg-transparent shadow-none hover:bg-accent focus:ring-0 focus:outline-none focus-visible:ring-0 focus:border-input focus-visible:border-input'>Cancel</AlertDialogCancel>
           <AlertDialogAction
             autoFocus
             onClick={() => appInfo && onInstall(appInfo.tracks[0]?.version)}
