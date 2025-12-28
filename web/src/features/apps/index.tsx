@@ -1,5 +1,4 @@
 import { useState, useRef } from 'react'
-import { usePageTitle } from '@mochi/common'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -18,8 +17,9 @@ import {
   Label,
   Main,
   Switch,
+  usePageTitle,
 } from '@mochi/common'
-import { Package, ExternalLink, Search, Upload, RefreshCw } from 'lucide-react'
+import { Package, ExternalLink, Download, RefreshCw } from 'lucide-react'
 import { toast } from 'sonner'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
 import {
@@ -37,7 +37,6 @@ import { InstallDialog } from './components/install-dialog'
 
 export function Apps() {
   usePageTitle('Apps')
-  const [search, setSearch] = useState('')
   const [selectedMarketApp, setSelectedMarketApp] = useState<MarketApp | null>(
     null
   )
@@ -53,7 +52,11 @@ export function Apps() {
 
   const { data: appsData, isLoading: isLoadingInstalled } =
     useInstalledAppsQuery()
-  const { data: marketApps, isLoading: isLoadingMarket, isError: isMarketError } = useMarketAppsQuery()
+  const {
+    data: marketApps,
+    isLoading: isLoadingMarket,
+    isError: isMarketError,
+  } = useMarketAppsQuery()
   const { data: appInfo, isLoading: isLoadingInfo } =
     useAppInfoQuery(selectedAppId)
   const { data: updatesData } = useUpdatesQuery()
@@ -62,23 +65,26 @@ export function Apps() {
   const installByIdMutation = useInstallByIdMutation()
   const upgradeMutation = useUpgradeMutation()
 
-  const filteredInstalledApps = appsData?.installed?.filter(
-    (app) =>
-      app.name.toLowerCase().includes(search.toLowerCase()) ||
-      app.id.toLowerCase().includes(search.toLowerCase())
-  )
+  const installedApps = appsData?.installed
+  const developmentApps = appsData?.development
 
-  const filteredDevelopmentApps = appsData?.development?.filter(
-    (app) =>
-      app.name.toLowerCase().includes(search.toLowerCase()) ||
-      app.id.toLowerCase().includes(search.toLowerCase())
-  )
+  // Compare versions: returns true if a > b
+  const isNewerVersion = (a: string, b: string): boolean => {
+    const partsA = a.split('.').map((n) => parseInt(n, 10) || 0)
+    const partsB = b.split('.').map((n) => parseInt(n, 10) || 0)
+    const len = Math.max(partsA.length, partsB.length)
+    for (let i = 0; i < len; i++) {
+      const numA = partsA[i] || 0
+      const numB = partsB[i] || 0
+      if (numA > numB) return true
+      if (numA < numB) return false
+    }
+    return false
+  }
 
-  const filteredMarketApps = marketApps?.filter(
-    (app) =>
-      app.name.toLowerCase().includes(search.toLowerCase()) ||
-      app.id.toLowerCase().includes(search.toLowerCase()) ||
-      app.blurb.toLowerCase().includes(search.toLowerCase())
+  // Filter updates to only show newer versions
+  const availableUpdates = updatesData?.updates?.filter((update) =>
+    isNewerVersion(update.available, update.current)
   )
 
   const handleInstall = (version: string) => {
@@ -131,22 +137,20 @@ export function Apps() {
     )
   }
 
-  const handleUpgrade = (id: string, version: string, name: string) => {
-    upgradeMutation.mutate(
-      { id, version },
-      {
-        onSuccess: () => {
-          toast.success('App upgraded', {
-            description: `${name} has been upgraded to v${version}.`,
-          })
-        },
-        onError: (error: Error) => {
-          toast.error('Failed to upgrade app', {
-            description: error.message,
-          })
-        },
+  const handleUpdateAll = async () => {
+    if (!availableUpdates?.length) return
+
+    for (const update of availableUpdates) {
+      try {
+        await upgradeMutation.mutateAsync({
+          id: update.id,
+          version: update.available,
+        })
+      } catch {
+        toast.error(`Failed to upgrade ${update.name}`)
       }
-    )
+    }
+    toast.success('All apps updated')
   }
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -195,47 +199,36 @@ export function Apps() {
   return (
     <>
       <Main>
-        <div className='mb-6 flex items-center justify-end gap-2'>
-          <div className='relative w-64'>
-            <Search className='text-muted-foreground absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2' />
-            <Input
-              placeholder='Search apps...'
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className='pl-9'
+        {appsData?.can_install && (
+          <div className='mb-6 flex items-center justify-end gap-2'>
+            <input
+              type='file'
+              ref={fileInputRef}
+              onChange={handleFileSelect}
+              accept='.zip'
+              className='hidden'
             />
+            <Button
+              variant='outline'
+              onClick={() => setInstallFromPublisher(true)}
+            >
+              <ExternalLink className='mr-2 h-4 w-4' />
+              Install from publisher
+            </Button>
+            <Button
+              variant='outline'
+              onClick={() => fileInputRef.current?.click()}
+            >
+              <Download className='mr-2 h-4 w-4' />
+              Install from file
+            </Button>
           </div>
-          {appsData?.can_install && (
-            <>
-              <input
-                type='file'
-                ref={fileInputRef}
-                onChange={handleFileSelect}
-                accept='.zip'
-                className='hidden'
-              />
-              <Button
-                variant='outline'
-                onClick={() => fileInputRef.current?.click()}
-              >
-                <Upload className='mr-2 h-4 w-4' />
-                Install from file
-              </Button>
-              <Button
-                variant='outline'
-                onClick={() => setInstallFromPublisher(true)}
-              >
-                <ExternalLink className='mr-2 h-4 w-4' />
-                Install from publisher
-              </Button>
-            </>
-          )}
-        </div>
+        )}
 
         {/* Installed Apps Section */}
         <section className='mb-8'>
           <h2 className='mb-4 text-xl font-semibold'>Installed apps</h2>
-          {filteredInstalledApps?.length === 0 ? (
+          {installedApps?.length === 0 ? (
             <Card>
               <CardContent className='py-8'>
                 <div className='text-muted-foreground text-center'>
@@ -246,7 +239,7 @@ export function Apps() {
             </Card>
           ) : (
             <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-              {filteredInstalledApps?.map((app) => (
+              {installedApps?.map((app) => (
                 <InstalledAppCard
                   key={app.id}
                   app={app}
@@ -258,12 +251,23 @@ export function Apps() {
         </section>
 
         {/* Updates Section - only show if there are updates available */}
-        {updatesData?.updates && updatesData.updates.length > 0 && (
+        {availableUpdates && availableUpdates.length > 0 && (
           <section className='mb-8'>
-            <h2 className='mb-4 text-xl font-semibold'>Updates available</h2>
+            <div className='mb-4 flex items-center gap-4'>
+              <h2 className='text-xl font-semibold'>Updates available</h2>
+              <Button
+                variant='outline'
+                size='sm'
+                onClick={handleUpdateAll}
+                disabled={upgradeMutation.isPending}
+              >
+                <RefreshCw className='mr-2 h-4 w-4' />
+                {upgradeMutation.isPending ? 'Updating...' : 'Update all'}
+              </Button>
+            </div>
             <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-              {updatesData.updates.map((update) => (
-                <Card key={update.id} className='flex flex-col'>
+              {availableUpdates.map((update) => (
+                <Card key={update.id}>
                   <CardHeader className='pb-3'>
                     <CardTitle className='truncate text-lg'>
                       {update.name}
@@ -272,19 +276,6 @@ export function Apps() {
                       {update.current} → {update.available}
                     </p>
                   </CardHeader>
-                  <CardContent className='flex-1'>
-                    <Button
-                      variant='outline'
-                      size='sm'
-                      onClick={() =>
-                        handleUpgrade(update.id, update.available, update.name)
-                      }
-                      disabled={upgradeMutation.isPending}
-                    >
-                      <RefreshCw className='mr-2 h-4 w-4' />
-                      {upgradeMutation.isPending ? 'Upgrading...' : 'Upgrade'}
-                    </Button>
-                  </CardContent>
                 </Card>
               ))}
             </div>
@@ -292,11 +283,11 @@ export function Apps() {
         )}
 
         {/* Development Apps Section - only show if there are any */}
-        {filteredDevelopmentApps && filteredDevelopmentApps.length > 0 && (
+        {developmentApps && developmentApps.length > 0 && (
           <section className='mb-8'>
             <h2 className='mb-4 text-xl font-semibold'>Development apps</h2>
             <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-              {filteredDevelopmentApps.map((app) => (
+              {developmentApps.map((app) => (
                 <InstalledAppCard
                   key={app.id}
                   app={app}
@@ -325,7 +316,7 @@ export function Apps() {
                   </div>
                 </CardContent>
               </Card>
-            ) : filteredMarketApps?.length === 0 ? (
+            ) : marketApps?.length === 0 ? (
               <Card>
                 <CardContent className='py-8'>
                   <div className='text-muted-foreground text-center'>
@@ -336,7 +327,7 @@ export function Apps() {
               </Card>
             ) : (
               <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-                {filteredMarketApps?.map((app) => (
+                {marketApps?.map((app) => (
                   <Card
                     key={app.id}
                     className='flex cursor-pointer flex-col transition-shadow hover:shadow-md'
@@ -416,7 +407,10 @@ export function Apps() {
                 <span className='font-medium'>File:</span> {selectedFile?.name}
               </p>
               <div className='flex items-center justify-between rounded-[8px] border px-4 py-3'>
-                <Label htmlFor='allow-discovery' className='text-sm font-medium'>
+                <Label
+                  htmlFor='allow-discovery'
+                  className='text-sm font-medium'
+                >
                   Allow other instances to discover this app
                 </Label>
                 <Switch
@@ -433,7 +427,9 @@ export function Apps() {
                 onClick={handleFileInstall}
                 disabled={installFromFileMutation.isPending}
               >
-                {installFromFileMutation.isPending ? 'Installing...' : 'Install'}
+                {installFromFileMutation.isPending
+                  ? 'Installing...'
+                  : 'Install'}
               </AlertDialogAction>
             </AlertDialogFooter>
           </AlertDialogContent>

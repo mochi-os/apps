@@ -41,16 +41,16 @@ export function InstallDialog({
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>{marketApp.name}</AlertDialogTitle>
-          {marketApp.blurb && (
-            <p className='text-sm'>{marketApp.blurb}</p>
-          )}
+          {marketApp.blurb && <p className='text-sm'>{marketApp.blurb}</p>}
         </AlertDialogHeader>
 
         <div className='min-h-[160px] space-y-3'>
           {marketApp.description && (
             <>
               <hr />
-              <p className='text-muted-foreground text-sm'>{marketApp.description}</p>
+              <p className='text-muted-foreground text-sm'>
+                {marketApp.description}
+              </p>
             </>
           )}
 
@@ -72,7 +72,9 @@ export function InstallDialog({
               </p>
               <p className='text-sm'>
                 <span className='font-medium'>Entity:</span>{' '}
-                <span className='font-mono text-xs break-all'>{marketApp.id}</span>
+                <span className='font-mono text-xs break-all'>
+                  {marketApp.id}
+                </span>
               </p>
             </>
           ) : (
@@ -83,7 +85,9 @@ export function InstallDialog({
         </div>
 
         <AlertDialogFooter>
-          <AlertDialogCancel className='border border-input bg-transparent shadow-none hover:bg-accent focus:ring-0 focus:outline-none focus-visible:ring-0 focus:border-input focus-visible:border-input'>Cancel</AlertDialogCancel>
+          <AlertDialogCancel className='border-input hover:bg-accent focus:border-input focus-visible:border-input border bg-transparent shadow-none focus:ring-0 focus:outline-none focus-visible:ring-0'>
+            Cancel
+          </AlertDialogCancel>
           <AlertDialogAction
             autoFocus
             onClick={() => appInfo && onInstall(appInfo.tracks[0]?.version)}

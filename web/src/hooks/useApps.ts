@@ -39,8 +39,15 @@ export const useUpdatesQuery = () =>
 export const useInstallFromPublisherMutation = () => {
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: ({ id, version, peer }: { id: string; version: string; peer?: string }) =>
-      appsApi.installFromPublisher(id, version, peer),
+    mutationFn: ({
+      id,
+      version,
+      peer,
+    }: {
+      id: string
+      version: string
+      peer?: string
+    }) => appsApi.installFromPublisher(id, version, peer),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: appKeys.all() })
     },

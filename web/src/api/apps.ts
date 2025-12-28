@@ -32,7 +32,12 @@ const getMarketApps = async (): Promise<MarketApp[]> => {
 const getAppInfo = async (
   id: string,
   url?: string
-): Promise<{ app: AppInfo; fingerprint: string; tracks: Track[]; peer?: string }> => {
+): Promise<{
+  app: AppInfo
+  fingerprint: string
+  tracks: Track[]
+  peer?: string
+}> => {
   const response = await requestHelpers.get<{
     app: AppInfo
     fingerprint: string
@@ -72,7 +77,12 @@ const installFromFile = async (
 
 const installById = async (
   id: string
-): Promise<{ installed: boolean; id: string; version: string; name: string }> => {
+): Promise<{
+  installed: boolean
+  id: string
+  version: string
+  name: string
+}> => {
   const response = await requestHelpers.get<{
     installed: boolean
     id: string
