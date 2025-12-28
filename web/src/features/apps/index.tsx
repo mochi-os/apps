@@ -18,6 +18,7 @@ import {
   Main,
   Switch,
   usePageTitle,
+  getErrorMessage,
 } from '@mochi/common'
 import { Package, ExternalLink, Download, RefreshCw } from 'lucide-react'
 import { toast } from 'sonner'
@@ -104,8 +105,8 @@ export function Apps() {
           setSelectedAppId(null)
           setSelectedMarketApp(null)
         },
-        onError: () => {
-          toast.error('Failed to install app')
+        onError: (error) => {
+          toast.error(getErrorMessage(error, 'Failed to install app'))
         },
       }
     )
@@ -132,10 +133,8 @@ export function Apps() {
           setInstallFromPublisher(false)
           setAppIdInput('')
         },
-        onError: (error: Error) => {
-          toast.error('Failed to install app', {
-            description: error.message,
-          })
+        onError: (error) => {
+          toast.error(getErrorMessage(error, 'Failed to install app'))
         },
       }
     )
@@ -150,8 +149,8 @@ export function Apps() {
           id: update.id,
           version: update.available,
         })
-      } catch {
-        toast.error(`Failed to upgrade ${update.name}`)
+      } catch (error) {
+        toast.error(getErrorMessage(error, `Failed to upgrade ${update.name}`))
       }
     }
     toast.success('All apps updated')
@@ -184,8 +183,8 @@ export function Apps() {
           setSelectedFile(null)
           setAllowDiscovery(false)
         },
-        onError: () => {
-          toast.error('Failed to install app')
+        onError: (error) => {
+          toast.error(getErrorMessage(error, 'Failed to install app'))
         },
       }
     )
