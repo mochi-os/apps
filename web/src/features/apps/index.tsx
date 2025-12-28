@@ -50,8 +50,11 @@ export function Apps() {
   const [allowDiscovery, setAllowDiscovery] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
-  const { data: appsData, isLoading: isLoadingInstalled } =
-    useInstalledAppsQuery()
+  const {
+    data: appsData,
+    isLoading: isLoadingInstalled,
+    refetch: refetchInstalled,
+  } = useInstalledAppsQuery()
   const {
     data: marketApps,
     isLoading: isLoadingMarket,
@@ -59,7 +62,7 @@ export function Apps() {
   } = useMarketAppsQuery()
   const { data: appInfo, isLoading: isLoadingInfo } =
     useAppInfoQuery(selectedAppId)
-  const { data: updatesData } = useUpdatesQuery()
+  const { data: updatesData, refetch: refetchUpdates } = useUpdatesQuery()
   const installFromPublisherMutation = useInstallFromPublisherMutation()
   const installFromFileMutation = useInstallFromFileMutation()
   const installByIdMutation = useInstallByIdMutation()
@@ -69,7 +72,8 @@ export function Apps() {
   const developmentApps = appsData?.development
 
   // Compare versions: returns true if a > b
-  const isNewerVersion = (a: string, b: string): boolean => {
+  const isNewerVersion = (a: string, b: string | null): boolean => {
+    if (!b) return !!a // If no current version, any available version is newer
     const partsA = a.split('.').map((n) => parseInt(n, 10) || 0)
     const partsB = b.split('.').map((n) => parseInt(n, 10) || 0)
     const len = Math.max(partsA.length, partsB.length)
@@ -151,6 +155,9 @@ export function Apps() {
       }
     }
     toast.success('All apps updated')
+    // Refetch to update UI immediately
+    refetchInstalled()
+    refetchUpdates()
   }
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -227,7 +234,20 @@ export function Apps() {
 
         {/* Installed Apps Section */}
         <section className='mb-8'>
-          <h2 className='mb-4 text-xl font-semibold'>Installed apps</h2>
+          <div className='mb-4 flex items-center gap-4'>
+            <h2 className='text-xl font-semibold'>Installed apps</h2>
+            {availableUpdates && availableUpdates.length > 0 && (
+              <Button
+                variant='outline'
+                size='sm'
+                onClick={handleUpdateAll}
+                disabled={upgradeMutation.isPending}
+              >
+                <RefreshCw className='mr-2 h-4 w-4' />
+                {upgradeMutation.isPending ? 'Updating...' : 'Update all'}
+              </Button>
+            )}
+          </div>
           {installedApps?.length === 0 ? (
             <Card>
               <CardContent className='py-8'>
@@ -244,43 +264,14 @@ export function Apps() {
                   key={app.id}
                   app={app}
                   onClick={() => setSelectedInstalledApp(app)}
+                  availableVersion={
+                    availableUpdates?.find((u) => u.id === app.id)?.available
+                  }
                 />
               ))}
             </div>
           )}
         </section>
-
-        {/* Updates Section - only show if there are updates available */}
-        {availableUpdates && availableUpdates.length > 0 && (
-          <section className='mb-8'>
-            <div className='mb-4 flex items-center gap-4'>
-              <h2 className='text-xl font-semibold'>Updates available</h2>
-              <Button
-                variant='outline'
-                size='sm'
-                onClick={handleUpdateAll}
-                disabled={upgradeMutation.isPending}
-              >
-                <RefreshCw className='mr-2 h-4 w-4' />
-                {upgradeMutation.isPending ? 'Updating...' : 'Update all'}
-              </Button>
-            </div>
-            <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-              {availableUpdates.map((update) => (
-                <Card key={update.id}>
-                  <CardHeader className='pb-3'>
-                    <CardTitle className='truncate text-lg'>
-                      {update.name}
-                    </CardTitle>
-                    <p className='text-muted-foreground text-sm'>
-                      {update.current} → {update.available}
-                    </p>
-                  </CardHeader>
-                </Card>
-              ))}
-            </div>
-          </section>
-        )}
 
         {/* Development Apps Section - only show if there are any */}
         {developmentApps && developmentApps.length > 0 && (
@@ -495,10 +486,12 @@ function InstalledAppCard({
   app,
   onClick,
   showId,
+  availableVersion,
 }: {
   app: InstalledApp
   onClick: () => void
   showId?: boolean
+  availableVersion?: string
 }) {
   return (
     <Card
@@ -507,9 +500,11 @@ function InstalledAppCard({
     >
       <CardHeader>
         <CardTitle className='truncate text-lg'>{app.name}</CardTitle>
-        <p className='text-muted-foreground truncate text-sm'>
-          {app.latest}
-          {showId && <> · {app.id}</>}
+        <p className='text-muted-foreground text-sm'>
+          {availableVersion
+            ? `${app.latest} (update to ${availableVersion} available)`
+            : app.latest}
+          {showId && <span className='truncate'> · {app.id}</span>}
         </p>
       </CardHeader>
     </Card>

@@ -227,12 +227,15 @@ def action_install_id(a):
 def action_updates(a):
 	all_apps = mochi.app.list()
 	updates = []
+	debug = []
 
 	for app in all_apps:
 		if app.get("engine") != "starlark":
 			continue
 		if not is_entity_id(app["id"]):
 			continue  # Skip development apps
+
+		app_debug = {"name": app.get("name"), "id": app["id"], "latest": app.get("latest")}
 
 		# Determine publisher: app.json first, then directory
 		publisher = ""
@@ -242,6 +245,8 @@ def action_updates(a):
 		else:
 			entry = mochi.directory.get(app["id"])
 			if not entry:
+				app_debug["skip"] = "not in directory"
+				debug.append(app_debug)
 				continue  # Not in directory, skip
 
 		# Query for latest version - route to publisher, pass app ID in content
@@ -250,22 +255,31 @@ def action_updates(a):
 		else:
 			s = mochi.remote.stream(app["id"], "publisher", "version", {"app": app["id"], "track": "production"})
 		if not s:
+			app_debug["skip"] = "stream failed"
+			debug.append(app_debug)
 			continue
 		r = s.read()
 		if r.get("status") != "200":
+			app_debug["skip"] = "status " + str(r.get("status"))
+			debug.append(app_debug)
 			continue
 
 		remote = s.read()
 		remote_version = remote.get("version", "")
+		app_debug["remote_version"] = remote_version
 
-		if remote_version and remote_version != app.get("version"):
+		if remote_version and remote_version != app.get("latest"):
 			updates.append({
 				"id": app["id"],
 				"name": app.get("name", app["id"]),
-				"current": app.get("version"),
+				"current": app.get("latest"),
 				"available": remote_version,
 				"publisher": publisher
 			})
+			app_debug["update"] = True
+		else:
+			app_debug["skip"] = "same version"
+		debug.append(app_debug)
 
 	return {"data": {"updates": updates}}
 
