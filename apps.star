@@ -70,7 +70,7 @@ def action_information(a):
 		if not peer:
 			return {"status": 500, "error": "Failed to connect to server at " + url, "data": {}}
 
-	s = mochi.remote.stream(id, "publisher", "information", {}, peer)
+	s = mochi.remote.stream(id, "publisher", "information", {"app": id}, peer)
 	if not s:
 		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
 	r = s.read()
@@ -82,6 +82,26 @@ def action_information(a):
 	tracks = s.read()
 
 	return {"data": {"app": app, "fingerprint": fingerprint, "tracks": tracks, "peer": peer}}
+
+# Get version information for an app from its publisher
+def action_version(a):
+	id = a.input("id")
+	if not id:
+		return {"status": 400, "error": "App ID is required", "data": {}}
+	if len(id) > 51:
+		return {"status": 400, "error": "Invalid app ID", "data": {}}
+	track = a.input("track", "")
+	if len(track) > 50:
+		return {"status": 400, "error": "Invalid track", "data": {}}
+
+	s = mochi.remote.stream(id, "publisher", "version", {"app": id, "track": track})
+	if not s:
+		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
+	r = s.read()
+	if r.get("status") != "200":
+		return {"status": 500, "error": r.get("message", "Failed to get version"), "data": {}}
+
+	return s.read()
 
 # Install an app from a publisher entity
 def action_install_publisher(a):
