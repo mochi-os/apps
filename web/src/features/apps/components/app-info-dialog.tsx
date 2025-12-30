@@ -40,7 +40,7 @@ export function AppInfoDialog({
           <DialogTitle>
             {isLoading
               ? 'Loading...'
-              : (appInfo?.app.name ?? 'App Information')}
+              : (appInfo?.app.name ?? 'App information')}
           </DialogTitle>
           {appInfo && (
             <DialogDescription className='font-mono text-xs'>
