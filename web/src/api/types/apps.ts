@@ -3,6 +3,7 @@ export interface InstalledApp {
   name: string
   latest: string
   fingerprint: string
+  user_track?: string
 }
 
 export interface MarketApp {

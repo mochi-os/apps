@@ -40,7 +40,7 @@ export function InstalledAppDialog({ app, onClose }: InstalledAppDialogProps) {
   const multiVersionAvailable = availableData?.available ?? false
   const hasMultipleVersions = (versionData?.versions?.length ?? 0) > 1
   const hasTracks = Object.keys(versionData?.tracks ?? {}).length > 0
-  const isAdmin = versionData?.system !== undefined
+  const isAdmin = versionData?.is_admin ?? false
   const defaultTrack = versionData?.default_track ?? ''
 
   // Determine current user selection
@@ -58,6 +58,19 @@ export function InstalledAppDialog({ app, onClose }: InstalledAppDialogProps) {
     : systemPref?.version
       ? `version:${systemPref.version}`
       : 'default'
+
+  // Compute the effective "default" version for display
+  // Priority: system preference > default track version
+  const effectiveDefaultVersion = (() => {
+    if (systemPref?.version) return systemPref.version
+    if (systemPref?.track && versionData?.tracks?.[systemPref.track]) {
+      return versionData.tracks[systemPref.track]
+    }
+    if (defaultTrack && versionData?.tracks?.[defaultTrack]) {
+      return versionData.tracks[defaultTrack]
+    }
+    return ''
+  })()
 
   const handleUserVersionChange = (value: string) => {
     if (!app) return
@@ -90,10 +103,10 @@ export function InstalledAppDialog({ app, onClose }: InstalledAppDialogProps) {
       { app: app.id, version, track },
       {
         onSuccess: () => {
-          toast.success('System default updated')
+          toast.success('Default for all users updated')
         },
         onError: (error) => {
-          toast.error(getErrorMessage(error, 'Failed to update system default'))
+          toast.error(getErrorMessage(error, 'Failed to update default'))
         },
       }
     )
@@ -167,7 +180,9 @@ export function InstalledAppDialog({ app, onClose }: InstalledAppDialogProps) {
                       systemValue,
                       handleSystemVersionChange,
                       setSystemVersion.isPending,
-                      'Default track'
+                      defaultTrack && versionData?.tracks?.[defaultTrack]
+                        ? `Default track (version ${versionData.tracks[defaultTrack]})`
+                        : 'Default track'
                     )
                   )}
                 </div>
@@ -181,13 +196,10 @@ export function InstalledAppDialog({ app, onClose }: InstalledAppDialogProps) {
                     userValue,
                     handleUserVersionChange,
                     setUserVersion.isPending,
-                    'Default for all users'
+                    effectiveDefaultVersion
+                      ? `Default for all users (version ${effectiveDefaultVersion})`
+                      : 'Default for all users'
                   )
-                )}
-                {!isAdmin && (
-                  <p className='text-muted-foreground text-xs'>
-                    Choose which version of this app to use
-                  </p>
                 )}
               </div>
             </>

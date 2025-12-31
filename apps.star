@@ -34,6 +34,13 @@ def action_list(a):
 	for app in all_apps:
 		if app.get("engine") != "starlark":
 			continue
+		# Add user's track/version preference (for display on cards)
+		user_pref = a.user.app.version.get(app["id"])
+		if user_pref:
+			app["user_track"] = user_pref.get("track", "")
+			# If user has a version preference, show that instead of latest
+			if user_pref.get("version"):
+				app["latest"] = user_pref["version"]
 		if is_entity_id(app["id"]):
 			app["fingerprint"] = mochi.entity.fingerprint(app["id"], True)
 			installed.append(app)
@@ -431,19 +438,32 @@ def action_user_apps_app(a):
 
 	versions = mochi.app.versions(app_id)
 	tracks = mochi.app.tracks(app_id)
+
+	# If no local tracks and app is from publisher, fetch from publisher via P2P
+	default_track = ""
+	if not tracks and is_entity_id(app_id):
+		s = mochi.remote.stream(app_id, "publisher", "information", {})
+		if s:
+			r = s.read()
+			if r.get("status", "") == "200":
+				app_info = s.read()
+				default_track = app_info.get("default_track", "")
+				publisher_tracks = s.read()
+				for t in publisher_tracks:
+					tracks[t["track"]] = t["version"]
+
 	user_pref = a.user.app.version.get(app_id)
 
-	# System default requires admin
-	system_default = None
-	if a.user.role == "administrator":
-		system_default = mochi.app.version.get(app_id)
-
-	a.json({"data": {
+	result = {
 		"versions": versions,
 		"tracks": tracks,
+		"default_track": default_track,
 		"user": user_pref,
-		"system": system_default,
-	}})
+		"system": mochi.app.version.get(app_id),
+		"is_admin": a.user.role == "administrator",
+	}
+
+	a.json({"data": result})
 
 def action_user_apps_version_set(a):
 	"""Set user's preferred version or track for an app"""
@@ -455,8 +475,34 @@ def action_user_apps_version_set(a):
 		a.error(400, "Missing app parameter")
 		return
 
+	# If a version is specified (either directly or via track), download it if needed
+	if version and is_entity_id(app_id):
+		installed_versions = mochi.app.versions(app_id)
+		if version not in installed_versions:
+			mochi.app.version.download(app_id, version)
+
 	a.user.app.version.set(app_id, version, track)
 	a.json({"ok": True})
+
+def action_version_download(a):
+	"""Download a specific app version from publisher without activating it"""
+	app_id = a.input("app")
+	version = a.input("version")
+
+	if not app_id:
+		a.error(400, "Missing app parameter")
+		return
+	if not version:
+		a.error(400, "Missing version parameter")
+		return
+
+	# Check if user can install apps
+	if a.user.role != "administrator" and mochi.setting.get("apps_install_user") != "true":
+		a.error(403, "Not authorized to install apps")
+		return
+
+	ok = mochi.app.version.download(app_id, version)
+	a.json({"ok": ok})
 
 def action_user_apps_routing_set(a):
 	"""Set user's routing override for a class, service, or path"""
@@ -553,6 +599,12 @@ def action_system_apps_version_set(a):
 	if not app_id:
 		a.error(400, "Missing app parameter")
 		return
+
+	# If a version is specified (either directly or via track), download it if needed
+	if version and is_entity_id(app_id):
+		installed_versions = mochi.app.versions(app_id)
+		if version not in installed_versions:
+			mochi.app.version.download(app_id, version)
 
 	mochi.app.version.set(app_id, version, track)
 	a.json({"ok": True})

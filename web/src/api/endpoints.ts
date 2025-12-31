@@ -20,6 +20,7 @@ const endpoints = {
   available: 'available',
   appVersions: 'user/preferences/app',
   versionSet: 'user/preferences/version/set',
+  systemVersionSet: 'system/version/set',
 } as const
 
 export type Endpoints = typeof endpoints

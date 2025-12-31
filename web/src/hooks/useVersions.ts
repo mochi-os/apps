@@ -15,8 +15,10 @@ interface VersionPref {
 interface AppVersionsResponse {
   versions: string[]
   tracks: Record<string, string>
+  default_track: string
   user: VersionPref | null
   system: VersionPref | null
+  is_admin: boolean
 }
 
 export function useMultiVersionAvailable() {
@@ -55,6 +57,21 @@ export function useSetUserVersion() {
     },
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['app-versions', variables.app] })
+      queryClient.invalidateQueries({ queryKey: ['apps', 'installed'] })
+    },
+  })
+}
+
+export function useSetSystemVersion() {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: async (data: { app: string; version?: string; track?: string }) => {
+      const response = await apiClient.post(endpoints.systemVersionSet, data)
+      return response.data
+    },
+    onSuccess: (_, variables) => {
+      queryClient.invalidateQueries({ queryKey: ['app-versions', variables.app] })
+      queryClient.invalidateQueries({ queryKey: ['apps', 'installed'] })
     },
   })
 }
