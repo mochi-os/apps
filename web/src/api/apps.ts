@@ -125,6 +125,13 @@ const upgrade = async (
   return response
 }
 
+const cleanup = async (): Promise<{ removed: number }> => {
+  const response = await requestHelpers.post<{ removed: number }>(
+    endpoints.cleanup
+  )
+  return response
+}
+
 const appsApi = {
   listInstalled: listInstalledApps,
   get: getApp,
@@ -135,6 +142,7 @@ const appsApi = {
   installById,
   getUpdates,
   upgrade,
+  cleanup,
 }
 
 export default appsApi

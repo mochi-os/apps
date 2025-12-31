@@ -24,7 +24,7 @@ import {
   usePageTitle,
   toast,
 } from '@mochi/common'
-import { Package, ExternalLink, Download, RefreshCw, MoreVertical } from 'lucide-react'
+import { Package, ExternalLink, Download, RefreshCw, MoreVertical, Trash2 } from 'lucide-react'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
 import {
   useInstalledAppsQuery,
@@ -35,6 +35,7 @@ import {
   useInstallByIdMutation,
   useUpdatesQuery,
   useUpgradeMutation,
+  useCleanupMutation,
 } from '@/hooks/useApps'
 import { AppInfoDialog } from './components/app-info-dialog'
 import { InstallDialog } from './components/install-dialog'
@@ -72,6 +73,7 @@ export function Apps() {
   const installFromFileMutation = useInstallFromFileMutation()
   const installByIdMutation = useInstallByIdMutation()
   const upgradeMutation = useUpgradeMutation()
+  const cleanupMutation = useCleanupMutation()
 
   const installedApps = appsData?.installed
   const developmentApps = appsData?.development
@@ -155,6 +157,18 @@ export function Apps() {
     // Refetch to update UI immediately
     refetchInstalled()
     refetchUpdates()
+  }
+
+  const handleCleanup = () => {
+    cleanupMutation.mutate(undefined, {
+      onSuccess: (data) => {
+        if (data.removed === 0) {
+          toast.info('No unused versions to clean up')
+        } else {
+          toast.success(`Removed ${data.removed} unused version${data.removed === 1 ? '' : 's'}`)
+        }
+      },
+    })
   }
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -249,6 +263,13 @@ export function Apps() {
                         >
                           <Download className='mr-2 h-4 w-4' />
                           Install from file
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          onClick={handleCleanup}
+                          disabled={cleanupMutation.isPending}
+                        >
+                          <Trash2 className='mr-2 h-4 w-4' />
+                          {cleanupMutation.isPending ? 'Cleaning up...' : 'Clean up unused versions'}
                         </DropdownMenuItem>
                       </>
                     )}

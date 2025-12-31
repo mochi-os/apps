@@ -90,3 +90,9 @@ export const useUpgradeMutation = () => {
     },
   })
 }
+
+export const useCleanupMutation = () => {
+  return useMutation({
+    mutationFn: () => appsApi.cleanup(),
+  })
+}

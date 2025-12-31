@@ -21,6 +21,7 @@ const endpoints = {
   appVersions: 'user/preferences/app',
   versionSet: 'user/preferences/version/set',
   systemVersionSet: 'system/version/set',
+  cleanup: 'system/cleanup',
 } as const
 
 export type Endpoints = typeof endpoints
