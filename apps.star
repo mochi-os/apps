@@ -290,12 +290,12 @@ def action_updates(a):
 		user_pref = a.user.app.version.get(app["id"])
 		user_track = ""
 		if user_pref:
-			if user_pref.get("version"):
-				# User is pinned to specific version, skip update check
+			user_track = user_pref.get("track", "")
+			# Only skip if user is pinned to a specific version WITHOUT a track
+			if user_pref.get("version") and not user_track:
 				app_debug["skip"] = "pinned to version " + user_pref.get("version")
 				debug.append(app_debug)
 				continue
-			user_track = user_pref.get("track", "")
 
 		# Determine publisher: app.json first, then directory
 		publisher = ""
