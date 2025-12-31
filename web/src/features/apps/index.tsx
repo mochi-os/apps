@@ -22,9 +22,9 @@ import {
   Main,
   Switch,
   usePageTitle,
+  toast,
 } from '@mochi/common'
 import { Package, ExternalLink, Download, RefreshCw, MoreVertical } from 'lucide-react'
-import { toast } from 'sonner'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
 import {
   useInstalledAppsQuery,
@@ -479,6 +479,9 @@ function InstalledAppCard({
   showId?: boolean
   availableVersion?: string
 }) {
+  // Show track if user is following a non-Production track
+  const showTrack = app.user_track && app.user_track !== 'Production'
+
   return (
     <Card
       className='flex cursor-pointer flex-col transition-shadow hover:shadow-md'
@@ -490,6 +493,9 @@ function InstalledAppCard({
           {availableVersion
             ? `${app.latest} (update to ${availableVersion} available)`
             : app.latest}
+          {showTrack && (
+            <span className='ml-1 text-xs'>({app.user_track})</span>
+          )}
           {showId && <span className='truncate'> · {app.id}</span>}
         </p>
       </CardHeader>
