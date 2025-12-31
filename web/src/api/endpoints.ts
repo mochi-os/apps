@@ -16,6 +16,10 @@ const endpoints = {
     updates: 'updates',
     upgrade: 'upgrade',
   },
+  // Multi-version apps (0.3+)
+  available: 'available',
+  appVersions: 'user/preferences/app',
+  versionSet: 'user/preferences/version/set',
 } as const
 
 export type Endpoints = typeof endpoints

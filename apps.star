@@ -5,6 +5,27 @@
 def is_entity_id(id):
 	return len(id) >= 50 and len(id) <= 51
 
+# Check if version v >= target. Handles both 0.3.0 and 1.0 formats.
+def version_gte(v, target):
+	v_parts = []
+	for p in v.split("."):
+		v_parts.append(int(p))
+	t_parts = []
+	for p in target.split("."):
+		t_parts.append(int(p))
+	# Pad shorter list with zeros for comparison
+	while len(v_parts) < len(t_parts):
+		v_parts.append(0)
+	while len(t_parts) < len(v_parts):
+		t_parts.append(0)
+	# Compare element by element
+	for i in range(len(v_parts)):
+		if v_parts[i] > t_parts[i]:
+			return True
+		if v_parts[i] < t_parts[i]:
+			return False
+	return True  # Equal
+
 # List installed apps (only Starlark apps)
 def action_list(a):
 	all_apps = mochi.app.list()
@@ -215,15 +236,16 @@ def action_install_id(a):
 	app = s.read()
 	tracks = s.read()
 
-	# Find production version
+	# Find version for default track
+	default_track = app.get("default_track", "Production")
 	version = ""
 	for t in tracks:
-		if t.get("track") == "production":
+		if t.get("track") == default_track:
 			version = t.get("version")
 			break
 
 	if not version:
-		return {"status": 404, "error": "No production version available", "data": {}}
+		return {"status": 404, "error": "No version available for track: " + default_track, "data": {}}
 
 	# Download and install
 	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
@@ -270,10 +292,11 @@ def action_updates(a):
 				continue  # Not in directory, skip
 
 		# Query for latest version - route to publisher, pass app ID in content
+		# Empty track lets publisher use its default_track
 		if publisher:
-			s = mochi.remote.stream(publisher, "publisher", "version", {"app": app["id"], "track": "production"})
+			s = mochi.remote.stream(publisher, "publisher", "version", {"app": app["id"]})
 		else:
-			s = mochi.remote.stream(app["id"], "publisher", "version", {"app": app["id"], "track": "production"})
+			s = mochi.remote.stream(app["id"], "publisher", "version", {"app": app["id"]})
 		if not s:
 			app_debug["skip"] = "stream failed"
 			debug.append(app_debug)
@@ -349,3 +372,256 @@ def action_upgrade(a):
 	mochi.file.delete(file)
 
 	return {"data": {"upgraded": True, "id": id, "version": version}}
+
+# Multi-version apps support (requires Mochi 0.3+)
+
+# Check if multi-version apps feature is available
+def action_available(a):
+	# TODO: restore version check once mochi.server.version() issue is resolved
+	return {"data": {"available": True, "version": "0.3"}}
+
+# Require administrator role
+def require_admin(a):
+	if a.user.role != "administrator":
+		a.error(403, "Administrator access required")
+		return False
+	return True
+
+# User app preferences
+
+def action_user_apps(a):
+	"""Get user app preferences data"""
+	# Get all installed apps with their versions
+	apps = mochi.app.list()
+	for app in apps:
+		app["versions"] = mochi.app.versions(app["id"])
+		app["tracks"] = mochi.app.tracks(app["id"])
+
+	# Get user's version preferences
+	versions = {}
+	for app in apps:
+		v = a.user.app.version.get(app["id"])
+		if v:
+			versions[app["id"]] = v
+
+	# Get user's routing overrides
+	classes = getattr(a.user.app, "class").list()
+	services = a.user.app.service.list()
+	paths = a.user.app.path.list()
+
+	a.json({
+		"apps": apps,
+		"versions": versions,
+		"classes": classes,
+		"services": services,
+		"paths": paths,
+	})
+
+def action_user_apps_app(a):
+	"""Get version info for a single app"""
+	app_id = a.input("app")
+	if not app_id:
+		a.error(400, "Missing app parameter")
+		return
+
+	app = mochi.app.get(app_id)
+	if not app:
+		a.error(404, "App not found")
+		return
+
+	versions = mochi.app.versions(app_id)
+	tracks = mochi.app.tracks(app_id)
+	user_pref = a.user.app.version.get(app_id)
+
+	# System default requires admin
+	system_default = None
+	if a.user.role == "administrator":
+		system_default = mochi.app.version.get(app_id)
+
+	a.json({"data": {
+		"versions": versions,
+		"tracks": tracks,
+		"user": user_pref,
+		"system": system_default,
+	}})
+
+def action_user_apps_version_set(a):
+	"""Set user's preferred version or track for an app"""
+	app_id = a.input("app")
+	version = a.input("version", "")
+	track = a.input("track", "")
+
+	if not app_id:
+		a.error(400, "Missing app parameter")
+		return
+
+	a.user.app.version.set(app_id, version, track)
+	a.json({"ok": True})
+
+def action_user_apps_routing_set(a):
+	"""Set user's routing override for a class, service, or path"""
+	routing_type = a.input("type")
+	name = a.input("name")
+	app_id = a.input("app", "")
+
+	if not routing_type or not name:
+		a.error(400, "Missing type or name parameter")
+		return
+
+	if routing_type == "class":
+		if app_id:
+			getattr(a.user.app, "class").set(name, app_id)
+		else:
+			getattr(a.user.app, "class").delete(name)
+	elif routing_type == "service":
+		if app_id:
+			a.user.app.service.set(name, app_id)
+		else:
+			a.user.app.service.delete(name)
+	elif routing_type == "path":
+		if app_id:
+			a.user.app.path.set(name, app_id)
+		else:
+			a.user.app.path.delete(name)
+	else:
+		a.error(400, "Invalid routing type")
+		return
+
+	a.json({"ok": True})
+
+def action_user_apps_reset(a):
+	"""Reset all user app preferences to system defaults"""
+	# Clear all version preferences
+	apps = mochi.app.list()
+	for app in apps:
+		a.user.app.version.delete(app["id"])
+
+	# Clear all routing overrides
+	for cls in getattr(a.user.app, "class").list():
+		getattr(a.user.app, "class").delete(cls)
+	for svc in a.user.app.service.list():
+		a.user.app.service.delete(svc)
+	for path in a.user.app.path.list():
+		a.user.app.path.delete(path)
+
+	a.json({"ok": True})
+
+# System app management (admin only)
+
+def action_system_apps_list(a):
+	"""List all installed apps with version info"""
+	if not require_admin(a):
+		return
+
+	apps = mochi.app.list()
+	for app in apps:
+		app["versions"] = mochi.app.versions(app["id"])
+		app["tracks"] = mochi.app.tracks(app["id"])
+
+	a.json({"apps": apps})
+
+def action_system_apps_get(a):
+	"""Get details for a specific app"""
+	if not require_admin(a):
+		return
+
+	app_id = a.input("app")
+	if not app_id:
+		a.error(400, "Missing app parameter")
+		return
+
+	versions = mochi.app.versions(app_id)
+	tracks = mochi.app.tracks(app_id)
+	default = mochi.app.version.get(app_id)
+
+	a.json({
+		"app": app_id,
+		"versions": versions,
+		"tracks": tracks,
+		"default": default,
+	})
+
+def action_system_apps_version_set(a):
+	"""Set default version or track for an app"""
+	if not require_admin(a):
+		return
+
+	app_id = a.input("app")
+	version = a.input("version", "")
+	track = a.input("track", "")
+
+	if not app_id:
+		a.error(400, "Missing app parameter")
+		return
+
+	mochi.app.version.set(app_id, version, track)
+	a.json({"ok": True})
+
+def action_system_apps_track_set(a):
+	"""Set a track to point to a specific version"""
+	if not require_admin(a):
+		return
+
+	app_id = a.input("app")
+	track = a.input("track")
+	version = a.input("version")
+
+	if not app_id or not track or not version:
+		a.error(400, "Missing app, track, or version parameter")
+		return
+
+	mochi.app.track.set(app_id, track, version)
+	a.json({"ok": True})
+
+def action_system_apps_cleanup(a):
+	"""Remove unused app versions"""
+	if not require_admin(a):
+		return
+
+	removed = mochi.app.cleanup()
+	a.json({"removed": removed})
+
+def action_system_apps_routing(a):
+	"""Get all system routing (class, service, path)"""
+	if not require_admin(a):
+		return
+
+	a.json({
+		"classes": getattr(mochi.app, "class").list(),
+		"services": mochi.app.service.list(),
+		"paths": mochi.app.path.list(),
+	})
+
+def action_system_apps_routing_set(a):
+	"""Set system routing for a class, service, or path"""
+	if not require_admin(a):
+		return
+
+	routing_type = a.input("type")
+	name = a.input("name")
+	app_id = a.input("app")
+
+	if not routing_type or not name:
+		a.error(400, "Missing type or name parameter")
+		return
+
+	if routing_type == "class":
+		if app_id:
+			getattr(mochi.app, "class").set(name, app_id)
+		else:
+			getattr(mochi.app, "class").delete(name)
+	elif routing_type == "service":
+		if app_id:
+			mochi.app.service.set(name, app_id)
+		else:
+			mochi.app.service.delete(name)
+	elif routing_type == "path":
+		if app_id:
+			mochi.app.path.set(name, app_id)
+		else:
+			mochi.app.path.delete(name)
+	else:
+		a.error(400, "Invalid routing type")
+		return
+
+	a.json({"ok": True})

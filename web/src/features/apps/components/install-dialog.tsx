@@ -64,7 +64,8 @@ export function InstallDialog({
             <>
               <p className='text-sm'>
                 <span className='font-medium'>Available version:</span>{' '}
-                {appInfo.tracks[0]?.version}
+                {appInfo.tracks.find((t) => t.track === appInfo.app.default_track)
+                  ?.version ?? appInfo.tracks[0]?.version}
               </p>
               <p className='text-sm'>
                 <span className='font-medium'>Fingerprint:</span>{' '}
@@ -90,8 +91,14 @@ export function InstallDialog({
           </AlertDialogCancel>
           <AlertDialogAction
             autoFocus
-            onClick={() => appInfo && onInstall(appInfo.tracks[0]?.version)}
-            disabled={isLoading || isInstalling || !appInfo?.tracks[0]}
+            onClick={() => {
+              if (!appInfo) return
+              const version =
+                appInfo.tracks.find((t) => t.track === appInfo.app.default_track)
+                  ?.version ?? appInfo.tracks[0]?.version
+              if (version) onInstall(version)
+            }}
+            disabled={isLoading || isInstalling || !appInfo?.tracks.length}
           >
             {isInstalling ? 'Installing...' : 'Install'}
           </AlertDialogAction>

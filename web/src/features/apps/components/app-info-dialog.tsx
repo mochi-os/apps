@@ -40,9 +40,9 @@ export function AppInfoDialog({
           <DialogTitle>
             {isLoading
               ? 'Loading...'
-              : (appInfo?.app.name ?? 'App information')}
+              : (appInfo?.app?.name ?? 'App information')}
           </DialogTitle>
-          {appInfo && (
+          {appInfo?.app && (
             <DialogDescription className='font-mono text-xs'>
               {appInfo.app.id}
             </DialogDescription>
@@ -62,7 +62,7 @@ export function AppInfoDialog({
             <div className='text-muted-foreground py-4 text-center text-sm'>
               Loading app information...
             </div>
-          ) : appInfo ? (
+          ) : appInfo?.app ? (
             <div className='space-y-3'>
               {appInfo.app.description && (
                 <p className='text-sm'>{appInfo.app.description}</p>

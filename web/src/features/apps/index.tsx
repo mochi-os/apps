@@ -13,14 +13,17 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
   Input,
   Label,
   Main,
   Switch,
   usePageTitle,
-  getErrorMessage,
 } from '@mochi/common'
-import { Package, ExternalLink, Download, RefreshCw } from 'lucide-react'
+import { Package, ExternalLink, Download, RefreshCw, MoreVertical } from 'lucide-react'
 import { toast } from 'sonner'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
 import {
@@ -35,6 +38,7 @@ import {
 } from '@/hooks/useApps'
 import { AppInfoDialog } from './components/app-info-dialog'
 import { InstallDialog } from './components/install-dialog'
+import { InstalledAppDialog } from './components/installed-app-dialog'
 
 export function Apps() {
   usePageTitle('Apps')
@@ -105,9 +109,6 @@ export function Apps() {
           setSelectedAppId(null)
           setSelectedMarketApp(null)
         },
-        onError: (error) => {
-          toast.error(getErrorMessage(error, 'Failed to install app'))
-        },
       }
     )
   }
@@ -133,9 +134,6 @@ export function Apps() {
           setInstallFromPublisher(false)
           setAppIdInput('')
         },
-        onError: (error) => {
-          toast.error(getErrorMessage(error, 'Failed to install app'))
-        },
       }
     )
   }
@@ -149,8 +147,8 @@ export function Apps() {
           id: update.id,
           version: update.available,
         })
-      } catch (error) {
-        toast.error(getErrorMessage(error, `Failed to upgrade ${update.name}`))
+      } catch {
+        // Error already handled by api-client interceptor
       }
     }
     toast.success('All apps updated')
@@ -183,9 +181,6 @@ export function Apps() {
           setSelectedFile(null)
           setAllowDiscovery(false)
         },
-        onError: (error) => {
-          toast.error(getErrorMessage(error, 'Failed to install app'))
-        },
       }
     )
   }
@@ -205,46 +200,61 @@ export function Apps() {
   return (
     <>
       <Main>
-        {appsData?.can_install && (
-          <div className='mb-6 flex items-center justify-end gap-2'>
-            <input
-              type='file'
-              ref={fileInputRef}
-              onChange={handleFileSelect}
-              accept='.zip'
-              className='hidden'
-            />
-            <Button
-              variant='outline'
-              onClick={() => setInstallFromPublisher(true)}
-            >
-              <ExternalLink className='mr-2 h-4 w-4' />
-              Install from publisher
-            </Button>
-            <Button
-              variant='outline'
-              onClick={() => fileInputRef.current?.click()}
-            >
-              <Download className='mr-2 h-4 w-4' />
-              Install from file
-            </Button>
-          </div>
-        )}
-
         {/* Installed Apps Section */}
         <section className='mb-8'>
           <div className='mb-4 flex items-center gap-4'>
             <h2 className='text-xl font-semibold'>Installed apps</h2>
-            {availableUpdates && availableUpdates.length > 0 && (
-              <Button
-                variant='outline'
-                size='sm'
-                onClick={handleUpdateAll}
-                disabled={upgradeMutation.isPending}
-              >
-                <RefreshCw className='mr-2 h-4 w-4' />
-                {upgradeMutation.isPending ? 'Updating...' : 'Update all'}
-              </Button>
+            {(appsData?.can_install ||
+              (availableUpdates && availableUpdates.length > 0)) && (
+              <div className='ml-auto'>
+                <input
+                  type='file'
+                  ref={fileInputRef}
+                  onChange={handleFileSelect}
+                  accept='.zip'
+                  className='hidden'
+                />
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant='ghost' size='icon'>
+                      {upgradeMutation.isPending ? (
+                        <RefreshCw className='h-4 w-4 animate-spin' />
+                      ) : (
+                        <MoreVertical className='h-4 w-4' />
+                      )}
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align='end'>
+                    {availableUpdates && availableUpdates.length > 0 && (
+                      <DropdownMenuItem
+                        onClick={handleUpdateAll}
+                        disabled={upgradeMutation.isPending}
+                      >
+                        <RefreshCw
+                          className={`mr-2 h-4 w-4 ${upgradeMutation.isPending ? 'animate-spin' : ''}`}
+                        />
+                        {upgradeMutation.isPending ? 'Updating...' : 'Update all'}
+                      </DropdownMenuItem>
+                    )}
+                    {appsData?.can_install && (
+                      <>
+                        <DropdownMenuItem
+                          onClick={() => setInstallFromPublisher(true)}
+                        >
+                          <ExternalLink className='mr-2 h-4 w-4' />
+                          Install from publisher
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          onClick={() => fileInputRef.current?.click()}
+                        >
+                          <Download className='mr-2 h-4 w-4' />
+                          Install from file
+                        </DropdownMenuItem>
+                      </>
+                    )}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
             )}
           </div>
           {installedApps?.length === 0 ? (
@@ -292,7 +302,7 @@ export function Apps() {
         {/* Market Apps Section - only show if user can install */}
         {appsData?.can_install && (
           <section>
-            <h2 className='mb-4 text-xl font-semibold'>Market</h2>
+            <h2 className='mb-4 text-xl font-semibold'>Mochi App Market</h2>
             {isLoadingMarket ? (
               <div className='flex h-32 items-center justify-center'>
                 <div className='text-muted-foreground'>Loading market...</div>
@@ -449,33 +459,10 @@ export function Apps() {
           isInstalling={installFromPublisherMutation.isPending}
         />
 
-        <AlertDialog
-          open={!!selectedInstalledApp}
-          onOpenChange={(open) => !open && setSelectedInstalledApp(null)}
-        >
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle>{selectedInstalledApp?.name}</AlertDialogTitle>
-            </AlertDialogHeader>
-            <div className='space-y-2 text-sm'>
-              <p className='break-all'>
-                <span className='font-medium'>ID:</span>{' '}
-                {selectedInstalledApp?.id}
-              </p>
-              <p>
-                <span className='font-medium'>Version:</span>{' '}
-                {selectedInstalledApp?.latest}
-              </p>
-              <p className='break-all'>
-                <span className='font-medium'>Fingerprint:</span>{' '}
-                {selectedInstalledApp?.fingerprint || 'None'}
-              </p>
-            </div>
-            <AlertDialogFooter>
-              <AlertDialogCancel>Close</AlertDialogCancel>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
+        <InstalledAppDialog
+          app={selectedInstalledApp}
+          onClose={() => setSelectedInstalledApp(null)}
+        />
       </Main>
     </>
   )

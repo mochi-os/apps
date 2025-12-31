@@ -2,7 +2,7 @@
 // Copyright Alistair Cunningham 2025
 
 {
-	"version": "1.13",
+	"version": "1.14",
 	"label": "app_name",
 	"paths": ["apps"],
 
@@ -26,6 +26,23 @@
 		"install/id": {"function": "action_install_id"},
 		"updates": {"function": "action_updates"},
 		"upgrade": {"function": "action_upgrade"},
+
+		"available": {"function": "action_available"},
+
+		"user/preferences": {"function": "action_user_apps"},
+		"user/preferences/app": {"function": "action_user_apps_app"},
+		"user/preferences/version/set": {"function": "action_user_apps_version_set"},
+		"user/preferences/routing/set": {"function": "action_user_apps_routing_set"},
+		"user/preferences/reset": {"function": "action_user_apps_reset"},
+
+		"system/list": {"function": "action_system_apps_list"},
+		"system/get": {"function": "action_system_apps_get"},
+		"system/version/set": {"function": "action_system_apps_version_set"},
+		"system/track/set": {"function": "action_system_apps_track_set"},
+		"system/cleanup": {"function": "action_system_apps_cleanup"},
+		"system/routing": {"function": "action_system_apps_routing"},
+		"system/routing/set": {"function": "action_system_apps_routing_set"},
+
 		":id": {"function": "action_view"}
 	}
 }

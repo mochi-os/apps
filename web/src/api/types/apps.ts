@@ -17,6 +17,7 @@ export interface AppInfo {
   id: string
   name: string
   description: string
+  default_track: string
 }
 
 export interface Track {
