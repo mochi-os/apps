@@ -284,7 +284,18 @@ def action_updates(a):
 		if not is_entity_id(app["id"]):
 			continue  # Skip development apps
 
-		app_debug = {"name": app.get("name"), "id": app["id"], "latest": app.get("latest")}
+		app_debug = {"name": app.get("name"), "id": app["id"], "active": app.get("active")}
+
+		# Get user's track preference
+		user_pref = a.user.app.version.get(app["id"])
+		user_track = ""
+		if user_pref:
+			if user_pref.get("version"):
+				# User is pinned to specific version, skip update check
+				app_debug["skip"] = "pinned to version " + user_pref.get("version")
+				debug.append(app_debug)
+				continue
+			user_track = user_pref.get("track", "")
 
 		# Determine publisher: app.json first, then directory
 		publisher = ""
@@ -298,8 +309,7 @@ def action_updates(a):
 				debug.append(app_debug)
 				continue  # Not in directory, skip
 
-		# Query for latest version - route to publisher, pass app ID in content
-		# Empty track lets publisher use its default_track
+		# Query publisher for version info (includes all tracks)
 		if publisher:
 			s = mochi.remote.stream(publisher, "publisher", "version", {"app": app["id"]})
 		else:
@@ -315,14 +325,32 @@ def action_updates(a):
 			continue
 
 		remote = s.read()
-		remote_version = remote.get("version", "")
+		tracks = remote.get("tracks", [])
+		default_track = remote.get("default_track", "Production")
+
+		# Determine which track to check for updates
+		check_track = user_track or default_track
+		app_debug["track"] = check_track
+
+		# Find version for the track we're checking
+		remote_version = ""
+		for t in tracks:
+			if t.get("track") == check_track:
+				remote_version = t.get("version", "")
+				break
+
+		# Fall back to default version field if track not found in array
+		if not remote_version:
+			remote_version = remote.get("version", "")
 		app_debug["remote_version"] = remote_version
 
-		if remote_version and remote_version != app.get("latest"):
+		# Compare with user's active version
+		current = app.get("active", app.get("latest"))
+		if remote_version and remote_version != current:
 			updates.append({
 				"id": app["id"],
 				"name": app.get("name", app["id"]),
-				"current": app.get("latest"),
+				"current": current,
 				"available": remote_version,
 				"publisher": publisher
 			})
