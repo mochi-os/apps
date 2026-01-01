@@ -12,6 +12,10 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AuthenticatedIndexRouteImport } from './routes/_authenticated/index'
 import { Route as AuthenticatedRoutingRouteImport } from './routes/_authenticated/routing'
+import { Route as AuthenticatedRoutingIndexRouteImport } from './routes/_authenticated/routing/index'
+import { Route as AuthenticatedRoutingServicesRouteImport } from './routes/_authenticated/routing/services'
+import { Route as AuthenticatedRoutingPathsRouteImport } from './routes/_authenticated/routing/paths'
+import { Route as AuthenticatedRoutingClassesRouteImport } from './routes/_authenticated/routing/classes'
 
 const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
   id: '/_authenticated',
@@ -27,31 +31,81 @@ const AuthenticatedRoutingRoute = AuthenticatedRoutingRouteImport.update({
   path: '/routing',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedRoutingIndexRoute =
+  AuthenticatedRoutingIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => AuthenticatedRoutingRoute,
+  } as any)
+const AuthenticatedRoutingServicesRoute =
+  AuthenticatedRoutingServicesRouteImport.update({
+    id: '/services',
+    path: '/services',
+    getParentRoute: () => AuthenticatedRoutingRoute,
+  } as any)
+const AuthenticatedRoutingPathsRoute =
+  AuthenticatedRoutingPathsRouteImport.update({
+    id: '/paths',
+    path: '/paths',
+    getParentRoute: () => AuthenticatedRoutingRoute,
+  } as any)
+const AuthenticatedRoutingClassesRoute =
+  AuthenticatedRoutingClassesRouteImport.update({
+    id: '/classes',
+    path: '/classes',
+    getParentRoute: () => AuthenticatedRoutingRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
-  '/routing': typeof AuthenticatedRoutingRoute
+  '/routing': typeof AuthenticatedRoutingRouteWithChildren
   '/': typeof AuthenticatedIndexRoute
+  '/routing/classes': typeof AuthenticatedRoutingClassesRoute
+  '/routing/paths': typeof AuthenticatedRoutingPathsRoute
+  '/routing/services': typeof AuthenticatedRoutingServicesRoute
+  '/routing/': typeof AuthenticatedRoutingIndexRoute
 }
 export interface FileRoutesByTo {
-  '/routing': typeof AuthenticatedRoutingRoute
   '/': typeof AuthenticatedIndexRoute
+  '/routing/classes': typeof AuthenticatedRoutingClassesRoute
+  '/routing/paths': typeof AuthenticatedRoutingPathsRoute
+  '/routing/services': typeof AuthenticatedRoutingServicesRoute
+  '/routing': typeof AuthenticatedRoutingIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
-  '/_authenticated/routing': typeof AuthenticatedRoutingRoute
+  '/_authenticated/routing': typeof AuthenticatedRoutingRouteWithChildren
   '/_authenticated/': typeof AuthenticatedIndexRoute
+  '/_authenticated/routing/classes': typeof AuthenticatedRoutingClassesRoute
+  '/_authenticated/routing/paths': typeof AuthenticatedRoutingPathsRoute
+  '/_authenticated/routing/services': typeof AuthenticatedRoutingServicesRoute
+  '/_authenticated/routing/': typeof AuthenticatedRoutingIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/routing' | '/'
+  fullPaths:
+    | '/routing'
+    | '/'
+    | '/routing/classes'
+    | '/routing/paths'
+    | '/routing/services'
+    | '/routing/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/routing' | '/'
+  to:
+    | '/'
+    | '/routing/classes'
+    | '/routing/paths'
+    | '/routing/services'
+    | '/routing'
   id:
     | '__root__'
     | '/_authenticated'
     | '/_authenticated/routing'
     | '/_authenticated/'
+    | '/_authenticated/routing/classes'
+    | '/_authenticated/routing/paths'
+    | '/_authenticated/routing/services'
+    | '/_authenticated/routing/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -81,16 +135,61 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedRoutingRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/routing/': {
+      id: '/_authenticated/routing/'
+      path: '/'
+      fullPath: '/routing/'
+      preLoaderRoute: typeof AuthenticatedRoutingIndexRouteImport
+      parentRoute: typeof AuthenticatedRoutingRoute
+    }
+    '/_authenticated/routing/services': {
+      id: '/_authenticated/routing/services'
+      path: '/services'
+      fullPath: '/routing/services'
+      preLoaderRoute: typeof AuthenticatedRoutingServicesRouteImport
+      parentRoute: typeof AuthenticatedRoutingRoute
+    }
+    '/_authenticated/routing/paths': {
+      id: '/_authenticated/routing/paths'
+      path: '/paths'
+      fullPath: '/routing/paths'
+      preLoaderRoute: typeof AuthenticatedRoutingPathsRouteImport
+      parentRoute: typeof AuthenticatedRoutingRoute
+    }
+    '/_authenticated/routing/classes': {
+      id: '/_authenticated/routing/classes'
+      path: '/classes'
+      fullPath: '/routing/classes'
+      preLoaderRoute: typeof AuthenticatedRoutingClassesRouteImport
+      parentRoute: typeof AuthenticatedRoutingRoute
+    }
   }
 }
 
+interface AuthenticatedRoutingRouteChildren {
+  AuthenticatedRoutingClassesRoute: typeof AuthenticatedRoutingClassesRoute
+  AuthenticatedRoutingPathsRoute: typeof AuthenticatedRoutingPathsRoute
+  AuthenticatedRoutingServicesRoute: typeof AuthenticatedRoutingServicesRoute
+  AuthenticatedRoutingIndexRoute: typeof AuthenticatedRoutingIndexRoute
+}
+
+const AuthenticatedRoutingRouteChildren: AuthenticatedRoutingRouteChildren = {
+  AuthenticatedRoutingClassesRoute: AuthenticatedRoutingClassesRoute,
+  AuthenticatedRoutingPathsRoute: AuthenticatedRoutingPathsRoute,
+  AuthenticatedRoutingServicesRoute: AuthenticatedRoutingServicesRoute,
+  AuthenticatedRoutingIndexRoute: AuthenticatedRoutingIndexRoute,
+}
+
+const AuthenticatedRoutingRouteWithChildren =
+  AuthenticatedRoutingRoute._addFileChildren(AuthenticatedRoutingRouteChildren)
+
 interface AuthenticatedRouteRouteChildren {
-  AuthenticatedRoutingRoute: typeof AuthenticatedRoutingRoute
+  AuthenticatedRoutingRoute: typeof AuthenticatedRoutingRouteWithChildren
   AuthenticatedIndexRoute: typeof AuthenticatedIndexRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
-  AuthenticatedRoutingRoute: AuthenticatedRoutingRoute,
+  AuthenticatedRoutingRoute: AuthenticatedRoutingRouteWithChildren,
   AuthenticatedIndexRoute: AuthenticatedIndexRoute,
 }
 
