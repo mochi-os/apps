@@ -440,17 +440,16 @@ def action_routing(a):
 				paths[p] = {"apps": [], "system": "", "user": ""}
 			paths[p]["apps"].append(app_info)
 
-	# Add system bindings (admin only can see these)
-	if is_admin:
-		system_classes = getattr(mochi.app, "class").list()
-		system_services = mochi.app.service.list()
-		system_paths = mochi.app.path.list()
-		for c in classes:
-			classes[c]["system"] = system_classes.get(c, "")
-		for s in services:
-			services[s]["system"] = system_services.get(s, "")
-		for p in paths:
-			paths[p]["system"] = system_paths.get(p, "")
+	# Add system bindings (visible to all users so they know what "Default" means)
+	system_classes = getattr(mochi.app, "class").list()
+	system_services = mochi.app.service.list()
+	system_paths = mochi.app.path.list()
+	for c in classes:
+		classes[c]["system"] = system_classes.get(c, "")
+	for s in services:
+		services[s]["system"] = system_services.get(s, "")
+	for p in paths:
+		paths[p]["system"] = system_paths.get(p, "")
 
 	# Add user bindings
 	user_classes = getattr(a.user.app, "class").list()
