@@ -168,6 +168,24 @@ export function InstalledAppDialog({ app, onClose }: InstalledAppDialogProps) {
             <p><span className='font-medium'>Fingerprint:</span> {app?.fingerprint || 'None'}</p>
           </div>
 
+          {/* Show what this app provides */}
+          {(app?.classes?.length || app?.services?.length || app?.paths?.length) && (
+            <div className='space-y-1 border-t pt-4'>
+              <p className='font-medium'>Provides</p>
+              <div className='text-muted-foreground space-y-1'>
+                {app?.classes && app.classes.length > 0 && (
+                  <p>Classes: {app.classes.join(', ')}</p>
+                )}
+                {app?.services && app.services.length > 0 && (
+                  <p>Services: {app.services.join(', ')}</p>
+                )}
+                {app?.paths && app.paths.length > 0 && (
+                  <p>Paths: {app.paths.map((p) => `/${p}`).join(', ')}</p>
+                )}
+              </div>
+            </div>
+          )}
+
           {multiVersionAvailable && (hasMultipleVersions || hasTracks) && (
             <>
               {isAdmin && (

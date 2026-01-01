@@ -415,6 +415,56 @@ def action_available(a):
 	# TODO: restore version check once mochi.server.version() issue is resolved
 	return {"data": {"available": True, "version": "0.3"}}
 
+def action_routing(a):
+	"""Get routing info: what's declared by apps, what's bound system/user level"""
+	apps = mochi.app.list()
+	is_admin = a.user.role == "administrator"
+
+	# Build maps: resource -> {apps: [...], system: app_id, user: app_id}
+	classes = {}
+	services = {}
+	paths = {}
+
+	for app in apps:
+		app_info = {"id": app["id"], "name": app["name"]}
+		for c in app.get("classes", []):
+			if c not in classes:
+				classes[c] = {"apps": [], "system": "", "user": ""}
+			classes[c]["apps"].append(app_info)
+		for s in app.get("services", []):
+			if s not in services:
+				services[s] = {"apps": [], "system": "", "user": ""}
+			services[s]["apps"].append(app_info)
+		for p in app.get("paths", []):
+			if p not in paths:
+				paths[p] = {"apps": [], "system": "", "user": ""}
+			paths[p]["apps"].append(app_info)
+
+	# Add system bindings (admin only can see these)
+	if is_admin:
+		system_classes = getattr(mochi.app, "class").list()
+		system_services = mochi.app.service.list()
+		system_paths = mochi.app.path.list()
+		for c in classes:
+			classes[c]["system"] = system_classes.get(c, "")
+		for s in services:
+			services[s]["system"] = system_services.get(s, "")
+		for p in paths:
+			paths[p]["system"] = system_paths.get(p, "")
+
+	# Add user bindings
+	user_classes = getattr(a.user.app, "class").list()
+	user_services = a.user.app.service.list()
+	user_paths = a.user.app.path.list()
+	for c in classes:
+		classes[c]["user"] = user_classes.get(c, "")
+	for s in services:
+		services[s]["user"] = user_services.get(s, "")
+	for p in paths:
+		paths[p]["user"] = user_paths.get(p, "")
+
+	return {"data": {"classes": classes, "services": services, "paths": paths, "is_admin": is_admin}}
+
 # Require administrator role
 def require_admin(a):
 	if a.user.role != "administrator":

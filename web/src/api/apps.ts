@@ -132,6 +132,54 @@ const cleanup = async (): Promise<{ removed: number }> => {
   return response
 }
 
+// Routing types
+export interface RoutingApp {
+  id: string
+  name: string
+}
+
+export interface RoutingResource {
+  apps: RoutingApp[]
+  system: string
+  user: string
+}
+
+export interface RoutingData {
+  classes: Record<string, RoutingResource>
+  services: Record<string, RoutingResource>
+  paths: Record<string, RoutingResource>
+  is_admin: boolean
+}
+
+const getRouting = async (): Promise<RoutingData> => {
+  const response = await requestHelpers.get<RoutingData>(endpoints.routing)
+  return response
+}
+
+const setUserRouting = async (
+  type: 'class' | 'service' | 'path',
+  name: string,
+  app: string
+): Promise<{ ok: boolean }> => {
+  const response = await requestHelpers.post<{ ok: boolean }>(
+    endpoints.routingSet,
+    { type, name, app }
+  )
+  return response
+}
+
+const setSystemRouting = async (
+  type: 'class' | 'service' | 'path',
+  name: string,
+  app: string
+): Promise<{ ok: boolean }> => {
+  const response = await requestHelpers.post<{ ok: boolean }>(
+    endpoints.systemRoutingSet,
+    { type, name, app }
+  )
+  return response
+}
+
 const appsApi = {
   listInstalled: listInstalledApps,
   get: getApp,
@@ -143,6 +191,9 @@ const appsApi = {
   getUpdates,
   upgrade,
   cleanup,
+  getRouting,
+  setUserRouting,
+  setSystemRouting,
 }
 
 export default appsApi

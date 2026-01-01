@@ -4,6 +4,9 @@ export interface InstalledApp {
   latest: string
   fingerprint: string
   user_track?: string
+  classes?: string[]
+  services?: string[]
+  paths?: string[]
 }
 
 export interface MarketApp {

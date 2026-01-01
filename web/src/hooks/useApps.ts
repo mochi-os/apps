@@ -7,6 +7,7 @@ const appKeys = {
   market: () => ['apps', 'market'] as const,
   info: (id: string) => ['apps', 'info', id] as const,
   updates: () => ['apps', 'updates'] as const,
+  routing: () => ['apps', 'routing'] as const,
 }
 
 export const useInstalledAppsQuery = () =>
@@ -94,5 +95,47 @@ export const useUpgradeMutation = () => {
 export const useCleanupMutation = () => {
   return useMutation({
     mutationFn: () => appsApi.cleanup(),
+  })
+}
+
+export const useRoutingQuery = () =>
+  useQuery({
+    queryKey: appKeys.routing(),
+    queryFn: () => appsApi.getRouting(),
+  })
+
+export const useSetUserRoutingMutation = () => {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: ({
+      type,
+      name,
+      app,
+    }: {
+      type: 'class' | 'service' | 'path'
+      name: string
+      app: string
+    }) => appsApi.setUserRouting(type, name, app),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: appKeys.routing() })
+    },
+  })
+}
+
+export const useSetSystemRoutingMutation = () => {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: ({
+      type,
+      name,
+      app,
+    }: {
+      type: 'class' | 'service' | 'path'
+      name: string
+      app: string
+    }) => appsApi.setSystemRouting(type, name, app),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: appKeys.routing() })
+    },
   })
 }

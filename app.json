@@ -2,7 +2,7 @@
 // Copyright Alistair Cunningham 2025
 
 {
-	"version": "1.14",
+	"version": "2.0",
 	"label": "app_name",
 	"paths": ["apps"],
 
@@ -15,8 +15,10 @@
 
 	"actions": {
 		"": {"file": "web/dist/index.html"},
+		"routing": {"file": "web/dist/index.html"},
 		"assets": {"files": "web/dist/assets"},
 		"images": {"files": "web/dist/images"},
+
 		"list": {"function": "action_list"},
 		"market": {"function": "action_market"},
 		"information": {"function": "action_information"},
@@ -27,8 +29,8 @@
 		"updates": {"function": "action_updates"},
 		"upgrade": {"function": "action_upgrade"},
 		"version/download": {"function": "action_version_download"},
-
 		"available": {"function": "action_available"},
+		"routing/data": {"function": "action_routing"},
 
 		"user/preferences": {"function": "action_user_apps"},
 		"user/preferences/app": {"function": "action_user_apps_app"},
