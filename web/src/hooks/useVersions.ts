@@ -19,6 +19,7 @@ interface AppVersionsResponse {
   user: VersionPref | null
   system: VersionPref | null
   is_admin: boolean
+  track_warning: string
 }
 
 export function useMultiVersionAvailable() {

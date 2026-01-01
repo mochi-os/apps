@@ -531,6 +531,13 @@ def action_user_apps_app(a):
 
 	user_pref = a.user.app.version.get(app_id)
 
+	# Check if user's track preference still exists
+	track_warning = ""
+	if user_pref and user_pref.get("track"):
+		user_track = user_pref["track"]
+		if user_track not in tracks:
+			track_warning = "Track '" + user_track + "' no longer exists on the publisher"
+
 	result = {
 		"versions": versions,
 		"tracks": tracks,
@@ -538,6 +545,7 @@ def action_user_apps_app(a):
 		"user": user_pref,
 		"system": mochi.app.version.get(app_id),
 		"is_admin": a.user.role == "administrator",
+		"track_warning": track_warning,
 	}
 
 	a.json({"data": result})

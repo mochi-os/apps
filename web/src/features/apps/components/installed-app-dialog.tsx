@@ -16,7 +16,10 @@ import {
   Skeleton,
   getErrorMessage,
   toast,
+  Alert,
+  AlertDescription,
 } from '@mochi/common'
+import { AlertTriangle } from 'lucide-react'
 import type { InstalledApp } from '@/api/types/apps'
 import {
   useMultiVersionAvailable,
@@ -42,6 +45,7 @@ export function InstalledAppDialog({ app, onClose }: InstalledAppDialogProps) {
   const hasTracks = Object.keys(versionData?.tracks ?? {}).length > 0
   const isAdmin = versionData?.is_admin ?? false
   const defaultTrack = versionData?.default_track ?? ''
+  const trackWarning = versionData?.track_warning ?? ''
 
   // Determine current user selection
   const userPref = versionData?.user
@@ -184,6 +188,16 @@ export function InstalledAppDialog({ app, onClose }: InstalledAppDialogProps) {
                 )}
               </div>
             </div>
+          )}
+
+          {/* Show warning if user's track no longer exists */}
+          {trackWarning && (
+            <Alert variant='destructive' className='border-t pt-4'>
+              <AlertTriangle className='h-4 w-4' />
+              <AlertDescription>
+                {trackWarning}. Select a different track below.
+              </AlertDescription>
+            </Alert>
           )}
 
           {multiVersionAvailable && (hasMultipleVersions || hasTracks) && (
