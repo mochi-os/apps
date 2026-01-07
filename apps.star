@@ -803,6 +803,23 @@ def action_permissions_grant(a):
 		a.error(400, "Missing permission parameter")
 		return
 
+	# Restricted permissions cannot be granted through this endpoint
+	# They must be enabled manually in app settings
+	restricted = [
+		"url:*",
+		"access/allow",
+		"access/deny",
+		"access/revoke",
+		"user/read",
+		"entity/delete",
+		"setting/write",
+		"permission/manage",
+		"webpush/send",
+	]
+	if permission in restricted:
+		a.error(403, "Restricted permission must be enabled in app settings")
+		return
+
 	mochi.permission.grant(app_id, permission)
 	a.json({"status": "granted", "permission": permission})
 
