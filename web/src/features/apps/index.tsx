@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { useNavigate } from '@tanstack/react-router'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -39,15 +40,13 @@ import {
 } from '@/hooks/useApps'
 import { AppInfoDialog } from './components/app-info-dialog'
 import { InstallDialog } from './components/install-dialog'
-import { InstalledAppDialog } from './components/installed-app-dialog'
 
 export function Apps() {
   usePageTitle('Apps')
+  const navigate = useNavigate()
   const [selectedMarketApp, setSelectedMarketApp] = useState<MarketApp | null>(
     null
   )
-  const [selectedInstalledApp, setSelectedInstalledApp] =
-    useState<InstalledApp | null>(null)
   const [installFromPublisher, setInstallFromPublisher] = useState(false)
   const [installFromFile, setInstallFromFile] = useState(false)
   const [appIdInput, setAppIdInput] = useState('')
@@ -293,7 +292,7 @@ export function Apps() {
                 <InstalledAppCard
                   key={app.id}
                   app={app}
-                  onClick={() => setSelectedInstalledApp(app)}
+                  onClick={() => navigate({ to: '/app/$appId', params: { appId: app.id } })}
                   availableVersion={
                     availableUpdates?.find((u) => u.id === app.id)?.available
                   }
@@ -312,7 +311,7 @@ export function Apps() {
                 <InstalledAppCard
                   key={app.id}
                   app={app}
-                  onClick={() => setSelectedInstalledApp(app)}
+                  onClick={() => navigate({ to: '/app/$appId', params: { appId: app.id } })}
                   showId
                 />
               ))}
@@ -478,11 +477,6 @@ export function Apps() {
           isLoading={isLoadingInfo}
           onInstall={handleInstall}
           isInstalling={installFromPublisherMutation.isPending}
-        />
-
-        <InstalledAppDialog
-          app={selectedInstalledApp}
-          onClose={() => setSelectedInstalledApp(null)}
         />
       </Main>
     </>

@@ -64,3 +64,13 @@ export interface InstallResponse {
     version: string
   }
 }
+
+export interface Permission {
+  permission: string
+  granted: boolean
+  restricted: boolean
+}
+
+export interface AppPermissions {
+  permissions: Permission[]
+}

@@ -16,6 +16,8 @@ import { Route as AuthenticatedRoutingIndexRouteImport } from './routes/_authent
 import { Route as AuthenticatedRoutingServicesRouteImport } from './routes/_authenticated/routing/services'
 import { Route as AuthenticatedRoutingPathsRouteImport } from './routes/_authenticated/routing/paths'
 import { Route as AuthenticatedRoutingClassesRouteImport } from './routes/_authenticated/routing/classes'
+import { Route as AuthenticatedPermissionsRequestRouteImport } from './routes/_authenticated/permissions/request'
+import { Route as AuthenticatedAppAppIdRouteImport } from './routes/_authenticated/app/$appId'
 
 const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
   id: '/_authenticated',
@@ -55,10 +57,23 @@ const AuthenticatedRoutingClassesRoute =
     path: '/classes',
     getParentRoute: () => AuthenticatedRoutingRoute,
   } as any)
+const AuthenticatedPermissionsRequestRoute =
+  AuthenticatedPermissionsRequestRouteImport.update({
+    id: '/permissions/request',
+    path: '/permissions/request',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedAppAppIdRoute = AuthenticatedAppAppIdRouteImport.update({
+  id: '/app/$appId',
+  path: '/app/$appId',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/routing': typeof AuthenticatedRoutingRouteWithChildren
   '/': typeof AuthenticatedIndexRoute
+  '/app/$appId': typeof AuthenticatedAppAppIdRoute
+  '/permissions/request': typeof AuthenticatedPermissionsRequestRoute
   '/routing/classes': typeof AuthenticatedRoutingClassesRoute
   '/routing/paths': typeof AuthenticatedRoutingPathsRoute
   '/routing/services': typeof AuthenticatedRoutingServicesRoute
@@ -66,6 +81,8 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof AuthenticatedIndexRoute
+  '/app/$appId': typeof AuthenticatedAppAppIdRoute
+  '/permissions/request': typeof AuthenticatedPermissionsRequestRoute
   '/routing/classes': typeof AuthenticatedRoutingClassesRoute
   '/routing/paths': typeof AuthenticatedRoutingPathsRoute
   '/routing/services': typeof AuthenticatedRoutingServicesRoute
@@ -76,6 +93,8 @@ export interface FileRoutesById {
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/_authenticated/routing': typeof AuthenticatedRoutingRouteWithChildren
   '/_authenticated/': typeof AuthenticatedIndexRoute
+  '/_authenticated/app/$appId': typeof AuthenticatedAppAppIdRoute
+  '/_authenticated/permissions/request': typeof AuthenticatedPermissionsRequestRoute
   '/_authenticated/routing/classes': typeof AuthenticatedRoutingClassesRoute
   '/_authenticated/routing/paths': typeof AuthenticatedRoutingPathsRoute
   '/_authenticated/routing/services': typeof AuthenticatedRoutingServicesRoute
@@ -86,6 +105,8 @@ export interface FileRouteTypes {
   fullPaths:
     | '/routing'
     | '/'
+    | '/app/$appId'
+    | '/permissions/request'
     | '/routing/classes'
     | '/routing/paths'
     | '/routing/services'
@@ -93,6 +114,8 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/app/$appId'
+    | '/permissions/request'
     | '/routing/classes'
     | '/routing/paths'
     | '/routing/services'
@@ -102,6 +125,8 @@ export interface FileRouteTypes {
     | '/_authenticated'
     | '/_authenticated/routing'
     | '/_authenticated/'
+    | '/_authenticated/app/$appId'
+    | '/_authenticated/permissions/request'
     | '/_authenticated/routing/classes'
     | '/_authenticated/routing/paths'
     | '/_authenticated/routing/services'
@@ -163,6 +188,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedRoutingClassesRouteImport
       parentRoute: typeof AuthenticatedRoutingRoute
     }
+    '/_authenticated/permissions/request': {
+      id: '/_authenticated/permissions/request'
+      path: '/permissions/request'
+      fullPath: '/permissions/request'
+      preLoaderRoute: typeof AuthenticatedPermissionsRequestRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/app/$appId': {
+      id: '/_authenticated/app/$appId'
+      path: '/app/$appId'
+      fullPath: '/app/$appId'
+      preLoaderRoute: typeof AuthenticatedAppAppIdRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
   }
 }
 
@@ -186,11 +225,15 @@ const AuthenticatedRoutingRouteWithChildren =
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedRoutingRoute: typeof AuthenticatedRoutingRouteWithChildren
   AuthenticatedIndexRoute: typeof AuthenticatedIndexRoute
+  AuthenticatedAppAppIdRoute: typeof AuthenticatedAppAppIdRoute
+  AuthenticatedPermissionsRequestRoute: typeof AuthenticatedPermissionsRequestRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedRoutingRoute: AuthenticatedRoutingRouteWithChildren,
   AuthenticatedIndexRoute: AuthenticatedIndexRoute,
+  AuthenticatedAppAppIdRoute: AuthenticatedAppAppIdRoute,
+  AuthenticatedPermissionsRequestRoute: AuthenticatedPermissionsRequestRoute,
 }
 
 const AuthenticatedRouteRouteWithChildren =

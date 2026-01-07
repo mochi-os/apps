@@ -2,7 +2,7 @@
 // Copyright Alistair Cunningham 2025
 
 {
-	"version": "2.3",
+	"version": "3.0",
 	"label": "app_name",
 	"paths": ["apps"],
 
@@ -15,6 +15,7 @@
 
 	"actions": {
 		"": {"file": "web/dist/index.html"},
+		"app": {"file": "web/dist/index.html"},
 		"routing": {"file": "web/dist/index.html"},
 		"routing/classes": {"file": "web/dist/index.html"},
 		"routing/services": {"file": "web/dist/index.html"},
@@ -34,6 +35,10 @@
 		"version/download": {"function": "action_version_download"},
 		"available": {"function": "action_available"},
 		"routing/data": {"function": "action_routing"},
+
+		"permissions/list": {"function": "action_permissions_list"},
+		"permissions/grant": {"function": "action_permissions_grant"},
+		"permissions/revoke": {"function": "action_permissions_revoke"},
 
 		"user/preferences": {"function": "action_user_apps"},
 		"user/preferences/app": {"function": "action_user_apps_app"},

@@ -762,3 +762,60 @@ def action_system_apps_routing_set(a):
 		return
 
 	a.json({"ok": True})
+
+# Permissions management
+
+def action_permissions_list(a):
+	"""List permissions for an app"""
+	app_id = a.input("app")
+	if not app_id:
+		a.error(400, "Missing app parameter")
+		return
+
+	perms = mochi.permission.list(app_id)
+	# Filter out internal marker rows
+	perms = [p for p in (perms or []) if not p["permission"].startswith("_")]
+	a.json({"permissions": perms})
+
+def action_permissions_grant(a):
+	"""Grant a permission to an app"""
+	# Security: Only allow requests from the permission request page
+	# Referer format: "http://host/path" - verify path starts with /apps/permissions/request
+	referer = a.header("Referer")
+	valid = False
+	if "://" in referer:
+		after_scheme = referer.split("://", 1)[1]  # "host/path?query"
+		if "/" in after_scheme:
+			path = "/" + after_scheme.split("/", 1)[1]  # "/apps/permissions/request?..."
+			valid = path.startswith("/apps/permissions/request")
+	if not valid:
+		a.error(403, "Invalid request origin")
+		return
+
+	app_id = a.input("app")
+	permission = a.input("permission")
+
+	if not app_id:
+		a.error(400, "Missing app parameter")
+		return
+	if not permission:
+		a.error(400, "Missing permission parameter")
+		return
+
+	mochi.permission.grant(app_id, permission)
+	a.json({"status": "granted", "permission": permission})
+
+def action_permissions_revoke(a):
+	"""Revoke a permission from an app"""
+	app_id = a.input("app")
+	permission = a.input("permission")
+
+	if not app_id:
+		a.error(400, "Missing app parameter")
+		return
+	if not permission:
+		a.error(400, "Missing permission parameter")
+		return
+
+	mochi.permission.revoke(app_id, permission)
+	a.json({"status": "revoked", "permission": permission})

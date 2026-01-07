@@ -37,12 +37,10 @@ export function useAppVersions(appId: string | null) {
   return useQuery({
     queryKey: ['app-versions', appId],
     queryFn: async () => {
-      console.log('useAppVersions: fetching for appId', appId)
       const response = await apiClient.get<{ data: AppVersionsResponse }>(
         endpoints.appVersions,
         { params: { app: appId } }
       )
-      console.log('useAppVersions: got response', response.data)
       return response.data.data
     },
     enabled: !!appId,
