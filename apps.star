@@ -773,8 +773,6 @@ def action_permissions_list(a):
 		return
 
 	perms = mochi.permission.list(app_id)
-	# Filter out internal marker rows
-	perms = [p for p in (perms or []) if not p["permission"].startswith("_")]
 	a.json({"permissions": perms})
 
 def action_permissions_grant(a):
