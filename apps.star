@@ -842,3 +842,28 @@ def action_permissions_revoke(a):
 
 	mochi.permission.revoke(app_id, permission)
 	a.json({"status": "revoked", "permission": permission})
+
+def action_permissions_set(a):
+	"""Set a permission for an app (for settings page, allows restricted permissions)"""
+	app_id = a.input("app")
+	permission = a.input("permission")
+	enabled = a.input("enabled") == "true"
+
+	if not app_id:
+		a.error(400, "Missing app parameter")
+		return
+	if not permission:
+		a.error(400, "Missing permission parameter")
+		return
+
+	# Verify app exists
+	if not mochi.app.get(app_id):
+		a.error(404, "App not found")
+		return
+
+	if enabled:
+		mochi.permission.grant(app_id, permission)
+		a.json({"status": "granted", "permission": permission})
+	else:
+		mochi.permission.revoke(app_id, permission)
+		a.json({"status": "revoked", "permission": permission})

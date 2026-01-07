@@ -31,6 +31,7 @@ const endpoints = {
     list: '/apps/-/permissions/list',
     grant: '/apps/-/permissions/grant',
     revoke: '/apps/-/permissions/revoke',
+    set: '/apps/-/permissions/set',
   },
 } as const
 

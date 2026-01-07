@@ -42,3 +42,20 @@ export function useRevokePermission() {
     },
   })
 }
+
+export function useSetPermission() {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: async (data: { app: string; permission: string; enabled: boolean }) => {
+      const response = await apiClient.post(endpoints.permissions.set, {
+        app: data.app,
+        permission: data.permission,
+        enabled: data.enabled.toString(),
+      })
+      return response.data
+    },
+    onSuccess: (_, variables) => {
+      queryClient.invalidateQueries({ queryKey: ['app-permissions', variables.app] })
+    },
+  })
+}

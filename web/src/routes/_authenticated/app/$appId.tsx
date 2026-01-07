@@ -36,8 +36,7 @@ import {
 } from '@/hooks/useVersions'
 import {
   useAppPermissions,
-  useGrantPermission,
-  useRevokePermission,
+  useSetPermission,
 } from '@/hooks/usePermissions'
 import type { Permission } from '@/api/types/apps'
 
@@ -373,16 +372,15 @@ function VersionsTab({ appId }: { appId: string }) {
 
 function PermissionsTab({ appId, appName }: { appId: string; appName: string }) {
   const { data, isLoading, error } = useAppPermissions(appId)
-  const grantPermission = useGrantPermission()
-  const revokePermission = useRevokePermission()
+  const setPermission = useSetPermission()
   const [grantDialogOpen, setGrantDialogOpen] = useState(false)
   const [revokingPermission, setRevokingPermission] = useState<string | null>(null)
   const [grantingPermission, setGrantingPermission] = useState<string | null>(null)
 
   const handleRevoke = (permission: string) => {
     setRevokingPermission(permission)
-    revokePermission.mutate(
-      { app: appId, permission },
+    setPermission.mutate(
+      { app: appId, permission, enabled: false },
       {
         onSuccess: () => {
           toast.success('Permission revoked')
@@ -398,8 +396,8 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
 
   const handleGrant = (permission: string) => {
     setGrantingPermission(permission)
-    grantPermission.mutate(
-      { app: appId, permission },
+    setPermission.mutate(
+      { app: appId, permission, enabled: true },
       {
         onSuccess: () => {
           toast.success('Permission granted')
