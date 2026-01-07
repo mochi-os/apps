@@ -97,6 +97,16 @@ function isRestrictedPermission(permission: string): boolean {
   return restricted.includes(permission)
 }
 
+// Validate return URL to prevent open redirect attacks
+function getSafeReturnUrl(url: string | undefined): string {
+  if (!url) return '/'
+  // Only allow relative paths (starting with / but not //)
+  if (url.startsWith('/') && !url.startsWith('//')) {
+    return url
+  }
+  return '/'
+}
+
 export function PermissionRequest() {
   usePageTitle('Permission request')
   const navigate = useNavigate()
@@ -107,7 +117,7 @@ export function PermissionRequest() {
 
   const app = (search as { app?: string }).app || ''
   const permission = (search as { permission?: string }).permission || ''
-  const returnUrl = (search as { return?: string }).return || '/'
+  const returnUrl = getSafeReturnUrl((search as { return?: string }).return)
   const isPopup = !!window.opener
 
   // Find the app in installed or development apps
