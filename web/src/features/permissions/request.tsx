@@ -24,25 +24,9 @@ const permissionInfo: Record<string, { action: string; description: string }> = 
     action: 'manage groups',
     description: 'create, delete, and modify groups and their members',
   },
-  'access/allow': {
-    action: 'grant access',
-    description: 'grant others access to your content',
-  },
-  'access/deny': {
-    action: 'deny access',
-    description: 'deny others access to your content',
-  },
-  'access/revoke': {
-    action: 'revoke access',
-    description: 'revoke access that was previously granted',
-  },
   'user/read': {
     action: 'read user information',
     description: 'read information about other users on this server',
-  },
-  'entity/delete': {
-    action: 'delete data',
-    description: 'permanently delete your data',
   },
   'setting/write': {
     action: 'modify settings',
@@ -60,8 +44,8 @@ const permissionInfo: Record<string, { action: string; description: string }> = 
 
 // Permission display info with type-specific formatting
 interface PermissionDisplayInfo {
-  type: 'url' | 'service' | 'capability'
-  // For URL: domain name; for service: service name; for capability: action verb
+  type: 'url' | 'capability'
+  // For URL: domain name; for capability: action verb
   primary: string
   // Additional context
   secondary: string
@@ -94,17 +78,6 @@ function getPermissionInfo(permission: string): PermissionDisplayInfo {
     }
   }
 
-  if (permission.startsWith('service:')) {
-    const service = permission.slice(8)
-    // Capitalize service name
-    const serviceName = service.charAt(0).toUpperCase() + service.slice(1)
-    return {
-      type: 'service',
-      primary: `${serviceName} service`,
-      secondary: '',
-    }
-  }
-
   return {
     type: 'capability',
     primary: permission,
@@ -116,11 +89,7 @@ function getPermissionInfo(permission: string): PermissionDisplayInfo {
 function isRestrictedPermission(permission: string): boolean {
   const restricted = [
     'url:*',
-    'access/allow',
-    'access/deny',
-    'access/revoke',
     'user/read',
-    'entity/delete',
     'setting/write',
     'permission/manage',
     'webpush/send',
@@ -256,11 +225,6 @@ export function PermissionRequest() {
               <CardDescription>wants permission to access</CardDescription>
               <p className='mt-4 text-lg font-medium'>{permissionDisplay.primary}</p>
               <p className='text-sm text-muted-foreground'>{permissionDisplay.secondary}</p>
-            </>
-          ) : permissionDisplay.type === 'service' ? (
-            <>
-              <CardDescription>wants permission to use the</CardDescription>
-              <p className='mt-4 text-lg font-medium'>{permissionDisplay.primary}</p>
             </>
           ) : (
             <>

@@ -66,9 +66,6 @@ function formatPermission(permission: string): string {
   if (permission.startsWith('url:')) {
     return `Access ${permission.slice(4)}`
   }
-  if (permission.startsWith('service:')) {
-    return `Use ${permission.slice(8)} service`
-  }
   const found = allPermissions.find((p) => p.permission === permission)
   return found?.label || permission
 }

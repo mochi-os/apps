@@ -812,11 +812,7 @@ def action_permissions_grant(a):
 	# They must be enabled manually in app settings
 	restricted = [
 		"url:*",
-		"access/allow",
-		"access/deny",
-		"access/revoke",
 		"user/read",
-		"entity/delete",
 		"setting/write",
 		"permission/manage",
 		"webpush/send",
