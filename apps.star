@@ -780,14 +780,15 @@ def action_permissions_list(a):
 def action_permissions_grant(a):
 	"""Grant a permission to an app"""
 	# Security: Only allow requests from the permission request page
-	# Referer format: "http://host/path" - verify path starts with /apps/permissions/request
+	# Referer format: "http://host/path" - verify path is exactly /apps/permissions/request
 	referer = a.header("Referer")
 	valid = False
 	if "://" in referer:
 		after_scheme = referer.split("://", 1)[1]  # "host/path?query"
 		if "/" in after_scheme:
 			path = "/" + after_scheme.split("/", 1)[1]  # "/apps/permissions/request?..."
-			valid = path.startswith("/apps/permissions/request")
+			# Must be exact path or path with query string (not /apps/permissions/requestevil)
+			valid = path == "/apps/permissions/request" or path.startswith("/apps/permissions/request?")
 	if not valid:
 		a.error(403, "Invalid request origin")
 		return
