@@ -69,6 +69,7 @@ export interface Permission {
   permission: string
   granted: boolean
   restricted: boolean
+  admin: boolean
 }
 
 export interface AppPermissions {
