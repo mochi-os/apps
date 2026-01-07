@@ -857,6 +857,11 @@ def action_permissions_set(a):
 		a.error(404, "App not found")
 		return
 
+	# Admin-only permissions require administrator role
+	if mochi.permission.administrator(permission) and a.user.role != "administrator":
+		a.error(403, "This permission requires administrator role")
+		return
+
 	if enabled:
 		mochi.permission.grant(app_id, permission)
 		a.json({"status": "granted", "permission": permission})
