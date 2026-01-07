@@ -803,6 +803,11 @@ def action_permissions_grant(a):
 		a.error(400, "Missing permission parameter")
 		return
 
+	# Verify app exists
+	if not mochi.app.get(app_id):
+		a.error(404, "App not found")
+		return
+
 	# Restricted permissions cannot be granted through this endpoint
 	# They must be enabled manually in app settings
 	restricted = [
