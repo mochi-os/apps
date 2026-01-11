@@ -20,6 +20,26 @@ import { useInstalledAppsQuery } from '@/hooks/useApps'
 // action: verb phrase (e.g., "manage groups")
 // description: what this allows (e.g., "create, delete, and modify groups")
 const permissionInfo: Record<string, { action: string; description: string }> = {
+  'account/read': {
+    action: 'read connected accounts',
+    description: 'view your connected accounts and notification destinations',
+  },
+  'account/manage': {
+    action: 'manage connected accounts',
+    description: 'add, update, and remove connected accounts',
+  },
+  'account/notify': {
+    action: 'send notifications',
+    description: 'send notifications to your connected accounts',
+  },
+  'account/ai': {
+    action: 'use AI services',
+    description: 'access your connected AI accounts like Claude or OpenAI',
+  },
+  'account/mcp': {
+    action: 'connect to MCP servers',
+    description: 'access your connected MCP servers',
+  },
   'group/manage': {
     action: 'manage groups',
     description: 'create, delete, and modify groups and their members',
