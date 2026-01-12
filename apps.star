@@ -66,19 +66,19 @@ def action_view(a):
 		app["fingerprint"] = ""
 	return {"data": {"app": app}}
 
-# Get available apps from the App Market that are not installed
+# Get available apps from the Featured service that are not installed
 def action_market(a):
-	s = mochi.remote.stream("1JYmMpQU7fxvTrwHpNpiwKCgUg3odWqX7s9t1cLswSMAro5M2P", "app-market", "list", {"language": "en"})
+	s = mochi.remote.stream("1JYmMpQU7fxvTrwHpNpiwKCgUg3odWqX7s9t1cLswSMAro5M2P", "featured", "list", {"type": "app", "language": "en"})
 	if not s:
-		return {"status": 500, "error": "Failed to connect to App Market", "data": {}}
+		return {"status": 500, "error": "Failed to connect to Featured", "data": {}}
 	r = s.read()
 	if r.get("status") != "200":
-		return {"status": 500, "error": "Failed to connect to App Market", "data": {}}
+		return {"status": 500, "error": "Failed to connect to Featured", "data": {}}
 
 	market = []
-	for app in s.read():
-		if not mochi.app.get(app["id"]):
-			market.append(app)
+	for item in s.read():
+		if not mochi.app.get(item["entity"]):
+			market.append({"id": item["entity"], "name": item["name"], "blurb": item["blurb"]})
 
 	return {"data": {"apps": market}}
 
