@@ -17,10 +17,12 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+
   DropdownMenuTrigger,
   Input,
   Label,
   Main,
+  PageHeader,
   Switch,
   usePageTitle,
   toast,
@@ -212,70 +214,75 @@ export function Apps() {
 
   return (
     <>
+      <PageHeader
+        title='Apps'
+        actions={
+          (appsData?.can_install ||
+            (availableUpdates && availableUpdates.length > 0)) && (
+            <div className='flex items-center gap-2'>
+              <input
+                type='file'
+                ref={fileInputRef}
+                onChange={handleFileSelect}
+                accept='.zip'
+                className='hidden'
+              />
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant='ghost' size='icon'>
+                    {upgradeMutation.isPending ? (
+                      <RefreshCw className='h-4 w-4 animate-spin' />
+                    ) : (
+                      <MoreVertical className='h-4 w-4' />
+                    )}
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align='end'>
+                  {availableUpdates && availableUpdates.length > 0 && (
+                    <DropdownMenuItem
+                      onClick={handleUpdateAll}
+                      disabled={upgradeMutation.isPending}
+                    >
+                      <RefreshCw
+                        className={`mr-2 h-4 w-4 ${upgradeMutation.isPending ? 'animate-spin' : ''}`}
+                      />
+                      {upgradeMutation.isPending ? 'Updating...' : 'Update all'}
+                    </DropdownMenuItem>
+                  )}
+                  {appsData?.can_install && (
+                    <>
+                      <DropdownMenuItem
+                        onClick={() => setInstallFromPublisher(true)}
+                      >
+                        <ExternalLink className='mr-2 h-4 w-4' />
+                        Install from publisher
+                      </DropdownMenuItem>
+                      <DropdownMenuItem
+                        onClick={() => fileInputRef.current?.click()}
+                      >
+                        <Download className='mr-2 h-4 w-4' />
+                        Install from file
+                      </DropdownMenuItem>
+                      <DropdownMenuItem
+                        onClick={handleCleanup}
+                        disabled={cleanupMutation.isPending}
+                      >
+                        <Trash2 className='mr-2 h-4 w-4' />
+                        {cleanupMutation.isPending ? 'Cleaning up...' : 'Clean up unused versions'}
+                      </DropdownMenuItem>
+                    </>
+                  )}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          )
+        }
+      />
       <Main>
         {/* Installed Apps Section */}
         <section className='mb-8'>
           <div className='mb-4 flex items-center gap-4'>
             <h2 className='text-xl font-semibold'>Installed apps</h2>
-            {(appsData?.can_install ||
-              (availableUpdates && availableUpdates.length > 0)) && (
-              <div className='ml-auto'>
-                <input
-                  type='file'
-                  ref={fileInputRef}
-                  onChange={handleFileSelect}
-                  accept='.zip'
-                  className='hidden'
-                />
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant='ghost' size='icon'>
-                      {upgradeMutation.isPending ? (
-                        <RefreshCw className='h-4 w-4 animate-spin' />
-                      ) : (
-                        <MoreVertical className='h-4 w-4' />
-                      )}
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align='end'>
-                    {availableUpdates && availableUpdates.length > 0 && (
-                      <DropdownMenuItem
-                        onClick={handleUpdateAll}
-                        disabled={upgradeMutation.isPending}
-                      >
-                        <RefreshCw
-                          className={`mr-2 h-4 w-4 ${upgradeMutation.isPending ? 'animate-spin' : ''}`}
-                        />
-                        {upgradeMutation.isPending ? 'Updating...' : 'Update all'}
-                      </DropdownMenuItem>
-                    )}
-                    {appsData?.can_install && (
-                      <>
-                        <DropdownMenuItem
-                          onClick={() => setInstallFromPublisher(true)}
-                        >
-                          <ExternalLink className='mr-2 h-4 w-4' />
-                          Install from publisher
-                        </DropdownMenuItem>
-                        <DropdownMenuItem
-                          onClick={() => fileInputRef.current?.click()}
-                        >
-                          <Download className='mr-2 h-4 w-4' />
-                          Install from file
-                        </DropdownMenuItem>
-                        <DropdownMenuItem
-                          onClick={handleCleanup}
-                          disabled={cleanupMutation.isPending}
-                        >
-                          <Trash2 className='mr-2 h-4 w-4' />
-                          {cleanupMutation.isPending ? 'Cleaning up...' : 'Clean up unused versions'}
-                        </DropdownMenuItem>
-                      </>
-                    )}
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </div>
-            )}
           </div>
           {installedApps?.length === 0 ? (
             <Card>
