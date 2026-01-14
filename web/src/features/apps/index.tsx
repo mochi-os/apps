@@ -216,6 +216,7 @@ export function Apps() {
     <>
       <PageHeader
         title='Apps'
+        icon={<Package className='size-4 md:size-5' />}
         actions={
           (appsData?.can_install ||
             (availableUpdates && availableUpdates.length > 0)) && (
