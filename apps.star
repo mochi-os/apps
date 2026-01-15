@@ -76,7 +76,10 @@ def action_market(a):
 		return {"status": 500, "error": "Failed to connect to Featured", "data": {}}
 
 	market = []
-	for item in s.read():
+	items = s.read()
+	if type(items) != "list":
+		return {"status": 500, "error": "Invalid response from Featured", "data": {}}
+	for item in items:
 		if not mochi.app.get(item["entity"]):
 			market.append({"id": item["entity"], "name": item["name"], "blurb": item["blurb"]})
 
