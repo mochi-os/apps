@@ -162,7 +162,7 @@ def action_install_publisher(a):
 		return {"status": 500, "error": r.get("message", "Failed to download app"), "data": {}}
 
 	s.read_to_file(file)
-	mochi.app.file.install(id, file, False, peer)
+	mochi.app.package.install(id, file, False, peer)
 	mochi.file.delete(file)
 
 	return {"data": {"installed": True, "id": id, "version": version}}
@@ -189,7 +189,7 @@ def action_install_file(a):
 	a.upload("file", file)
 
 	# Get app info from the zip file
-	info = mochi.app.file.get(file)
+	info = mochi.app.package.get(file)
 	if not info:
 		mochi.file.delete(file)
 		return {"status": 400, "error": "Failed to read app info from archive", "data": {}}
@@ -201,7 +201,7 @@ def action_install_file(a):
 		return {"status": 500, "error": "Failed to create app entity", "data": {}}
 
 	# Install the app
-	version = mochi.app.file.install(entity, file)
+	version = mochi.app.package.install(entity, file)
 	mochi.file.delete(file)
 
 	return {"data": {"installed": True, "id": entity, "version": version}}
@@ -270,7 +270,7 @@ def action_install_id(a):
 		return {"status": 500, "error": r.get("message", "Failed to download app"), "data": {}}
 
 	s.read_to_file(file)
-	mochi.app.file.install(id, file, False, publisher)
+	mochi.app.package.install(id, file, False, publisher)
 	mochi.file.delete(file)
 
 	return {"data": {"installed": True, "id": id, "version": version, "name": app.get("name", "")}}
@@ -406,7 +406,7 @@ def action_upgrade(a):
 		return {"status": 500, "error": r.get("message", "Failed to download app"), "data": {}}
 
 	s.read_to_file(file)
-	mochi.app.file.install(id, file, False, publisher)
+	mochi.app.package.install(id, file, False, publisher)
 	mochi.file.delete(file)
 
 	return {"data": {"upgraded": True, "id": id, "version": version}}
