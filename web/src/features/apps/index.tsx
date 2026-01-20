@@ -267,6 +267,7 @@ export function Apps() {
                       <DropdownMenuItem
                         onClick={handleCleanup}
                         disabled={cleanupMutation.isPending}
+                        className='text-destructive focus:text-destructive'
                       >
                         <Trash2 className='mr-2 h-4 w-4' />
                         {cleanupMutation.isPending ? 'Cleaning up...' : 'Clean up unused versions'}
