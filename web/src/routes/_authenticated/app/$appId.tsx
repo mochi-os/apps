@@ -12,7 +12,7 @@ import {
   AlertDialogTrigger,
   Button,
   cn,
-  Header,
+  PageHeader,
   Label,
   Main,
   Select,
@@ -27,7 +27,7 @@ import {
   getErrorMessage,
   toast,
 } from '@mochi/common'
-import { Loader2, Plus, Shield, ShieldAlert, X } from 'lucide-react'
+import { Loader2, Plus, Shield, ShieldAlert, X, Package } from 'lucide-react'
 import { useInstalledAppsQuery } from '@/hooks/useApps'
 import {
   useAppVersions,
@@ -120,9 +120,10 @@ function AppPage() {
 
   return (
     <>
-      <Header>
-        <h1 className='text-lg font-semibold'>{app.name}</h1>
-      </Header>
+      <PageHeader 
+        title={app.name}
+        icon={<Package className='size-4 md:size-5' />}
+      />
       <Main className='pt-2 space-y-6'>
         <div className='flex items-center border-b'>
           <div className='flex gap-1'>

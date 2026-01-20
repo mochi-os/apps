@@ -216,6 +216,7 @@ export function Apps() {
     <>
       <PageHeader
         title='Apps'
+        icon={<Package className='size-4 md:size-5' />}
         actions={
           (appsData?.can_install ||
             (availableUpdates && availableUpdates.length > 0)) && (
@@ -266,6 +267,7 @@ export function Apps() {
                       <DropdownMenuItem
                         onClick={handleCleanup}
                         disabled={cleanupMutation.isPending}
+                        className='text-destructive focus:text-destructive'
                       >
                         <Trash2 className='mr-2 h-4 w-4' />
                         {cleanupMutation.isPending ? 'Cleaning up...' : 'Clean up unused versions'}
