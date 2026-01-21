@@ -17,8 +17,8 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-
   DropdownMenuTrigger,
+  EmptyState,
   Input,
   Label,
   Main,
@@ -287,14 +287,11 @@ export function Apps() {
             <h2 className='text-xl font-semibold'>Installed apps</h2>
           </div>
           {installedApps?.length === 0 ? (
-            <Card>
-              <CardContent className='py-8'>
-                <div className='text-muted-foreground text-center'>
-                  <Package className='mx-auto mb-4 h-12 w-12 opacity-50' />
-                  <p className='font-medium'>No apps installed</p>
-                </div>
-              </CardContent>
-            </Card>
+            <EmptyState
+              icon={Package}
+              title="No apps installed"
+              description="Install apps from the market or upload your own"
+            />
           ) : (
             <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
               {installedApps?.map((app) => (
@@ -337,23 +334,17 @@ export function Apps() {
                 <div className='text-muted-foreground'>Loading market...</div>
               </div>
             ) : isMarketError ? (
-              <Card>
-                <CardContent className='py-8'>
-                  <div className='text-muted-foreground text-center'>
-                    <Package className='mx-auto mb-4 h-12 w-12 opacity-50' />
-                    <p className='font-medium'>App Market unavailable</p>
-                  </div>
-                </CardContent>
-              </Card>
+              <EmptyState
+                icon={Package}
+                title="App Market unavailable"
+                description="Unable to connect to the app market"
+              />
             ) : marketApps?.length === 0 ? (
-              <Card>
-                <CardContent className='py-8'>
-                  <div className='text-muted-foreground text-center'>
-                    <Package className='mx-auto mb-4 h-12 w-12 opacity-50' />
-                    <p className='font-medium'>No apps available</p>
-                  </div>
-                </CardContent>
-              </Card>
+              <EmptyState
+                icon={Package}
+                title="No apps available"
+                description="Check back later for new apps"
+              />
             ) : (
               <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
                 {marketApps?.map((app) => (

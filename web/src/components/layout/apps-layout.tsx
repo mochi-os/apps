@@ -8,7 +8,7 @@ export function AppsLayout() {
     return {
       navGroups: [
         {
-          title: '',
+          title: 'Apps',
           items: [
             { title: 'Apps', url: '/', icon: Package },
             { title: 'Classes', url: '/routing/classes', icon: Boxes },

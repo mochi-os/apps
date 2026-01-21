@@ -11,7 +11,13 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
   Button,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
   cn,
+  EmptyState,
   PageHeader,
   Label,
   Main,
@@ -167,39 +173,61 @@ interface AppInfo {
 
 function DetailsTab({ app }: { app: AppInfo }) {
   return (
-    <div className='space-y-6'>
-      <div className='space-y-3'>
-        <div>
-          <span className='font-medium'>ID:</span>{' '}
-          <span className='font-mono text-sm break-all'>{app.id}</span>
-        </div>
-        <div>
-          <span className='font-medium'>Fingerprint:</span>{' '}
-          <span className='font-mono text-sm'>{app.fingerprint || 'None'}</span>
-        </div>
-        <div>
-          <span className='font-medium'>Version:</span>{' '}
-          <span className='font-mono text-sm'>{app.latest}</span>
-        </div>
-      </div>
-
-      {(app.classes?.length || app.services?.length || app.paths?.length) ? (
-        <div className='space-y-1 border-t pt-4'>
-          <p className='font-medium'>Provides</p>
-          <div className='text-muted-foreground space-y-1'>
-            {app.classes && app.classes.length > 0 && (
-              <p>Classes: {app.classes.join(', ')}</p>
-            )}
-            {app.services && app.services.length > 0 && (
-              <p>Services: {app.services.join(', ')}</p>
-            )}
-            {app.paths && app.paths.length > 0 && (
-              <p>Paths: {app.paths.map((p) => `/${p}`).join(', ')}</p>
-            )}
+    <Card>
+      <CardHeader>
+        <CardTitle>Details</CardTitle>
+        <CardDescription>
+          App information and configuration
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className='space-y-4'>
+          <div className='border-b pb-4'>
+            <dt className='text-muted-foreground mb-1.5 text-xs font-medium uppercase tracking-wider'>
+              ID
+            </dt>
+            <dd className='text-foreground font-mono text-sm break-all'>
+              {app.id}
+            </dd>
           </div>
+          <div className='border-b pb-4'>
+            <dt className='text-muted-foreground mb-1.5 text-xs font-medium uppercase tracking-wider'>
+              Fingerprint
+            </dt>
+            <dd className='text-foreground font-mono text-sm'>
+              {app.fingerprint || 'None'}
+            </dd>
+          </div>
+          <div className='border-b pb-4 last:border-b-0 last:pb-0'>
+            <dt className='text-muted-foreground mb-1.5 text-xs font-medium uppercase tracking-wider'>
+              Version
+            </dt>
+            <dd className='text-foreground font-mono text-sm'>
+              {app.latest}
+            </dd>
+          </div>
+
+          {(app.classes?.length || app.services?.length || app.paths?.length) && (
+            <div className='border-t pt-4'>
+              <p className='text-muted-foreground mb-3 text-xs font-medium uppercase tracking-wider'>
+                Provides
+              </p>
+              <div className='text-muted-foreground space-y-2 text-sm'>
+                {app.classes && app.classes.length > 0 && (
+                  <p><span className='font-medium'>Classes:</span> {app.classes.join(', ')}</p>
+                )}
+                {app.services && app.services.length > 0 && (
+                  <p><span className='font-medium'>Services:</span> {app.services.join(', ')}</p>
+                )}
+                {app.paths && app.paths.length > 0 && (
+                  <p><span className='font-medium'>Paths:</span> {app.paths.map((p) => `/${p}`).join(', ')}</p>
+                )}
+              </div>
+            </div>
+          )}
         </div>
-      ) : null}
-    </div>
+      </CardContent>
+    </Card>
   )
 }
 
@@ -288,9 +316,11 @@ function VersionsTab({ appId }: { appId: string }) {
 
   if (isError || !hasMultipleVersions && !hasTracks) {
     return (
-      <p className='text-muted-foreground text-sm'>
-        This app is not versioned.
-      </p>
+      <EmptyState
+        icon={Package}
+        title="Not versioned"
+        description="This app does not have version management"
+      />
     )
   }
 
@@ -339,32 +369,42 @@ function VersionsTab({ appId }: { appId: string }) {
   )
 
   return (
-    <div className='space-y-6'>
-      {isAdmin && (
-        <div className='space-y-2'>
-          <Label>Default version for all users</Label>
-          {renderVersionSelect(
-            systemValue,
-            handleSystemVersionChange,
-            setSystemVersion.isPending,
-            defaultTrack && versionData?.tracks?.[defaultTrack]
-              ? `Default track (version ${versionData.tracks[defaultTrack]})`
-              : 'Default track'
+    <Card>
+      <CardHeader>
+        <CardTitle>Version Management</CardTitle>
+        <CardDescription>
+          Select which version of this app to use
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className='space-y-6'>
+          {isAdmin && (
+            <div className='space-y-2'>
+              <Label>Default version for all users</Label>
+              {renderVersionSelect(
+                systemValue,
+                handleSystemVersionChange,
+                setSystemVersion.isPending,
+                defaultTrack && versionData?.tracks?.[defaultTrack]
+                  ? `Default track (version ${versionData.tracks[defaultTrack]})`
+                  : 'Default track'
+              )}
+            </div>
           )}
+          <div className='space-y-2'>
+            <Label>{isAdmin ? 'Version you use' : 'Preferred version'}</Label>
+            {renderVersionSelect(
+              userValue,
+              handleUserVersionChange,
+              setUserVersion.isPending,
+              effectiveDefaultVersion
+                ? `Default for all users (version ${effectiveDefaultVersion})`
+                : 'Default for all users'
+            )}
+          </div>
         </div>
-      )}
-      <div className='space-y-2'>
-        <Label>{isAdmin ? 'Version you use' : 'Preferred version'}</Label>
-        {renderVersionSelect(
-          userValue,
-          handleUserVersionChange,
-          setUserVersion.isPending,
-          effectiveDefaultVersion
-            ? `Default for all users (version ${effectiveDefaultVersion})`
-            : 'Default for all users'
-        )}
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   )
 }
 
@@ -437,73 +477,83 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
     .sort((a, b) => a.label.localeCompare(b.label))
 
   return (
-    <div className='space-y-4'>
-      <div className='flex items-center justify-between'>
-        <p className='text-muted-foreground text-sm'>
+    <Card>
+      <CardHeader>
+        <CardTitle>Permissions</CardTitle>
+        <CardDescription>
           {grantedPermissions.length === 0
-            ? 'No permissions granted to this app.'
-            : 'Manage permissions granted to this app.'}
-        </p>
+            ? 'No permissions granted to this app'
+            : 'Manage permissions granted to this app'}
+        </CardDescription>
         {availablePermissions.length > 0 && (
-          <AlertDialog open={grantDialogOpen} onOpenChange={setGrantDialogOpen}>
-            <AlertDialogTrigger asChild>
-              <Button variant='outline' size='sm'>
-                <Plus className='h-4 w-4 mr-1' />
-                Grant
-              </Button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>Grant permission</AlertDialogTitle>
-                <AlertDialogDescription>
-                  Select a permission to grant to {appName}.
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <div className='space-y-2 py-4'>
-                {availablePermissions.map((p) => (
-                  <button
-                    key={p.permission}
-                    onClick={() => handleGrant(p.permission)}
-                    disabled={grantingPermission !== null}
-                    className='hover:bg-muted flex w-full items-center justify-between rounded-md border p-3 text-left text-sm transition-colors disabled:opacity-50'
-                  >
-                    <div className='flex items-center gap-2'>
-                      {p.restricted ? (
-                        <ShieldAlert className='text-muted-foreground h-4 w-4' />
-                      ) : (
-                        <Shield className='text-muted-foreground h-4 w-4' />
+          <div className='absolute right-6 top-6'>
+            <AlertDialog open={grantDialogOpen} onOpenChange={setGrantDialogOpen}>
+              <AlertDialogTrigger asChild>
+                <Button variant='outline' size='sm'>
+                  <Plus className='h-4 w-4 mr-1' />
+                  Grant
+                </Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>Grant permission</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    Select a permission to grant to {appName}.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <div className='space-y-2 py-4'>
+                  {availablePermissions.map((p) => (
+                    <button
+                      key={p.permission}
+                      onClick={() => handleGrant(p.permission)}
+                      disabled={grantingPermission !== null}
+                      className='hover:bg-muted flex w-full items-center justify-between rounded-md border p-3 text-left text-sm transition-colors disabled:opacity-50'
+                    >
+                      <div className='flex items-center gap-2'>
+                        {p.restricted ? (
+                          <ShieldAlert className='text-muted-foreground h-4 w-4' />
+                        ) : (
+                          <Shield className='text-muted-foreground h-4 w-4' />
+                        )}
+                        {p.label}
+                      </div>
+                      {grantingPermission === p.permission && (
+                        <Loader2 className='h-4 w-4 animate-spin' />
                       )}
-                      {p.label}
-                    </div>
-                    {grantingPermission === p.permission && (
-                      <Loader2 className='h-4 w-4 animate-spin' />
-                    )}
-                  </button>
-                ))}
-              </div>
-              <AlertDialogFooter>
-                <AlertDialogCancel>Cancel</AlertDialogCancel>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+                    </button>
+                  ))}
+                </div>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>Cancel</AlertDialogCancel>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
+          </div>
         )}
-      </div>
-
-      {grantedPermissions.length > 0 && (
-        <div className='space-y-2'>
-          {grantedPermissions.map((permission) => (
-            <PermissionRow
-              key={permission.permission}
-              permission={permission}
-              onRevoke={handleRevoke}
-              isRevoking={revokingPermission === permission.permission}
-              appName={appName}
-              canRevoke={!(appId === 'apps' && permission.permission === 'permission/manage')}
-            />
-          ))}
-        </div>
-      )}
-    </div>
+      </CardHeader>
+      <CardContent>
+        {grantedPermissions.length > 0 ? (
+          <div className='space-y-2'>
+            {grantedPermissions.map((permission) => (
+              <PermissionRow
+                key={permission.permission}
+                permission={permission}
+                onRevoke={handleRevoke}
+                isRevoking={revokingPermission === permission.permission}
+                appName={appName}
+                canRevoke={!(appId === 'apps' && permission.permission === 'permission/manage')}
+              />
+            ))}
+          </div>
+        ) : (
+          <EmptyState
+            icon={Shield}
+            title="No permissions granted"
+            description="Grant permissions to allow this app to access system features"
+          />
+        )}
+      </CardContent>
+    </Card>
   )
 }
 
