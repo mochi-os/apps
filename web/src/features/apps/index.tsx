@@ -505,7 +505,7 @@ function InstalledAppCard({
       <CardHeader>
         <CardTitle className='truncate text-lg'>{app.name}</CardTitle>
         <p className='text-muted-foreground text-sm'>
-          {availableVersion
+          {availableVersion && availableVersion !== app.latest
             ? `${app.latest} (update to ${availableVersion} available)`
             : app.latest}
           {showTrack && (
