@@ -77,7 +77,7 @@ def action_market(a):
 
 	market = []
 	items = s.read()
-	if type(items) != "list":
+	if type(items) not in ["list", "tuple"]:
 		return {"status": 500, "error": "Invalid response from Recommendations", "data": {}}
 	for item in items:
 		if not mochi.app.get(item["entity"]):

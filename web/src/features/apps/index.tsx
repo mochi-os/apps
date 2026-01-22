@@ -328,22 +328,22 @@ export function Apps() {
         {/* Market Apps Section - only show if user can install */}
         {appsData?.can_install && (
           <section>
-            <h2 className='mb-4 text-xl font-semibold'>Mochi App Market</h2>
+            <h2 className='text-xl font-semibold'>Available, but not installed</h2>
+            <p className='mb-4 ml-3 text-base text-muted-foreground' style={{ fontVariant: 'small-caps' }}>Recommended</p>
             {isLoadingMarket ? (
               <div className='flex h-32 items-center justify-center'>
-                <div className='text-muted-foreground'>Loading market...</div>
+                <div className='text-muted-foreground'>Loading recommendations...</div>
               </div>
             ) : isMarketError ? (
               <EmptyState
                 icon={Package}
-                title="App Market unavailable"
-                description="Unable to connect to the app market"
+                title="Unavailable"
+                description="Unable to connect to the recommendations service"
               />
             ) : marketApps?.length === 0 ? (
               <EmptyState
                 icon={Package}
-                title="No apps available"
-                description="Check back later for new apps"
+                title="No recommendations available"
               />
             ) : (
               <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
