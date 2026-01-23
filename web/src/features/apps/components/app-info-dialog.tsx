@@ -6,6 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
   Button,
+  Skeleton,
 } from '@mochi/common'
 import { Download, AlertTriangle } from 'lucide-react'
 import type { AppInfo, Track } from '@/api/types/apps'
@@ -38,9 +39,11 @@ export function AppInfoDialog({
       <DialogContent className='sm:max-w-md'>
         <DialogHeader>
           <DialogTitle>
-            {isLoading
-              ? 'Loading...'
-              : (appInfo?.app?.name ?? 'App information')}
+            {isLoading ? (
+              <Skeleton className="h-6 w-48" />
+            ) : (
+              (appInfo?.app?.name ?? 'App information')
+            )}
           </DialogTitle>
           {appInfo?.app && (
             <DialogDescription className='font-mono text-xs'>
@@ -59,8 +62,29 @@ export function AppInfoDialog({
           </div>
 
           {isLoading ? (
-            <div className='text-muted-foreground py-4 text-center text-sm'>
-              Loading app information...
+            <div className='space-y-3'>
+              <Skeleton className='h-4 w-full' />
+              <Skeleton className='h-4 w-5/6' />
+              
+              <div className='pt-2'>
+                 <div className="flex gap-2 items-center mb-1">
+                    <span className='font-medium text-sm'>Fingerprint:</span>
+                    <Skeleton className='h-4 w-32' />
+                 </div>
+              </div>
+
+              <div>
+                <p className='mb-2 text-sm font-medium'>Available versions:</p>
+                <div className='space-y-2'>
+                   <div className='flex items-center justify-between rounded-lg border p-3'>
+                      <div className='space-y-1'>
+                        <Skeleton className='h-5 w-24' />
+                        <Skeleton className='h-4 w-16' />
+                      </div>
+                      <Skeleton className='h-9 w-20' />
+                   </div>
+                </div>
+              </div>
             </div>
           ) : appInfo?.app ? (
             <div className='space-y-3'>

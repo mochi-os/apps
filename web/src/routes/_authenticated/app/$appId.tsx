@@ -104,11 +104,45 @@ function AppPage() {
 
   if (isLoadingApps) {
     return (
-      <Main>
-        <div className='flex h-64 items-center justify-center'>
-          <div className='text-muted-foreground'>Loading app details...</div>
-        </div>
-      </Main>
+      <>
+        <PageHeader
+          title={<Skeleton className='h-8 w-48' />}
+          icon={<Skeleton className='size-4 md:size-5 rounded-md' />}
+        />
+        <Main className='pt-2 space-y-6'>
+          <div className='flex items-center border-b'>
+             <div className='flex gap-1 pb-px'>
+               {Array.from({ length: 3 }).map((_, i) => (
+                  <div key={i} className='px-4 py-2'>
+                     <Skeleton className='h-5 w-24' />
+                  </div>
+               ))}
+             </div>
+          </div>
+          <Card>
+            <CardHeader>
+              <Skeleton className='h-6 w-32 mb-2' />
+              <Skeleton className='h-4 w-64' />
+            </CardHeader>
+            <CardContent>
+              <div className='space-y-4'>
+                <div className='border-b pb-4'>
+                   <Skeleton className='h-3 w-16 mb-2' />
+                   <Skeleton className='h-4 w-48' />
+                </div>
+                <div className='border-b pb-4'>
+                   <Skeleton className='h-3 w-24 mb-2' />
+                   <Skeleton className='h-4 w-32' />
+                </div>
+                 <div className='border-b pb-4 last:border-b-0 last:pb-0'>
+                   <Skeleton className='h-3 w-16 mb-2' />
+                   <Skeleton className='h-4 w-12' />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </Main>
+      </>
     )
   }
 

@@ -26,6 +26,7 @@ import {
   Switch,
   usePageTitle,
   toast,
+  Skeleton,
 } from '@mochi/common'
 import { Package, ExternalLink, Download, RefreshCw, MoreVertical, Trash2 } from 'lucide-react'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
@@ -204,9 +205,21 @@ export function Apps() {
     return (
       <>
         <Main>
-          <div className='flex h-64 items-center justify-center'>
-            <div className='text-muted-foreground'>Loading apps...</div>
-          </div>
+          <section className='mb-8'>
+            <div className='mb-4 flex items-center gap-4'>
+              <h2 className='text-xl font-semibold'>Installed apps</h2>
+            </div>
+            <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+              {Array.from({ length: 6 }).map((_, i) => (
+                <Card key={i} className='flex flex-col'>
+                  <CardHeader>
+                    <Skeleton className='h-6 w-32' />
+                    <Skeleton className='mt-2 h-4 w-24' />
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
+          </section>
         </Main>
       </>
     )
@@ -331,8 +344,18 @@ export function Apps() {
             <h2 className='text-xl font-semibold'>Available, but not installed</h2>
             <p className='mb-4 ml-3 text-base text-muted-foreground' style={{ fontVariant: 'small-caps' }}>Recommended</p>
             {isLoadingMarket ? (
-              <div className='flex h-32 items-center justify-center'>
-                <div className='text-muted-foreground'>Loading recommendations...</div>
+              <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+                {Array.from({ length: 6 }).map((_, i) => (
+                  <Card key={i} className='flex flex-col h-[120px]'>
+                    <CardHeader className='pb-3'>
+                      <Skeleton className='h-6 w-3/4' />
+                    </CardHeader>
+                    <CardContent>
+                      <Skeleton className='h-4 w-full mb-2' />
+                      <Skeleton className='h-4 w-2/3' />
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             ) : isMarketError ? (
               <EmptyState
