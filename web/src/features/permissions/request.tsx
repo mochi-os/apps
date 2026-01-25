@@ -278,7 +278,7 @@ export function PermissionRequest() {
               <Button variant='outline' className='flex-1' onClick={handleDeny}>
                 Cancel
               </Button>
-              <Button className='flex-1' onClick={handleOpenSettings}>
+              <Button variant='outline' className='flex-1' onClick={handleOpenSettings}>
                 Open settings
               </Button>
             </>
