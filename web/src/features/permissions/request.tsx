@@ -11,6 +11,7 @@ import {
   Main,
   usePageTitle,
   toast,
+  Skeleton,
 } from '@mochi/common'
 import { Shield, ShieldAlert, Package } from 'lucide-react'
 import { useGrantPermission } from '@/hooks/usePermissions'
@@ -209,7 +210,24 @@ export function PermissionRequest() {
   if (isLoadingApps) {
     return (
       <Main className='flex items-center justify-center'>
-        <div className='text-muted-foreground'>Loading...</div>
+        <Card className='w-full max-w-md'>
+          <CardHeader className='text-center'>
+            <div className='mx-auto mb-4 flex h-16 w-16 items-center justify-center'>
+              <Skeleton className='h-16 w-16 rounded-full' />
+            </div>
+            <div className='flex items-center justify-center gap-2 mb-2'>
+              <Skeleton className='h-5 w-5 rounded-full' />
+              <Skeleton className='h-6 w-32' />
+            </div>
+            <Skeleton className='h-4 w-40 mx-auto mb-4' />
+            <Skeleton className='h-7 w-48 mx-auto' />
+            <Skeleton className='h-4 w-32 mx-auto mt-1' />
+          </CardHeader>
+          <CardFooter className='flex gap-3'>
+            <Skeleton className='h-10 flex-1' />
+            <Skeleton className='h-10 flex-1' />
+          </CardFooter>
+        </Card>
       </Main>
     )
   }
