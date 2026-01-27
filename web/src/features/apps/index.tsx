@@ -27,6 +27,7 @@ import {
   usePageTitle,
   toast,
   Skeleton,
+  DataChip,
 } from '@mochi/common'
 import { Package, ExternalLink, Download, RefreshCw, MoreVertical, Trash2 } from 'lucide-react'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
@@ -527,15 +528,24 @@ function InstalledAppCard({
     >
       <CardHeader>
         <CardTitle className='truncate text-lg'>{app.name}</CardTitle>
-        <p className='text-muted-foreground text-sm'>
-          {availableVersion && availableVersion !== app.latest
-            ? `${app.latest} (update to ${availableVersion} available)`
-            : app.latest}
-          {showTrack && (
-            <span className='ml-1 text-xs'>({app.user_track})</span>
+        <div className='flex flex-wrap items-center gap-2 mt-1.5'>
+          <DataChip value={app.latest ?? 'v1.0.0'} />
+          {availableVersion && availableVersion !== app.latest && (
+            <DataChip 
+              value={availableVersion} 
+              label="New version" 
+              className="bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200" 
+            />
           )}
-          {showId && <span className='truncate'> · {app.id}</span>}
-        </p>
+          {showTrack && app.user_track && (
+            <DataChip value={app.user_track} label="Track" />
+          )}
+          {showId && (
+            <span className='text-xs text-muted-foreground truncate font-mono opacity-60'>
+              {app.id}
+            </span>
+          )}
+        </div>
       </CardHeader>
     </Card>
   )
