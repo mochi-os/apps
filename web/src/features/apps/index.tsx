@@ -531,10 +531,9 @@ function InstalledAppCard({
         <div className='flex flex-wrap items-center gap-2 mt-1.5'>
           <DataChip value={app.latest ?? 'v1.0.0'} />
           {availableVersion && availableVersion !== app.latest && (
-            <DataChip 
-              value={availableVersion} 
-              label="New version" 
-              className="bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200" 
+            <DataChip
+              value={availableVersion}
+              label="Update"
             />
           )}
           {showTrack && app.user_track && (
