@@ -1,4 +1,4 @@
-import { Main, usePageTitle } from '@mochi/common'
+import { Main, usePageTitle, Skeleton, GeneralError } from '@mochi/common'
 import { RoutingTable, useRoutingData } from './routing-table'
 
 export function RoutingServices() {
@@ -8,8 +8,17 @@ export function RoutingServices() {
   if (isLoading) {
     return (
       <Main>
-        <div className='flex h-64 items-center justify-center'>
-          <div className='text-muted-foreground'>Loading...</div>
+        <div className='space-y-6'>
+          <div>
+            <Skeleton className='h-8 w-48' />
+            <Skeleton className='mt-1 h-4 w-96' />
+          </div>
+          <div className='space-y-2'>
+            <Skeleton className='h-12 w-full' />
+            <Skeleton className='h-12 w-full' />
+            <Skeleton className='h-12 w-full' />
+            <Skeleton className='h-12 w-full' />
+          </div>
         </div>
       </Main>
     )
@@ -18,9 +27,7 @@ export function RoutingServices() {
   if (error) {
     return (
       <Main>
-        <div className='flex h-64 items-center justify-center'>
-          <div className='text-red-500'>Error: {String(error)}</div>
-        </div>
+        <GeneralError error={error} minimal />
       </Main>
     )
   }

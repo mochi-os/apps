@@ -8,8 +8,11 @@ import {
   usePageTitle,
   toast,
   getErrorMessage,
+  Skeleton,
+  GeneralError,
+  EmptyState,
 } from '@mochi/common'
-import { AlertTriangle } from 'lucide-react'
+import { AlertTriangle, Settings } from 'lucide-react'
 import {
   useRoutingQuery,
   useSetUserRoutingMutation,
@@ -71,8 +74,22 @@ export function Routing() {
   if (isLoading) {
     return (
       <Main>
-        <div className='flex h-64 items-center justify-center'>
-          <div className='text-muted-foreground'>Loading routing configuration...</div>
+        <div className='space-y-8'>
+          <div>
+            <Skeleton className='h-8 w-48' />
+            <Skeleton className='mt-1 h-4 w-96' />
+          </div>
+          <div className='space-y-6'>
+            <div>
+              <Skeleton className='h-6 w-32' />
+              <Skeleton className='mt-1 h-4 w-64' />
+            </div>
+            <div className='space-y-2'>
+              <Skeleton className='h-12 w-full' />
+              <Skeleton className='h-12 w-full' />
+              <Skeleton className='h-12 w-full' />
+            </div>
+          </div>
         </div>
       </Main>
     )
@@ -81,9 +98,7 @@ export function Routing() {
   if (error) {
     return (
       <Main>
-        <div className='flex h-64 items-center justify-center'>
-          <div className='text-red-500'>Error: {String(error)}</div>
-        </div>
+        <GeneralError error={error} minimal />
       </Main>
     )
   }
@@ -109,9 +124,11 @@ export function Routing() {
         </div>
 
         {!hasData ? (
-          <div className='text-muted-foreground py-8 text-center'>
-            No routing configuration available.
-          </div>
+          <EmptyState
+            icon={Settings}
+            title="No routing configuration"
+            description="No apps have declared routing resources yet."
+          />
         ) : (
           <>
             {Object.keys(classes).length > 0 && (
