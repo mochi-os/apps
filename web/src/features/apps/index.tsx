@@ -29,7 +29,7 @@ import {
   Skeleton,
   DataChip,
 } from '@mochi/common'
-import { Package, ExternalLink, Download, RefreshCw, MoreVertical, Trash2 } from 'lucide-react'
+import { Package, ExternalLink, Download, RefreshCw, MoreHorizontal, Trash2 } from 'lucide-react'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
 import {
   useInstalledAppsQuery,
@@ -248,7 +248,7 @@ export function Apps() {
                     {upgradeMutation.isPending ? (
                       <RefreshCw className='h-4 w-4 animate-spin' />
                     ) : (
-                      <MoreVertical className='h-4 w-4' />
+                      <MoreHorizontal className='h-4 w-4' />
                     )}
                   </Button>
                 </DropdownMenuTrigger>
