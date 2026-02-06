@@ -3,7 +3,7 @@ import { useAuthStore, getCookie } from '@mochi/common'
 import { AppsLayout } from '@/components/layout/apps-layout'
 
 export const Route = createFileRoute('/_authenticated')({
-  beforeLoad: ({ location }) => {
+  beforeLoad: async ({ location }) => {
     const store = useAuthStore.getState()
 
     if (!store.isInitialized) {
@@ -23,6 +23,9 @@ export const Route = createFileRoute('/_authenticated')({
       window.location.href = redirectUrl
       return
     }
+
+    // Load identity
+    await store.loadIdentity()
 
     return
   },
