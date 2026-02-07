@@ -24,9 +24,6 @@ export const Route = createFileRoute('/_authenticated')({
       return
     }
 
-    // Load identity
-    await store.loadIdentity()
-
     return
   },
   component: AppsLayout,
