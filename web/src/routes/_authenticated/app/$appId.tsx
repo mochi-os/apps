@@ -92,6 +92,7 @@ function AppPage() {
       replace: true,
     })
   }
+  const goBackToApps = () => navigate({ to: '/' })
 
   // Find app in installed or development apps
   const app = appsData?.installed?.find((a) => a.id === appId) ||
@@ -105,6 +106,7 @@ function AppPage() {
         <PageHeader
           title={<Skeleton className='h-8 w-48' />}
           icon={<Skeleton className='size-4 md:size-5 rounded-md' />}
+          back={{ label: 'Back to apps', onFallback: goBackToApps }}
         />
         <Main className='pt-2 space-y-8'>
           <div className='flex items-center border-b'>
@@ -125,7 +127,7 @@ function AppPage() {
   if (!app) {
     return (
       <>
-        <PageHeader title="App not found" />
+        <PageHeader title="App not found" back={{ label: 'Back to apps', onFallback: goBackToApps }} />
         <Main>
           <EmptyState
             icon={Package}
@@ -142,6 +144,7 @@ function AppPage() {
       <PageHeader 
         title={app.name}
         icon={<Package className='size-4 md:size-5' />}
+        back={{ label: 'Back to apps', onFallback: goBackToApps }}
       />
       <Main className='pt-2 space-y-6'>
         <div className='flex items-center border-b'>
