@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
-import { createQueryClient, ThemeProvider, useAuthStore } from '@mochi/common'
+import { createQueryClient, ThemeProvider, useAuthStore, getRouterBasepath } from '@mochi/common'
 import { routeTree } from './routeTree.gen'
 import './styles/index.css'
 
@@ -12,16 +12,10 @@ const queryClient = createQueryClient()
 useAuthStore.getState().initialize()
 
 
-const getBasepath = () => {
-  const pathname = window.location.pathname
-  const match = pathname.match(/^(\/[^/]+)/)
-  return match ? match[1] + '/' : '/'
-}
-
 const router = createRouter({
   routeTree,
   context: { queryClient },
-  basepath: getBasepath(),
+  basepath: getRouterBasepath(),
   defaultPreload: 'intent',
   defaultPreloadStaleTime: 0,
 })
