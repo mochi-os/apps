@@ -195,12 +195,12 @@ function DetailsTab({ app }: { app: AppInfo }) {
     >
       <div className="divide-y-0">
         <FieldRow label="Application ID">
-          <DataChip value={app.id} />
+          <DataChip value={app.id} truncate='middle' />
         </FieldRow>
         
         {app.fingerprint && (
           <FieldRow label="Fingerprint">
-            <DataChip value={app.fingerprint} />
+            <DataChip value={app.fingerprint} truncate='middle' />
           </FieldRow>
         )}
 
