@@ -374,7 +374,7 @@ export function Apps() {
                 {marketApps?.map((app) => (
                   <Card
                     key={app.id}
-                    className='flex cursor-pointer flex-col transition-shadow hover:shadow-md'
+                    className='flex cursor-pointer flex-col transition-[background-color,border-color,box-shadow] hover:bg-surface-2 hover:border-border-strong hover:shadow-md'
                     onClick={() => handleMarketAppClick(app)}
                   >
                     <CardHeader className='pb-3'>
@@ -523,7 +523,7 @@ function InstalledAppCard({
 
   return (
     <Card
-      className='flex cursor-pointer flex-col transition-shadow hover:shadow-md'
+      className='flex cursor-pointer flex-col transition-[background-color,border-color,box-shadow] hover:bg-surface-2 hover:border-border-strong hover:shadow-md'
       onClick={onClick}
     >
       <CardHeader>
@@ -540,7 +540,7 @@ function InstalledAppCard({
             <DataChip value={app.user_track} label="Track" />
           )}
           {showId && (
-            <span className='text-xs text-muted-foreground truncate font-mono opacity-60'>
+            <span className='text-xs text-muted-foreground truncate font-mono opacity-80'>
               {app.id}
             </span>
           )}
