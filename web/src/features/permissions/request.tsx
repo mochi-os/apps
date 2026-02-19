@@ -12,6 +12,7 @@ import {
   usePageTitle,
   toast,
   Skeleton,
+  getErrorMessage,
 } from '@mochi/common'
 import { Shield, ShieldAlert, Package } from 'lucide-react'
 import { useGrantPermission } from '@/hooks/usePermissions'
@@ -174,8 +175,8 @@ export function PermissionRequest() {
           // Otherwise redirect back to the app
           window.location.href = returnUrl
         },
-        onError: () => {
-          toast.error('Failed to grant permission')
+        onError: (error) => {
+          toast.error(getErrorMessage(error, 'Failed to grant permission'))
         },
       }
     )
