@@ -3,9 +3,10 @@ import { RoutingTable, useRoutingData } from './routing-table'
 
 export function RoutingClasses() {
   usePageTitle('Class routing')
-  const { data, isLoading, error, handleUserChange, handleSystemChange } = useRoutingData()
+  const { data, isLoading, error, refetch, handleUserChange, handleSystemChange } =
+    useRoutingData()
 
-  if (isLoading) {
+  if (isLoading && !data) {
     return (
       <Main>
         <div className='space-y-6'>
@@ -24,14 +25,6 @@ export function RoutingClasses() {
     )
   }
 
-  if (error) {
-    return (
-      <Main>
-        <GeneralError error={error} minimal />
-      </Main>
-    )
-  }
-
   const classes = data?.classes ?? {}
   const isAdmin = data?.is_admin ?? false
 
@@ -44,13 +37,24 @@ export function RoutingClasses() {
             Configure which app handles entities of each type.
           </p>
         </div>
-        <RoutingTable
-          type='class'
-          resources={classes}
-          isAdmin={isAdmin}
-          onUserChange={handleUserChange}
-          onSystemChange={handleSystemChange}
-        />
+        {error ? (
+          <GeneralError
+            error={error}
+            minimal
+            mode='inline'
+            reset={refetch}
+            className='mb-6'
+          />
+        ) : null}
+        {error && !data ? null : (
+          <RoutingTable
+            type='class'
+            resources={classes}
+            isAdmin={isAdmin}
+            onUserChange={handleUserChange}
+            onSystemChange={handleSystemChange}
+          />
+        )}
       </div>
     </Main>
   )

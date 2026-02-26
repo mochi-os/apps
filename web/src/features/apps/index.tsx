@@ -28,6 +28,7 @@ import {
   toast,
   Skeleton,
   DataChip,
+  GeneralError,
 } from '@mochi/common'
 import { Package, ExternalLink, Download, RefreshCw, MoreHorizontal, Trash2 } from 'lucide-react'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
@@ -62,12 +63,14 @@ export function Apps() {
   const {
     data: appsData,
     isLoading: isLoadingInstalled,
+    error: installedError,
     refetch: refetchInstalled,
   } = useInstalledAppsQuery()
   const {
     data: marketApps,
     isLoading: isLoadingMarket,
-    isError: isMarketError,
+    error: marketError,
+    refetch: refetchMarket,
   } = useMarketAppsQuery()
   const { data: appInfo, isLoading: isLoadingInfo } =
     useAppInfoQuery(selectedAppId)
@@ -300,7 +303,16 @@ export function Apps() {
           <div className='mb-4 flex items-center gap-4'>
             <h2 className='text-xl font-semibold'>Installed apps</h2>
           </div>
-          {installedApps?.length === 0 ? (
+          {installedError ? (
+            <GeneralError
+              error={installedError}
+              minimal
+              mode='inline'
+              reset={refetchInstalled}
+              className='mb-4'
+            />
+          ) : null}
+          {installedError && !appsData ? null : installedApps?.length === 0 ? (
             <EmptyState
               icon={Package}
               title="No apps installed"
@@ -344,27 +356,30 @@ export function Apps() {
           <section>
             <h2 className='text-xl font-semibold'>Available, but not installed</h2>
             <p className='mb-4 ml-3 text-base text-muted-foreground' style={{ fontVariant: 'small-caps' }}>Recommended</p>
+            {marketError ? (
+              <GeneralError
+                error={marketError}
+                minimal
+                mode='inline'
+                reset={refetchMarket}
+                className='mb-4'
+              />
+            ) : null}
             {isLoadingMarket ? (
               <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
                 {Array.from({ length: 6 }).map((_, i) => (
-                  <Card key={i} className='flex flex-col h-[120px]'>
+                  <Card key={i} className='flex h-[120px] flex-col'>
                     <CardHeader className='pb-3'>
                       <Skeleton className='h-6 w-3/4' />
                     </CardHeader>
                     <CardContent>
-                      <Skeleton className='h-4 w-full mb-2' />
+                      <Skeleton className='mb-2 h-4 w-full' />
                       <Skeleton className='h-4 w-2/3' />
                     </CardContent>
                   </Card>
                 ))}
               </div>
-            ) : isMarketError ? (
-              <EmptyState
-                icon={Package}
-                title="Unavailable"
-                description="Unable to connect to the recommendations service"
-              />
-            ) : marketApps?.length === 0 ? (
+            ) : marketError && !marketApps ? null : marketApps?.length === 0 ? (
               <EmptyState
                 icon={Package}
                 title="No recommendations available"

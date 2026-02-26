@@ -29,6 +29,7 @@ import {
   Section,
   FieldRow,
   DataChip,
+  GeneralError,
 } from '@mochi/common'
 import { Loader2, Plus, Shield, ShieldAlert, X, Package } from 'lucide-react'
 import { useInstalledAppsQuery } from '@/hooks/useApps'
@@ -78,7 +79,12 @@ function AppPage() {
   const { tab } = Route.useSearch()
   const navigate = useNavigate()
   const activeTab = tab ?? 'details'
-  const { data: appsData, isLoading: isLoadingApps } = useInstalledAppsQuery()
+  const {
+    data: appsData,
+    isLoading: isLoadingApps,
+    error: appsError,
+    refetch: refetchApps,
+  } = useInstalledAppsQuery()
 
   // Prefetch versions and permissions data so tabs load instantly
   useAppVersions(appId)
@@ -100,7 +106,7 @@ function AppPage() {
 
   usePageTitle(app?.name ?? 'App')
 
-  if (isLoadingApps) {
+  if (isLoadingApps && !appsData) {
     return (
       <>
         <PageHeader
@@ -119,6 +125,17 @@ function AppPage() {
              </div>
           </div>
           <Skeleton className='h-64 w-full rounded-xl' />
+        </Main>
+      </>
+    )
+  }
+
+  if (appsError && !appsData) {
+    return (
+      <>
+        <PageHeader title='App' back={{ label: 'Back to apps', onFallback: goBackToApps }} />
+        <Main className='pt-2'>
+          <GeneralError error={appsError} minimal mode='inline' reset={refetchApps} />
         </Main>
       </>
     )
@@ -168,6 +185,15 @@ function AppPage() {
         </div>
 
         <div className='pt-2'>
+          {appsError ? (
+            <GeneralError
+              error={appsError}
+              minimal
+              mode='inline'
+              reset={refetchApps}
+              className='mb-4'
+            />
+          ) : null}
           {activeTab === 'details' && <DetailsTab app={app} />}
           {activeTab === 'versions' && <VersionsTab appId={appId} />}
           {activeTab === 'permissions' && <PermissionsTab appId={appId} appName={app.name} />}
@@ -243,7 +269,12 @@ function DetailsTab({ app }: { app: AppInfo }) {
 }
 
 function VersionsTab({ appId }: { appId: string }) {
-  const { data: versionData, isLoading: isLoadingVersions, isError } = useAppVersions(appId)
+  const {
+    data: versionData,
+    isLoading: isLoadingVersions,
+    error,
+    refetch,
+  } = useAppVersions(appId)
   const setUserVersion = useSetUserVersion()
   const setSystemVersion = useSetSystemVersion()
 
@@ -281,10 +312,9 @@ function VersionsTab({ appId }: { appId: string }) {
   })()
 
   const handleUserVersionChange = (value: string) => {
-    let { version, track } = parseVersionValue(value)
-    if (track && versionData?.tracks?.[track]) {
-      version = versionData.tracks[track]
-    }
+    const { version: parsedVersion, track } = parseVersionValue(value)
+    const version =
+      track && versionData?.tracks?.[track] ? versionData.tracks[track] : parsedVersion
     setUserVersion.mutate(
       { app: appId, version, track },
       {
@@ -299,10 +329,9 @@ function VersionsTab({ appId }: { appId: string }) {
   }
 
   const handleSystemVersionChange = (value: string) => {
-    let { version, track } = parseVersionValue(value)
-    if (track && versionData?.tracks?.[track]) {
-      version = versionData.tracks[track]
-    }
+    const { version: parsedVersion, track } = parseVersionValue(value)
+    const version =
+      track && versionData?.tracks?.[track] ? versionData.tracks[track] : parsedVersion
     setSystemVersion.mutate(
       { app: appId, version, track },
       {
@@ -316,7 +345,7 @@ function VersionsTab({ appId }: { appId: string }) {
     )
   }
 
-  if (isLoadingVersions) {
+  if (isLoadingVersions && !versionData) {
     return (
       <div className='space-y-6'>
         <Skeleton className='h-48 w-full rounded-xl' />
@@ -324,7 +353,15 @@ function VersionsTab({ appId }: { appId: string }) {
     )
   }
 
-  if (isError || !hasMultipleVersions && !hasTracks) {
+  if (error && !versionData) {
+    return (
+      <Section title='Version Management' description='Select which version of this app to use'>
+        <GeneralError error={error} minimal mode='inline' reset={refetch} />
+      </Section>
+    )
+  }
+
+  if (!hasMultipleVersions && !hasTracks) {
     return (
       <EmptyState
         icon={Package}
@@ -380,6 +417,9 @@ function VersionsTab({ appId }: { appId: string }) {
 
   return (
     <div className="space-y-6">
+      {error ? (
+        <GeneralError error={error} minimal mode='inline' reset={refetch} className='mb-4' />
+      ) : null}
       <Section 
         title="Version Management" 
         description="Select which version of this app to use"
@@ -422,7 +462,7 @@ function VersionsTab({ appId }: { appId: string }) {
 }
 
 function PermissionsTab({ appId, appName }: { appId: string; appName: string }) {
-  const { data, isLoading, error } = useAppPermissions(appId)
+  const { data, isLoading, error, refetch } = useAppPermissions(appId)
   const setPermission = useSetPermission()
   const [grantDialogOpen, setGrantDialogOpen] = useState(false)
   const [revokingPermission, setRevokingPermission] = useState<string | null>(null)
@@ -463,21 +503,13 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
     )
   }
 
-  if (error) {
+  if (isLoading && !data) {
     return (
-      <EmptyState
-        icon={ShieldAlert}
-        title="Failed to load permissions"
-        description="Make sure the Settings app is installed and you have sufficient permissions."
-      />
-    )
-  }
-
-  if (isLoading) {
-    return (
-      <div className='space-y-6'>
-        <Skeleton className='h-48 w-full rounded-xl' />
-      </div>
+      <Section title='Permissions' description='Loading permissions and access controls.'>
+        <div className='space-y-6'>
+          <Skeleton className='h-48 w-full rounded-xl' />
+        </div>
+      </Section>
     )
   }
 
@@ -489,14 +521,19 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
   const availablePermissions = allPermissions
     .filter((p) => !grantedSet.has(p.permission))
     .sort((a, b) => a.label.localeCompare(b.label))
+  const canManagePermissions = !error
 
   return (
-    <Section 
-      title="Permissions" 
-      description={grantedPermissions.length === 0
-        ? 'No permissions granted to this app'
-        : 'Manage capabilities granted to this application'}
-      action={availablePermissions.length > 0 && (
+    <Section
+      title='Permissions'
+      description={
+        error && !data
+          ? 'Make sure the Settings app is installed and you have sufficient permissions.'
+          : grantedPermissions.length === 0
+            ? 'No permissions granted to this app'
+            : 'Manage capabilities granted to this application'
+      }
+      action={canManagePermissions && availablePermissions.length > 0 && (
         <AlertDialog open={grantDialogOpen} onOpenChange={setGrantDialogOpen}>
           <AlertDialogTrigger asChild>
             <Button variant='outline' size='sm'>
@@ -542,28 +579,37 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
         </AlertDialog>
       )}
     >
-      <div className='divide-y-0 space-y-2'>
-        {grantedPermissions.length > 0 ? (
-          grantedPermissions.map((permission) => (
-            <PermissionRow
-              key={permission.permission}
-              permission={permission}
-              onRevoke={handleRevoke}
-              isRevoking={revokingPermission === permission.permission}
-              appName={appName}
-              canRevoke={!(appId === 'apps' && permission.permission === 'permission/manage')}
-            />
-          ))
-        ) : (
-          <div className="py-8">
-            <EmptyState
-              icon={Shield}
-              title="No permissions granted"
-              description="Grant permissions to allow this app to access system features"
-            />
-          </div>
-        )}
-      </div>
+      {error ? (
+        <GeneralError error={error} minimal mode='inline' reset={refetch} className='mb-4' />
+      ) : null}
+
+      {error && !data ? null : (
+        <div className='divide-y-0 space-y-2'>
+          {grantedPermissions.length > 0 ? (
+            grantedPermissions.map((permission) => (
+              <PermissionRow
+                key={permission.permission}
+                permission={permission}
+                onRevoke={handleRevoke}
+                isRevoking={revokingPermission === permission.permission}
+                appName={appName}
+                canRevoke={
+                  canManagePermissions &&
+                  !(appId === 'apps' && permission.permission === 'permission/manage')
+                }
+              />
+            ))
+          ) : (
+            <div className='py-8'>
+              <EmptyState
+                icon={Shield}
+                title='No permissions granted'
+                description='Grant permissions to allow this app to access system features'
+              />
+            </div>
+          )}
+        </div>
+      )}
     </Section>
   )
 }

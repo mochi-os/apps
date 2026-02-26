@@ -39,7 +39,7 @@ function sortApps(apps: RoutingApp[]): RoutingApp[] {
 }
 
 export function useRoutingData() {
-  const { data, isLoading, error } = useRoutingQuery()
+  const { data, isLoading, error, refetch } = useRoutingQuery()
   const setUserRouting = useSetUserRoutingMutation()
   const setSystemRouting = useSetSystemRoutingMutation()
 
@@ -83,6 +83,7 @@ export function useRoutingData() {
     data,
     isLoading,
     error,
+    refetch,
     handleUserChange,
     handleSystemChange,
   }
