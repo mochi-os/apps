@@ -3,9 +3,10 @@ import { RoutingTable, useRoutingData } from './routing-table'
 
 export function RoutingPaths() {
   usePageTitle('Path routing')
-  const { data, isLoading, error, handleUserChange, handleSystemChange } = useRoutingData()
+  const { data, isLoading, error, refetch, handleUserChange, handleSystemChange } =
+    useRoutingData()
 
-  if (isLoading) {
+  if (isLoading && !data) {
     return (
       <Main>
         <div className='space-y-6'>
@@ -24,14 +25,6 @@ export function RoutingPaths() {
     )
   }
 
-  if (error) {
-    return (
-      <Main>
-        <GeneralError error={error} minimal />
-      </Main>
-    )
-  }
-
   const paths = data?.paths ?? {}
   const isAdmin = data?.is_admin ?? false
 
@@ -44,13 +37,24 @@ export function RoutingPaths() {
             Configure which app handles each URL path.
           </p>
         </div>
-        <RoutingTable
-          type='path'
-          resources={paths}
-          isAdmin={isAdmin}
-          onUserChange={handleUserChange}
-          onSystemChange={handleSystemChange}
-        />
+        {error ? (
+          <GeneralError
+            error={error}
+            minimal
+            mode='inline'
+            reset={refetch}
+            className='mb-6'
+          />
+        ) : null}
+        {error && !data ? null : (
+          <RoutingTable
+            type='path'
+            resources={paths}
+            isAdmin={isAdmin}
+            onUserChange={handleUserChange}
+            onSystemChange={handleSystemChange}
+          />
+        )}
       </div>
     </Main>
   )

@@ -31,7 +31,7 @@ function formatAppName(app: RoutingApp): string {
 
 export function Routing() {
   usePageTitle('App Routing')
-  const { data, isLoading, error } = useRoutingQuery()
+  const { data, isLoading, error, refetch } = useRoutingQuery()
   const setUserRouting = useSetUserRoutingMutation()
   const setSystemRouting = useSetSystemRoutingMutation()
 
@@ -71,7 +71,7 @@ export function Routing() {
     )
   }
 
-  if (isLoading) {
+  if (isLoading && !data) {
     return (
       <Main>
         <div className='space-y-8'>
@@ -95,14 +95,6 @@ export function Routing() {
     )
   }
 
-  if (error) {
-    return (
-      <Main>
-        <GeneralError error={error} minimal />
-      </Main>
-    )
-  }
-
   const classes = data?.classes ?? {}
   const services = data?.services ?? {}
   const paths = data?.paths ?? {}
@@ -122,8 +114,17 @@ export function Routing() {
             Configure which app handles each class, service, and path.
           </p>
         </div>
+        {error ? (
+          <GeneralError
+            error={error}
+            minimal
+            mode='inline'
+            reset={refetch}
+            className='mb-6'
+          />
+        ) : null}
 
-        {!hasData ? (
+        {error && !data ? null : !hasData ? (
           <EmptyState
             icon={Settings}
             title="No routing configuration"
