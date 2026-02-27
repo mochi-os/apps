@@ -131,6 +131,8 @@ def action_install_publisher(a):
 		return {"status": 400, "error": "Version is required", "data": {}}
 	if not mochi.valid(version, "version"):
 		return {"status": 400, "error": "Invalid version format", "data": {}}
+	if peer and len(peer) > 51:
+		return {"status": 400, "error": "Invalid peer ID", "data": {}}
 
 	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
 	s = mochi.remote.stream(id, "publisher", "get", {"version": version}, peer)
@@ -540,6 +542,15 @@ def action_user_apps_version_set(a):
 	if not app_id:
 		a.error(400, "Missing app parameter")
 		return
+	if len(app_id) > 51:
+		a.error(400, "Invalid app ID")
+		return
+	if version and not mochi.valid(version, "version"):
+		a.error(400, "Invalid version format")
+		return
+	if len(track) > 50:
+		a.error(400, "Invalid track")
+		return
 
 	# If a version is specified (either directly or via track), download it if needed
 	if version and is_entity_id(app_id):
@@ -558,8 +569,14 @@ def action_version_download(a):
 	if not app_id:
 		a.error(400, "Missing app parameter")
 		return
+	if len(app_id) > 51:
+		a.error(400, "Invalid app ID")
+		return
 	if not version:
 		a.error(400, "Missing version parameter")
+		return
+	if not mochi.valid(version, "version"):
+		a.error(400, "Invalid version format")
 		return
 
 	# Check if user can install apps
@@ -578,6 +595,12 @@ def action_user_apps_routing_set(a):
 
 	if not routing_type or not name:
 		a.error(400, "Missing type or name parameter")
+		return
+	if len(name) > 200:
+		a.error(400, "Invalid name")
+		return
+	if app_id and len(app_id) > 51:
+		a.error(400, "Invalid app ID")
 		return
 
 	if routing_type == "class":
@@ -665,6 +688,15 @@ def action_system_apps_version_set(a):
 	if not app_id:
 		a.error(400, "Missing app parameter")
 		return
+	if len(app_id) > 51:
+		a.error(400, "Invalid app ID")
+		return
+	if version and not mochi.valid(version, "version"):
+		a.error(400, "Invalid version format")
+		return
+	if len(track) > 50:
+		a.error(400, "Invalid track")
+		return
 
 	# If a version is specified (either directly or via track), download it if needed
 	if version and is_entity_id(app_id):
@@ -686,6 +718,15 @@ def action_system_apps_track_set(a):
 
 	if not app_id or not track or not version:
 		a.error(400, "Missing app, track, or version parameter")
+		return
+	if len(app_id) > 51:
+		a.error(400, "Invalid app ID")
+		return
+	if len(track) > 50:
+		a.error(400, "Invalid track")
+		return
+	if not mochi.valid(version, "version"):
+		a.error(400, "Invalid version format")
 		return
 
 	mochi.app.track.set(app_id, track, version)
@@ -722,6 +763,12 @@ def action_system_apps_routing_set(a):
 	if not routing_type or not name:
 		a.error(400, "Missing type or name parameter")
 		return
+	if len(name) > 200:
+		a.error(400, "Invalid name")
+		return
+	if app_id and len(app_id) > 51:
+		a.error(400, "Invalid app ID")
+		return
 
 	if routing_type == "class":
 		if app_id:
@@ -752,6 +799,9 @@ def action_permissions_list(a):
 	if not app_id:
 		a.error(400, "Missing app parameter")
 		return
+	if len(app_id) > 51:
+		a.error(400, "Invalid app ID")
+		return
 
 	perms = mochi.permission.list(app_id)
 	a.json({"permissions": perms})
@@ -778,8 +828,14 @@ def action_permissions_grant(a):
 	if not app_id:
 		a.error(400, "Missing app parameter")
 		return
+	if len(app_id) > 51:
+		a.error(400, "Invalid app ID")
+		return
 	if not permission:
 		a.error(400, "Missing permission parameter")
+		return
+	if len(permission) > 100:
+		a.error(400, "Invalid permission")
 		return
 
 	# Verify app exists
@@ -811,8 +867,14 @@ def action_permissions_revoke(a):
 	if not app_id:
 		a.error(400, "Missing app parameter")
 		return
+	if len(app_id) > 51:
+		a.error(400, "Invalid app ID")
+		return
 	if not permission:
 		a.error(400, "Missing permission parameter")
+		return
+	if len(permission) > 100:
+		a.error(400, "Invalid permission")
 		return
 
 	mochi.permission.revoke(app_id, permission)
@@ -827,8 +889,14 @@ def action_permissions_set(a):
 	if not app_id:
 		a.error(400, "Missing app parameter")
 		return
+	if len(app_id) > 51:
+		a.error(400, "Invalid app ID")
+		return
 	if not permission:
 		a.error(400, "Missing permission parameter")
+		return
+	if len(permission) > 100:
+		a.error(400, "Invalid permission")
 		return
 
 	# Verify app exists
