@@ -30,19 +30,6 @@ export function useGrantPermission() {
   })
 }
 
-export function useRevokePermission() {
-  const queryClient = useQueryClient()
-  return useMutation({
-    mutationFn: async (data: { app: string; permission: string }) => {
-      const response = await apiClient.post(endpoints.permissions.revoke, data)
-      return response.data
-    },
-    onSuccess: (_, variables) => {
-      queryClient.invalidateQueries({ queryKey: ['app-permissions', variables.app] })
-    },
-  })
-}
-
 export function useSetPermission() {
   const queryClient = useQueryClient()
   return useMutation({

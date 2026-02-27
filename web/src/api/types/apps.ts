@@ -29,42 +29,6 @@ export interface Track {
   version: string
 }
 
-export interface InstalledAppsResponse {
-  data: {
-    installed: InstalledApp[]
-    development: InstalledApp[]
-    can_install: boolean
-  }
-}
-
-export interface InstalledAppResponse {
-  data: {
-    app: InstalledApp
-  }
-}
-
-export interface MarketAppsResponse {
-  data: {
-    apps: MarketApp[]
-  }
-}
-
-export interface AppInfoResponse {
-  data: {
-    app: AppInfo
-    fingerprint: string
-    tracks: Track[]
-  }
-}
-
-export interface InstallResponse {
-  data: {
-    installed: boolean
-    id: string
-    version: string
-  }
-}
-
 export interface Permission {
   permission: string
   granted: boolean

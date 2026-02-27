@@ -2,11 +2,6 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { apiClient } from '@mochi/common'
 import endpoints from '@/api/endpoints'
 
-interface AvailableResponse {
-  available: boolean
-  version: string
-}
-
 interface VersionPref {
   version: string
   track: string
@@ -20,17 +15,6 @@ interface AppVersionsResponse {
   system: VersionPref | null
   is_admin: boolean
   track_warning: string
-}
-
-export function useMultiVersionAvailable() {
-  return useQuery({
-    queryKey: ['multiversion-available'],
-    queryFn: async () => {
-      const response = await apiClient.get<{ data: AvailableResponse }>(endpoints.available)
-      return response.data.data
-    },
-    staleTime: Infinity,
-  })
 }
 
 export function useAppVersions(appId: string | null) {

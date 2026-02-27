@@ -5,27 +5,6 @@
 def is_entity_id(id):
 	return len(id) >= 50 and len(id) <= 51
 
-# Check if version v >= target. Handles both 0.3.0 and 1.0 formats.
-def version_gte(v, target):
-	v_parts = []
-	for p in v.split("."):
-		v_parts.append(int(p))
-	t_parts = []
-	for p in target.split("."):
-		t_parts.append(int(p))
-	# Pad shorter list with zeros for comparison
-	while len(v_parts) < len(t_parts):
-		v_parts.append(0)
-	while len(t_parts) < len(v_parts):
-		t_parts.append(0)
-	# Compare element by element
-	for i in range(len(v_parts)):
-		if v_parts[i] > t_parts[i]:
-			return True
-		if v_parts[i] < t_parts[i]:
-			return False
-	return True  # Equal
-
 # List installed apps (only Starlark apps)
 def action_list(a):
 	all_apps = mochi.app.list()
@@ -415,7 +394,6 @@ def action_upgrade(a):
 
 # Check if multi-version apps feature is available
 def action_available(a):
-	# TODO: restore version check once mochi.server.version() issue is resolved
 	return {"data": {"available": True, "version": "0.3"}}
 
 def action_routing(a):

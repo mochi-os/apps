@@ -324,7 +324,7 @@ function VersionsTab({ appId }: { appId: string }) {
     )
   }
 
-  if (isError || !hasMultipleVersions && !hasTracks) {
+  if (isError || (!hasMultipleVersions && !hasTracks)) {
     return (
       <EmptyState
         icon={Package}
