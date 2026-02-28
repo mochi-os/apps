@@ -252,21 +252,28 @@ function VersionsTab({ appId }: { appId: string }) {
   const isAdmin = versionData?.is_admin ?? false
   const defaultTrack = versionData?.default_track ?? ''
 
-  // Determine current user selection
-  const userPref = versionData?.user
-  const userValue = userPref?.track
-    ? `track:${userPref.track}`
-    : userPref?.version
-      ? `version:${userPref.version}`
-      : 'default'
+  // Resolve a version preference to a dropdown value, ensuring it matches an available option
+  const resolveValue = (pref: { version: string; track: string } | null | undefined) => {
+    if (!pref) return 'default'
+    if (pref.track) {
+      if (versionData?.tracks?.[pref.track] !== undefined) return `track:${pref.track}`
+      return 'default'
+    }
+    if (pref.version) {
+      if (hasMultipleVersions && versionData?.versions?.includes(pref.version)) return `version:${pref.version}`
+      // Version set without a track — check if it matches a track's current version
+      const tracks = versionData?.tracks ?? {}
+      for (const [track, ver] of Object.entries(tracks)) {
+        if (ver === pref.version) return `track:${track}`
+      }
+      return 'default'
+    }
+    return 'default'
+  }
 
-  // Determine current system selection (admin only)
+  const userValue = resolveValue(versionData?.user)
   const systemPref = versionData?.system
-  const systemValue = systemPref?.track
-    ? `track:${systemPref.track}`
-    : systemPref?.version
-      ? `version:${systemPref.version}`
-      : 'default'
+  const systemValue = resolveValue(systemPref)
 
   // Compute the effective "default" version for display
   const effectiveDefaultVersion = (() => {
