@@ -262,7 +262,9 @@ function VersionsTab({ appId }: { appId: string }) {
     if (pref.version) {
       if (hasMultipleVersions && versionData?.versions?.includes(pref.version)) return `version:${pref.version}`
       // Version set without a track — check if it matches a track's current version
+      // Prefer the publisher's default track when multiple tracks share the same version
       const tracks = versionData?.tracks ?? {}
+      if (defaultTrack && tracks[defaultTrack] === pref.version) return `track:${defaultTrack}`
       for (const [track, ver] of Object.entries(tracks)) {
         if (ver === pref.version) return `track:${track}`
       }
