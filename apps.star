@@ -1,5 +1,5 @@
 # Mochi Apps app
-# Copyright Alistair Cunningham 2025
+# Copyright Alistair Cunningham 2025-2026
 
 # Check if an ID looks like an entity ID (50-51 chars)
 def is_entity_id(id):
