@@ -5,7 +5,7 @@ const appKeys = {
   all: () => ['apps'] as const,
   installed: () => ['apps', 'installed'] as const,
   market: () => ['apps', 'market'] as const,
-  info: (id: string) => ['apps', 'info', id] as const,
+  info: (id: string, url?: string) => ['apps', 'info', id, url ?? ''] as const,
   updates: () => ['apps', 'updates'] as const,
   routing: () => ['apps', 'routing'] as const,
 }
@@ -25,7 +25,7 @@ export const useMarketAppsQuery = () =>
 
 export const useAppInfoQuery = (id: string | null, url?: string) =>
   useQuery({
-    queryKey: appKeys.info(id ?? ''),
+    queryKey: appKeys.info(id ?? '', url),
     queryFn: () => appsApi.getInfo(id!, url),
     enabled: !!id,
   })
