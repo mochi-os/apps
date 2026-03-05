@@ -290,7 +290,9 @@ function VersionsTab({ appId }: { appId: string }) {
   })()
 
   const handleUserVersionChange = (value: string) => {
-    let { version, track } = parseVersionValue(value)
+    const parsed = parseVersionValue(value)
+    const { track } = parsed
+    let { version } = parsed
     if (track && versionData?.tracks?.[track]) {
       version = versionData.tracks[track]
     }
@@ -308,7 +310,9 @@ function VersionsTab({ appId }: { appId: string }) {
   }
 
   const handleSystemVersionChange = (value: string) => {
-    let { version, track } = parseVersionValue(value)
+    const parsed = parseVersionValue(value)
+    const { track } = parsed
+    let { version } = parsed
     if (track && versionData?.tracks?.[track]) {
       version = versionData.tracks[track]
     }

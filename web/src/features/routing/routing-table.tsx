@@ -4,15 +4,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-  toast,
-  getErrorMessage,
 } from '@mochi/common'
 import { AlertTriangle } from 'lucide-react'
-import {
-  useRoutingQuery,
-  useSetUserRoutingMutation,
-  useSetSystemRoutingMutation,
-} from '@/hooks/useApps'
 import type { RoutingResource, RoutingApp } from '@/api/apps'
 
 // Development apps have short IDs, installed apps have entity IDs (50-51 chars)
@@ -36,56 +29,6 @@ function sortApps(apps: RoutingApp[]): RoutingApp[] {
     const bIsDev = isDevelopmentApp(b.id)
     return aIsDev === bIsDev ? 0 : aIsDev ? 1 : -1
   })
-}
-
-export function useRoutingData() {
-  const { data, isLoading, error } = useRoutingQuery()
-  const setUserRouting = useSetUserRoutingMutation()
-  const setSystemRouting = useSetSystemRoutingMutation()
-
-  const handleUserChange = (
-    type: 'class' | 'service' | 'path',
-    name: string,
-    appId: string
-  ) => {
-    setUserRouting.mutate(
-      { type, name, app: appId },
-      {
-        onSuccess: () => {
-          toast.success('Preference updated')
-        },
-        onError: (error) => {
-          toast.error(getErrorMessage(error, 'Failed to update preference'))
-        },
-      }
-    )
-  }
-
-  const handleSystemChange = (
-    type: 'class' | 'service' | 'path',
-    name: string,
-    appId: string
-  ) => {
-    setSystemRouting.mutate(
-      { type, name, app: appId },
-      {
-        onSuccess: () => {
-          toast.success('System default updated')
-        },
-        onError: (error) => {
-          toast.error(getErrorMessage(error, 'Failed to update system default'))
-        },
-      }
-    )
-  }
-
-  return {
-    data,
-    isLoading,
-    error,
-    handleUserChange,
-    handleSystemChange,
-  }
 }
 
 export function RoutingTable({

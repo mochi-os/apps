@@ -1,5 +1,6 @@
 import { Main, usePageTitle, Skeleton, GeneralError } from '@mochi/common'
-import { RoutingTable, useRoutingData } from './routing-table'
+import { RoutingTable } from './routing-table'
+import { useRoutingData } from './use-routing-data'
 
 export function RoutingClasses() {
   usePageTitle('Class routing')
