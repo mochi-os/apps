@@ -244,7 +244,12 @@ export function Apps() {
               />
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant='ghost' size='icon'>
+                  <Button
+                    variant='ghost'
+                    size='icon'
+                    aria-label='App actions'
+                    title='App actions'
+                  >
                     {upgradeMutation.isPending ? (
                       <RefreshCw className='h-4 w-4 animate-spin' />
                     ) : (
