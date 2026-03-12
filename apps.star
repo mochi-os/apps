@@ -806,59 +806,6 @@ def action_permissions_list(a):
 	perms = mochi.permission.list(app_id)
 	a.json({"permissions": perms})
 
-def action_permissions_grant(a):
-	"""Grant a permission to an app"""
-	# Security: Only allow requests from the permission request page
-	# Referer format: "http://host/path" - verify path is exactly /apps/permissions/request
-	referer = a.header("Referer")
-	valid = False
-	if "://" in referer:
-		after_scheme = referer.split("://", 1)[1]  # "host/path?query"
-		if "/" in after_scheme:
-			path = "/" + after_scheme.split("/", 1)[1]  # "/apps/permissions/request?..."
-			# Must be exact path or path with query string (not /apps/permissions/requestevil)
-			valid = path == "/apps/permissions/request" or path.startswith("/apps/permissions/request?")
-	if not valid:
-		a.error(403, "Invalid request origin")
-		return
-
-	app_id = a.input("app")
-	permission = a.input("permission")
-
-	if not app_id:
-		a.error(400, "Missing app parameter")
-		return
-	if len(app_id) > 51:
-		a.error(400, "Invalid app ID")
-		return
-	if not permission:
-		a.error(400, "Missing permission parameter")
-		return
-	if len(permission) > 100:
-		a.error(400, "Invalid permission")
-		return
-
-	# Verify app exists
-	if not mochi.app.get(app_id):
-		a.error(404, "App not found")
-		return
-
-	# Restricted permissions cannot be granted through this endpoint
-	# They must be enabled manually in app settings
-	restricted = [
-		"url:*",
-		"user/read",
-		"setting/write",
-		"permission/manage",
-		"webpush/send",
-	]
-	if permission in restricted:
-		a.error(403, "Restricted permission must be enabled in app settings")
-		return
-
-	mochi.permission.grant(app_id, permission)
-	a.json({"status": "granted", "permission": permission})
-
 def action_permissions_revoke(a):
 	"""Revoke a permission from an app"""
 	app_id = a.input("app")

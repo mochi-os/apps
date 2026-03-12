@@ -2,14 +2,17 @@ import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
-import { createQueryClient, ThemeProvider, useAuthStore, getRouterBasepath } from '@mochi/common'
+import { createQueryClient, ThemeProvider, useAuthStore, isInShell, getRouterBasepath } from '@mochi/common'
 import { routeTree } from './routeTree.gen'
 import './styles/index.css'
 
 const queryClient = createQueryClient()
 
 // Initialize auth state from cookie on app start
-useAuthStore.getState().initialize()
+// In shell mode, auth is initialized asynchronously via postMessage in _authenticated/route.tsx
+if (!isInShell()) {
+  useAuthStore.getState().initialize()
+}
 
 
 const router = createRouter({

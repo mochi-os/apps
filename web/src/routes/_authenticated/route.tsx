@@ -1,30 +1,13 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { useAuthStore, getCookie } from '@mochi/common'
+import { useAuthStore } from '@mochi/common'
 import { AppsLayout } from '@/components/layout/apps-layout'
 
 export const Route = createFileRoute('/_authenticated')({
-  beforeLoad: async ({ location }) => {
+  beforeLoad: async () => {
     const store = useAuthStore.getState()
-
     if (!store.isInitialized) {
-      store.initialize()
+      await store.initialize()
     }
-
-    const token = getCookie('token') || store.token
-
-    if (!token) {
-      const returnUrl = encodeURIComponent(
-        location.href ||
-          window.location.pathname +
-            window.location.search +
-            window.location.hash
-      )
-      const redirectUrl = `${import.meta.env.VITE_AUTH_LOGIN_URL}?redirect=${returnUrl}`
-      window.location.href = redirectUrl
-      return
-    }
-
-    return
   },
   component: AppsLayout,
 })

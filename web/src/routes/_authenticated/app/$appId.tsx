@@ -58,7 +58,14 @@ export const Route = createFileRoute('/_authenticated/app/$appId')({
 
 // All available permissions
 const allPermissions = [
+  { permission: 'account/read', restricted: false, label: 'Read connected accounts' },
+  { permission: 'account/manage', restricted: false, label: 'Manage connected accounts' },
+  { permission: 'account/ai', restricted: true, label: 'Use AI services' },
+  { permission: 'account/mcp', restricted: true, label: 'Use MCP services' },
+  { permission: 'account/notify', restricted: true, label: 'Send account notifications' },
   { permission: 'group/manage', restricted: false, label: 'Manage groups' },
+  { permission: 'interests/read', restricted: false, label: 'Read interests' },
+  { permission: 'interests/write', restricted: false, label: 'Write interests' },
   { permission: 'user/read', restricted: true, label: 'Read user data' },
   { permission: 'setting/write', restricted: true, label: 'Modify system settings' },
   { permission: 'permission/manage', restricted: true, label: 'Manage permissions' },
@@ -66,6 +73,9 @@ const allPermissions = [
 ]
 
 function formatPermission(permission: string): string {
+  if (permission.startsWith('service/')) {
+    return `Handle ${permission.slice(8)} service`
+  }
   if (permission.startsWith('url:')) {
     return `Access ${permission.slice(4)}`
   }
@@ -604,7 +614,6 @@ function PermissionRow({
         )}
         <div>
           <p className="font-medium">{formatPermission(permission.permission)}</p>
-          <p className="text-xs text-muted-foreground font-mono">{permission.permission}</p>
         </div>
       </div>
       {canRevoke && (
