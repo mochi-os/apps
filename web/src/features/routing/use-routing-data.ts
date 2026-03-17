@@ -1,4 +1,4 @@
-import { toast, getErrorMessage } from '@mochi/common'
+import { toast, getErrorMessage } from '@mochi/web'
 import {
   useRoutingQuery,
   useSetUserRoutingMutation,

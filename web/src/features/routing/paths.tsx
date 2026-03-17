@@ -1,4 +1,4 @@
-import { Main, usePageTitle, Skeleton, GeneralError } from '@mochi/common'
+import { Main, usePageTitle, Skeleton, GeneralError } from '@mochi/web'
 import { RoutingTable } from './routing-table'
 import { useRoutingData } from './use-routing-data'
 

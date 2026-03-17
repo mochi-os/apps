@@ -7,7 +7,7 @@ import {
   DialogTitle,
   Button,
   Skeleton,
-} from '@mochi/common'
+} from '@mochi/web'
 import { Download, AlertTriangle } from 'lucide-react'
 import type { AppInfo, Track } from '@/api/types/apps'
 
