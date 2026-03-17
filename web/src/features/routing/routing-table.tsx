@@ -4,7 +4,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@mochi/common'
+} from '@mochi/web'
 import { AlertTriangle } from 'lucide-react'
 import type { RoutingResource, RoutingApp } from '@/api/apps'
 

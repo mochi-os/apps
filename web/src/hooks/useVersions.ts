@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { apiClient } from '@mochi/common'
+import { apiClient } from '@mochi/web'
 import endpoints from '@/api/endpoints'
 
 interface VersionPref {

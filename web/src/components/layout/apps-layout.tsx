@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { AuthenticatedLayout, type SidebarData } from '@mochi/common'
+import { AuthenticatedLayout, type SidebarData } from '@mochi/web'
 import { Package, Boxes, Plug, FolderTree } from 'lucide-react'
 
 export function AppsLayout() {

@@ -29,7 +29,7 @@ import {
   Section,
   FieldRow,
   DataChip,
-} from '@mochi/common'
+} from '@mochi/web'
 import { Loader2, Plus, Shield, ShieldAlert, X, Package } from 'lucide-react'
 import { useInstalledAppsQuery } from '@/hooks/useApps'
 import {

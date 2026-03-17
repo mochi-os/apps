@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import type { AppPermissions } from '@/api/types/apps'
 import endpoints from '@/api/endpoints'
-import { apiClient } from '@mochi/common'
+import { apiClient } from '@mochi/web'
 
 export function useAppPermissions(appId: string | null) {
   return useQuery({

@@ -6,7 +6,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from '@mochi/common'
+} from '@mochi/web'
 import type { MarketApp, AppInfo, Track } from '@/api/types/apps'
 
 interface InstallDialogProps {

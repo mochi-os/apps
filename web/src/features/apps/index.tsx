@@ -28,7 +28,7 @@ import {
   toast,
   Skeleton,
   DataChip,
-} from '@mochi/common'
+} from '@mochi/web'
 import { Package, ExternalLink, Download, RefreshCw, MoreHorizontal, Trash2 } from 'lucide-react'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
 import {
@@ -286,7 +286,6 @@ export function Apps() {
                       <DropdownMenuItem
                         onClick={handleCleanup}
                         disabled={cleanupMutation.isPending}
-                        className='text-destructive focus:text-destructive'
                       >
                         <Trash2 className='mr-2 h-4 w-4' />
                         {cleanupMutation.isPending ? 'Cleaning up...' : 'Clean up unused versions'}
@@ -460,7 +459,7 @@ export function Apps() {
                   htmlFor='allow-discovery'
                   className='text-sm font-medium'
                 >
-                  Allow other instances to discover this app
+                  Add to directory
                 </Label>
                 <Switch
                   id='allow-discovery'
