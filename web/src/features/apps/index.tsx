@@ -528,8 +528,11 @@ function InstalledAppCard({
 
   return (
     <Card
+      role='button'
+      tabIndex={0}
       className='flex cursor-pointer flex-col transition-[background-color,border-color,box-shadow] hover:bg-surface-2 hover:border-border-strong hover:shadow-md'
       onClick={onClick}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(); } }}
     >
       <CardHeader>
         <CardTitle className='truncate text-lg'>{app.name}</CardTitle>
