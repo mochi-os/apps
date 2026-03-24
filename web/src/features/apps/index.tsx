@@ -48,6 +48,7 @@ import { InstallDialog } from './components/install-dialog'
 export function Apps() {
   usePageTitle('Apps')
   const navigate = useNavigate()
+  const [searchQuery, setSearchQuery] = useState('')
   const [selectedMarketApp, setSelectedMarketApp] = useState<MarketApp | null>(
     null
   )
@@ -80,6 +81,13 @@ export function Apps() {
 
   const installedApps = appsData?.installed
   const developmentApps = appsData?.development
+
+  const filteredInstalledApps = installedApps?.filter((app) =>
+    app.name.toLowerCase().includes(searchQuery.toLowerCase())
+  )
+  const filteredDevelopmentApps = developmentApps?.filter((app) =>
+    app.name.toLowerCase().includes(searchQuery.toLowerCase())
+  )
 
   // Compare versions: returns true if a > b
   const isNewerVersion = (a: string, b: string | null): boolean => {
@@ -146,18 +154,21 @@ export function Apps() {
   const handleUpdateAll = async () => {
     if (!availableUpdates?.length) return
 
-    for (const update of availableUpdates) {
-      try {
-        await upgradeMutation.mutateAsync({
-          id: update.id,
-          version: update.available,
-        })
-      } catch {
-        // Error already handled by api-client interceptor
-      }
+    const results = await Promise.allSettled(
+      availableUpdates.map((update) =>
+        upgradeMutation.mutateAsync({ id: update.id, version: update.available })
+      )
+    )
+
+    const failed = results.filter((r) => r.status === 'rejected').length
+    if (failed === 0) {
+      toast.success('All apps updated')
+    } else if (failed === results.length) {
+      toast.error('Update failed', { description: 'No apps could be updated.' })
+    } else {
+      toast.warning(`${results.length - failed} updated, ${failed} failed`)
     }
-    toast.success('All apps updated')
-    // Refetch to update UI immediately
+
     refetchInstalled()
     refetchUpdates()
   }
@@ -202,14 +213,93 @@ export function Apps() {
     )
   }
 
-  if (isLoadingInstalled && !appsData) {
-    return (
-      <>
-        <Main>
-          <section className='mb-8'>
-            <div className='mb-4 flex items-center gap-4'>
-              <h2 className='text-xl font-semibold'>Installed apps</h2>
-            </div>
+  return (
+    <>
+      <PageHeader
+        title='Apps'
+        icon={<Package className='size-4 md:size-5' />}
+        actions={
+          <div className='flex items-center gap-2'>
+            <Input
+              placeholder='Search apps…'
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className='h-8 w-40 text-sm sm:w-56'
+            />
+            {(appsData?.can_install ||
+              (availableUpdates && availableUpdates.length > 0)) && (
+              <>
+                <input
+                  type='file'
+                  ref={fileInputRef}
+                  onChange={handleFileSelect}
+                  accept='.zip'
+                  className='hidden'
+                />
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button
+                      variant='ghost'
+                      size='icon'
+                      aria-label='App actions'
+                      title='App actions'
+                    >
+                      {upgradeMutation.isPending ? (
+                        <RefreshCw className='h-4 w-4 animate-spin' />
+                      ) : (
+                        <MoreHorizontal className='h-4 w-4' />
+                      )}
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align='end'>
+                    {availableUpdates && availableUpdates.length > 0 && (
+                      <DropdownMenuItem
+                        onClick={handleUpdateAll}
+                        disabled={upgradeMutation.isPending}
+                      >
+                        <RefreshCw
+                          className={`mr-2 h-4 w-4 ${upgradeMutation.isPending ? 'animate-spin' : ''}`}
+                        />
+                        {upgradeMutation.isPending ? 'Updating...' : 'Update all'}
+                      </DropdownMenuItem>
+                    )}
+                    {appsData?.can_install && (
+                      <>
+                        <DropdownMenuItem
+                          onClick={() => setInstallFromPublisher(true)}
+                        >
+                          <ExternalLink className='mr-2 h-4 w-4' />
+                          Install from publisher
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          onClick={() => fileInputRef.current?.click()}
+                        >
+                          <Download className='mr-2 h-4 w-4' />
+                          Install from file
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          onClick={handleCleanup}
+                          disabled={cleanupMutation.isPending}
+                        >
+                          <Trash2 className='mr-2 h-4 w-4' />
+                          {cleanupMutation.isPending ? 'Cleaning up...' : 'Clean up unused versions'}
+                        </DropdownMenuItem>
+                      </>
+                    )}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </>
+            )}
+          </div>
+        }
+      />
+      <Main>
+        {/* Installed Apps Section */}
+        <section className='mb-8'>
+          <div className='mb-4 flex items-center gap-4'>
+            <h2 className='text-xl font-semibold'>Installed apps</h2>
+          </div>
+          {isLoadingInstalled ? (
             <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
               {Array.from({ length: 6 }).map((_, i) => (
                 <Card key={i} className='flex flex-col'>
@@ -220,99 +310,21 @@ export function Apps() {
                 </Card>
               ))}
             </div>
-          </section>
-        </Main>
-      </>
-    )
-  }
-
-  return (
-    <>
-      <PageHeader
-        title='Apps'
-        icon={<Package className='size-4 md:size-5' />}
-        actions={
-          (appsData?.can_install ||
-            (availableUpdates && availableUpdates.length > 0)) && (
-            <div className='flex items-center gap-2'>
-              <input
-                type='file'
-                ref={fileInputRef}
-                onChange={handleFileSelect}
-                accept='.zip'
-                className='hidden'
-              />
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button
-                    variant='ghost'
-                    size='icon'
-                    aria-label='App actions'
-                    title='App actions'
-                  >
-                    {upgradeMutation.isPending ? (
-                      <RefreshCw className='h-4 w-4 animate-spin' />
-                    ) : (
-                      <MoreHorizontal className='h-4 w-4' />
-                    )}
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align='end'>
-                  {availableUpdates && availableUpdates.length > 0 && (
-                    <DropdownMenuItem
-                      onClick={handleUpdateAll}
-                      disabled={upgradeMutation.isPending}
-                    >
-                      <RefreshCw
-                        className={`mr-2 h-4 w-4 ${upgradeMutation.isPending ? 'animate-spin' : ''}`}
-                      />
-                      {upgradeMutation.isPending ? 'Updating...' : 'Update all'}
-                    </DropdownMenuItem>
-                  )}
-                  {appsData?.can_install && (
-                    <>
-                      <DropdownMenuItem
-                        onClick={() => setInstallFromPublisher(true)}
-                      >
-                        <ExternalLink className='mr-2 h-4 w-4' />
-                        Install from publisher
-                      </DropdownMenuItem>
-                      <DropdownMenuItem
-                        onClick={() => fileInputRef.current?.click()}
-                      >
-                        <Download className='mr-2 h-4 w-4' />
-                        Install from file
-                      </DropdownMenuItem>
-                      <DropdownMenuItem
-                        onClick={handleCleanup}
-                        disabled={cleanupMutation.isPending}
-                      >
-                        <Trash2 className='mr-2 h-4 w-4' />
-                        {cleanupMutation.isPending ? 'Cleaning up...' : 'Clean up unused versions'}
-                      </DropdownMenuItem>
-                    </>
-                  )}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </div>
-          )
-        }
-      />
-      <Main>
-        {/* Installed Apps Section */}
-        <section className='mb-8'>
-          <div className='mb-4 flex items-center gap-4'>
-            <h2 className='text-xl font-semibold'>Installed apps</h2>
-          </div>
-          {installedApps?.length === 0 ? (
+          ) : installedApps?.length === 0 ? (
             <EmptyState
               icon={Package}
               title="No apps installed"
               description="Install apps from the market or upload your own"
             />
+          ) : filteredInstalledApps?.length === 0 ? (
+            <EmptyState
+              icon={Package}
+              title="No matching apps"
+              description={`No installed apps match "${searchQuery}"`}
+            />
           ) : (
             <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-              {installedApps?.map((app) => (
+              {filteredInstalledApps?.map((app) => (
                 <InstalledAppCard
                   key={app.id}
                   app={app}
@@ -326,20 +338,28 @@ export function Apps() {
           )}
         </section>
 
-        {/* Development Apps Section - only show if there are any */}
+        {/* Development Apps Section - only show if there are any that match */}
         {developmentApps && developmentApps.length > 0 && (
           <section className='mb-8'>
             <h2 className='mb-4 text-xl font-semibold'>Development apps</h2>
-            <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-              {developmentApps.map((app) => (
-                <InstalledAppCard
-                  key={app.id}
-                  app={app}
-                  onClick={() => navigate({ to: '/app/$appId', params: { appId: app.id } })}
-                  showId
-                />
-              ))}
-            </div>
+            {filteredDevelopmentApps?.length === 0 ? (
+              <EmptyState
+                icon={Package}
+                title="No matching apps"
+                description={`No development apps match "${searchQuery}"`}
+              />
+            ) : (
+              <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+                {filteredDevelopmentApps?.map((app) => (
+                  <InstalledAppCard
+                    key={app.id}
+                    app={app}
+                    onClick={() => navigate({ to: '/app/$appId', params: { appId: app.id } })}
+                    showId
+                  />
+                ))}
+              </div>
+            )}
           </section>
         )}
 
@@ -347,11 +367,11 @@ export function Apps() {
         {appsData?.can_install && (
           <section>
             <h2 className='text-xl font-semibold'>Available, but not installed</h2>
-            <p className='mb-4 ml-3 text-base text-muted-foreground' style={{ fontVariant: 'small-caps' }}>Recommended</p>
+            <p className='mb-4 ml-3 text-xs font-medium tracking-wide text-muted-foreground uppercase'>Recommended</p>
             {isLoadingMarket ? (
               <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
                 {Array.from({ length: 6 }).map((_, i) => (
-                  <Card key={i} className='flex flex-col h-[120px]'>
+                  <Card key={i} className='flex flex-col h-30'>
                     <CardHeader className='pb-3'>
                       <Skeleton className='h-6 w-3/4' />
                     </CardHeader>
@@ -454,7 +474,7 @@ export function Apps() {
               <p className='text-sm'>
                 <span className='font-medium'>File:</span> {selectedFile?.name}
               </p>
-              <div className='flex items-center justify-between rounded-[8px] border px-4 py-3'>
+              <div className='flex items-center justify-between rounded-xl border px-4 py-3'>
                 <Label
                   htmlFor='allow-discovery'
                   className='text-sm font-medium'

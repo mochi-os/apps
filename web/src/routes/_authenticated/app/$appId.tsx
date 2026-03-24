@@ -3,6 +3,7 @@ import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import {
   AlertDialog,
   AlertDialogAction,
+  AlertDialogBody,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
@@ -13,6 +14,7 @@ import {
   Button,
   cn,
   EmptyState,
+  GeneralError,
   PageHeader,
   Main,
   Select,
@@ -445,7 +447,7 @@ function VersionsTab({ appId }: { appId: string }) {
 }
 
 function PermissionsTab({ appId, appName }: { appId: string; appName: string }) {
-  const { data, isLoading, error } = useAppPermissions(appId)
+  const { data, isLoading, error, refetch } = useAppPermissions(appId)
   const setPermission = useSetPermission()
   const [grantDialogOpen, setGrantDialogOpen] = useState(false)
   const [revokingPermission, setRevokingPermission] = useState<string | null>(null)
@@ -487,13 +489,7 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
   }
 
   if (error) {
-    return (
-      <EmptyState
-        icon={ShieldAlert}
-        title="Failed to load permissions"
-        description="Make sure the Settings app is installed and you have sufficient permissions."
-      />
-    )
+    return <GeneralError error={error} minimal mode='inline' reset={refetch} />
   }
 
   if (isLoading) {
@@ -534,7 +530,7 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
                 Select a capability to grant to {appName}.
               </AlertDialogDescription>
             </AlertDialogHeader>
-            <div className='space-y-2 py-4'>
+            <AlertDialogBody className='space-y-2 py-1'>
               {availablePermissions.map((p) => (
                 <button
                   key={p.permission}
@@ -557,7 +553,7 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
                   )}
                 </button>
               ))}
-            </div>
+            </AlertDialogBody>
             <AlertDialogFooter>
               <AlertDialogCancel>Cancel</AlertDialogCancel>
             </AlertDialogFooter>
