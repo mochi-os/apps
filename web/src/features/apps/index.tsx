@@ -224,7 +224,7 @@ export function Apps() {
               placeholder='Search apps…'
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className='h-8 w-40 text-sm sm:w-56'
+              className='hidden h-8 w-40 text-sm sm:block sm:w-56'
             />
             {(appsData?.can_install ||
               (availableUpdates && availableUpdates.length > 0)) && (
@@ -293,6 +293,14 @@ export function Apps() {
           </div>
         }
       />
+      <div className='px-4 pb-2 sm:hidden'>
+        <Input
+          placeholder='Search apps…'
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className='h-8 w-full text-sm'
+        />
+      </div>
       <Main>
         {/* Installed Apps Section */}
         <section className='mb-8'>
