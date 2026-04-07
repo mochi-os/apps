@@ -1,10 +1,10 @@
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
+  ResponsiveDialog,
+  ResponsiveDialogContent,
+  ResponsiveDialogDescription,
+  ResponsiveDialogFooter,
+  ResponsiveDialogHeader,
+  ResponsiveDialogTitle,
   Button,
   Skeleton,
 } from '@mochi/web'
@@ -35,22 +35,22 @@ export function AppInfoDialog({
   isInstalling,
 }: AppInfoDialogProps) {
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className='sm:max-w-md'>
-        <DialogHeader>
-          <DialogTitle>
+    <ResponsiveDialog open={open} onOpenChange={onOpenChange}>
+      <ResponsiveDialogContent className='sm:max-w-md'>
+        <ResponsiveDialogHeader>
+          <ResponsiveDialogTitle>
             {isLoading ? (
               <Skeleton className="h-6 w-48" />
             ) : (
               (appInfo?.app?.name ?? 'App information')
             )}
-          </DialogTitle>
+          </ResponsiveDialogTitle>
           {appInfo?.app && (
-            <DialogDescription className='font-mono text-xs'>
+            <ResponsiveDialogDescription className='font-mono text-xs'>
               {appInfo.app.id}
-            </DialogDescription>
+            </ResponsiveDialogDescription>
           )}
-        </DialogHeader>
+        </ResponsiveDialogHeader>
 
         <div className='space-y-4 py-4'>
           <div className='flex items-start gap-2 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800'>
@@ -132,12 +132,12 @@ export function AppInfoDialog({
           )}
         </div>
 
-        <DialogFooter>
+        <ResponsiveDialogFooter>
           <Button variant='outline' onClick={() => onOpenChange(false)}>
             Cancel
           </Button>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
+        </ResponsiveDialogFooter>
+      </ResponsiveDialogContent>
+    </ResponsiveDialog>
   )
 }
