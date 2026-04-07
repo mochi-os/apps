@@ -1,22 +1,23 @@
 import { useState } from 'react'
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogBody,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
   Button,
   cn,
+  ConfirmDialog,
   EmptyState,
+  FieldRow,
   GeneralError,
-  PageHeader,
   Main,
+  PageHeader,
+  ResponsiveDialog,
+  ResponsiveDialogClose,
+  ResponsiveDialogContent,
+  ResponsiveDialogDescription,
+  ResponsiveDialogFooter,
+  ResponsiveDialogHeader,
+  ResponsiveDialogTitle,
+  ResponsiveDialogTrigger,
+  Section,
   Select,
   SelectContent,
   SelectGroup,
@@ -25,12 +26,10 @@ import {
   SelectTrigger,
   SelectValue,
   Skeleton,
-  usePageTitle,
   getErrorMessage,
-  toast,
-  Section,
-  FieldRow,
   DataChip,
+  toast,
+  usePageTitle,
 } from '@mochi/web'
 import { Loader2, Plus, Shield, ShieldAlert, X, Package } from 'lucide-react'
 import { useInstalledAppsQuery } from '@/hooks/useApps'
@@ -516,21 +515,21 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
         ? 'No permissions granted to this app'
         : 'Manage capabilities granted to this application'}
       action={availablePermissions.length > 0 && (
-        <AlertDialog open={grantDialogOpen} onOpenChange={setGrantDialogOpen}>
-          <AlertDialogTrigger asChild>
+        <ResponsiveDialog open={grantDialogOpen} onOpenChange={setGrantDialogOpen}>
+          <ResponsiveDialogTrigger asChild>
             <Button variant='outline' size='sm'>
               <Plus className='h-4 w-4 mr-1' />
               Grant
             </Button>
-          </AlertDialogTrigger>
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle>Grant permission</AlertDialogTitle>
-              <AlertDialogDescription>
+          </ResponsiveDialogTrigger>
+          <ResponsiveDialogContent className='sm:max-w-xl'>
+            <ResponsiveDialogHeader>
+              <ResponsiveDialogTitle>Grant permission</ResponsiveDialogTitle>
+              <ResponsiveDialogDescription>
                 Select a capability to grant to {appName}.
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogBody className='space-y-2 py-1'>
+              </ResponsiveDialogDescription>
+            </ResponsiveDialogHeader>
+            <div className='min-h-0 max-h-[min(28rem,50vh)] space-y-2 overflow-y-auto py-1'>
               {availablePermissions.map((p) => (
                 <button
                   key={p.permission}
@@ -553,12 +552,14 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
                   )}
                 </button>
               ))}
-            </AlertDialogBody>
-            <AlertDialogFooter>
-              <AlertDialogCancel>Cancel</AlertDialogCancel>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
+            </div>
+            <ResponsiveDialogFooter className='gap-2'>
+              <ResponsiveDialogClose asChild>
+                <Button variant='outline'>Cancel</Button>
+              </ResponsiveDialogClose>
+            </ResponsiveDialogFooter>
+          </ResponsiveDialogContent>
+        </ResponsiveDialog>
       )}
     >
       <div className='divide-y-0 space-y-2'>
@@ -600,6 +601,8 @@ function PermissionRow({
   appName: string
   canRevoke: boolean
 }) {
+  const [confirmOpen, setConfirmOpen] = useState(false)
+
   return (
     <div className='flex items-center justify-between group rounded-lg border px-4 py-3 transition-colors hover:bg-muted/30'>
       <div className='flex items-center gap-3 text-sm'>
@@ -613,38 +616,37 @@ function PermissionRow({
         </div>
       </div>
       {canRevoke && (
-        <AlertDialog>
-          <AlertDialogTrigger asChild>
-            <Button 
-              variant='ghost' 
-              size='sm' 
-              disabled={isRevoking}
-              className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 h-8 w-8 p-0 opacity-0 group-hover:opacity-100 transition-opacity"
-            >
-              {isRevoking ? (
-                <Loader2 className='h-4 w-4 animate-spin' />
-              ) : (
-                <X className='h-4 w-4' />
-              )}
-              <span className='sr-only'>Revoke</span>
-            </Button>
-          </AlertDialogTrigger>
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle>Revoke permission?</AlertDialogTitle>
-              <AlertDialogDescription>
+        <>
+          <Button
+            variant='ghost' 
+            size='sm' 
+            disabled={isRevoking}
+            className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 h-8 w-8 p-0 opacity-0 group-hover:opacity-100 transition-opacity"
+            onClick={() => setConfirmOpen(true)}
+          >
+            {isRevoking ? (
+              <Loader2 className='h-4 w-4 animate-spin' />
+            ) : (
+              <X className='h-4 w-4' />
+            )}
+            <span className='sr-only'>Revoke</span>
+          </Button>
+          <ConfirmDialog
+            open={confirmOpen}
+            onOpenChange={setConfirmOpen}
+            title="Revoke permission?"
+            desc={
+              <>
                 This will revoke the &quot;{formatPermission(permission.permission)}&quot; permission
                 from {appName}. The app may stop working correctly.
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter>
-              <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction variant="destructive" onClick={() => onRevoke(permission.permission)}>
-                Revoke Permission
-              </AlertDialogAction>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
+              </>
+            }
+            confirmText="Revoke Permission"
+            destructive
+            isLoading={isRevoking}
+            handleConfirm={() => onRevoke(permission.permission)}
+          />
+        </>
       )}
     </div>
   )
