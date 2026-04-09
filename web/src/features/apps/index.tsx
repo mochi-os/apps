@@ -19,11 +19,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
   EmptyState,
+  HeaderSearch,
   Input,
   Label,
   Main,
   PageHeader,
-  PageUtilityBar,
   Switch,
   usePageTitle,
   toast,
@@ -232,7 +232,6 @@ export function Apps() {
                 size='icon'
                 aria-label='App actions'
                 title='App actions'
-                className='size-11 md:size-9'
               >
                 {upgradeMutation.isPending ? (
                   <RefreshCw className='h-4 w-4 animate-spin' />
@@ -290,15 +289,15 @@ export function Apps() {
                   ? actionMenu
                   : undefined
               }
+              primaryAction={
+                <HeaderSearch
+                  value={searchQuery}
+                  onValueChange={setSearchQuery}
+                  placeholder='Search apps...'
+                  label='Search apps'
+                />
+              }
             />
-            <PageUtilityBar>
-              <Input
-                placeholder='Search apps…'
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className='min-w-0 flex-1 md:w-56 md:flex-none'
-              />
-            </PageUtilityBar>
           </>
         )
       })()}
