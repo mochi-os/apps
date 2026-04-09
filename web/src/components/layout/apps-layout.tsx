@@ -29,5 +29,10 @@ export function AppsLayout() {
     }
   }, [updateCount])
 
-  return <AuthenticatedLayout sidebarData={sidebarData} />
+  return (
+    <AuthenticatedLayout
+      sidebarData={sidebarData}
+      usePageHeaderForMobileNav
+    />
+  )
 }

@@ -23,6 +23,7 @@ import {
   Label,
   Main,
   PageHeader,
+  PageUtilityBar,
   Switch,
   usePageTitle,
   toast,
@@ -215,92 +216,92 @@ export function Apps() {
 
   return (
     <>
-      <PageHeader
-        title='Apps'
-        icon={<Package className='size-4 md:size-5' />}
-        actions={
-          <div className='flex items-center gap-2'>
-            <Input
-              placeholder='Search apps…'
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className='hidden h-8 w-40 text-sm sm:block sm:w-56'
-            />
-            {(appsData?.can_install ||
-              (availableUpdates && availableUpdates.length > 0)) && (
-              <>
-                <input
-                  type='file'
-                  ref={fileInputRef}
-                  onChange={handleFileSelect}
-                  accept='.zip'
-                  className='hidden'
-                />
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant='ghost'
-                      size='icon'
-                      aria-label='App actions'
-                      title='App actions'
-                    >
-                      {upgradeMutation.isPending ? (
-                        <RefreshCw className='h-4 w-4 animate-spin' />
-                      ) : (
-                        <MoreHorizontal className='h-4 w-4' />
-                      )}
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align='end'>
-                    {availableUpdates && availableUpdates.length > 0 && (
-                      <DropdownMenuItem
-                        onClick={handleUpdateAll}
-                        disabled={upgradeMutation.isPending}
-                      >
-                        <RefreshCw
-                          className={`mr-2 h-4 w-4 ${upgradeMutation.isPending ? 'animate-spin' : ''}`}
-                        />
-                        {upgradeMutation.isPending ? 'Updating...' : 'Update all'}
-                      </DropdownMenuItem>
-                    )}
-                    {appsData?.can_install && (
-                      <>
-                        <DropdownMenuItem
-                          onClick={() => setInstallFromPublisher(true)}
-                        >
-                          <ExternalLink className='mr-2 h-4 w-4' />
-                          Install from publisher
-                        </DropdownMenuItem>
-                        <DropdownMenuItem
-                          onClick={() => fileInputRef.current?.click()}
-                        >
-                          <Download className='mr-2 h-4 w-4' />
-                          Install from file
-                        </DropdownMenuItem>
-                        <DropdownMenuItem
-                          onClick={handleCleanup}
-                          disabled={cleanupMutation.isPending}
-                        >
-                          <Trash2 className='mr-2 h-4 w-4' />
-                          {cleanupMutation.isPending ? 'Cleaning up...' : 'Clean up unused versions'}
-                        </DropdownMenuItem>
-                      </>
-                    )}
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </>
-            )}
-          </div>
-        }
+      <input
+        type='file'
+        ref={fileInputRef}
+        onChange={handleFileSelect}
+        accept='.zip'
+        className='hidden'
       />
-      <div className='px-4 pb-2 sm:hidden'>
-        <Input
-          placeholder='Search apps…'
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className='h-8 w-full text-sm'
-        />
-      </div>
+      {(() => {
+        const actionMenu = (
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant='ghost'
+                size='icon'
+                aria-label='App actions'
+                title='App actions'
+                className='size-11 md:size-9'
+              >
+                {upgradeMutation.isPending ? (
+                  <RefreshCw className='h-4 w-4 animate-spin' />
+                ) : (
+                  <MoreHorizontal className='h-4 w-4' />
+                )}
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align='end'>
+              {availableUpdates && availableUpdates.length > 0 && (
+                <DropdownMenuItem
+                  onClick={handleUpdateAll}
+                  disabled={upgradeMutation.isPending}
+                >
+                  <RefreshCw
+                    className={`mr-2 h-4 w-4 ${upgradeMutation.isPending ? 'animate-spin' : ''}`}
+                  />
+                  {upgradeMutation.isPending ? 'Updating...' : 'Update all'}
+                </DropdownMenuItem>
+              )}
+              {appsData?.can_install && (
+                <>
+                  <DropdownMenuItem onClick={() => setInstallFromPublisher(true)}>
+                    <ExternalLink className='mr-2 h-4 w-4' />
+                    Install from publisher
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => fileInputRef.current?.click()}>
+                    <Download className='mr-2 h-4 w-4' />
+                    Install from file
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    onClick={handleCleanup}
+                    disabled={cleanupMutation.isPending}
+                  >
+                    <Trash2 className='mr-2 h-4 w-4' />
+                    {cleanupMutation.isPending
+                      ? 'Cleaning up...'
+                      : 'Clean up unused versions'}
+                  </DropdownMenuItem>
+                </>
+              )}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        )
+
+        return (
+          <>
+            <PageHeader
+              title='Apps'
+              icon={<Package className='size-4 md:size-5' />}
+              showSidebarTrigger
+              menuAction={
+                (appsData?.can_install ||
+                  (availableUpdates && availableUpdates.length > 0))
+                  ? actionMenu
+                  : undefined
+              }
+            />
+            <PageUtilityBar>
+              <Input
+                placeholder='Search apps…'
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className='min-w-0 flex-1 md:w-56 md:flex-none'
+              />
+            </PageUtilityBar>
+          </>
+        )
+      })()}
       <Main>
         {/* Installed Apps Section */}
         <section className='mb-8'>
