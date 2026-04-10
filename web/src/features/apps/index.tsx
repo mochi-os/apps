@@ -1,14 +1,6 @@
 import { useState, useRef } from 'react'
 import { useNavigate } from '@tanstack/react-router'
 import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
   Button,
   Card,
   CardContent,
@@ -24,6 +16,13 @@ import {
   Label,
   Main,
   PageHeader,
+  ResponsiveDialog,
+  ResponsiveDialogClose,
+  ResponsiveDialogContent,
+  ResponsiveDialogDescription,
+  ResponsiveDialogFooter,
+  ResponsiveDialogHeader,
+  ResponsiveDialogTitle,
   Switch,
   usePageTitle,
   toast,
@@ -426,7 +425,7 @@ export function Apps() {
           </section>
         )}
 
-        <AlertDialog
+        <ResponsiveDialog
           open={installFromPublisher}
           onOpenChange={(open) => {
             setInstallFromPublisher(open)
@@ -435,14 +434,14 @@ export function Apps() {
             }
           }}
         >
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle>Install from publisher</AlertDialogTitle>
-              <AlertDialogDescription>
+          <ResponsiveDialogContent>
+            <ResponsiveDialogHeader>
+              <ResponsiveDialogTitle>Install from publisher</ResponsiveDialogTitle>
+              <ResponsiveDialogDescription>
                 Enter the app entity to install. For private apps, use the
                 format: app@publisher.
-              </AlertDialogDescription>
-            </AlertDialogHeader>
+              </ResponsiveDialogDescription>
+            </ResponsiveDialogHeader>
             <div className='space-y-3 py-4'>
               <Input
                 value={appIdInput}
@@ -450,21 +449,23 @@ export function Apps() {
                 disabled={installByIdMutation.isPending}
               />
             </div>
-            <AlertDialogFooter>
-              <AlertDialogCancel disabled={installByIdMutation.isPending}>
-                Cancel
-              </AlertDialogCancel>
-              <AlertDialogAction
+            <ResponsiveDialogFooter>
+              <ResponsiveDialogClose asChild>
+                <Button variant='outline' disabled={installByIdMutation.isPending}>
+                  Cancel
+                </Button>
+              </ResponsiveDialogClose>
+              <Button
                 onClick={handlePublisherInstall}
                 disabled={installByIdMutation.isPending}
               >
                 {installByIdMutation.isPending ? 'Installing...' : 'Install'}
-              </AlertDialogAction>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
+              </Button>
+            </ResponsiveDialogFooter>
+          </ResponsiveDialogContent>
+        </ResponsiveDialog>
 
-        <AlertDialog
+        <ResponsiveDialog
           open={installFromFile}
           onOpenChange={(open) => {
             setInstallFromFile(open)
@@ -474,10 +475,10 @@ export function Apps() {
             }
           }}
         >
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle>Install from file</AlertDialogTitle>
-            </AlertDialogHeader>
+          <ResponsiveDialogContent>
+            <ResponsiveDialogHeader>
+              <ResponsiveDialogTitle>Install from file</ResponsiveDialogTitle>
+            </ResponsiveDialogHeader>
             <div className='space-y-4 py-4'>
               <p className='text-sm'>
                 <span className='font-medium'>File:</span> {selectedFile?.name}
@@ -497,19 +498,21 @@ export function Apps() {
                 />
               </div>
             </div>
-            <AlertDialogFooter>
-              <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction
+            <ResponsiveDialogFooter>
+              <ResponsiveDialogClose asChild>
+                <Button variant='outline'>Cancel</Button>
+              </ResponsiveDialogClose>
+              <Button
                 onClick={handleFileInstall}
                 disabled={installFromFileMutation.isPending}
               >
                 {installFromFileMutation.isPending
                   ? 'Installing...'
                   : 'Install'}
-              </AlertDialogAction>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
+              </Button>
+            </ResponsiveDialogFooter>
+          </ResponsiveDialogContent>
+        </ResponsiveDialog>
 
         <AppInfoDialog
           open={!!selectedAppId && !selectedMarketApp}
