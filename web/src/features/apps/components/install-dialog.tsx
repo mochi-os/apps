@@ -1,11 +1,12 @@
 import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
+  Button,
+  ResponsiveDialog,
+  ResponsiveDialogClose,
+  ResponsiveDialogContent,
+  ResponsiveDialogDescription,
+  ResponsiveDialogFooter,
+  ResponsiveDialogHeader,
+  ResponsiveDialogTitle,
 } from '@mochi/web'
 import type { MarketApp, AppInfo, Track } from '@/api/types/apps'
 
@@ -37,12 +38,16 @@ export function InstallDialog({
   if (!marketApp) return null
 
   return (
-    <AlertDialog open={open} onOpenChange={onOpenChange}>
-      <AlertDialogContent>
-        <AlertDialogHeader>
-          <AlertDialogTitle>{marketApp.name}</AlertDialogTitle>
-          {marketApp.blurb && <p className='text-sm'>{marketApp.blurb}</p>}
-        </AlertDialogHeader>
+    <ResponsiveDialog open={open} onOpenChange={onOpenChange}>
+      <ResponsiveDialogContent>
+        <ResponsiveDialogHeader>
+          <ResponsiveDialogTitle>{marketApp.name}</ResponsiveDialogTitle>
+          {marketApp.blurb && (
+            <ResponsiveDialogDescription className='text-sm'>
+              {marketApp.blurb}
+            </ResponsiveDialogDescription>
+          )}
+        </ResponsiveDialogHeader>
 
         <div className='min-h-[160px] space-y-3'>
           {marketApp.description && (
@@ -85,12 +90,17 @@ export function InstallDialog({
           )}
         </div>
 
-        <AlertDialogFooter>
-          <AlertDialogCancel className='border-input hover:bg-accent focus:border-input focus-visible:border-input border bg-transparent shadow-none focus:ring-0 focus:outline-none focus-visible:ring-0'>
-            Cancel
-          </AlertDialogCancel>
-          <AlertDialogAction
-            autoFocus
+        <ResponsiveDialogFooter>
+          <ResponsiveDialogClose asChild>
+            <Button
+              variant='outline'
+              disabled={isInstalling}
+              className='border-input hover:bg-accent focus:border-input focus-visible:border-input bg-transparent shadow-none focus:ring-0 focus:outline-none focus-visible:ring-0'
+            >
+              Cancel
+            </Button>
+          </ResponsiveDialogClose>
+          <Button
             onClick={() => {
               if (!appInfo) return
               const version =
@@ -101,9 +111,9 @@ export function InstallDialog({
             disabled={isLoading || isInstalling || !appInfo?.tracks.length}
           >
             {isInstalling ? 'Installing...' : 'Install'}
-          </AlertDialogAction>
-        </AlertDialogFooter>
-      </AlertDialogContent>
-    </AlertDialog>
+          </Button>
+        </ResponsiveDialogFooter>
+      </ResponsiveDialogContent>
+    </ResponsiveDialog>
   )
 }
