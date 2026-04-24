@@ -581,7 +581,7 @@ def action_version_download(a):
 
 	# Check if user can install apps
 	if a.user.role != "administrator" and mochi.setting.get("apps_install_user") != "true":
-		a.error(403, "Not authorized to install apps")
+		a.error(403, "Not allowed to install apps")
 		return
 
 	ok = mochi.app.version.download(app_id, version)
