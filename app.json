@@ -2,7 +2,7 @@
 // Copyright Alistair Cunningham 2025-2026
 
 {
-	"version": "4.42",
+	"version": "4.45",
 	"label": "app_name",
 	"classes": ["app"],
 	"paths": ["apps"],
@@ -10,6 +10,13 @@
 
 	"architecture": {"engine": "starlark", "version": 4},
 	"execute": ["apps.star"],
+
+	"database": {
+		"schema": 1,
+		"file": "apps.db",
+		"create": {"function": "database_create"},
+		"upgrade": {"function": "database_upgrade"}
+	},
 
 	"icons": [
 		{"action": "", "label": "app_name", "file": "images/icon.svg"}

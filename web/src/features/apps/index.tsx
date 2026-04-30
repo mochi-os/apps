@@ -100,25 +100,8 @@ export function Apps() {
     app.name.toLowerCase().includes(searchQuery.toLowerCase())
   )
 
-  // Compare versions: returns true if a > b
-  const isNewerVersion = (a: string, b: string | null): boolean => {
-    if (!b) return !!a // If no current version, any available version is newer
-    const partsA = a.split('.').map((n) => parseInt(n, 10) || 0)
-    const partsB = b.split('.').map((n) => parseInt(n, 10) || 0)
-    const len = Math.max(partsA.length, partsB.length)
-    for (let i = 0; i < len; i++) {
-      const numA = partsA[i] || 0
-      const numB = partsB[i] || 0
-      if (numA > numB) return true
-      if (numA < numB) return false
-    }
-    return false
-  }
-
-  // Filter updates to only show newer versions
-  const availableUpdates = updatesData?.updates?.filter((update) =>
-    isNewerVersion(update.available, update.current)
-  )
+  // Server-side filter in action_updates already returns only strictly-newer versions
+  const availableUpdates = updatesData?.updates
 
   const handleInstall = (version: string) => {
     if (!selectedAppId) return

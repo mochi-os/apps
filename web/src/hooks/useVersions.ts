@@ -40,7 +40,7 @@ export function useSetUserVersion() {
     },
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['app-versions', variables.app] })
-      queryClient.invalidateQueries({ queryKey: ['apps', 'installed'] })
+      queryClient.invalidateQueries({ queryKey: ['apps'] })
     },
   })
 }
@@ -54,7 +54,7 @@ export function useSetSystemVersion() {
     },
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['app-versions', variables.app] })
-      queryClient.invalidateQueries({ queryKey: ['apps', 'installed'] })
+      queryClient.invalidateQueries({ queryKey: ['apps'] })
     },
   })
 }

@@ -1,6 +1,18 @@
 # Mochi Apps app
 # Copyright Alistair Cunningham 2025-2026
 
+# How long to trust a cached publisher response in action_updates (seconds).
+# 5 minutes — short enough that a freshly-deployed app shows up in the badge
+# soon, long enough that the badge load is a millisecond-scale DB hit instead
+# of ~25 sequential P2P round-trips.
+UPDATES_CACHE_TTL = 300
+
+def database_create():
+	mochi.db.execute("create table updates_cache ( app text not null primary key, data text not null, checked integer not null )")
+
+def database_upgrade(version):
+	pass
+
 # Check if an ID looks like an entity ID (50-51 chars)
 def is_entity_id(id):
 	return len(id) >= 50 and len(id) <= 51
@@ -256,11 +268,37 @@ def action_install_id(a):
 
 	return {"data": {"installed": True, "id": id, "version": version, "name": app.get("name", "")}}
 
-# Check for updates for all installed apps
+# True if version a is strictly newer than version b, comparing dot-separated
+# numeric components left-to-right. Empty/missing b means any non-empty a is newer.
+def is_newer_version(a, b):
+	if not b:
+		return bool(a)
+	if not a:
+		return False
+	parts_a = a.split(".")
+	parts_b = b.split(".")
+	n = max(len(parts_a), len(parts_b))
+	for i in range(n):
+		pa = parts_a[i] if i < len(parts_a) else ""
+		pb = parts_b[i] if i < len(parts_b) else ""
+		na = int(pa) if pa.isdigit() else 0
+		nb = int(pb) if pb.isdigit() else 0
+		if na > nb:
+			return True
+		if na < nb:
+			return False
+	return False
+
+# Check for updates for all installed apps.
+# Per-publisher version queries are cached in updates_cache for UPDATES_CACHE_TTL
+# seconds — without it this action does ~25 sequential P2P round-trips and routinely
+# takes over a minute. The cache makes steady-state badge loads near-instant; a
+# freshly-deployed app shows up after at most TTL seconds.
 def action_updates(a):
 	all_apps = mochi.app.list()
 	updates = []
 	debug = []
+	cutoff = mochi.time.now() - UPDATES_CACHE_TTL
 
 	for app in all_apps:
 		if app.get("engine") != "starlark":
@@ -281,34 +319,46 @@ def action_updates(a):
 				debug.append(app_debug)
 				continue
 
-		# Determine publisher: app.json first, then directory
+		# Resolve publisher (used both to query and to attribute updates)
 		publisher = ""
 		pub_config = app.get("publisher")
 		if pub_config and pub_config.get("entity"):
 			publisher = pub_config["entity"]
-		else:
-			entry = mochi.directory.get(app["id"])
-			if not entry:
-				app_debug["skip"] = "not in directory"
+
+		# Try cache before talking to the publisher
+		remote = None
+		cached = mochi.db.row("select data, checked from updates_cache where app=?", app["id"])
+		if cached and cached["checked"] >= cutoff:
+			remote = json.decode(cached["data"])
+			app_debug["cached"] = True
+
+		if remote == None:
+			if not publisher:
+				entry = mochi.directory.get(app["id"])
+				if not entry:
+					app_debug["skip"] = "not in directory"
+					debug.append(app_debug)
+					continue  # Not in directory, skip
+
+			# Query publisher for version info (includes all tracks)
+			if publisher:
+				s = mochi.remote.stream(publisher, "publisher", "version", {"app": app["id"]})
+			else:
+				s = mochi.remote.stream(app["id"], "publisher", "version", {"app": app["id"]})
+			if not s:
+				app_debug["skip"] = "stream failed"
 				debug.append(app_debug)
-				continue  # Not in directory, skip
+				continue
+			r = s.read()
+			if r.get("status") != "200":
+				app_debug["skip"] = "status " + str(r.get("status"))
+				debug.append(app_debug)
+				continue
 
-		# Query publisher for version info (includes all tracks)
-		if publisher:
-			s = mochi.remote.stream(publisher, "publisher", "version", {"app": app["id"]})
-		else:
-			s = mochi.remote.stream(app["id"], "publisher", "version", {"app": app["id"]})
-		if not s:
-			app_debug["skip"] = "stream failed"
-			debug.append(app_debug)
-			continue
-		r = s.read()
-		if r.get("status") != "200":
-			app_debug["skip"] = "status " + str(r.get("status"))
-			debug.append(app_debug)
-			continue
+			remote = s.read()
+			# Cache the full response so the version-field fallback below works on hits too
+			mochi.db.execute("replace into updates_cache ( app, data, checked ) values ( ?, ?, ? )", app["id"], json.encode(remote), mochi.time.now())
 
-		remote = s.read()
 		tracks = remote.get("tracks", [])
 		default_track = remote.get("default_track", "Production")
 
@@ -328,9 +378,9 @@ def action_updates(a):
 			remote_version = remote.get("version", "")
 		app_debug["remote_version"] = remote_version
 
-		# Compare with user's active version
+		# Compare with user's active version - only report strictly newer versions
 		current = app.get("active", app.get("latest"))
-		if remote_version and remote_version != current:
+		if is_newer_version(remote_version, current):
 			updates.append({
 				"id": app["id"],
 				"name": app.get("name", app["id"]),
@@ -340,7 +390,7 @@ def action_updates(a):
 			})
 			app_debug["update"] = True
 		else:
-			app_debug["skip"] = "same version"
+			app_debug["skip"] = "not newer"
 		debug.append(app_debug)
 
 	return {"data": {"updates": updates}}
