@@ -622,7 +622,7 @@ function PermissionRow({
             size='sm' 
             disabled={isRevoking}
             onClick={() => setConfirmOpen(true)}
-            className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 h-8 w-8 p-0 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100"
+            className="text-muted-foreground h-8 w-8 p-0 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100"
           >
             {isRevoking ? (
               <Loader2 className='h-4 w-4 animate-spin' />
