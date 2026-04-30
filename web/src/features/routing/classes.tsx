@@ -1,10 +1,12 @@
 import { Main, PageHeader, usePageTitle, Skeleton, GeneralError } from '@mochi/web'
+import { useLingui } from '@lingui/react/macro'
 import { Boxes } from 'lucide-react'
 import { RoutingTable } from './routing-table'
 import { useRoutingData } from './use-routing-data'
 
 export function RoutingClasses() {
-  usePageTitle('Class routing')
+  const { t } = useLingui()
+  usePageTitle(t`Class routing`)
   const { data, isLoading, error, refetch, handleUserChange, handleSystemChange } = useRoutingData()
 
   const classes = data?.classes ?? {}
@@ -13,9 +15,9 @@ export function RoutingClasses() {
   return (
     <>
       <PageHeader
-        title='Classes'
+        title={t`Classes`}
         icon={<Boxes className='size-4 md:size-5' />}
-        description='Configure which app handles entities of each type.'
+        description={t`Configure which app handles entities of each type.`}
       />
       <Main>
         {isLoading ? (

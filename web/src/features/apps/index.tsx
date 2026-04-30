@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { Trans, useLingui } from '@lingui/react/macro'
 import { useNavigate } from '@tanstack/react-router'
 import {
   Button,
@@ -49,7 +50,8 @@ import { AppInfoDialog } from './components/app-info-dialog'
 import { InstallDialog } from './components/install-dialog'
 
 export function Apps() {
-  usePageTitle('Apps')
+  const { t } = useLingui()
+  usePageTitle(t`Apps`)
   const navigate = useNavigate()
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedMarketApp, setSelectedMarketApp] = useState<MarketApp | null>(
@@ -110,7 +112,7 @@ export function Apps() {
       { id: selectedAppId, version, peer: appInfo?.peer },
       {
         onSuccess: () => {
-          toast.success('App installed', {
+          toast.success(t`App installed`, {
             description: 'The app has been installed successfully.',
           })
           setSelectedAppId(null)
@@ -127,7 +129,7 @@ export function Apps() {
 
   const handlePublisherInstall = () => {
     if (!appIdInput.trim()) {
-      toast.error('Please enter an app ID')
+      toast.error(t`Please enter an app ID`)
       return
     }
 
@@ -135,7 +137,7 @@ export function Apps() {
       { id: appIdInput.trim() },
       {
         onSuccess: (data) => {
-          toast.success('App installed', {
+          toast.success(t`App installed`, {
             description: `${data.name || 'App'} v${data.version} has been installed.`,
           })
           setInstallFromPublisher(false)
@@ -152,7 +154,7 @@ export function Apps() {
       { id: target.id },
       {
         onSuccess: (data) => {
-          toast.success('App installed', {
+          toast.success(t`App installed`, {
             description: `${data.name || target.name} v${data.version} has been installed.`,
           })
           setSelectedDirectoryApp(null)
@@ -172,9 +174,9 @@ export function Apps() {
 
     const failed = results.filter((r) => r.status === 'rejected').length
     if (failed === 0) {
-      toast.success('All apps updated')
+      toast.success(t`All apps updated`)
     } else if (failed === results.length) {
-      toast.error('Update failed', { description: 'No apps could be updated.' })
+      toast.error(t`Update failed`, { description: 'No apps could be updated.' })
     } else {
       toast.warning(`${results.length - failed} updated, ${failed} failed`)
     }
@@ -187,7 +189,7 @@ export function Apps() {
     cleanupMutation.mutate(undefined, {
       onSuccess: (data) => {
         if (data.removed === 0) {
-          toast.info('No unused versions to clean up')
+          toast.info(t`No unused versions to clean up`)
         } else {
           toast.success(`Removed ${data.removed} unused version${data.removed === 1 ? '' : 's'}`)
         }
@@ -212,7 +214,7 @@ export function Apps() {
       { file: selectedFile, privacy: allowDiscovery ? 'public' : 'private' },
       {
         onSuccess: () => {
-          toast.success('App installed', {
+          toast.success(t`App installed`, {
             description: 'The app has been installed successfully.',
           })
           setInstallFromFile(false)
@@ -239,8 +241,8 @@ export function Apps() {
               <Button
                 variant='ghost'
                 size='icon'
-                aria-label='App actions'
-                title='App actions'
+                aria-label={t`App actions`}
+                title={t`App actions`}
               >
                 {upgradeMutation.isPending ? (
                   <RefreshCw className='h-4 w-4 animate-spin' />
@@ -265,11 +267,11 @@ export function Apps() {
                 <>
                   <DropdownMenuItem onClick={() => setInstallFromPublisher(true)}>
                     <ExternalLink className='mr-2 h-4 w-4' />
-                    Install from publisher
+                    <Trans>Install from publisher</Trans>
                   </DropdownMenuItem>
                   <DropdownMenuItem onClick={() => fileInputRef.current?.click()}>
                     <Download className='mr-2 h-4 w-4' />
-                    Install from file
+                    <Trans>Install from file</Trans>
                   </DropdownMenuItem>
                   <DropdownMenuItem
                     onClick={handleCleanup}
@@ -289,7 +291,7 @@ export function Apps() {
         return (
           <>
             <PageHeader
-              title='Apps'
+              title={t`Apps`}
               icon={<Package className='size-4 md:size-5' />}
               showSidebarTrigger
               menuAction={
@@ -302,8 +304,8 @@ export function Apps() {
                 <HeaderSearch
                   value={searchQuery}
                   onValueChange={setSearchQuery}
-                  placeholder='Search apps...'
-                  label='Search apps'
+                  placeholder={t`Search apps...`}
+                  label={t`Search apps`}
                 />
               }
             />
@@ -314,7 +316,7 @@ export function Apps() {
         {/* Installed Apps Section */}
         <section className='mb-8'>
           <div className='mb-4 flex items-center gap-4'>
-            <h2 className='text-xl font-semibold'>Installed apps</h2>
+            <h2 className='text-xl font-semibold'><Trans>Installed apps</Trans></h2>
           </div>
           {isLoadingInstalled ? (
             <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
@@ -330,13 +332,13 @@ export function Apps() {
           ) : installedApps?.length === 0 ? (
             <EmptyState
               icon={Package}
-              title="No apps installed"
-              description="Install apps from the market or upload your own"
+              title={t`No apps installed`}
+              description={t`Install apps from the market or upload your own`}
             />
           ) : filteredInstalledApps?.length === 0 ? (
             <EmptyState
               icon={Package}
-              title="No matching apps"
+              title={t`No matching apps`}
               description={`No installed apps match "${searchQuery}"`}
             />
           ) : (
@@ -358,11 +360,11 @@ export function Apps() {
         {/* Development Apps Section - only show if there are any that match */}
         {developmentApps && developmentApps.length > 0 && (
           <section className='mb-8'>
-            <h2 className='mb-4 text-xl font-semibold'>Development apps</h2>
+            <h2 className='mb-4 text-xl font-semibold'><Trans>Development apps</Trans></h2>
             {filteredDevelopmentApps?.length === 0 ? (
               <EmptyState
                 icon={Package}
-                title="No matching apps"
+                title={t`No matching apps`}
                 description={`No development apps match "${searchQuery}"`}
               />
             ) : (
@@ -383,8 +385,8 @@ export function Apps() {
         {/* Market Apps Section - only show if user can install AND not searching */}
         {appsData?.can_install && !isSearching && (
           <section>
-            <h2 className='text-xl font-semibold'>Available, but not installed</h2>
-            <p className='mb-4 ml-3 text-xs font-medium tracking-wide text-muted-foreground uppercase'>Recommended</p>
+            <h2 className='text-xl font-semibold'><Trans>Available, but not installed</Trans></h2>
+            <p className='mb-4 ml-3 text-xs font-medium tracking-wide text-muted-foreground uppercase'><Trans>Recommended</Trans></p>
             {isLoadingMarket ? (
               <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
                 {Array.from({ length: 6 }).map((_, i) => (
@@ -402,13 +404,13 @@ export function Apps() {
             ) : isMarketError ? (
               <EmptyState
                 icon={Package}
-                title="Unavailable"
-                description="Unable to connect to the recommendations service"
+                title={t`Unavailable`}
+                description={t`Unable to connect to the recommendations service`}
               />
             ) : marketApps?.length === 0 ? (
               <EmptyState
                 icon={Package}
-                title="No recommendations available"
+                title={t`No recommendations available`}
               />
             ) : (
               <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
@@ -438,7 +440,7 @@ export function Apps() {
         {/* Directory Search Section - show only while searching */}
         {appsData?.can_install && isSearching && (
           <section>
-            <h2 className='mb-4 text-xl font-semibold'>From the directory</h2>
+            <h2 className='mb-4 text-xl font-semibold'><Trans>From the directory</Trans></h2>
             {isLoadingDirectory ? (
               <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
                 {Array.from({ length: 3 }).map((_, i) => (
@@ -455,7 +457,7 @@ export function Apps() {
             ) : !directoryApps?.length ? (
               <EmptyState
                 icon={Package}
-                title='No matches in directory'
+                title={t`No matches in directory`}
                 description={`No installable apps in the directory match "${searchQuery}"`}
               />
             ) : (
@@ -507,7 +509,7 @@ export function Apps() {
                   variant='outline'
                   disabled={installByIdMutation.isPending}
                 >
-                  Cancel
+                  <Trans>Cancel</Trans>
                 </Button>
               </ResponsiveDialogClose>
               <Button
@@ -531,7 +533,7 @@ export function Apps() {
         >
           <ResponsiveDialogContent>
             <ResponsiveDialogHeader>
-              <ResponsiveDialogTitle>Install from publisher</ResponsiveDialogTitle>
+              <ResponsiveDialogTitle><Trans>Install from publisher</Trans></ResponsiveDialogTitle>
               <ResponsiveDialogDescription>
                 Enter the app entity to install. For private apps, use the
                 format: app@publisher.
@@ -547,7 +549,7 @@ export function Apps() {
             <ResponsiveDialogFooter>
               <ResponsiveDialogClose asChild>
                 <Button variant='outline' disabled={installByIdMutation.isPending}>
-                  Cancel
+                  <Trans>Cancel</Trans>
                 </Button>
               </ResponsiveDialogClose>
               <Button
@@ -572,7 +574,7 @@ export function Apps() {
         >
           <ResponsiveDialogContent>
             <ResponsiveDialogHeader>
-              <ResponsiveDialogTitle>Install from file</ResponsiveDialogTitle>
+              <ResponsiveDialogTitle><Trans>Install from file</Trans></ResponsiveDialogTitle>
             </ResponsiveDialogHeader>
             <div className='space-y-4 py-4'>
               <p className='text-sm'>
@@ -583,7 +585,7 @@ export function Apps() {
                   htmlFor='allow-discovery'
                   className='text-sm font-medium'
                 >
-                  Add to directory
+                  <Trans>Add to directory</Trans>
                 </Label>
                 <Switch
                   id='allow-discovery'
@@ -595,7 +597,7 @@ export function Apps() {
             </div>
             <ResponsiveDialogFooter>
               <ResponsiveDialogClose asChild>
-                <Button variant='outline'>Cancel</Button>
+                <Button variant='outline'><Trans>Cancel</Trans></Button>
               </ResponsiveDialogClose>
               <Button
                 onClick={handleFileInstall}
@@ -648,6 +650,7 @@ function InstalledAppCard({
   showId?: boolean
   availableVersion?: string
 }) {
+  const { t } = useLingui()
   // Show track if user is following a non-Production track
   const showTrack = app.user_track && app.user_track !== 'Production'
 
@@ -666,11 +669,11 @@ function InstalledAppCard({
           {availableVersion && availableVersion !== app.latest && (
             <DataChip
               value={availableVersion}
-              label="Update"
+              label={t`Update`}
             />
           )}
           {showTrack && app.user_track && (
-            <DataChip value={app.user_track} label="Track" />
+            <DataChip value={app.user_track} label={t`Track`} />
           )}
           {showId && (
             <span className='text-xs text-muted-foreground truncate font-mono opacity-80'>

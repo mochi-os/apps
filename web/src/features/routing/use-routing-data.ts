@@ -1,4 +1,5 @@
 import { toast, getErrorMessage } from '@mochi/web'
+import { useLingui } from '@lingui/react/macro'
 import {
   useRoutingQuery,
   useSetUserRoutingMutation,
@@ -8,6 +9,7 @@ import {
 type RoutingType = 'class' | 'service' | 'path'
 
 export function useRoutingData() {
+  const { t } = useLingui()
   const { data, isLoading, error, refetch } = useRoutingQuery()
   const setUserRouting = useSetUserRoutingMutation()
   const setSystemRouting = useSetSystemRoutingMutation()
@@ -17,10 +19,10 @@ export function useRoutingData() {
       { type, name, app: appId },
       {
         onSuccess: () => {
-          toast.success('Preference updated')
+          toast.success(t`Preference updated`)
         },
         onError: (error) => {
-          toast.error(getErrorMessage(error, 'Failed to update preference'))
+          toast.error(getErrorMessage(error, t`Failed to update preference`))
         },
       }
     )
@@ -31,10 +33,10 @@ export function useRoutingData() {
       { type, name, app: appId },
       {
         onSuccess: () => {
-          toast.success('System default updated')
+          toast.success(t`System default updated`)
         },
         onError: (error) => {
-          toast.error(getErrorMessage(error, 'Failed to update system default'))
+          toast.error(getErrorMessage(error, t`Failed to update system default`))
         },
       }
     )

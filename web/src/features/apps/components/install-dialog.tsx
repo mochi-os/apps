@@ -10,6 +10,7 @@ import {
 } from '@mochi/web'
 import type { MarketApp, AppInfo, Track } from '@/api/types/apps'
 
+import { Trans } from '@lingui/react/macro'
 interface InstallDialogProps {
   open: boolean
   onOpenChange: (open: boolean) => void
@@ -63,7 +64,7 @@ export function InstallDialog({
 
           {isLoading ? (
             <div className='text-muted-foreground py-4 text-center text-sm'>
-              Loading version information...
+              <Trans>Loading version information...</Trans>
             </div>
           ) : appInfo ? (
             <>
@@ -85,7 +86,7 @@ export function InstallDialog({
             </>
           ) : (
             <div className='text-muted-foreground py-4 text-center text-sm'>
-              Unable to load version information
+              <Trans>Unable to load version information</Trans>
             </div>
           )}
         </div>
@@ -97,7 +98,7 @@ export function InstallDialog({
               disabled={isInstalling}
               className='border-input hover:bg-accent focus:border-input focus-visible:border-input bg-transparent shadow-none focus:ring-0 focus:outline-none focus-visible:ring-0'
             >
-              Cancel
+              <Trans>Cancel</Trans>
             </Button>
           </ResponsiveDialogClose>
           <Button

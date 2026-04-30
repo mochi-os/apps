@@ -6,6 +6,7 @@ import {
   SelectValue,
 } from '@mochi/web'
 import { AlertTriangle } from 'lucide-react'
+import { Trans, useLingui } from '@lingui/react/macro'
 import type { RoutingResource, RoutingApp } from '@/api/apps'
 
 // Development apps have short IDs, installed apps have entity IDs (50-51 chars)
@@ -44,6 +45,7 @@ export function RoutingTable({
   onUserChange: (type: 'class' | 'service' | 'path', name: string, appId: string) => void
   onSystemChange: (type: 'class' | 'service' | 'path', name: string, appId: string) => void
 }) {
+  const { t } = useLingui()
   const sortedNames = Object.keys(resources).sort()
 
   if (sortedNames.length === 0) {
@@ -62,9 +64,9 @@ export function RoutingTable({
             <th className='px-4 py-3 text-left text-sm font-medium'>
               {type === 'path' ? 'Path' : type === 'class' ? 'Class' : 'Service'}
             </th>
-            <th className='px-4 py-3 text-left text-sm font-medium'>Declared by</th>
+            <th className='px-4 py-3 text-left text-sm font-medium'><Trans>Declared by</Trans></th>
             {isAdmin && (
-              <th className='px-4 py-3 text-left text-sm font-medium'>System default</th>
+              <th className='px-4 py-3 text-left text-sm font-medium'><Trans>System default</Trans></th>
             )}
             <th className='px-4 py-3 text-left text-sm font-medium'>
               {isAdmin ? 'Your preference' : 'Handler'}
@@ -89,7 +91,7 @@ export function RoutingTable({
                   <div className='flex items-center gap-2'>
                     <code className='text-sm'>{displayName}</code>
                     {hasConflict && (
-                      <span title='Multiple apps declare this resource'>
+                      <span title={t`Multiple apps declare this resource`}>
                         <AlertTriangle className='h-4 w-4 text-amber-500' />
                       </span>
                     )}
@@ -113,7 +115,7 @@ export function RoutingTable({
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value='_default'>
-                          <span className='text-muted-foreground'>Default</span>
+                          <span className='text-muted-foreground'><Trans>Default</Trans></span>
                         </SelectItem>
                         {sortApps(resource.apps).map((app) => (
                           <SelectItem key={app.id} value={app.id}>

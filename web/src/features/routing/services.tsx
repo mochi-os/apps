@@ -1,10 +1,12 @@
 import { Main, PageHeader, usePageTitle, Skeleton, GeneralError } from '@mochi/web'
+import { useLingui } from '@lingui/react/macro'
 import { Plug } from 'lucide-react'
 import { RoutingTable } from './routing-table'
 import { useRoutingData } from './use-routing-data'
 
 export function RoutingServices() {
-  usePageTitle('Service routing')
+  const { t } = useLingui()
+  usePageTitle(t`Service routing`)
   const { data, isLoading, error, refetch, handleUserChange, handleSystemChange } = useRoutingData()
 
   const services = data?.services ?? {}
@@ -13,9 +15,9 @@ export function RoutingServices() {
   return (
     <>
       <PageHeader
-        title='Services'
+        title={t`Services`}
         icon={<Plug className='size-4 md:size-5' />}
-        description='Configure which app handles inter-app service calls.'
+        description={t`Configure which app handles inter-app service calls.`}
       />
       <Main>
         {isLoading ? (

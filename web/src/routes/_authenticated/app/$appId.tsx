@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Trans, useLingui } from '@lingui/react/macro'
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import {
   Button,
@@ -85,6 +86,7 @@ function formatPermission(permission: string): string {
 }
 
 function AppPage() {
+  const { t } = useLingui()
   const { appId } = Route.useParams()
   const { tab } = Route.useSearch()
   const navigate = useNavigate()
@@ -138,12 +140,12 @@ function AppPage() {
   if (!app) {
     return (
       <>
-        <PageHeader title="App not found" back={{ label: 'Back to apps', onFallback: goBackToApps }} />
+        <PageHeader title={t`App not found`} back={{ label: 'Back to apps', onFallback: goBackToApps }} />
         <Main>
           <EmptyState
             icon={Package}
-            title="App not found"
-            description="The requested app could not be found."
+            title={t`App not found`}
+            description={t`The requested app could not be found.`}
           />
         </Main>
       </>
@@ -199,32 +201,33 @@ interface AppInfo {
 }
 
 function DetailsTab({ app }: { app: AppInfo }) {
+  const { t } = useLingui()
   return (
     <Section 
-      title="Identity" 
-      description="App information and configuration"
+      title={t`Identity`} 
+      description={t`App information and configuration`}
     >
       <div className="divide-y-0">
-        <FieldRow label="Application ID">
+        <FieldRow label={t`Application ID`}>
           <DataChip value={app.id} truncate='middle' />
         </FieldRow>
         
         {app.fingerprint && (
-          <FieldRow label="Fingerprint">
+          <FieldRow label={t`Fingerprint`}>
             <DataChip value={app.fingerprint} truncate='middle' />
           </FieldRow>
         )}
 
-        <FieldRow label="Current Version">
+        <FieldRow label={t`Current Version`}>
           <DataChip value={app.latest} />
         </FieldRow>
 
         {(app.classes?.length || app.services?.length || app.paths?.length) && (
           <div className='mt-6 border-t pt-6 space-y-4'>
-            <h4 className='text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4'>Technical Capabilities</h4>
+            <h4 className='text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4'><Trans>Technical Capabilities</Trans></h4>
             
             {app.classes && app.classes.length > 0 && (
-              <FieldRow label="Provided Classes">
+              <FieldRow label={t`Provided Classes`}>
                 <div className="flex flex-wrap gap-2">
                   {app.classes.map(c => <DataChip key={c} value={c} />)}
                 </div>
@@ -232,7 +235,7 @@ function DetailsTab({ app }: { app: AppInfo }) {
             )}
             
             {app.services && app.services.length > 0 && (
-              <FieldRow label="Enabled Services">
+              <FieldRow label={t`Enabled Services`}>
                 <div className="flex flex-wrap gap-2">
                   {app.services.map(s => <DataChip key={s} value={s} />)}
                 </div>
@@ -240,7 +243,7 @@ function DetailsTab({ app }: { app: AppInfo }) {
             )}
 
             {app.paths && app.paths.length > 0 && (
-              <FieldRow label="HTTP Paths">
+              <FieldRow label={t`HTTP Paths`}>
                 <div className="flex flex-wrap gap-2">
                   {app.paths.map((p) => <DataChip key={p} value={`/${p}`} />)}
                 </div>
@@ -254,6 +257,7 @@ function DetailsTab({ app }: { app: AppInfo }) {
 }
 
 function VersionsTab({ appId }: { appId: string }) {
+  const { t } = useLingui()
   const { data: versionData, isLoading: isLoadingVersions, isError } = useAppVersions(appId)
   const setUserVersion = useSetUserVersion()
   const setSystemVersion = useSetSystemVersion()
@@ -311,10 +315,10 @@ function VersionsTab({ appId }: { appId: string }) {
       { app: appId, version, track },
       {
         onSuccess: () => {
-          toast.success('Version changed')
+          toast.success(t`Version changed`)
         },
         onError: (error) => {
-          toast.error(getErrorMessage(error, 'Failed to update preference'))
+          toast.error(getErrorMessage(error, t`Failed to update preference`))
         },
       }
     )
@@ -331,10 +335,10 @@ function VersionsTab({ appId }: { appId: string }) {
       { app: appId, version, track },
       {
         onSuccess: () => {
-          toast.success('Default for all users updated')
+          toast.success(t`Default for all users updated`)
         },
         onError: (error) => {
-          toast.error(getErrorMessage(error, 'Failed to update default'))
+          toast.error(getErrorMessage(error, t`Failed to update default`))
         },
       }
     )
@@ -352,8 +356,8 @@ function VersionsTab({ appId }: { appId: string }) {
     return (
       <EmptyState
         icon={Package}
-        title="Not versioned"
-        description="This app does not have version management"
+        title={t`Not versioned`}
+        description={t`This app does not have version management`}
       />
     )
   }
@@ -372,7 +376,7 @@ function VersionsTab({ appId }: { appId: string }) {
         <SelectItem value='default'>{defaultLabel}</SelectItem>
         {hasTracks && (
           <SelectGroup>
-            <SelectLabel>Track</SelectLabel>
+            <SelectLabel><Trans>Track</Trans></SelectLabel>
             {Object.entries(versionData?.tracks ?? {}).map(
               ([track, version]) => (
                 <SelectItem key={`track:${track}`} value={`track:${track}`} className='pl-6'>
@@ -386,7 +390,7 @@ function VersionsTab({ appId }: { appId: string }) {
         )}
         {hasMultipleVersions && (
           <SelectGroup>
-            <SelectLabel>Version</SelectLabel>
+            <SelectLabel><Trans>Version</Trans></SelectLabel>
             {[...(versionData?.versions ?? [])].reverse().map((version) => (
               <SelectItem
                 key={`version:${version}`}
@@ -405,12 +409,12 @@ function VersionsTab({ appId }: { appId: string }) {
   return (
     <div className="space-y-6">
       <Section 
-        title="Version Management" 
-        description="Select which version of this app to use"
+        title={t`Version Management`} 
+        description={t`Select which version of this app to use`}
       >
         <div className="divide-y-0">
           {isAdmin && (
-            <FieldRow label="System Default" description="The version used by users who haven't made a choice">
+            <FieldRow label={t`System Default`} description="The version used by users who haven't made a choice">
               <div className="w-full max-w-sm">
                 {renderVersionSelect(
                   systemValue,
@@ -426,7 +430,7 @@ function VersionsTab({ appId }: { appId: string }) {
           
           <FieldRow 
             label={isAdmin ? 'Your Version' : 'Preferred Version'} 
-            description="Your personal version override"
+            description={t`Your personal version override`}
           >
             <div className="w-full max-w-sm">
               {renderVersionSelect(
@@ -446,6 +450,7 @@ function VersionsTab({ appId }: { appId: string }) {
 }
 
 function PermissionsTab({ appId, appName }: { appId: string; appName: string }) {
+  const { t } = useLingui()
   const { data, isLoading, error, refetch } = useAppPermissions(appId)
   const setPermission = useSetPermission()
   const [grantDialogOpen, setGrantDialogOpen] = useState(false)
@@ -458,11 +463,11 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
       { app: appId, permission, enabled: false },
       {
         onSuccess: () => {
-          toast.success('Permission revoked')
+          toast.success(t`Permission revoked`)
           setRevokingPermission(null)
         },
         onError: (error) => {
-          toast.error(getErrorMessage(error, 'Failed to revoke permission'))
+          toast.error(getErrorMessage(error, t`Failed to revoke permission`))
           setRevokingPermission(null)
         },
       }
@@ -475,12 +480,12 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
       { app: appId, permission, enabled: true },
       {
         onSuccess: () => {
-          toast.success('Permission granted')
+          toast.success(t`Permission granted`)
           setGrantingPermission(null)
           setGrantDialogOpen(false)
         },
         onError: (error) => {
-          toast.error(getErrorMessage(error, 'Failed to grant permission'))
+          toast.error(getErrorMessage(error, t`Failed to grant permission`))
           setGrantingPermission(null)
         },
       }
@@ -510,7 +515,7 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
 
   return (
     <Section 
-      title="Permissions" 
+      title={t`Permissions`} 
       description={grantedPermissions.length === 0
         ? 'No permissions granted to this app'
         : 'Manage capabilities granted to this application'}
@@ -519,12 +524,12 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
           <ResponsiveDialogTrigger asChild>
             <Button variant='outline' size='sm'>
               <Plus className='h-4 w-4 mr-1' />
-              Grant
+              <Trans>Grant</Trans>
             </Button>
           </ResponsiveDialogTrigger>
           <ResponsiveDialogContent className='flex flex-col overflow-hidden sm:max-w-lg data-[vaul-drawer-direction=bottom]:mt-4 data-[vaul-drawer-direction=bottom]:max-h-[calc(100dvh-1rem)]'>
             <ResponsiveDialogHeader>
-              <ResponsiveDialogTitle>Grant permission</ResponsiveDialogTitle>
+              <ResponsiveDialogTitle><Trans>Grant permission</Trans></ResponsiveDialogTitle>
               <ResponsiveDialogDescription>
                 Select a capability to grant to {appName}.
               </ResponsiveDialogDescription>
@@ -555,7 +560,7 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
             </div>
             <ResponsiveDialogFooter className='border-t pt-3'>
               <ResponsiveDialogClose asChild>
-                <Button variant='outline'>Cancel</Button>
+                <Button variant='outline'><Trans>Cancel</Trans></Button>
               </ResponsiveDialogClose>
             </ResponsiveDialogFooter>
           </ResponsiveDialogContent>
@@ -578,8 +583,8 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
           <div className="py-8">
             <EmptyState
               icon={Shield}
-              title="No permissions granted"
-              description="Grant permissions to allow this app to access system features"
+              title={t`No permissions granted`}
+              description={t`Grant permissions to allow this app to access system features`}
             />
           </div>
         )}
@@ -601,6 +606,7 @@ function PermissionRow({
   appName: string
   canRevoke: boolean
 }) {
+  const { t } = useLingui()
   const [confirmOpen, setConfirmOpen] = useState(false)
 
   return (
@@ -629,12 +635,12 @@ function PermissionRow({
             ) : (
               <X className='h-4 w-4' />
             )}
-            <span className='sr-only'>Revoke</span>
+            <span className='sr-only'><Trans>Revoke</Trans></span>
           </Button>
           <ConfirmDialog
             open={confirmOpen}
             onOpenChange={setConfirmOpen}
-            title='Revoke permission?'
+            title={t`Revoke permission?`}
             desc={`This will revoke the "${formatPermission(permission.permission)}" permission from ${appName}. The app may stop working correctly.`}
             confirmText='Revoke permission'
             destructive

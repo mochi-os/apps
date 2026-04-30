@@ -9,6 +9,7 @@ import {
   Skeleton,
 } from '@mochi/web'
 import { Download, AlertTriangle } from 'lucide-react'
+import { Trans } from '@lingui/react/macro'
 import type { AppInfo, Track } from '@/api/types/apps'
 
 interface AppInfoDialogProps {
@@ -134,7 +135,7 @@ export function AppInfoDialog({
 
         <ResponsiveDialogFooter>
           <Button variant='outline' onClick={() => onOpenChange(false)}>
-            Cancel
+            <Trans>Cancel</Trans>
           </Button>
         </ResponsiveDialogFooter>
       </ResponsiveDialogContent>
