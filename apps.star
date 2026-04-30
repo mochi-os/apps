@@ -392,6 +392,34 @@ def action_upgrade(a):
 
 	return {"data": {"upgraded": True, "id": id, "version": version}}
 
+# Search the local directory for installable apps matching a query
+def action_directory_search(a):
+	if a.user.role != "administrator":
+		if mochi.setting.get("apps_install_user") != "true":
+			return {"status": 403, "error": "App installation is restricted to administrators", "data": {}}
+
+	query = a.input("q", "")
+	if not query or len(query) < 2:
+		return {"data": {"apps": []}}
+	if len(query) > 100:
+		return {"status": 400, "error": "Search query too long", "data": {}}
+
+	entries = mochi.directory.search("app", query, True)
+
+	out = []
+	for entry in entries:
+		if mochi.app.get(entry["id"]):
+			continue
+		out.append({
+			"id": entry["id"],
+			"name": entry.get("name", ""),
+			"fingerprint": entry.get("fingerprint", ""),
+		})
+		if len(out) >= 50:
+			break
+
+	return {"data": {"apps": out}}
+
 # Multi-version apps support (requires Mochi 0.3+)
 
 # Check if multi-version apps feature is available

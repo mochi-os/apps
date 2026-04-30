@@ -8,6 +8,7 @@ const appKeys = {
   info: (id: string, url?: string) => ['apps', 'info', id, url ?? ''] as const,
   updates: () => ['apps', 'updates'] as const,
   routing: () => ['apps', 'routing'] as const,
+  directory: (q: string) => ['apps', 'directory', q] as const,
 }
 
 export const useInstalledAppsQuery = () =>
@@ -70,6 +71,13 @@ export const useInstallFromFileMutation = () => {
     },
   })
 }
+
+export const useDirectorySearchQuery = (query: string) =>
+  useQuery({
+    queryKey: appKeys.directory(query),
+    queryFn: () => appsApi.searchDirectory(query),
+    enabled: query.trim().length >= 2,
+  })
 
 export const useInstallByIdMutation = () => {
   const queryClient = useQueryClient()

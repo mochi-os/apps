@@ -92,6 +92,22 @@ const installById = async (
   return response
 }
 
+export interface DirectoryApp {
+  id: string
+  name: string
+  fingerprint: string
+}
+
+const searchDirectory = async (
+  q: string
+): Promise<DirectoryApp[]> => {
+  const response = await requestHelpers.get<{ apps: DirectoryApp[] }>(
+    endpoints.apps.directorySearch,
+    { params: { q } }
+  )
+  return response.apps
+}
+
 const getUpdates = async (): Promise<{
   updates: {
     id: string
@@ -188,6 +204,7 @@ const appsApi = {
   installFromPublisher,
   installFromFile,
   installById,
+  searchDirectory,
   getUpdates,
   upgrade,
   cleanup,

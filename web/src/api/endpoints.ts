@@ -13,6 +13,7 @@ const endpoints = {
     installPublisher: '/apps/-/install/publisher',
     installFile: '/apps/-/install/file',
     installId: '/apps/-/install/id',
+    directorySearch: '/apps/-/directory/search',
     updates: '/apps/-/updates',
     upgrade: '/apps/-/upgrade',
   },

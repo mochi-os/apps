@@ -24,6 +24,7 @@ import {
   ResponsiveDialogHeader,
   ResponsiveDialogTitle,
   Switch,
+  useDebounce,
   usePageTitle,
   toast,
   Skeleton,
@@ -31,6 +32,7 @@ import {
 } from '@mochi/web'
 import { Package, ExternalLink, Download, RefreshCw, MoreHorizontal, Trash2 } from 'lucide-react'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
+import type { DirectoryApp } from '@/api/apps'
 import {
   useInstalledAppsQuery,
   useMarketAppsQuery,
@@ -38,6 +40,7 @@ import {
   useInstallFromPublisherMutation,
   useInstallFromFileMutation,
   useInstallByIdMutation,
+  useDirectorySearchQuery,
   useUpdatesQuery,
   useUpgradeMutation,
   useCleanupMutation,
@@ -58,7 +61,11 @@ export function Apps() {
   const [selectedAppId, setSelectedAppId] = useState<string | null>(null)
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
   const [allowDiscovery, setAllowDiscovery] = useState(false)
+  const [selectedDirectoryApp, setSelectedDirectoryApp] =
+    useState<DirectoryApp | null>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const debouncedSearch = useDebounce(searchQuery, 250)
+  const isSearching = searchQuery.trim().length >= 2
 
   const {
     data: appsData,
@@ -73,6 +80,10 @@ export function Apps() {
   const { data: appInfo, isLoading: isLoadingInfo } =
     useAppInfoQuery(selectedAppId)
   const { data: updatesData, refetch: refetchUpdates } = useUpdatesQuery()
+  const { data: directoryApps, isLoading: isLoadingDirectory } =
+    useDirectorySearchQuery(
+      appsData?.can_install ? debouncedSearch : ''
+    )
   const installFromPublisherMutation = useInstallFromPublisherMutation()
   const installFromFileMutation = useInstallFromFileMutation()
   const installByIdMutation = useInstallByIdMutation()
@@ -146,6 +157,22 @@ export function Apps() {
           })
           setInstallFromPublisher(false)
           setAppIdInput('')
+        },
+      }
+    )
+  }
+
+  const handleDirectoryInstall = () => {
+    if (!selectedDirectoryApp) return
+    const target = selectedDirectoryApp
+    installByIdMutation.mutate(
+      { id: target.id },
+      {
+        onSuccess: (data) => {
+          toast.success('App installed', {
+            description: `${data.name || target.name} v${data.version} has been installed.`,
+          })
+          setSelectedDirectoryApp(null)
         },
       }
     )
@@ -370,8 +397,8 @@ export function Apps() {
           </section>
         )}
 
-        {/* Market Apps Section - only show if user can install */}
-        {appsData?.can_install && (
+        {/* Market Apps Section - only show if user can install AND not searching */}
+        {appsData?.can_install && !isSearching && (
           <section>
             <h2 className='text-xl font-semibold'>Available, but not installed</h2>
             <p className='mb-4 ml-3 text-xs font-medium tracking-wide text-muted-foreground uppercase'>Recommended</p>
@@ -424,6 +451,91 @@ export function Apps() {
             )}
           </section>
         )}
+
+        {/* Directory Search Section - show only while searching */}
+        {appsData?.can_install && isSearching && (
+          <section>
+            <h2 className='mb-4 text-xl font-semibold'>From the directory</h2>
+            {isLoadingDirectory ? (
+              <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+                {Array.from({ length: 3 }).map((_, i) => (
+                  <Card key={i} className='flex flex-col h-30'>
+                    <CardHeader className='pb-3'>
+                      <Skeleton className='h-6 w-3/4' />
+                    </CardHeader>
+                    <CardContent>
+                      <Skeleton className='h-4 w-1/3' />
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            ) : !directoryApps?.length ? (
+              <EmptyState
+                icon={Package}
+                title='No matches in directory'
+                description={`No installable apps in the directory match "${searchQuery}"`}
+              />
+            ) : (
+              <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+                {directoryApps.map((app) => (
+                  <Card
+                    key={app.id}
+                    role='button'
+                    tabIndex={0}
+                    className='flex cursor-pointer flex-col transition-[background-color,border-color,box-shadow] hover:bg-surface-2 hover:border-border-strong hover:shadow-md'
+                    onClick={() => setSelectedDirectoryApp(app)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault()
+                        setSelectedDirectoryApp(app)
+                      }
+                    }}
+                  >
+                    <CardHeader className='pb-3'>
+                      <CardTitle className='truncate text-lg'>
+                        {app.name}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <DataChip value={app.fingerprint} />
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+          </section>
+        )}
+
+        <ResponsiveDialog
+          open={!!selectedDirectoryApp}
+          onOpenChange={(open) => {
+            if (!open) setSelectedDirectoryApp(null)
+          }}
+        >
+          <ResponsiveDialogContent>
+            <ResponsiveDialogHeader>
+              <ResponsiveDialogTitle>
+                Install {selectedDirectoryApp?.name}?
+              </ResponsiveDialogTitle>
+            </ResponsiveDialogHeader>
+            <ResponsiveDialogFooter>
+              <ResponsiveDialogClose asChild>
+                <Button
+                  variant='outline'
+                  disabled={installByIdMutation.isPending}
+                >
+                  Cancel
+                </Button>
+              </ResponsiveDialogClose>
+              <Button
+                onClick={handleDirectoryInstall}
+                disabled={installByIdMutation.isPending}
+              >
+                {installByIdMutation.isPending ? 'Installing...' : 'Install'}
+              </Button>
+            </ResponsiveDialogFooter>
+          </ResponsiveDialogContent>
+        </ResponsiveDialog>
 
         <ResponsiveDialog
           open={installFromPublisher}
