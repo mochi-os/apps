@@ -310,12 +310,12 @@ msgstr "Dark"
 msgid "Dark mode"
 msgstr "Dark mode"
 
-#: src/features/routing/routing-table.tsx:65
+#: src/features/routing/routing-table.tsx:66
 msgid "Declared by"
 msgstr "Declared by"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
-#: src/features/routing/routing-table.tsx:116
+#: src/features/routing/routing-table.tsx:117
 msgid "Default"
 msgstr "Default"
 
@@ -446,6 +446,10 @@ msgstr "Grant"
 msgid "Grant permission"
 msgstr "Grant permission"
 
+#: src/routes/_authenticated/app/$appId.tsx:585
+msgid "Grant permissions to allow this app to access system features"
+msgstr "Grant permissions to allow this app to access system features"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:159
 msgid "Group"
 msgstr "Group"
@@ -568,6 +572,10 @@ msgstr "Mark all as read"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
 msgstr "Menu"
+
+#: src/features/routing/routing-table.tsx:93
+msgid "Multiple apps declare this resource"
+msgstr "Multiple apps declare this resource"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:40
 msgid "New"
@@ -765,6 +773,12 @@ msgstr "Remove access?"
 msgid "Remove interest"
 msgstr "Remove interest"
 
+#. placeholder {0}: data.removed
+#. placeholder {1}: data.removed === 1 ? '' : 's'
+#: src/features/apps/index.tsx:194
+msgid "Removed {0} unused version{1}"
+msgstr "Removed {0} unused version{1}"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 msgid "Reset"
 msgstr "Reset"
@@ -863,6 +877,10 @@ msgstr "Select site direction"
 msgid "Select theme preference"
 msgstr "Select theme preference"
 
+#: src/routes/_authenticated/app/$appId.tsx:412
+msgid "Select which version of this app to use"
+msgstr "Select which version of this app to use"
+
 #: src/features/routing/services.tsx:9
 msgid "Service routing"
 msgstr "Service routing"
@@ -916,7 +934,7 @@ msgstr "Subject"
 msgid "System"
 msgstr "System"
 
-#: src/features/routing/routing-table.tsx:67
+#: src/features/routing/routing-table.tsx:68
 msgid "System default"
 msgstr "System default"
 
@@ -956,6 +974,10 @@ msgstr "Theme"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "Theme Settings"
+
+#: src/routes/_authenticated/app/$appId.tsx:359
+msgid "This app does not have version management"
+msgstr "This app does not have version management"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:34
 msgid "Toggle columns"
@@ -1111,3 +1133,7 @@ msgstr "We'll be back online shortly."
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:9
 msgid "Website is under maintenance!"
 msgstr "Website is under maintenance!"
+
+#: src/routes/_authenticated/app/$appId.tsx:432
+msgid "Your personal version override"
+msgstr "Your personal version override"

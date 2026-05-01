@@ -191,7 +191,7 @@ export function Apps() {
         if (data.removed === 0) {
           toast.info(t`No unused versions to clean up`)
         } else {
-          toast.success(`Removed ${data.removed} unused version${data.removed === 1 ? '' : 's'}`)
+          toast.success(t`Removed ${data.removed} unused version${data.removed === 1 ? '' : 's'}`)
         }
       },
     })

@@ -76,7 +76,7 @@ msgstr "既存の通知に追加"
 
 #: ../../../lib/web/src/components/view-tabs.tsx:57
 msgid "Add view"
-msgstr ""
+msgstr "ビューを追加"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:62
 msgid "Adjust the appearance and layout to suit your preferences."
@@ -310,12 +310,12 @@ msgstr "ダーク"
 msgid "Dark mode"
 msgstr "ダークモード"
 
-#: src/features/routing/routing-table.tsx:65
+#: src/features/routing/routing-table.tsx:66
 msgid "Declared by"
 msgstr "宣言元"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
-#: src/features/routing/routing-table.tsx:116
+#: src/features/routing/routing-table.tsx:117
 msgid "Default"
 msgstr "デフォルト"
 
@@ -446,6 +446,10 @@ msgstr "付与"
 msgid "Grant permission"
 msgstr "権限を付与"
 
+#: src/routes/_authenticated/app/$appId.tsx:585
+msgid "Grant permissions to allow this app to access system features"
+msgstr "このアプリにシステム機能へのアクセス権を付与します"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:159
 msgid "Group"
 msgstr "グループ"
@@ -568,6 +572,10 @@ msgstr "すべて既読にする"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
 msgstr "メニュー"
+
+#: src/features/routing/routing-table.tsx:93
+msgid "Multiple apps declare this resource"
+msgstr "複数のアプリがこのリソースを宣言しています"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:40
 msgid "New"
@@ -765,6 +773,12 @@ msgstr "アクセスを削除しますか?"
 msgid "Remove interest"
 msgstr "関心を削除"
 
+#. placeholder {0}: data.removed
+#. placeholder {1}: data.removed === 1 ? '' : 's'
+#: src/features/apps/index.tsx:194
+msgid "Removed {0} unused version{1}"
+msgstr "未使用のバージョン {0} 件を削除しました"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 msgid "Reset"
 msgstr "リセット"
@@ -819,7 +833,7 @@ msgstr "ユーザーを検索"
 
 #: ../../../lib/web/src/components/person-picker.tsx:312
 msgid "Search..."
-msgstr ""
+msgstr "検索…"
 
 #: ../../../lib/web/src/components/language-picker.tsx:115
 msgid "Search…"
@@ -862,6 +876,10 @@ msgstr "サイトの表示方向を選択"
 #: ../../../lib/web/src/components/config-drawer.tsx:189
 msgid "Select theme preference"
 msgstr "テーマの設定を選択"
+
+#: src/routes/_authenticated/app/$appId.tsx:412
+msgid "Select which version of this app to use"
+msgstr "このアプリで使用するバージョンを選択"
 
 #: src/features/routing/services.tsx:9
 msgid "Service routing"
@@ -916,7 +934,7 @@ msgstr "件名"
 msgid "System"
 msgstr "システム"
 
-#: src/features/routing/routing-table.tsx:67
+#: src/features/routing/routing-table.tsx:68
 msgid "System default"
 msgstr "システムデフォルト"
 
@@ -956,6 +974,10 @@ msgstr "テーマ"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "テーマ設定"
+
+#: src/routes/_authenticated/app/$appId.tsx:359
+msgid "This app does not have version management"
+msgstr "このアプリにはバージョン管理がありません"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:34
 msgid "Toggle columns"
@@ -1111,3 +1133,7 @@ msgstr "まもなく復旧します。"
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:9
 msgid "Website is under maintenance!"
 msgstr "ウェブサイトはメンテナンス中です!"
+
+#: src/routes/_authenticated/app/$appId.tsx:432
+msgid "Your personal version override"
+msgstr "個人用のバージョン上書き設定"

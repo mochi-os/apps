@@ -356,7 +356,7 @@ function VersionsTab({ appId }: { appId: string }) {
       <EmptyState
         icon={Package}
         title={t`Not versioned`}
-        description={"This app does not have version management"}
+        description={t`This app does not have version management`}
       />
     )
   }
@@ -409,7 +409,7 @@ function VersionsTab({ appId }: { appId: string }) {
     <div className="space-y-6">
       <Section 
         title={t`Version Management`} 
-        description={"Select which version of this app to use"}
+        description={t`Select which version of this app to use`}
       >
         <div className="divide-y-0">
           {isAdmin && (
@@ -429,7 +429,7 @@ function VersionsTab({ appId }: { appId: string }) {
           
           <FieldRow 
             label={isAdmin ? "Your Version" : "Preferred Version"} 
-            description={"Your personal version override"}
+            description={t`Your personal version override`}
           >
             <div className="w-full max-w-sm">
               {renderVersionSelect(
@@ -582,7 +582,7 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
             <EmptyState
               icon={Shield}
               title={t`No permissions granted`}
-              description={"Grant permissions to allow this app to access system features"}
+              description={t`Grant permissions to allow this app to access system features`}
             />
           </div>
         )}

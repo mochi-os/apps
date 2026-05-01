@@ -7,6 +7,7 @@ import {
 import { AlertTriangle } from 'lucide-react'
 import { Trans } from '@lingui/react/macro'
 import type { RoutingResource, RoutingApp } from '@/api/apps'
+import { t } from '@lingui/core/macro'
 
 // Development apps have short IDs, installed apps have entity IDs (50-51 chars)
 function isDevelopmentApp(id: string): boolean {
@@ -89,7 +90,7 @@ export function RoutingTable({
                   <div className='flex items-center gap-2'>
                     <code className='text-sm'>{displayName}</code>
                     {hasConflict && (
-                      <span title={"Multiple apps declare this resource"}>
+                      <span title={t`Multiple apps declare this resource`}>
                         <AlertTriangle className='h-4 w-4 text-amber-500' />
                       </span>
                     )}

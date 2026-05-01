@@ -76,7 +76,7 @@ msgstr "Ajouter aux notifications existantes"
 
 #: ../../../lib/web/src/components/view-tabs.tsx:57
 msgid "Add view"
-msgstr ""
+msgstr "Ajouter une vue"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:62
 msgid "Adjust the appearance and layout to suit your preferences."
@@ -310,12 +310,12 @@ msgstr "Sombre"
 msgid "Dark mode"
 msgstr "Mode sombre"
 
-#: src/features/routing/routing-table.tsx:65
+#: src/features/routing/routing-table.tsx:66
 msgid "Declared by"
 msgstr "Déclarée par"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
-#: src/features/routing/routing-table.tsx:116
+#: src/features/routing/routing-table.tsx:117
 msgid "Default"
 msgstr "Par défaut"
 
@@ -446,6 +446,10 @@ msgstr "Accorder"
 msgid "Grant permission"
 msgstr "Accorder la permission"
 
+#: src/routes/_authenticated/app/$appId.tsx:585
+msgid "Grant permissions to allow this app to access system features"
+msgstr "Accorder des permissions pour permettre à cette app d'accéder aux fonctionnalités système"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:159
 msgid "Group"
 msgstr "Groupe"
@@ -568,6 +572,10 @@ msgstr "Tout marquer comme lu"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
 msgstr "Menu"
+
+#: src/features/routing/routing-table.tsx:93
+msgid "Multiple apps declare this resource"
+msgstr "Plusieurs apps déclarent cette ressource"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:40
 msgid "New"
@@ -765,6 +773,12 @@ msgstr "Supprimer l'accès ?"
 msgid "Remove interest"
 msgstr "Supprimer l'intérêt"
 
+#. placeholder {0}: data.removed
+#. placeholder {1}: data.removed === 1 ? '' : 's'
+#: src/features/apps/index.tsx:194
+msgid "Removed {0} unused version{1}"
+msgstr "{0} version{1} inutilisée supprimée"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 msgid "Reset"
 msgstr "Réinitialiser"
@@ -819,7 +833,7 @@ msgstr "Rechercher des utilisateurs"
 
 #: ../../../lib/web/src/components/person-picker.tsx:312
 msgid "Search..."
-msgstr ""
+msgstr "Rechercher…"
 
 #: ../../../lib/web/src/components/language-picker.tsx:115
 msgid "Search…"
@@ -862,6 +876,10 @@ msgstr "Sélectionner la direction du site"
 #: ../../../lib/web/src/components/config-drawer.tsx:189
 msgid "Select theme preference"
 msgstr "Sélectionner la préférence de thème"
+
+#: src/routes/_authenticated/app/$appId.tsx:412
+msgid "Select which version of this app to use"
+msgstr "Choisir la version de cette app à utiliser"
 
 #: src/features/routing/services.tsx:9
 msgid "Service routing"
@@ -916,7 +934,7 @@ msgstr "Sujet"
 msgid "System"
 msgstr "Système"
 
-#: src/features/routing/routing-table.tsx:67
+#: src/features/routing/routing-table.tsx:68
 msgid "System default"
 msgstr "Valeur par défaut système"
 
@@ -956,6 +974,10 @@ msgstr "Thème"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "Paramètres du thème"
+
+#: src/routes/_authenticated/app/$appId.tsx:359
+msgid "This app does not have version management"
+msgstr "Cette app n'a pas de gestion de versions"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:34
 msgid "Toggle columns"
@@ -1111,3 +1133,7 @@ msgstr "Nous serons de retour en ligne sous peu."
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:9
 msgid "Website is under maintenance!"
 msgstr "Le site est en maintenance !"
+
+#: src/routes/_authenticated/app/$appId.tsx:432
+msgid "Your personal version override"
+msgstr "Votre remplacement de version personnel"
