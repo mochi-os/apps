@@ -60,14 +60,14 @@ export function RoutingTable({
       <table className='w-full'>
         <thead>
           <tr className='border-b bg-muted/50'>
-            <th className='px-4 py-3 text-left text-sm font-medium'>
+            <th className='px-4 py-3 text-start text-sm font-medium'>
               {type === 'path' ? 'Path' : type === 'class' ? "Class" : "Service"}
             </th>
-            <th className='px-4 py-3 text-left text-sm font-medium'><Trans>Declared by</Trans></th>
+            <th className='px-4 py-3 text-start text-sm font-medium'><Trans>Declared by</Trans></th>
             {isAdmin && (
-              <th className='px-4 py-3 text-left text-sm font-medium'><Trans>System default</Trans></th>
+              <th className='px-4 py-3 text-start text-sm font-medium'><Trans>System default</Trans></th>
             )}
-            <th className='px-4 py-3 text-left text-sm font-medium'>
+            <th className='px-4 py-3 text-start text-sm font-medium'>
               {isAdmin ? "Your preference" : "Handler"}
             </th>
           </tr>
@@ -140,7 +140,7 @@ export function RoutingTable({
                         <span className='text-muted-foreground'>
                           {isAdmin ? "Use system default" : "Default"}
                           {!resource.user && effectiveApp && (
-                            <span className='ml-1'>
+                            <span className='ms-1'>
                               ({formatAppName(resource.apps.find((a) => a.id === effectiveApp)!)})
                             </span>
                           )}

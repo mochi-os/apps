@@ -117,7 +117,7 @@ export function AppInfoDialog({
                         onClick={() => onInstall(track.version)}
                         disabled={isInstalling}
                       >
-                        <Download className='mr-2 h-4 w-4' />
+                        <Download className='me-2 h-4 w-4' />
                         {isInstalling ? "Installing..." : "Install"}
                       </Button>
                     </div>

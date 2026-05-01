@@ -258,7 +258,7 @@ export function Apps() {
                   disabled={upgradeMutation.isPending}
                 >
                   <RefreshCw
-                    className={`mr-2 h-4 w-4 ${upgradeMutation.isPending ? 'animate-spin' : ''}`}
+                    className={`me-2 h-4 w-4 ${upgradeMutation.isPending ? 'animate-spin' : ''}`}
                   />
                   {upgradeMutation.isPending ? t`Updating...` : t`Update all`}
                 </DropdownMenuItem>
@@ -266,18 +266,18 @@ export function Apps() {
               {appsData?.can_install && (
                 <>
                   <DropdownMenuItem onClick={() => setInstallFromPublisher(true)}>
-                    <ExternalLink className='mr-2 h-4 w-4' />
+                    <ExternalLink className='me-2 h-4 w-4' />
                     <Trans>Install from publisher</Trans>
                   </DropdownMenuItem>
                   <DropdownMenuItem onClick={() => fileInputRef.current?.click()}>
-                    <Download className='mr-2 h-4 w-4' />
+                    <Download className='me-2 h-4 w-4' />
                     <Trans>Install from file</Trans>
                   </DropdownMenuItem>
                   <DropdownMenuItem
                     onClick={handleCleanup}
                     disabled={cleanupMutation.isPending}
                   >
-                    <Trash2 className='mr-2 h-4 w-4' />
+                    <Trash2 className='me-2 h-4 w-4' />
                     {cleanupMutation.isPending
                       ? t`Cleaning up...` : t`Clean up unused versions`}
                   </DropdownMenuItem>
@@ -385,7 +385,7 @@ export function Apps() {
         {appsData?.can_install && !isSearching && (
           <section>
             <h2 className='text-xl font-semibold'><Trans>Available, but not installed</Trans></h2>
-            <p className='mb-4 ml-3 text-xs font-medium tracking-wide text-muted-foreground uppercase'><Trans>Recommended</Trans></p>
+            <p className='mb-4 ms-3 text-xs font-medium tracking-wide text-muted-foreground uppercase'><Trans>Recommended</Trans></p>
             {isLoadingMarket ? (
               <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
                 {Array.from({ length: 6 }).map((_, i) => (

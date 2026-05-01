@@ -378,7 +378,7 @@ function VersionsTab({ appId }: { appId: string }) {
             <SelectLabel><Trans>Track</Trans></SelectLabel>
             {Object.entries(versionData?.tracks ?? {}).map(
               ([track, version]) => (
-                <SelectItem key={`track:${track}`} value={`track:${track}`} className='pl-6'>
+                <SelectItem key={`track:${track}`} value={`track:${track}`} className='ps-6'>
                   {track === defaultTrack
                     ? `${track} (default, version ${version})`
                     : `${track} (version ${version})`}
@@ -394,7 +394,7 @@ function VersionsTab({ appId }: { appId: string }) {
               <SelectItem
                 key={`version:${version}`}
                 value={`version:${version}`}
-                className='pl-6'
+                className='ps-6'
               >
                 {version}
               </SelectItem>
@@ -521,7 +521,7 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
         <ResponsiveDialog open={grantDialogOpen} onOpenChange={setGrantDialogOpen}>
           <ResponsiveDialogTrigger asChild>
             <Button variant='outline' size='sm'>
-              <Plus className='h-4 w-4 mr-1' />
+              <Plus className='h-4 w-4 me-1' />
               <Trans>Grant</Trans>
             </Button>
           </ResponsiveDialogTrigger>
@@ -538,7 +538,7 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
                   key={p.permission}
                   onClick={() => handleGrant(p.permission)}
                   disabled={grantingPermission !== null}
-                  className='hover:bg-accent flex w-full items-center justify-between rounded-lg border p-3.5 text-left text-sm transition-colors disabled:opacity-50'
+                  className='hover:bg-accent flex w-full items-center justify-between rounded-lg border p-3.5 text-start text-sm transition-colors disabled:opacity-50'
                 >
                   <div className='flex items-center gap-3'>
                     {p.restricted ? (
