@@ -111,7 +111,7 @@ export function InstallDialog({
             }}
             disabled={isLoading || isInstalling || !appInfo?.tracks.length}
           >
-            {isInstalling ? 'Installing...' : 'Install'}
+            {isInstalling ? "Installing..." : "Install"}
           </Button>
         </ResponsiveDialogFooter>
       </ResponsiveDialogContent>

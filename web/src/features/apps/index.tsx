@@ -113,7 +113,7 @@ export function Apps() {
       {
         onSuccess: () => {
           toast.success(t`App installed`, {
-            description: 'The app has been installed successfully.',
+            description: t`The app has been installed successfully.`,
           })
           setSelectedAppId(null)
           setSelectedMarketApp(null)
@@ -176,7 +176,7 @@ export function Apps() {
     if (failed === 0) {
       toast.success(t`All apps updated`)
     } else if (failed === results.length) {
-      toast.error(t`Update failed`, { description: 'No apps could be updated.' })
+      toast.error(t`Update failed`, { description: t`No apps could be updated.` })
     } else {
       toast.warning(`${results.length - failed} updated, ${failed} failed`)
     }
@@ -215,7 +215,7 @@ export function Apps() {
       {
         onSuccess: () => {
           toast.success(t`App installed`, {
-            description: 'The app has been installed successfully.',
+            description: t`The app has been installed successfully.`,
           })
           setInstallFromFile(false)
           setSelectedFile(null)
@@ -260,7 +260,7 @@ export function Apps() {
                   <RefreshCw
                     className={`mr-2 h-4 w-4 ${upgradeMutation.isPending ? 'animate-spin' : ''}`}
                   />
-                  {upgradeMutation.isPending ? 'Updating...' : 'Update all'}
+                  {upgradeMutation.isPending ? t`Updating...` : t`Update all`}
                 </DropdownMenuItem>
               )}
               {appsData?.can_install && (
@@ -279,8 +279,7 @@ export function Apps() {
                   >
                     <Trash2 className='mr-2 h-4 w-4' />
                     {cleanupMutation.isPending
-                      ? 'Cleaning up...'
-                      : 'Clean up unused versions'}
+                      ? t`Cleaning up...` : t`Clean up unused versions`}
                   </DropdownMenuItem>
                 </>
               )}
@@ -516,7 +515,7 @@ export function Apps() {
                 onClick={handleDirectoryInstall}
                 disabled={installByIdMutation.isPending}
               >
-                {installByIdMutation.isPending ? 'Installing...' : 'Install'}
+                {installByIdMutation.isPending ? t`Installing...` : t`Install`}
               </Button>
             </ResponsiveDialogFooter>
           </ResponsiveDialogContent>
@@ -556,7 +555,7 @@ export function Apps() {
                 onClick={handlePublisherInstall}
                 disabled={installByIdMutation.isPending}
               >
-                {installByIdMutation.isPending ? 'Installing...' : 'Install'}
+                {installByIdMutation.isPending ? t`Installing...` : t`Install`}
               </Button>
             </ResponsiveDialogFooter>
           </ResponsiveDialogContent>
@@ -604,8 +603,7 @@ export function Apps() {
                 disabled={installFromFileMutation.isPending}
               >
                 {installFromFileMutation.isPending
-                  ? 'Installing...'
-                  : 'Install'}
+                  ? t`Installing...` : t`Install`}
               </Button>
             </ResponsiveDialogFooter>
           </ResponsiveDialogContent>
@@ -650,7 +648,6 @@ function InstalledAppCard({
   showId?: boolean
   availableVersion?: string
 }) {
-  const { t } = useLingui()
   // Show track if user is following a non-Production track
   const showTrack = app.user_track && app.user_track !== 'Production'
 
@@ -669,11 +666,11 @@ function InstalledAppCard({
           {availableVersion && availableVersion !== app.latest && (
             <DataChip
               value={availableVersion}
-              label={t`Update`}
+              label={"Update"}
             />
           )}
           {showTrack && app.user_track && (
-            <DataChip value={app.user_track} label={t`Track`} />
+            <DataChip value={app.user_track} label={"Track"} />
           )}
           {showId && (
             <span className='text-xs text-muted-foreground truncate font-mono opacity-80'>

@@ -1,9 +1,11 @@
 import { useMemo } from 'react'
+import { useLingui } from '@lingui/react/macro'
 import { AuthenticatedLayout, type SidebarData } from '@mochi/web'
 import { Package, Boxes, Plug, FolderTree } from 'lucide-react'
 import { useUpdatesQuery } from '@/hooks/useApps'
 
 export function AppsLayout() {
+  const { t } = useLingui()
   const { data: updatesData } = useUpdatesQuery()
 
   const updateCount = updatesData?.updates?.length ?? 0
@@ -12,17 +14,17 @@ export function AppsLayout() {
     return {
       navGroups: [
         {
-          title: 'Apps',
+          title: t`Apps`,
           items: [
             {
-              title: 'Apps',
+              title: t`Apps`,
               url: '/',
               icon: Package,
               badge: updateCount > 0 ? String(updateCount) : undefined,
             },
-            { title: 'Classes', url: '/routing/classes', icon: Boxes },
-            { title: 'Services', url: '/routing/services', icon: Plug },
-            { title: 'Paths', url: '/routing/paths', icon: FolderTree },
+            { title: t`Classes`, url: '/routing/classes', icon: Boxes },
+            { title: t`Services`, url: '/routing/services', icon: Plug },
+            { title: t`Paths`, url: '/routing/paths', icon: FolderTree },
           ],
         },
       ],

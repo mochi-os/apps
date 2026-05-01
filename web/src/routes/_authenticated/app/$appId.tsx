@@ -60,18 +60,18 @@ export const Route = createFileRoute('/_authenticated/app/$appId')({
 
 // All available permissions
 const allPermissions = [
-  { permission: 'account/read', restricted: false, label: 'Read connected accounts' },
-  { permission: 'account/manage', restricted: false, label: 'Manage connected accounts' },
-  { permission: 'account/ai', restricted: true, label: 'Use AI services' },
-  { permission: 'account/mcp', restricted: true, label: 'Use MCP services' },
-  { permission: 'account/notify', restricted: true, label: 'Send account notifications' },
-  { permission: 'group/manage', restricted: false, label: 'Manage groups' },
-  { permission: 'interests/read', restricted: false, label: 'Read interests' },
-  { permission: 'interests/write', restricted: false, label: 'Write interests' },
-  { permission: 'user/read', restricted: true, label: 'Read user data' },
-  { permission: 'setting/write', restricted: true, label: 'Modify system settings' },
-  { permission: 'permission/manage', restricted: true, label: 'Manage permissions' },
-  { permission: 'webpush/send', restricted: true, label: 'Send notifications' },
+  { permission: 'account/read', restricted: false, label: "Read connected accounts" },
+  { permission: 'account/manage', restricted: false, label: "Manage connected accounts" },
+  { permission: 'account/ai', restricted: true, label: "Use AI services" },
+  { permission: 'account/mcp', restricted: true, label: "Use MCP services" },
+  { permission: 'account/notify', restricted: true, label: "Send account notifications" },
+  { permission: 'group/manage', restricted: false, label: "Manage groups" },
+  { permission: 'interests/read', restricted: false, label: "Read interests" },
+  { permission: 'interests/write', restricted: false, label: "Write interests" },
+  { permission: 'user/read', restricted: true, label: "Read user data" },
+  { permission: 'setting/write', restricted: true, label: "Modify system settings" },
+  { permission: 'permission/manage', restricted: true, label: "Manage permissions" },
+  { permission: 'webpush/send', restricted: true, label: "Send notifications" },
 ]
 
 function formatPermission(permission: string): string {
@@ -119,7 +119,7 @@ function AppPage() {
         <PageHeader
           title={<Skeleton className='h-8 w-48' />}
           icon={<Skeleton className='size-4 md:size-5 rounded-md' />}
-          back={{ label: 'Back to apps', onFallback: goBackToApps }}
+          back={{ label: t`Back to apps`, onFallback: goBackToApps }}
         />
         <Main className='pt-2 space-y-8'>
           <div className='flex items-center border-b'>
@@ -140,7 +140,7 @@ function AppPage() {
   if (!app) {
     return (
       <>
-        <PageHeader title={t`App not found`} back={{ label: 'Back to apps', onFallback: goBackToApps }} />
+        <PageHeader title={t`App not found`} back={{ label: t`Back to apps`, onFallback: goBackToApps }} />
         <Main>
           <EmptyState
             icon={Package}
@@ -157,7 +157,7 @@ function AppPage() {
       <PageHeader 
         title={app.name}
         icon={<Package className='size-4 md:size-5' />}
-        back={{ label: 'Back to apps', onFallback: goBackToApps }}
+        back={{ label: t`Back to apps`, onFallback: goBackToApps }}
       />
       <Main className='pt-2 space-y-6'>
         <div className='flex items-center border-b'>
@@ -201,24 +201,23 @@ interface AppInfo {
 }
 
 function DetailsTab({ app }: { app: AppInfo }) {
-  const { t } = useLingui()
   return (
     <Section 
-      title={t`Identity`} 
-      description={t`App information and configuration`}
+      title={"Identity"} 
+      description={"App information and configuration"}
     >
       <div className="divide-y-0">
-        <FieldRow label={t`Application ID`}>
+        <FieldRow label={"Application ID"}>
           <DataChip value={app.id} truncate='middle' />
         </FieldRow>
         
         {app.fingerprint && (
-          <FieldRow label={t`Fingerprint`}>
+          <FieldRow label={"Fingerprint"}>
             <DataChip value={app.fingerprint} truncate='middle' />
           </FieldRow>
         )}
 
-        <FieldRow label={t`Current Version`}>
+        <FieldRow label={"Current Version"}>
           <DataChip value={app.latest} />
         </FieldRow>
 
@@ -227,7 +226,7 @@ function DetailsTab({ app }: { app: AppInfo }) {
             <h4 className='text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4'><Trans>Technical Capabilities</Trans></h4>
             
             {app.classes && app.classes.length > 0 && (
-              <FieldRow label={t`Provided Classes`}>
+              <FieldRow label={"Provided Classes"}>
                 <div className="flex flex-wrap gap-2">
                   {app.classes.map(c => <DataChip key={c} value={c} />)}
                 </div>
@@ -235,7 +234,7 @@ function DetailsTab({ app }: { app: AppInfo }) {
             )}
             
             {app.services && app.services.length > 0 && (
-              <FieldRow label={t`Enabled Services`}>
+              <FieldRow label={"Enabled Services"}>
                 <div className="flex flex-wrap gap-2">
                   {app.services.map(s => <DataChip key={s} value={s} />)}
                 </div>
@@ -243,7 +242,7 @@ function DetailsTab({ app }: { app: AppInfo }) {
             )}
 
             {app.paths && app.paths.length > 0 && (
-              <FieldRow label={t`HTTP Paths`}>
+              <FieldRow label={"HTTP Paths"}>
                 <div className="flex flex-wrap gap-2">
                   {app.paths.map((p) => <DataChip key={p} value={`/${p}`} />)}
                 </div>
@@ -257,7 +256,6 @@ function DetailsTab({ app }: { app: AppInfo }) {
 }
 
 function VersionsTab({ appId }: { appId: string }) {
-  const { t } = useLingui()
   const { data: versionData, isLoading: isLoadingVersions, isError } = useAppVersions(appId)
   const setUserVersion = useSetUserVersion()
   const setSystemVersion = useSetSystemVersion()
@@ -315,10 +313,10 @@ function VersionsTab({ appId }: { appId: string }) {
       { app: appId, version, track },
       {
         onSuccess: () => {
-          toast.success(t`Version changed`)
+          toast.success("Version changed")
         },
         onError: (error) => {
-          toast.error(getErrorMessage(error, t`Failed to update preference`))
+          toast.error(getErrorMessage(error, "Failed to update preference"))
         },
       }
     )
@@ -335,10 +333,10 @@ function VersionsTab({ appId }: { appId: string }) {
       { app: appId, version, track },
       {
         onSuccess: () => {
-          toast.success(t`Default for all users updated`)
+          toast.success("Default for all users updated")
         },
         onError: (error) => {
-          toast.error(getErrorMessage(error, t`Failed to update default`))
+          toast.error(getErrorMessage(error, "Failed to update default"))
         },
       }
     )
@@ -356,8 +354,8 @@ function VersionsTab({ appId }: { appId: string }) {
     return (
       <EmptyState
         icon={Package}
-        title={t`Not versioned`}
-        description={t`This app does not have version management`}
+        title={"Not versioned"}
+        description={"This app does not have version management"}
       />
     )
   }
@@ -409,12 +407,12 @@ function VersionsTab({ appId }: { appId: string }) {
   return (
     <div className="space-y-6">
       <Section 
-        title={t`Version Management`} 
-        description={t`Select which version of this app to use`}
+        title={"Version Management"} 
+        description={"Select which version of this app to use"}
       >
         <div className="divide-y-0">
           {isAdmin && (
-            <FieldRow label={t`System Default`} description="The version used by users who haven't made a choice">
+            <FieldRow label={"System Default"} description="The version used by users who haven't made a choice">
               <div className="w-full max-w-sm">
                 {renderVersionSelect(
                   systemValue,
@@ -429,8 +427,8 @@ function VersionsTab({ appId }: { appId: string }) {
           )}
           
           <FieldRow 
-            label={isAdmin ? 'Your Version' : 'Preferred Version'} 
-            description={t`Your personal version override`}
+            label={isAdmin ? "Your Version" : "Preferred Version"} 
+            description={"Your personal version override"}
           >
             <div className="w-full max-w-sm">
               {renderVersionSelect(
@@ -450,7 +448,6 @@ function VersionsTab({ appId }: { appId: string }) {
 }
 
 function PermissionsTab({ appId, appName }: { appId: string; appName: string }) {
-  const { t } = useLingui()
   const { data, isLoading, error, refetch } = useAppPermissions(appId)
   const setPermission = useSetPermission()
   const [grantDialogOpen, setGrantDialogOpen] = useState(false)
@@ -463,11 +460,11 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
       { app: appId, permission, enabled: false },
       {
         onSuccess: () => {
-          toast.success(t`Permission revoked`)
+          toast.success("Permission revoked")
           setRevokingPermission(null)
         },
         onError: (error) => {
-          toast.error(getErrorMessage(error, t`Failed to revoke permission`))
+          toast.error(getErrorMessage(error, "Failed to revoke permission"))
           setRevokingPermission(null)
         },
       }
@@ -480,12 +477,12 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
       { app: appId, permission, enabled: true },
       {
         onSuccess: () => {
-          toast.success(t`Permission granted`)
+          toast.success("Permission granted")
           setGrantingPermission(null)
           setGrantDialogOpen(false)
         },
         onError: (error) => {
-          toast.error(getErrorMessage(error, t`Failed to grant permission`))
+          toast.error(getErrorMessage(error, "Failed to grant permission"))
           setGrantingPermission(null)
         },
       }
@@ -515,10 +512,9 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
 
   return (
     <Section 
-      title={t`Permissions`} 
+      title={"Permissions"} 
       description={grantedPermissions.length === 0
-        ? 'No permissions granted to this app'
-        : 'Manage capabilities granted to this application'}
+        ? "No permissions granted to this app" : "Manage capabilities granted to this application"}
       action={availablePermissions.length > 0 && (
         <ResponsiveDialog open={grantDialogOpen} onOpenChange={setGrantDialogOpen}>
           <ResponsiveDialogTrigger asChild>
@@ -583,8 +579,8 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
           <div className="py-8">
             <EmptyState
               icon={Shield}
-              title={t`No permissions granted`}
-              description={t`Grant permissions to allow this app to access system features`}
+              title={"No permissions granted"}
+              description={"Grant permissions to allow this app to access system features"}
             />
           </div>
         )}
@@ -606,7 +602,6 @@ function PermissionRow({
   appName: string
   canRevoke: boolean
 }) {
-  const { t } = useLingui()
   const [confirmOpen, setConfirmOpen] = useState(false)
 
   return (
@@ -640,7 +635,7 @@ function PermissionRow({
           <ConfirmDialog
             open={confirmOpen}
             onOpenChange={setConfirmOpen}
-            title={t`Revoke permission?`}
+            title={"Revoke permission?"}
             desc={`This will revoke the "${formatPermission(permission.permission)}" permission from ${appName}. The app may stop working correctly.`}
             confirmText='Revoke permission'
             destructive
