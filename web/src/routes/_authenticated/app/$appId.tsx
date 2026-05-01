@@ -256,6 +256,7 @@ function DetailsTab({ app }: { app: AppInfo }) {
 }
 
 function VersionsTab({ appId }: { appId: string }) {
+  const { t } = useLingui()
   const { data: versionData, isLoading: isLoadingVersions, isError } = useAppVersions(appId)
   const setUserVersion = useSetUserVersion()
   const setSystemVersion = useSetSystemVersion()
@@ -313,10 +314,10 @@ function VersionsTab({ appId }: { appId: string }) {
       { app: appId, version, track },
       {
         onSuccess: () => {
-          toast.success("Version changed")
+          toast.success(t`Version changed`)
         },
         onError: (error) => {
-          toast.error(getErrorMessage(error, "Failed to update preference"))
+          toast.error(getErrorMessage(error, t`Failed to update preference`))
         },
       }
     )
@@ -333,10 +334,10 @@ function VersionsTab({ appId }: { appId: string }) {
       { app: appId, version, track },
       {
         onSuccess: () => {
-          toast.success("Default for all users updated")
+          toast.success(t`Default for all users updated`)
         },
         onError: (error) => {
-          toast.error(getErrorMessage(error, "Failed to update default"))
+          toast.error(getErrorMessage(error, t`Failed to update default`))
         },
       }
     )
@@ -448,6 +449,7 @@ function VersionsTab({ appId }: { appId: string }) {
 }
 
 function PermissionsTab({ appId, appName }: { appId: string; appName: string }) {
+  const { t } = useLingui()
   const { data, isLoading, error, refetch } = useAppPermissions(appId)
   const setPermission = useSetPermission()
   const [grantDialogOpen, setGrantDialogOpen] = useState(false)
@@ -460,11 +462,11 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
       { app: appId, permission, enabled: false },
       {
         onSuccess: () => {
-          toast.success("Permission revoked")
+          toast.success(t`Permission revoked`)
           setRevokingPermission(null)
         },
         onError: (error) => {
-          toast.error(getErrorMessage(error, "Failed to revoke permission"))
+          toast.error(getErrorMessage(error, t`Failed to revoke permission`))
           setRevokingPermission(null)
         },
       }
@@ -477,12 +479,12 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
       { app: appId, permission, enabled: true },
       {
         onSuccess: () => {
-          toast.success("Permission granted")
+          toast.success(t`Permission granted`)
           setGrantingPermission(null)
           setGrantDialogOpen(false)
         },
         onError: (error) => {
-          toast.error(getErrorMessage(error, "Failed to grant permission"))
+          toast.error(getErrorMessage(error, t`Failed to grant permission`))
           setGrantingPermission(null)
         },
       }
