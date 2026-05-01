@@ -930,7 +930,7 @@ def action_permissions_set(a):
 		return
 
 	# Admin-only permissions require administrator role
-	if mochi.permission.administrator(permission) and a.user.role != "administrator":
+	if mochi.permission.level(permission) == "administrator" and a.user.role != "administrator":
 		a.error_label(403, "errors.this_permission_requires_administrator_role")
 		return
 
