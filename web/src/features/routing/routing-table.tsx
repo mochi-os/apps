@@ -3,8 +3,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from '@mochi/web'
+  SelectValue, naturalCompare,} from '@mochi/web'
 import { AlertTriangle } from 'lucide-react'
 import { Trans } from '@lingui/react/macro'
 import type { RoutingResource, RoutingApp } from '@/api/apps'
@@ -21,7 +20,7 @@ function formatAppName(app: RoutingApp): string {
 // Sort apps alphabetically, with development version immediately after published version of same app
 function sortApps(apps: RoutingApp[]): RoutingApp[] {
   return [...apps].sort((a, b) => {
-    const nameCompare = a.name.localeCompare(b.name)
+    const nameCompare = naturalCompare(a.name, b.name)
     if (nameCompare !== 0) {
       return nameCompare
     }

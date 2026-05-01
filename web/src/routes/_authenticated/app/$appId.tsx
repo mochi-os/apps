@@ -30,8 +30,7 @@ import {
   ResponsiveDialogFooter,
   ResponsiveDialogHeader,
   ResponsiveDialogTitle,
-  ResponsiveDialogTrigger,
-} from '@mochi/web'
+  ResponsiveDialogTrigger, naturalCompare,} from '@mochi/web'
 import { Loader2, Plus, Shield, ShieldAlert, X, Package } from 'lucide-react'
 import { useInstalledAppsQuery } from '@/hooks/useApps'
 import {
@@ -506,12 +505,12 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
 
   const grantedPermissions = (data?.permissions ?? [])
     .filter((p) => p.granted && !p.permission.startsWith('_'))
-    .sort((a, b) => formatPermission(a.permission).localeCompare(formatPermission(b.permission)))
+    .sort((a, b) => naturalCompare(formatPermission(a.permission), formatPermission(b.permission)))
 
   const grantedSet = new Set(grantedPermissions.map((p) => p.permission))
   const availablePermissions = allPermissions
     .filter((p) => !grantedSet.has(p.permission))
-    .sort((a, b) => a.label.localeCompare(b.label))
+    .sort((a, b) => naturalCompare(a.label, b.label))
 
   return (
     <Section 
