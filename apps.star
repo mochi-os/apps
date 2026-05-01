@@ -540,7 +540,7 @@ def action_user_apps(a):
 	apps = mochi.app.list()
 	for app in apps:
 		app["versions"] = mochi.app.versions(app["id"])
-		app["tracks"] = mochi.app.tracks(app["id"])
+		app["tracks"] = mochi.app.track.list(app["id"])
 
 	# Get user's version preferences
 	versions = {}
@@ -575,7 +575,7 @@ def action_user_apps_app(a):
 		return
 
 	versions = mochi.app.versions(app_id)
-	tracks = mochi.app.tracks(app_id)
+	tracks = mochi.app.track.list(app_id)
 
 	# If no local tracks and app is from publisher, fetch from publisher via P2P
 	default_track = ""
@@ -729,7 +729,7 @@ def action_system_apps_list(a):
 	apps = mochi.app.list()
 	for app in apps:
 		app["versions"] = mochi.app.versions(app["id"])
-		app["tracks"] = mochi.app.tracks(app["id"])
+		app["tracks"] = mochi.app.track.list(app["id"])
 
 	a.json({"apps": apps})
 
@@ -744,7 +744,7 @@ def action_system_apps_get(a):
 		return
 
 	versions = mochi.app.versions(app_id)
-	tracks = mochi.app.tracks(app_id)
+	tracks = mochi.app.track.list(app_id)
 	default = mochi.app.version.get(app_id)
 
 	a.json({
