@@ -141,7 +141,7 @@ def action_install_publisher(a):
 		return {"status": 400, "error": "Invalid app ID", "data": {}}
 	if not version:
 		return {"status": 400, "error": "Version is required", "data": {}}
-	if not mochi.valid(version, "version"):
+	if not mochi.text.valid(version, "version"):
 		return {"status": 400, "error": "Invalid version format", "data": {}}
 	if peer and len(peer) > 51:
 		return {"status": 400, "error": "Invalid peer ID", "data": {}}
@@ -169,7 +169,7 @@ def action_install_file(a):
 	file = a.input("file")
 	if not file:
 		return {"status": 400, "error": "No file provided", "data": {}}
-	if not mochi.valid(file, "filename"):
+	if not mochi.text.valid(file, "filename"):
 		return {"status": 400, "error": "Invalid filename", "data": {}}
 	if not file.endswith(".zip"):
 		return {"status": 400, "error": "File must be a .zip archive", "data": {}}
@@ -406,7 +406,7 @@ def action_upgrade(a):
 
 	if not id or len(id) > 51:
 		return {"status": 400, "error": "Invalid app ID", "data": {}}
-	if not version or not mochi.valid(version, "version"):
+	if not version or not mochi.text.valid(version, "version"):
 		return {"status": 400, "error": "Invalid version", "data": {}}
 
 	# Get current app to find publisher
@@ -623,7 +623,7 @@ def action_user_apps_version_set(a):
 	if len(app_id) > 51:
 		a.error_label(400, "errors.invalid_app_id")
 		return
-	if version and not mochi.valid(version, "version"):
+	if version and not mochi.text.valid(version, "version"):
 		a.error_label(400, "errors.invalid_version_format")
 		return
 	if len(track) > 50:
@@ -653,7 +653,7 @@ def action_version_download(a):
 	if not version:
 		a.error_label(400, "errors.missing_version_parameter")
 		return
-	if not mochi.valid(version, "version"):
+	if not mochi.text.valid(version, "version"):
 		a.error_label(400, "errors.invalid_version_format")
 		return
 
@@ -769,7 +769,7 @@ def action_system_apps_version_set(a):
 	if len(app_id) > 51:
 		a.error_label(400, "errors.invalid_app_id")
 		return
-	if version and not mochi.valid(version, "version"):
+	if version and not mochi.text.valid(version, "version"):
 		a.error_label(400, "errors.invalid_version_format")
 		return
 	if len(track) > 50:
@@ -803,7 +803,7 @@ def action_system_apps_track_set(a):
 	if len(track) > 50:
 		a.error_label(400, "errors.invalid_track")
 		return
-	if not mochi.valid(version, "version"):
+	if not mochi.text.valid(version, "version"):
 		a.error_label(400, "errors.invalid_version_format")
 		return
 
