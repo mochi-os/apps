@@ -201,23 +201,24 @@ interface AppInfo {
 }
 
 function DetailsTab({ app }: { app: AppInfo }) {
+  const { t } = useLingui()
   return (
-    <Section 
-      title={"Identity"} 
-      description={"App information and configuration"}
+    <Section
+      title={t`Identity`}
+      description={t`App information and configuration`}
     >
       <div className="divide-y-0">
-        <FieldRow label={"Application ID"}>
+        <FieldRow label={t`Application ID`}>
           <DataChip value={app.id} truncate='middle' />
         </FieldRow>
         
         {app.fingerprint && (
-          <FieldRow label={"Fingerprint"}>
+          <FieldRow label={t`Fingerprint`}>
             <DataChip value={app.fingerprint} truncate='middle' />
           </FieldRow>
         )}
 
-        <FieldRow label={"Current Version"}>
+        <FieldRow label={t`Current Version`}>
           <DataChip value={app.latest} />
         </FieldRow>
 
@@ -226,7 +227,7 @@ function DetailsTab({ app }: { app: AppInfo }) {
             <h4 className='text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4'><Trans>Technical Capabilities</Trans></h4>
             
             {app.classes && app.classes.length > 0 && (
-              <FieldRow label={"Provided Classes"}>
+              <FieldRow label={t`Provided Classes`}>
                 <div className="flex flex-wrap gap-2">
                   {app.classes.map(c => <DataChip key={c} value={c} />)}
                 </div>
@@ -234,7 +235,7 @@ function DetailsTab({ app }: { app: AppInfo }) {
             )}
             
             {app.services && app.services.length > 0 && (
-              <FieldRow label={"Enabled Services"}>
+              <FieldRow label={t`Enabled Services`}>
                 <div className="flex flex-wrap gap-2">
                   {app.services.map(s => <DataChip key={s} value={s} />)}
                 </div>
@@ -242,7 +243,7 @@ function DetailsTab({ app }: { app: AppInfo }) {
             )}
 
             {app.paths && app.paths.length > 0 && (
-              <FieldRow label={"HTTP Paths"}>
+              <FieldRow label={t`HTTP Paths`}>
                 <div className="flex flex-wrap gap-2">
                   {app.paths.map((p) => <DataChip key={p} value={`/${p}`} />)}
                 </div>
@@ -355,7 +356,7 @@ function VersionsTab({ appId }: { appId: string }) {
     return (
       <EmptyState
         icon={Package}
-        title={"Not versioned"}
+        title={t`Not versioned`}
         description={"This app does not have version management"}
       />
     )
@@ -408,12 +409,12 @@ function VersionsTab({ appId }: { appId: string }) {
   return (
     <div className="space-y-6">
       <Section 
-        title={"Version Management"} 
+        title={t`Version Management`} 
         description={"Select which version of this app to use"}
       >
         <div className="divide-y-0">
           {isAdmin && (
-            <FieldRow label={"System Default"} description="The version used by users who haven't made a choice">
+            <FieldRow label={t`System Default`} description="The version used by users who haven't made a choice">
               <div className="w-full max-w-sm">
                 {renderVersionSelect(
                   systemValue,
@@ -514,7 +515,7 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
 
   return (
     <Section 
-      title={"Permissions"} 
+      title={t`Permissions`} 
       description={grantedPermissions.length === 0
         ? "No permissions granted to this app" : "Manage capabilities granted to this application"}
       action={availablePermissions.length > 0 && (
@@ -581,7 +582,7 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
           <div className="py-8">
             <EmptyState
               icon={Shield}
-              title={"No permissions granted"}
+              title={t`No permissions granted`}
               description={"Grant permissions to allow this app to access system features"}
             />
           </div>
@@ -604,6 +605,7 @@ function PermissionRow({
   appName: string
   canRevoke: boolean
 }) {
+  const { t } = useLingui()
   const [confirmOpen, setConfirmOpen] = useState(false)
 
   return (
@@ -637,7 +639,7 @@ function PermissionRow({
           <ConfirmDialog
             open={confirmOpen}
             onOpenChange={setConfirmOpen}
-            title={"Revoke permission?"}
+            title={t`Revoke permission?`}
             desc={`This will revoke the "${formatPermission(permission.permission)}" permission from ${appName}. The app may stop working correctly.`}
             confirmText='Revoke permission'
             destructive

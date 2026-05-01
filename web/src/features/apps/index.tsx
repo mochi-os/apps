@@ -648,6 +648,7 @@ function InstalledAppCard({
   showId?: boolean
   availableVersion?: string
 }) {
+  const { t } = useLingui()
   // Show track if user is following a non-Production track
   const showTrack = app.user_track && app.user_track !== 'Production'
 
@@ -666,11 +667,11 @@ function InstalledAppCard({
           {availableVersion && availableVersion !== app.latest && (
             <DataChip
               value={availableVersion}
-              label={"Update"}
+              label={t`Update`}
             />
           )}
           {showTrack && app.user_track && (
-            <DataChip value={app.user_track} label={"Track"} />
+            <DataChip value={app.user_track} label={t`Track`} />
           )}
           {showId && (
             <span className='text-xs text-muted-foreground truncate font-mono opacity-80'>
