@@ -531,7 +531,7 @@ def action_routing(a):
 # Require administrator role
 def require_admin(a):
 	if a.user.role != "administrator":
-		a.error_label(403, "errors.administrator_access_required")
+		a.error.label(403, "errors.administrator_access_required")
 		return False
 	return True
 
@@ -569,12 +569,12 @@ def action_user_apps_app(a):
 	"""Get version info for a single app"""
 	app_id = a.input("app")
 	if not app_id:
-		a.error_label(400, "errors.missing_app_parameter")
+		a.error.label(400, "errors.missing_app_parameter")
 		return
 
 	app = mochi.app.get(app_id)
 	if not app:
-		a.error_label(404, "errors.app_not_found")
+		a.error.label(404, "errors.app_not_found")
 		return
 
 	versions = mochi.app.version.list(app_id)
@@ -621,16 +621,16 @@ def action_user_apps_version_set(a):
 	track = a.input("track", "")
 
 	if not app_id:
-		a.error_label(400, "errors.missing_app_parameter")
+		a.error.label(400, "errors.missing_app_parameter")
 		return
 	if len(app_id) > 51:
-		a.error_label(400, "errors.invalid_app_id")
+		a.error.label(400, "errors.invalid_app_id")
 		return
 	if version and not mochi.text.valid(version, "version"):
-		a.error_label(400, "errors.invalid_version_format")
+		a.error.label(400, "errors.invalid_version_format")
 		return
 	if len(track) > 50:
-		a.error_label(400, "errors.invalid_track")
+		a.error.label(400, "errors.invalid_track")
 		return
 
 	# If a version is specified (either directly or via track), download it if needed
@@ -648,21 +648,21 @@ def action_version_download(a):
 	version = a.input("version")
 
 	if not app_id:
-		a.error_label(400, "errors.missing_app_parameter")
+		a.error.label(400, "errors.missing_app_parameter")
 		return
 	if len(app_id) > 51:
-		a.error_label(400, "errors.invalid_app_id")
+		a.error.label(400, "errors.invalid_app_id")
 		return
 	if not version:
-		a.error_label(400, "errors.missing_version_parameter")
+		a.error.label(400, "errors.missing_version_parameter")
 		return
 	if not mochi.text.valid(version, "version"):
-		a.error_label(400, "errors.invalid_version_format")
+		a.error.label(400, "errors.invalid_version_format")
 		return
 
 	# Check if user can install apps
 	if a.user.role != "administrator" and mochi.setting.get("apps_install_user") != "true":
-		a.error_label(403, "errors.not_allowed_to_install_apps")
+		a.error.label(403, "errors.not_allowed_to_install_apps")
 		return
 
 	ok = mochi.app.version.download(app_id, version)
@@ -675,13 +675,13 @@ def action_user_apps_routing_set(a):
 	app_id = a.input("app", "")
 
 	if not routing_type or not name:
-		a.error_label(400, "errors.missing_type_or_name_parameter")
+		a.error.label(400, "errors.missing_type_or_name_parameter")
 		return
 	if len(name) > 200:
-		a.error_label(400, "errors.invalid_name")
+		a.error.label(400, "errors.invalid_name")
 		return
 	if app_id and len(app_id) > 51:
-		a.error_label(400, "errors.invalid_app_id")
+		a.error.label(400, "errors.invalid_app_id")
 		return
 
 	if routing_type == "class":
@@ -700,7 +700,7 @@ def action_user_apps_routing_set(a):
 		else:
 			a.user.app.path.delete(name)
 	else:
-		a.error_label(400, "errors.invalid_routing_type")
+		a.error.label(400, "errors.invalid_routing_type")
 		return
 
 	a.json({"ok": True})
@@ -743,7 +743,7 @@ def action_system_apps_get(a):
 
 	app_id = a.input("app")
 	if not app_id:
-		a.error_label(400, "errors.missing_app_parameter")
+		a.error.label(400, "errors.missing_app_parameter")
 		return
 
 	versions = mochi.app.version.list(app_id)
@@ -767,16 +767,16 @@ def action_system_apps_version_set(a):
 	track = a.input("track", "")
 
 	if not app_id:
-		a.error_label(400, "errors.missing_app_parameter")
+		a.error.label(400, "errors.missing_app_parameter")
 		return
 	if len(app_id) > 51:
-		a.error_label(400, "errors.invalid_app_id")
+		a.error.label(400, "errors.invalid_app_id")
 		return
 	if version and not mochi.text.valid(version, "version"):
-		a.error_label(400, "errors.invalid_version_format")
+		a.error.label(400, "errors.invalid_version_format")
 		return
 	if len(track) > 50:
-		a.error_label(400, "errors.invalid_track")
+		a.error.label(400, "errors.invalid_track")
 		return
 
 	# If a version is specified (either directly or via track), download it if needed
@@ -798,16 +798,16 @@ def action_system_apps_track_set(a):
 	version = a.input("version")
 
 	if not app_id or not track or not version:
-		a.error_label(400, "errors.missing_app_track_or_version_parameter")
+		a.error.label(400, "errors.missing_app_track_or_version_parameter")
 		return
 	if len(app_id) > 51:
-		a.error_label(400, "errors.invalid_app_id")
+		a.error.label(400, "errors.invalid_app_id")
 		return
 	if len(track) > 50:
-		a.error_label(400, "errors.invalid_track")
+		a.error.label(400, "errors.invalid_track")
 		return
 	if not mochi.text.valid(version, "version"):
-		a.error_label(400, "errors.invalid_version_format")
+		a.error.label(400, "errors.invalid_version_format")
 		return
 
 	mochi.app.track.set(app_id, track, version)
@@ -842,13 +842,13 @@ def action_system_apps_routing_set(a):
 	app_id = a.input("app")
 
 	if not routing_type or not name:
-		a.error_label(400, "errors.missing_type_or_name_parameter")
+		a.error.label(400, "errors.missing_type_or_name_parameter")
 		return
 	if len(name) > 200:
-		a.error_label(400, "errors.invalid_name")
+		a.error.label(400, "errors.invalid_name")
 		return
 	if app_id and len(app_id) > 51:
-		a.error_label(400, "errors.invalid_app_id")
+		a.error.label(400, "errors.invalid_app_id")
 		return
 
 	if routing_type == "class":
@@ -867,7 +867,7 @@ def action_system_apps_routing_set(a):
 		else:
 			mochi.app.path.delete(name)
 	else:
-		a.error_label(400, "errors.invalid_routing_type")
+		a.error.label(400, "errors.invalid_routing_type")
 		return
 
 	a.json({"ok": True})
@@ -878,10 +878,10 @@ def action_permissions_list(a):
 	"""List permissions for an app"""
 	app_id = a.input("app")
 	if not app_id:
-		a.error_label(400, "errors.missing_app_parameter")
+		a.error.label(400, "errors.missing_app_parameter")
 		return
 	if len(app_id) > 51:
-		a.error_label(400, "errors.invalid_app_id")
+		a.error.label(400, "errors.invalid_app_id")
 		return
 
 	perms = mochi.permission.list(app_id)
@@ -893,16 +893,16 @@ def action_permissions_revoke(a):
 	permission = a.input("permission")
 
 	if not app_id:
-		a.error_label(400, "errors.missing_app_parameter")
+		a.error.label(400, "errors.missing_app_parameter")
 		return
 	if len(app_id) > 51:
-		a.error_label(400, "errors.invalid_app_id")
+		a.error.label(400, "errors.invalid_app_id")
 		return
 	if not permission:
-		a.error_label(400, "errors.missing_permission_parameter")
+		a.error.label(400, "errors.missing_permission_parameter")
 		return
 	if len(permission) > 100:
-		a.error_label(400, "errors.invalid_permission")
+		a.error.label(400, "errors.invalid_permission")
 		return
 
 	mochi.permission.revoke(app_id, permission)
@@ -915,26 +915,26 @@ def action_permissions_set(a):
 	enabled = a.input("enabled") == "true"
 
 	if not app_id:
-		a.error_label(400, "errors.missing_app_parameter")
+		a.error.label(400, "errors.missing_app_parameter")
 		return
 	if len(app_id) > 51:
-		a.error_label(400, "errors.invalid_app_id")
+		a.error.label(400, "errors.invalid_app_id")
 		return
 	if not permission:
-		a.error_label(400, "errors.missing_permission_parameter")
+		a.error.label(400, "errors.missing_permission_parameter")
 		return
 	if len(permission) > 100:
-		a.error_label(400, "errors.invalid_permission")
+		a.error.label(400, "errors.invalid_permission")
 		return
 
 	# Verify app exists
 	if not mochi.app.get(app_id):
-		a.error_label(404, "errors.app_not_found")
+		a.error.label(404, "errors.app_not_found")
 		return
 
 	# Admin-only permissions require administrator role
 	if mochi.permission.level(permission) == "administrator" and a.user.role != "administrator":
-		a.error_label(403, "errors.this_permission_requires_administrator_role")
+		a.error.label(403, "errors.this_permission_requires_administrator_role")
 		return
 
 	if enabled:
