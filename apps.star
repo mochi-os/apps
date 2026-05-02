@@ -539,7 +539,7 @@ def action_user_apps(a):
 	# Get all installed apps with their versions
 	apps = mochi.app.list()
 	for app in apps:
-		app["versions"] = mochi.app.versions(app["id"])
+		app["versions"] = mochi.app.version.list(app["id"])
 		app["tracks"] = mochi.app.track.list(app["id"])
 
 	# Get user's version preferences
@@ -574,7 +574,7 @@ def action_user_apps_app(a):
 		a.error_label(404, "errors.app_not_found")
 		return
 
-	versions = mochi.app.versions(app_id)
+	versions = mochi.app.version.list(app_id)
 	tracks = mochi.app.track.list(app_id)
 
 	# If no local tracks and app is from publisher, fetch from publisher via P2P
@@ -632,7 +632,7 @@ def action_user_apps_version_set(a):
 
 	# If a version is specified (either directly or via track), download it if needed
 	if version and is_entity_id(app_id):
-		installed_versions = mochi.app.versions(app_id)
+		installed_versions = mochi.app.version.list(app_id)
 		if version not in installed_versions:
 			mochi.app.version.download(app_id, version)
 
@@ -728,7 +728,7 @@ def action_system_apps_list(a):
 
 	apps = mochi.app.list()
 	for app in apps:
-		app["versions"] = mochi.app.versions(app["id"])
+		app["versions"] = mochi.app.version.list(app["id"])
 		app["tracks"] = mochi.app.track.list(app["id"])
 
 	a.json({"apps": apps})
@@ -743,7 +743,7 @@ def action_system_apps_get(a):
 		a.error_label(400, "errors.missing_app_parameter")
 		return
 
-	versions = mochi.app.versions(app_id)
+	versions = mochi.app.version.list(app_id)
 	tracks = mochi.app.track.list(app_id)
 	default = mochi.app.version.get(app_id)
 
@@ -778,7 +778,7 @@ def action_system_apps_version_set(a):
 
 	# If a version is specified (either directly or via track), download it if needed
 	if version and is_entity_id(app_id):
-		installed_versions = mochi.app.versions(app_id)
+		installed_versions = mochi.app.version.list(app_id)
 		if version not in installed_versions:
 			mochi.app.version.download(app_id, version)
 
