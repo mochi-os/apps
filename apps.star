@@ -157,7 +157,7 @@ def action_install_publisher(a):
 	if r.get("status") != "200":
 		return {"status": 500, "error": r.get("message", "Failed to download app"), "data": {}}
 
-	s.read_to_file(file)
+	s.read.file(file)
 	mochi.app.package.install(id, file, False, peer)
 	mochi.file.delete(file)
 
@@ -265,7 +265,7 @@ def action_install_id(a):
 	if r.get("status") != "200":
 		return {"status": 500, "error": r.get("message", "Failed to download app"), "data": {}}
 
-	s.read_to_file(file)
+	s.read.file(file)
 	mochi.app.package.install(id, file, False, publisher)
 	mochi.file.delete(file)
 
@@ -439,7 +439,7 @@ def action_upgrade(a):
 	if r.get("status") != "200":
 		return {"status": 500, "error": r.get("message", "Failed to download app"), "data": {}}
 
-	s.read_to_file(file)
+	s.read.file(file)
 	mochi.app.package.install(id, file, False, publisher)
 	mochi.file.delete(file)
 
