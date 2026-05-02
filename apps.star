@@ -33,7 +33,8 @@ def action_list(a):
 			if user_pref.get("version"):
 				app["latest"] = user_pref["version"]
 		if is_entity_id(app["id"]):
-			app["fingerprint"] = mochi.entity.fingerprint(app["id"], True)
+			fp = mochi.entity.fingerprint(app["id"])
+			app["fingerprint"] = fp[:3] + "-" + fp[3:6] + "-" + fp[6:]
 			installed.append(app)
 		else:
 			app["fingerprint"] = ""
@@ -52,7 +53,8 @@ def action_view(a):
 		return {"status": 404, "error": "App not found", "data": {}}
 
 	if is_entity_id(app["id"]):
-		app["fingerprint"] = mochi.entity.fingerprint(app["id"], True)
+		fp = mochi.entity.fingerprint(app["id"])
+		app["fingerprint"] = fp[:3] + "-" + fp[3:6] + "-" + fp[6:]
 	else:
 		app["fingerprint"] = ""
 	return {"data": {"app": app}}
@@ -100,7 +102,8 @@ def action_information(a):
 		return {"status": 500, "error": "Failed to get app information", "data": {}}
 
 	app = s.read()
-	fingerprint = mochi.entity.fingerprint(app["id"], True)
+	fp = mochi.entity.fingerprint(app["id"])
+	fingerprint = fp[:3] + "-" + fp[3:6] + "-" + fp[6:]
 	tracks = s.read()
 
 	return {"data": {"app": app, "fingerprint": fingerprint, "tracks": tracks, "peer": peer}}
