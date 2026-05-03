@@ -798,7 +798,7 @@ def action_system_apps_track_set(a):
 	version = a.input("version")
 
 	if not app_id or not track or not version:
-		a.error.label(400, "errors.missing_app_track_or_version_parameter")
+		a.error.label(400, "errors.missing_param")
 		return
 	if len(app_id) > 51:
 		a.error.label(400, "errors.invalid_app_id")
