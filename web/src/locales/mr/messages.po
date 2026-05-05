@@ -6,6 +6,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: mr\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. placeholder {0}: app.name
+#: src/features/routing/routing-table.tsx:18
+msgid "{0} (development)"
+msgstr "{0} (विकास)"
+
+#. placeholder {0}: results.length - failed
+#: src/features/apps/index.tsx:181
+msgid "{0} updated, {failed} failed"
+msgstr "{0} अद्यतनित, {failed} अयशस्वी"
+
+#. placeholder {0}: data.name || t`App`
+#. placeholder {0}: data.name || target.name
+#. placeholder {1}: data.version
+#: src/features/apps/index.tsx:141
+#: src/features/apps/index.tsx:158
+msgid "{0} v{1} has been installed."
+msgstr "{0} v{1} स्थापित केले आहे."
+
+#: src/routes/_authenticated/app/$appId.tsx:389
+msgid "{track} (default, version {version})"
+msgstr "{track} (डीफॉल्ट, आवृत्ती {version})"
+
+#: src/routes/_authenticated/app/$appId.tsx:390
+msgid "{track} (version {version})"
+msgstr "{track} (आवृत्ती {version})"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -72,7 +104,7 @@ msgstr "टॅग जोडा..."
 msgid "Add team/app"
 msgstr "टीम/अॅप जोडा"
 
-#: src/features/apps/index.tsx:587
+#: src/features/apps/index.tsx:589
 msgid "Add to directory"
 msgstr "निर्देशिकेत जोडा"
 
@@ -100,12 +132,21 @@ msgstr "सर्व"
 msgid "All apps updated"
 msgstr "सर्व अॅप्स अद्ययावत केले"
 
+#: src/features/apps/index.tsx:141
+#: src/routes/_authenticated/app/$appId.tsx:119
+msgid "App"
+msgstr "अॅप"
+
 #: src/features/apps/index.tsx:244
 #: src/features/apps/index.tsx:245
 msgid "App actions"
 msgstr "अॅप क्रिया"
 
-#: src/routes/_authenticated/app/$appId.tsx:207
+#: src/features/apps/components/app-info-dialog.tsx:47
+msgid "App information"
+msgstr "अॅप माहिती"
+
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "App information and configuration"
 msgstr "अॅप माहिती आणि कॉन्फिगरेशन"
 
@@ -116,12 +157,12 @@ msgstr "अॅप माहिती आणि कॉन्फिगरेशन
 msgid "App installed"
 msgstr "अॅप इंस्टॉल केले"
 
-#: src/routes/_authenticated/app/$appId.tsx:142
-#: src/routes/_authenticated/app/$appId.tsx:146
+#: src/routes/_authenticated/app/$appId.tsx:148
+#: src/routes/_authenticated/app/$appId.tsx:152
 msgid "App not found"
 msgstr "अॅप सापडले नाही"
 
-#: src/routes/_authenticated/app/$appId.tsx:210
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Application ID"
 msgstr "अॅप्लिकेशन ID"
 
@@ -140,6 +181,15 @@ msgstr "तुम्हाला खरोखरच लॉग आउट कर�
 msgid "Asc"
 msgstr "चढता"
 
+#: src/features/apps/components/install-dialog.tsx:73
+msgid "Available version:"
+msgstr "उपलब्ध आवृत्ती:"
+
+#: src/features/apps/components/app-info-dialog.tsx:81
+#: src/features/apps/components/app-info-dialog.tsx:105
+msgid "Available versions:"
+msgstr "उपलब्ध आवृत्त्या:"
+
 #: src/features/apps/index.tsx:387
 msgid "Available, but not installed"
 msgstr "उपलब्ध आहे, पण इंस्टॉल केले नाही"
@@ -148,9 +198,9 @@ msgstr "उपलब्ध आहे, पण इंस्टॉल केले 
 msgid "Back"
 msgstr "मागे"
 
-#: src/routes/_authenticated/app/$appId.tsx:121
-#: src/routes/_authenticated/app/$appId.tsx:142
-#: src/routes/_authenticated/app/$appId.tsx:159
+#: src/routes/_authenticated/app/$appId.tsx:127
+#: src/routes/_authenticated/app/$appId.tsx:148
+#: src/routes/_authenticated/app/$appId.tsx:165
 msgid "Back to apps"
 msgstr "अॅप्सकडे परत"
 
@@ -171,12 +221,12 @@ msgstr "रुची वाढवा"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/apps/components/app-info-dialog.tsx:138
-#: src/features/apps/components/install-dialog.tsx:101
+#: src/features/apps/components/app-info-dialog.tsx:143
+#: src/features/apps/components/install-dialog.tsx:102
 #: src/features/apps/index.tsx:511
-#: src/features/apps/index.tsx:551
-#: src/features/apps/index.tsx:599
-#: src/routes/_authenticated/app/$appId.tsx:561
+#: src/features/apps/index.tsx:553
+#: src/features/apps/index.tsx:601
+#: src/routes/_authenticated/app/$appId.tsx:567
 msgid "Cancel"
 msgstr "रद्द करा"
 
@@ -207,6 +257,10 @@ msgstr "सिस्टम प्राधान्य, लाइट मोड, 
 #: ../../../lib/web/src/components/language-picker.tsx:167
 msgid "Choose language"
 msgstr "भाषा निवडा"
+
+#: src/features/routing/routing-table.tsx:70
+msgid "Class"
+msgstr "वर्ग"
 
 #: src/features/routing/classes.tsx:9
 msgid "Class routing"
@@ -309,7 +363,7 @@ msgstr "सुरू ठेवा"
 msgid "Copy"
 msgstr "कॉपी करा"
 
-#: src/routes/_authenticated/app/$appId.tsx:220
+#: src/routes/_authenticated/app/$appId.tsx:226
 msgid "Current Version"
 msgstr "सध्याची आवृत्ती"
 
@@ -326,12 +380,13 @@ msgstr "गडद"
 msgid "Dark mode"
 msgstr "डार्क मोड"
 
-#: src/features/routing/routing-table.tsx:66
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "द्वारे घोषित"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
-#: src/features/routing/routing-table.tsx:117
+#: src/features/routing/routing-table.tsx:123
+#: src/features/routing/routing-table.tsx:147
 msgid "Default"
 msgstr "डीफॉल्ट"
 
@@ -339,9 +394,26 @@ msgstr "डीफॉल्ट"
 msgid "Default AI account"
 msgstr "डीफॉल्ट AI खाते"
 
-#: src/routes/_authenticated/app/$appId.tsx:337
+#: src/routes/_authenticated/app/$appId.tsx:447
+msgid "Default for all users"
+msgstr "सर्व वापरकर्त्यांसाठी डीफॉल्ट"
+
+#: src/routes/_authenticated/app/$appId.tsx:446
+msgid "Default for all users (version {effectiveDefaultVersion})"
+msgstr "सर्व वापरकर्त्यांसाठी डीफॉल्ट (आवृत्ती {effectiveDefaultVersion})"
+
+#: src/routes/_authenticated/app/$appId.tsx:343
 msgid "Default for all users updated"
 msgstr "सर्व वापरकर्त्यांसाठी डीफॉल्ट अद्ययावत केले"
+
+#: src/routes/_authenticated/app/$appId.tsx:430
+msgid "Default track"
+msgstr "डीफॉल्ट ट्रॅक"
+
+#. placeholder {0}: versionData.tracks[defaultTrack]
+#: src/routes/_authenticated/app/$appId.tsx:429
+msgid "Default track (version {0})"
+msgstr "डीफॉल्ट ट्रॅक (आवृत्ती {0})"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -378,9 +450,17 @@ msgstr "मोबाइल साइडबार दाखवते."
 msgid "Download"
 msgstr "डाउनलोड"
 
-#: src/routes/_authenticated/app/$appId.tsx:237
+#: src/routes/_authenticated/app/$appId.tsx:243
 msgid "Enabled Services"
 msgstr "चालू सेवा"
+
+#: src/features/apps/index.tsx:537
+msgid "Enter the app entity to install. For private apps, use the format: app@publisher."
+msgstr "स्थापित करण्यासाठी अॅप एंटिटी प्रविष्ट करा. खाजगी अॅप्ससाठी, स्वरूप वापरा: app@publisher."
+
+#: src/features/apps/components/install-dialog.tsx:82
+msgid "Entity:"
+msgstr "एंटिटी:"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -390,7 +470,7 @@ msgstr "साइडबार विस्तृत करा"
 msgid "Failed to add account"
 msgstr "खाते जोडण्यात अयशस्वी"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Failed to grant permission"
 msgstr "परवानगी देण्यात अयशस्वी"
 
@@ -398,7 +478,7 @@ msgstr "परवानगी देण्यात अयशस्वी"
 msgid "Failed to remove account"
 msgstr "खाते काढण्यात अयशस्वी"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to revoke permission"
 msgstr "परवानगी रद्द करण्यात अयशस्वी"
 
@@ -410,12 +490,12 @@ msgstr "पडताळणी कोड पाठवण्यात अयशस
 msgid "Failed to update category"
 msgstr "श्रेणी अद्यतनित करण्यात अयशस्वी"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Failed to update default"
 msgstr "डीफॉल्ट अद्यतनित करण्यात अयशस्वी"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:320
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update preference"
 msgstr "प्राधान्य अद्यतनित करण्यात अयशस्वी"
 
@@ -423,9 +503,19 @@ msgstr "प्राधान्य अद्यतनित करण्या�
 msgid "Failed to update system default"
 msgstr "सिस्टम डीफॉल्ट अद्यतनित करण्यात अयशस्वी"
 
-#: src/routes/_authenticated/app/$appId.tsx:215
+#: src/features/apps/index.tsx:582
+msgid "File:"
+msgstr "फाइल:"
+
+#: src/routes/_authenticated/app/$appId.tsx:221
 msgid "Fingerprint"
 msgstr "फिंगरप्रिंट"
+
+#: src/features/apps/components/app-info-dialog.tsx:75
+#: src/features/apps/components/app-info-dialog.tsx:100
+#: src/features/apps/components/install-dialog.tsx:78
+msgid "Fingerprint:"
+msgstr "फिंगरप्रिंट:"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -469,21 +559,25 @@ msgstr "पुढच्या पानावर जा"
 msgid "Go to previous page"
 msgstr "मागच्या पानावर जा"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:531
 msgid "Grant"
 msgstr "द्या"
 
-#: src/routes/_authenticated/app/$appId.tsx:530
+#: src/routes/_authenticated/app/$appId.tsx:536
 msgid "Grant permission"
 msgstr "परवानगी द्या"
 
-#: src/routes/_authenticated/app/$appId.tsx:585
+#: src/routes/_authenticated/app/$appId.tsx:591
 msgid "Grant permissions to allow this app to access system features"
 msgstr "या अ‍ॅपला सिस्टम वैशिष्ट्यांमध्ये प्रवेश देण्यासाठी परवानग्या द्या"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:159
 msgid "Group"
 msgstr "गट"
+
+#: src/features/routing/routing-table.tsx:77
+msgid "Handler"
+msgstr "हँडलर"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:67
 msgid "Hide"
@@ -500,11 +594,11 @@ msgstr "मुख्यपृष्ठ"
 msgid "Hot"
 msgstr "हॉट"
 
-#: src/routes/_authenticated/app/$appId.tsx:245
+#: src/routes/_authenticated/app/$appId.tsx:251
 msgid "HTTP Paths"
 msgstr "HTTP पथ"
 
-#: src/routes/_authenticated/app/$appId.tsx:206
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Identity"
 msgstr "ओळख"
 
@@ -516,18 +610,25 @@ msgstr "इम्पीरियल"
 msgid "Inset"
 msgstr "इनसेट"
 
+#: src/features/apps/components/app-info-dialog.tsx:124
+#: src/features/apps/components/install-dialog.tsx:115
 #: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:558
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:608
 msgid "Install"
 msgstr "इन्स्टॉल करा"
+
+#. placeholder {0}: selectedDirectoryApp?.name
+#: src/features/apps/index.tsx:502
+msgid "Install {0}?"
+msgstr "{0} स्थापित करायचे?"
 
 #: src/features/apps/index.tsx:335
 msgid "Install apps from the market or upload your own"
 msgstr "मार्केटमधून अ‍ॅप्स इन्स्टॉल करा किंवा तुमचे स्वतःचे अपलोड करा"
 
 #: src/features/apps/index.tsx:274
-#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:578
 msgid "Install from file"
 msgstr "फाइलमधून इन्स्टॉल करा"
 
@@ -540,9 +641,11 @@ msgstr "प्रकाशकाकडून इन्स्टॉल करा"
 msgid "Installed apps"
 msgstr "इन्स्टॉल केलेले अ‍ॅप्स"
 
+#: src/features/apps/components/app-info-dialog.tsx:124
+#: src/features/apps/components/install-dialog.tsx:115
 #: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:558
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:608
 msgid "Installing..."
 msgstr "इन्स्टॉल करत आहे..."
 
@@ -575,7 +678,7 @@ msgstr "हलके"
 msgid "Load more"
 msgstr "अधिक लोड करा"
 
-#: src/features/apps/components/install-dialog.tsx:67
+#: src/features/apps/components/install-dialog.tsx:68
 msgid "Loading version information..."
 msgstr "व्हर्जन माहिती लोड करत आहे..."
 
@@ -609,6 +712,10 @@ msgstr "लॉग आउट करत आहे…"
 msgid "Luma (Default)"
 msgstr "Luma (डीफॉल्ट)"
 
+#: src/routes/_authenticated/app/$appId.tsx:525
+msgid "Manage capabilities granted to this application"
+msgstr "या अॅप्लिकेशनला दिलेल्या क्षमता व्यवस्थापित करा"
+
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:86
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:220
 msgid "Mark all as read"
@@ -626,7 +733,7 @@ msgstr "मेट्रिक"
 msgid "Monday"
 msgstr "सोमवार"
 
-#: src/features/routing/routing-table.tsx:93
+#: src/features/routing/routing-table.tsx:99
 msgid "Multiple apps declare this resource"
 msgstr "एकाधिक अॅप्स हे रिसोर्स घोषित करतात"
 
@@ -650,13 +757,33 @@ msgstr "कोणतेही अॅप्स अद्यतनित करत
 msgid "No apps installed"
 msgstr "कोणतेही अॅप्स इन्स्टॉल केलेले नाहीत"
 
+#: src/features/routing/routing-table.tsx:54
+msgid "No classes configured."
+msgstr "कोणतेही वर्ग कॉन्फिगर केलेले नाहीत."
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:287
 msgid "No connected accounts"
 msgstr "कनेक्ट केलेले अकाउंट्स नाहीत"
 
+#: src/features/apps/index.tsx:429
+msgid "No description"
+msgstr "वर्णन नाही"
+
+#: src/features/apps/index.tsx:367
+msgid "No development apps match \"{searchQuery}\""
+msgstr "\"{searchQuery}\" शी जुळणारे विकास अॅप्स नाहीत"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:238
 msgid "No groups available"
 msgstr "गट उपलब्ध नाहीत"
+
+#: src/features/apps/index.tsx:460
+msgid "No installable apps in the directory match \"{searchQuery}\""
+msgstr "निर्देशिकेत \"{searchQuery}\" शी जुळणारे स्थापित करण्यायोग्य अॅप्स नाहीत"
+
+#: src/features/apps/index.tsx:341
+msgid "No installed apps match \"{searchQuery}\""
+msgstr "\"{searchQuery}\" शी जुळणारे स्थापित अॅप्स नाहीत"
 
 #: src/features/apps/index.tsx:459
 msgid "No matches in directory"
@@ -671,9 +798,17 @@ msgstr "जुळणारे काही नाही."
 msgid "No matching apps"
 msgstr "जुळणारे अॅप्स नाहीत"
 
-#: src/routes/_authenticated/app/$appId.tsx:584
+#: src/features/routing/routing-table.tsx:58
+msgid "No paths configured."
+msgstr "कोणतेही मार्ग कॉन्फिगर केलेले नाहीत."
+
+#: src/routes/_authenticated/app/$appId.tsx:590
 msgid "No permissions granted"
 msgstr "परवानग्या दिलेल्या नाहीत"
+
+#: src/routes/_authenticated/app/$appId.tsx:525
+msgid "No permissions granted to this app"
+msgstr "या अॅपला कोणत्याही परवानग्या दिलेल्या नाहीत"
 
 #: ../../../lib/web/src/components/place-picker.tsx:129
 msgid "No places found"
@@ -691,6 +826,10 @@ msgstr "शिफारशी उपलब्ध नाहीत"
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:87
 msgid "No results found."
 msgstr "कोणतेही निकाल सापडले नाहीत."
+
+#: src/features/routing/routing-table.tsx:56
+msgid "No services configured."
+msgstr "कोणत्याही सेवा कॉन्फिगर केलेल्या नाहीत."
 
 #: ../../../lib/web/src/components/timezone-select.tsx:64
 msgid "No time zone found."
@@ -712,7 +851,7 @@ msgstr "वापरकर्ते सापडले नाहीत"
 msgid "None"
 msgstr "काहीही नाही"
 
-#: src/routes/_authenticated/app/$appId.tsx:358
+#: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Not versioned"
 msgstr "व्हर्जन्ड नाही"
 
@@ -752,6 +891,10 @@ msgstr "इतर"
 msgid "Owner"
 msgstr "मालक"
 
+#: src/features/routing/routing-table.tsx:70
+msgid "Path"
+msgstr "पथ"
+
 #: src/features/routing/paths.tsx:9
 msgid "Path routing"
 msgstr "पथ रूटिंग"
@@ -761,15 +904,15 @@ msgstr "पथ रूटिंग"
 msgid "Paths"
 msgstr "पथ"
 
-#: src/routes/_authenticated/app/$appId.tsx:482
+#: src/routes/_authenticated/app/$appId.tsx:488
 msgid "Permission granted"
 msgstr "परवानगी दिली"
 
-#: src/routes/_authenticated/app/$appId.tsx:465
+#: src/routes/_authenticated/app/$appId.tsx:471
 msgid "Permission revoked"
 msgstr "परवानगी रद्द केली"
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:523
 msgid "Permissions"
 msgstr "परवानग्या"
 
@@ -781,6 +924,10 @@ msgstr "कृपया अॅप ID प्रविष्ट करा"
 msgid "Preference updated"
 msgstr "प्राधान्य अद्यतनित केले"
 
+#: src/routes/_authenticated/app/$appId.tsx:437
+msgid "Preferred Version"
+msgstr "पसंतीची आवृत्ती"
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
 msgstr "मागील इमेज"
@@ -790,7 +937,7 @@ msgstr "मागील इमेज"
 msgid "Profile"
 msgstr "प्रोफाइल"
 
-#: src/routes/_authenticated/app/$appId.tsx:229
+#: src/routes/_authenticated/app/$appId.tsx:235
 msgid "Provided Classes"
 msgstr "प्रदान केलेल्या क्लासेस"
 
@@ -848,11 +995,15 @@ msgstr "रीसेट करा"
 msgid "Reset all settings to default values"
 msgstr "सर्व सेटिंग्ज डीफॉल्ट मूल्यांवर रीसेट करा"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:642
 msgid "Revoke"
 msgstr "रद्द करा"
 
-#: src/routes/_authenticated/app/$appId.tsx:641
+#: src/routes/_authenticated/app/$appId.tsx:649
+msgid "Revoke permission"
+msgstr "परवानगी रद्द करा"
+
+#: src/routes/_authenticated/app/$appId.tsx:647
 msgid "Revoke permission?"
 msgstr "परवानगी रद्द करायची?"
 
@@ -910,6 +1061,10 @@ msgstr "शोधा…"
 msgid "Searching..."
 msgstr "शोधत आहे..."
 
+#: src/routes/_authenticated/app/$appId.tsx:538
+msgid "Select a capability to grant to {appName}."
+msgstr "{appName} ला देण्यासाठी क्षमता निवडा."
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:147
 msgid "Select a user, group, or other rule to grant access."
 msgstr "अॅक्सेस देण्यासाठी वापरकर्ता, गट, किंवा इतर नियम निवडा."
@@ -942,9 +1097,13 @@ msgstr "साइट दिशा निवडा"
 msgid "Select theme preference"
 msgstr "थीम प्राधान्य निवडा"
 
-#: src/routes/_authenticated/app/$appId.tsx:412
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "Select which version of this app to use"
 msgstr "या अॅपची कोणती आवृत्ती वापरायची ते निवडा"
+
+#: src/features/routing/routing-table.tsx:70
+msgid "Service"
+msgstr "सेवा"
 
 #: src/features/routing/services.tsx:9
 msgid "Service routing"
@@ -1004,11 +1163,11 @@ msgstr "रविवार"
 msgid "System"
 msgstr "सिस्टम"
 
-#: src/features/routing/routing-table.tsx:68
+#: src/features/routing/routing-table.tsx:74
 msgid "System default"
 msgstr "सिस्टम डीफॉल्ट"
 
-#: src/routes/_authenticated/app/$appId.tsx:416
+#: src/routes/_authenticated/app/$appId.tsx:422
 msgid "System Default"
 msgstr "सिस्टम डीफॉल्ट"
 
@@ -1024,7 +1183,7 @@ msgstr "टॅग"
 msgid "Teams/Apps"
 msgstr "टीम्स/अॅप्स"
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "Technical Capabilities"
 msgstr "तांत्रिक क्षमता"
 
@@ -1033,9 +1192,13 @@ msgstr "तांत्रिक क्षमता"
 msgid "The app has been installed successfully."
 msgstr "अॅप यशस्वीरित्या इन्स्टॉल झाले आहे."
 
-#: src/routes/_authenticated/app/$appId.tsx:147
+#: src/routes/_authenticated/app/$appId.tsx:153
 msgid "The requested app could not be found."
 msgstr "विनंती केलेले अॅप सापडले नाही."
+
+#: src/routes/_authenticated/app/$appId.tsx:422
+msgid "The version used by users who haven't made a choice"
+msgstr "निवड न केलेल्या वापरकर्त्यांद्वारे वापरली जाणारी आवृत्ती"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1045,9 +1208,18 @@ msgstr "थीम"
 msgid "Theme Settings"
 msgstr "थीम सेटिंग्ज"
 
-#: src/routes/_authenticated/app/$appId.tsx:359
+#: src/routes/_authenticated/app/$appId.tsx:365
 msgid "This app does not have version management"
 msgstr "या अॅपमध्ये आवृत्ती व्यवस्थापन नाही"
+
+#: src/features/apps/components/app-info-dialog.tsx:61
+msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
+msgstr "हा अॅप थेट त्याच्या प्रकाशकाकडून स्थापित केला आहे आणि त्याची तपासणी केलेली नाही. हा मालवेअर असू शकतो."
+
+#. placeholder {0}: formatPermission(permission.permission, t)
+#: src/routes/_authenticated/app/$appId.tsx:648
+msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
+msgstr "हे {appName} वरून \"{0}\" परवानगी रद्द करेल. अॅप योग्यरित्या कार्य करणे थांबवू शकते."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:72
 msgid "Thursday"
@@ -1075,8 +1247,8 @@ msgstr "थीम टॉगल करा"
 msgid "Top"
 msgstr "वर"
 
-#: src/features/apps/index.tsx:674
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/features/apps/index.tsx:676
+#: src/routes/_authenticated/app/$appId.tsx:384
 msgid "Track"
 msgstr "ट्रॅक"
 
@@ -1115,7 +1287,11 @@ msgstr "शोधण्यासाठी टाइप करा..."
 msgid "Unable to connect to the recommendations service"
 msgstr "शिफारशी सेवेशी कनेक्ट करण्यात अक्षम"
 
-#: src/features/apps/components/install-dialog.tsx:89
+#: src/features/apps/components/app-info-dialog.tsx:133
+msgid "Unable to load app information. The app may not exist or the publisher may be offline."
+msgstr "अॅप माहिती लोड करण्यात अक्षम. अॅप अस्तित्वात नसू शकतो किंवा प्रकाशक ऑफलाइन असू शकतो."
+
+#: src/features/apps/components/install-dialog.tsx:90
 msgid "Unable to load version information"
 msgstr "आवृत्ती माहिती लोड करण्यात अक्षम"
 
@@ -1144,7 +1320,7 @@ msgstr "युनायटेड स्टेट्स"
 msgid "Unverified"
 msgstr "असत्यापित"
 
-#: src/features/apps/index.tsx:670
+#: src/features/apps/index.tsx:672
 msgid "Update"
 msgstr "अपडेट"
 
@@ -1159,6 +1335,10 @@ msgstr "अपडेट अयशस्वी"
 #: src/features/apps/index.tsx:263
 msgid "Updating..."
 msgstr "अपडेट करत आहे..."
+
+#: src/features/routing/routing-table.tsx:147
+msgid "Use system default"
+msgstr "सिस्टम डीफॉल्ट वापरा"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1184,15 +1364,20 @@ msgstr "पडताळा"
 msgid "Verify email address"
 msgstr "ईमेल पत्ता पडताळा"
 
-#: src/routes/_authenticated/app/$appId.tsx:392
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Version"
 msgstr "आवृत्ती"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#. placeholder {0}: track.version
+#: src/features/apps/components/app-info-dialog.tsx:115
+msgid "Version {0}"
+msgstr "आवृत्ती {0}"
+
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Version changed"
 msgstr "आवृत्ती बदलली"
 
-#: src/routes/_authenticated/app/$appId.tsx:411
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Version Management"
 msgstr "आवृत्ती व्यवस्थापन"
 
@@ -1220,6 +1405,14 @@ msgstr "वेबसाइट देखभालीखाली आहे!"
 msgid "Wednesday"
 msgstr "बुधवार"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:438
 msgid "Your personal version override"
 msgstr "तुमचा वैयक्तिक आवृत्ती ओव्हरराइड"
+
+#: src/features/routing/routing-table.tsx:77
+msgid "Your preference"
+msgstr "तुमची पसंती"
+
+#: src/routes/_authenticated/app/$appId.tsx:437
+msgid "Your Version"
+msgstr "तुमची आवृत्ती"

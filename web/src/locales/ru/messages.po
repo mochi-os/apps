@@ -13,6 +13,32 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: app.name
+#: src/features/routing/routing-table.tsx:18
+msgid "{0} (development)"
+msgstr "{0} (разработка)"
+
+#. placeholder {0}: results.length - failed
+#: src/features/apps/index.tsx:181
+msgid "{0} updated, {failed} failed"
+msgstr "{0} обновлено, {failed} не удалось"
+
+#. placeholder {0}: data.name || t`App`
+#. placeholder {0}: data.name || target.name
+#. placeholder {1}: data.version
+#: src/features/apps/index.tsx:141
+#: src/features/apps/index.tsx:158
+msgid "{0} v{1} has been installed."
+msgstr "{0} v{1} установлено."
+
+#: src/routes/_authenticated/app/$appId.tsx:389
+msgid "{track} (default, version {version})"
+msgstr "{track} (по умолчанию, версия {version})"
+
+#: src/routes/_authenticated/app/$appId.tsx:390
+msgid "{track} (version {version})"
+msgstr "{track} (версия {version})"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
 msgstr "12 часов"
@@ -78,7 +104,7 @@ msgstr "Добавить тег..."
 msgid "Add team/app"
 msgstr "Добавить команду/приложение"
 
-#: src/features/apps/index.tsx:587
+#: src/features/apps/index.tsx:589
 msgid "Add to directory"
 msgstr "Добавить в каталог"
 
@@ -106,12 +132,21 @@ msgstr "Все"
 msgid "All apps updated"
 msgstr "Все приложения обновлены"
 
+#: src/features/apps/index.tsx:141
+#: src/routes/_authenticated/app/$appId.tsx:119
+msgid "App"
+msgstr "Приложение"
+
 #: src/features/apps/index.tsx:244
 #: src/features/apps/index.tsx:245
 msgid "App actions"
 msgstr "Действия приложения"
 
-#: src/routes/_authenticated/app/$appId.tsx:207
+#: src/features/apps/components/app-info-dialog.tsx:47
+msgid "App information"
+msgstr "Информация о приложении"
+
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "App information and configuration"
 msgstr "Информация и настройки приложения"
 
@@ -122,12 +157,12 @@ msgstr "Информация и настройки приложения"
 msgid "App installed"
 msgstr "Приложение установлено"
 
-#: src/routes/_authenticated/app/$appId.tsx:142
-#: src/routes/_authenticated/app/$appId.tsx:146
+#: src/routes/_authenticated/app/$appId.tsx:148
+#: src/routes/_authenticated/app/$appId.tsx:152
 msgid "App not found"
 msgstr "Приложение не найдено"
 
-#: src/routes/_authenticated/app/$appId.tsx:210
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Application ID"
 msgstr "ID приложения"
 
@@ -146,6 +181,15 @@ msgstr "Вы уверены, что хотите выйти? Вам потреб
 msgid "Asc"
 msgstr "По возр."
 
+#: src/features/apps/components/install-dialog.tsx:73
+msgid "Available version:"
+msgstr "Доступная версия:"
+
+#: src/features/apps/components/app-info-dialog.tsx:81
+#: src/features/apps/components/app-info-dialog.tsx:105
+msgid "Available versions:"
+msgstr "Доступные версии:"
+
 #: src/features/apps/index.tsx:387
 msgid "Available, but not installed"
 msgstr "Доступно, но не установлено"
@@ -154,9 +198,9 @@ msgstr "Доступно, но не установлено"
 msgid "Back"
 msgstr "Назад"
 
-#: src/routes/_authenticated/app/$appId.tsx:121
-#: src/routes/_authenticated/app/$appId.tsx:142
-#: src/routes/_authenticated/app/$appId.tsx:159
+#: src/routes/_authenticated/app/$appId.tsx:127
+#: src/routes/_authenticated/app/$appId.tsx:148
+#: src/routes/_authenticated/app/$appId.tsx:165
 msgid "Back to apps"
 msgstr "Назад к приложениям"
 
@@ -177,12 +221,12 @@ msgstr "Усилить интерес"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/apps/components/app-info-dialog.tsx:138
-#: src/features/apps/components/install-dialog.tsx:101
+#: src/features/apps/components/app-info-dialog.tsx:143
+#: src/features/apps/components/install-dialog.tsx:102
 #: src/features/apps/index.tsx:511
-#: src/features/apps/index.tsx:551
-#: src/features/apps/index.tsx:599
-#: src/routes/_authenticated/app/$appId.tsx:561
+#: src/features/apps/index.tsx:553
+#: src/features/apps/index.tsx:601
+#: src/routes/_authenticated/app/$appId.tsx:567
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -213,6 +257,10 @@ msgstr "Выберите системные настройки, светлый �
 #: ../../../lib/web/src/components/language-picker.tsx:167
 msgid "Choose language"
 msgstr "Выберите язык"
+
+#: src/features/routing/routing-table.tsx:70
+msgid "Class"
+msgstr "Класс"
 
 #: src/features/routing/classes.tsx:9
 msgid "Class routing"
@@ -315,7 +363,7 @@ msgstr "Продолжить"
 msgid "Copy"
 msgstr "Копировать"
 
-#: src/routes/_authenticated/app/$appId.tsx:220
+#: src/routes/_authenticated/app/$appId.tsx:226
 msgid "Current Version"
 msgstr "Текущая версия"
 
@@ -332,12 +380,13 @@ msgstr "Тёмная"
 msgid "Dark mode"
 msgstr "Тёмный режим"
 
-#: src/features/routing/routing-table.tsx:66
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "Заявлено"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
-#: src/features/routing/routing-table.tsx:117
+#: src/features/routing/routing-table.tsx:123
+#: src/features/routing/routing-table.tsx:147
 msgid "Default"
 msgstr "По умолчанию"
 
@@ -345,9 +394,26 @@ msgstr "По умолчанию"
 msgid "Default AI account"
 msgstr "Аккаунт ИИ по умолчанию"
 
-#: src/routes/_authenticated/app/$appId.tsx:337
+#: src/routes/_authenticated/app/$appId.tsx:447
+msgid "Default for all users"
+msgstr "По умолчанию для всех пользователей"
+
+#: src/routes/_authenticated/app/$appId.tsx:446
+msgid "Default for all users (version {effectiveDefaultVersion})"
+msgstr "По умолчанию для всех пользователей (версия {effectiveDefaultVersion})"
+
+#: src/routes/_authenticated/app/$appId.tsx:343
 msgid "Default for all users updated"
 msgstr "Значение по умолчанию для всех пользователей обновлено"
+
+#: src/routes/_authenticated/app/$appId.tsx:430
+msgid "Default track"
+msgstr "Канал по умолчанию"
+
+#. placeholder {0}: versionData.tracks[defaultTrack]
+#: src/routes/_authenticated/app/$appId.tsx:429
+msgid "Default track (version {0})"
+msgstr "Канал по умолчанию (версия {0})"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -384,9 +450,17 @@ msgstr "Отображает мобильную боковую панель."
 msgid "Download"
 msgstr "Скачать"
 
-#: src/routes/_authenticated/app/$appId.tsx:237
+#: src/routes/_authenticated/app/$appId.tsx:243
 msgid "Enabled Services"
 msgstr "Включённые службы"
+
+#: src/features/apps/index.tsx:537
+msgid "Enter the app entity to install. For private apps, use the format: app@publisher."
+msgstr "Введите сущность приложения для установки. Для приватных приложений используйте формат: app@publisher."
+
+#: src/features/apps/components/install-dialog.tsx:82
+msgid "Entity:"
+msgstr "Сущность:"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -396,7 +470,7 @@ msgstr "Развернуть боковую панель"
 msgid "Failed to add account"
 msgstr "Не удалось добавить аккаунт"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Failed to grant permission"
 msgstr "Не удалось предоставить разрешение"
 
@@ -404,7 +478,7 @@ msgstr "Не удалось предоставить разрешение"
 msgid "Failed to remove account"
 msgstr "Не удалось удалить аккаунт"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to revoke permission"
 msgstr "Не удалось отозвать разрешение"
 
@@ -416,12 +490,12 @@ msgstr "Не удалось отправить код подтверждения
 msgid "Failed to update category"
 msgstr "Не удалось обновить категорию"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Failed to update default"
 msgstr "Не удалось обновить значение по умолчанию"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:320
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update preference"
 msgstr "Не удалось обновить настройку"
 
@@ -429,9 +503,19 @@ msgstr "Не удалось обновить настройку"
 msgid "Failed to update system default"
 msgstr "Не удалось обновить системные значения по умолчанию"
 
-#: src/routes/_authenticated/app/$appId.tsx:215
+#: src/features/apps/index.tsx:582
+msgid "File:"
+msgstr "Файл:"
+
+#: src/routes/_authenticated/app/$appId.tsx:221
 msgid "Fingerprint"
 msgstr "Отпечаток"
+
+#: src/features/apps/components/app-info-dialog.tsx:75
+#: src/features/apps/components/app-info-dialog.tsx:100
+#: src/features/apps/components/install-dialog.tsx:78
+msgid "Fingerprint:"
+msgstr "Отпечаток:"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -475,21 +559,25 @@ msgstr "Перейти на следующую страницу"
 msgid "Go to previous page"
 msgstr "Перейти на предыдущую страницу"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:531
 msgid "Grant"
 msgstr "Предоставить"
 
-#: src/routes/_authenticated/app/$appId.tsx:530
+#: src/routes/_authenticated/app/$appId.tsx:536
 msgid "Grant permission"
 msgstr "Предоставить разрешение"
 
-#: src/routes/_authenticated/app/$appId.tsx:585
+#: src/routes/_authenticated/app/$appId.tsx:591
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Предоставьте разрешения, чтобы это приложение могло получить доступ к системным функциям"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:159
 msgid "Group"
 msgstr "Группа"
+
+#: src/features/routing/routing-table.tsx:77
+msgid "Handler"
+msgstr "Обработчик"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:67
 msgid "Hide"
@@ -506,11 +594,11 @@ msgstr "Главная"
 msgid "Hot"
 msgstr "Популярное"
 
-#: src/routes/_authenticated/app/$appId.tsx:245
+#: src/routes/_authenticated/app/$appId.tsx:251
 msgid "HTTP Paths"
 msgstr "HTTP-пути"
 
-#: src/routes/_authenticated/app/$appId.tsx:206
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Identity"
 msgstr "Личность"
 
@@ -522,18 +610,25 @@ msgstr "Имперская"
 msgid "Inset"
 msgstr "Вложенный"
 
+#: src/features/apps/components/app-info-dialog.tsx:124
+#: src/features/apps/components/install-dialog.tsx:115
 #: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:558
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:608
 msgid "Install"
 msgstr "Установить"
+
+#. placeholder {0}: selectedDirectoryApp?.name
+#: src/features/apps/index.tsx:502
+msgid "Install {0}?"
+msgstr "Установить {0}?"
 
 #: src/features/apps/index.tsx:335
 msgid "Install apps from the market or upload your own"
 msgstr "Устанавливайте приложения из маркетплейса или загружайте свои"
 
 #: src/features/apps/index.tsx:274
-#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:578
 msgid "Install from file"
 msgstr "Установить из файла"
 
@@ -546,9 +641,11 @@ msgstr "Установить от издателя"
 msgid "Installed apps"
 msgstr "Установленные приложения"
 
+#: src/features/apps/components/app-info-dialog.tsx:124
+#: src/features/apps/components/install-dialog.tsx:115
 #: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:558
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:608
 msgid "Installing..."
 msgstr "Установка..."
 
@@ -581,7 +678,7 @@ msgstr "Светлая"
 msgid "Load more"
 msgstr "Загрузить ещё"
 
-#: src/features/apps/components/install-dialog.tsx:67
+#: src/features/apps/components/install-dialog.tsx:68
 msgid "Loading version information..."
 msgstr "Загрузка информации о версии..."
 
@@ -615,6 +712,10 @@ msgstr "Выход…"
 msgid "Luma (Default)"
 msgstr "Luma (по умолчанию)"
 
+#: src/routes/_authenticated/app/$appId.tsx:525
+msgid "Manage capabilities granted to this application"
+msgstr "Управление возможностями, предоставленными этому приложению"
+
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:86
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:220
 msgid "Mark all as read"
@@ -632,7 +733,7 @@ msgstr "Метрический"
 msgid "Monday"
 msgstr "Понедельник"
 
-#: src/features/routing/routing-table.tsx:93
+#: src/features/routing/routing-table.tsx:99
 msgid "Multiple apps declare this resource"
 msgstr "Несколько приложений объявляют этот ресурс"
 
@@ -656,13 +757,33 @@ msgstr "Не удалось обновить ни одно приложение.
 msgid "No apps installed"
 msgstr "Приложения не установлены"
 
+#: src/features/routing/routing-table.tsx:54
+msgid "No classes configured."
+msgstr "Классы не настроены."
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:287
 msgid "No connected accounts"
 msgstr "Нет подключённых учётных записей"
 
+#: src/features/apps/index.tsx:429
+msgid "No description"
+msgstr "Нет описания"
+
+#: src/features/apps/index.tsx:367
+msgid "No development apps match \"{searchQuery}\""
+msgstr "Нет приложений разработки, соответствующих \"{searchQuery}\""
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:238
 msgid "No groups available"
 msgstr "Нет доступных групп"
+
+#: src/features/apps/index.tsx:460
+msgid "No installable apps in the directory match \"{searchQuery}\""
+msgstr "Нет устанавливаемых приложений в каталоге, соответствующих \"{searchQuery}\""
+
+#: src/features/apps/index.tsx:341
+msgid "No installed apps match \"{searchQuery}\""
+msgstr "Нет установленных приложений, соответствующих \"{searchQuery}\""
 
 #: src/features/apps/index.tsx:459
 msgid "No matches in directory"
@@ -677,9 +798,17 @@ msgstr "Совпадений нет."
 msgid "No matching apps"
 msgstr "Нет подходящих приложений"
 
-#: src/routes/_authenticated/app/$appId.tsx:584
+#: src/features/routing/routing-table.tsx:58
+msgid "No paths configured."
+msgstr "Пути не настроены."
+
+#: src/routes/_authenticated/app/$appId.tsx:590
 msgid "No permissions granted"
 msgstr "Разрешения не предоставлены"
+
+#: src/routes/_authenticated/app/$appId.tsx:525
+msgid "No permissions granted to this app"
+msgstr "Этому приложению не предоставлены разрешения"
 
 #: ../../../lib/web/src/components/place-picker.tsx:129
 msgid "No places found"
@@ -697,6 +826,10 @@ msgstr "Нет доступных рекомендаций"
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:87
 msgid "No results found."
 msgstr "Результаты не найдены."
+
+#: src/features/routing/routing-table.tsx:56
+msgid "No services configured."
+msgstr "Службы не настроены."
 
 #: ../../../lib/web/src/components/timezone-select.tsx:64
 msgid "No time zone found."
@@ -718,7 +851,7 @@ msgstr "Пользователи не найдены"
 msgid "None"
 msgstr "Нет"
 
-#: src/routes/_authenticated/app/$appId.tsx:358
+#: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Not versioned"
 msgstr "Без версии"
 
@@ -758,6 +891,10 @@ msgstr "Другое"
 msgid "Owner"
 msgstr "Владелец"
 
+#: src/features/routing/routing-table.tsx:70
+msgid "Path"
+msgstr "Путь"
+
 #: src/features/routing/paths.tsx:9
 msgid "Path routing"
 msgstr "Маршрутизация по пути"
@@ -767,15 +904,15 @@ msgstr "Маршрутизация по пути"
 msgid "Paths"
 msgstr "Пути"
 
-#: src/routes/_authenticated/app/$appId.tsx:482
+#: src/routes/_authenticated/app/$appId.tsx:488
 msgid "Permission granted"
 msgstr "Разрешение предоставлено"
 
-#: src/routes/_authenticated/app/$appId.tsx:465
+#: src/routes/_authenticated/app/$appId.tsx:471
 msgid "Permission revoked"
 msgstr "Разрешение отозвано"
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:523
 msgid "Permissions"
 msgstr "Разрешения"
 
@@ -787,6 +924,10 @@ msgstr "Пожалуйста, введите ID приложения"
 msgid "Preference updated"
 msgstr "Предпочтение обновлено"
 
+#: src/routes/_authenticated/app/$appId.tsx:437
+msgid "Preferred Version"
+msgstr "Предпочитаемая версия"
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
 msgstr "Предыдущее изображение"
@@ -796,7 +937,7 @@ msgstr "Предыдущее изображение"
 msgid "Profile"
 msgstr "Профиль"
 
-#: src/routes/_authenticated/app/$appId.tsx:229
+#: src/routes/_authenticated/app/$appId.tsx:235
 msgid "Provided Classes"
 msgstr "Предоставленные классы"
 
@@ -854,11 +995,15 @@ msgstr "Сбросить"
 msgid "Reset all settings to default values"
 msgstr "Сбросить все настройки к значениям по умолчанию"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:642
 msgid "Revoke"
 msgstr "Отозвать"
 
-#: src/routes/_authenticated/app/$appId.tsx:641
+#: src/routes/_authenticated/app/$appId.tsx:649
+msgid "Revoke permission"
+msgstr "Отозвать разрешение"
+
+#: src/routes/_authenticated/app/$appId.tsx:647
 msgid "Revoke permission?"
 msgstr "Отозвать разрешение?"
 
@@ -916,6 +1061,10 @@ msgstr "Поиск…"
 msgid "Searching..."
 msgstr "Поиск..."
 
+#: src/routes/_authenticated/app/$appId.tsx:538
+msgid "Select a capability to grant to {appName}."
+msgstr "Выберите возможность для предоставления {appName}."
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:147
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Выберите пользователя, группу или другое правило для предоставления доступа."
@@ -948,9 +1097,13 @@ msgstr "Выберите направление сайта"
 msgid "Select theme preference"
 msgstr "Выберите предпочтение темы"
 
-#: src/routes/_authenticated/app/$appId.tsx:412
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "Select which version of this app to use"
 msgstr "Выберите, какую версию приложения использовать"
+
+#: src/features/routing/routing-table.tsx:70
+msgid "Service"
+msgstr "Служба"
 
 #: src/features/routing/services.tsx:9
 msgid "Service routing"
@@ -1010,11 +1163,11 @@ msgstr "Воскресенье"
 msgid "System"
 msgstr "Система"
 
-#: src/features/routing/routing-table.tsx:68
+#: src/features/routing/routing-table.tsx:74
 msgid "System default"
 msgstr "Системные настройки"
 
-#: src/routes/_authenticated/app/$appId.tsx:416
+#: src/routes/_authenticated/app/$appId.tsx:422
 msgid "System Default"
 msgstr "Системные настройки"
 
@@ -1030,7 +1183,7 @@ msgstr "Тег"
 msgid "Teams/Apps"
 msgstr "Команды/Приложения"
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "Technical Capabilities"
 msgstr "Технические возможности"
 
@@ -1039,9 +1192,13 @@ msgstr "Технические возможности"
 msgid "The app has been installed successfully."
 msgstr "Приложение успешно установлено."
 
-#: src/routes/_authenticated/app/$appId.tsx:147
+#: src/routes/_authenticated/app/$appId.tsx:153
 msgid "The requested app could not be found."
 msgstr "Запрошенное приложение не найдено."
+
+#: src/routes/_authenticated/app/$appId.tsx:422
+msgid "The version used by users who haven't made a choice"
+msgstr "Версия, используемая пользователями, не сделавшими выбор"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1051,9 +1208,18 @@ msgstr "Тема"
 msgid "Theme Settings"
 msgstr "Настройки темы"
 
-#: src/routes/_authenticated/app/$appId.tsx:359
+#: src/routes/_authenticated/app/$appId.tsx:365
 msgid "This app does not have version management"
 msgstr "Это приложение не имеет управления версиями"
+
+#: src/features/apps/components/app-info-dialog.tsx:61
+msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
+msgstr "Это приложение устанавливается непосредственно от его издателя и не было проверено. Это может быть вредоносное ПО."
+
+#. placeholder {0}: formatPermission(permission.permission, t)
+#: src/routes/_authenticated/app/$appId.tsx:648
+msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
+msgstr "Это отзовёт разрешение \"{0}\" у {appName}. Приложение может перестать работать корректно."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:72
 msgid "Thursday"
@@ -1081,8 +1247,8 @@ msgstr "Переключить тему"
 msgid "Top"
 msgstr "Верх"
 
-#: src/features/apps/index.tsx:674
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/features/apps/index.tsx:676
+#: src/routes/_authenticated/app/$appId.tsx:384
 msgid "Track"
 msgstr "Трек"
 
@@ -1121,7 +1287,11 @@ msgstr "Введите для поиска..."
 msgid "Unable to connect to the recommendations service"
 msgstr "Не удалось подключиться к сервису рекомендаций"
 
-#: src/features/apps/components/install-dialog.tsx:89
+#: src/features/apps/components/app-info-dialog.tsx:133
+msgid "Unable to load app information. The app may not exist or the publisher may be offline."
+msgstr "Не удалось загрузить информацию о приложении. Приложение может не существовать или издатель может быть оффлайн."
+
+#: src/features/apps/components/install-dialog.tsx:90
 msgid "Unable to load version information"
 msgstr "Не удалось загрузить информацию о версии"
 
@@ -1150,7 +1320,7 @@ msgstr "США"
 msgid "Unverified"
 msgstr "Не подтверждено"
 
-#: src/features/apps/index.tsx:670
+#: src/features/apps/index.tsx:672
 msgid "Update"
 msgstr "Обновить"
 
@@ -1165,6 +1335,10 @@ msgstr "Обновление не удалось"
 #: src/features/apps/index.tsx:263
 msgid "Updating..."
 msgstr "Обновление..."
+
+#: src/features/routing/routing-table.tsx:147
+msgid "Use system default"
+msgstr "Использовать системное по умолчанию"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1190,15 +1364,20 @@ msgstr "Подтвердить"
 msgid "Verify email address"
 msgstr "Подтвердить адрес email"
 
-#: src/routes/_authenticated/app/$appId.tsx:392
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Version"
 msgstr "Версия"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#. placeholder {0}: track.version
+#: src/features/apps/components/app-info-dialog.tsx:115
+msgid "Version {0}"
+msgstr "Версия {0}"
+
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Version changed"
 msgstr "Версия изменена"
 
-#: src/routes/_authenticated/app/$appId.tsx:411
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Version Management"
 msgstr "Управление версиями"
 
@@ -1226,6 +1405,14 @@ msgstr "Сайт на техническом обслуживании!"
 msgid "Wednesday"
 msgstr "Среда"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:438
 msgid "Your personal version override"
 msgstr "Ваше персональное переопределение версии"
+
+#: src/features/routing/routing-table.tsx:77
+msgid "Your preference"
+msgstr "Ваше предпочтение"
+
+#: src/routes/_authenticated/app/$appId.tsx:437
+msgid "Your Version"
+msgstr "Ваша версия"

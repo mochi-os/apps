@@ -9,7 +9,7 @@ import {
   Skeleton,
 } from '@mochi/web'
 import { Download, AlertTriangle } from 'lucide-react'
-import { Trans } from '@lingui/react/macro'
+import { Trans, useLingui } from '@lingui/react/macro'
 import type { AppInfo, Track } from '@/api/types/apps'
 
 interface AppInfoDialogProps {
@@ -35,6 +35,7 @@ export function AppInfoDialog({
   onInstall,
   isInstalling,
 }: AppInfoDialogProps) {
+  const { t } = useLingui()
   return (
     <ResponsiveDialog open={open} onOpenChange={onOpenChange}>
       <ResponsiveDialogContent className='sm:max-w-md'>
@@ -43,7 +44,7 @@ export function AppInfoDialog({
             {isLoading ? (
               <Skeleton className="h-6 w-48" />
             ) : (
-              (appInfo?.app?.name ?? 'App information')
+              (appInfo?.app?.name ?? t`App information`)
             )}
           </ResponsiveDialogTitle>
           {appInfo?.app && (
@@ -57,8 +58,10 @@ export function AppInfoDialog({
           <div className='flex items-start gap-2 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800'>
             <AlertTriangle className='mt-0.5 h-4 w-4 shrink-0' />
             <p>
-              This app is installed directly from its publisher and has not been
-              vetted. It may be malware.
+              <Trans>
+                This app is installed directly from its publisher and has not been
+                vetted. It may be malware.
+              </Trans>
             </p>
           </div>
 
@@ -69,13 +72,13 @@ export function AppInfoDialog({
               
               <div className='pt-2'>
                  <div className="flex gap-2 items-center mb-1">
-                    <span className='font-medium text-sm'>Fingerprint:</span>
+                    <span className='font-medium text-sm'><Trans>Fingerprint:</Trans></span>
                     <Skeleton className='h-4 w-32' />
                  </div>
               </div>
 
               <div>
-                <p className='mb-2 text-sm font-medium'>Available versions:</p>
+                <p className='mb-2 text-sm font-medium'><Trans>Available versions:</Trans></p>
                 <div className='space-y-2'>
                    <div className='flex items-center justify-between rounded-lg border p-3'>
                       <div className='space-y-1'>
@@ -94,12 +97,12 @@ export function AppInfoDialog({
               )}
 
               <p className='text-sm'>
-                <span className='font-medium'>Fingerprint:</span>{' '}
+                <span className='font-medium'><Trans>Fingerprint:</Trans></span>{' '}
                 <span className='font-mono text-xs'>{appInfo.fingerprint}</span>
               </p>
 
               <div>
-                <p className='mb-2 text-sm font-medium'>Available versions:</p>
+                <p className='mb-2 text-sm font-medium'><Trans>Available versions:</Trans></p>
                 <div className='space-y-2'>
                   {appInfo.tracks.map((track) => (
                     <div
@@ -109,7 +112,7 @@ export function AppInfoDialog({
                       <div>
                         <p className='font-medium'>{track.track}</p>
                         <p className='text-muted-foreground text-sm'>
-                          Version {track.version}
+                          <Trans>Version {track.version}</Trans>
                         </p>
                       </div>
                       <Button
@@ -118,7 +121,7 @@ export function AppInfoDialog({
                         disabled={isInstalling}
                       >
                         <Download className='me-2 h-4 w-4' />
-                        {isInstalling ? "Installing..." : "Install"}
+                        {isInstalling ? t`Installing...` : t`Install`}
                       </Button>
                     </div>
                   ))}
@@ -127,8 +130,10 @@ export function AppInfoDialog({
             </div>
           ) : (
             <div className='text-muted-foreground py-4 text-center text-sm'>
-              Unable to load app information. The app may not exist or the
-              publisher may be offline.
+              <Trans>
+                Unable to load app information. The app may not exist or the
+                publisher may be offline.
+              </Trans>
             </div>
           )}
         </div>

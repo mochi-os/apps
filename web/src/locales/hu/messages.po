@@ -13,6 +13,32 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: app.name
+#: src/features/routing/routing-table.tsx:18
+msgid "{0} (development)"
+msgstr "{0} (fejlesztés)"
+
+#. placeholder {0}: results.length - failed
+#: src/features/apps/index.tsx:181
+msgid "{0} updated, {failed} failed"
+msgstr "{0} frissítve, {failed} sikertelen"
+
+#. placeholder {0}: data.name || t`App`
+#. placeholder {0}: data.name || target.name
+#. placeholder {1}: data.version
+#: src/features/apps/index.tsx:141
+#: src/features/apps/index.tsx:158
+msgid "{0} v{1} has been installed."
+msgstr "A {0} v{1} telepítve."
+
+#: src/routes/_authenticated/app/$appId.tsx:389
+msgid "{track} (default, version {version})"
+msgstr "{track} (alapértelmezett, {version} verzió)"
+
+#: src/routes/_authenticated/app/$appId.tsx:390
+msgid "{track} (version {version})"
+msgstr "{track} ({version} verzió)"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
 msgstr "12 óra"
@@ -78,7 +104,7 @@ msgstr "Címke hozzáadása..."
 msgid "Add team/app"
 msgstr "Csapat/alkalmazás hozzáadása"
 
-#: src/features/apps/index.tsx:587
+#: src/features/apps/index.tsx:589
 msgid "Add to directory"
 msgstr "Hozzáadás a címtárhoz"
 
@@ -106,12 +132,21 @@ msgstr "Összes"
 msgid "All apps updated"
 msgstr "Az összes alkalmazás frissítve"
 
+#: src/features/apps/index.tsx:141
+#: src/routes/_authenticated/app/$appId.tsx:119
+msgid "App"
+msgstr "Alkalmazás"
+
 #: src/features/apps/index.tsx:244
 #: src/features/apps/index.tsx:245
 msgid "App actions"
 msgstr "Alkalmazásműveletek"
 
-#: src/routes/_authenticated/app/$appId.tsx:207
+#: src/features/apps/components/app-info-dialog.tsx:47
+msgid "App information"
+msgstr "Alkalmazásinformációk"
+
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "App information and configuration"
 msgstr "Alkalmazásinformációk és konfiguráció"
 
@@ -122,12 +157,12 @@ msgstr "Alkalmazásinformációk és konfiguráció"
 msgid "App installed"
 msgstr "Alkalmazás telepítve"
 
-#: src/routes/_authenticated/app/$appId.tsx:142
-#: src/routes/_authenticated/app/$appId.tsx:146
+#: src/routes/_authenticated/app/$appId.tsx:148
+#: src/routes/_authenticated/app/$appId.tsx:152
 msgid "App not found"
 msgstr "Az alkalmazás nem található"
 
-#: src/routes/_authenticated/app/$appId.tsx:210
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Application ID"
 msgstr "Alkalmazás-azonosító"
 
@@ -146,6 +181,15 @@ msgstr "Biztosan kijelentkezik? A fiók eléréséhez újra be kell jelentkeznie
 msgid "Asc"
 msgstr "Növekvő"
 
+#: src/features/apps/components/install-dialog.tsx:73
+msgid "Available version:"
+msgstr "Elérhető verzió:"
+
+#: src/features/apps/components/app-info-dialog.tsx:81
+#: src/features/apps/components/app-info-dialog.tsx:105
+msgid "Available versions:"
+msgstr "Elérhető verziók:"
+
 #: src/features/apps/index.tsx:387
 msgid "Available, but not installed"
 msgstr "Elérhető, de nincs telepítve"
@@ -154,9 +198,9 @@ msgstr "Elérhető, de nincs telepítve"
 msgid "Back"
 msgstr "Vissza"
 
-#: src/routes/_authenticated/app/$appId.tsx:121
-#: src/routes/_authenticated/app/$appId.tsx:142
-#: src/routes/_authenticated/app/$appId.tsx:159
+#: src/routes/_authenticated/app/$appId.tsx:127
+#: src/routes/_authenticated/app/$appId.tsx:148
+#: src/routes/_authenticated/app/$appId.tsx:165
 msgid "Back to apps"
 msgstr "Vissza az alkalmazásokhoz"
 
@@ -177,12 +221,12 @@ msgstr "Érdeklődés növelése"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/apps/components/app-info-dialog.tsx:138
-#: src/features/apps/components/install-dialog.tsx:101
+#: src/features/apps/components/app-info-dialog.tsx:143
+#: src/features/apps/components/install-dialog.tsx:102
 #: src/features/apps/index.tsx:511
-#: src/features/apps/index.tsx:551
-#: src/features/apps/index.tsx:599
-#: src/routes/_authenticated/app/$appId.tsx:561
+#: src/features/apps/index.tsx:553
+#: src/features/apps/index.tsx:601
+#: src/routes/_authenticated/app/$appId.tsx:567
 msgid "Cancel"
 msgstr "Mégse"
 
@@ -213,6 +257,10 @@ msgstr "Választhat rendszerbeállítás, világos vagy sötét mód között"
 #: ../../../lib/web/src/components/language-picker.tsx:167
 msgid "Choose language"
 msgstr "Nyelv kiválasztása"
+
+#: src/features/routing/routing-table.tsx:70
+msgid "Class"
+msgstr "Osztály"
 
 #: src/features/routing/classes.tsx:9
 msgid "Class routing"
@@ -315,7 +363,7 @@ msgstr "Folytatás"
 msgid "Copy"
 msgstr "Másolás"
 
-#: src/routes/_authenticated/app/$appId.tsx:220
+#: src/routes/_authenticated/app/$appId.tsx:226
 msgid "Current Version"
 msgstr "Jelenlegi verzió"
 
@@ -332,12 +380,13 @@ msgstr "Sötét"
 msgid "Dark mode"
 msgstr "Sötét mód"
 
-#: src/features/routing/routing-table.tsx:66
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "Bejelentette"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
-#: src/features/routing/routing-table.tsx:117
+#: src/features/routing/routing-table.tsx:123
+#: src/features/routing/routing-table.tsx:147
 msgid "Default"
 msgstr "Alapértelmezett"
 
@@ -345,9 +394,26 @@ msgstr "Alapértelmezett"
 msgid "Default AI account"
 msgstr "Alapértelmezett MI-fiók"
 
-#: src/routes/_authenticated/app/$appId.tsx:337
+#: src/routes/_authenticated/app/$appId.tsx:447
+msgid "Default for all users"
+msgstr "Alapértelmezett minden felhasználó számára"
+
+#: src/routes/_authenticated/app/$appId.tsx:446
+msgid "Default for all users (version {effectiveDefaultVersion})"
+msgstr "Alapértelmezett minden felhasználó számára ({effectiveDefaultVersion} verzió)"
+
+#: src/routes/_authenticated/app/$appId.tsx:343
 msgid "Default for all users updated"
 msgstr "Az összes felhasználó alapértelmezett értéke frissítve"
+
+#: src/routes/_authenticated/app/$appId.tsx:430
+msgid "Default track"
+msgstr "Alapértelmezett sáv"
+
+#. placeholder {0}: versionData.tracks[defaultTrack]
+#: src/routes/_authenticated/app/$appId.tsx:429
+msgid "Default track (version {0})"
+msgstr "Alapértelmezett sáv ({0} verzió)"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -384,9 +450,17 @@ msgstr "Megjeleníti a mobil oldalsávot."
 msgid "Download"
 msgstr "Letöltés"
 
-#: src/routes/_authenticated/app/$appId.tsx:237
+#: src/routes/_authenticated/app/$appId.tsx:243
 msgid "Enabled Services"
 msgstr "Engedélyezett szolgáltatások"
+
+#: src/features/apps/index.tsx:537
+msgid "Enter the app entity to install. For private apps, use the format: app@publisher."
+msgstr "Adja meg a telepítendő alkalmazás entitását. Privát alkalmazásokhoz használja a következő formátumot: app@publisher."
+
+#: src/features/apps/components/install-dialog.tsx:82
+msgid "Entity:"
+msgstr "Entitás:"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -396,7 +470,7 @@ msgstr "Oldalsáv kibontása"
 msgid "Failed to add account"
 msgstr "Nem sikerült hozzáadni a fiókot"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Failed to grant permission"
 msgstr "Nem sikerült engedélyt adni"
 
@@ -404,7 +478,7 @@ msgstr "Nem sikerült engedélyt adni"
 msgid "Failed to remove account"
 msgstr "Nem sikerült eltávolítani a fiókot"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to revoke permission"
 msgstr "Nem sikerült visszavonni az engedélyt"
 
@@ -416,12 +490,12 @@ msgstr "Nem sikerült elküldeni az ellenőrző kódot"
 msgid "Failed to update category"
 msgstr "Nem sikerült frissíteni a kategóriát"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Failed to update default"
 msgstr "Nem sikerült frissíteni az alapértelmezettet"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:320
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update preference"
 msgstr "Nem sikerült frissíteni a beállítást"
 
@@ -429,9 +503,19 @@ msgstr "Nem sikerült frissíteni a beállítást"
 msgid "Failed to update system default"
 msgstr "Nem sikerült frissíteni a rendszer alapértelmezett értékét"
 
-#: src/routes/_authenticated/app/$appId.tsx:215
+#: src/features/apps/index.tsx:582
+msgid "File:"
+msgstr "Fájl:"
+
+#: src/routes/_authenticated/app/$appId.tsx:221
 msgid "Fingerprint"
 msgstr "Ujjlenyomat"
+
+#: src/features/apps/components/app-info-dialog.tsx:75
+#: src/features/apps/components/app-info-dialog.tsx:100
+#: src/features/apps/components/install-dialog.tsx:78
+msgid "Fingerprint:"
+msgstr "Ujjlenyomat:"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -475,21 +559,25 @@ msgstr "Ugrás a következő oldalra"
 msgid "Go to previous page"
 msgstr "Ugrás az előző oldalra"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:531
 msgid "Grant"
 msgstr "Engedélyezés"
 
-#: src/routes/_authenticated/app/$appId.tsx:530
+#: src/routes/_authenticated/app/$appId.tsx:536
 msgid "Grant permission"
 msgstr "Engedély megadása"
 
-#: src/routes/_authenticated/app/$appId.tsx:585
+#: src/routes/_authenticated/app/$appId.tsx:591
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Engedélyek megadása, hogy az alkalmazás hozzáférhessen a rendszer funkcióihoz"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:159
 msgid "Group"
 msgstr "Csoport"
+
+#: src/features/routing/routing-table.tsx:77
+msgid "Handler"
+msgstr "Kezelő"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:67
 msgid "Hide"
@@ -506,11 +594,11 @@ msgstr "Kezdőlap"
 msgid "Hot"
 msgstr "Forró"
 
-#: src/routes/_authenticated/app/$appId.tsx:245
+#: src/routes/_authenticated/app/$appId.tsx:251
 msgid "HTTP Paths"
 msgstr "HTTP útvonalak"
 
-#: src/routes/_authenticated/app/$appId.tsx:206
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Identity"
 msgstr "Azonosító"
 
@@ -522,18 +610,25 @@ msgstr "Imperial"
 msgid "Inset"
 msgstr "Beillesztett"
 
+#: src/features/apps/components/app-info-dialog.tsx:124
+#: src/features/apps/components/install-dialog.tsx:115
 #: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:558
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:608
 msgid "Install"
 msgstr "Telepítés"
+
+#. placeholder {0}: selectedDirectoryApp?.name
+#: src/features/apps/index.tsx:502
+msgid "Install {0}?"
+msgstr "Telepíti a következőt: {0}?"
 
 #: src/features/apps/index.tsx:335
 msgid "Install apps from the market or upload your own"
 msgstr "Telepítsen alkalmazásokat a piacról, vagy töltse fel sajátját"
 
 #: src/features/apps/index.tsx:274
-#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:578
 msgid "Install from file"
 msgstr "Telepítés fájlból"
 
@@ -546,9 +641,11 @@ msgstr "Telepítés a kiadótól"
 msgid "Installed apps"
 msgstr "Telepített alkalmazások"
 
+#: src/features/apps/components/app-info-dialog.tsx:124
+#: src/features/apps/components/install-dialog.tsx:115
 #: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:558
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:608
 msgid "Installing..."
 msgstr "Telepítés..."
 
@@ -581,7 +678,7 @@ msgstr "Világos"
 msgid "Load more"
 msgstr "Továbbiak betöltése"
 
-#: src/features/apps/components/install-dialog.tsx:67
+#: src/features/apps/components/install-dialog.tsx:68
 msgid "Loading version information..."
 msgstr "Verzióinformációk betöltése..."
 
@@ -615,6 +712,10 @@ msgstr "Kijelentkezés…"
 msgid "Luma (Default)"
 msgstr "Luma (alapértelmezett)"
 
+#: src/routes/_authenticated/app/$appId.tsx:525
+msgid "Manage capabilities granted to this application"
+msgstr "Az alkalmazásnak megadott képességek kezelése"
+
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:86
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:220
 msgid "Mark all as read"
@@ -632,7 +733,7 @@ msgstr "Metrika"
 msgid "Monday"
 msgstr "Hétfő"
 
-#: src/features/routing/routing-table.tsx:93
+#: src/features/routing/routing-table.tsx:99
 msgid "Multiple apps declare this resource"
 msgstr "Több alkalmazás is deklarálja ezt az erőforrást"
 
@@ -656,13 +757,33 @@ msgstr "Egyetlen alkalmazás sem volt frissíthető."
 msgid "No apps installed"
 msgstr "Nincsenek telepített alkalmazások"
 
+#: src/features/routing/routing-table.tsx:54
+msgid "No classes configured."
+msgstr "Nincsenek osztályok konfigurálva."
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:287
 msgid "No connected accounts"
 msgstr "Nincsenek csatlakoztatott fiókok"
 
+#: src/features/apps/index.tsx:429
+msgid "No description"
+msgstr "Nincs leírás"
+
+#: src/features/apps/index.tsx:367
+msgid "No development apps match \"{searchQuery}\""
+msgstr "Nincs olyan fejlesztői alkalmazás, amely megfelelne ennek: \"{searchQuery}\""
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:238
 msgid "No groups available"
 msgstr "Nincsenek elérhető csoportok"
+
+#: src/features/apps/index.tsx:460
+msgid "No installable apps in the directory match \"{searchQuery}\""
+msgstr "Nincs olyan telepíthető alkalmazás a könyvtárban, amely megfelelne ennek: \"{searchQuery}\""
+
+#: src/features/apps/index.tsx:341
+msgid "No installed apps match \"{searchQuery}\""
+msgstr "Nincs olyan telepített alkalmazás, amely megfelelne ennek: \"{searchQuery}\""
 
 #: src/features/apps/index.tsx:459
 msgid "No matches in directory"
@@ -677,9 +798,17 @@ msgstr "Nincs találat."
 msgid "No matching apps"
 msgstr "Nincs egyező alkalmazás"
 
-#: src/routes/_authenticated/app/$appId.tsx:584
+#: src/features/routing/routing-table.tsx:58
+msgid "No paths configured."
+msgstr "Nincsenek útvonalak konfigurálva."
+
+#: src/routes/_authenticated/app/$appId.tsx:590
 msgid "No permissions granted"
 msgstr "Nincsenek megadott engedélyek"
+
+#: src/routes/_authenticated/app/$appId.tsx:525
+msgid "No permissions granted to this app"
+msgstr "Nincs engedély megadva ennek az alkalmazásnak"
 
 #: ../../../lib/web/src/components/place-picker.tsx:129
 msgid "No places found"
@@ -697,6 +826,10 @@ msgstr "Nincsenek elérhető ajánlások"
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:87
 msgid "No results found."
 msgstr "Nincs találat."
+
+#: src/features/routing/routing-table.tsx:56
+msgid "No services configured."
+msgstr "Nincsenek szolgáltatások konfigurálva."
 
 #: ../../../lib/web/src/components/timezone-select.tsx:64
 msgid "No time zone found."
@@ -718,7 +851,7 @@ msgstr "Nem találhatók felhasználók"
 msgid "None"
 msgstr "Nincs"
 
-#: src/routes/_authenticated/app/$appId.tsx:358
+#: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Not versioned"
 msgstr "Nem verziózott"
 
@@ -758,6 +891,10 @@ msgstr "Egyéb"
 msgid "Owner"
 msgstr "Tulajdonos"
 
+#: src/features/routing/routing-table.tsx:70
+msgid "Path"
+msgstr "Útvonal"
+
 #: src/features/routing/paths.tsx:9
 msgid "Path routing"
 msgstr "Útvonal-irányítás"
@@ -767,15 +904,15 @@ msgstr "Útvonal-irányítás"
 msgid "Paths"
 msgstr "Útvonalak"
 
-#: src/routes/_authenticated/app/$appId.tsx:482
+#: src/routes/_authenticated/app/$appId.tsx:488
 msgid "Permission granted"
 msgstr "Engedély megadva"
 
-#: src/routes/_authenticated/app/$appId.tsx:465
+#: src/routes/_authenticated/app/$appId.tsx:471
 msgid "Permission revoked"
 msgstr "Engedély visszavonva"
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:523
 msgid "Permissions"
 msgstr "Engedélyek"
 
@@ -787,6 +924,10 @@ msgstr "Adjon meg egy alkalmazásazonosítót"
 msgid "Preference updated"
 msgstr "Preferencia frissítve"
 
+#: src/routes/_authenticated/app/$appId.tsx:437
+msgid "Preferred Version"
+msgstr "Előnyben részesített verzió"
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
 msgstr "Előző kép"
@@ -796,7 +937,7 @@ msgstr "Előző kép"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/routes/_authenticated/app/$appId.tsx:229
+#: src/routes/_authenticated/app/$appId.tsx:235
 msgid "Provided Classes"
 msgstr "Biztosított osztályok"
 
@@ -854,11 +995,15 @@ msgstr "Visszaállítás"
 msgid "Reset all settings to default values"
 msgstr "Minden beállítás visszaállítása alapértelmezett értékekre"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:642
 msgid "Revoke"
 msgstr "Visszavonás"
 
-#: src/routes/_authenticated/app/$appId.tsx:641
+#: src/routes/_authenticated/app/$appId.tsx:649
+msgid "Revoke permission"
+msgstr "Engedély visszavonása"
+
+#: src/routes/_authenticated/app/$appId.tsx:647
 msgid "Revoke permission?"
 msgstr "Visszavonja az engedélyt?"
 
@@ -916,6 +1061,10 @@ msgstr "Keresés…"
 msgid "Searching..."
 msgstr "Keresés folyamatban..."
 
+#: src/routes/_authenticated/app/$appId.tsx:538
+msgid "Select a capability to grant to {appName}."
+msgstr "Válasszon képességet, amelyet meg szeretne adni a következőnek: {appName}."
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:147
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Válasszon felhasználót, csoportot vagy más szabályt a hozzáférés megadásához."
@@ -948,9 +1097,13 @@ msgstr "Oldalirány kiválasztása"
 msgid "Select theme preference"
 msgstr "Téma beállításának kiválasztása"
 
-#: src/routes/_authenticated/app/$appId.tsx:412
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "Select which version of this app to use"
 msgstr "Válassza ki, melyik verziót használja ennek az alkalmazásnak"
+
+#: src/features/routing/routing-table.tsx:70
+msgid "Service"
+msgstr "Szolgáltatás"
 
 #: src/features/routing/services.tsx:9
 msgid "Service routing"
@@ -1010,11 +1163,11 @@ msgstr "Vasárnap"
 msgid "System"
 msgstr "Rendszer"
 
-#: src/features/routing/routing-table.tsx:68
+#: src/features/routing/routing-table.tsx:74
 msgid "System default"
 msgstr "Rendszer alapértelmezett"
 
-#: src/routes/_authenticated/app/$appId.tsx:416
+#: src/routes/_authenticated/app/$appId.tsx:422
 msgid "System Default"
 msgstr "Rendszer alapértelmezett"
 
@@ -1030,7 +1183,7 @@ msgstr "Címke"
 msgid "Teams/Apps"
 msgstr "Csapatok/Alkalmazások"
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "Technical Capabilities"
 msgstr "Technikai képességek"
 
@@ -1039,9 +1192,13 @@ msgstr "Technikai képességek"
 msgid "The app has been installed successfully."
 msgstr "Az alkalmazás sikeresen telepítve."
 
-#: src/routes/_authenticated/app/$appId.tsx:147
+#: src/routes/_authenticated/app/$appId.tsx:153
 msgid "The requested app could not be found."
 msgstr "A kért alkalmazás nem található."
+
+#: src/routes/_authenticated/app/$appId.tsx:422
+msgid "The version used by users who haven't made a choice"
+msgstr "A választást nem hozó felhasználók által használt verzió"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1051,9 +1208,18 @@ msgstr "Téma"
 msgid "Theme Settings"
 msgstr "Témabeállítások"
 
-#: src/routes/_authenticated/app/$appId.tsx:359
+#: src/routes/_authenticated/app/$appId.tsx:365
 msgid "This app does not have version management"
 msgstr "Ennek az alkalmazásnak nincs verziókezelése"
+
+#: src/features/apps/components/app-info-dialog.tsx:61
+msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
+msgstr "Ezt az alkalmazást közvetlenül a kiadójától telepítették, és nem ellenőrizték. Lehet, hogy kártevő."
+
+#. placeholder {0}: formatPermission(permission.permission, t)
+#: src/routes/_authenticated/app/$appId.tsx:648
+msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
+msgstr "Ez visszavonja a \"{0}\" engedélyt a következőtől: {appName}. Az alkalmazás működése leállhat."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:72
 msgid "Thursday"
@@ -1081,8 +1247,8 @@ msgstr "Téma váltása"
 msgid "Top"
 msgstr "Eleje"
 
-#: src/features/apps/index.tsx:674
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/features/apps/index.tsx:676
+#: src/routes/_authenticated/app/$appId.tsx:384
 msgid "Track"
 msgstr "Csatorna"
 
@@ -1121,7 +1287,11 @@ msgstr "Gépeljen a kereséshez..."
 msgid "Unable to connect to the recommendations service"
 msgstr "Nem sikerült csatlakozni az ajánlási szolgáltatáshoz"
 
-#: src/features/apps/components/install-dialog.tsx:89
+#: src/features/apps/components/app-info-dialog.tsx:133
+msgid "Unable to load app information. The app may not exist or the publisher may be offline."
+msgstr "Az alkalmazás információi nem tölthetők be. Az alkalmazás esetleg nem létezik, vagy a kiadó offline állapotban van."
+
+#: src/features/apps/components/install-dialog.tsx:90
 msgid "Unable to load version information"
 msgstr "Nem sikerült betölteni a verzióinformációkat"
 
@@ -1150,7 +1320,7 @@ msgstr "Egyesült Államok"
 msgid "Unverified"
 msgstr "Nem ellenőrzött"
 
-#: src/features/apps/index.tsx:670
+#: src/features/apps/index.tsx:672
 msgid "Update"
 msgstr "Frissítés"
 
@@ -1165,6 +1335,10 @@ msgstr "A frissítés sikertelen"
 #: src/features/apps/index.tsx:263
 msgid "Updating..."
 msgstr "Frissítés..."
+
+#: src/features/routing/routing-table.tsx:147
+msgid "Use system default"
+msgstr "Rendszer alapértelmezésének használata"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1190,15 +1364,20 @@ msgstr "Ellenőrzés"
 msgid "Verify email address"
 msgstr "E-mail-cím ellenőrzése"
 
-#: src/routes/_authenticated/app/$appId.tsx:392
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Version"
 msgstr "Verzió"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#. placeholder {0}: track.version
+#: src/features/apps/components/app-info-dialog.tsx:115
+msgid "Version {0}"
+msgstr "{0} verzió"
+
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Version changed"
 msgstr "Verzió módosítva"
 
-#: src/routes/_authenticated/app/$appId.tsx:411
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Version Management"
 msgstr "Verziókezelés"
 
@@ -1226,6 +1405,14 @@ msgstr "A webhely karbantartás alatt áll!"
 msgid "Wednesday"
 msgstr "Szerda"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:438
 msgid "Your personal version override"
 msgstr "Az ön személyes verziófelülbírálása"
+
+#: src/features/routing/routing-table.tsx:77
+msgid "Your preference"
+msgstr "Az Ön preferenciája"
+
+#: src/routes/_authenticated/app/$appId.tsx:437
+msgid "Your Version"
+msgstr "Az Ön verziója"

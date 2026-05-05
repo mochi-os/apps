@@ -15,7 +15,7 @@ function isDevelopmentApp(id: string): boolean {
 }
 
 function formatAppName(app: RoutingApp): string {
-  return isDevelopmentApp(app.id) ? `${app.name} (development)` : app.name
+  return isDevelopmentApp(app.id) ? t`${app.name} (development)` : app.name
 }
 
 // Sort apps alphabetically, with development version immediately after published version of same app
@@ -50,7 +50,13 @@ export function RoutingTable({
   if (sortedNames.length === 0) {
     return (
       <div className='text-muted-foreground py-8 text-center'>
-        No {type === 'class' ? 'classes' : type === 'service' ? 'services' : 'paths'} configured.
+        {type === 'class' ? (
+          <Trans>No classes configured.</Trans>
+        ) : type === 'service' ? (
+          <Trans>No services configured.</Trans>
+        ) : (
+          <Trans>No paths configured.</Trans>
+        )}
       </div>
     )
   }
@@ -61,14 +67,14 @@ export function RoutingTable({
         <thead>
           <tr className='border-b bg-muted/50'>
             <th className='px-4 py-3 text-start text-sm font-medium'>
-              {type === 'path' ? 'Path' : type === 'class' ? "Class" : "Service"}
+              {type === 'path' ? <Trans>Path</Trans> : type === 'class' ? <Trans>Class</Trans> : <Trans>Service</Trans>}
             </th>
             <th className='px-4 py-3 text-start text-sm font-medium'><Trans>Declared by</Trans></th>
             {isAdmin && (
               <th className='px-4 py-3 text-start text-sm font-medium'><Trans>System default</Trans></th>
             )}
             <th className='px-4 py-3 text-start text-sm font-medium'>
-              {isAdmin ? "Your preference" : "Handler"}
+              {isAdmin ? <Trans>Your preference</Trans> : <Trans>Handler</Trans>}
             </th>
           </tr>
         </thead>
@@ -138,7 +144,7 @@ export function RoutingTable({
                     <SelectContent>
                       <SelectItem value='_default'>
                         <span className='text-muted-foreground'>
-                          {isAdmin ? "Use system default" : "Default"}
+                          {isAdmin ? <Trans>Use system default</Trans> : <Trans>Default</Trans>}
                           {!resource.user && effectiveApp && (
                             <span className='ms-1'>
                               ({formatAppName(resource.apps.find((a) => a.id === effectiveApp)!)})

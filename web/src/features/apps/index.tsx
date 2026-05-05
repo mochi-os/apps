@@ -138,7 +138,7 @@ export function Apps() {
       {
         onSuccess: (data) => {
           toast.success(t`App installed`, {
-            description: `${data.name || 'App'} v${data.version} has been installed.`,
+            description: t`${data.name || t`App`} v${data.version} has been installed.`,
           })
           setInstallFromPublisher(false)
           setAppIdInput('')
@@ -155,7 +155,7 @@ export function Apps() {
       {
         onSuccess: (data) => {
           toast.success(t`App installed`, {
-            description: `${data.name || target.name} v${data.version} has been installed.`,
+            description: t`${data.name || target.name} v${data.version} has been installed.`,
           })
           setSelectedDirectoryApp(null)
         },
@@ -178,7 +178,7 @@ export function Apps() {
     } else if (failed === results.length) {
       toast.error(t`Update failed`, { description: t`No apps could be updated.` })
     } else {
-      toast.warning(`${results.length - failed} updated, ${failed} failed`)
+      toast.warning(t`${results.length - failed} updated, ${failed} failed`)
     }
 
     refetchInstalled()
@@ -338,7 +338,7 @@ export function Apps() {
             <EmptyState
               icon={Package}
               title={t`No matching apps`}
-              description={`No installed apps match "${searchQuery}"`}
+              description={t`No installed apps match "${searchQuery}"`}
             />
           ) : (
             <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
@@ -364,7 +364,7 @@ export function Apps() {
               <EmptyState
                 icon={Package}
                 title={t`No matching apps`}
-                description={`No development apps match "${searchQuery}"`}
+                description={t`No development apps match "${searchQuery}"`}
               />
             ) : (
               <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
@@ -426,7 +426,7 @@ export function Apps() {
                     </CardHeader>
                     <CardContent className='flex-1'>
                       <p className='text-muted-foreground line-clamp-2 text-sm'>
-                        {app.blurb || 'No description'}
+                        {app.blurb || t`No description`}
                       </p>
                     </CardContent>
                   </Card>
@@ -457,7 +457,7 @@ export function Apps() {
               <EmptyState
                 icon={Package}
                 title={t`No matches in directory`}
-                description={`No installable apps in the directory match "${searchQuery}"`}
+                description={t`No installable apps in the directory match "${searchQuery}"`}
               />
             ) : (
               <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
@@ -499,7 +499,7 @@ export function Apps() {
           <ResponsiveDialogContent>
             <ResponsiveDialogHeader>
               <ResponsiveDialogTitle>
-                Install {selectedDirectoryApp?.name}?
+                <Trans>Install {selectedDirectoryApp?.name}?</Trans>
               </ResponsiveDialogTitle>
             </ResponsiveDialogHeader>
             <ResponsiveDialogFooter>
@@ -534,8 +534,10 @@ export function Apps() {
             <ResponsiveDialogHeader>
               <ResponsiveDialogTitle><Trans>Install from publisher</Trans></ResponsiveDialogTitle>
               <ResponsiveDialogDescription>
-                Enter the app entity to install. For private apps, use the
-                format: app@publisher.
+                <Trans>
+                  Enter the app entity to install. For private apps, use the
+                  format: app@publisher.
+                </Trans>
               </ResponsiveDialogDescription>
             </ResponsiveDialogHeader>
             <div className='space-y-3 py-4'>
@@ -577,7 +579,7 @@ export function Apps() {
             </ResponsiveDialogHeader>
             <div className='space-y-4 py-4'>
               <p className='text-sm'>
-                <span className='font-medium'>File:</span> {selectedFile?.name}
+                <span className='font-medium'><Trans>File:</Trans></span> {selectedFile?.name}
               </p>
               <div className='flex items-center justify-between rounded-xl border px-4 py-3'>
                 <Label

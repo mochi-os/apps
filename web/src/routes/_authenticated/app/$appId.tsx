@@ -57,30 +57,36 @@ export const Route = createFileRoute('/_authenticated/app/$appId')({
   },
 })
 
-// All available permissions
-const allPermissions = [
-  { permission: 'account/read', restricted: false, label: "Read connected accounts" },
-  { permission: 'account/manage', restricted: false, label: "Manage connected accounts" },
-  { permission: 'account/ai', restricted: true, label: "Use AI services" },
-  { permission: 'account/mcp', restricted: true, label: "Use MCP services" },
-  { permission: 'account/notify', restricted: true, label: "Send account notifications" },
-  { permission: 'group/manage', restricted: false, label: "Manage groups" },
-  { permission: 'interests/read', restricted: false, label: "Read interests" },
-  { permission: 'interests/write', restricted: false, label: "Write interests" },
-  { permission: 'user/read', restricted: true, label: "Read user data" },
-  { permission: 'setting/write', restricted: true, label: "Modify system settings" },
-  { permission: 'permission/manage', restricted: true, label: "Manage permissions" },
-  { permission: 'webpush/send', restricted: true, label: "Send notifications" },
-]
+// All available permissions. Labels are returned via a function so the
+// translations are resolved at render time (and re-resolved on locale change).
+function buildAllPermissions(t: (descriptor: TemplateStringsArray) => string) {
+  return [
+    { permission: 'account/read', restricted: false, label: t`Read connected accounts` },
+    { permission: 'account/manage', restricted: false, label: t`Manage connected accounts` },
+    { permission: 'account/ai', restricted: true, label: t`Use AI services` },
+    { permission: 'account/mcp', restricted: true, label: t`Use MCP services` },
+    { permission: 'account/notify', restricted: true, label: t`Send account notifications` },
+    { permission: 'group/manage', restricted: false, label: t`Manage groups` },
+    { permission: 'interests/read', restricted: false, label: t`Read interests` },
+    { permission: 'interests/write', restricted: false, label: t`Write interests` },
+    { permission: 'user/read', restricted: true, label: t`Read user data` },
+    { permission: 'setting/write', restricted: true, label: t`Modify system settings` },
+    { permission: 'permission/manage', restricted: true, label: t`Manage permissions` },
+    { permission: 'webpush/send', restricted: true, label: t`Send notifications` },
+  ]
+}
 
-function formatPermission(permission: string): string {
+function formatPermission(
+  permission: string,
+  t: (descriptor: TemplateStringsArray, ...values: unknown[]) => string,
+): string {
   if (permission.startsWith('service/')) {
-    return `Handle ${permission.slice(8)} service`
+    return t`Handle ${permission.slice(8)} service`
   }
   if (permission.startsWith('url:')) {
-    return `Access ${permission.slice(4)}`
+    return t`Access ${permission.slice(4)}`
   }
-  const found = allPermissions.find((p) => p.permission === permission)
+  const found = buildAllPermissions(t).find((p) => p.permission === permission)
   return found?.label || permission
 }
 
@@ -110,7 +116,7 @@ function AppPage() {
   const app = appsData?.installed?.find((a) => a.id === appId) ||
     appsData?.development?.find((a) => a.id === appId)
 
-  usePageTitle(app?.name ?? 'App')
+  usePageTitle(app?.name ?? t`App`)
 
   if (isLoadingApps) {
     return (
@@ -380,8 +386,8 @@ function VersionsTab({ appId }: { appId: string }) {
               ([track, version]) => (
                 <SelectItem key={`track:${track}`} value={`track:${track}`} className='ps-6'>
                   {track === defaultTrack
-                    ? `${track} (default, version ${version})`
-                    : `${track} (version ${version})`}
+                    ? t`${track} (default, version ${version})`
+                    : t`${track} (version ${version})`}
                 </SelectItem>
               )
             )}
@@ -413,22 +419,22 @@ function VersionsTab({ appId }: { appId: string }) {
       >
         <div className="divide-y-0">
           {isAdmin && (
-            <FieldRow label={t`System Default`} description="The version used by users who haven't made a choice">
+            <FieldRow label={t`System Default`} description={t`The version used by users who haven't made a choice`}>
               <div className="w-full max-w-sm">
                 {renderVersionSelect(
                   systemValue,
                   handleSystemVersionChange,
                   setSystemVersion.isPending,
                   defaultTrack && versionData?.tracks?.[defaultTrack]
-                    ? `Default track (version ${versionData.tracks[defaultTrack]})`
-                    : 'Default track'
+                    ? t`Default track (version ${versionData.tracks[defaultTrack]})`
+                    : t`Default track`
                 )}
               </div>
             </FieldRow>
           )}
-          
-          <FieldRow 
-            label={isAdmin ? "Your Version" : "Preferred Version"} 
+
+          <FieldRow
+            label={isAdmin ? t`Your Version` : t`Preferred Version`}
             description={t`Your personal version override`}
           >
             <div className="w-full max-w-sm">
@@ -437,8 +443,8 @@ function VersionsTab({ appId }: { appId: string }) {
                 handleUserVersionChange,
                 setUserVersion.isPending,
                 effectiveDefaultVersion
-                  ? `Default for all users (version ${effectiveDefaultVersion})`
-                  : 'Default for all users'
+                  ? t`Default for all users (version ${effectiveDefaultVersion})`
+                  : t`Default for all users`
               )}
             </div>
           </FieldRow>
@@ -505,18 +511,18 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
 
   const grantedPermissions = (data?.permissions ?? [])
     .filter((p) => p.granted && !p.permission.startsWith('_'))
-    .sort((a, b) => naturalCompare(formatPermission(a.permission), formatPermission(b.permission)))
+    .sort((a, b) => naturalCompare(formatPermission(a.permission, t), formatPermission(b.permission, t)))
 
   const grantedSet = new Set(grantedPermissions.map((p) => p.permission))
-  const availablePermissions = allPermissions
+  const availablePermissions = buildAllPermissions(t)
     .filter((p) => !grantedSet.has(p.permission))
     .sort((a, b) => naturalCompare(a.label, b.label))
 
   return (
-    <Section 
-      title={t`Permissions`} 
+    <Section
+      title={t`Permissions`}
       description={grantedPermissions.length === 0
-        ? "No permissions granted to this app" : "Manage capabilities granted to this application"}
+        ? t`No permissions granted to this app` : t`Manage capabilities granted to this application`}
       action={availablePermissions.length > 0 && (
         <ResponsiveDialog open={grantDialogOpen} onOpenChange={setGrantDialogOpen}>
           <ResponsiveDialogTrigger asChild>
@@ -529,7 +535,7 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
             <ResponsiveDialogHeader>
               <ResponsiveDialogTitle><Trans>Grant permission</Trans></ResponsiveDialogTitle>
               <ResponsiveDialogDescription>
-                Select a capability to grant to {appName}.
+                <Trans>Select a capability to grant to {appName}.</Trans>
               </ResponsiveDialogDescription>
             </ResponsiveDialogHeader>
             <div className='min-h-0 flex-1 space-y-2 overflow-y-auto py-1'>
@@ -616,7 +622,7 @@ function PermissionRow({
           <Shield className='text-primary h-4 w-4' />
         )}
         <div>
-          <p className="font-medium">{formatPermission(permission.permission)}</p>
+          <p className="font-medium">{formatPermission(permission.permission, t)}</p>
         </div>
       </div>
       {canRevoke && (
@@ -639,8 +645,8 @@ function PermissionRow({
             open={confirmOpen}
             onOpenChange={setConfirmOpen}
             title={t`Revoke permission?`}
-            desc={`This will revoke the "${formatPermission(permission.permission)}" permission from ${appName}. The app may stop working correctly.`}
-            confirmText='Revoke permission'
+            desc={t`This will revoke the "${formatPermission(permission.permission, t)}" permission from ${appName}. The app may stop working correctly.`}
+            confirmText={t`Revoke permission`}
             destructive
             handleConfirm={() => onRevoke(permission.permission)}
             isLoading={isRevoking}

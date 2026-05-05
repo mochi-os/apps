@@ -13,6 +13,32 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: app.name
+#: src/features/routing/routing-table.tsx:18
+msgid "{0} (development)"
+msgstr "{0} (vývoj)"
+
+#. placeholder {0}: results.length - failed
+#: src/features/apps/index.tsx:181
+msgid "{0} updated, {failed} failed"
+msgstr "{0} aktualizováno, {failed} selhalo"
+
+#. placeholder {0}: data.name || t`App`
+#. placeholder {0}: data.name || target.name
+#. placeholder {1}: data.version
+#: src/features/apps/index.tsx:141
+#: src/features/apps/index.tsx:158
+msgid "{0} v{1} has been installed."
+msgstr "{0} v{1} byla nainstalována."
+
+#: src/routes/_authenticated/app/$appId.tsx:389
+msgid "{track} (default, version {version})"
+msgstr "{track} (výchozí, verze {version})"
+
+#: src/routes/_authenticated/app/$appId.tsx:390
+msgid "{track} (version {version})"
+msgstr "{track} (verze {version})"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
 msgstr "12 hodin"
@@ -78,7 +104,7 @@ msgstr "Přidat štítek..."
 msgid "Add team/app"
 msgstr "Přidat tým/aplikaci"
 
-#: src/features/apps/index.tsx:587
+#: src/features/apps/index.tsx:589
 msgid "Add to directory"
 msgstr "Přidat do adresáře"
 
@@ -106,12 +132,21 @@ msgstr "Vše"
 msgid "All apps updated"
 msgstr "Všechny aplikace aktualizovány"
 
+#: src/features/apps/index.tsx:141
+#: src/routes/_authenticated/app/$appId.tsx:119
+msgid "App"
+msgstr "Aplikace"
+
 #: src/features/apps/index.tsx:244
 #: src/features/apps/index.tsx:245
 msgid "App actions"
 msgstr "Akce aplikace"
 
-#: src/routes/_authenticated/app/$appId.tsx:207
+#: src/features/apps/components/app-info-dialog.tsx:47
+msgid "App information"
+msgstr "Informace o aplikaci"
+
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "App information and configuration"
 msgstr "Informace a konfigurace aplikace"
 
@@ -122,12 +157,12 @@ msgstr "Informace a konfigurace aplikace"
 msgid "App installed"
 msgstr "Aplikace nainstalována"
 
-#: src/routes/_authenticated/app/$appId.tsx:142
-#: src/routes/_authenticated/app/$appId.tsx:146
+#: src/routes/_authenticated/app/$appId.tsx:148
+#: src/routes/_authenticated/app/$appId.tsx:152
 msgid "App not found"
 msgstr "Aplikace nenalezena"
 
-#: src/routes/_authenticated/app/$appId.tsx:210
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Application ID"
 msgstr "ID aplikace"
 
@@ -146,6 +181,15 @@ msgstr "Opravdu se chcete odhlásit? Pro přístup ke svému účtu se budete mu
 msgid "Asc"
 msgstr "Vzestupně"
 
+#: src/features/apps/components/install-dialog.tsx:73
+msgid "Available version:"
+msgstr "Dostupná verze:"
+
+#: src/features/apps/components/app-info-dialog.tsx:81
+#: src/features/apps/components/app-info-dialog.tsx:105
+msgid "Available versions:"
+msgstr "Dostupné verze:"
+
 #: src/features/apps/index.tsx:387
 msgid "Available, but not installed"
 msgstr "Dostupné, ale nenainstalované"
@@ -154,9 +198,9 @@ msgstr "Dostupné, ale nenainstalované"
 msgid "Back"
 msgstr "Zpět"
 
-#: src/routes/_authenticated/app/$appId.tsx:121
-#: src/routes/_authenticated/app/$appId.tsx:142
-#: src/routes/_authenticated/app/$appId.tsx:159
+#: src/routes/_authenticated/app/$appId.tsx:127
+#: src/routes/_authenticated/app/$appId.tsx:148
+#: src/routes/_authenticated/app/$appId.tsx:165
 msgid "Back to apps"
 msgstr "Zpět na aplikace"
 
@@ -177,12 +221,12 @@ msgstr "Zvýšit zájem"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/apps/components/app-info-dialog.tsx:138
-#: src/features/apps/components/install-dialog.tsx:101
+#: src/features/apps/components/app-info-dialog.tsx:143
+#: src/features/apps/components/install-dialog.tsx:102
 #: src/features/apps/index.tsx:511
-#: src/features/apps/index.tsx:551
-#: src/features/apps/index.tsx:599
-#: src/routes/_authenticated/app/$appId.tsx:561
+#: src/features/apps/index.tsx:553
+#: src/features/apps/index.tsx:601
+#: src/routes/_authenticated/app/$appId.tsx:567
 msgid "Cancel"
 msgstr "Zrušit"
 
@@ -213,6 +257,10 @@ msgstr "Vyberte mezi systémovým nastavením, světlým nebo tmavým režimem"
 #: ../../../lib/web/src/components/language-picker.tsx:167
 msgid "Choose language"
 msgstr "Vyberte jazyk"
+
+#: src/features/routing/routing-table.tsx:70
+msgid "Class"
+msgstr "Třída"
 
 #: src/features/routing/classes.tsx:9
 msgid "Class routing"
@@ -315,7 +363,7 @@ msgstr "Pokračovat"
 msgid "Copy"
 msgstr "Kopírovat"
 
-#: src/routes/_authenticated/app/$appId.tsx:220
+#: src/routes/_authenticated/app/$appId.tsx:226
 msgid "Current Version"
 msgstr "Aktuální verze"
 
@@ -332,12 +380,13 @@ msgstr "Tmavá"
 msgid "Dark mode"
 msgstr "Tmavý režim"
 
-#: src/features/routing/routing-table.tsx:66
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "Deklaroval"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
-#: src/features/routing/routing-table.tsx:117
+#: src/features/routing/routing-table.tsx:123
+#: src/features/routing/routing-table.tsx:147
 msgid "Default"
 msgstr "Výchozí"
 
@@ -345,9 +394,26 @@ msgstr "Výchozí"
 msgid "Default AI account"
 msgstr "Výchozí AI účet"
 
-#: src/routes/_authenticated/app/$appId.tsx:337
+#: src/routes/_authenticated/app/$appId.tsx:447
+msgid "Default for all users"
+msgstr "Výchozí pro všechny uživatele"
+
+#: src/routes/_authenticated/app/$appId.tsx:446
+msgid "Default for all users (version {effectiveDefaultVersion})"
+msgstr "Výchozí pro všechny uživatele (verze {effectiveDefaultVersion})"
+
+#: src/routes/_authenticated/app/$appId.tsx:343
 msgid "Default for all users updated"
 msgstr "Výchozí pro všechny uživatele aktualizováno"
+
+#: src/routes/_authenticated/app/$appId.tsx:430
+msgid "Default track"
+msgstr "Výchozí kanál"
+
+#. placeholder {0}: versionData.tracks[defaultTrack]
+#: src/routes/_authenticated/app/$appId.tsx:429
+msgid "Default track (version {0})"
+msgstr "Výchozí kanál (verze {0})"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -384,9 +450,17 @@ msgstr "Zobrazí mobilní postranní panel."
 msgid "Download"
 msgstr "Stáhnout"
 
-#: src/routes/_authenticated/app/$appId.tsx:237
+#: src/routes/_authenticated/app/$appId.tsx:243
 msgid "Enabled Services"
 msgstr "Povolené služby"
+
+#: src/features/apps/index.tsx:537
+msgid "Enter the app entity to install. For private apps, use the format: app@publisher."
+msgstr "Zadejte entitu aplikace pro instalaci. Pro soukromé aplikace použijte formát: app@publisher."
+
+#: src/features/apps/components/install-dialog.tsx:82
+msgid "Entity:"
+msgstr "Entita:"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -396,7 +470,7 @@ msgstr "Rozbalit postranní panel"
 msgid "Failed to add account"
 msgstr "Nepodařilo se přidat účet"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Failed to grant permission"
 msgstr "Nepodařilo se udělit oprávnění"
 
@@ -404,7 +478,7 @@ msgstr "Nepodařilo se udělit oprávnění"
 msgid "Failed to remove account"
 msgstr "Nepodařilo se odebrat účet"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to revoke permission"
 msgstr "Nepodařilo se zrušit oprávnění"
 
@@ -416,12 +490,12 @@ msgstr "Nepodařilo se odeslat ověřovací kód"
 msgid "Failed to update category"
 msgstr "Nepodařilo se aktualizovat kategorii"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Failed to update default"
 msgstr "Nepodařilo se aktualizovat výchozí"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:320
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update preference"
 msgstr "Nepodařilo se aktualizovat předvolbu"
 
@@ -429,9 +503,19 @@ msgstr "Nepodařilo se aktualizovat předvolbu"
 msgid "Failed to update system default"
 msgstr "Nepodařilo se aktualizovat systémové výchozí nastavení"
 
-#: src/routes/_authenticated/app/$appId.tsx:215
+#: src/features/apps/index.tsx:582
+msgid "File:"
+msgstr "Soubor:"
+
+#: src/routes/_authenticated/app/$appId.tsx:221
 msgid "Fingerprint"
 msgstr "Otisk"
+
+#: src/features/apps/components/app-info-dialog.tsx:75
+#: src/features/apps/components/app-info-dialog.tsx:100
+#: src/features/apps/components/install-dialog.tsx:78
+msgid "Fingerprint:"
+msgstr "Otisk:"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -475,21 +559,25 @@ msgstr "Přejít na další stránku"
 msgid "Go to previous page"
 msgstr "Přejít na předchozí stránku"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:531
 msgid "Grant"
 msgstr "Udělit"
 
-#: src/routes/_authenticated/app/$appId.tsx:530
+#: src/routes/_authenticated/app/$appId.tsx:536
 msgid "Grant permission"
 msgstr "Udělit oprávnění"
 
-#: src/routes/_authenticated/app/$appId.tsx:585
+#: src/routes/_authenticated/app/$appId.tsx:591
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Udělte oprávnění, aby tato aplikace mohla přistupovat k systémovým funkcím"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:159
 msgid "Group"
 msgstr "Skupina"
+
+#: src/features/routing/routing-table.tsx:77
+msgid "Handler"
+msgstr "Obslužná rutina"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:67
 msgid "Hide"
@@ -506,11 +594,11 @@ msgstr "Domů"
 msgid "Hot"
 msgstr "Žhavé"
 
-#: src/routes/_authenticated/app/$appId.tsx:245
+#: src/routes/_authenticated/app/$appId.tsx:251
 msgid "HTTP Paths"
 msgstr "HTTP cesty"
 
-#: src/routes/_authenticated/app/$appId.tsx:206
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Identity"
 msgstr "Identita"
 
@@ -522,18 +610,25 @@ msgstr "Imperiální"
 msgid "Inset"
 msgstr "Vložené"
 
+#: src/features/apps/components/app-info-dialog.tsx:124
+#: src/features/apps/components/install-dialog.tsx:115
 #: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:558
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:608
 msgid "Install"
 msgstr "Nainstalovat"
+
+#. placeholder {0}: selectedDirectoryApp?.name
+#: src/features/apps/index.tsx:502
+msgid "Install {0}?"
+msgstr "Instalovat {0}?"
 
 #: src/features/apps/index.tsx:335
 msgid "Install apps from the market or upload your own"
 msgstr "Nainstalujte si aplikace z tržiště nebo nahrajte vlastní"
 
 #: src/features/apps/index.tsx:274
-#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:578
 msgid "Install from file"
 msgstr "Nainstalovat ze souboru"
 
@@ -546,9 +641,11 @@ msgstr "Nainstalovat od vydavatele"
 msgid "Installed apps"
 msgstr "Nainstalované aplikace"
 
+#: src/features/apps/components/app-info-dialog.tsx:124
+#: src/features/apps/components/install-dialog.tsx:115
 #: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:558
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:608
 msgid "Installing..."
 msgstr "Instaluji..."
 
@@ -581,7 +678,7 @@ msgstr "Světlý"
 msgid "Load more"
 msgstr "Načíst další"
 
-#: src/features/apps/components/install-dialog.tsx:67
+#: src/features/apps/components/install-dialog.tsx:68
 msgid "Loading version information..."
 msgstr "Načítám informace o verzi..."
 
@@ -615,6 +712,10 @@ msgstr "Odhlašování…"
 msgid "Luma (Default)"
 msgstr "Luma (výchozí)"
 
+#: src/routes/_authenticated/app/$appId.tsx:525
+msgid "Manage capabilities granted to this application"
+msgstr "Spravovat oprávnění udělená této aplikaci"
+
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:86
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:220
 msgid "Mark all as read"
@@ -632,7 +733,7 @@ msgstr "Metrika"
 msgid "Monday"
 msgstr "Pondělí"
 
-#: src/features/routing/routing-table.tsx:93
+#: src/features/routing/routing-table.tsx:99
 msgid "Multiple apps declare this resource"
 msgstr "Tento zdroj deklaruje více aplikací"
 
@@ -656,13 +757,33 @@ msgstr "Žádné aplikace nelze aktualizovat."
 msgid "No apps installed"
 msgstr "Žádné nainstalované aplikace"
 
+#: src/features/routing/routing-table.tsx:54
+msgid "No classes configured."
+msgstr "Nejsou nakonfigurovány žádné třídy."
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:287
 msgid "No connected accounts"
 msgstr "Žádné připojené účty"
 
+#: src/features/apps/index.tsx:429
+msgid "No description"
+msgstr "Bez popisu"
+
+#: src/features/apps/index.tsx:367
+msgid "No development apps match \"{searchQuery}\""
+msgstr "Žádné vývojové aplikace neodpovídají \"{searchQuery}\""
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:238
 msgid "No groups available"
 msgstr "Žádné skupiny k dispozici"
+
+#: src/features/apps/index.tsx:460
+msgid "No installable apps in the directory match \"{searchQuery}\""
+msgstr "Žádné instalovatelné aplikace v adresáři neodpovídají \"{searchQuery}\""
+
+#: src/features/apps/index.tsx:341
+msgid "No installed apps match \"{searchQuery}\""
+msgstr "Žádné nainstalované aplikace neodpovídají \"{searchQuery}\""
 
 #: src/features/apps/index.tsx:459
 msgid "No matches in directory"
@@ -677,9 +798,17 @@ msgstr "Žádné shody."
 msgid "No matching apps"
 msgstr "Žádné odpovídající aplikace"
 
-#: src/routes/_authenticated/app/$appId.tsx:584
+#: src/features/routing/routing-table.tsx:58
+msgid "No paths configured."
+msgstr "Nejsou nakonfigurovány žádné cesty."
+
+#: src/routes/_authenticated/app/$appId.tsx:590
 msgid "No permissions granted"
 msgstr "Žádná udělená oprávnění"
+
+#: src/routes/_authenticated/app/$appId.tsx:525
+msgid "No permissions granted to this app"
+msgstr "Této aplikaci nebyla udělena žádná oprávnění"
 
 #: ../../../lib/web/src/components/place-picker.tsx:129
 msgid "No places found"
@@ -697,6 +826,10 @@ msgstr "Žádná doporučení k dispozici"
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:87
 msgid "No results found."
 msgstr "Žádné výsledky nenalezeny."
+
+#: src/features/routing/routing-table.tsx:56
+msgid "No services configured."
+msgstr "Nejsou nakonfigurovány žádné služby."
 
 #: ../../../lib/web/src/components/timezone-select.tsx:64
 msgid "No time zone found."
@@ -718,7 +851,7 @@ msgstr "Žádní uživatelé nenalezeni"
 msgid "None"
 msgstr "Žádné"
 
-#: src/routes/_authenticated/app/$appId.tsx:358
+#: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Not versioned"
 msgstr "Bez verzí"
 
@@ -758,6 +891,10 @@ msgstr "Ostatní"
 msgid "Owner"
 msgstr "Vlastník"
 
+#: src/features/routing/routing-table.tsx:70
+msgid "Path"
+msgstr "Cesta"
+
 #: src/features/routing/paths.tsx:9
 msgid "Path routing"
 msgstr "Směrování podle cesty"
@@ -767,15 +904,15 @@ msgstr "Směrování podle cesty"
 msgid "Paths"
 msgstr "Cesty"
 
-#: src/routes/_authenticated/app/$appId.tsx:482
+#: src/routes/_authenticated/app/$appId.tsx:488
 msgid "Permission granted"
 msgstr "Oprávnění uděleno"
 
-#: src/routes/_authenticated/app/$appId.tsx:465
+#: src/routes/_authenticated/app/$appId.tsx:471
 msgid "Permission revoked"
 msgstr "Oprávnění odvoláno"
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:523
 msgid "Permissions"
 msgstr "Oprávnění"
 
@@ -787,6 +924,10 @@ msgstr "Zadejte ID aplikace"
 msgid "Preference updated"
 msgstr "Předvolba aktualizována"
 
+#: src/routes/_authenticated/app/$appId.tsx:437
+msgid "Preferred Version"
+msgstr "Preferovaná verze"
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
 msgstr "Předchozí obrázek"
@@ -796,7 +937,7 @@ msgstr "Předchozí obrázek"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/routes/_authenticated/app/$appId.tsx:229
+#: src/routes/_authenticated/app/$appId.tsx:235
 msgid "Provided Classes"
 msgstr "Poskytnuté třídy"
 
@@ -854,11 +995,15 @@ msgstr "Resetovat"
 msgid "Reset all settings to default values"
 msgstr "Obnovit všechna nastavení na výchozí hodnoty"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:642
 msgid "Revoke"
 msgstr "Odvolat"
 
-#: src/routes/_authenticated/app/$appId.tsx:641
+#: src/routes/_authenticated/app/$appId.tsx:649
+msgid "Revoke permission"
+msgstr "Odebrat oprávnění"
+
+#: src/routes/_authenticated/app/$appId.tsx:647
 msgid "Revoke permission?"
 msgstr "Odvolat oprávnění?"
 
@@ -916,6 +1061,10 @@ msgstr "Hledat…"
 msgid "Searching..."
 msgstr "Hledá se..."
 
+#: src/routes/_authenticated/app/$appId.tsx:538
+msgid "Select a capability to grant to {appName}."
+msgstr "Vyberte oprávnění, které chcete udělit {appName}."
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:147
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Vyberte uživatele, skupinu nebo jiné pravidlo pro udělení přístupu."
@@ -948,9 +1097,13 @@ msgstr "Vyberte směr písma"
 msgid "Select theme preference"
 msgstr "Vyberte preferenci motivu"
 
-#: src/routes/_authenticated/app/$appId.tsx:412
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "Select which version of this app to use"
 msgstr "Vyberte, kterou verzi této aplikace použít"
+
+#: src/features/routing/routing-table.tsx:70
+msgid "Service"
+msgstr "Služba"
 
 #: src/features/routing/services.tsx:9
 msgid "Service routing"
@@ -1010,11 +1163,11 @@ msgstr "Neděle"
 msgid "System"
 msgstr "Systém"
 
-#: src/features/routing/routing-table.tsx:68
+#: src/features/routing/routing-table.tsx:74
 msgid "System default"
 msgstr "Výchozí systému"
 
-#: src/routes/_authenticated/app/$appId.tsx:416
+#: src/routes/_authenticated/app/$appId.tsx:422
 msgid "System Default"
 msgstr "Výchozí systému"
 
@@ -1030,7 +1183,7 @@ msgstr "Štítek"
 msgid "Teams/Apps"
 msgstr "Týmy/Aplikace"
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "Technical Capabilities"
 msgstr "Technické možnosti"
 
@@ -1039,9 +1192,13 @@ msgstr "Technické možnosti"
 msgid "The app has been installed successfully."
 msgstr "Aplikace byla úspěšně nainstalována."
 
-#: src/routes/_authenticated/app/$appId.tsx:147
+#: src/routes/_authenticated/app/$appId.tsx:153
 msgid "The requested app could not be found."
 msgstr "Požadovaná aplikace nebyla nalezena."
+
+#: src/routes/_authenticated/app/$appId.tsx:422
+msgid "The version used by users who haven't made a choice"
+msgstr "Verze používaná uživateli, kteří si nevybrali"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1051,9 +1208,18 @@ msgstr "Motiv"
 msgid "Theme Settings"
 msgstr "Nastavení motivu"
 
-#: src/routes/_authenticated/app/$appId.tsx:359
+#: src/routes/_authenticated/app/$appId.tsx:365
 msgid "This app does not have version management"
 msgstr "Tato aplikace nemá správu verzí"
+
+#: src/features/apps/components/app-info-dialog.tsx:61
+msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
+msgstr "Tato aplikace je instalována přímo od jejího vydavatele a nebyla prověřena. Může to být malware."
+
+#. placeholder {0}: formatPermission(permission.permission, t)
+#: src/routes/_authenticated/app/$appId.tsx:648
+msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
+msgstr "Tím odeberete oprávnění \"{0}\" z {appName}. Aplikace může přestat fungovat správně."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:72
 msgid "Thursday"
@@ -1081,8 +1247,8 @@ msgstr "Přepnout motiv"
 msgid "Top"
 msgstr "Nahoru"
 
-#: src/features/apps/index.tsx:674
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/features/apps/index.tsx:676
+#: src/routes/_authenticated/app/$appId.tsx:384
 msgid "Track"
 msgstr "Větev"
 
@@ -1121,7 +1287,11 @@ msgstr "Napište pro hledání..."
 msgid "Unable to connect to the recommendations service"
 msgstr "Nelze se připojit ke službě doporučení"
 
-#: src/features/apps/components/install-dialog.tsx:89
+#: src/features/apps/components/app-info-dialog.tsx:133
+msgid "Unable to load app information. The app may not exist or the publisher may be offline."
+msgstr "Nelze načíst informace o aplikaci. Aplikace nemusí existovat nebo vydavatel může být offline."
+
+#: src/features/apps/components/install-dialog.tsx:90
 msgid "Unable to load version information"
 msgstr "Nelze načíst informace o verzi"
 
@@ -1150,7 +1320,7 @@ msgstr "Spojené státy"
 msgid "Unverified"
 msgstr "Neověřeno"
 
-#: src/features/apps/index.tsx:670
+#: src/features/apps/index.tsx:672
 msgid "Update"
 msgstr "Aktualizovat"
 
@@ -1165,6 +1335,10 @@ msgstr "Aktualizace selhala"
 #: src/features/apps/index.tsx:263
 msgid "Updating..."
 msgstr "Aktualizuje se..."
+
+#: src/features/routing/routing-table.tsx:147
+msgid "Use system default"
+msgstr "Použít systémové výchozí"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1190,15 +1364,20 @@ msgstr "Ověřit"
 msgid "Verify email address"
 msgstr "Ověřit e-mailovou adresu"
 
-#: src/routes/_authenticated/app/$appId.tsx:392
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Version"
 msgstr "Verze"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#. placeholder {0}: track.version
+#: src/features/apps/components/app-info-dialog.tsx:115
+msgid "Version {0}"
+msgstr "Verze {0}"
+
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Version changed"
 msgstr "Verze změněna"
 
-#: src/routes/_authenticated/app/$appId.tsx:411
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Version Management"
 msgstr "Správa verzí"
 
@@ -1226,6 +1405,14 @@ msgstr "Web je v režimu údržby!"
 msgid "Wednesday"
 msgstr "Středa"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:438
 msgid "Your personal version override"
 msgstr "Vaše osobní přepsání verze"
+
+#: src/features/routing/routing-table.tsx:77
+msgid "Your preference"
+msgstr "Vaše preference"
+
+#: src/routes/_authenticated/app/$appId.tsx:437
+msgid "Your Version"
+msgstr "Vaše verze"

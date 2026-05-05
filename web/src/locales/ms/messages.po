@@ -13,6 +13,32 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: app.name
+#: src/features/routing/routing-table.tsx:18
+msgid "{0} (development)"
+msgstr "{0} (pembangunan)"
+
+#. placeholder {0}: results.length - failed
+#: src/features/apps/index.tsx:181
+msgid "{0} updated, {failed} failed"
+msgstr "{0} dikemaskini, {failed} gagal"
+
+#. placeholder {0}: data.name || t`App`
+#. placeholder {0}: data.name || target.name
+#. placeholder {1}: data.version
+#: src/features/apps/index.tsx:141
+#: src/features/apps/index.tsx:158
+msgid "{0} v{1} has been installed."
+msgstr "{0} v{1} telah dipasang."
+
+#: src/routes/_authenticated/app/$appId.tsx:389
+msgid "{track} (default, version {version})"
+msgstr "{track} (lalai, versi {version})"
+
+#: src/routes/_authenticated/app/$appId.tsx:390
+msgid "{track} (version {version})"
+msgstr "{track} (versi {version})"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
 msgstr "12 jam"
@@ -78,7 +104,7 @@ msgstr "Tambah tag..."
 msgid "Add team/app"
 msgstr "Tambah pasukan/apl"
 
-#: src/features/apps/index.tsx:587
+#: src/features/apps/index.tsx:589
 msgid "Add to directory"
 msgstr "Tambah ke direktori"
 
@@ -106,12 +132,21 @@ msgstr "Semua"
 msgid "All apps updated"
 msgstr "Semua apl dikemas kini"
 
+#: src/features/apps/index.tsx:141
+#: src/routes/_authenticated/app/$appId.tsx:119
+msgid "App"
+msgstr "Apl"
+
 #: src/features/apps/index.tsx:244
 #: src/features/apps/index.tsx:245
 msgid "App actions"
 msgstr "Tindakan apl"
 
-#: src/routes/_authenticated/app/$appId.tsx:207
+#: src/features/apps/components/app-info-dialog.tsx:47
+msgid "App information"
+msgstr "Maklumat aplikasi"
+
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "App information and configuration"
 msgstr "Maklumat dan konfigurasi apl"
 
@@ -122,12 +157,12 @@ msgstr "Maklumat dan konfigurasi apl"
 msgid "App installed"
 msgstr "Apl dipasang"
 
-#: src/routes/_authenticated/app/$appId.tsx:142
-#: src/routes/_authenticated/app/$appId.tsx:146
+#: src/routes/_authenticated/app/$appId.tsx:148
+#: src/routes/_authenticated/app/$appId.tsx:152
 msgid "App not found"
 msgstr "Apl tidak dijumpai"
 
-#: src/routes/_authenticated/app/$appId.tsx:210
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Application ID"
 msgstr "ID Aplikasi"
 
@@ -146,6 +181,15 @@ msgstr "Adakah anda pasti mahu log keluar? Anda perlu log masuk semula untuk men
 msgid "Asc"
 msgstr "Menaik"
 
+#: src/features/apps/components/install-dialog.tsx:73
+msgid "Available version:"
+msgstr "Versi tersedia:"
+
+#: src/features/apps/components/app-info-dialog.tsx:81
+#: src/features/apps/components/app-info-dialog.tsx:105
+msgid "Available versions:"
+msgstr "Versi yang tersedia:"
+
 #: src/features/apps/index.tsx:387
 msgid "Available, but not installed"
 msgstr "Tersedia, tetapi tidak dipasang"
@@ -154,9 +198,9 @@ msgstr "Tersedia, tetapi tidak dipasang"
 msgid "Back"
 msgstr "Kembali"
 
-#: src/routes/_authenticated/app/$appId.tsx:121
-#: src/routes/_authenticated/app/$appId.tsx:142
-#: src/routes/_authenticated/app/$appId.tsx:159
+#: src/routes/_authenticated/app/$appId.tsx:127
+#: src/routes/_authenticated/app/$appId.tsx:148
+#: src/routes/_authenticated/app/$appId.tsx:165
 msgid "Back to apps"
 msgstr "Kembali ke apl"
 
@@ -177,12 +221,12 @@ msgstr "Tingkatkan minat"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/apps/components/app-info-dialog.tsx:138
-#: src/features/apps/components/install-dialog.tsx:101
+#: src/features/apps/components/app-info-dialog.tsx:143
+#: src/features/apps/components/install-dialog.tsx:102
 #: src/features/apps/index.tsx:511
-#: src/features/apps/index.tsx:551
-#: src/features/apps/index.tsx:599
-#: src/routes/_authenticated/app/$appId.tsx:561
+#: src/features/apps/index.tsx:553
+#: src/features/apps/index.tsx:601
+#: src/routes/_authenticated/app/$appId.tsx:567
 msgid "Cancel"
 msgstr "Batal"
 
@@ -213,6 +257,10 @@ msgstr "Pilih antara keutamaan sistem, mod cerah, atau mod gelap"
 #: ../../../lib/web/src/components/language-picker.tsx:167
 msgid "Choose language"
 msgstr "Pilih bahasa"
+
+#: src/features/routing/routing-table.tsx:70
+msgid "Class"
+msgstr "Kelas"
 
 #: src/features/routing/classes.tsx:9
 msgid "Class routing"
@@ -315,7 +363,7 @@ msgstr "Teruskan"
 msgid "Copy"
 msgstr "Salin"
 
-#: src/routes/_authenticated/app/$appId.tsx:220
+#: src/routes/_authenticated/app/$appId.tsx:226
 msgid "Current Version"
 msgstr "Versi Semasa"
 
@@ -332,12 +380,13 @@ msgstr "Gelap"
 msgid "Dark mode"
 msgstr "Mod gelap"
 
-#: src/features/routing/routing-table.tsx:66
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "Diisytiharkan oleh"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
-#: src/features/routing/routing-table.tsx:117
+#: src/features/routing/routing-table.tsx:123
+#: src/features/routing/routing-table.tsx:147
 msgid "Default"
 msgstr "Lalai"
 
@@ -345,9 +394,26 @@ msgstr "Lalai"
 msgid "Default AI account"
 msgstr "Akaun AI lalai"
 
-#: src/routes/_authenticated/app/$appId.tsx:337
+#: src/routes/_authenticated/app/$appId.tsx:447
+msgid "Default for all users"
+msgstr "Lalai untuk semua pengguna"
+
+#: src/routes/_authenticated/app/$appId.tsx:446
+msgid "Default for all users (version {effectiveDefaultVersion})"
+msgstr "Lalai untuk semua pengguna (versi {effectiveDefaultVersion})"
+
+#: src/routes/_authenticated/app/$appId.tsx:343
 msgid "Default for all users updated"
 msgstr "Lalai untuk semua pengguna dikemas kini"
+
+#: src/routes/_authenticated/app/$appId.tsx:430
+msgid "Default track"
+msgstr "Trek lalai"
+
+#. placeholder {0}: versionData.tracks[defaultTrack]
+#: src/routes/_authenticated/app/$appId.tsx:429
+msgid "Default track (version {0})"
+msgstr "Trek lalai (versi {0})"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -384,9 +450,17 @@ msgstr "Memaparkan bar sisi mudah alih."
 msgid "Download"
 msgstr "Muat turun"
 
-#: src/routes/_authenticated/app/$appId.tsx:237
+#: src/routes/_authenticated/app/$appId.tsx:243
 msgid "Enabled Services"
 msgstr "Perkhidmatan Didayakan"
+
+#: src/features/apps/index.tsx:537
+msgid "Enter the app entity to install. For private apps, use the format: app@publisher."
+msgstr "Masukkan entiti aplikasi untuk dipasang. Untuk aplikasi peribadi, gunakan format: app@publisher."
+
+#: src/features/apps/components/install-dialog.tsx:82
+msgid "Entity:"
+msgstr "Entiti:"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -396,7 +470,7 @@ msgstr "Kembangkan bar sisi"
 msgid "Failed to add account"
 msgstr "Gagal menambah akaun"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Failed to grant permission"
 msgstr "Gagal memberi kebenaran"
 
@@ -404,7 +478,7 @@ msgstr "Gagal memberi kebenaran"
 msgid "Failed to remove account"
 msgstr "Gagal mengalih keluar akaun"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to revoke permission"
 msgstr "Gagal membatalkan kebenaran"
 
@@ -416,12 +490,12 @@ msgstr "Gagal menghantar kod pengesahan"
 msgid "Failed to update category"
 msgstr "Gagal mengemas kini kategori"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Failed to update default"
 msgstr "Gagal mengemas kini lalai"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:320
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update preference"
 msgstr "Gagal mengemas kini keutamaan"
 
@@ -429,9 +503,19 @@ msgstr "Gagal mengemas kini keutamaan"
 msgid "Failed to update system default"
 msgstr "Gagal mengemas kini lalai sistem"
 
-#: src/routes/_authenticated/app/$appId.tsx:215
+#: src/features/apps/index.tsx:582
+msgid "File:"
+msgstr "Fail:"
+
+#: src/routes/_authenticated/app/$appId.tsx:221
 msgid "Fingerprint"
 msgstr "Cap jari"
+
+#: src/features/apps/components/app-info-dialog.tsx:75
+#: src/features/apps/components/app-info-dialog.tsx:100
+#: src/features/apps/components/install-dialog.tsx:78
+msgid "Fingerprint:"
+msgstr "Cap jari:"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -475,21 +559,25 @@ msgstr "Pergi ke halaman seterusnya"
 msgid "Go to previous page"
 msgstr "Pergi ke halaman sebelumnya"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:531
 msgid "Grant"
 msgstr "Berikan"
 
-#: src/routes/_authenticated/app/$appId.tsx:530
+#: src/routes/_authenticated/app/$appId.tsx:536
 msgid "Grant permission"
 msgstr "Berikan kebenaran"
 
-#: src/routes/_authenticated/app/$appId.tsx:585
+#: src/routes/_authenticated/app/$appId.tsx:591
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Berikan kebenaran untuk membolehkan aplikasi ini mengakses ciri sistem"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:159
 msgid "Group"
 msgstr "Kumpulan"
+
+#: src/features/routing/routing-table.tsx:77
+msgid "Handler"
+msgstr "Pengendali"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:67
 msgid "Hide"
@@ -506,11 +594,11 @@ msgstr "Laman utama"
 msgid "Hot"
 msgstr "Panas"
 
-#: src/routes/_authenticated/app/$appId.tsx:245
+#: src/routes/_authenticated/app/$appId.tsx:251
 msgid "HTTP Paths"
 msgstr "Laluan HTTP"
 
-#: src/routes/_authenticated/app/$appId.tsx:206
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Identity"
 msgstr "Identiti"
 
@@ -522,18 +610,25 @@ msgstr "Imperial"
 msgid "Inset"
 msgstr "Dalam"
 
+#: src/features/apps/components/app-info-dialog.tsx:124
+#: src/features/apps/components/install-dialog.tsx:115
 #: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:558
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:608
 msgid "Install"
 msgstr "Pasang"
+
+#. placeholder {0}: selectedDirectoryApp?.name
+#: src/features/apps/index.tsx:502
+msgid "Install {0}?"
+msgstr "Pasang {0}?"
 
 #: src/features/apps/index.tsx:335
 msgid "Install apps from the market or upload your own"
 msgstr "Pasang aplikasi dari pasaran atau muat naik milik anda sendiri"
 
 #: src/features/apps/index.tsx:274
-#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:578
 msgid "Install from file"
 msgstr "Pasang dari fail"
 
@@ -546,9 +641,11 @@ msgstr "Pasang dari penerbit"
 msgid "Installed apps"
 msgstr "Aplikasi terpasang"
 
+#: src/features/apps/components/app-info-dialog.tsx:124
+#: src/features/apps/components/install-dialog.tsx:115
 #: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:558
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:608
 msgid "Installing..."
 msgstr "Memasang..."
 
@@ -581,7 +678,7 @@ msgstr "Terang"
 msgid "Load more"
 msgstr "Muatkan lagi"
 
-#: src/features/apps/components/install-dialog.tsx:67
+#: src/features/apps/components/install-dialog.tsx:68
 msgid "Loading version information..."
 msgstr "Memuatkan maklumat versi..."
 
@@ -615,6 +712,10 @@ msgstr "Sedang log keluar…"
 msgid "Luma (Default)"
 msgstr "Luma (Lalai)"
 
+#: src/routes/_authenticated/app/$appId.tsx:525
+msgid "Manage capabilities granted to this application"
+msgstr "Urus keupayaan yang diberikan kepada aplikasi ini"
+
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:86
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:220
 msgid "Mark all as read"
@@ -632,7 +733,7 @@ msgstr "Metrik"
 msgid "Monday"
 msgstr "Isnin"
 
-#: src/features/routing/routing-table.tsx:93
+#: src/features/routing/routing-table.tsx:99
 msgid "Multiple apps declare this resource"
 msgstr "Beberapa apl mengisytiharkan sumber ini"
 
@@ -656,13 +757,33 @@ msgstr "Tiada apl yang boleh dikemas kini."
 msgid "No apps installed"
 msgstr "Tiada apl dipasang"
 
+#: src/features/routing/routing-table.tsx:54
+msgid "No classes configured."
+msgstr "Tiada kelas dikonfigurasikan."
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:287
 msgid "No connected accounts"
 msgstr "Tiada akaun bersambung"
 
+#: src/features/apps/index.tsx:429
+msgid "No description"
+msgstr "Tiada penerangan"
+
+#: src/features/apps/index.tsx:367
+msgid "No development apps match \"{searchQuery}\""
+msgstr "Tiada aplikasi pembangunan sepadan dengan \"{searchQuery}\""
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:238
 msgid "No groups available"
 msgstr "Tiada kumpulan tersedia"
+
+#: src/features/apps/index.tsx:460
+msgid "No installable apps in the directory match \"{searchQuery}\""
+msgstr "Tiada aplikasi yang boleh dipasang dalam direktori sepadan dengan \"{searchQuery}\""
+
+#: src/features/apps/index.tsx:341
+msgid "No installed apps match \"{searchQuery}\""
+msgstr "Tiada aplikasi terpasang sepadan dengan \"{searchQuery}\""
 
 #: src/features/apps/index.tsx:459
 msgid "No matches in directory"
@@ -677,9 +798,17 @@ msgstr "Tiada padanan."
 msgid "No matching apps"
 msgstr "Tiada apl yang sepadan"
 
-#: src/routes/_authenticated/app/$appId.tsx:584
+#: src/features/routing/routing-table.tsx:58
+msgid "No paths configured."
+msgstr "Tiada laluan dikonfigurasikan."
+
+#: src/routes/_authenticated/app/$appId.tsx:590
 msgid "No permissions granted"
 msgstr "Tiada kebenaran diberikan"
+
+#: src/routes/_authenticated/app/$appId.tsx:525
+msgid "No permissions granted to this app"
+msgstr "Tiada keizinan diberikan kepada aplikasi ini"
 
 #: ../../../lib/web/src/components/place-picker.tsx:129
 msgid "No places found"
@@ -697,6 +826,10 @@ msgstr "Tiada cadangan tersedia"
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:87
 msgid "No results found."
 msgstr "Tiada keputusan dijumpai."
+
+#: src/features/routing/routing-table.tsx:56
+msgid "No services configured."
+msgstr "Tiada perkhidmatan dikonfigurasikan."
 
 #: ../../../lib/web/src/components/timezone-select.tsx:64
 msgid "No time zone found."
@@ -718,7 +851,7 @@ msgstr "Tiada pengguna dijumpai"
 msgid "None"
 msgstr "Tiada"
 
-#: src/routes/_authenticated/app/$appId.tsx:358
+#: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Not versioned"
 msgstr "Tidak diversikan"
 
@@ -758,6 +891,10 @@ msgstr "Lain-lain"
 msgid "Owner"
 msgstr "Pemilik"
 
+#: src/features/routing/routing-table.tsx:70
+msgid "Path"
+msgstr "Laluan"
+
 #: src/features/routing/paths.tsx:9
 msgid "Path routing"
 msgstr "Penghalaan laluan"
@@ -767,15 +904,15 @@ msgstr "Penghalaan laluan"
 msgid "Paths"
 msgstr "Laluan"
 
-#: src/routes/_authenticated/app/$appId.tsx:482
+#: src/routes/_authenticated/app/$appId.tsx:488
 msgid "Permission granted"
 msgstr "Kebenaran diberikan"
 
-#: src/routes/_authenticated/app/$appId.tsx:465
+#: src/routes/_authenticated/app/$appId.tsx:471
 msgid "Permission revoked"
 msgstr "Kebenaran ditarik balik"
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:523
 msgid "Permissions"
 msgstr "Kebenaran"
 
@@ -787,6 +924,10 @@ msgstr "Sila masukkan ID apl"
 msgid "Preference updated"
 msgstr "Keutamaan dikemas kini"
 
+#: src/routes/_authenticated/app/$appId.tsx:437
+msgid "Preferred Version"
+msgstr "Versi pilihan"
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
 msgstr "Imej sebelumnya"
@@ -796,7 +937,7 @@ msgstr "Imej sebelumnya"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/routes/_authenticated/app/$appId.tsx:229
+#: src/routes/_authenticated/app/$appId.tsx:235
 msgid "Provided Classes"
 msgstr "Kelas Disediakan"
 
@@ -854,11 +995,15 @@ msgstr "Tetapkan semula"
 msgid "Reset all settings to default values"
 msgstr "Tetapkan semula semua tetapan kepada nilai lalai"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:642
 msgid "Revoke"
 msgstr "Batalkan"
 
-#: src/routes/_authenticated/app/$appId.tsx:641
+#: src/routes/_authenticated/app/$appId.tsx:649
+msgid "Revoke permission"
+msgstr "Batalkan keizinan"
+
+#: src/routes/_authenticated/app/$appId.tsx:647
 msgid "Revoke permission?"
 msgstr "Batalkan kebenaran?"
 
@@ -916,6 +1061,10 @@ msgstr "Cari…"
 msgid "Searching..."
 msgstr "Sedang mencari..."
 
+#: src/routes/_authenticated/app/$appId.tsx:538
+msgid "Select a capability to grant to {appName}."
+msgstr "Pilih keupayaan untuk diberikan kepada {appName}."
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:147
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Pilih pengguna, kumpulan atau peraturan lain untuk memberi akses."
@@ -948,9 +1097,13 @@ msgstr "Pilih arah laman"
 msgid "Select theme preference"
 msgstr "Pilih keutamaan tema"
 
-#: src/routes/_authenticated/app/$appId.tsx:412
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "Select which version of this app to use"
 msgstr "Pilih versi aplikasi ini untuk digunakan"
+
+#: src/features/routing/routing-table.tsx:70
+msgid "Service"
+msgstr "Perkhidmatan"
 
 #: src/features/routing/services.tsx:9
 msgid "Service routing"
@@ -1010,11 +1163,11 @@ msgstr "Ahad"
 msgid "System"
 msgstr "Sistem"
 
-#: src/features/routing/routing-table.tsx:68
+#: src/features/routing/routing-table.tsx:74
 msgid "System default"
 msgstr "Lalai sistem"
 
-#: src/routes/_authenticated/app/$appId.tsx:416
+#: src/routes/_authenticated/app/$appId.tsx:422
 msgid "System Default"
 msgstr "Lalai Sistem"
 
@@ -1030,7 +1183,7 @@ msgstr "Tag"
 msgid "Teams/Apps"
 msgstr "Pasukan/Aplikasi"
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "Technical Capabilities"
 msgstr "Keupayaan Teknikal"
 
@@ -1039,9 +1192,13 @@ msgstr "Keupayaan Teknikal"
 msgid "The app has been installed successfully."
 msgstr "Aplikasi telah berjaya dipasang."
 
-#: src/routes/_authenticated/app/$appId.tsx:147
+#: src/routes/_authenticated/app/$appId.tsx:153
 msgid "The requested app could not be found."
 msgstr "Aplikasi yang diminta tidak dapat ditemui."
+
+#: src/routes/_authenticated/app/$appId.tsx:422
+msgid "The version used by users who haven't made a choice"
+msgstr "Versi yang digunakan oleh pengguna yang belum membuat pilihan"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1051,9 +1208,18 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Tetapan Tema"
 
-#: src/routes/_authenticated/app/$appId.tsx:359
+#: src/routes/_authenticated/app/$appId.tsx:365
 msgid "This app does not have version management"
 msgstr "Aplikasi ini tidak mempunyai pengurusan versi"
+
+#: src/features/apps/components/app-info-dialog.tsx:61
+msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
+msgstr "Aplikasi ini dipasang terus daripada penerbitnya dan belum disahkan. Ia mungkin perisian hasad."
+
+#. placeholder {0}: formatPermission(permission.permission, t)
+#: src/routes/_authenticated/app/$appId.tsx:648
+msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
+msgstr "Ini akan membatalkan keizinan \"{0}\" daripada {appName}. Aplikasi mungkin berhenti berfungsi dengan betul."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:72
 msgid "Thursday"
@@ -1081,8 +1247,8 @@ msgstr "Togol tema"
 msgid "Top"
 msgstr "Atas"
 
-#: src/features/apps/index.tsx:674
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/features/apps/index.tsx:676
+#: src/routes/_authenticated/app/$appId.tsx:384
 msgid "Track"
 msgstr "Trek"
 
@@ -1121,7 +1287,11 @@ msgstr "Taip untuk mencari..."
 msgid "Unable to connect to the recommendations service"
 msgstr "Tidak dapat menyambung ke perkhidmatan cadangan"
 
-#: src/features/apps/components/install-dialog.tsx:89
+#: src/features/apps/components/app-info-dialog.tsx:133
+msgid "Unable to load app information. The app may not exist or the publisher may be offline."
+msgstr "Tidak dapat memuatkan maklumat aplikasi. Aplikasi mungkin tidak wujud atau penerbit mungkin di luar talian."
+
+#: src/features/apps/components/install-dialog.tsx:90
 msgid "Unable to load version information"
 msgstr "Tidak dapat memuatkan maklumat versi"
 
@@ -1150,7 +1320,7 @@ msgstr "Amerika Syarikat"
 msgid "Unverified"
 msgstr "Belum disahkan"
 
-#: src/features/apps/index.tsx:670
+#: src/features/apps/index.tsx:672
 msgid "Update"
 msgstr "Kemas kini"
 
@@ -1165,6 +1335,10 @@ msgstr "Kemas kini gagal"
 #: src/features/apps/index.tsx:263
 msgid "Updating..."
 msgstr "Sedang mengemas kini..."
+
+#: src/features/routing/routing-table.tsx:147
+msgid "Use system default"
+msgstr "Gunakan lalai sistem"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1190,15 +1364,20 @@ msgstr "Sahkan"
 msgid "Verify email address"
 msgstr "Sahkan alamat e-mel"
 
-#: src/routes/_authenticated/app/$appId.tsx:392
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Version"
 msgstr "Versi"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#. placeholder {0}: track.version
+#: src/features/apps/components/app-info-dialog.tsx:115
+msgid "Version {0}"
+msgstr "Versi {0}"
+
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Version changed"
 msgstr "Versi diubah"
 
-#: src/routes/_authenticated/app/$appId.tsx:411
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Version Management"
 msgstr "Pengurusan Versi"
 
@@ -1226,6 +1405,14 @@ msgstr "Laman web sedang dalam penyelenggaraan!"
 msgid "Wednesday"
 msgstr "Rabu"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:438
 msgid "Your personal version override"
 msgstr "Penggantian versi peribadi anda"
+
+#: src/features/routing/routing-table.tsx:77
+msgid "Your preference"
+msgstr "Pilihan anda"
+
+#: src/routes/_authenticated/app/$appId.tsx:437
+msgid "Your Version"
+msgstr "Versi anda"

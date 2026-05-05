@@ -10,7 +10,7 @@ import {
 } from '@mochi/web'
 import type { MarketApp, AppInfo, Track } from '@/api/types/apps'
 
-import { Trans } from '@lingui/react/macro'
+import { Trans, useLingui } from '@lingui/react/macro'
 interface InstallDialogProps {
   open: boolean
   onOpenChange: (open: boolean) => void
@@ -36,6 +36,7 @@ export function InstallDialog({
   onInstall,
   isInstalling,
 }: InstallDialogProps) {
+  const { t } = useLingui()
   if (!marketApp) return null
 
   return (
@@ -69,16 +70,16 @@ export function InstallDialog({
           ) : appInfo ? (
             <>
               <p className='text-sm'>
-                <span className='font-medium'>Available version:</span>{' '}
-                {appInfo.tracks.find((t) => t.track === appInfo.app.default_track)
+                <span className='font-medium'><Trans>Available version:</Trans></span>{' '}
+                {appInfo.tracks.find((track) => track.track === appInfo.app.default_track)
                   ?.version ?? appInfo.tracks[0]?.version}
               </p>
               <p className='text-sm'>
-                <span className='font-medium'>Fingerprint:</span>{' '}
+                <span className='font-medium'><Trans>Fingerprint:</Trans></span>{' '}
                 <span className='font-mono text-xs'>{appInfo.fingerprint}</span>
               </p>
               <p className='text-sm'>
-                <span className='font-medium'>Entity:</span>{' '}
+                <span className='font-medium'><Trans>Entity:</Trans></span>{' '}
                 <span className='font-mono text-xs break-all'>
                   {marketApp.id}
                 </span>
@@ -105,13 +106,13 @@ export function InstallDialog({
             onClick={() => {
               if (!appInfo) return
               const version =
-                appInfo.tracks.find((t) => t.track === appInfo.app.default_track)
+                appInfo.tracks.find((track) => track.track === appInfo.app.default_track)
                   ?.version ?? appInfo.tracks[0]?.version
               if (version) onInstall(version)
             }}
             disabled={isLoading || isInstalling || !appInfo?.tracks.length}
           >
-            {isInstalling ? "Installing..." : "Install"}
+            {isInstalling ? t`Installing...` : t`Install`}
           </Button>
         </ResponsiveDialogFooter>
       </ResponsiveDialogContent>

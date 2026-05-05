@@ -6,6 +6,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: si\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. placeholder {0}: app.name
+#: src/features/routing/routing-table.tsx:18
+msgid "{0} (development)"
+msgstr "{0} (සංවර්ධනය)"
+
+#. placeholder {0}: results.length - failed
+#: src/features/apps/index.tsx:181
+msgid "{0} updated, {failed} failed"
+msgstr "{0} යාවත්කාලීන කළා, {failed} අසාර්ථක විය"
+
+#. placeholder {0}: data.name || t`App`
+#. placeholder {0}: data.name || target.name
+#. placeholder {1}: data.version
+#: src/features/apps/index.tsx:141
+#: src/features/apps/index.tsx:158
+msgid "{0} v{1} has been installed."
+msgstr "{0} v{1} ස්ථාපනය කර ඇත."
+
+#: src/routes/_authenticated/app/$appId.tsx:389
+msgid "{track} (default, version {version})"
+msgstr "{track} (පෙරනිමි, අනුවාදය {version})"
+
+#: src/routes/_authenticated/app/$appId.tsx:390
+msgid "{track} (version {version})"
+msgstr "{track} (අනුවාදය {version})"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -72,7 +104,7 @@ msgstr "ටැගයක් එක් කරන්න..."
 msgid "Add team/app"
 msgstr "කණ්ඩායමක්/app එකක් එක් කරන්න"
 
-#: src/features/apps/index.tsx:587
+#: src/features/apps/index.tsx:589
 msgid "Add to directory"
 msgstr "නාමාවලියට එක් කරන්න"
 
@@ -100,12 +132,21 @@ msgstr "සියල්ල"
 msgid "All apps updated"
 msgstr "සියලු apps යාවත්කාලීන කරන ලදී"
 
+#: src/features/apps/index.tsx:141
+#: src/routes/_authenticated/app/$appId.tsx:119
+msgid "App"
+msgstr "යෙදුම"
+
 #: src/features/apps/index.tsx:244
 #: src/features/apps/index.tsx:245
 msgid "App actions"
 msgstr "App ක්‍රියා"
 
-#: src/routes/_authenticated/app/$appId.tsx:207
+#: src/features/apps/components/app-info-dialog.tsx:47
+msgid "App information"
+msgstr "යෙදුම් තොරතුරු"
+
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "App information and configuration"
 msgstr "App තොරතුරු සහ වින්‍යාසය"
 
@@ -116,12 +157,12 @@ msgstr "App තොරතුරු සහ වින්‍යාසය"
 msgid "App installed"
 msgstr "App ස්ථාපනය කරන ලදී"
 
-#: src/routes/_authenticated/app/$appId.tsx:142
-#: src/routes/_authenticated/app/$appId.tsx:146
+#: src/routes/_authenticated/app/$appId.tsx:148
+#: src/routes/_authenticated/app/$appId.tsx:152
 msgid "App not found"
 msgstr "App එක සොයාගත නොහැක"
 
-#: src/routes/_authenticated/app/$appId.tsx:210
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Application ID"
 msgstr "Application ID"
 
@@ -140,6 +181,15 @@ msgstr "ඔබට පිටවීමට අවශ්‍ය බව විශ්�
 msgid "Asc"
 msgstr "ආරෝහණ"
 
+#: src/features/apps/components/install-dialog.tsx:73
+msgid "Available version:"
+msgstr "ලබා ගත හැකි අනුවාදය:"
+
+#: src/features/apps/components/app-info-dialog.tsx:81
+#: src/features/apps/components/app-info-dialog.tsx:105
+msgid "Available versions:"
+msgstr "ලබා ගත හැකි අනුවාද:"
+
 #: src/features/apps/index.tsx:387
 msgid "Available, but not installed"
 msgstr "පවතින නමුත් ස්ථාපනය කර නැත"
@@ -148,9 +198,9 @@ msgstr "පවතින නමුත් ස්ථාපනය කර නැත"
 msgid "Back"
 msgstr "ආපසු"
 
-#: src/routes/_authenticated/app/$appId.tsx:121
-#: src/routes/_authenticated/app/$appId.tsx:142
-#: src/routes/_authenticated/app/$appId.tsx:159
+#: src/routes/_authenticated/app/$appId.tsx:127
+#: src/routes/_authenticated/app/$appId.tsx:148
+#: src/routes/_authenticated/app/$appId.tsx:165
 msgid "Back to apps"
 msgstr "apps වෙත ආපසු"
 
@@ -171,12 +221,12 @@ msgstr "කැමැත්ත වැඩි කරන්න"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/apps/components/app-info-dialog.tsx:138
-#: src/features/apps/components/install-dialog.tsx:101
+#: src/features/apps/components/app-info-dialog.tsx:143
+#: src/features/apps/components/install-dialog.tsx:102
 #: src/features/apps/index.tsx:511
-#: src/features/apps/index.tsx:551
-#: src/features/apps/index.tsx:599
-#: src/routes/_authenticated/app/$appId.tsx:561
+#: src/features/apps/index.tsx:553
+#: src/features/apps/index.tsx:601
+#: src/routes/_authenticated/app/$appId.tsx:567
 msgid "Cancel"
 msgstr "අවලංගු කරන්න"
 
@@ -207,6 +257,10 @@ msgstr "පද්ධති අභිරුචිය, ආලෝකමත් ආ�
 #: ../../../lib/web/src/components/language-picker.tsx:167
 msgid "Choose language"
 msgstr "භාෂාව තෝරන්න"
+
+#: src/features/routing/routing-table.tsx:70
+msgid "Class"
+msgstr "පංතිය"
 
 #: src/features/routing/classes.tsx:9
 msgid "Class routing"
@@ -309,7 +363,7 @@ msgstr "ඉදිරියට"
 msgid "Copy"
 msgstr "පිටපත් කරන්න"
 
-#: src/routes/_authenticated/app/$appId.tsx:220
+#: src/routes/_authenticated/app/$appId.tsx:226
 msgid "Current Version"
 msgstr "වත්මන් සංස්කරණය"
 
@@ -326,12 +380,13 @@ msgstr "අඳුරු"
 msgid "Dark mode"
 msgstr "අඳුරු ආකාරය"
 
-#: src/features/routing/routing-table.tsx:66
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "ප්‍රකාශ කළේ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
-#: src/features/routing/routing-table.tsx:117
+#: src/features/routing/routing-table.tsx:123
+#: src/features/routing/routing-table.tsx:147
 msgid "Default"
 msgstr "පෙරනිමි"
 
@@ -339,9 +394,26 @@ msgstr "පෙරනිමි"
 msgid "Default AI account"
 msgstr "පෙරනිමි AI ගිණුම"
 
-#: src/routes/_authenticated/app/$appId.tsx:337
+#: src/routes/_authenticated/app/$appId.tsx:447
+msgid "Default for all users"
+msgstr "සියලු පරිශීලකයින් සඳහා පෙරනිමිය"
+
+#: src/routes/_authenticated/app/$appId.tsx:446
+msgid "Default for all users (version {effectiveDefaultVersion})"
+msgstr "සියලු පරිශීලකයින් සඳහා පෙරනිමිය (අනුවාදය {effectiveDefaultVersion})"
+
+#: src/routes/_authenticated/app/$appId.tsx:343
 msgid "Default for all users updated"
 msgstr "සියලු පරිශීලකයන් සඳහා පෙරනිමිය යාවත්කාලීන කරන ලදී"
+
+#: src/routes/_authenticated/app/$appId.tsx:430
+msgid "Default track"
+msgstr "පෙරනිමි මාර්ගය"
+
+#. placeholder {0}: versionData.tracks[defaultTrack]
+#: src/routes/_authenticated/app/$appId.tsx:429
+msgid "Default track (version {0})"
+msgstr "පෙරනිමි මාර්ගය (අනුවාදය {0})"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -378,9 +450,17 @@ msgstr "ජංගම පැති තීරුව සංදර්ශනය ක�
 msgid "Download"
 msgstr "බාගත කරන්න"
 
-#: src/routes/_authenticated/app/$appId.tsx:237
+#: src/routes/_authenticated/app/$appId.tsx:243
 msgid "Enabled Services"
 msgstr "සක්‍රිය සේවා"
+
+#: src/features/apps/index.tsx:537
+msgid "Enter the app entity to install. For private apps, use the format: app@publisher."
+msgstr "ස්ථාපනය කිරීමට යෙදුම් ආයතනය ඇතුළත් කරන්න. පුද්ගලික යෙදුම් සඳහා, ආකෘතිය භාවිතා කරන්න: app@publisher."
+
+#: src/features/apps/components/install-dialog.tsx:82
+msgid "Entity:"
+msgstr "ආයතනය:"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -390,7 +470,7 @@ msgstr "පැති තීරුව ප්‍රසාරණය කරන්න
 msgid "Failed to add account"
 msgstr "ගිණුම එක් කිරීමට අසමත් විය"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Failed to grant permission"
 msgstr "අවසරය ලබා දීමට අසමත් විය"
 
@@ -398,7 +478,7 @@ msgstr "අවසරය ලබා දීමට අසමත් විය"
 msgid "Failed to remove account"
 msgstr "ගිණුම ඉවත් කිරීමට අසමත් විය"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to revoke permission"
 msgstr "අවසරය අවලංගු කිරීමට අසමත් විය"
 
@@ -410,12 +490,12 @@ msgstr "සත්‍යාපන කේතය යැවීමට අසමත්
 msgid "Failed to update category"
 msgstr "කාණ්ඩය යාවත්කාලීන කිරීමට අසමත් විය"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Failed to update default"
 msgstr "පෙරනිමිය යාවත්කාලීන කිරීමට අසමත් විය"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:320
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update preference"
 msgstr "මනාපය යාවත්කාලීන කිරීමට අසමත් විය"
 
@@ -423,9 +503,19 @@ msgstr "මනාපය යාවත්කාලීන කිරීමට අස
 msgid "Failed to update system default"
 msgstr "පද්ධති පෙරනිමිය යාවත්කාලීන කිරීමට අසමත් විය"
 
-#: src/routes/_authenticated/app/$appId.tsx:215
+#: src/features/apps/index.tsx:582
+msgid "File:"
+msgstr "ගොනුව:"
+
+#: src/routes/_authenticated/app/$appId.tsx:221
 msgid "Fingerprint"
 msgstr "ඇඟිලි සලකුණ"
+
+#: src/features/apps/components/app-info-dialog.tsx:75
+#: src/features/apps/components/app-info-dialog.tsx:100
+#: src/features/apps/components/install-dialog.tsx:78
+msgid "Fingerprint:"
+msgstr "ඇඟිලි සලකුණ:"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -469,21 +559,25 @@ msgstr "ඊළඟ පිටුවට යන්න"
 msgid "Go to previous page"
 msgstr "පෙර පිටුවට යන්න"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:531
 msgid "Grant"
 msgstr "ලබා දෙන්න"
 
-#: src/routes/_authenticated/app/$appId.tsx:530
+#: src/routes/_authenticated/app/$appId.tsx:536
 msgid "Grant permission"
 msgstr "අවසරය ලබා දෙන්න"
 
-#: src/routes/_authenticated/app/$appId.tsx:585
+#: src/routes/_authenticated/app/$appId.tsx:591
 msgid "Grant permissions to allow this app to access system features"
 msgstr "මෙම යෙදුමට පද්ධති විශේෂාංග වෙත ප්‍රවේශ වීමට අවසර ලබා දෙන්න"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:159
 msgid "Group"
 msgstr "කණ්ඩායම"
+
+#: src/features/routing/routing-table.tsx:77
+msgid "Handler"
+msgstr "හසුරුවන්නා"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:67
 msgid "Hide"
@@ -500,11 +594,11 @@ msgstr "මුල් පිටුව"
 msgid "Hot"
 msgstr "උණුසුම්"
 
-#: src/routes/_authenticated/app/$appId.tsx:245
+#: src/routes/_authenticated/app/$appId.tsx:251
 msgid "HTTP Paths"
 msgstr "HTTP මාර්ග"
 
-#: src/routes/_authenticated/app/$appId.tsx:206
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Identity"
 msgstr "අනන්‍යතාවය"
 
@@ -516,18 +610,25 @@ msgstr "ඉම්පීරියල්"
 msgid "Inset"
 msgstr "ඇතුළත"
 
+#: src/features/apps/components/app-info-dialog.tsx:124
+#: src/features/apps/components/install-dialog.tsx:115
 #: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:558
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:608
 msgid "Install"
 msgstr "ස්ථාපනය කරන්න"
+
+#. placeholder {0}: selectedDirectoryApp?.name
+#: src/features/apps/index.tsx:502
+msgid "Install {0}?"
+msgstr "{0} ස්ථාපනය කරන්නද?"
 
 #: src/features/apps/index.tsx:335
 msgid "Install apps from the market or upload your own"
 msgstr "market එකෙන් යෙදුම් ස්ථාපනය කරන්න හෝ ඔබේම ඒවා උඩුගත කරන්න"
 
 #: src/features/apps/index.tsx:274
-#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:578
 msgid "Install from file"
 msgstr "ගොනුවකින් ස්ථාපනය කරන්න"
 
@@ -540,9 +641,11 @@ msgstr "publisher එකෙන් ස්ථාපනය කරන්න"
 msgid "Installed apps"
 msgstr "ස්ථාපිත යෙදුම්"
 
+#: src/features/apps/components/app-info-dialog.tsx:124
+#: src/features/apps/components/install-dialog.tsx:115
 #: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:558
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:608
 msgid "Installing..."
 msgstr "ස්ථාපනය වෙමින්..."
 
@@ -575,7 +678,7 @@ msgstr "ලා"
 msgid "Load more"
 msgstr "තවත් පූරණය කරන්න"
 
-#: src/features/apps/components/install-dialog.tsx:67
+#: src/features/apps/components/install-dialog.tsx:68
 msgid "Loading version information..."
 msgstr "අනුවාද තොරතුරු පූරණය වෙමින්..."
 
@@ -609,6 +712,10 @@ msgstr "ඉවත් වෙමින්…"
 msgid "Luma (Default)"
 msgstr "Luma (පෙරනිමි)"
 
+#: src/routes/_authenticated/app/$appId.tsx:525
+msgid "Manage capabilities granted to this application"
+msgstr "මෙම යෙදුමට ලබා දී ඇති හැකියාවන් කළමනාකරණය කරන්න"
+
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:86
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:220
 msgid "Mark all as read"
@@ -626,7 +733,7 @@ msgstr "මිනුම"
 msgid "Monday"
 msgstr "සඳුදා"
 
-#: src/features/routing/routing-table.tsx:93
+#: src/features/routing/routing-table.tsx:99
 msgid "Multiple apps declare this resource"
 msgstr "යෙදුම් කිහිපයක් මෙම සම්පත ප්‍රකාශ කරයි"
 
@@ -650,13 +757,33 @@ msgstr "කිසිදු යෙදුමක් යාවත්කාලීන 
 msgid "No apps installed"
 msgstr "යෙදුම් ස්ථාපනය කර නොමැත"
 
+#: src/features/routing/routing-table.tsx:54
+msgid "No classes configured."
+msgstr "පංති කිසිවක් වින්‍යාස කර නැත."
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:287
 msgid "No connected accounts"
 msgstr "සම්බන්ධිත ගිණුම් නැත"
 
+#: src/features/apps/index.tsx:429
+msgid "No description"
+msgstr "විස්තරයක් නැත"
+
+#: src/features/apps/index.tsx:367
+msgid "No development apps match \"{searchQuery}\""
+msgstr "\"{searchQuery}\" සමඟ ගැලපෙන සංවර්ධන යෙදුම් කිසිවක් නැත"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:238
 msgid "No groups available"
 msgstr "කණ්ඩායම් ලබා ගත නොහැක"
+
+#: src/features/apps/index.tsx:460
+msgid "No installable apps in the directory match \"{searchQuery}\""
+msgstr "නාමාවලියේ \"{searchQuery}\" සමඟ ගැලපෙන ස්ථාපනය කළ හැකි යෙදුම් කිසිවක් නැත"
+
+#: src/features/apps/index.tsx:341
+msgid "No installed apps match \"{searchQuery}\""
+msgstr "\"{searchQuery}\" සමඟ ගැලපෙන ස්ථාපනය කළ යෙදුම් කිසිවක් නැත"
 
 #: src/features/apps/index.tsx:459
 msgid "No matches in directory"
@@ -671,9 +798,17 @@ msgstr "ගැලපීම් නැත."
 msgid "No matching apps"
 msgstr "ගැලපෙන යෙදුම් නැත"
 
-#: src/routes/_authenticated/app/$appId.tsx:584
+#: src/features/routing/routing-table.tsx:58
+msgid "No paths configured."
+msgstr "මාර්ග කිසිවක් වින්‍යාස කර නැත."
+
+#: src/routes/_authenticated/app/$appId.tsx:590
 msgid "No permissions granted"
 msgstr "අවසර ලබා දී නොමැත"
+
+#: src/routes/_authenticated/app/$appId.tsx:525
+msgid "No permissions granted to this app"
+msgstr "මෙම යෙදුමට අවසර කිසිවක් ලබා දී නැත"
 
 #: ../../../lib/web/src/components/place-picker.tsx:129
 msgid "No places found"
@@ -691,6 +826,10 @@ msgstr "නිර්දේශ ලබා ගත නොහැක"
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:87
 msgid "No results found."
 msgstr "ප්‍රතිඵල හමු නොවීය."
+
+#: src/features/routing/routing-table.tsx:56
+msgid "No services configured."
+msgstr "සේවා කිසිවක් වින්‍යාස කර නැත."
 
 #: ../../../lib/web/src/components/timezone-select.tsx:64
 msgid "No time zone found."
@@ -712,7 +851,7 @@ msgstr "පරිශීලකයන් හමු නොවීය"
 msgid "None"
 msgstr "කිසිවක් නැත"
 
-#: src/routes/_authenticated/app/$appId.tsx:358
+#: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Not versioned"
 msgstr "අනුවාදගත කර නැත"
 
@@ -752,6 +891,10 @@ msgstr "වෙනත්"
 msgid "Owner"
 msgstr "හිමිකරු"
 
+#: src/features/routing/routing-table.tsx:70
+msgid "Path"
+msgstr "මාර්ගය"
+
 #: src/features/routing/paths.tsx:9
 msgid "Path routing"
 msgstr "මාර්ග routing"
@@ -761,15 +904,15 @@ msgstr "මාර්ග routing"
 msgid "Paths"
 msgstr "මාර්ග"
 
-#: src/routes/_authenticated/app/$appId.tsx:482
+#: src/routes/_authenticated/app/$appId.tsx:488
 msgid "Permission granted"
 msgstr "අවසරය ලබා දෙන ලදී"
 
-#: src/routes/_authenticated/app/$appId.tsx:465
+#: src/routes/_authenticated/app/$appId.tsx:471
 msgid "Permission revoked"
 msgstr "අවසරය ඉවත් කරන ලදී"
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:523
 msgid "Permissions"
 msgstr "අවසර"
 
@@ -781,6 +924,10 @@ msgstr "කරුණාකර app ID එකක් ඇතුළත් කරන�
 msgid "Preference updated"
 msgstr "අභිරුචිය යාවත්කාලීන කරන ලදී"
 
+#: src/routes/_authenticated/app/$appId.tsx:437
+msgid "Preferred Version"
+msgstr "කැමති අනුවාදය"
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
 msgstr "පෙර පින්තූරය"
@@ -790,7 +937,7 @@ msgstr "පෙර පින්තූරය"
 msgid "Profile"
 msgstr "පැතිකඩ"
 
-#: src/routes/_authenticated/app/$appId.tsx:229
+#: src/routes/_authenticated/app/$appId.tsx:235
 msgid "Provided Classes"
 msgstr "සපයන ලද Classes"
 
@@ -848,11 +995,15 @@ msgstr "reset"
 msgid "Reset all settings to default values"
 msgstr "සියලු සැකසුම් පෙරනිමි අගයන් වෙත reset කරන්න"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:642
 msgid "Revoke"
 msgstr "අවලංගු කරන්න"
 
-#: src/routes/_authenticated/app/$appId.tsx:641
+#: src/routes/_authenticated/app/$appId.tsx:649
+msgid "Revoke permission"
+msgstr "අවසරය අවලංගු කරන්න"
+
+#: src/routes/_authenticated/app/$appId.tsx:647
 msgid "Revoke permission?"
 msgstr "අවසරය අවලංගු කරන්නද?"
 
@@ -910,6 +1061,10 @@ msgstr "සොයන්න…"
 msgid "Searching..."
 msgstr "සොයමින්..."
 
+#: src/routes/_authenticated/app/$appId.tsx:538
+msgid "Select a capability to grant to {appName}."
+msgstr "{appName} ට ලබා දීමට හැකියාවක් තෝරන්න."
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:147
 msgid "Select a user, group, or other rule to grant access."
 msgstr "ප්‍රවේශය ලබා දීමට පරිශීලකයෙක්, කණ්ඩායමක්, හෝ වෙනත් රීතියක් තෝරන්න."
@@ -942,9 +1097,13 @@ msgstr "අඩවියේ දිශාව තෝරන්න"
 msgid "Select theme preference"
 msgstr "theme මනාපය තෝරන්න"
 
-#: src/routes/_authenticated/app/$appId.tsx:412
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "Select which version of this app to use"
 msgstr "භාවිතා කිරීමට මෙම යෙදුමේ අනුවාදය තෝරන්න"
+
+#: src/features/routing/routing-table.tsx:70
+msgid "Service"
+msgstr "සේවාව"
 
 #: src/features/routing/services.tsx:9
 msgid "Service routing"
@@ -1004,11 +1163,11 @@ msgstr "ඉරිදා"
 msgid "System"
 msgstr "පද්ධතිය"
 
-#: src/features/routing/routing-table.tsx:68
+#: src/features/routing/routing-table.tsx:74
 msgid "System default"
 msgstr "පද්ධති පෙරනිමිය"
 
-#: src/routes/_authenticated/app/$appId.tsx:416
+#: src/routes/_authenticated/app/$appId.tsx:422
 msgid "System Default"
 msgstr "පද්ධති පෙරනිමිය"
 
@@ -1024,7 +1183,7 @@ msgstr "ටැගය"
 msgid "Teams/Apps"
 msgstr "කණ්ඩායම්/යෙදුම්"
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "Technical Capabilities"
 msgstr "තාක්ෂණික හැකියාවන්"
 
@@ -1033,9 +1192,13 @@ msgstr "තාක්ෂණික හැකියාවන්"
 msgid "The app has been installed successfully."
 msgstr "යෙදුම සාර්ථකව ස්ථාපනය කර ඇත."
 
-#: src/routes/_authenticated/app/$appId.tsx:147
+#: src/routes/_authenticated/app/$appId.tsx:153
 msgid "The requested app could not be found."
 msgstr "ඉල්ලූ යෙදුම සොයා ගත නොහැකි විය."
+
+#: src/routes/_authenticated/app/$appId.tsx:422
+msgid "The version used by users who haven't made a choice"
+msgstr "තේරීමක් කර නොමැති පරිශීලකයින් භාවිතා කරන අනුවාදය"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1045,9 +1208,18 @@ msgstr "theme"
 msgid "Theme Settings"
 msgstr "theme සැකසුම්"
 
-#: src/routes/_authenticated/app/$appId.tsx:359
+#: src/routes/_authenticated/app/$appId.tsx:365
 msgid "This app does not have version management"
 msgstr "මෙම යෙදුමට අනුවාද කළමනාකරණය නොමැත"
+
+#: src/features/apps/components/app-info-dialog.tsx:61
+msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
+msgstr "මෙම යෙදුම සෘජුවම එහි ප්‍රකාශකයාගෙන් ස්ථාපනය කර ඇති අතර පරීක්ෂා කර නොමැත. එය අනිෂ්ට මෘදුකාංගයක් විය හැක."
+
+#. placeholder {0}: formatPermission(permission.permission, t)
+#: src/routes/_authenticated/app/$appId.tsx:648
+msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
+msgstr "මෙය {appName} වෙතින් \"{0}\" අවසරය අවලංගු කරයි. යෙදුම නිවැරදිව ක්‍රියා කිරීම නවත්වයි."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:72
 msgid "Thursday"
@@ -1075,8 +1247,8 @@ msgstr "theme මාරු කරන්න"
 msgid "Top"
 msgstr "ඉහළ"
 
-#: src/features/apps/index.tsx:674
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/features/apps/index.tsx:676
+#: src/routes/_authenticated/app/$appId.tsx:384
 msgid "Track"
 msgstr "track"
 
@@ -1115,7 +1287,11 @@ msgstr "සෙවීමට ටයිප් කරන්න..."
 msgid "Unable to connect to the recommendations service"
 msgstr "recommendations සේවාවට සම්බන්ධ විය නොහැක"
 
-#: src/features/apps/components/install-dialog.tsx:89
+#: src/features/apps/components/app-info-dialog.tsx:133
+msgid "Unable to load app information. The app may not exist or the publisher may be offline."
+msgstr "යෙදුම් තොරතුරු පූරණය කළ නොහැක. යෙදුම නොතිබිය හැක හෝ ප්‍රකාශකයා නොබැඳි විය හැක."
+
+#: src/features/apps/components/install-dialog.tsx:90
 msgid "Unable to load version information"
 msgstr "අනුවාද තොරතුරු පූරණය කළ නොහැක"
 
@@ -1144,7 +1320,7 @@ msgstr "එක්සත් ජනපදය"
 msgid "Unverified"
 msgstr "සත්‍යාපනය නොකළ"
 
-#: src/features/apps/index.tsx:670
+#: src/features/apps/index.tsx:672
 msgid "Update"
 msgstr "යාවත්කාලීන කරන්න"
 
@@ -1159,6 +1335,10 @@ msgstr "යාවත්කාලීන කිරීම අසාර්ථක ව
 #: src/features/apps/index.tsx:263
 msgid "Updating..."
 msgstr "යාවත්කාලීන කරමින්..."
+
+#: src/features/routing/routing-table.tsx:147
+msgid "Use system default"
+msgstr "පද්ධති පෙරනිමිය භාවිතා කරන්න"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1184,15 +1364,20 @@ msgstr "සත්‍යාපනය කරන්න"
 msgid "Verify email address"
 msgstr "ඊමේල් ලිපිනය සත්‍යාපනය කරන්න"
 
-#: src/routes/_authenticated/app/$appId.tsx:392
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Version"
 msgstr "අනුවාදය"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#. placeholder {0}: track.version
+#: src/features/apps/components/app-info-dialog.tsx:115
+msgid "Version {0}"
+msgstr "අනුවාදය {0}"
+
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Version changed"
 msgstr "අනුවාදය වෙනස් විය"
 
-#: src/routes/_authenticated/app/$appId.tsx:411
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Version Management"
 msgstr "අනුවාද කළමනාකරණය"
 
@@ -1220,6 +1405,14 @@ msgstr "වෙබ් අඩවිය නඩත්තු යටතේ පවත�
 msgid "Wednesday"
 msgstr "බදාදා"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:438
 msgid "Your personal version override"
 msgstr "ඔබේ පෞද්ගලික අනුවාද override එක"
+
+#: src/features/routing/routing-table.tsx:77
+msgid "Your preference"
+msgstr "ඔබේ මනාපය"
+
+#: src/routes/_authenticated/app/$appId.tsx:437
+msgid "Your Version"
+msgstr "ඔබේ අනුවාදය"

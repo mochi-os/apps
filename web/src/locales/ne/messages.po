@@ -6,6 +6,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: ne\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. placeholder {0}: app.name
+#: src/features/routing/routing-table.tsx:18
+msgid "{0} (development)"
+msgstr "{0} (विकास)"
+
+#. placeholder {0}: results.length - failed
+#: src/features/apps/index.tsx:181
+msgid "{0} updated, {failed} failed"
+msgstr "{0} अद्यावधिक गरियो, {failed} असफल"
+
+#. placeholder {0}: data.name || t`App`
+#. placeholder {0}: data.name || target.name
+#. placeholder {1}: data.version
+#: src/features/apps/index.tsx:141
+#: src/features/apps/index.tsx:158
+msgid "{0} v{1} has been installed."
+msgstr "{0} v{1} स्थापना गरिएको छ।"
+
+#: src/routes/_authenticated/app/$appId.tsx:389
+msgid "{track} (default, version {version})"
+msgstr "{track} (पूर्वनिर्धारित, संस्करण {version})"
+
+#: src/routes/_authenticated/app/$appId.tsx:390
+msgid "{track} (version {version})"
+msgstr "{track} (संस्करण {version})"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -72,7 +104,7 @@ msgstr "ट्याग थप्नुहोस्..."
 msgid "Add team/app"
 msgstr "टिम/एप थप्नुहोस्"
 
-#: src/features/apps/index.tsx:587
+#: src/features/apps/index.tsx:589
 msgid "Add to directory"
 msgstr "डाइरेक्टरीमा थप्नुहोस्"
 
@@ -100,12 +132,21 @@ msgstr "सबै"
 msgid "All apps updated"
 msgstr "सबै एपहरू अद्यावधिक गरियो"
 
+#: src/features/apps/index.tsx:141
+#: src/routes/_authenticated/app/$appId.tsx:119
+msgid "App"
+msgstr "एप"
+
 #: src/features/apps/index.tsx:244
 #: src/features/apps/index.tsx:245
 msgid "App actions"
 msgstr "एप कार्यहरू"
 
-#: src/routes/_authenticated/app/$appId.tsx:207
+#: src/features/apps/components/app-info-dialog.tsx:47
+msgid "App information"
+msgstr "एप जानकारी"
+
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "App information and configuration"
 msgstr "एप जानकारी र कन्फिगरेसन"
 
@@ -116,12 +157,12 @@ msgstr "एप जानकारी र कन्फिगरेसन"
 msgid "App installed"
 msgstr "एप स्थापना गरियो"
 
-#: src/routes/_authenticated/app/$appId.tsx:142
-#: src/routes/_authenticated/app/$appId.tsx:146
+#: src/routes/_authenticated/app/$appId.tsx:148
+#: src/routes/_authenticated/app/$appId.tsx:152
 msgid "App not found"
 msgstr "एप फेला परेन"
 
-#: src/routes/_authenticated/app/$appId.tsx:210
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Application ID"
 msgstr "अनुप्रयोग ID"
 
@@ -140,6 +181,15 @@ msgstr "के तपाईं लग आउट गर्न निश्चि�
 msgid "Asc"
 msgstr "बढ्दो"
 
+#: src/features/apps/components/install-dialog.tsx:73
+msgid "Available version:"
+msgstr "उपलब्ध संस्करण:"
+
+#: src/features/apps/components/app-info-dialog.tsx:81
+#: src/features/apps/components/app-info-dialog.tsx:105
+msgid "Available versions:"
+msgstr "उपलब्ध संस्करणहरू:"
+
 #: src/features/apps/index.tsx:387
 msgid "Available, but not installed"
 msgstr "उपलब्ध, तर स्थापना गरिएको छैन"
@@ -148,9 +198,9 @@ msgstr "उपलब्ध, तर स्थापना गरिएको छ�
 msgid "Back"
 msgstr "पछाडि"
 
-#: src/routes/_authenticated/app/$appId.tsx:121
-#: src/routes/_authenticated/app/$appId.tsx:142
-#: src/routes/_authenticated/app/$appId.tsx:159
+#: src/routes/_authenticated/app/$appId.tsx:127
+#: src/routes/_authenticated/app/$appId.tsx:148
+#: src/routes/_authenticated/app/$appId.tsx:165
 msgid "Back to apps"
 msgstr "एपहरूमा फर्कनुहोस्"
 
@@ -171,12 +221,12 @@ msgstr "रुचि बढाउनुहोस्"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/apps/components/app-info-dialog.tsx:138
-#: src/features/apps/components/install-dialog.tsx:101
+#: src/features/apps/components/app-info-dialog.tsx:143
+#: src/features/apps/components/install-dialog.tsx:102
 #: src/features/apps/index.tsx:511
-#: src/features/apps/index.tsx:551
-#: src/features/apps/index.tsx:599
-#: src/routes/_authenticated/app/$appId.tsx:561
+#: src/features/apps/index.tsx:553
+#: src/features/apps/index.tsx:601
+#: src/routes/_authenticated/app/$appId.tsx:567
 msgid "Cancel"
 msgstr "रद्द गर्नुहोस्"
 
@@ -207,6 +257,10 @@ msgstr "सिस्टम प्राथमिकता, उज्यालो
 #: ../../../lib/web/src/components/language-picker.tsx:167
 msgid "Choose language"
 msgstr "भाषा छनोट गर्नुहोस्"
+
+#: src/features/routing/routing-table.tsx:70
+msgid "Class"
+msgstr "वर्ग"
 
 #: src/features/routing/classes.tsx:9
 msgid "Class routing"
@@ -309,7 +363,7 @@ msgstr "जारी राख्नुहोस्"
 msgid "Copy"
 msgstr "प्रतिलिपि"
 
-#: src/routes/_authenticated/app/$appId.tsx:220
+#: src/routes/_authenticated/app/$appId.tsx:226
 msgid "Current Version"
 msgstr "हालको संस्करण"
 
@@ -326,12 +380,13 @@ msgstr "अँध्यारो"
 msgid "Dark mode"
 msgstr "अँध्यारो मोड"
 
-#: src/features/routing/routing-table.tsx:66
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "द्वारा घोषित"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
-#: src/features/routing/routing-table.tsx:117
+#: src/features/routing/routing-table.tsx:123
+#: src/features/routing/routing-table.tsx:147
 msgid "Default"
 msgstr "पूर्वनिर्धारित"
 
@@ -339,9 +394,26 @@ msgstr "पूर्वनिर्धारित"
 msgid "Default AI account"
 msgstr "पूर्वनिर्धारित AI खाता"
 
-#: src/routes/_authenticated/app/$appId.tsx:337
+#: src/routes/_authenticated/app/$appId.tsx:447
+msgid "Default for all users"
+msgstr "सबै प्रयोगकर्ताहरूको लागि पूर्वनिर्धारित"
+
+#: src/routes/_authenticated/app/$appId.tsx:446
+msgid "Default for all users (version {effectiveDefaultVersion})"
+msgstr "सबै प्रयोगकर्ताहरूको लागि पूर्वनिर्धारित (संस्करण {effectiveDefaultVersion})"
+
+#: src/routes/_authenticated/app/$appId.tsx:343
 msgid "Default for all users updated"
 msgstr "सबै प्रयोगकर्ताहरूका लागि पूर्वनिर्धारित अद्यावधिक गरियो"
+
+#: src/routes/_authenticated/app/$appId.tsx:430
+msgid "Default track"
+msgstr "पूर्वनिर्धारित ट्र्याक"
+
+#. placeholder {0}: versionData.tracks[defaultTrack]
+#: src/routes/_authenticated/app/$appId.tsx:429
+msgid "Default track (version {0})"
+msgstr "पूर्वनिर्धारित ट्र्याक (संस्करण {0})"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -378,9 +450,17 @@ msgstr "मोबाइल साइडबार देखाउँछ।"
 msgid "Download"
 msgstr "डाउनलोड"
 
-#: src/routes/_authenticated/app/$appId.tsx:237
+#: src/routes/_authenticated/app/$appId.tsx:243
 msgid "Enabled Services"
 msgstr "सक्षम सेवाहरू"
+
+#: src/features/apps/index.tsx:537
+msgid "Enter the app entity to install. For private apps, use the format: app@publisher."
+msgstr "स्थापना गर्न एप एन्टिटी प्रविष्ट गर्नुहोस्। निजी एपहरूको लागि, ढाँचा प्रयोग गर्नुहोस्: app@publisher।"
+
+#: src/features/apps/components/install-dialog.tsx:82
+msgid "Entity:"
+msgstr "एन्टिटी:"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -390,7 +470,7 @@ msgstr "साइडबार विस्तार गर्नुहोस्"
 msgid "Failed to add account"
 msgstr "खाता थप्न असफल"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Failed to grant permission"
 msgstr "अनुमति दिन असफल"
 
@@ -398,7 +478,7 @@ msgstr "अनुमति दिन असफल"
 msgid "Failed to remove account"
 msgstr "खाता हटाउन असफल"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to revoke permission"
 msgstr "अनुमति रद्द गर्न असफल"
 
@@ -410,12 +490,12 @@ msgstr "प्रमाणीकरण कोड पठाउन असफल"
 msgid "Failed to update category"
 msgstr "वर्ग अद्यावधिक गर्न असफल"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Failed to update default"
 msgstr "पूर्वनिर्धारित अद्यावधिक गर्न असफल"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:320
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update preference"
 msgstr "प्राथमिकता अद्यावधिक गर्न असफल"
 
@@ -423,9 +503,19 @@ msgstr "प्राथमिकता अद्यावधिक गर्न 
 msgid "Failed to update system default"
 msgstr "प्रणाली पूर्वनिर्धारित अद्यावधिक गर्न असफल"
 
-#: src/routes/_authenticated/app/$appId.tsx:215
+#: src/features/apps/index.tsx:582
+msgid "File:"
+msgstr "फाइल:"
+
+#: src/routes/_authenticated/app/$appId.tsx:221
 msgid "Fingerprint"
 msgstr "फिङ्गरप्रिन्ट"
+
+#: src/features/apps/components/app-info-dialog.tsx:75
+#: src/features/apps/components/app-info-dialog.tsx:100
+#: src/features/apps/components/install-dialog.tsx:78
+msgid "Fingerprint:"
+msgstr "फिङ्गरप्रिन्ट:"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -469,21 +559,25 @@ msgstr "अर्को पृष्ठमा जानुहोस्"
 msgid "Go to previous page"
 msgstr "अघिल्लो पृष्ठमा जानुहोस्"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:531
 msgid "Grant"
 msgstr "दिनुहोस्"
 
-#: src/routes/_authenticated/app/$appId.tsx:530
+#: src/routes/_authenticated/app/$appId.tsx:536
 msgid "Grant permission"
 msgstr "अनुमति दिनुहोस्"
 
-#: src/routes/_authenticated/app/$appId.tsx:585
+#: src/routes/_authenticated/app/$appId.tsx:591
 msgid "Grant permissions to allow this app to access system features"
 msgstr "यो एपलाई प्रणाली सुविधाहरूमा पहुँच दिन अनुमति दिनुहोस्"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:159
 msgid "Group"
 msgstr "समूह"
+
+#: src/features/routing/routing-table.tsx:77
+msgid "Handler"
+msgstr "ह्यान्डलर"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:67
 msgid "Hide"
@@ -500,11 +594,11 @@ msgstr "होम"
 msgid "Hot"
 msgstr "हट"
 
-#: src/routes/_authenticated/app/$appId.tsx:245
+#: src/routes/_authenticated/app/$appId.tsx:251
 msgid "HTTP Paths"
 msgstr "HTTP पाथहरू"
 
-#: src/routes/_authenticated/app/$appId.tsx:206
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Identity"
 msgstr "पहिचान"
 
@@ -516,18 +610,25 @@ msgstr "इम्पेरियल"
 msgid "Inset"
 msgstr "इनसेट"
 
+#: src/features/apps/components/app-info-dialog.tsx:124
+#: src/features/apps/components/install-dialog.tsx:115
 #: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:558
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:608
 msgid "Install"
 msgstr "स्थापना गर्नुहोस्"
+
+#. placeholder {0}: selectedDirectoryApp?.name
+#: src/features/apps/index.tsx:502
+msgid "Install {0}?"
+msgstr "{0} स्थापना गर्ने?"
 
 #: src/features/apps/index.tsx:335
 msgid "Install apps from the market or upload your own"
 msgstr "मार्केटबाट एपहरू स्थापना गर्नुहोस् वा आफ्नो अपलोड गर्नुहोस्"
 
 #: src/features/apps/index.tsx:274
-#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:578
 msgid "Install from file"
 msgstr "फाइलबाट स्थापना गर्नुहोस्"
 
@@ -540,9 +641,11 @@ msgstr "प्रकाशकबाट स्थापना गर्नुह�
 msgid "Installed apps"
 msgstr "स्थापित एपहरू"
 
+#: src/features/apps/components/app-info-dialog.tsx:124
+#: src/features/apps/components/install-dialog.tsx:115
 #: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:558
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:608
 msgid "Installing..."
 msgstr "स्थापना गरिँदै..."
 
@@ -575,7 +678,7 @@ msgstr "उज्यालो"
 msgid "Load more"
 msgstr "थप लोड गर्नुहोस्"
 
-#: src/features/apps/components/install-dialog.tsx:67
+#: src/features/apps/components/install-dialog.tsx:68
 msgid "Loading version information..."
 msgstr "संस्करण जानकारी लोड हुँदै..."
 
@@ -609,6 +712,10 @@ msgstr "लग आउट हुँदै…"
 msgid "Luma (Default)"
 msgstr "लुमा (पूर्वनिर्धारित)"
 
+#: src/routes/_authenticated/app/$appId.tsx:525
+msgid "Manage capabilities granted to this application"
+msgstr "यस एप्लिकेसनलाई दिइएका क्षमताहरू व्यवस्थापन गर्नुहोस्"
+
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:86
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:220
 msgid "Mark all as read"
@@ -626,7 +733,7 @@ msgstr "मेट्रिक"
 msgid "Monday"
 msgstr "सोमबार"
 
-#: src/features/routing/routing-table.tsx:93
+#: src/features/routing/routing-table.tsx:99
 msgid "Multiple apps declare this resource"
 msgstr "बहुविध एपहरूले यो स्रोत घोषणा गर्छन्"
 
@@ -650,13 +757,33 @@ msgstr "कुनै एप अद्यावधिक गर्न सकि�
 msgid "No apps installed"
 msgstr "कुनै एप स्थापित छैन"
 
+#: src/features/routing/routing-table.tsx:54
+msgid "No classes configured."
+msgstr "कुनै वर्गहरू कन्फिगर गरिएको छैन।"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:287
 msgid "No connected accounts"
 msgstr "कुनै जडान गरिएको खाता छैन"
 
+#: src/features/apps/index.tsx:429
+msgid "No description"
+msgstr "कुनै विवरण छैन"
+
+#: src/features/apps/index.tsx:367
+msgid "No development apps match \"{searchQuery}\""
+msgstr "\"{searchQuery}\" सँग मिल्ने कुनै विकास एपहरू छैनन्"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:238
 msgid "No groups available"
 msgstr "कुनै समूह उपलब्ध छैन"
+
+#: src/features/apps/index.tsx:460
+msgid "No installable apps in the directory match \"{searchQuery}\""
+msgstr "डाइरेक्टरीमा \"{searchQuery}\" सँग मिल्ने कुनै स्थापनायोग्य एपहरू छैनन्"
+
+#: src/features/apps/index.tsx:341
+msgid "No installed apps match \"{searchQuery}\""
+msgstr "\"{searchQuery}\" सँग मिल्ने कुनै स्थापित एपहरू छैनन्"
 
 #: src/features/apps/index.tsx:459
 msgid "No matches in directory"
@@ -671,9 +798,17 @@ msgstr "कुनै मिल्दो छैन।"
 msgid "No matching apps"
 msgstr "कुनै मिल्दो एप छैन"
 
-#: src/routes/_authenticated/app/$appId.tsx:584
+#: src/features/routing/routing-table.tsx:58
+msgid "No paths configured."
+msgstr "कुनै पथहरू कन्फिगर गरिएको छैन।"
+
+#: src/routes/_authenticated/app/$appId.tsx:590
 msgid "No permissions granted"
 msgstr "कुनै अनुमति प्रदान गरिएको छैन"
+
+#: src/routes/_authenticated/app/$appId.tsx:525
+msgid "No permissions granted to this app"
+msgstr "यस एपलाई कुनै अनुमति दिइएको छैन"
 
 #: ../../../lib/web/src/components/place-picker.tsx:129
 msgid "No places found"
@@ -691,6 +826,10 @@ msgstr "कुनै सिफारिस उपलब्ध छैन"
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:87
 msgid "No results found."
 msgstr "कुनै नतिजा भेटिएन।"
+
+#: src/features/routing/routing-table.tsx:56
+msgid "No services configured."
+msgstr "कुनै सेवाहरू कन्फिगर गरिएको छैन।"
 
 #: ../../../lib/web/src/components/timezone-select.tsx:64
 msgid "No time zone found."
@@ -712,7 +851,7 @@ msgstr "कुनै प्रयोगकर्ता भेटिएन"
 msgid "None"
 msgstr "कुनै पनि होइन"
 
-#: src/routes/_authenticated/app/$appId.tsx:358
+#: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Not versioned"
 msgstr "संस्करणयुक्त छैन"
 
@@ -752,6 +891,10 @@ msgstr "अन्य"
 msgid "Owner"
 msgstr "मालिक"
 
+#: src/features/routing/routing-table.tsx:70
+msgid "Path"
+msgstr "पथ"
+
 #: src/features/routing/paths.tsx:9
 msgid "Path routing"
 msgstr "पथ रुटिङ"
@@ -761,15 +904,15 @@ msgstr "पथ रुटिङ"
 msgid "Paths"
 msgstr "पथहरू"
 
-#: src/routes/_authenticated/app/$appId.tsx:482
+#: src/routes/_authenticated/app/$appId.tsx:488
 msgid "Permission granted"
 msgstr "अनुमति प्रदान गरियो"
 
-#: src/routes/_authenticated/app/$appId.tsx:465
+#: src/routes/_authenticated/app/$appId.tsx:471
 msgid "Permission revoked"
 msgstr "अनुमति रद्द गरियो"
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:523
 msgid "Permissions"
 msgstr "अनुमतिहरू"
 
@@ -781,6 +924,10 @@ msgstr "कृपया एप ID प्रविष्ट गर्नुहो
 msgid "Preference updated"
 msgstr "प्राथमिकता अद्यावधिक गरियो"
 
+#: src/routes/_authenticated/app/$appId.tsx:437
+msgid "Preferred Version"
+msgstr "मनपर्ने संस्करण"
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
 msgstr "अघिल्लो तस्बिर"
@@ -790,7 +937,7 @@ msgstr "अघिल्लो तस्बिर"
 msgid "Profile"
 msgstr "प्रोफाइल"
 
-#: src/routes/_authenticated/app/$appId.tsx:229
+#: src/routes/_authenticated/app/$appId.tsx:235
 msgid "Provided Classes"
 msgstr "प्रदान गरिएका क्लासहरू"
 
@@ -848,11 +995,15 @@ msgstr "रिसेट गर्नुहोस्"
 msgid "Reset all settings to default values"
 msgstr "सबै सेटिङहरू पूर्वनिर्धारित मानमा रिसेट गर्नुहोस्"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:642
 msgid "Revoke"
 msgstr "रद्द गर्नुहोस्"
 
-#: src/routes/_authenticated/app/$appId.tsx:641
+#: src/routes/_authenticated/app/$appId.tsx:649
+msgid "Revoke permission"
+msgstr "अनुमति रद्द गर्नुहोस्"
+
+#: src/routes/_authenticated/app/$appId.tsx:647
 msgid "Revoke permission?"
 msgstr "अनुमति रद्द गर्ने हो?"
 
@@ -910,6 +1061,10 @@ msgstr "खोज्नुहोस्…"
 msgid "Searching..."
 msgstr "खोज्दै..."
 
+#: src/routes/_authenticated/app/$appId.tsx:538
+msgid "Select a capability to grant to {appName}."
+msgstr "{appName} लाई दिनको लागि क्षमता चयन गर्नुहोस्।"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:147
 msgid "Select a user, group, or other rule to grant access."
 msgstr "पहुँच दिन प्रयोगकर्ता, समूह वा अन्य नियम छान्नुहोस्।"
@@ -942,9 +1097,13 @@ msgstr "साइट दिशा छान्नुहोस्"
 msgid "Select theme preference"
 msgstr "थिम प्राथमिकता छान्नुहोस्"
 
-#: src/routes/_authenticated/app/$appId.tsx:412
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "Select which version of this app to use"
 msgstr "यो एपको कुन संस्करण प्रयोग गर्ने छान्नुहोस्"
+
+#: src/features/routing/routing-table.tsx:70
+msgid "Service"
+msgstr "सेवा"
 
 #: src/features/routing/services.tsx:9
 msgid "Service routing"
@@ -1004,11 +1163,11 @@ msgstr "आइतबार"
 msgid "System"
 msgstr "प्रणाली"
 
-#: src/features/routing/routing-table.tsx:68
+#: src/features/routing/routing-table.tsx:74
 msgid "System default"
 msgstr "प्रणाली पूर्वनिर्धारित"
 
-#: src/routes/_authenticated/app/$appId.tsx:416
+#: src/routes/_authenticated/app/$appId.tsx:422
 msgid "System Default"
 msgstr "प्रणाली पूर्वनिर्धारित"
 
@@ -1024,7 +1183,7 @@ msgstr "ट्याग"
 msgid "Teams/Apps"
 msgstr "टोली/एप"
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "Technical Capabilities"
 msgstr "प्राविधिक क्षमताहरू"
 
@@ -1033,9 +1192,13 @@ msgstr "प्राविधिक क्षमताहरू"
 msgid "The app has been installed successfully."
 msgstr "एप सफलतापूर्वक इन्स्टल भयो।"
 
-#: src/routes/_authenticated/app/$appId.tsx:147
+#: src/routes/_authenticated/app/$appId.tsx:153
 msgid "The requested app could not be found."
 msgstr "अनुरोध गरिएको एप भेटिएन।"
+
+#: src/routes/_authenticated/app/$appId.tsx:422
+msgid "The version used by users who haven't made a choice"
+msgstr "रोजाइ नगरेका प्रयोगकर्ताहरूले प्रयोग गर्ने संस्करण"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1045,9 +1208,18 @@ msgstr "थिम"
 msgid "Theme Settings"
 msgstr "थिम सेटिङहरू"
 
-#: src/routes/_authenticated/app/$appId.tsx:359
+#: src/routes/_authenticated/app/$appId.tsx:365
 msgid "This app does not have version management"
 msgstr "यो एपमा संस्करण व्यवस्थापन छैन"
+
+#: src/features/apps/components/app-info-dialog.tsx:61
+msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
+msgstr "यो एप यसको प्रकाशकबाट प्रत्यक्ष रूपमा स्थापना गरिएको हो र जाँच गरिएको छैन। यो मालवेयर हुन सक्छ।"
+
+#. placeholder {0}: formatPermission(permission.permission, t)
+#: src/routes/_authenticated/app/$appId.tsx:648
+msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
+msgstr "यसले {appName} बाट \"{0}\" अनुमति रद्द गर्नेछ। एपले सही रूपमा काम गर्न रोक्न सक्छ।"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:72
 msgid "Thursday"
@@ -1075,8 +1247,8 @@ msgstr "थिम टगल गर्नुहोस्"
 msgid "Top"
 msgstr "माथि"
 
-#: src/features/apps/index.tsx:674
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/features/apps/index.tsx:676
+#: src/routes/_authenticated/app/$appId.tsx:384
 msgid "Track"
 msgstr "ट्र्याक"
 
@@ -1115,7 +1287,11 @@ msgstr "खोज्न टाइप गर्नुहोस्..."
 msgid "Unable to connect to the recommendations service"
 msgstr "सिफारिस सेवामा जडान गर्न असमर्थ"
 
-#: src/features/apps/components/install-dialog.tsx:89
+#: src/features/apps/components/app-info-dialog.tsx:133
+msgid "Unable to load app information. The app may not exist or the publisher may be offline."
+msgstr "एप जानकारी लोड गर्न असमर्थ। एप अवस्थित नहुन सक्छ वा प्रकाशक अफलाइन हुन सक्छ।"
+
+#: src/features/apps/components/install-dialog.tsx:90
 msgid "Unable to load version information"
 msgstr "संस्करण जानकारी लोड गर्न असमर्थ"
 
@@ -1144,7 +1320,7 @@ msgstr "संयुक्त राज्य अमेरिका"
 msgid "Unverified"
 msgstr "अप्रमाणित"
 
-#: src/features/apps/index.tsx:670
+#: src/features/apps/index.tsx:672
 msgid "Update"
 msgstr "अद्यावधिक गर्नुहोस्"
 
@@ -1159,6 +1335,10 @@ msgstr "अद्यावधिक असफल भयो"
 #: src/features/apps/index.tsx:263
 msgid "Updating..."
 msgstr "अद्यावधिक गर्दै..."
+
+#: src/features/routing/routing-table.tsx:147
+msgid "Use system default"
+msgstr "प्रणाली पूर्वनिर्धारित प्रयोग गर्नुहोस्"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1184,15 +1364,20 @@ msgstr "प्रमाणित गर्नुहोस्"
 msgid "Verify email address"
 msgstr "इमेल ठेगाना प्रमाणित गर्नुहोस्"
 
-#: src/routes/_authenticated/app/$appId.tsx:392
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Version"
 msgstr "संस्करण"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#. placeholder {0}: track.version
+#: src/features/apps/components/app-info-dialog.tsx:115
+msgid "Version {0}"
+msgstr "संस्करण {0}"
+
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Version changed"
 msgstr "संस्करण परिवर्तन भयो"
 
-#: src/routes/_authenticated/app/$appId.tsx:411
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Version Management"
 msgstr "संस्करण व्यवस्थापन"
 
@@ -1220,6 +1405,14 @@ msgstr "वेबसाइट मर्मतसम्भारमा छ!"
 msgid "Wednesday"
 msgstr "बुधबार"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:438
 msgid "Your personal version override"
 msgstr "तपाईंको व्यक्तिगत संस्करण ओभरराइड"
+
+#: src/features/routing/routing-table.tsx:77
+msgid "Your preference"
+msgstr "तपाईंको प्राथमिकता"
+
+#: src/routes/_authenticated/app/$appId.tsx:437
+msgid "Your Version"
+msgstr "तपाईंको संस्करण"
