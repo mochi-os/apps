@@ -39,15 +39,15 @@ msgstr "{track} (mặc định, phiên bản {version})"
 msgid "{track} (version {version})"
 msgstr "{track} (phiên bản {version})"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:52
+#: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
 msgstr "12 giờ"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:51
+#: ../../../lib/web/src/lib/preference-utils.ts:38
 msgid "24 hours"
 msgstr "24 giờ"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:61
+#: ../../../lib/web/src/lib/preference-utils.ts:48
 msgid "Absolute (date and time)"
 msgstr "Tuyệt đối (ngày và giờ)"
 
@@ -426,11 +426,11 @@ msgstr "Bảng chi tiết"
 #: ../../../lib/web/src/components/language-picker.tsx:145
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
-#: ../../../lib/web/src/lib/preference-utils.ts:38
-#: ../../../lib/web/src/lib/preference-utils.ts:50
-#: ../../../lib/web/src/lib/preference-utils.ts:68
-#: ../../../lib/web/src/lib/preference-utils.ts:82
-#: ../../../lib/web/src/lib/preference-utils.ts:94
+#: ../../../lib/web/src/lib/preference-utils.ts:25
+#: ../../../lib/web/src/lib/preference-utils.ts:37
+#: ../../../lib/web/src/lib/preference-utils.ts:55
+#: ../../../lib/web/src/lib/preference-utils.ts:69
+#: ../../../lib/web/src/lib/preference-utils.ts:81
 msgid "Detect from web browser"
 msgstr "Phát hiện từ trình duyệt web"
 
@@ -521,7 +521,7 @@ msgstr "Dấu vân tay:"
 msgid "Floating"
 msgstr "Nổi"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:73
+#: ../../../lib/web/src/lib/preference-utils.ts:60
 msgid "Friday"
 msgstr "Thứ Sáu"
 
@@ -602,7 +602,7 @@ msgstr "Đường dẫn HTTP"
 msgid "Identity"
 msgstr "Danh tính"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:96
+#: ../../../lib/web/src/lib/preference-utils.ts:83
 msgid "Imperial"
 msgstr "Hệ Anh"
 
@@ -708,10 +708,6 @@ msgstr "Đăng xuất thành công"
 msgid "Logging out…"
 msgstr "Đang đăng xuất…"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:25
-msgid "Luma (Default)"
-msgstr "Luma (Mặc định)"
-
 #: src/routes/_authenticated/app/$appId.tsx:525
 msgid "Manage capabilities granted to this application"
 msgstr "Quản lý các khả năng được cấp cho ứng dụng này"
@@ -725,11 +721,11 @@ msgstr "Đánh dấu tất cả là đã đọc"
 msgid "Menu"
 msgstr "Menu"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:95
+#: ../../../lib/web/src/lib/preference-utils.ts:82
 msgid "Metric"
 msgstr "Hệ mét"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:69
+#: ../../../lib/web/src/lib/preference-utils.ts:56
 msgid "Monday"
 msgstr "Thứ Hai"
 
@@ -955,11 +951,11 @@ msgstr "Đang chuyển hướng đến đăng nhập."
 msgid "Reduce interest"
 msgstr "Giảm sự quan tâm"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:60
+#: ../../../lib/web/src/lib/preference-utils.ts:47
 msgid "Relative (5m, 3h, 2d)"
 msgstr "Tương đối (5m, 3h, 2d)"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:59
+#: ../../../lib/web/src/lib/preference-utils.ts:46
 msgid "Relative within 24 hours, else absolute"
 msgstr "Tương đối trong vòng 24 giờ, ngoài ra dùng tuyệt đối"
 
@@ -1015,7 +1011,7 @@ msgstr "Phải sang trái"
 msgid "Rows per page"
 msgstr "Số hàng mỗi trang"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:74
+#: ../../../lib/web/src/lib/preference-utils.ts:61
 msgid "Saturday"
 msgstr "Thứ bảy"
 
@@ -1154,7 +1150,7 @@ msgstr "Hãy đón xem nhé!"
 msgid "Subject"
 msgstr "Tiêu đề"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:75
+#: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Sunday"
 msgstr "Chủ nhật"
 
@@ -1221,7 +1217,7 @@ msgstr "Ứng dụng này được cài đặt trực tiếp từ nhà phát hà
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Điều này sẽ thu hồi quyền \"{0}\" từ {appName}. Ứng dụng có thể ngừng hoạt động chính xác."
 
-#: ../../../lib/web/src/lib/preference-utils.ts:72
+#: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Thursday"
 msgstr "Thứ năm"
 
@@ -1267,7 +1263,7 @@ msgstr "Hãy thử điều chỉnh từ khóa tìm kiếm"
 msgid "Try again"
 msgstr "Thử lại"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:70
+#: ../../../lib/web/src/lib/preference-utils.ts:57
 msgid "Tuesday"
 msgstr "Thứ ba"
 
@@ -1312,7 +1308,7 @@ msgstr "Truy cập không được phép"
 msgid "Unavailable"
 msgstr "Không khả dụng"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:97
+#: ../../../lib/web/src/lib/preference-utils.ts:84
 msgid "United States"
 msgstr "Hoa Kỳ"
 
@@ -1401,7 +1397,7 @@ msgstr "Chúng tôi sẽ trở lại trực tuyến sớm."
 msgid "Website is under maintenance!"
 msgstr "Trang web đang bảo trì!"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:71
+#: ../../../lib/web/src/lib/preference-utils.ts:58
 msgid "Wednesday"
 msgstr "Thứ tư"
 
