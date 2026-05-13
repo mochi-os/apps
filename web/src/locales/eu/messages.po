@@ -19,7 +19,7 @@ msgid "{0} (development)"
 msgstr "{0} (garapena)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:186
 msgid "{0} updated, {failed} failed"
 msgstr "{0} eguneratu, {failed}-(e)k huts egin"
 
@@ -27,7 +27,7 @@ msgstr "{0} eguneratu, {failed}-(e)k huts egin"
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
 #: src/features/apps/index.tsx:141
-#: src/features/apps/index.tsx:158
+#: src/features/apps/index.tsx:163
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} instalatu da."
 
@@ -104,7 +104,7 @@ msgstr "Gehitu etiketa..."
 msgid "Add team/app"
 msgstr "Gehitu taldea/aplikazioa"
 
-#: src/features/apps/index.tsx:589
+#: src/features/apps/index.tsx:593
 msgid "Add to directory"
 msgstr "Gehitu direktoriora"
 
@@ -128,7 +128,7 @@ msgstr "AA"
 msgid "All"
 msgstr "Guztiak"
 
-#: src/features/apps/index.tsx:177
+#: src/features/apps/index.tsx:182
 msgid "All apps updated"
 msgstr "Aplikazio guztiak eguneratuta"
 
@@ -137,8 +137,8 @@ msgstr "Aplikazio guztiak eguneratuta"
 msgid "App"
 msgstr "Aplikazioa"
 
-#: src/features/apps/index.tsx:244
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:249
+#: src/features/apps/index.tsx:250
 msgid "App actions"
 msgstr "Aplikazio ekintzak"
 
@@ -152,8 +152,8 @@ msgstr "Aplikazioaren informazioa eta konfigurazioa"
 
 #: src/features/apps/index.tsx:115
 #: src/features/apps/index.tsx:140
-#: src/features/apps/index.tsx:157
-#: src/features/apps/index.tsx:217
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:222
 msgid "App installed"
 msgstr "Aplikazioa instalatuta"
 
@@ -169,7 +169,7 @@ msgstr "Aplikazioaren IDa"
 #: src/components/layout/apps-layout.tsx:17
 #: src/components/layout/apps-layout.tsx:20
 #: src/features/apps/index.tsx:54
-#: src/features/apps/index.tsx:293
+#: src/features/apps/index.tsx:298
 msgid "Apps"
 msgstr "Aplikazioak"
 
@@ -190,7 +190,7 @@ msgstr "Eskuragarri dagoen bertsioa:"
 msgid "Available versions:"
 msgstr "Eskuragarri dauden bertsioak:"
 
-#: src/features/apps/index.tsx:387
+#: src/features/apps/index.tsx:392
 msgid "Available, but not installed"
 msgstr "Eskuragarri, baina instalatu gabe"
 
@@ -223,9 +223,9 @@ msgstr "Bultzatu interesa"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/apps/components/app-info-dialog.tsx:143
 #: src/features/apps/components/install-dialog.tsx:102
-#: src/features/apps/index.tsx:511
-#: src/features/apps/index.tsx:553
-#: src/features/apps/index.tsx:601
+#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:605
 #: src/routes/_authenticated/app/$appId.tsx:567
 msgid "Cancel"
 msgstr "Utzi"
@@ -254,7 +254,7 @@ msgstr "Aukeratu ezkerretik eskuinerako edo eskuinetik ezkerrerako gunearen nora
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "Aukeratu sistemaren lehentasunaren, modu argiaren edo modu ilunaren artean"
 
-#: ../../../lib/web/src/components/language-picker.tsx:167
+#: ../../../lib/web/src/components/language-picker.tsx:174
 msgid "Choose language"
 msgstr "Aukeratu hizkuntza"
 
@@ -271,11 +271,11 @@ msgstr "Klase bideratzea"
 msgid "Classes"
 msgstr "Klaseak"
 
-#: src/features/apps/index.tsx:282
+#: src/features/apps/index.tsx:287
 msgid "Clean up unused versions"
 msgstr "Garbitu erabili gabeko bertsioak"
 
-#: src/features/apps/index.tsx:282
+#: src/features/apps/index.tsx:287
 msgid "Cleaning up..."
 msgstr "Garbitzen..."
 
@@ -322,11 +322,16 @@ msgstr "Itxi bilaketa"
 msgid "Collapse sidebar"
 msgstr "Tolestu alboko barra"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:93
+msgid "Comfortable"
+msgstr "Erosoa"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:9
 msgid "Coming Soon!"
 msgstr "Laster dator!"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:302
+#: ../../../lib/web/src/lib/preference-utils.ts:92
 msgid "Compact"
 msgstr "Trinkoa"
 
@@ -362,6 +367,14 @@ msgstr "Jarraitu"
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Kopiatu"
+
+#: src/features/apps/index.tsx:148
+msgid "Could not install app."
+msgstr "Ezin izan da aplikazioa instalatu."
+
+#: ../../../lib/web/src/features/document/document-page.tsx:81
+msgid "Could not load this document. Please try again later."
+msgstr "Ezin izan da dokumentu hau kargatu. Saiatu berriro geroago."
 
 #: src/routes/_authenticated/app/$appId.tsx:226
 msgid "Current Version"
@@ -423,7 +436,7 @@ msgstr "Beheranzkoa"
 msgid "Details Panel"
 msgstr "Xehetasun panela"
 
-#: ../../../lib/web/src/components/language-picker.tsx:145
+#: ../../../lib/web/src/components/language-picker.tsx:152
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
 #: ../../../lib/web/src/lib/preference-utils.ts:25
@@ -434,7 +447,7 @@ msgstr "Xehetasun panela"
 msgid "Detect from web browser"
 msgstr "Detektatu web nabigatzailetik"
 
-#: src/features/apps/index.tsx:362
+#: src/features/apps/index.tsx:367
 msgid "Development apps"
 msgstr "Garapen aplikazioak"
 
@@ -450,13 +463,13 @@ msgstr "Mugikorraren alboko barra erakusten du."
 msgid "Download"
 msgstr "Deskargatu"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:134
+msgid "Dyslexia-friendly"
+msgstr "Dislexiarako egokia"
+
 #: src/routes/_authenticated/app/$appId.tsx:243
 msgid "Enabled Services"
 msgstr "Gaitutako zerbitzuak"
-
-#: src/features/apps/index.tsx:537
-msgid "Enter the app entity to install. For private apps, use the format: app@publisher."
-msgstr "Sartu instalatu beharreko aplikazio-entitatea. Aplikazio pribatuetarako, erabili formatua: aplikazioa@argitaratzailea."
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -465,6 +478,10 @@ msgstr "Entitatea:"
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
 msgstr "Zabaldu alboko barra"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:124
+msgid "Extra large"
+msgstr "Oso handia"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
@@ -503,7 +520,7 @@ msgstr "Ezin izan da hobespena eguneratu"
 msgid "Failed to update system default"
 msgstr "Ezin izan da sistemaren lehenetsia eguneratu"
 
-#: src/features/apps/index.tsx:582
+#: src/features/apps/index.tsx:586
 msgid "File:"
 msgstr "Fitxategia:"
 
@@ -529,9 +546,17 @@ msgstr "Ostirala"
 msgid "From"
 msgstr "Nondik"
 
-#: src/features/apps/index.tsx:442
+#: src/features/apps/index.tsx:447
 msgid "From the directory"
 msgstr "Direktoriotik"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:91
+#: ../../../lib/web/src/lib/preference-utils.ts:101
+#: ../../../lib/web/src/lib/preference-utils.ts:112
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
+msgid "From theme"
+msgstr "Gaiatik"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:307
 msgid "Full layout"
@@ -612,40 +637,44 @@ msgstr "Sartzea"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
 #: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:560
-#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:564
+#: src/features/apps/index.tsx:612
 msgid "Install"
 msgstr "Instalatu"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:502
+#: src/features/apps/index.tsx:507
 msgid "Install {0}?"
 msgstr "{0} instalatu?"
 
-#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:340
 msgid "Install apps from the market or upload your own"
 msgstr "Instalatu aplikazioak merkatutik edo igo zureak"
 
-#: src/features/apps/index.tsx:274
-#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:147
+msgid "Install failed"
+msgstr "Instalazioak huts egin du"
+
+#: src/features/apps/index.tsx:279
+#: src/features/apps/index.tsx:582
 msgid "Install from file"
 msgstr "Instalatu fitxategitik"
 
-#: src/features/apps/index.tsx:270
-#: src/features/apps/index.tsx:535
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:540
 msgid "Install from publisher"
 msgstr "Instalatu argitaratzailetik"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:323
 msgid "Installed apps"
 msgstr "Instalatutako aplikazioak"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
 #: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:560
-#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:564
+#: src/features/apps/index.tsx:612
 msgid "Installing..."
 msgstr "Instalatzen..."
 
@@ -656,6 +685,11 @@ msgstr "Interesak"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
 msgid "Invalid verification code"
 msgstr "Egiaztapen-kode baliogabea"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:105
+#: ../../../lib/web/src/lib/preference-utils.ts:123
+msgid "Large"
+msgstr "Handia"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
@@ -683,6 +717,7 @@ msgid "Loading version information..."
 msgstr "Bertsio-informazioa kargatzen..."
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
+#: ../../../lib/web/src/features/document/document-page.tsx:87
 msgid "Loading…"
 msgstr "Kargatzen…"
 
@@ -717,6 +752,10 @@ msgstr "Kudeatu aplikazio honi emandako gaitasunak"
 msgid "Mark all as read"
 msgstr "Markatu denak irakurritzat"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:104
+msgid "Medium"
+msgstr "Ertaina"
+
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
 msgstr "Menua"
@@ -745,11 +784,11 @@ msgstr "Hurrengo irudia"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Ez da sarbide-araurik konfiguratu. Gehitu arauak baliabide honetara nork sarbidea duen kontrolatzeko."
 
-#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:184
 msgid "No apps could be updated."
 msgstr "Ezin izan da aplikaziorik eguneratu."
 
-#: src/features/apps/index.tsx:334
+#: src/features/apps/index.tsx:339
 msgid "No apps installed"
 msgstr "Ez dago aplikaziorik instalatuta"
 
@@ -761,11 +800,11 @@ msgstr "Ez da klaserik konfiguratu."
 msgid "No connected accounts"
 msgstr "Konektatutako konturik ez"
 
-#: src/features/apps/index.tsx:429
+#: src/features/apps/index.tsx:434
 msgid "No description"
 msgstr "Deskribapenik ez"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:372
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Ez dago \"{searchQuery}\" bilaketarekin bat datorren garapen-aplikaziorik"
 
@@ -773,24 +812,20 @@ msgstr "Ez dago \"{searchQuery}\" bilaketarekin bat datorren garapen-aplikaziori
 msgid "No groups available"
 msgstr "Ez dago talde erabilgarririk"
 
-#: src/features/apps/index.tsx:460
+#: src/features/apps/index.tsx:465
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Ez dago direktorioan instalagarria den eta \"{searchQuery}\" bilaketarekin bat datorren aplikaziorik"
 
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:346
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Ez dago instalatutako aplikaziorik \"{searchQuery}\" bilaketarekin bat datorrenik"
 
-#: src/features/apps/index.tsx:459
+#: src/features/apps/index.tsx:464
 msgid "No matches in directory"
 msgstr "Direktorioan paregaberik ez"
 
-#: ../../../lib/web/src/components/language-picker.tsx:177
-msgid "No matches."
-msgstr "Bat etortzerik ez."
-
-#: src/features/apps/index.tsx:340
-#: src/features/apps/index.tsx:366
+#: src/features/apps/index.tsx:345
+#: src/features/apps/index.tsx:371
 msgid "No matching apps"
 msgstr "Bat datorren aplikaziorik ez"
 
@@ -814,7 +849,7 @@ msgstr "Ez da lekurik aurkitu"
 msgid "No profile"
 msgstr "Profilik ez"
 
-#: src/features/apps/index.tsx:412
+#: src/features/apps/index.tsx:417
 msgid "No recommendations available"
 msgstr "Ez dago gomendiorik erabilgarri"
 
@@ -835,7 +870,7 @@ msgstr "Ez da ordu-zonarik aurkitu."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Oraindik gairik ez — saiatu berriro hurrengo jakinarazpenaren ondoren."
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:197
 msgid "No unused versions to clean up"
 msgstr "Garbitzeko erabili gabeko bertsiorik ez"
 
@@ -844,8 +879,14 @@ msgid "No users found"
 msgstr "Ez da erabiltzailerik aurkitu"
 
 #: ../../../lib/web/src/components/person-picker.tsx:349
+#: ../../../lib/web/src/lib/preference-utils.ts:102
+#: ../../../lib/web/src/lib/preference-utils.ts:113
 msgid "None"
 msgstr "Bat ere ez"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:122
+msgid "Normal"
+msgstr "Arrunta"
 
 #: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Not versioned"
@@ -886,6 +927,10 @@ msgstr "Bestelakoa"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "Jabea"
+
+#: src/features/apps/index.tsx:544
+msgid "Paste the install link:"
+msgstr "Itsatsi instalazio-esteka:"
 
 #: src/features/routing/routing-table.tsx:70
 msgid "Path"
@@ -928,6 +973,11 @@ msgstr "Hobetsitako bertsioa"
 msgid "Previous image"
 msgstr "Aurreko irudia"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:24
+#: ../../../lib/web/src/features/document/document-page.tsx:41
+msgid "Privacy"
+msgstr "Pribatutasuna"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:134
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
@@ -939,7 +989,7 @@ msgstr "Eskainitako klaseak"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
-#: src/features/apps/index.tsx:388
+#: src/features/apps/index.tsx:393
 msgid "Recommended"
 msgstr "Gomendatua"
 
@@ -979,7 +1029,7 @@ msgstr "Kendu interesa"
 
 #. placeholder {0}: data.removed
 #. placeholder {1}: data.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:194
+#: src/features/apps/index.tsx:199
 msgid "Removed {0} unused version{1}"
 msgstr "Erabili gabeko {0} bertsio kendu da{1}"
 
@@ -1015,11 +1065,11 @@ msgstr "Errenkada orriko"
 msgid "Saturday"
 msgstr "Larunbata"
 
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:312
 msgid "Search apps"
 msgstr "Bilatu aplikazioak"
 
-#: src/features/apps/index.tsx:306
+#: src/features/apps/index.tsx:311
 msgid "Search apps..."
 msgstr "Bilatu aplikazioak..."
 
@@ -1046,10 +1096,6 @@ msgstr "Bilatu erabiltzaileak"
 #: ../../../lib/web/src/components/person-picker.tsx:323
 msgid "Search..."
 msgstr "Bilatu..."
-
-#: ../../../lib/web/src/components/language-picker.tsx:175
-msgid "Search…"
-msgstr "Bilatu…"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
 #: ../../../lib/web/src/components/search-entity-page.tsx:149
@@ -1097,6 +1143,15 @@ msgstr "Hautatu gaiaren hobespena"
 msgid "Select which version of this app to use"
 msgstr "Hautatu aplikazio honen zein bertsio erabili"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:133
+msgid "Serif"
+msgstr ""
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:16
+#: ../../../lib/web/src/features/document/document-page.tsx:37
+msgid "Server rules"
+msgstr "Zerbitzariaren arauak"
+
 #: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "Zerbitzua"
@@ -1142,6 +1197,15 @@ msgstr "Saioa amaitzen..."
 msgid "Skip to Main"
 msgstr "Saltatu nagusira"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:103
+#: ../../../lib/web/src/lib/preference-utils.ts:121
+msgid "Small"
+msgstr "Txikia"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:94
+msgid "Spacious"
+msgstr "Lasaia"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:12
 msgid "Stay tuned though!"
 msgstr "Egon adi, ordea!"
@@ -1156,6 +1220,7 @@ msgstr "Igandea"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
 #: ../../../lib/web/src/lib/preference-utils.ts:18
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "Sistema"
 
@@ -1183,8 +1248,13 @@ msgstr "Taldeak/Aplikazioak"
 msgid "Technical Capabilities"
 msgstr "Gaitasun teknikoak"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:20
+#: ../../../lib/web/src/features/document/document-page.tsx:39
+msgid "Terms and conditions"
+msgstr "Baldintzak"
+
 #: src/features/apps/index.tsx:116
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "Aplikazioa ondo instalatu da."
 
@@ -1243,7 +1313,7 @@ msgstr "Txandakatu gaia"
 msgid "Top"
 msgstr "Goia"
 
-#: src/features/apps/index.tsx:676
+#: src/features/apps/index.tsx:680
 #: src/routes/_authenticated/app/$appId.tsx:384
 msgid "Track"
 msgstr "Pista"
@@ -1279,7 +1349,7 @@ msgstr "Idatzi erabiltzaileak bilatzeko"
 msgid "Type to search..."
 msgstr "Idatzi bilatzeko..."
 
-#: src/features/apps/index.tsx:407
+#: src/features/apps/index.tsx:412
 msgid "Unable to connect to the recommendations service"
 msgstr "Ezin da gomendio-zerbitzura konektatu"
 
@@ -1304,7 +1374,7 @@ msgstr "Esleitu gabe"
 msgid "Unauthorized Access"
 msgstr "Baimen gabeko sarbidea"
 
-#: src/features/apps/index.tsx:406
+#: src/features/apps/index.tsx:411
 msgid "Unavailable"
 msgstr "Ez dago erabilgarri"
 
@@ -1316,19 +1386,19 @@ msgstr "Estatu Batuak"
 msgid "Unverified"
 msgstr "Egiaztatu gabe"
 
-#: src/features/apps/index.tsx:672
+#: src/features/apps/index.tsx:676
 msgid "Update"
 msgstr "Eguneratu"
 
-#: src/features/apps/index.tsx:263
+#: src/features/apps/index.tsx:268
 msgid "Update all"
 msgstr "Eguneratu guztiak"
 
-#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:184
 msgid "Update failed"
 msgstr "Eguneratzeak huts egin du"
 
-#: src/features/apps/index.tsx:263
+#: src/features/apps/index.tsx:268
 msgid "Updating..."
 msgstr "Eguneratzen..."
 

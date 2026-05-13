@@ -19,7 +19,7 @@ msgid "{0} (development)"
 msgstr "{0} (forbairt)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:186
 msgid "{0} updated, {failed} failed"
 msgstr "{0} nuashonraithe, {failed} theip"
 
@@ -27,7 +27,7 @@ msgstr "{0} nuashonraithe, {failed} theip"
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
 #: src/features/apps/index.tsx:141
-#: src/features/apps/index.tsx:158
+#: src/features/apps/index.tsx:163
 msgid "{0} v{1} has been installed."
 msgstr "Suiteáladh {0} v{1}."
 
@@ -104,7 +104,7 @@ msgstr "Cuir clib leis..."
 msgid "Add team/app"
 msgstr "Cuir foireann/aip leis"
 
-#: src/features/apps/index.tsx:589
+#: src/features/apps/index.tsx:593
 msgid "Add to directory"
 msgstr "Cuir le heolaire"
 
@@ -128,7 +128,7 @@ msgstr "AI"
 msgid "All"
 msgstr "Iomlán"
 
-#: src/features/apps/index.tsx:177
+#: src/features/apps/index.tsx:182
 msgid "All apps updated"
 msgstr "Gach aip nuashonraithe"
 
@@ -137,8 +137,8 @@ msgstr "Gach aip nuashonraithe"
 msgid "App"
 msgstr "Aip"
 
-#: src/features/apps/index.tsx:244
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:249
+#: src/features/apps/index.tsx:250
 msgid "App actions"
 msgstr "Gníomhartha aipe"
 
@@ -152,8 +152,8 @@ msgstr "Eolas agus cumraíocht na haipe"
 
 #: src/features/apps/index.tsx:115
 #: src/features/apps/index.tsx:140
-#: src/features/apps/index.tsx:157
-#: src/features/apps/index.tsx:217
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:222
 msgid "App installed"
 msgstr "Aip suiteáilte"
 
@@ -169,7 +169,7 @@ msgstr "Aitheantas Iarratais"
 #: src/components/layout/apps-layout.tsx:17
 #: src/components/layout/apps-layout.tsx:20
 #: src/features/apps/index.tsx:54
-#: src/features/apps/index.tsx:293
+#: src/features/apps/index.tsx:298
 msgid "Apps"
 msgstr "Aipeanna"
 
@@ -190,7 +190,7 @@ msgstr "Leagan ar fáil:"
 msgid "Available versions:"
 msgstr "Leaganacha ar fáil:"
 
-#: src/features/apps/index.tsx:387
+#: src/features/apps/index.tsx:392
 msgid "Available, but not installed"
 msgstr "Ar fáil, ach gan suiteáil"
 
@@ -223,9 +223,9 @@ msgstr "Spreag spéis"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/apps/components/app-info-dialog.tsx:143
 #: src/features/apps/components/install-dialog.tsx:102
-#: src/features/apps/index.tsx:511
-#: src/features/apps/index.tsx:553
-#: src/features/apps/index.tsx:601
+#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:605
 #: src/routes/_authenticated/app/$appId.tsx:567
 msgid "Cancel"
 msgstr "Cealaigh"
@@ -254,7 +254,7 @@ msgstr "Roghnaigh idir treo láithreáin clé-go-deas nó deas-go-clé"
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "Roghnaigh idir rogha an chórais, mód éadrom, nó mód dorcha"
 
-#: ../../../lib/web/src/components/language-picker.tsx:167
+#: ../../../lib/web/src/components/language-picker.tsx:174
 msgid "Choose language"
 msgstr "Roghnaigh teanga"
 
@@ -271,11 +271,11 @@ msgstr "Ródú ranga"
 msgid "Classes"
 msgstr "Ranganna"
 
-#: src/features/apps/index.tsx:282
+#: src/features/apps/index.tsx:287
 msgid "Clean up unused versions"
 msgstr "Glan leaganacha gan úsáid"
 
-#: src/features/apps/index.tsx:282
+#: src/features/apps/index.tsx:287
 msgid "Cleaning up..."
 msgstr "Á ghlanadh..."
 
@@ -322,11 +322,16 @@ msgstr "Dún cuardach"
 msgid "Collapse sidebar"
 msgstr "Laghdaigh barra taoibh"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:93
+msgid "Comfortable"
+msgstr "Compordach"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:9
 msgid "Coming Soon!"
 msgstr "Ag teacht go luath!"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:302
+#: ../../../lib/web/src/lib/preference-utils.ts:92
 msgid "Compact"
 msgstr "Dlúth"
 
@@ -362,6 +367,14 @@ msgstr "Lean ar aghaidh"
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Cóipeáil"
+
+#: src/features/apps/index.tsx:148
+msgid "Could not install app."
+msgstr "Níorbh fhéidir an feidhmchlár a shuiteáil."
+
+#: ../../../lib/web/src/features/document/document-page.tsx:81
+msgid "Could not load this document. Please try again later."
+msgstr "Níorbh fhéidir an cháipéis seo a luchtú. Bain triail eile as ar ball."
 
 #: src/routes/_authenticated/app/$appId.tsx:226
 msgid "Current Version"
@@ -423,7 +436,7 @@ msgstr "Íslitheach"
 msgid "Details Panel"
 msgstr "Painéal Sonraí"
 
-#: ../../../lib/web/src/components/language-picker.tsx:145
+#: ../../../lib/web/src/components/language-picker.tsx:152
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
 #: ../../../lib/web/src/lib/preference-utils.ts:25
@@ -434,7 +447,7 @@ msgstr "Painéal Sonraí"
 msgid "Detect from web browser"
 msgstr "Brath ón mbrabhsálaí gréasáin"
 
-#: src/features/apps/index.tsx:362
+#: src/features/apps/index.tsx:367
 msgid "Development apps"
 msgstr "Aipeanna forbartha"
 
@@ -450,13 +463,13 @@ msgstr "Taispeánann an barra taoibh móibíleach."
 msgid "Download"
 msgstr "Íoslódáil"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:134
+msgid "Dyslexia-friendly"
+msgstr "Oiriúnach do disléicse"
+
 #: src/routes/_authenticated/app/$appId.tsx:243
 msgid "Enabled Services"
 msgstr "Seirbhísí Cumasaithe"
-
-#: src/features/apps/index.tsx:537
-msgid "Enter the app entity to install. For private apps, use the format: app@publisher."
-msgstr "Iontráil aonán an aip le suiteáil. Maidir le haipeanna príobháideacha, úsáid an fhormáid: aip@foilsitheoir."
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -465,6 +478,10 @@ msgstr "Aonán:"
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
 msgstr "Leathnaigh barra taoibh"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:124
+msgid "Extra large"
+msgstr "Breise mór"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
@@ -503,7 +520,7 @@ msgstr "Theip ar nuashonrú sainrogha"
 msgid "Failed to update system default"
 msgstr "Theip ar nuashonrú réamhshocrú córais"
 
-#: src/features/apps/index.tsx:582
+#: src/features/apps/index.tsx:586
 msgid "File:"
 msgstr "Comhad:"
 
@@ -529,9 +546,17 @@ msgstr "Dé hAoine"
 msgid "From"
 msgstr "Ó"
 
-#: src/features/apps/index.tsx:442
+#: src/features/apps/index.tsx:447
 msgid "From the directory"
 msgstr "Ón gcomhadlann"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:91
+#: ../../../lib/web/src/lib/preference-utils.ts:101
+#: ../../../lib/web/src/lib/preference-utils.ts:112
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
+msgid "From theme"
+msgstr "Ón téama"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:307
 msgid "Full layout"
@@ -612,40 +637,44 @@ msgstr "Insocraithe"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
 #: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:560
-#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:564
+#: src/features/apps/index.tsx:612
 msgid "Install"
 msgstr "Suiteáil"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:502
+#: src/features/apps/index.tsx:507
 msgid "Install {0}?"
 msgstr "Suiteáil {0}?"
 
-#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:340
 msgid "Install apps from the market or upload your own"
 msgstr "Suiteáil aipeanna ón margadh nó uaslódáil do cheann féin"
 
-#: src/features/apps/index.tsx:274
-#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:147
+msgid "Install failed"
+msgstr "Theip ar an suiteáil"
+
+#: src/features/apps/index.tsx:279
+#: src/features/apps/index.tsx:582
 msgid "Install from file"
 msgstr "Suiteáil ó chomhad"
 
-#: src/features/apps/index.tsx:270
-#: src/features/apps/index.tsx:535
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:540
 msgid "Install from publisher"
 msgstr "Suiteáil ón fhoilsitheoir"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:323
 msgid "Installed apps"
 msgstr "Aipeanna suiteáilte"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
 #: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:560
-#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:564
+#: src/features/apps/index.tsx:612
 msgid "Installing..."
 msgstr "Á shuiteáil..."
 
@@ -656,6 +685,11 @@ msgstr "Suimeanna"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
 msgid "Invalid verification code"
 msgstr "Cód fíoraithe neamhbhailí"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:105
+#: ../../../lib/web/src/lib/preference-utils.ts:123
+msgid "Large"
+msgstr "Mór"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
@@ -683,6 +717,7 @@ msgid "Loading version information..."
 msgstr "Eolas leagain á luchtú..."
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
+#: ../../../lib/web/src/features/document/document-page.tsx:87
 msgid "Loading…"
 msgstr "Á luchtú…"
 
@@ -717,6 +752,10 @@ msgstr "Bainistigh cumais a thugtar don fheidhmchlár seo"
 msgid "Mark all as read"
 msgstr "Marcáil gach rud mar léite"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:104
+msgid "Medium"
+msgstr "Meánach"
+
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
 msgstr "Roghchlár"
@@ -745,11 +784,11 @@ msgstr "An chéad íomhá eile"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Níl aon rialacha rochtana cumraithe. Cuir rialacha leis chun rialú a dhéanamh ar cé atá in ann an acmhainn seo a rochtain."
 
-#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:184
 msgid "No apps could be updated."
 msgstr "Níorbh fhéidir aon aip a nuashonrú."
 
-#: src/features/apps/index.tsx:334
+#: src/features/apps/index.tsx:339
 msgid "No apps installed"
 msgstr "Níl aon aip suiteáilte"
 
@@ -761,11 +800,11 @@ msgstr "Níl aon rang cumraithe."
 msgid "No connected accounts"
 msgstr "Níl aon chuntas nasctha"
 
-#: src/features/apps/index.tsx:429
+#: src/features/apps/index.tsx:434
 msgid "No description"
 msgstr "Gan cur síos"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:372
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Níl aon aip forbartha ag teacht le \"{searchQuery}\""
 
@@ -773,24 +812,20 @@ msgstr "Níl aon aip forbartha ag teacht le \"{searchQuery}\""
 msgid "No groups available"
 msgstr "Níl aon ghrúpa ar fáil"
 
-#: src/features/apps/index.tsx:460
+#: src/features/apps/index.tsx:465
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Níl aon aip in-suiteáilte san eolaire ag teacht le \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:346
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Níl aon aip suiteáilte ag teacht le \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:459
+#: src/features/apps/index.tsx:464
 msgid "No matches in directory"
 msgstr "Níl aon toradh san eolaire"
 
-#: ../../../lib/web/src/components/language-picker.tsx:177
-msgid "No matches."
-msgstr "Níl aon toradh."
-
-#: src/features/apps/index.tsx:340
-#: src/features/apps/index.tsx:366
+#: src/features/apps/index.tsx:345
+#: src/features/apps/index.tsx:371
 msgid "No matching apps"
 msgstr "Níl aon aip ag teacht"
 
@@ -814,7 +849,7 @@ msgstr "Níor aimsíodh aon áit"
 msgid "No profile"
 msgstr "Gan próifíl"
 
-#: src/features/apps/index.tsx:412
+#: src/features/apps/index.tsx:417
 msgid "No recommendations available"
 msgstr "Níl aon mholadh ar fáil"
 
@@ -835,7 +870,7 @@ msgstr "Níor aimsíodh aon chrios ama."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Níl aon taifead ábhair fós — bain triail eile as tar éis an chéad fhógra eile."
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:197
 msgid "No unused versions to clean up"
 msgstr "Níl aon leagan gan úsáid le glanadh"
 
@@ -844,8 +879,14 @@ msgid "No users found"
 msgstr "Níor aimsíodh aon úsáideoir"
 
 #: ../../../lib/web/src/components/person-picker.tsx:349
+#: ../../../lib/web/src/lib/preference-utils.ts:102
+#: ../../../lib/web/src/lib/preference-utils.ts:113
 msgid "None"
 msgstr "Faic"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:122
+msgid "Normal"
+msgstr "Gnách"
 
 #: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Not versioned"
@@ -886,6 +927,10 @@ msgstr "Eile"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "Úinéir"
+
+#: src/features/apps/index.tsx:544
+msgid "Paste the install link:"
+msgstr "Greamaigh an nasc suiteála:"
 
 #: src/features/routing/routing-table.tsx:70
 msgid "Path"
@@ -928,6 +973,11 @@ msgstr "Leagan Roghnach"
 msgid "Previous image"
 msgstr "Íomhá roimhe seo"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:24
+#: ../../../lib/web/src/features/document/document-page.tsx:41
+msgid "Privacy"
+msgstr "Príobháideacht"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:134
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
@@ -939,7 +989,7 @@ msgstr "Ranganna soláthraithe"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
-#: src/features/apps/index.tsx:388
+#: src/features/apps/index.tsx:393
 msgid "Recommended"
 msgstr "Molta"
 
@@ -979,7 +1029,7 @@ msgstr "Bain spéis"
 
 #. placeholder {0}: data.removed
 #. placeholder {1}: data.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:194
+#: src/features/apps/index.tsx:199
 msgid "Removed {0} unused version{1}"
 msgstr "Baineadh {0} leagan{1} gan úsáid"
 
@@ -1015,11 +1065,11 @@ msgstr "Sraitheanna in aghaidh an leathanaigh"
 msgid "Saturday"
 msgstr "Dé Sathairn"
 
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:312
 msgid "Search apps"
 msgstr "Cuardaigh aipeanna"
 
-#: src/features/apps/index.tsx:306
+#: src/features/apps/index.tsx:311
 msgid "Search apps..."
 msgstr "Cuardaigh aipeanna..."
 
@@ -1046,10 +1096,6 @@ msgstr "Cuardaigh úsáideoirí"
 #: ../../../lib/web/src/components/person-picker.tsx:323
 msgid "Search..."
 msgstr "Cuardaigh..."
-
-#: ../../../lib/web/src/components/language-picker.tsx:175
-msgid "Search…"
-msgstr "Cuardaigh…"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
 #: ../../../lib/web/src/components/search-entity-page.tsx:149
@@ -1097,6 +1143,15 @@ msgstr "Roghnaigh sainrogha téama"
 msgid "Select which version of this app to use"
 msgstr "Roghnaigh cén leagan den aip seo le húsáid"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:133
+msgid "Serif"
+msgstr "Le serif"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:16
+#: ../../../lib/web/src/features/document/document-page.tsx:37
+msgid "Server rules"
+msgstr "Rialacha an fhreastalaí"
+
 #: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "Seirbhís"
@@ -1142,6 +1197,15 @@ msgstr "Á shíniú amach..."
 msgid "Skip to Main"
 msgstr "Scipeáil go dtí an Príomhábhar"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:103
+#: ../../../lib/web/src/lib/preference-utils.ts:121
+msgid "Small"
+msgstr "Beag"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:94
+msgid "Spacious"
+msgstr "Spáslach"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:12
 msgid "Stay tuned though!"
 msgstr "Fan ag faire áfach!"
@@ -1156,6 +1220,7 @@ msgstr "Domhnach"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
 #: ../../../lib/web/src/lib/preference-utils.ts:18
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "Córas"
 
@@ -1183,8 +1248,13 @@ msgstr "Foirne/Aipeanna"
 msgid "Technical Capabilities"
 msgstr "Cumas Teicniúil"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:20
+#: ../../../lib/web/src/features/document/document-page.tsx:39
+msgid "Terms and conditions"
+msgstr "Téarmaí agus coinníollacha"
+
 #: src/features/apps/index.tsx:116
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "Suiteáladh an aip go rathúil."
 
@@ -1243,7 +1313,7 @@ msgstr "Scoránaigh téama"
 msgid "Top"
 msgstr "Barr"
 
-#: src/features/apps/index.tsx:676
+#: src/features/apps/index.tsx:680
 #: src/routes/_authenticated/app/$appId.tsx:384
 msgid "Track"
 msgstr "Rian"
@@ -1279,7 +1349,7 @@ msgstr "Clóscríobh chun cuardach a dhéanamh ar úsáideoirí"
 msgid "Type to search..."
 msgstr "Clóscríobh chun cuardach a dhéanamh..."
 
-#: src/features/apps/index.tsx:407
+#: src/features/apps/index.tsx:412
 msgid "Unable to connect to the recommendations service"
 msgstr "Ní féidir ceangal leis an tseirbhís moltaí"
 
@@ -1304,7 +1374,7 @@ msgstr "Gan sannadh"
 msgid "Unauthorized Access"
 msgstr "Rochtain Gan Údarú"
 
-#: src/features/apps/index.tsx:406
+#: src/features/apps/index.tsx:411
 msgid "Unavailable"
 msgstr "Níl ar fáil"
 
@@ -1316,19 +1386,19 @@ msgstr "Stáit Aontaithe"
 msgid "Unverified"
 msgstr "Neamhfhíoraithe"
 
-#: src/features/apps/index.tsx:672
+#: src/features/apps/index.tsx:676
 msgid "Update"
 msgstr "Nuashonraigh"
 
-#: src/features/apps/index.tsx:263
+#: src/features/apps/index.tsx:268
 msgid "Update all"
 msgstr "Nuashonraigh gach ceann"
 
-#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:184
 msgid "Update failed"
 msgstr "Theip ar an nuashonrú"
 
-#: src/features/apps/index.tsx:263
+#: src/features/apps/index.tsx:268
 msgid "Updating..."
 msgstr "Á nuashonrú..."
 

@@ -19,7 +19,7 @@ msgid "{0} (development)"
 msgstr "{0} (arendus)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:186
 msgid "{0} updated, {failed} failed"
 msgstr "{0} uuendatud, {failed} ebaõnnestus"
 
@@ -27,7 +27,7 @@ msgstr "{0} uuendatud, {failed} ebaõnnestus"
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
 #: src/features/apps/index.tsx:141
-#: src/features/apps/index.tsx:158
+#: src/features/apps/index.tsx:163
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} on paigaldatud."
 
@@ -104,7 +104,7 @@ msgstr "Lisa silt..."
 msgid "Add team/app"
 msgstr "Lisa meeskond/rakendus"
 
-#: src/features/apps/index.tsx:589
+#: src/features/apps/index.tsx:593
 msgid "Add to directory"
 msgstr "Lisa kataloogi"
 
@@ -128,7 +128,7 @@ msgstr "AI"
 msgid "All"
 msgstr "Kõik"
 
-#: src/features/apps/index.tsx:177
+#: src/features/apps/index.tsx:182
 msgid "All apps updated"
 msgstr "Kõik rakendused uuendatud"
 
@@ -137,8 +137,8 @@ msgstr "Kõik rakendused uuendatud"
 msgid "App"
 msgstr "Rakendus"
 
-#: src/features/apps/index.tsx:244
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:249
+#: src/features/apps/index.tsx:250
 msgid "App actions"
 msgstr "Rakenduse tegevused"
 
@@ -152,8 +152,8 @@ msgstr "Rakenduse teave ja seadistus"
 
 #: src/features/apps/index.tsx:115
 #: src/features/apps/index.tsx:140
-#: src/features/apps/index.tsx:157
-#: src/features/apps/index.tsx:217
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:222
 msgid "App installed"
 msgstr "Rakendus paigaldatud"
 
@@ -169,7 +169,7 @@ msgstr "Rakenduse ID"
 #: src/components/layout/apps-layout.tsx:17
 #: src/components/layout/apps-layout.tsx:20
 #: src/features/apps/index.tsx:54
-#: src/features/apps/index.tsx:293
+#: src/features/apps/index.tsx:298
 msgid "Apps"
 msgstr "Rakendused"
 
@@ -190,7 +190,7 @@ msgstr "Saadaolev versioon:"
 msgid "Available versions:"
 msgstr "Saadaolevad versioonid:"
 
-#: src/features/apps/index.tsx:387
+#: src/features/apps/index.tsx:392
 msgid "Available, but not installed"
 msgstr "Saadaval, kuid pole paigaldatud"
 
@@ -223,9 +223,9 @@ msgstr "Tõsta huvi"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/apps/components/app-info-dialog.tsx:143
 #: src/features/apps/components/install-dialog.tsx:102
-#: src/features/apps/index.tsx:511
-#: src/features/apps/index.tsx:553
-#: src/features/apps/index.tsx:601
+#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:605
 #: src/routes/_authenticated/app/$appId.tsx:567
 msgid "Cancel"
 msgstr "Tühista"
@@ -254,7 +254,7 @@ msgstr "Vali vasakult-paremale või paremalt-vasakule lehe suund"
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "Vali süsteemi eelistus, hele või tume režiim"
 
-#: ../../../lib/web/src/components/language-picker.tsx:167
+#: ../../../lib/web/src/components/language-picker.tsx:174
 msgid "Choose language"
 msgstr "Vali keel"
 
@@ -271,11 +271,11 @@ msgstr "Klassi marsruutimine"
 msgid "Classes"
 msgstr "Klassid"
 
-#: src/features/apps/index.tsx:282
+#: src/features/apps/index.tsx:287
 msgid "Clean up unused versions"
 msgstr "Puhasta kasutamata versioonid"
 
-#: src/features/apps/index.tsx:282
+#: src/features/apps/index.tsx:287
 msgid "Cleaning up..."
 msgstr "Puhastamine..."
 
@@ -322,11 +322,16 @@ msgstr "Sulge otsing"
 msgid "Collapse sidebar"
 msgstr "Sulge külgriba"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:93
+msgid "Comfortable"
+msgstr "Mugav"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:9
 msgid "Coming Soon!"
 msgstr "Tulekul!"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:302
+#: ../../../lib/web/src/lib/preference-utils.ts:92
 msgid "Compact"
 msgstr "Kompaktne"
 
@@ -362,6 +367,14 @@ msgstr "Jätka"
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Kopeeri"
+
+#: src/features/apps/index.tsx:148
+msgid "Could not install app."
+msgstr "Rakendust ei õnnestunud paigaldada."
+
+#: ../../../lib/web/src/features/document/document-page.tsx:81
+msgid "Could not load this document. Please try again later."
+msgstr "Selle dokumendi laadimine ebaõnnestus. Palun proovi hiljem uuesti."
 
 #: src/routes/_authenticated/app/$appId.tsx:226
 msgid "Current Version"
@@ -423,7 +436,7 @@ msgstr "Kahanev"
 msgid "Details Panel"
 msgstr "Üksikasjade paneel"
 
-#: ../../../lib/web/src/components/language-picker.tsx:145
+#: ../../../lib/web/src/components/language-picker.tsx:152
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
 #: ../../../lib/web/src/lib/preference-utils.ts:25
@@ -434,7 +447,7 @@ msgstr "Üksikasjade paneel"
 msgid "Detect from web browser"
 msgstr "Tuvasta veebibrauserist"
 
-#: src/features/apps/index.tsx:362
+#: src/features/apps/index.tsx:367
 msgid "Development apps"
 msgstr "Arendusrakendused"
 
@@ -450,13 +463,13 @@ msgstr "Kuvab mobiilse külgriba."
 msgid "Download"
 msgstr "Laadi alla"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:134
+msgid "Dyslexia-friendly"
+msgstr "Düsleksiasõbralik"
+
 #: src/routes/_authenticated/app/$appId.tsx:243
 msgid "Enabled Services"
 msgstr "Lubatud teenused"
-
-#: src/features/apps/index.tsx:537
-msgid "Enter the app entity to install. For private apps, use the format: app@publisher."
-msgstr "Sisesta installitava rakenduse olem. Privaatsete rakenduste puhul kasuta vormingut: rakendus@avaldaja."
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -465,6 +478,10 @@ msgstr "Olem:"
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
 msgstr "Laienda külgriba"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:124
+msgid "Extra large"
+msgstr "Eriti suur"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
@@ -503,7 +520,7 @@ msgstr "Eelistuse värskendamine ebaõnnestus"
 msgid "Failed to update system default"
 msgstr "Süsteemi vaikeväärtuse värskendamine ebaõnnestus"
 
-#: src/features/apps/index.tsx:582
+#: src/features/apps/index.tsx:586
 msgid "File:"
 msgstr "Fail:"
 
@@ -529,9 +546,17 @@ msgstr "Reede"
 msgid "From"
 msgstr "Saatja"
 
-#: src/features/apps/index.tsx:442
+#: src/features/apps/index.tsx:447
 msgid "From the directory"
 msgstr "Kataloogist"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:91
+#: ../../../lib/web/src/lib/preference-utils.ts:101
+#: ../../../lib/web/src/lib/preference-utils.ts:112
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
+msgid "From theme"
+msgstr "Teemast"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:307
 msgid "Full layout"
@@ -612,40 +637,44 @@ msgstr "Sissevajutatud"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
 #: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:560
-#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:564
+#: src/features/apps/index.tsx:612
 msgid "Install"
 msgstr "Paigalda"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:502
+#: src/features/apps/index.tsx:507
 msgid "Install {0}?"
 msgstr "Kas paigaldada {0}?"
 
-#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:340
 msgid "Install apps from the market or upload your own"
 msgstr "Paigalda rakendusi turult või laadi üles oma omad"
 
-#: src/features/apps/index.tsx:274
-#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:147
+msgid "Install failed"
+msgstr "Paigaldamine ebaõnnestus"
+
+#: src/features/apps/index.tsx:279
+#: src/features/apps/index.tsx:582
 msgid "Install from file"
 msgstr "Paigalda failist"
 
-#: src/features/apps/index.tsx:270
-#: src/features/apps/index.tsx:535
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:540
 msgid "Install from publisher"
 msgstr "Paigalda avaldajalt"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:323
 msgid "Installed apps"
 msgstr "Paigaldatud rakendused"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
 #: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:560
-#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:564
+#: src/features/apps/index.tsx:612
 msgid "Installing..."
 msgstr "Paigaldamine…"
 
@@ -656,6 +685,11 @@ msgstr "Huvid"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
 msgid "Invalid verification code"
 msgstr "Vigane kinnituskood"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:105
+#: ../../../lib/web/src/lib/preference-utils.ts:123
+msgid "Large"
+msgstr "Suur"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
@@ -683,6 +717,7 @@ msgid "Loading version information..."
 msgstr "Versiooniteabe laadimine…"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
+#: ../../../lib/web/src/features/document/document-page.tsx:87
 msgid "Loading…"
 msgstr "Laadimine…"
 
@@ -717,6 +752,10 @@ msgstr "Halda sellele rakendusele antud võimekusi"
 msgid "Mark all as read"
 msgstr "Märgi kõik loetuks"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:104
+msgid "Medium"
+msgstr "Keskmine"
+
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
 msgstr "Menüü"
@@ -745,11 +784,11 @@ msgstr "Järgmine pilt"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Juurdepääsureegleid pole seadistatud. Lisa reeglid, et määrata, kes pääseb sellele ressursile ligi."
 
-#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:184
 msgid "No apps could be updated."
 msgstr "Ühtegi rakendust ei saanud uuendada."
 
-#: src/features/apps/index.tsx:334
+#: src/features/apps/index.tsx:339
 msgid "No apps installed"
 msgstr "Rakendusi pole paigaldatud"
 
@@ -761,11 +800,11 @@ msgstr "Klasse pole seadistatud."
 msgid "No connected accounts"
 msgstr "Seotud kontosid pole"
 
-#: src/features/apps/index.tsx:429
+#: src/features/apps/index.tsx:434
 msgid "No description"
 msgstr "Kirjeldus puudub"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:372
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Päringule \"{searchQuery}\" vastavaid arendusrakendusi pole"
 
@@ -773,24 +812,20 @@ msgstr "Päringule \"{searchQuery}\" vastavaid arendusrakendusi pole"
 msgid "No groups available"
 msgstr "Saadaolevaid gruppe pole"
 
-#: src/features/apps/index.tsx:460
+#: src/features/apps/index.tsx:465
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Kataloogis pole päringule \"{searchQuery}\" vastavaid paigaldatavaid rakendusi"
 
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:346
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Päringule \"{searchQuery}\" vastavaid paigaldatud rakendusi pole"
 
-#: src/features/apps/index.tsx:459
+#: src/features/apps/index.tsx:464
 msgid "No matches in directory"
 msgstr "Kataloogist vasteid ei leitud"
 
-#: ../../../lib/web/src/components/language-picker.tsx:177
-msgid "No matches."
-msgstr "Vasteid pole."
-
-#: src/features/apps/index.tsx:340
-#: src/features/apps/index.tsx:366
+#: src/features/apps/index.tsx:345
+#: src/features/apps/index.tsx:371
 msgid "No matching apps"
 msgstr "Vastavaid rakendusi pole"
 
@@ -814,7 +849,7 @@ msgstr "Kohti ei leitud"
 msgid "No profile"
 msgstr "Profiili pole"
 
-#: src/features/apps/index.tsx:412
+#: src/features/apps/index.tsx:417
 msgid "No recommendations available"
 msgstr "Soovitusi pole saadaval"
 
@@ -835,7 +870,7 @@ msgstr "Ajavööndit ei leitud."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Teemakirjet veel pole — proovi uuesti pärast järgmist teavitust."
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:197
 msgid "No unused versions to clean up"
 msgstr "Kasutamata versioone pole puhastada"
 
@@ -844,8 +879,14 @@ msgid "No users found"
 msgstr "Kasutajaid ei leitud"
 
 #: ../../../lib/web/src/components/person-picker.tsx:349
+#: ../../../lib/web/src/lib/preference-utils.ts:102
+#: ../../../lib/web/src/lib/preference-utils.ts:113
 msgid "None"
 msgstr "Puudub"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:122
+msgid "Normal"
+msgstr "Tavaline"
 
 #: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Not versioned"
@@ -886,6 +927,10 @@ msgstr "Muu"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "Omanik"
+
+#: src/features/apps/index.tsx:544
+msgid "Paste the install link:"
+msgstr "Kleebi paigaldamise link:"
 
 #: src/features/routing/routing-table.tsx:70
 msgid "Path"
@@ -928,6 +973,11 @@ msgstr "Eelistatud versioon"
 msgid "Previous image"
 msgstr "Eelmine pilt"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:24
+#: ../../../lib/web/src/features/document/document-page.tsx:41
+msgid "Privacy"
+msgstr "Privaatsus"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:134
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
@@ -939,7 +989,7 @@ msgstr "Pakutavad klassid"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
-#: src/features/apps/index.tsx:388
+#: src/features/apps/index.tsx:393
 msgid "Recommended"
 msgstr "Soovitatud"
 
@@ -979,7 +1029,7 @@ msgstr "Eemalda huvi"
 
 #. placeholder {0}: data.removed
 #. placeholder {1}: data.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:194
+#: src/features/apps/index.tsx:199
 msgid "Removed {0} unused version{1}"
 msgstr "Eemaldati {0} kasutamata versiooni{1}"
 
@@ -1015,11 +1065,11 @@ msgstr "Ridu lehel"
 msgid "Saturday"
 msgstr "Laupäev"
 
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:312
 msgid "Search apps"
 msgstr "Otsi rakendusi"
 
-#: src/features/apps/index.tsx:306
+#: src/features/apps/index.tsx:311
 msgid "Search apps..."
 msgstr "Otsi rakendusi..."
 
@@ -1046,10 +1096,6 @@ msgstr "Otsi kasutajaid"
 #: ../../../lib/web/src/components/person-picker.tsx:323
 msgid "Search..."
 msgstr "Otsi..."
-
-#: ../../../lib/web/src/components/language-picker.tsx:175
-msgid "Search…"
-msgstr "Otsi…"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
 #: ../../../lib/web/src/components/search-entity-page.tsx:149
@@ -1097,6 +1143,15 @@ msgstr "Vali teema eelistus"
 msgid "Select which version of this app to use"
 msgstr "Vali, millist selle rakenduse versiooni kasutada"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:133
+msgid "Serif"
+msgstr "Seriif"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:16
+#: ../../../lib/web/src/features/document/document-page.tsx:37
+msgid "Server rules"
+msgstr "Serveri reeglid"
+
 #: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "Teenus"
@@ -1142,6 +1197,15 @@ msgstr "Login välja..."
 msgid "Skip to Main"
 msgstr "Liigu põhisisule"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:103
+#: ../../../lib/web/src/lib/preference-utils.ts:121
+msgid "Small"
+msgstr "Väike"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:94
+msgid "Spacious"
+msgstr "Avar"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:12
 msgid "Stay tuned though!"
 msgstr "Aga jää kuulma!"
@@ -1156,6 +1220,7 @@ msgstr "Pühapäev"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
 #: ../../../lib/web/src/lib/preference-utils.ts:18
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "Süsteem"
 
@@ -1183,8 +1248,13 @@ msgstr "Tiimid/Rakendused"
 msgid "Technical Capabilities"
 msgstr "Tehnilised võimalused"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:20
+#: ../../../lib/web/src/features/document/document-page.tsx:39
+msgid "Terms and conditions"
+msgstr "Tingimused"
+
 #: src/features/apps/index.tsx:116
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "Rakendus on edukalt paigaldatud."
 
@@ -1243,7 +1313,7 @@ msgstr "Lülita teema"
 msgid "Top"
 msgstr "Üles"
 
-#: src/features/apps/index.tsx:676
+#: src/features/apps/index.tsx:680
 #: src/routes/_authenticated/app/$appId.tsx:384
 msgid "Track"
 msgstr "Track"
@@ -1279,7 +1349,7 @@ msgstr "Kirjuta kasutajate otsimiseks"
 msgid "Type to search..."
 msgstr "Kirjuta otsimiseks..."
 
-#: src/features/apps/index.tsx:407
+#: src/features/apps/index.tsx:412
 msgid "Unable to connect to the recommendations service"
 msgstr "Soovituste teenusega ei õnnestu ühendust luua"
 
@@ -1304,7 +1374,7 @@ msgstr "Määramata"
 msgid "Unauthorized Access"
 msgstr "Volitamata juurdepääs"
 
-#: src/features/apps/index.tsx:406
+#: src/features/apps/index.tsx:411
 msgid "Unavailable"
 msgstr "Pole saadaval"
 
@@ -1316,19 +1386,19 @@ msgstr "Ameerika Ühendriigid"
 msgid "Unverified"
 msgstr "Kontrollimata"
 
-#: src/features/apps/index.tsx:672
+#: src/features/apps/index.tsx:676
 msgid "Update"
 msgstr "Uuenda"
 
-#: src/features/apps/index.tsx:263
+#: src/features/apps/index.tsx:268
 msgid "Update all"
 msgstr "Uuenda kõiki"
 
-#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:184
 msgid "Update failed"
 msgstr "Uuendamine ebaõnnestus"
 
-#: src/features/apps/index.tsx:263
+#: src/features/apps/index.tsx:268
 msgid "Updating..."
 msgstr "Uuendan..."
 

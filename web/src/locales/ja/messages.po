@@ -19,7 +19,7 @@ msgid "{0} (development)"
 msgstr "{0} (開発)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:186
 msgid "{0} updated, {failed} failed"
 msgstr "{0}個更新、{failed}個失敗"
 
@@ -27,7 +27,7 @@ msgstr "{0}個更新、{failed}個失敗"
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
 #: src/features/apps/index.tsx:141
-#: src/features/apps/index.tsx:158
+#: src/features/apps/index.tsx:163
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1}がインストールされました。"
 
@@ -104,7 +104,7 @@ msgstr "タグを追加…"
 msgid "Add team/app"
 msgstr "チーム/アプリを追加"
 
-#: src/features/apps/index.tsx:589
+#: src/features/apps/index.tsx:593
 msgid "Add to directory"
 msgstr "ディレクトリに追加"
 
@@ -128,7 +128,7 @@ msgstr "AI"
 msgid "All"
 msgstr "すべて"
 
-#: src/features/apps/index.tsx:177
+#: src/features/apps/index.tsx:182
 msgid "All apps updated"
 msgstr "すべてのアプリを更新しました"
 
@@ -137,8 +137,8 @@ msgstr "すべてのアプリを更新しました"
 msgid "App"
 msgstr "外観"
 
-#: src/features/apps/index.tsx:244
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:249
+#: src/features/apps/index.tsx:250
 msgid "App actions"
 msgstr "アプリ操作"
 
@@ -152,8 +152,8 @@ msgstr "アプリ情報と設定"
 
 #: src/features/apps/index.tsx:115
 #: src/features/apps/index.tsx:140
-#: src/features/apps/index.tsx:157
-#: src/features/apps/index.tsx:217
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:222
 msgid "App installed"
 msgstr "アプリをインストールしました"
 
@@ -169,7 +169,7 @@ msgstr "アプリケーション ID"
 #: src/components/layout/apps-layout.tsx:17
 #: src/components/layout/apps-layout.tsx:20
 #: src/features/apps/index.tsx:54
-#: src/features/apps/index.tsx:293
+#: src/features/apps/index.tsx:298
 msgid "Apps"
 msgstr "アプリ"
 
@@ -190,7 +190,7 @@ msgstr "利用可能なバージョン:"
 msgid "Available versions:"
 msgstr "利用可能なバージョン:"
 
-#: src/features/apps/index.tsx:387
+#: src/features/apps/index.tsx:392
 msgid "Available, but not installed"
 msgstr "利用可能ですがインストールされていません"
 
@@ -223,9 +223,9 @@ msgstr "関心を高める"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/apps/components/app-info-dialog.tsx:143
 #: src/features/apps/components/install-dialog.tsx:102
-#: src/features/apps/index.tsx:511
-#: src/features/apps/index.tsx:553
-#: src/features/apps/index.tsx:601
+#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:605
 #: src/routes/_authenticated/app/$appId.tsx:567
 msgid "Cancel"
 msgstr "キャンセル"
@@ -254,7 +254,7 @@ msgstr "左から右、または右から左のサイト表示方向から選択
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "システム設定、ライトモード、ダークモードから選択します"
 
-#: ../../../lib/web/src/components/language-picker.tsx:167
+#: ../../../lib/web/src/components/language-picker.tsx:174
 msgid "Choose language"
 msgstr "言語を選択"
 
@@ -271,11 +271,11 @@ msgstr "クラスルーティング"
 msgid "Classes"
 msgstr "クラス"
 
-#: src/features/apps/index.tsx:282
+#: src/features/apps/index.tsx:287
 msgid "Clean up unused versions"
 msgstr "未使用のバージョンをクリーンアップ"
 
-#: src/features/apps/index.tsx:282
+#: src/features/apps/index.tsx:287
 msgid "Cleaning up..."
 msgstr "クリーンアップ中..."
 
@@ -322,11 +322,16 @@ msgstr "検索を閉じる"
 msgid "Collapse sidebar"
 msgstr "サイドバーを折りたたむ"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:93
+msgid "Comfortable"
+msgstr "快適"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:9
 msgid "Coming Soon!"
 msgstr "近日公開!"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:302
+#: ../../../lib/web/src/lib/preference-utils.ts:92
 msgid "Compact"
 msgstr "コンパクト"
 
@@ -362,6 +367,14 @@ msgstr "続行"
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "コピー"
+
+#: src/features/apps/index.tsx:148
+msgid "Could not install app."
+msgstr "アプリをインストールできませんでした。"
+
+#: ../../../lib/web/src/features/document/document-page.tsx:81
+msgid "Could not load this document. Please try again later."
+msgstr "このドキュメントを読み込めませんでした。後ほどもう一度お試しください。"
 
 #: src/routes/_authenticated/app/$appId.tsx:226
 msgid "Current Version"
@@ -423,7 +436,7 @@ msgstr "降順"
 msgid "Details Panel"
 msgstr "詳細パネル"
 
-#: ../../../lib/web/src/components/language-picker.tsx:145
+#: ../../../lib/web/src/components/language-picker.tsx:152
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
 #: ../../../lib/web/src/lib/preference-utils.ts:25
@@ -434,7 +447,7 @@ msgstr "詳細パネル"
 msgid "Detect from web browser"
 msgstr "ウェブブラウザから検出"
 
-#: src/features/apps/index.tsx:362
+#: src/features/apps/index.tsx:367
 msgid "Development apps"
 msgstr "開発アプリ"
 
@@ -450,13 +463,13 @@ msgstr "モバイルサイドバーを表示します。"
 msgid "Download"
 msgstr "ダウンロード"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:134
+msgid "Dyslexia-friendly"
+msgstr "ディスレクシア対応"
+
 #: src/routes/_authenticated/app/$appId.tsx:243
 msgid "Enabled Services"
 msgstr "有効なサービス"
-
-#: src/features/apps/index.tsx:537
-msgid "Enter the app entity to install. For private apps, use the format: app@publisher."
-msgstr "インストールするアプリエンティティを入力してください。プライベートアプリの場合は、形式を使用してください: app@publisher。"
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -465,6 +478,10 @@ msgstr "エンティティ："
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
 msgstr "サイドバーを展開"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:124
+msgid "Extra large"
+msgstr "特大"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
@@ -503,7 +520,7 @@ msgstr "設定の更新に失敗しました"
 msgid "Failed to update system default"
 msgstr "システムデフォルトの更新に失敗しました"
 
-#: src/features/apps/index.tsx:582
+#: src/features/apps/index.tsx:586
 msgid "File:"
 msgstr "ファイル:"
 
@@ -529,9 +546,17 @@ msgstr "金曜日"
 msgid "From"
 msgstr "差出元"
 
-#: src/features/apps/index.tsx:442
+#: src/features/apps/index.tsx:447
 msgid "From the directory"
 msgstr "ディレクトリから"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:91
+#: ../../../lib/web/src/lib/preference-utils.ts:101
+#: ../../../lib/web/src/lib/preference-utils.ts:112
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
+msgid "From theme"
+msgstr "テーマから"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:307
 msgid "Full layout"
@@ -612,40 +637,44 @@ msgstr "インセット"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
 #: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:560
-#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:564
+#: src/features/apps/index.tsx:612
 msgid "Install"
 msgstr "インストール"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:502
+#: src/features/apps/index.tsx:507
 msgid "Install {0}?"
 msgstr "{0}をインストールしますか?"
 
-#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:340
 msgid "Install apps from the market or upload your own"
 msgstr "マーケットからアプリをインストールするか、独自のアプリをアップロードします"
 
-#: src/features/apps/index.tsx:274
-#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:147
+msgid "Install failed"
+msgstr "インストールに失敗しました"
+
+#: src/features/apps/index.tsx:279
+#: src/features/apps/index.tsx:582
 msgid "Install from file"
 msgstr "ファイルからインストール"
 
-#: src/features/apps/index.tsx:270
-#: src/features/apps/index.tsx:535
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:540
 msgid "Install from publisher"
 msgstr "パブリッシャーからインストール"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:323
 msgid "Installed apps"
 msgstr "インストール済みアプリ"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
 #: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:560
-#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:564
+#: src/features/apps/index.tsx:612
 msgid "Installing..."
 msgstr "インストール中..."
 
@@ -656,6 +685,11 @@ msgstr "興味"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
 msgid "Invalid verification code"
 msgstr "確認コードが無効です"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:105
+#: ../../../lib/web/src/lib/preference-utils.ts:123
+msgid "Large"
+msgstr "大"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
@@ -683,6 +717,7 @@ msgid "Loading version information..."
 msgstr "バージョン情報を読み込み中..."
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
+#: ../../../lib/web/src/features/document/document-page.tsx:87
 msgid "Loading…"
 msgstr "読み込み中…"
 
@@ -717,6 +752,10 @@ msgstr "このアプリケーションに付与された機能を管理する"
 msgid "Mark all as read"
 msgstr "すべて既読にする"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:104
+msgid "Medium"
+msgstr "中"
+
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
 msgstr "メニュー"
@@ -745,11 +784,11 @@ msgstr "次の画像"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "アクセスルールが設定されていません。このリソースへのアクセスを制御するルールを追加してください。"
 
-#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:184
 msgid "No apps could be updated."
 msgstr "更新可能なアプリがありませんでした。"
 
-#: src/features/apps/index.tsx:334
+#: src/features/apps/index.tsx:339
 msgid "No apps installed"
 msgstr "インストールされたアプリがありません"
 
@@ -761,11 +800,11 @@ msgstr "設定されたクラスはありません。"
 msgid "No connected accounts"
 msgstr "接続されたアカウントがありません"
 
-#: src/features/apps/index.tsx:429
+#: src/features/apps/index.tsx:434
 msgid "No description"
 msgstr "説明なし"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:372
 msgid "No development apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\"に一致する開発アプリはありません"
 
@@ -773,24 +812,20 @@ msgstr "\"{searchQuery}\"に一致する開発アプリはありません"
 msgid "No groups available"
 msgstr "利用可能なグループがありません"
 
-#: src/features/apps/index.tsx:460
+#: src/features/apps/index.tsx:465
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "ディレクトリ内に\"{searchQuery}\"に一致するインストール可能なアプリはありません"
 
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:346
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\"に一致するインストール済みアプリはありません"
 
-#: src/features/apps/index.tsx:459
+#: src/features/apps/index.tsx:464
 msgid "No matches in directory"
 msgstr "ディレクトリに一致するものがありません"
 
-#: ../../../lib/web/src/components/language-picker.tsx:177
-msgid "No matches."
-msgstr "一致するものがありません。"
-
-#: src/features/apps/index.tsx:340
-#: src/features/apps/index.tsx:366
+#: src/features/apps/index.tsx:345
+#: src/features/apps/index.tsx:371
 msgid "No matching apps"
 msgstr "一致するアプリがありません"
 
@@ -814,7 +849,7 @@ msgstr "場所が見つかりません"
 msgid "No profile"
 msgstr "プロフィールがありません"
 
-#: src/features/apps/index.tsx:412
+#: src/features/apps/index.tsx:417
 msgid "No recommendations available"
 msgstr "利用可能なおすすめがありません"
 
@@ -835,7 +870,7 @@ msgstr "タイムゾーンが見つかりません。"
 msgid "No topic record yet — try again after the next notification."
 msgstr "まだトピック記録がありません — 次の通知後にもう一度お試しください。"
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:197
 msgid "No unused versions to clean up"
 msgstr "クリーンアップする未使用のバージョンはありません"
 
@@ -844,8 +879,14 @@ msgid "No users found"
 msgstr "ユーザーが見つかりません"
 
 #: ../../../lib/web/src/components/person-picker.tsx:349
+#: ../../../lib/web/src/lib/preference-utils.ts:102
+#: ../../../lib/web/src/lib/preference-utils.ts:113
 msgid "None"
 msgstr "なし"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:122
+msgid "Normal"
+msgstr "標準"
 
 #: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Not versioned"
@@ -886,6 +927,10 @@ msgstr "その他"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "オーナー"
+
+#: src/features/apps/index.tsx:544
+msgid "Paste the install link:"
+msgstr "インストールリンクを貼り付け："
 
 #: src/features/routing/routing-table.tsx:70
 msgid "Path"
@@ -928,6 +973,11 @@ msgstr "優先バージョン"
 msgid "Previous image"
 msgstr "前の画像"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:24
+#: ../../../lib/web/src/features/document/document-page.tsx:41
+msgid "Privacy"
+msgstr "プライバシー"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:134
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
@@ -939,7 +989,7 @@ msgstr "提供されるクラス"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
-#: src/features/apps/index.tsx:388
+#: src/features/apps/index.tsx:393
 msgid "Recommended"
 msgstr "おすすめ"
 
@@ -979,7 +1029,7 @@ msgstr "関心を削除"
 
 #. placeholder {0}: data.removed
 #. placeholder {1}: data.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:194
+#: src/features/apps/index.tsx:199
 msgid "Removed {0} unused version{1}"
 msgstr "未使用のバージョン {0} 件を削除しました"
 
@@ -1015,11 +1065,11 @@ msgstr "ページあたりの行数"
 msgid "Saturday"
 msgstr "土曜日"
 
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:312
 msgid "Search apps"
 msgstr "アプリを検索"
 
-#: src/features/apps/index.tsx:306
+#: src/features/apps/index.tsx:311
 msgid "Search apps..."
 msgstr "アプリを検索..."
 
@@ -1045,10 +1095,6 @@ msgstr "ユーザーを検索"
 
 #: ../../../lib/web/src/components/person-picker.tsx:323
 msgid "Search..."
-msgstr "検索…"
-
-#: ../../../lib/web/src/components/language-picker.tsx:175
-msgid "Search…"
 msgstr "検索…"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
@@ -1097,6 +1143,15 @@ msgstr "テーマの設定を選択"
 msgid "Select which version of this app to use"
 msgstr "このアプリで使用するバージョンを選択"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:133
+msgid "Serif"
+msgstr "セリフ"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:16
+#: ../../../lib/web/src/features/document/document-page.tsx:37
+msgid "Server rules"
+msgstr "サーバーのルール"
+
 #: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "サービス"
@@ -1142,6 +1197,15 @@ msgstr "サインアウト中..."
 msgid "Skip to Main"
 msgstr "メインコンテンツへスキップ"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:103
+#: ../../../lib/web/src/lib/preference-utils.ts:121
+msgid "Small"
+msgstr "小"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:94
+msgid "Spacious"
+msgstr "ゆったり"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:12
 msgid "Stay tuned though!"
 msgstr "今後の更新にご期待ください!"
@@ -1156,6 +1220,7 @@ msgstr "日曜日"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
 #: ../../../lib/web/src/lib/preference-utils.ts:18
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "システム"
 
@@ -1183,8 +1248,13 @@ msgstr "チーム/アプリ"
 msgid "Technical Capabilities"
 msgstr "技術的な機能"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:20
+#: ../../../lib/web/src/features/document/document-page.tsx:39
+msgid "Terms and conditions"
+msgstr "利用規約"
+
 #: src/features/apps/index.tsx:116
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "アプリのインストールに成功しました。"
 
@@ -1243,7 +1313,7 @@ msgstr "テーマを切り替え"
 msgid "Top"
 msgstr "トップ"
 
-#: src/features/apps/index.tsx:676
+#: src/features/apps/index.tsx:680
 #: src/routes/_authenticated/app/$appId.tsx:384
 msgid "Track"
 msgstr "トラック"
@@ -1279,7 +1349,7 @@ msgstr "入力してユーザーを検索"
 msgid "Type to search..."
 msgstr "入力して検索…"
 
-#: src/features/apps/index.tsx:407
+#: src/features/apps/index.tsx:412
 msgid "Unable to connect to the recommendations service"
 msgstr "おすすめサービスに接続できません"
 
@@ -1304,7 +1374,7 @@ msgstr "未割り当て"
 msgid "Unauthorized Access"
 msgstr "認証されていないアクセス"
 
-#: src/features/apps/index.tsx:406
+#: src/features/apps/index.tsx:411
 msgid "Unavailable"
 msgstr "利用不可"
 
@@ -1316,19 +1386,19 @@ msgstr "アメリカ合衆国"
 msgid "Unverified"
 msgstr "未認証"
 
-#: src/features/apps/index.tsx:672
+#: src/features/apps/index.tsx:676
 msgid "Update"
 msgstr "更新"
 
-#: src/features/apps/index.tsx:263
+#: src/features/apps/index.tsx:268
 msgid "Update all"
 msgstr "すべて更新"
 
-#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:184
 msgid "Update failed"
 msgstr "更新に失敗しました"
 
-#: src/features/apps/index.tsx:263
+#: src/features/apps/index.tsx:268
 msgid "Updating..."
 msgstr "更新中..."
 

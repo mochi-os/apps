@@ -19,7 +19,7 @@ msgid "{0} (development)"
 msgstr "{0} (विकास)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:186
 msgid "{0} updated, {failed} failed"
 msgstr "{0} अद्यावधिक गरियो, {failed} असफल"
 
@@ -27,7 +27,7 @@ msgstr "{0} अद्यावधिक गरियो, {failed} असफल"
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
 #: src/features/apps/index.tsx:141
-#: src/features/apps/index.tsx:158
+#: src/features/apps/index.tsx:163
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} स्थापना गरिएको छ।"
 
@@ -104,7 +104,7 @@ msgstr "ट्याग थप्नुहोस्..."
 msgid "Add team/app"
 msgstr "टिम/एप थप्नुहोस्"
 
-#: src/features/apps/index.tsx:589
+#: src/features/apps/index.tsx:593
 msgid "Add to directory"
 msgstr "डाइरेक्टरीमा थप्नुहोस्"
 
@@ -128,7 +128,7 @@ msgstr "AI"
 msgid "All"
 msgstr "सबै"
 
-#: src/features/apps/index.tsx:177
+#: src/features/apps/index.tsx:182
 msgid "All apps updated"
 msgstr "सबै एपहरू अद्यावधिक गरियो"
 
@@ -137,8 +137,8 @@ msgstr "सबै एपहरू अद्यावधिक गरियो"
 msgid "App"
 msgstr "एप"
 
-#: src/features/apps/index.tsx:244
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:249
+#: src/features/apps/index.tsx:250
 msgid "App actions"
 msgstr "एप कार्यहरू"
 
@@ -152,8 +152,8 @@ msgstr "एप जानकारी र कन्फिगरेसन"
 
 #: src/features/apps/index.tsx:115
 #: src/features/apps/index.tsx:140
-#: src/features/apps/index.tsx:157
-#: src/features/apps/index.tsx:217
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:222
 msgid "App installed"
 msgstr "एप स्थापना गरियो"
 
@@ -169,7 +169,7 @@ msgstr "अनुप्रयोग ID"
 #: src/components/layout/apps-layout.tsx:17
 #: src/components/layout/apps-layout.tsx:20
 #: src/features/apps/index.tsx:54
-#: src/features/apps/index.tsx:293
+#: src/features/apps/index.tsx:298
 msgid "Apps"
 msgstr "एपहरू"
 
@@ -190,7 +190,7 @@ msgstr "उपलब्ध संस्करण:"
 msgid "Available versions:"
 msgstr "उपलब्ध संस्करणहरू:"
 
-#: src/features/apps/index.tsx:387
+#: src/features/apps/index.tsx:392
 msgid "Available, but not installed"
 msgstr "उपलब्ध, तर स्थापना गरिएको छैन"
 
@@ -223,9 +223,9 @@ msgstr "रुचि बढाउनुहोस्"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/apps/components/app-info-dialog.tsx:143
 #: src/features/apps/components/install-dialog.tsx:102
-#: src/features/apps/index.tsx:511
-#: src/features/apps/index.tsx:553
-#: src/features/apps/index.tsx:601
+#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:605
 #: src/routes/_authenticated/app/$appId.tsx:567
 msgid "Cancel"
 msgstr "रद्द गर्नुहोस्"
@@ -254,7 +254,7 @@ msgstr "बायाँ-देखि-दायाँ वा दायाँ-द�
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "सिस्टम प्राथमिकता, उज्यालो मोड, वा अँध्यारो मोडबीच छनोट गर्नुहोस्"
 
-#: ../../../lib/web/src/components/language-picker.tsx:167
+#: ../../../lib/web/src/components/language-picker.tsx:174
 msgid "Choose language"
 msgstr "भाषा छनोट गर्नुहोस्"
 
@@ -271,11 +271,11 @@ msgstr "क्लास रुटिङ"
 msgid "Classes"
 msgstr "क्लासहरू"
 
-#: src/features/apps/index.tsx:282
+#: src/features/apps/index.tsx:287
 msgid "Clean up unused versions"
 msgstr "प्रयोग नभएका संस्करणहरू सफा गर्नुहोस्"
 
-#: src/features/apps/index.tsx:282
+#: src/features/apps/index.tsx:287
 msgid "Cleaning up..."
 msgstr "सफा गर्दै..."
 
@@ -322,11 +322,16 @@ msgstr "खोजी बन्द गर्नुहोस्"
 msgid "Collapse sidebar"
 msgstr "साइडबार सङ्कुचन गर्नुहोस्"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:93
+msgid "Comfortable"
+msgstr "आरामदायक"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:9
 msgid "Coming Soon!"
 msgstr "चाँडै आउँदै!"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:302
+#: ../../../lib/web/src/lib/preference-utils.ts:92
 msgid "Compact"
 msgstr "कम्प्याक्ट"
 
@@ -362,6 +367,14 @@ msgstr "जारी राख्नुहोस्"
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "प्रतिलिपि"
+
+#: src/features/apps/index.tsx:148
+msgid "Could not install app."
+msgstr "एप स्थापना गर्न सकिएन।"
+
+#: ../../../lib/web/src/features/document/document-page.tsx:81
+msgid "Could not load this document. Please try again later."
+msgstr "यो कागजात लोड गर्न सकिएन। कृपया पछि फेरि प्रयास गर्नुहोस्।"
 
 #: src/routes/_authenticated/app/$appId.tsx:226
 msgid "Current Version"
@@ -423,7 +436,7 @@ msgstr "घट्दो"
 msgid "Details Panel"
 msgstr "विवरण प्यानल"
 
-#: ../../../lib/web/src/components/language-picker.tsx:145
+#: ../../../lib/web/src/components/language-picker.tsx:152
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
 #: ../../../lib/web/src/lib/preference-utils.ts:25
@@ -434,7 +447,7 @@ msgstr "विवरण प्यानल"
 msgid "Detect from web browser"
 msgstr "वेब ब्राउजरबाट पत्ता लगाउनुहोस्"
 
-#: src/features/apps/index.tsx:362
+#: src/features/apps/index.tsx:367
 msgid "Development apps"
 msgstr "विकास एपहरू"
 
@@ -450,13 +463,13 @@ msgstr "मोबाइल साइडबार देखाउँछ।"
 msgid "Download"
 msgstr "डाउनलोड"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:134
+msgid "Dyslexia-friendly"
+msgstr "डिस्लेक्सिया-मैत्रीपूर्ण"
+
 #: src/routes/_authenticated/app/$appId.tsx:243
 msgid "Enabled Services"
 msgstr "सक्षम सेवाहरू"
-
-#: src/features/apps/index.tsx:537
-msgid "Enter the app entity to install. For private apps, use the format: app@publisher."
-msgstr "स्थापना गर्न एप एन्टिटी प्रविष्ट गर्नुहोस्। निजी एपहरूको लागि, ढाँचा प्रयोग गर्नुहोस्: app@publisher।"
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -465,6 +478,10 @@ msgstr "एन्टिटी:"
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
 msgstr "साइडबार विस्तार गर्नुहोस्"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:124
+msgid "Extra large"
+msgstr "अतिरिक्त ठूलो"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
@@ -503,7 +520,7 @@ msgstr "प्राथमिकता अद्यावधिक गर्न 
 msgid "Failed to update system default"
 msgstr "प्रणाली पूर्वनिर्धारित अद्यावधिक गर्न असफल"
 
-#: src/features/apps/index.tsx:582
+#: src/features/apps/index.tsx:586
 msgid "File:"
 msgstr "फाइल:"
 
@@ -529,9 +546,17 @@ msgstr "शुक्रबार"
 msgid "From"
 msgstr "बाट"
 
-#: src/features/apps/index.tsx:442
+#: src/features/apps/index.tsx:447
 msgid "From the directory"
 msgstr "डाइरेक्टरीबाट"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:91
+#: ../../../lib/web/src/lib/preference-utils.ts:101
+#: ../../../lib/web/src/lib/preference-utils.ts:112
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
+msgid "From theme"
+msgstr "थिमबाट"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:307
 msgid "Full layout"
@@ -612,40 +637,44 @@ msgstr "इनसेट"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
 #: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:560
-#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:564
+#: src/features/apps/index.tsx:612
 msgid "Install"
 msgstr "स्थापना गर्नुहोस्"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:502
+#: src/features/apps/index.tsx:507
 msgid "Install {0}?"
 msgstr "{0} स्थापना गर्ने?"
 
-#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:340
 msgid "Install apps from the market or upload your own"
 msgstr "मार्केटबाट एपहरू स्थापना गर्नुहोस् वा आफ्नो अपलोड गर्नुहोस्"
 
-#: src/features/apps/index.tsx:274
-#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:147
+msgid "Install failed"
+msgstr "स्थापना असफल भयो"
+
+#: src/features/apps/index.tsx:279
+#: src/features/apps/index.tsx:582
 msgid "Install from file"
 msgstr "फाइलबाट स्थापना गर्नुहोस्"
 
-#: src/features/apps/index.tsx:270
-#: src/features/apps/index.tsx:535
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:540
 msgid "Install from publisher"
 msgstr "प्रकाशकबाट स्थापना गर्नुहोस्"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:323
 msgid "Installed apps"
 msgstr "स्थापित एपहरू"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
 #: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:560
-#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:564
+#: src/features/apps/index.tsx:612
 msgid "Installing..."
 msgstr "स्थापना गरिँदै..."
 
@@ -656,6 +685,11 @@ msgstr "रुचिहरू"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
 msgid "Invalid verification code"
 msgstr "अमान्य प्रमाणीकरण कोड"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:105
+#: ../../../lib/web/src/lib/preference-utils.ts:123
+msgid "Large"
+msgstr "ठूलो"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
@@ -683,6 +717,7 @@ msgid "Loading version information..."
 msgstr "संस्करण जानकारी लोड हुँदै..."
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
+#: ../../../lib/web/src/features/document/document-page.tsx:87
 msgid "Loading…"
 msgstr "लोड हुँदै…"
 
@@ -717,6 +752,10 @@ msgstr "यस एप्लिकेसनलाई दिइएका क्ष
 msgid "Mark all as read"
 msgstr "सबै पढिएको रूपमा चिन्ह लगाउनुहोस्"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:104
+msgid "Medium"
+msgstr "मध्यम"
+
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
 msgstr "मेनु"
@@ -745,11 +784,11 @@ msgstr "अर्को तस्बिर"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "कुनै पहुँच नियम कन्फिगर गरिएको छैन। यो स्रोतमा को पहुँच गर्न सक्छ नियन्त्रण गर्न नियमहरू थप्नुहोस्।"
 
-#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:184
 msgid "No apps could be updated."
 msgstr "कुनै एप अद्यावधिक गर्न सकिएन।"
 
-#: src/features/apps/index.tsx:334
+#: src/features/apps/index.tsx:339
 msgid "No apps installed"
 msgstr "कुनै एप स्थापित छैन"
 
@@ -761,11 +800,11 @@ msgstr "कुनै वर्गहरू कन्फिगर गरिएक
 msgid "No connected accounts"
 msgstr "कुनै जडान गरिएको खाता छैन"
 
-#: src/features/apps/index.tsx:429
+#: src/features/apps/index.tsx:434
 msgid "No description"
 msgstr "कुनै विवरण छैन"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:372
 msgid "No development apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" सँग मिल्ने कुनै विकास एपहरू छैनन्"
 
@@ -773,24 +812,20 @@ msgstr "\"{searchQuery}\" सँग मिल्ने कुनै विका
 msgid "No groups available"
 msgstr "कुनै समूह उपलब्ध छैन"
 
-#: src/features/apps/index.tsx:460
+#: src/features/apps/index.tsx:465
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "डाइरेक्टरीमा \"{searchQuery}\" सँग मिल्ने कुनै स्थापनायोग्य एपहरू छैनन्"
 
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:346
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" सँग मिल्ने कुनै स्थापित एपहरू छैनन्"
 
-#: src/features/apps/index.tsx:459
+#: src/features/apps/index.tsx:464
 msgid "No matches in directory"
 msgstr "डाइरेक्टरीमा कुनै मिल्दो छैन"
 
-#: ../../../lib/web/src/components/language-picker.tsx:177
-msgid "No matches."
-msgstr "कुनै मिल्दो छैन।"
-
-#: src/features/apps/index.tsx:340
-#: src/features/apps/index.tsx:366
+#: src/features/apps/index.tsx:345
+#: src/features/apps/index.tsx:371
 msgid "No matching apps"
 msgstr "कुनै मिल्दो एप छैन"
 
@@ -814,7 +849,7 @@ msgstr "कुनै स्थान भेटिएन"
 msgid "No profile"
 msgstr "कुनै प्रोफाइल छैन"
 
-#: src/features/apps/index.tsx:412
+#: src/features/apps/index.tsx:417
 msgid "No recommendations available"
 msgstr "कुनै सिफारिस उपलब्ध छैन"
 
@@ -835,7 +870,7 @@ msgstr "कुनै समय क्षेत्र भेटिएन।"
 msgid "No topic record yet — try again after the next notification."
 msgstr "अहिलेसम्म कुनै टपिक रेकर्ड छैन — अर्को सूचना पछि फेरि प्रयास गर्नुहोस्।"
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:197
 msgid "No unused versions to clean up"
 msgstr "सफा गर्न कुनै अप्रयोग संस्करण छैन"
 
@@ -844,8 +879,14 @@ msgid "No users found"
 msgstr "कुनै प्रयोगकर्ता भेटिएन"
 
 #: ../../../lib/web/src/components/person-picker.tsx:349
+#: ../../../lib/web/src/lib/preference-utils.ts:102
+#: ../../../lib/web/src/lib/preference-utils.ts:113
 msgid "None"
 msgstr "कुनै पनि होइन"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:122
+msgid "Normal"
+msgstr "सामान्य"
 
 #: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Not versioned"
@@ -886,6 +927,10 @@ msgstr "अन्य"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "मालिक"
+
+#: src/features/apps/index.tsx:544
+msgid "Paste the install link:"
+msgstr "इन्स्टल लिङ्क टाँस्नुहोस्:"
 
 #: src/features/routing/routing-table.tsx:70
 msgid "Path"
@@ -928,6 +973,11 @@ msgstr "मनपर्ने संस्करण"
 msgid "Previous image"
 msgstr "अघिल्लो तस्बिर"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:24
+#: ../../../lib/web/src/features/document/document-page.tsx:41
+msgid "Privacy"
+msgstr "गोपनीयता"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:134
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
@@ -939,7 +989,7 @@ msgstr "प्रदान गरिएका क्लासहरू"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
-#: src/features/apps/index.tsx:388
+#: src/features/apps/index.tsx:393
 msgid "Recommended"
 msgstr "सिफारिस गरिएको"
 
@@ -979,7 +1029,7 @@ msgstr "रुचि हटाउनुहोस्"
 
 #. placeholder {0}: data.removed
 #. placeholder {1}: data.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:194
+#: src/features/apps/index.tsx:199
 msgid "Removed {0} unused version{1}"
 msgstr "{0} अप्रयोग संस्करण{1} हटाइयो"
 
@@ -1015,11 +1065,11 @@ msgstr "प्रति पृष्ठ पङ्क्तिहरू"
 msgid "Saturday"
 msgstr "शनिबार"
 
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:312
 msgid "Search apps"
 msgstr "एप खोज्नुहोस्"
 
-#: src/features/apps/index.tsx:306
+#: src/features/apps/index.tsx:311
 msgid "Search apps..."
 msgstr "एप खोज्नुहोस्..."
 
@@ -1046,10 +1096,6 @@ msgstr "प्रयोगकर्ताहरू खोज्नुहोस�
 #: ../../../lib/web/src/components/person-picker.tsx:323
 msgid "Search..."
 msgstr "खोज्नुहोस्..."
-
-#: ../../../lib/web/src/components/language-picker.tsx:175
-msgid "Search…"
-msgstr "खोज्नुहोस्…"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
 #: ../../../lib/web/src/components/search-entity-page.tsx:149
@@ -1097,6 +1143,15 @@ msgstr "थिम प्राथमिकता छान्नुहोस्"
 msgid "Select which version of this app to use"
 msgstr "यो एपको कुन संस्करण प्रयोग गर्ने छान्नुहोस्"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:133
+msgid "Serif"
+msgstr "सेरिफ"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:16
+#: ../../../lib/web/src/features/document/document-page.tsx:37
+msgid "Server rules"
+msgstr "सर्भर नियमहरू"
+
 #: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "सेवा"
@@ -1142,6 +1197,15 @@ msgstr "साइन आउट गर्दै..."
 msgid "Skip to Main"
 msgstr "मुख्यमा छोड्नुहोस्"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:103
+#: ../../../lib/web/src/lib/preference-utils.ts:121
+msgid "Small"
+msgstr "सानो"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:94
+msgid "Spacious"
+msgstr "विशाल"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:12
 msgid "Stay tuned though!"
 msgstr "तर सम्पर्कमा रहनुहोस्!"
@@ -1156,6 +1220,7 @@ msgstr "आइतबार"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
 #: ../../../lib/web/src/lib/preference-utils.ts:18
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "प्रणाली"
 
@@ -1183,8 +1248,13 @@ msgstr "टोली/एप"
 msgid "Technical Capabilities"
 msgstr "प्राविधिक क्षमताहरू"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:20
+#: ../../../lib/web/src/features/document/document-page.tsx:39
+msgid "Terms and conditions"
+msgstr "नियम र सर्तहरू"
+
 #: src/features/apps/index.tsx:116
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "एप सफलतापूर्वक इन्स्टल भयो।"
 
@@ -1243,7 +1313,7 @@ msgstr "थिम टगल गर्नुहोस्"
 msgid "Top"
 msgstr "माथि"
 
-#: src/features/apps/index.tsx:676
+#: src/features/apps/index.tsx:680
 #: src/routes/_authenticated/app/$appId.tsx:384
 msgid "Track"
 msgstr "ट्र्याक"
@@ -1279,7 +1349,7 @@ msgstr "प्रयोगकर्ता खोज्न टाइप गर्
 msgid "Type to search..."
 msgstr "खोज्न टाइप गर्नुहोस्..."
 
-#: src/features/apps/index.tsx:407
+#: src/features/apps/index.tsx:412
 msgid "Unable to connect to the recommendations service"
 msgstr "सिफारिस सेवामा जडान गर्न असमर्थ"
 
@@ -1304,7 +1374,7 @@ msgstr "नतोकिएको"
 msgid "Unauthorized Access"
 msgstr "अनधिकृत पहुँच"
 
-#: src/features/apps/index.tsx:406
+#: src/features/apps/index.tsx:411
 msgid "Unavailable"
 msgstr "अनुपलब्ध"
 
@@ -1316,19 +1386,19 @@ msgstr "संयुक्त राज्य अमेरिका"
 msgid "Unverified"
 msgstr "अप्रमाणित"
 
-#: src/features/apps/index.tsx:672
+#: src/features/apps/index.tsx:676
 msgid "Update"
 msgstr "अद्यावधिक गर्नुहोस्"
 
-#: src/features/apps/index.tsx:263
+#: src/features/apps/index.tsx:268
 msgid "Update all"
 msgstr "सबै अद्यावधिक गर्नुहोस्"
 
-#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:184
 msgid "Update failed"
 msgstr "अद्यावधिक असफल भयो"
 
-#: src/features/apps/index.tsx:263
+#: src/features/apps/index.tsx:268
 msgid "Updating..."
 msgstr "अद्यावधिक गर्दै..."
 

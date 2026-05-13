@@ -19,7 +19,7 @@ msgid "{0} (development)"
 msgstr "{0} (развој)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:186
 msgid "{0} updated, {failed} failed"
 msgstr "{0} ажурирани, {failed} не успеале"
 
@@ -27,7 +27,7 @@ msgstr "{0} ажурирани, {failed} не успеале"
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
 #: src/features/apps/index.tsx:141
-#: src/features/apps/index.tsx:158
+#: src/features/apps/index.tsx:163
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} е инсталиран."
 
@@ -104,7 +104,7 @@ msgstr "Додај ознака..."
 msgid "Add team/app"
 msgstr "Додај тим/апликација"
 
-#: src/features/apps/index.tsx:589
+#: src/features/apps/index.tsx:593
 msgid "Add to directory"
 msgstr "Додај во директориум"
 
@@ -128,7 +128,7 @@ msgstr "AI"
 msgid "All"
 msgstr "Сите"
 
-#: src/features/apps/index.tsx:177
+#: src/features/apps/index.tsx:182
 msgid "All apps updated"
 msgstr "Сите апликации се ажурирани"
 
@@ -137,8 +137,8 @@ msgstr "Сите апликации се ажурирани"
 msgid "App"
 msgstr "Апликација"
 
-#: src/features/apps/index.tsx:244
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:249
+#: src/features/apps/index.tsx:250
 msgid "App actions"
 msgstr "Акции на апликации"
 
@@ -152,8 +152,8 @@ msgstr "Информации и конфигурација на апликаци
 
 #: src/features/apps/index.tsx:115
 #: src/features/apps/index.tsx:140
-#: src/features/apps/index.tsx:157
-#: src/features/apps/index.tsx:217
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:222
 msgid "App installed"
 msgstr "Апликацијата е инсталирана"
 
@@ -169,7 +169,7 @@ msgstr "ID на апликација"
 #: src/components/layout/apps-layout.tsx:17
 #: src/components/layout/apps-layout.tsx:20
 #: src/features/apps/index.tsx:54
-#: src/features/apps/index.tsx:293
+#: src/features/apps/index.tsx:298
 msgid "Apps"
 msgstr "Апликации"
 
@@ -190,7 +190,7 @@ msgstr "Достапна верзија:"
 msgid "Available versions:"
 msgstr "Достапни верзии:"
 
-#: src/features/apps/index.tsx:387
+#: src/features/apps/index.tsx:392
 msgid "Available, but not installed"
 msgstr "Достапна, но не е инсталирана"
 
@@ -223,9 +223,9 @@ msgstr "Поттикни интерес"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/apps/components/app-info-dialog.tsx:143
 #: src/features/apps/components/install-dialog.tsx:102
-#: src/features/apps/index.tsx:511
-#: src/features/apps/index.tsx:553
-#: src/features/apps/index.tsx:601
+#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:605
 #: src/routes/_authenticated/app/$appId.tsx:567
 msgid "Cancel"
 msgstr "Откажи"
@@ -254,7 +254,7 @@ msgstr "Избирај меѓу насока од лево кон десно и�
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "Избирај меѓу системска преференција, светол или темен режим"
 
-#: ../../../lib/web/src/components/language-picker.tsx:167
+#: ../../../lib/web/src/components/language-picker.tsx:174
 msgid "Choose language"
 msgstr "Избери јазик"
 
@@ -271,11 +271,11 @@ msgstr "Рутирање на класи"
 msgid "Classes"
 msgstr "Класи"
 
-#: src/features/apps/index.tsx:282
+#: src/features/apps/index.tsx:287
 msgid "Clean up unused versions"
 msgstr "Исчисти неискористени верзии"
 
-#: src/features/apps/index.tsx:282
+#: src/features/apps/index.tsx:287
 msgid "Cleaning up..."
 msgstr "Чистење..."
 
@@ -322,11 +322,16 @@ msgstr "Затвори пребарување"
 msgid "Collapse sidebar"
 msgstr "Собери странична лента"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:93
+msgid "Comfortable"
+msgstr "Удобно"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:9
 msgid "Coming Soon!"
 msgstr "Наскоро!"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:302
+#: ../../../lib/web/src/lib/preference-utils.ts:92
 msgid "Compact"
 msgstr "Компактно"
 
@@ -362,6 +367,14 @@ msgstr "Продолжи"
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Копирај"
+
+#: src/features/apps/index.tsx:148
+msgid "Could not install app."
+msgstr "Апликацијата не може да се инсталира."
+
+#: ../../../lib/web/src/features/document/document-page.tsx:81
+msgid "Could not load this document. Please try again later."
+msgstr "Овој документ не може да се вчита. Обиди се повторно подоцна."
 
 #: src/routes/_authenticated/app/$appId.tsx:226
 msgid "Current Version"
@@ -423,7 +436,7 @@ msgstr "Опаѓачки"
 msgid "Details Panel"
 msgstr "Панел со детали"
 
-#: ../../../lib/web/src/components/language-picker.tsx:145
+#: ../../../lib/web/src/components/language-picker.tsx:152
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
 #: ../../../lib/web/src/lib/preference-utils.ts:25
@@ -434,7 +447,7 @@ msgstr "Панел со детали"
 msgid "Detect from web browser"
 msgstr "Откриј од веб-прелистувач"
 
-#: src/features/apps/index.tsx:362
+#: src/features/apps/index.tsx:367
 msgid "Development apps"
 msgstr "Апликации во развој"
 
@@ -450,13 +463,13 @@ msgstr "Ја прикажува мобилната странична лента
 msgid "Download"
 msgstr "Преземи"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:134
+msgid "Dyslexia-friendly"
+msgstr "Прилагодено за дислексија"
+
 #: src/routes/_authenticated/app/$appId.tsx:243
 msgid "Enabled Services"
 msgstr "Овозможени услуги"
-
-#: src/features/apps/index.tsx:537
-msgid "Enter the app entity to install. For private apps, use the format: app@publisher."
-msgstr "Внесете го ентитетот на апликацијата за инсталирање. За приватни апликации користете формат: app@publisher."
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -465,6 +478,10 @@ msgstr "Ентитет:"
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
 msgstr "Прошири странична лента"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:124
+msgid "Extra large"
+msgstr "Премногу големо"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
@@ -503,7 +520,7 @@ msgstr "Неуспешно ажурирање на преференција"
 msgid "Failed to update system default"
 msgstr "Неуспешно ажурирање на системско стандардно"
 
-#: src/features/apps/index.tsx:582
+#: src/features/apps/index.tsx:586
 msgid "File:"
 msgstr "Датотека:"
 
@@ -529,9 +546,17 @@ msgstr "Петок"
 msgid "From"
 msgstr "Од"
 
-#: src/features/apps/index.tsx:442
+#: src/features/apps/index.tsx:447
 msgid "From the directory"
 msgstr "Од директориумот"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:91
+#: ../../../lib/web/src/lib/preference-utils.ts:101
+#: ../../../lib/web/src/lib/preference-utils.ts:112
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
+msgid "From theme"
+msgstr "Од темата"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:307
 msgid "Full layout"
@@ -612,40 +637,44 @@ msgstr "Inset"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
 #: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:560
-#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:564
+#: src/features/apps/index.tsx:612
 msgid "Install"
 msgstr "Инсталирај"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:502
+#: src/features/apps/index.tsx:507
 msgid "Install {0}?"
 msgstr "Инсталирај {0}?"
 
-#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:340
 msgid "Install apps from the market or upload your own"
 msgstr "Инсталирајте апликации од маркетот или прикачете свои"
 
-#: src/features/apps/index.tsx:274
-#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:147
+msgid "Install failed"
+msgstr "Инсталирањето не успеа"
+
+#: src/features/apps/index.tsx:279
+#: src/features/apps/index.tsx:582
 msgid "Install from file"
 msgstr "Инсталирај од датотека"
 
-#: src/features/apps/index.tsx:270
-#: src/features/apps/index.tsx:535
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:540
 msgid "Install from publisher"
 msgstr "Инсталирај од издавач"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:323
 msgid "Installed apps"
 msgstr "Инсталирани апликации"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
 #: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:560
-#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:564
+#: src/features/apps/index.tsx:612
 msgid "Installing..."
 msgstr "Се инсталира..."
 
@@ -656,6 +685,11 @@ msgstr "Интереси"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
 msgid "Invalid verification code"
 msgstr "Невалиден код за верификација"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:105
+#: ../../../lib/web/src/lib/preference-utils.ts:123
+msgid "Large"
+msgstr "Големо"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
@@ -683,6 +717,7 @@ msgid "Loading version information..."
 msgstr "Се вчитуваат информации за верзија..."
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
+#: ../../../lib/web/src/features/document/document-page.tsx:87
 msgid "Loading…"
 msgstr "Се вчитува…"
 
@@ -717,6 +752,10 @@ msgstr "Управувајте со способностите доделени 
 msgid "Mark all as read"
 msgstr "Означи сè како прочитано"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:104
+msgid "Medium"
+msgstr "Средно"
+
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
 msgstr "Мени"
@@ -745,11 +784,11 @@ msgstr "Следна слика"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Не се конфигурирани правила за пристап. Додајте правила за да контролирате кој може да пристапи на овој ресурс."
 
-#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:184
 msgid "No apps could be updated."
 msgstr "Не можеа да се ажурираат апликации."
 
-#: src/features/apps/index.tsx:334
+#: src/features/apps/index.tsx:339
 msgid "No apps installed"
 msgstr "Не се инсталирани апликации"
 
@@ -761,11 +800,11 @@ msgstr "Не се конфигурирани класи."
 msgid "No connected accounts"
 msgstr "Нема поврзани сметки"
 
-#: src/features/apps/index.tsx:429
+#: src/features/apps/index.tsx:434
 msgid "No description"
 msgstr "Без опис"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:372
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Ниту една развојна апликација не одговара на „{searchQuery}“"
 
@@ -773,24 +812,20 @@ msgstr "Ниту една развојна апликација не одгов�
 msgid "No groups available"
 msgstr "Нема достапни групи"
 
-#: src/features/apps/index.tsx:460
+#: src/features/apps/index.tsx:465
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Ниту една инсталирачка апликација во директориумот не одговара на „{searchQuery}“"
 
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:346
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Ниту една инсталирана апликација не одговара на „{searchQuery}“"
 
-#: src/features/apps/index.tsx:459
+#: src/features/apps/index.tsx:464
 msgid "No matches in directory"
 msgstr "Нема совпаѓања во директориумот"
 
-#: ../../../lib/web/src/components/language-picker.tsx:177
-msgid "No matches."
-msgstr "Нема совпаѓања."
-
-#: src/features/apps/index.tsx:340
-#: src/features/apps/index.tsx:366
+#: src/features/apps/index.tsx:345
+#: src/features/apps/index.tsx:371
 msgid "No matching apps"
 msgstr "Нема совпаѓачки апликации"
 
@@ -814,7 +849,7 @@ msgstr "Не се пронајдени места"
 msgid "No profile"
 msgstr "Без профил"
 
-#: src/features/apps/index.tsx:412
+#: src/features/apps/index.tsx:417
 msgid "No recommendations available"
 msgstr "Нема достапни препораки"
 
@@ -835,7 +870,7 @@ msgstr "Не е пронајдена временска зона."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Сè уште нема запис за темата — обидете се повторно по следното известување."
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:197
 msgid "No unused versions to clean up"
 msgstr "Нема неискористени верзии за чистење"
 
@@ -844,8 +879,14 @@ msgid "No users found"
 msgstr "Не се пронајдени корисници"
 
 #: ../../../lib/web/src/components/person-picker.tsx:349
+#: ../../../lib/web/src/lib/preference-utils.ts:102
+#: ../../../lib/web/src/lib/preference-utils.ts:113
 msgid "None"
 msgstr "Ништо"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:122
+msgid "Normal"
+msgstr "Нормално"
 
 #: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Not versioned"
@@ -886,6 +927,10 @@ msgstr "Друго"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "Сопственик"
+
+#: src/features/apps/index.tsx:544
+msgid "Paste the install link:"
+msgstr "Залепете го линкот за инсталирање:"
 
 #: src/features/routing/routing-table.tsx:70
 msgid "Path"
@@ -928,6 +973,11 @@ msgstr "Претпочитана верзија"
 msgid "Previous image"
 msgstr "Претходна слика"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:24
+#: ../../../lib/web/src/features/document/document-page.tsx:41
+msgid "Privacy"
+msgstr "Приватност"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:134
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
@@ -939,7 +989,7 @@ msgstr "Обезбедени класи"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
-#: src/features/apps/index.tsx:388
+#: src/features/apps/index.tsx:393
 msgid "Recommended"
 msgstr "Препорачано"
 
@@ -979,7 +1029,7 @@ msgstr "Отстрани интерес"
 
 #. placeholder {0}: data.removed
 #. placeholder {1}: data.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:194
+#: src/features/apps/index.tsx:199
 msgid "Removed {0} unused version{1}"
 msgstr "Отстранета {0} неискористена верзија{1}"
 
@@ -1015,11 +1065,11 @@ msgstr "Редови по страница"
 msgid "Saturday"
 msgstr "Сабота"
 
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:312
 msgid "Search apps"
 msgstr "Пребарај апликации"
 
-#: src/features/apps/index.tsx:306
+#: src/features/apps/index.tsx:311
 msgid "Search apps..."
 msgstr "Пребарај апликации..."
 
@@ -1046,10 +1096,6 @@ msgstr "Пребарај корисници"
 #: ../../../lib/web/src/components/person-picker.tsx:323
 msgid "Search..."
 msgstr "Пребарувај..."
-
-#: ../../../lib/web/src/components/language-picker.tsx:175
-msgid "Search…"
-msgstr "Пребарувај…"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
 #: ../../../lib/web/src/components/search-entity-page.tsx:149
@@ -1097,6 +1143,15 @@ msgstr "Изберете преференца за тема"
 msgid "Select which version of this app to use"
 msgstr "Изберете која верзија на оваа апликација да ја користите"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:133
+msgid "Serif"
+msgstr "Сериф"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:16
+#: ../../../lib/web/src/features/document/document-page.tsx:37
+msgid "Server rules"
+msgstr "Правила на серверот"
+
 #: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "Услуга"
@@ -1142,6 +1197,15 @@ msgstr "Се одјавувате..."
 msgid "Skip to Main"
 msgstr "Прескокни до главно"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:103
+#: ../../../lib/web/src/lib/preference-utils.ts:121
+msgid "Small"
+msgstr "Мало"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:94
+msgid "Spacious"
+msgstr "Простран"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:12
 msgid "Stay tuned though!"
 msgstr "Но останете блиску!"
@@ -1156,6 +1220,7 @@ msgstr "Недела"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
 #: ../../../lib/web/src/lib/preference-utils.ts:18
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "Систем"
 
@@ -1183,8 +1248,13 @@ msgstr "Тимови/Апликации"
 msgid "Technical Capabilities"
 msgstr "Технички способности"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:20
+#: ../../../lib/web/src/features/document/document-page.tsx:39
+msgid "Terms and conditions"
+msgstr "Услови и одредби"
+
 #: src/features/apps/index.tsx:116
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "Апликацијата е успешно инсталирана."
 
@@ -1243,7 +1313,7 @@ msgstr "Префрли тема"
 msgid "Top"
 msgstr "Врв"
 
-#: src/features/apps/index.tsx:676
+#: src/features/apps/index.tsx:680
 #: src/routes/_authenticated/app/$appId.tsx:384
 msgid "Track"
 msgstr "Track"
@@ -1279,7 +1349,7 @@ msgstr "Внесете за да пребарувате корисници"
 msgid "Type to search..."
 msgstr "Внесете за пребарување..."
 
-#: src/features/apps/index.tsx:407
+#: src/features/apps/index.tsx:412
 msgid "Unable to connect to the recommendations service"
 msgstr "Не може да се поврзе со услугата за препораки"
 
@@ -1304,7 +1374,7 @@ msgstr "Недоделено"
 msgid "Unauthorized Access"
 msgstr "Неовластен пристап"
 
-#: src/features/apps/index.tsx:406
+#: src/features/apps/index.tsx:411
 msgid "Unavailable"
 msgstr "Недостапно"
 
@@ -1316,19 +1386,19 @@ msgstr "Соединети Држави"
 msgid "Unverified"
 msgstr "Непотврдено"
 
-#: src/features/apps/index.tsx:672
+#: src/features/apps/index.tsx:676
 msgid "Update"
 msgstr "Ажурирај"
 
-#: src/features/apps/index.tsx:263
+#: src/features/apps/index.tsx:268
 msgid "Update all"
 msgstr "Ажурирај ги сите"
 
-#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:184
 msgid "Update failed"
 msgstr "Ажурирањето не успеа"
 
-#: src/features/apps/index.tsx:263
+#: src/features/apps/index.tsx:268
 msgid "Updating..."
 msgstr "Се ажурира..."
 

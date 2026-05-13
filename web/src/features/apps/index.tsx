@@ -20,7 +20,6 @@ import {
   ResponsiveDialog,
   ResponsiveDialogClose,
   ResponsiveDialogContent,
-  ResponsiveDialogDescription,
   ResponsiveDialogFooter,
   ResponsiveDialogHeader,
   ResponsiveDialogTitle,
@@ -30,6 +29,7 @@ import {
   toast,
   Skeleton,
   DataChip,
+  getErrorMessage,
 } from '@mochi/web'
 import { Package, ExternalLink, Download, RefreshCw, MoreHorizontal, Trash2 } from 'lucide-react'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
@@ -142,6 +142,11 @@ export function Apps() {
           })
           setInstallFromPublisher(false)
           setAppIdInput('')
+        },
+        onError: (error) => {
+          toast.error(t`Install failed`, {
+            description: getErrorMessage(error, t`Could not install app.`),
+          })
         },
       }
     )
@@ -533,15 +538,13 @@ export function Apps() {
           <ResponsiveDialogContent>
             <ResponsiveDialogHeader>
               <ResponsiveDialogTitle><Trans>Install from publisher</Trans></ResponsiveDialogTitle>
-              <ResponsiveDialogDescription>
-                <Trans>
-                  Enter the app entity to install. For private apps, use the
-                  format: app@publisher.
-                </Trans>
-              </ResponsiveDialogDescription>
             </ResponsiveDialogHeader>
-            <div className='space-y-3 py-4'>
+            <div className='space-y-2 py-2'>
+              <label htmlFor='install-link-input' className='text-sm font-medium'>
+                {t`Paste the install link:`}
+              </label>
               <Input
+                id='install-link-input'
                 value={appIdInput}
                 onChange={(e) => setAppIdInput(e.target.value)}
                 disabled={installByIdMutation.isPending}
@@ -557,6 +560,7 @@ export function Apps() {
                 onClick={handlePublisherInstall}
                 disabled={installByIdMutation.isPending}
               >
+                <Download className='me-2 h-4 w-4' />
                 {installByIdMutation.isPending ? t`Installing...` : t`Install`}
               </Button>
             </ResponsiveDialogFooter>

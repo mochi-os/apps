@@ -202,7 +202,29 @@ def action_install_file(a):
 
 	return {"data": {"installed": True, "id": entity, "version": version}}
 
-# Install an app by ID (public) or ID@publisher (private)
+# Parse install input. Accepts three formats and returns (app, publisher):
+#   mochi:app/install/<app>[?publisher=<pub>]   — the URI scheme (preferred)
+#   <app>@<publisher>                            — legacy private-app shorthand
+#   <app>                                        — bare app entity, directory lookup
+def parse_install_input(input):
+	if input.startswith("mochi:app/install/"):
+		rest = input[len("mochi:app/install/"):]
+		if "?" in rest:
+			path, query = rest.split("?", 1)
+		else:
+			path, query = rest, ""
+		publisher = ""
+		if query:
+			for part in query.split("&"):
+				if part.startswith("publisher="):
+					publisher = part[len("publisher="):]
+		return path, publisher
+	if "@" in input:
+		parts = input.split("@", 1)
+		return parts[0], parts[1]
+	return input, ""
+
+# Install an app from a mochi:app/install/... link, an app@publisher string, or a bare app ID
 def action_install_id(a):
 	if a.user.role != "administrator":
 		if mochi.setting.get("apps_install_user") != "true":
@@ -212,13 +234,7 @@ def action_install_id(a):
 	if not input:
 		return {"status": 400, "error": "App ID is required", "data": {}}
 
-	# Parse app@publisher format
-	publisher = ""
-	id = input
-	if "@" in input:
-		parts = input.split("@", 1)
-		id = parts[0]
-		publisher = parts[1]
+	id, publisher = parse_install_input(input.strip())
 
 	if len(id) > 51:
 		return {"status": 400, "error": "Invalid app ID", "data": {}}
@@ -231,7 +247,7 @@ def action_install_id(a):
 	else:
 		entry = mochi.directory.get(id)
 		if not entry:
-			return {"status": 404, "error": "App not found. For private apps use format: app_id@publisher", "data": {}}
+			return {"status": 404, "error": "App not found in directory. Use the install link from the app's publisher page.", "data": {}}
 		s = mochi.remote.stream(id, "publisher", "information", {"app": id})
 	if not s:
 		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}

@@ -19,7 +19,7 @@ msgid "{0} (development)"
 msgstr "{0} (әзірлеу)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:186
 msgid "{0} updated, {failed} failed"
 msgstr "{0} жаңартылды, {failed} сәтсіз"
 
@@ -27,7 +27,7 @@ msgstr "{0} жаңартылды, {failed} сәтсіз"
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
 #: src/features/apps/index.tsx:141
-#: src/features/apps/index.tsx:158
+#: src/features/apps/index.tsx:163
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} орнатылды."
 
@@ -104,7 +104,7 @@ msgstr "Тег қосу..."
 msgid "Add team/app"
 msgstr "Топ/қолданба қосу"
 
-#: src/features/apps/index.tsx:589
+#: src/features/apps/index.tsx:593
 msgid "Add to directory"
 msgstr "Каталогқа қосу"
 
@@ -128,7 +128,7 @@ msgstr "AI"
 msgid "All"
 msgstr "Барлығы"
 
-#: src/features/apps/index.tsx:177
+#: src/features/apps/index.tsx:182
 msgid "All apps updated"
 msgstr "Барлық қолданбалар жаңартылды"
 
@@ -137,8 +137,8 @@ msgstr "Барлық қолданбалар жаңартылды"
 msgid "App"
 msgstr "Қолданба"
 
-#: src/features/apps/index.tsx:244
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:249
+#: src/features/apps/index.tsx:250
 msgid "App actions"
 msgstr "Қолданба әрекеттері"
 
@@ -152,8 +152,8 @@ msgstr "Қолданба ақпараты және конфигурациясы"
 
 #: src/features/apps/index.tsx:115
 #: src/features/apps/index.tsx:140
-#: src/features/apps/index.tsx:157
-#: src/features/apps/index.tsx:217
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:222
 msgid "App installed"
 msgstr "Қолданба орнатылды"
 
@@ -169,7 +169,7 @@ msgstr "Қолданба ID"
 #: src/components/layout/apps-layout.tsx:17
 #: src/components/layout/apps-layout.tsx:20
 #: src/features/apps/index.tsx:54
-#: src/features/apps/index.tsx:293
+#: src/features/apps/index.tsx:298
 msgid "Apps"
 msgstr "Қолданбалар"
 
@@ -190,7 +190,7 @@ msgstr "Қолжетімді нұсқа:"
 msgid "Available versions:"
 msgstr "Қолжетімді нұсқалар:"
 
-#: src/features/apps/index.tsx:387
+#: src/features/apps/index.tsx:392
 msgid "Available, but not installed"
 msgstr "Қолжетімді, бірақ орнатылмаған"
 
@@ -223,9 +223,9 @@ msgstr "Қызығушылықты арттыру"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/apps/components/app-info-dialog.tsx:143
 #: src/features/apps/components/install-dialog.tsx:102
-#: src/features/apps/index.tsx:511
-#: src/features/apps/index.tsx:553
-#: src/features/apps/index.tsx:601
+#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:605
 #: src/routes/_authenticated/app/$appId.tsx:567
 msgid "Cancel"
 msgstr "Болдырмау"
@@ -254,7 +254,7 @@ msgstr "Солдан-оңға немесе оңнан-солға сайт бағ
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "Жүйе қалауы, жарық режим немесе қараңғы режимді таңдаңыз"
 
-#: ../../../lib/web/src/components/language-picker.tsx:167
+#: ../../../lib/web/src/components/language-picker.tsx:174
 msgid "Choose language"
 msgstr "Тілді таңдау"
 
@@ -271,11 +271,11 @@ msgstr "Сынып маршруттауы"
 msgid "Classes"
 msgstr "Сыныптар"
 
-#: src/features/apps/index.tsx:282
+#: src/features/apps/index.tsx:287
 msgid "Clean up unused versions"
 msgstr "Қолданылмаған нұсқаларды тазалау"
 
-#: src/features/apps/index.tsx:282
+#: src/features/apps/index.tsx:287
 msgid "Cleaning up..."
 msgstr "Тазалануда..."
 
@@ -322,11 +322,16 @@ msgstr "Іздеуді жабу"
 msgid "Collapse sidebar"
 msgstr "Бүйір тақтаны жинау"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:93
+msgid "Comfortable"
+msgstr "Ыңғайлы"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:9
 msgid "Coming Soon!"
 msgstr "Жақын арада!"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:302
+#: ../../../lib/web/src/lib/preference-utils.ts:92
 msgid "Compact"
 msgstr "Ықшам"
 
@@ -362,6 +367,14 @@ msgstr "Жалғастыру"
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Көшіру"
+
+#: src/features/apps/index.tsx:148
+msgid "Could not install app."
+msgstr "Қолданбаны орнату мүмкін болмады."
+
+#: ../../../lib/web/src/features/document/document-page.tsx:81
+msgid "Could not load this document. Please try again later."
+msgstr "Бұл құжатты жүктеу мүмкін болмады. Кейінірек қайталап көріңіз."
 
 #: src/routes/_authenticated/app/$appId.tsx:226
 msgid "Current Version"
@@ -423,7 +436,7 @@ msgstr "Кему ретімен"
 msgid "Details Panel"
 msgstr "Мәліметтер тақтасы"
 
-#: ../../../lib/web/src/components/language-picker.tsx:145
+#: ../../../lib/web/src/components/language-picker.tsx:152
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
 #: ../../../lib/web/src/lib/preference-utils.ts:25
@@ -434,7 +447,7 @@ msgstr "Мәліметтер тақтасы"
 msgid "Detect from web browser"
 msgstr "Веб-браузерден анықтау"
 
-#: src/features/apps/index.tsx:362
+#: src/features/apps/index.tsx:367
 msgid "Development apps"
 msgstr "Әзірлеу қолданбалары"
 
@@ -450,13 +463,13 @@ msgstr "Мобильді бүйір тақтаны көрсетеді."
 msgid "Download"
 msgstr "Жүктеп алу"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:134
+msgid "Dyslexia-friendly"
+msgstr "Дислексияға бейімделген"
+
 #: src/routes/_authenticated/app/$appId.tsx:243
 msgid "Enabled Services"
 msgstr "Қосылған қызметтер"
-
-#: src/features/apps/index.tsx:537
-msgid "Enter the app entity to install. For private apps, use the format: app@publisher."
-msgstr "Орнатылатын қолданба нысанын енгізіңіз. Жеке қолданбалар үшін мынадай форматты қолданыңыз: app@publisher."
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -465,6 +478,10 @@ msgstr "Нысан:"
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
 msgstr "Бүйір тақтаны кеңейту"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:124
+msgid "Extra large"
+msgstr "Өте үлкен"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
@@ -503,7 +520,7 @@ msgstr "Параметрді жаңарту сәтсіз аяқталды"
 msgid "Failed to update system default"
 msgstr "Жүйелік әдепкіні жаңарту сәтсіз аяқталды"
 
-#: src/features/apps/index.tsx:582
+#: src/features/apps/index.tsx:586
 msgid "File:"
 msgstr "Файл:"
 
@@ -529,9 +546,17 @@ msgstr "Жұма"
 msgid "From"
 msgstr "Кімнен"
 
-#: src/features/apps/index.tsx:442
+#: src/features/apps/index.tsx:447
 msgid "From the directory"
 msgstr "Каталогтан"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:91
+#: ../../../lib/web/src/lib/preference-utils.ts:101
+#: ../../../lib/web/src/lib/preference-utils.ts:112
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
+msgid "From theme"
+msgstr "Тақырыптан"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:307
 msgid "Full layout"
@@ -612,40 +637,44 @@ msgstr "Ішкі"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
 #: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:560
-#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:564
+#: src/features/apps/index.tsx:612
 msgid "Install"
 msgstr "Орнату"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:502
+#: src/features/apps/index.tsx:507
 msgid "Install {0}?"
 msgstr "{0} орнатасыз ба?"
 
-#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:340
 msgid "Install apps from the market or upload your own"
 msgstr "Қолданбаларды нарықтан орнатыңыз немесе өзіңіздікін жүктеп салыңыз"
 
-#: src/features/apps/index.tsx:274
-#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:147
+msgid "Install failed"
+msgstr "Орнату сәтсіз"
+
+#: src/features/apps/index.tsx:279
+#: src/features/apps/index.tsx:582
 msgid "Install from file"
 msgstr "Файлдан орнату"
 
-#: src/features/apps/index.tsx:270
-#: src/features/apps/index.tsx:535
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:540
 msgid "Install from publisher"
 msgstr "Жариялаушыдан орнату"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:323
 msgid "Installed apps"
 msgstr "Орнатылған қолданбалар"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
 #: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:518
-#: src/features/apps/index.tsx:560
-#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:564
+#: src/features/apps/index.tsx:612
 msgid "Installing..."
 msgstr "Орнатылуда..."
 
@@ -656,6 +685,11 @@ msgstr "Қызығушылықтар"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
 msgid "Invalid verification code"
 msgstr "Жарамсыз растау коды"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:105
+#: ../../../lib/web/src/lib/preference-utils.ts:123
+msgid "Large"
+msgstr "Үлкен"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
@@ -683,6 +717,7 @@ msgid "Loading version information..."
 msgstr "Нұсқа ақпараты жүктелуде..."
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
+#: ../../../lib/web/src/features/document/document-page.tsx:87
 msgid "Loading…"
 msgstr "Жүктелуде…"
 
@@ -717,6 +752,10 @@ msgstr "Бұл қолданбаға берілген мүмкіндіктерд�
 msgid "Mark all as read"
 msgstr "Барлығын оқылды деп белгілеу"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:104
+msgid "Medium"
+msgstr "Орташа"
+
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
 msgstr "Мәзір"
@@ -745,11 +784,11 @@ msgstr "Келесі сурет"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Қатынау ережелері реттелмеген. Кімнің қатынай алатынын реттеу үшін ереже қосыңыз."
 
-#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:184
 msgid "No apps could be updated."
 msgstr "Ешқандай қолданба жаңартылмады."
 
-#: src/features/apps/index.tsx:334
+#: src/features/apps/index.tsx:339
 msgid "No apps installed"
 msgstr "Қолданбалар орнатылмаған"
 
@@ -761,11 +800,11 @@ msgstr "Класстар реттелмеген."
 msgid "No connected accounts"
 msgstr "Байланысқан тіркелгілер жоқ"
 
-#: src/features/apps/index.tsx:429
+#: src/features/apps/index.tsx:434
 msgid "No description"
 msgstr "Сипаттама жоқ"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:372
 msgid "No development apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" сұранысына сәйкес әзірлеу қолданбалары жоқ"
 
@@ -773,24 +812,20 @@ msgstr "\"{searchQuery}\" сұранысына сәйкес әзірлеу қо�
 msgid "No groups available"
 msgstr "Топтар қолжетімсіз"
 
-#: src/features/apps/index.tsx:460
+#: src/features/apps/index.tsx:465
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Каталогтан \"{searchQuery}\" сұранысына сәйкес орнатылатын қолданбалар жоқ"
 
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:346
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" сұранысына сәйкес орнатылған қолданбалар жоқ"
 
-#: src/features/apps/index.tsx:459
+#: src/features/apps/index.tsx:464
 msgid "No matches in directory"
 msgstr "Каталогтан сәйкестік жоқ"
 
-#: ../../../lib/web/src/components/language-picker.tsx:177
-msgid "No matches."
-msgstr "Сәйкестіктер жоқ."
-
-#: src/features/apps/index.tsx:340
-#: src/features/apps/index.tsx:366
+#: src/features/apps/index.tsx:345
+#: src/features/apps/index.tsx:371
 msgid "No matching apps"
 msgstr "Сәйкес қолданбалар жоқ"
 
@@ -814,7 +849,7 @@ msgstr "Орындар табылмады"
 msgid "No profile"
 msgstr "Профиль жоқ"
 
-#: src/features/apps/index.tsx:412
+#: src/features/apps/index.tsx:417
 msgid "No recommendations available"
 msgstr "Ұсыныстар қолжетімсіз"
 
@@ -835,7 +870,7 @@ msgstr "Уақыт белдеуі табылмады."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Тақырып жазбасы әлі жоқ — келесі хабарландырудан кейін қайталап көріңіз."
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:197
 msgid "No unused versions to clean up"
 msgstr "Тазалайтын қолданылмаған нұсқалар жоқ"
 
@@ -844,8 +879,14 @@ msgid "No users found"
 msgstr "Қолданушылар табылмады"
 
 #: ../../../lib/web/src/components/person-picker.tsx:349
+#: ../../../lib/web/src/lib/preference-utils.ts:102
+#: ../../../lib/web/src/lib/preference-utils.ts:113
 msgid "None"
 msgstr "Жоқ"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:122
+msgid "Normal"
+msgstr "Қалыпты"
 
 #: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Not versioned"
@@ -886,6 +927,10 @@ msgstr "Басқа"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "Иесі"
+
+#: src/features/apps/index.tsx:544
+msgid "Paste the install link:"
+msgstr "Орнату сілтемесін қойыңыз:"
 
 #: src/features/routing/routing-table.tsx:70
 msgid "Path"
@@ -928,6 +973,11 @@ msgstr "Қалаулы нұсқа"
 msgid "Previous image"
 msgstr "Алдыңғы сурет"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:24
+#: ../../../lib/web/src/features/document/document-page.tsx:41
+msgid "Privacy"
+msgstr "Құпиялылық"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:134
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
@@ -939,7 +989,7 @@ msgstr "Берілген класстар"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
-#: src/features/apps/index.tsx:388
+#: src/features/apps/index.tsx:393
 msgid "Recommended"
 msgstr "Ұсынылған"
 
@@ -979,7 +1029,7 @@ msgstr "Қызығушылықты жою"
 
 #. placeholder {0}: data.removed
 #. placeholder {1}: data.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:194
+#: src/features/apps/index.tsx:199
 msgid "Removed {0} unused version{1}"
 msgstr "{0} қолданылмаған нұсқа{1} жойылды"
 
@@ -1015,11 +1065,11 @@ msgstr "Бетке жолдар"
 msgid "Saturday"
 msgstr "Сенбі"
 
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:312
 msgid "Search apps"
 msgstr "Қолданбаларды іздеу"
 
-#: src/features/apps/index.tsx:306
+#: src/features/apps/index.tsx:311
 msgid "Search apps..."
 msgstr "Қолданбаларды іздеу..."
 
@@ -1046,10 +1096,6 @@ msgstr "Қолданушыларды іздеу"
 #: ../../../lib/web/src/components/person-picker.tsx:323
 msgid "Search..."
 msgstr "Іздеу..."
-
-#: ../../../lib/web/src/components/language-picker.tsx:175
-msgid "Search…"
-msgstr "Іздеу…"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
 #: ../../../lib/web/src/components/search-entity-page.tsx:149
@@ -1097,6 +1143,15 @@ msgstr "Тақырып теңшелімін таңдау"
 msgid "Select which version of this app to use"
 msgstr "Бұл қолданбаның қай нұсқасын пайдалану керектігін таңдау"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:133
+msgid "Serif"
+msgstr "Серифті"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:16
+#: ../../../lib/web/src/features/document/document-page.tsx:37
+msgid "Server rules"
+msgstr "Сервер ережелері"
+
 #: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "Қызмет"
@@ -1142,6 +1197,15 @@ msgstr "Шығу..."
 msgid "Skip to Main"
 msgstr "Негізгіге өту"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:103
+#: ../../../lib/web/src/lib/preference-utils.ts:121
+msgid "Small"
+msgstr "Кіші"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:94
+msgid "Spacious"
+msgstr "Кең"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:12
 msgid "Stay tuned though!"
 msgstr "Хабарласып тұрыңыз!"
@@ -1156,6 +1220,7 @@ msgstr "Жексенбі"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
 #: ../../../lib/web/src/lib/preference-utils.ts:18
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "Жүйе"
 
@@ -1183,8 +1248,13 @@ msgstr "Командалар/Қолданбалар"
 msgid "Technical Capabilities"
 msgstr "Техникалық мүмкіндіктер"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:20
+#: ../../../lib/web/src/features/document/document-page.tsx:39
+msgid "Terms and conditions"
+msgstr "Шарттар мен ережелер"
+
 #: src/features/apps/index.tsx:116
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "Қолданба сәтті орнатылды."
 
@@ -1243,7 +1313,7 @@ msgstr "Тақырыпты ауыстыру"
 msgid "Top"
 msgstr "Жоғары"
 
-#: src/features/apps/index.tsx:676
+#: src/features/apps/index.tsx:680
 #: src/routes/_authenticated/app/$appId.tsx:384
 msgid "Track"
 msgstr "Жол"
@@ -1279,7 +1349,7 @@ msgstr "Пайдаланушыларды іздеу үшін теріңіз"
 msgid "Type to search..."
 msgstr "Іздеу үшін теріңіз..."
 
-#: src/features/apps/index.tsx:407
+#: src/features/apps/index.tsx:412
 msgid "Unable to connect to the recommendations service"
 msgstr "Ұсыныстар қызметіне қосыла алмады"
 
@@ -1304,7 +1374,7 @@ msgstr "Тағайындалмаған"
 msgid "Unauthorized Access"
 msgstr "Рұқсат етілмеген қолжетімділік"
 
-#: src/features/apps/index.tsx:406
+#: src/features/apps/index.tsx:411
 msgid "Unavailable"
 msgstr "Қолжетімсіз"
 
@@ -1316,19 +1386,19 @@ msgstr "Америка Құрама Штаттары"
 msgid "Unverified"
 msgstr "Тексерілмеген"
 
-#: src/features/apps/index.tsx:672
+#: src/features/apps/index.tsx:676
 msgid "Update"
 msgstr "Жаңарту"
 
-#: src/features/apps/index.tsx:263
+#: src/features/apps/index.tsx:268
 msgid "Update all"
 msgstr "Барлығын жаңарту"
 
-#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:184
 msgid "Update failed"
 msgstr "Жаңарту сәтсіз"
 
-#: src/features/apps/index.tsx:263
+#: src/features/apps/index.tsx:268
 msgid "Updating..."
 msgstr "Жаңартылуда..."
 
