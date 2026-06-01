@@ -31,11 +31,11 @@ msgstr "{0} به‌روزرسانی شد، {failed} ناموفق"
 msgid "{0} v{1} has been installed."
 msgstr "{0} نسخه {1} نصب شد."
 
-#: src/routes/_authenticated/app/$appId.tsx:389
+#: src/routes/_authenticated/app/$appId.tsx:358
 msgid "{track} (default, version {version})"
 msgstr "{track} (پیش‌فرض، نسخه {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:390
+#: src/routes/_authenticated/app/$appId.tsx:359
 msgid "{track} (version {version})"
 msgstr "{track} (نسخه {version})"
 
@@ -137,7 +137,7 @@ msgid "All apps updated"
 msgstr "همهٔ برنامه‌ها به‌روزرسانی شدند"
 
 #: src/features/apps/index.tsx:141
-#: src/routes/_authenticated/app/$appId.tsx:119
+#: src/routes/_authenticated/app/$appId.tsx:88
 msgid "App"
 msgstr "برنامه"
 
@@ -150,7 +150,7 @@ msgstr "عملیات برنامه"
 msgid "App information"
 msgstr "اطلاعات برنامه"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:182
 msgid "App information and configuration"
 msgstr "اطلاعات و پیکربندی برنامه"
 
@@ -161,12 +161,12 @@ msgstr "اطلاعات و پیکربندی برنامه"
 msgid "App installed"
 msgstr "برنامه نصب شد"
 
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:121
 msgid "App not found"
 msgstr "برنامه پیدا نشد"
 
-#: src/routes/_authenticated/app/$appId.tsx:216
+#: src/routes/_authenticated/app/$appId.tsx:185
 msgid "Application ID"
 msgstr "شناسهٔ برنامه"
 
@@ -185,6 +185,10 @@ msgstr "آیا از خروج از حساب مطمئن هستید؟ برای دس
 msgid "Asc"
 msgstr "صعودی"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "کد احراز هویت"
+
 #: src/features/apps/components/install-dialog.tsx:73
 msgid "Available version:"
 msgstr "نسخهٔ موجود:"
@@ -202,9 +206,9 @@ msgstr "موجود، اما نصب نشده"
 msgid "Back"
 msgstr "بازگشت"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:165
+#: src/routes/_authenticated/app/$appId.tsx:96
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:134
 msgid "Back to apps"
 msgstr "بازگشت به برنامه‌ها"
 
@@ -219,6 +223,7 @@ msgid "Boost interest"
 msgstr "تقویت علاقه"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -230,15 +235,15 @@ msgstr "تقویت علاقه"
 #: src/features/apps/index.tsx:516
 #: src/features/apps/index.tsx:556
 #: src/features/apps/index.tsx:605
-#: src/routes/_authenticated/app/$appId.tsx:567
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Cancel"
 msgstr "لغو"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "دستهٔ این اعلان"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "تغییر دستهٔ اعلان"
 
@@ -368,6 +373,10 @@ msgstr "اطلاعات زمینه‌ای و جزئیات."
 msgid "Continue"
 msgstr "ادامه"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "ادامه با {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "کپی"
@@ -380,7 +389,19 @@ msgstr "نصب برنامه ممکن نشد."
 msgid "Could not load this document. Please try again later."
 msgstr "بارگذاری این سند ممکن نشد. لطفاً بعداً دوباره تلاش کنید."
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "ارسال کد ممکن نشد. لطفاً دوباره تلاش کنید."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "شروع احراز هویت مجدد ممکن نشد. لطفاً دوباره تلاش کنید."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "تأیید با آن حساب ممکن نشد. لطفاً دوباره تلاش کنید."
+
+#: src/routes/_authenticated/app/$appId.tsx:195
 msgid "Current Version"
 msgstr "نسخهٔ فعلی"
 
@@ -411,26 +432,30 @@ msgstr "پیش‌فرض"
 msgid "Default AI account"
 msgstr "حساب پیش‌فرض هوش مصنوعی"
 
-#: src/routes/_authenticated/app/$appId.tsx:447
+#: src/routes/_authenticated/app/$appId.tsx:416
 msgid "Default for all users"
 msgstr "پیش‌فرض برای همهٔ کاربران"
 
-#: src/routes/_authenticated/app/$appId.tsx:446
+#: src/routes/_authenticated/app/$appId.tsx:415
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "پیش‌فرض برای همهٔ کاربران (نسخهٔ {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:312
 msgid "Default for all users updated"
 msgstr "پیش‌فرض برای همهٔ کاربران به‌روزرسانی شد"
 
-#: src/routes/_authenticated/app/$appId.tsx:430
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Default track"
 msgstr "Track پیش‌فرض"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:429
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Default track (version {0})"
 msgstr "Track پیش‌فرض (نسخهٔ {0})"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:88
+msgid "Delete your account on the old server"
+msgstr "حساب کاربری خود را در سرور قدیمی حذف کنید"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -459,6 +484,10 @@ msgstr "برنامه‌های توسعه"
 msgid "Direction"
 msgstr "جهت"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:71
+msgid "Dismiss"
+msgstr "بستن"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "نوار کناری موبایل را نمایش می‌دهد."
@@ -471,9 +500,21 @@ msgstr "دانلود"
 msgid "Dyslexia-friendly"
 msgstr "مناسب برای دیسلکسی"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "کد ایمیل"
+
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Enabled Services"
 msgstr "سرویس‌های فعال"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "کد دریافتی از ایمیل خود را وارد کنید"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "کد برنامه احرازکننده هویت خود را وارد کنید"
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -491,7 +532,7 @@ msgstr "خیلی بزرگ"
 msgid "Failed to add account"
 msgstr "افزودن حساب ناموفق بود"
 
-#: src/routes/_authenticated/app/$appId.tsx:493
+#: src/routes/_authenticated/app/$appId.tsx:463
 msgid "Failed to grant permission"
 msgstr "اعطای مجوز ناموفق بود"
 
@@ -499,7 +540,7 @@ msgstr "اعطای مجوز ناموفق بود"
 msgid "Failed to remove account"
 msgstr "حذف حساب ناموفق بود"
 
-#: src/routes/_authenticated/app/$appId.tsx:475
+#: src/routes/_authenticated/app/$appId.tsx:445
 msgid "Failed to revoke permission"
 msgstr "لغو مجوز ناموفق بود"
 
@@ -507,16 +548,16 @@ msgstr "لغو مجوز ناموفق بود"
 msgid "Failed to send verification code"
 msgstr "ارسال کد تأیید ناموفق بود"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "به‌روزرسانی دسته ناموفق بود"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:315
 msgid "Failed to update default"
 msgstr "به‌روزرسانی پیش‌فرض ناموفق بود"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:326
+#: src/routes/_authenticated/app/$appId.tsx:295
 msgid "Failed to update preference"
 msgstr "به‌روزرسانی ترجیح ناموفق بود"
 
@@ -528,7 +569,7 @@ msgstr "به‌روزرسانی پیش‌فرض سیستم ناموفق بود"
 msgid "File:"
 msgstr "فایل:"
 
-#: src/routes/_authenticated/app/$appId.tsx:221
+#: src/routes/_authenticated/app/$appId.tsx:190
 msgid "Fingerprint"
 msgstr "اثر انگشت"
 
@@ -537,6 +578,10 @@ msgstr "اثر انگشت"
 #: src/features/apps/components/install-dialog.tsx:78
 msgid "Fingerprint:"
 msgstr "اثر انگشت:"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:77
+msgid "Finish moving your account"
+msgstr "انتقال حساب کاربری خود را تکمیل کنید"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -592,15 +637,15 @@ msgstr "رفتن به صفحه {pageNumber}"
 msgid "Go to previous page"
 msgstr "رفتن به صفحه قبل"
 
-#: src/routes/_authenticated/app/$appId.tsx:531
+#: src/routes/_authenticated/app/$appId.tsx:501
 msgid "Grant"
 msgstr "اعطا"
 
-#: src/routes/_authenticated/app/$appId.tsx:536
+#: src/routes/_authenticated/app/$appId.tsx:506
 msgid "Grant permission"
 msgstr "اعطای مجوز"
 
-#: src/routes/_authenticated/app/$appId.tsx:591
+#: src/routes/_authenticated/app/$appId.tsx:561
 msgid "Grant permissions to allow this app to access system features"
 msgstr "برای اجازه دسترسی این اپ به امکانات سیستم، مجوزها را اعطا کنید"
 
@@ -627,11 +672,11 @@ msgstr "خانه"
 msgid "Hot"
 msgstr "داغ"
 
-#: src/routes/_authenticated/app/$appId.tsx:251
+#: src/routes/_authenticated/app/$appId.tsx:220
 msgid "HTTP Paths"
 msgstr "مسیرهای HTTP"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:181
 msgid "Identity"
 msgstr "هویت"
 
@@ -751,7 +796,7 @@ msgstr "با موفقیت خارج شد"
 msgid "Logging out…"
 msgstr "در حال خروج…"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "Manage capabilities granted to this application"
 msgstr "مدیریت قابلیت‌های اعطاشده به این برنامه"
 
@@ -841,11 +886,11 @@ msgstr "برنامه مطابقی وجود ندارد"
 msgid "No paths configured."
 msgstr "هیچ مسیری پیکربندی نشده است."
 
-#: src/routes/_authenticated/app/$appId.tsx:590
+#: src/routes/_authenticated/app/$appId.tsx:560
 msgid "No permissions granted"
 msgstr "هیچ مجوزی اعطا نشده است"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "No permissions granted to this app"
 msgstr "هیچ مجوزی به این برنامه اعطا نشده است"
 
@@ -874,7 +919,7 @@ msgstr "هیچ سرویسی پیکربندی نشده است."
 msgid "No time zone found."
 msgstr "منطقه زمانی یافت نشد."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "هنوز هیچ رکوردی برای موضوع وجود ندارد — پس از اعلان بعدی دوباره تلاش کنید."
 
@@ -896,7 +941,7 @@ msgstr "هیچ‌کدام"
 msgid "Normal"
 msgstr "معمولی"
 
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:333
 msgid "Not versioned"
 msgstr "نسخه‌گذاری نشده"
 
@@ -936,6 +981,14 @@ msgstr "سایر"
 msgid "Owner"
 msgstr "مالک"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "پسکی"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "تأیید با کلید عبور ناموفق بود. لطفاً دوباره تلاش کنید."
+
 #: src/features/apps/index.tsx:544
 msgid "Paste the install link:"
 msgstr "پیوند نصب را جای‌گذاری کنید:"
@@ -953,15 +1006,15 @@ msgstr "مسیریابی Path"
 msgid "Paths"
 msgstr "مسیرها"
 
-#: src/routes/_authenticated/app/$appId.tsx:488
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Permission granted"
 msgstr "مجوز اعطا شد"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Permission revoked"
 msgstr "مجوز لغو شد"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Permissions"
 msgstr "مجوزها"
 
@@ -973,7 +1026,7 @@ msgstr "لطفاً شناسه برنامه را وارد کنید"
 msgid "Preference updated"
 msgstr "ترجیح به‌روزرسانی شد"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Preferred Version"
 msgstr "نسخه ترجیحی"
 
@@ -991,9 +1044,13 @@ msgstr "حریم خصوصی"
 msgid "Profile"
 msgstr "پروفایل"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:204
 msgid "Provided Classes"
 msgstr "کلاس‌های ارائه‌شده"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:96
+msgid "Re-link your accounts on this server"
+msgstr "حساب‌های خود را در این سرور مجدداً پیوند دهید"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -1041,6 +1098,10 @@ msgstr "حذف علاقه"
 msgid "Removed {0} unused version{1}"
 msgstr "{0} نسخه استفاده‌نشده{1} حذف شد"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "ارسال مجدد ایمیل"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1050,15 +1111,15 @@ msgstr "بازنشانی"
 msgid "Reset all settings to default values"
 msgstr "بازنشانی همه تنظیمات به مقادیر پیش‌فرض"
 
-#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:612
 msgid "Revoke"
 msgstr "لغو"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:619
 msgid "Revoke permission"
 msgstr "لغو مجوز"
 
-#: src/routes/_authenticated/app/$appId.tsx:647
+#: src/routes/_authenticated/app/$appId.tsx:617
 msgid "Revoke permission?"
 msgstr "لغو مجوز؟"
 
@@ -1112,7 +1173,7 @@ msgstr "جست‌وجو..."
 msgid "Searching..."
 msgstr "در حال جست‌وجو..."
 
-#: src/routes/_authenticated/app/$appId.tsx:538
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "Select a capability to grant to {appName}."
 msgstr "قابلیتی را برای اعطا به {appName} انتخاب کنید."
 
@@ -1148,13 +1209,17 @@ msgstr "انتخاب جهت سایت"
 msgid "Select theme preference"
 msgstr "انتخاب ترجیح تم"
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "Select which version of this app to use"
 msgstr "انتخاب نسخه‌ای از این اپ که استفاده شود"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:95
 msgid "Send again"
 msgstr "ارسال مجدد"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "ارسال ایمیل"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
@@ -1241,7 +1306,7 @@ msgstr "سیستم"
 msgid "System default"
 msgstr "پیش‌فرض سیستم"
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "System Default"
 msgstr "پیش‌فرض سیستم"
 
@@ -1257,7 +1322,7 @@ msgstr "برچسب"
 msgid "Teams/Apps"
 msgstr "تیم‌ها/اپ‌ها"
 
-#: src/routes/_authenticated/app/$appId.tsx:232
+#: src/routes/_authenticated/app/$appId.tsx:201
 msgid "Technical Capabilities"
 msgstr "قابلیت‌های فنی"
 
@@ -1266,16 +1331,20 @@ msgstr "قابلیت‌های فنی"
 msgid "Terms and conditions"
 msgstr "شرایط و ضوابط"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "این کد نادرست است یا منقضی شده است."
+
 #: src/features/apps/index.tsx:116
 #: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "اپ با موفقیت نصب شد."
 
-#: src/routes/_authenticated/app/$appId.tsx:153
+#: src/routes/_authenticated/app/$appId.tsx:122
 msgid "The requested app could not be found."
 msgstr "اپ درخواست‌شده یافت نشد."
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "The version used by users who haven't made a choice"
 msgstr "نسخه‌ای که برای کاربرانی استفاده می‌شود که انتخابی نکرده‌اند"
 
@@ -1287,7 +1356,7 @@ msgstr "تم"
 msgid "Theme Settings"
 msgstr "تنظیمات تم"
 
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:334
 msgid "This app does not have version management"
 msgstr "این اپ مدیریت نسخه ندارد"
 
@@ -1295,8 +1364,8 @@ msgstr "این اپ مدیریت نسخه ندارد"
 msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
 msgstr "این اپ مستقیماً از ناشر آن نصب شده و بررسی نشده است. ممکن است بدافزار باشد."
 
-#. placeholder {0}: formatPermission(permission.permission, t)
-#: src/routes/_authenticated/app/$appId.tsx:648
+#. placeholder {0}: permission.name
+#: src/routes/_authenticated/app/$appId.tsx:618
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "این کار مجوز «{0}» را از {appName} لغو می‌کند. ممکن است اپ به‌درستی کار نکند."
 
@@ -1330,7 +1399,7 @@ msgid "Top"
 msgstr "بالا"
 
 #: src/features/apps/index.tsx:680
-#: src/routes/_authenticated/app/$appId.tsx:384
+#: src/routes/_authenticated/app/$appId.tsx:353
 msgid "Track"
 msgstr "Track"
 
@@ -1382,7 +1451,7 @@ msgstr "بارگذاری اطلاعات نسخه ممکن نیست"
 msgid "Unable to redirect to login. Please try again."
 msgstr "ریدایرکت به ورود ممکن نیست. لطفاً دوباره تلاش کنید."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "بدون اختصاص"
 
@@ -1422,6 +1491,10 @@ msgstr "در حال به‌روزرسانی..."
 msgid "Use system default"
 msgstr "استفاده از پیش‌فرض سیستم"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "از کلید عبور خود استفاده کنید"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
 msgstr "کاربر"
@@ -1438,6 +1511,7 @@ msgstr "کد تأیید ارسال شد"
 msgid "Verification failed"
 msgstr "تأیید ناموفق بود"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1447,7 +1521,7 @@ msgstr "تأیید"
 msgid "Verify email address"
 msgstr "تأیید نشانی ایمیل"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:367
 msgid "Version"
 msgstr "نسخه"
 
@@ -1456,13 +1530,17 @@ msgstr "نسخه"
 msgid "Version {0}"
 msgstr "نسخه {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:292
 msgid "Version changed"
 msgstr "نسخه تغییر کرد"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "Version Management"
 msgstr "مدیریت نسخه"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "بندانگشتی ویدیو"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1488,7 +1566,11 @@ msgstr "وب‌سایت در حال نگهداری است!"
 msgid "Wednesday"
 msgstr "چهارشنبه"
 
-#: src/routes/_authenticated/app/$appId.tsx:438
+#: ../../../lib/web/src/components/restore-banner.tsx:80
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "حساب کاربری شما از {source} به اینجا منتقل شده است. تا زمانی که آن را آنجا حذف نکنید، پیام‌ها و اعلان‌ها ممکن است به هر دو سرور برسند، بخشی از محتوای شما همچنان از سرور قدیمی ارائه می‌شود، و دنبال‌کنندگان ممکن است چند دقیقه‌ای طول بکشد تا شما را اینجا پیدا کنند."
+
+#: src/routes/_authenticated/app/$appId.tsx:407
 msgid "Your personal version override"
 msgstr "بازنویسی نسخه شخصی شما"
 
@@ -1496,6 +1578,6 @@ msgstr "بازنویسی نسخه شخصی شما"
 msgid "Your preference"
 msgstr "ترجیح شما"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Your Version"
 msgstr "نسخه شما"

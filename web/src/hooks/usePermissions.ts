@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import type { AppPermissions } from '@/api/types/apps'
+import type { AppPermissions, PermissionCatalog } from '@/api/types/apps'
 import endpoints from '@/api/endpoints'
 import { apiClient } from '@mochi/web'
 
@@ -14,6 +14,21 @@ export function useAppPermissions(appId: string | null) {
       return response.data
     },
     enabled: !!appId,
+  })
+}
+
+// The full catalog of permissions that exist, with their translated names and
+// security levels. Source of truth lives in core; the grant dialog lists the
+// catalog entries not yet granted to the app.
+export function usePermissionCatalog() {
+  return useQuery({
+    queryKey: ['permission-catalog'],
+    queryFn: async () => {
+      const response = await apiClient.get<PermissionCatalog>(
+        endpoints.permissions.catalog
+      )
+      return response.data
+    },
   })
 }
 

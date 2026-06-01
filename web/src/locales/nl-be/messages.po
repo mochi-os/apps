@@ -31,11 +31,11 @@ msgstr "{0} bijgewerkt, {failed} mislukt"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} is geïnstalleerd."
 
-#: src/routes/_authenticated/app/$appId.tsx:389
+#: src/routes/_authenticated/app/$appId.tsx:358
 msgid "{track} (default, version {version})"
 msgstr "{track} (standaard, versie {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:390
+#: src/routes/_authenticated/app/$appId.tsx:359
 msgid "{track} (version {version})"
 msgstr "{track} (versie {version})"
 
@@ -137,7 +137,7 @@ msgid "All apps updated"
 msgstr "Alle apps bijgewerkt"
 
 #: src/features/apps/index.tsx:141
-#: src/routes/_authenticated/app/$appId.tsx:119
+#: src/routes/_authenticated/app/$appId.tsx:88
 msgid "App"
 msgstr "App"
 
@@ -150,7 +150,7 @@ msgstr "App-acties"
 msgid "App information"
 msgstr "App-informatie"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:182
 msgid "App information and configuration"
 msgstr "App-informatie en -configuratie"
 
@@ -161,12 +161,12 @@ msgstr "App-informatie en -configuratie"
 msgid "App installed"
 msgstr "App geïnstalleerd"
 
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:121
 msgid "App not found"
 msgstr "App niet gevonden"
 
-#: src/routes/_authenticated/app/$appId.tsx:216
+#: src/routes/_authenticated/app/$appId.tsx:185
 msgid "Application ID"
 msgstr "Applicatie-ID"
 
@@ -185,6 +185,10 @@ msgstr "Weet u zeker dat u wilt uitloggen? U moet opnieuw inloggen om toegang te
 msgid "Asc"
 msgstr "Opl."
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Authenticator-code"
+
 #: src/features/apps/components/install-dialog.tsx:73
 msgid "Available version:"
 msgstr "Beschikbare versie:"
@@ -202,9 +206,9 @@ msgstr "Beschikbaar, maar niet geïnstalleerd"
 msgid "Back"
 msgstr "Terug"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:165
+#: src/routes/_authenticated/app/$appId.tsx:96
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:134
 msgid "Back to apps"
 msgstr "Terug naar apps"
 
@@ -219,6 +223,7 @@ msgid "Boost interest"
 msgstr "Interesse versterken"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -230,15 +235,15 @@ msgstr "Interesse versterken"
 #: src/features/apps/index.tsx:516
 #: src/features/apps/index.tsx:556
 #: src/features/apps/index.tsx:605
-#: src/routes/_authenticated/app/$appId.tsx:567
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Categorie voor deze melding"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Meldingscategorie wijzigen"
 
@@ -368,6 +373,10 @@ msgstr "Contextuele informatie en details."
 msgid "Continue"
 msgstr "Doorgaan"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Doorgaan met {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Kopiëren"
@@ -380,7 +389,19 @@ msgstr "Kan app niet installeren."
 msgid "Could not load this document. Please try again later."
 msgstr "Kon dit document niet laden. Probeer het later opnieuw."
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Kon de code niet versturen. Probeer het opnieuw."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Kon de herauthenticatie niet starten. Probeer het opnieuw."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Kan niet verifiëren met dat account. Probeer het opnieuw."
+
+#: src/routes/_authenticated/app/$appId.tsx:195
 msgid "Current Version"
 msgstr "Huidige versie"
 
@@ -411,26 +432,30 @@ msgstr "Standaard"
 msgid "Default AI account"
 msgstr "Standaard AI-account"
 
-#: src/routes/_authenticated/app/$appId.tsx:447
+#: src/routes/_authenticated/app/$appId.tsx:416
 msgid "Default for all users"
 msgstr "Standaard voor alle gebruikers"
 
-#: src/routes/_authenticated/app/$appId.tsx:446
+#: src/routes/_authenticated/app/$appId.tsx:415
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Standaard voor alle gebruikers (versie {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:312
 msgid "Default for all users updated"
 msgstr "Standaard voor alle gebruikers bijgewerkt"
 
-#: src/routes/_authenticated/app/$appId.tsx:430
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Default track"
 msgstr "Standaardkanaal"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:429
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Default track (version {0})"
 msgstr "Standaardkanaal (versie {0})"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:88
+msgid "Delete your account on the old server"
+msgstr "Verwijder uw account op de oude server"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -459,6 +484,10 @@ msgstr "Ontwikkelingsapps"
 msgid "Direction"
 msgstr "Richting"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:71
+msgid "Dismiss"
+msgstr "Sluiten"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Toont de mobiele zijbalk."
@@ -471,9 +500,21 @@ msgstr "Downloaden"
 msgid "Dyslexia-friendly"
 msgstr "Dyslexie-vriendelijk"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "E-mailcode"
+
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Enabled Services"
 msgstr "Ingeschakelde services"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Voer de code uit je e-mail in"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Voer je authenticatorcode in"
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -491,7 +532,7 @@ msgstr "Extra groot"
 msgid "Failed to add account"
 msgstr "Account toevoegen mislukt"
 
-#: src/routes/_authenticated/app/$appId.tsx:493
+#: src/routes/_authenticated/app/$appId.tsx:463
 msgid "Failed to grant permission"
 msgstr "Toestemming verlenen mislukt"
 
@@ -499,7 +540,7 @@ msgstr "Toestemming verlenen mislukt"
 msgid "Failed to remove account"
 msgstr "Account verwijderen mislukt"
 
-#: src/routes/_authenticated/app/$appId.tsx:475
+#: src/routes/_authenticated/app/$appId.tsx:445
 msgid "Failed to revoke permission"
 msgstr "Toestemming intrekken mislukt"
 
@@ -507,16 +548,16 @@ msgstr "Toestemming intrekken mislukt"
 msgid "Failed to send verification code"
 msgstr "Verificatiecode verzenden mislukt"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Categorie bijwerken mislukt"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:315
 msgid "Failed to update default"
 msgstr "Standaard bijwerken mislukt"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:326
+#: src/routes/_authenticated/app/$appId.tsx:295
 msgid "Failed to update preference"
 msgstr "Voorkeur bijwerken mislukt"
 
@@ -528,7 +569,7 @@ msgstr "Systeemstandaard bijwerken mislukt"
 msgid "File:"
 msgstr "Bestand:"
 
-#: src/routes/_authenticated/app/$appId.tsx:221
+#: src/routes/_authenticated/app/$appId.tsx:190
 msgid "Fingerprint"
 msgstr "Fingerprint"
 
@@ -537,6 +578,10 @@ msgstr "Fingerprint"
 #: src/features/apps/components/install-dialog.tsx:78
 msgid "Fingerprint:"
 msgstr "Vingerafdruk:"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:77
+msgid "Finish moving your account"
+msgstr "Verhuizing van uw account voltooien"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -592,15 +637,15 @@ msgstr "Ga naar pagina {pageNumber}"
 msgid "Go to previous page"
 msgstr "Naar vorige pagina"
 
-#: src/routes/_authenticated/app/$appId.tsx:531
+#: src/routes/_authenticated/app/$appId.tsx:501
 msgid "Grant"
 msgstr "Verlenen"
 
-#: src/routes/_authenticated/app/$appId.tsx:536
+#: src/routes/_authenticated/app/$appId.tsx:506
 msgid "Grant permission"
 msgstr "Toestemming verlenen"
 
-#: src/routes/_authenticated/app/$appId.tsx:591
+#: src/routes/_authenticated/app/$appId.tsx:561
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Verleen toestemmingen zodat deze app toegang heeft tot systeemfuncties"
 
@@ -627,11 +672,11 @@ msgstr "Home"
 msgid "Hot"
 msgstr "Populair"
 
-#: src/routes/_authenticated/app/$appId.tsx:251
+#: src/routes/_authenticated/app/$appId.tsx:220
 msgid "HTTP Paths"
 msgstr "HTTP-paden"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:181
 msgid "Identity"
 msgstr "Identiteit"
 
@@ -751,7 +796,7 @@ msgstr "Succesvol uitgelogd"
 msgid "Logging out…"
 msgstr "Bezig met uitloggen…"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "Manage capabilities granted to this application"
 msgstr "Beheer mogelijkheden die aan deze toepassing zijn verleend"
 
@@ -841,11 +886,11 @@ msgstr "Geen overeenkomende apps"
 msgid "No paths configured."
 msgstr "Geen paden geconfigureerd."
 
-#: src/routes/_authenticated/app/$appId.tsx:590
+#: src/routes/_authenticated/app/$appId.tsx:560
 msgid "No permissions granted"
 msgstr "Geen permissies toegekend"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "No permissions granted to this app"
 msgstr "Geen rechten verleend aan deze app"
 
@@ -874,7 +919,7 @@ msgstr "Geen services geconfigureerd."
 msgid "No time zone found."
 msgstr "Geen tijdzone gevonden."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Nog geen topicregistratie — probeer opnieuw na de volgende melding."
 
@@ -896,7 +941,7 @@ msgstr "Geen"
 msgid "Normal"
 msgstr "Normaal"
 
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:333
 msgid "Not versioned"
 msgstr "Niet geversioneerd"
 
@@ -936,6 +981,14 @@ msgstr "Andere"
 msgid "Owner"
 msgstr "Eigenaar"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr ""
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Verificatie met passkey is mislukt. Probeer het opnieuw."
+
 #: src/features/apps/index.tsx:544
 msgid "Paste the install link:"
 msgstr "Plak de installatielink:"
@@ -953,15 +1006,15 @@ msgstr "Pad-routing"
 msgid "Paths"
 msgstr "Paden"
 
-#: src/routes/_authenticated/app/$appId.tsx:488
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Permission granted"
 msgstr "Permissie toegekend"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Permission revoked"
 msgstr "Permissie ingetrokken"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Permissions"
 msgstr "Permissies"
 
@@ -973,7 +1026,7 @@ msgstr "Voer een app-ID in"
 msgid "Preference updated"
 msgstr "Voorkeur bijgewerkt"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Preferred Version"
 msgstr "Voorkeursversie"
 
@@ -991,9 +1044,13 @@ msgstr "Privacy"
 msgid "Profile"
 msgstr "Profiel"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:204
 msgid "Provided Classes"
 msgstr "Aangeboden klassen"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:96
+msgid "Re-link your accounts on this server"
+msgstr "Uw accounts opnieuw koppelen op deze server"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -1041,6 +1098,10 @@ msgstr "Interesse verwijderen"
 msgid "Removed {0} unused version{1}"
 msgstr "{0} ongebruikte versie{1} verwijderd"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "E-mail opnieuw verzenden"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1050,15 +1111,15 @@ msgstr "Resetten"
 msgid "Reset all settings to default values"
 msgstr "Alle instellingen terugzetten naar standaardwaarden"
 
-#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:612
 msgid "Revoke"
 msgstr "Intrekken"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:619
 msgid "Revoke permission"
 msgstr "Toestemming intrekken"
 
-#: src/routes/_authenticated/app/$appId.tsx:647
+#: src/routes/_authenticated/app/$appId.tsx:617
 msgid "Revoke permission?"
 msgstr "Toestemming intrekken?"
 
@@ -1112,7 +1173,7 @@ msgstr "Zoeken..."
 msgid "Searching..."
 msgstr "Zoeken..."
 
-#: src/routes/_authenticated/app/$appId.tsx:538
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "Select a capability to grant to {appName}."
 msgstr "Selecteer een mogelijkheid om aan {appName} te verlenen."
 
@@ -1148,13 +1209,17 @@ msgstr "Selecteer leesrichting"
 msgid "Select theme preference"
 msgstr "Selecteer themavoorkeur"
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "Select which version of this app to use"
 msgstr "Selecteer welke versie van deze app u wilt gebruiken"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:95
 msgid "Send again"
 msgstr "Opnieuw verzenden"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "E-mail verzenden"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
@@ -1241,7 +1306,7 @@ msgstr "Systeem"
 msgid "System default"
 msgstr "Systeemstandaard"
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "System Default"
 msgstr "Systeemstandaard"
 
@@ -1257,7 +1322,7 @@ msgstr "Tag"
 msgid "Teams/Apps"
 msgstr "Teams/Apps"
 
-#: src/routes/_authenticated/app/$appId.tsx:232
+#: src/routes/_authenticated/app/$appId.tsx:201
 msgid "Technical Capabilities"
 msgstr "Technische mogelijkheden"
 
@@ -1266,16 +1331,20 @@ msgstr "Technische mogelijkheden"
 msgid "Terms and conditions"
 msgstr "Algemene voorwaarden"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Die code is onjuist of vervallen."
+
 #: src/features/apps/index.tsx:116
 #: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "De app is succesvol geïnstalleerd."
 
-#: src/routes/_authenticated/app/$appId.tsx:153
+#: src/routes/_authenticated/app/$appId.tsx:122
 msgid "The requested app could not be found."
 msgstr "De gevraagde app kon niet worden gevonden."
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "The version used by users who haven't made a choice"
 msgstr "De versie die wordt gebruikt door gebruikers die geen keuze hebben gemaakt"
 
@@ -1287,7 +1356,7 @@ msgstr "Thema"
 msgid "Theme Settings"
 msgstr "Thema-instellingen"
 
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:334
 msgid "This app does not have version management"
 msgstr "Deze app heeft geen versiebeheer"
 
@@ -1295,8 +1364,8 @@ msgstr "Deze app heeft geen versiebeheer"
 msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
 msgstr "Deze app wordt rechtstreeks vanaf de uitgever geïnstalleerd en is niet gecontroleerd. Het kan malware zijn."
 
-#. placeholder {0}: formatPermission(permission.permission, t)
-#: src/routes/_authenticated/app/$appId.tsx:648
+#. placeholder {0}: permission.name
+#: src/routes/_authenticated/app/$appId.tsx:618
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Hiermee wordt de \"{0}\"-toestemming van {appName} ingetrokken. De app werkt mogelijk niet meer correct."
 
@@ -1330,7 +1399,7 @@ msgid "Top"
 msgstr "Boven"
 
 #: src/features/apps/index.tsx:680
-#: src/routes/_authenticated/app/$appId.tsx:384
+#: src/routes/_authenticated/app/$appId.tsx:353
 msgid "Track"
 msgstr "Track"
 
@@ -1382,7 +1451,7 @@ msgstr "Kan versie-informatie niet laden"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Kan niet doorverwijzen naar login. Probeer opnieuw."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Niet toegewezen"
 
@@ -1422,6 +1491,10 @@ msgstr "Bijwerken..."
 msgid "Use system default"
 msgstr "Systeemstandaard gebruiken"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Gebruik je passkey"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
 msgstr "Gebruiker"
@@ -1438,6 +1511,7 @@ msgstr "Verificatiecode verzonden"
 msgid "Verification failed"
 msgstr "Verificatie mislukt"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1447,7 +1521,7 @@ msgstr "Verifiëren"
 msgid "Verify email address"
 msgstr "E-mailadres verifiëren"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:367
 msgid "Version"
 msgstr "Versie"
 
@@ -1456,13 +1530,17 @@ msgstr "Versie"
 msgid "Version {0}"
 msgstr "Versie {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:292
 msgid "Version changed"
 msgstr "Versie gewijzigd"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "Version Management"
 msgstr "Versiebeheer"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Videominiatuur"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1488,7 +1566,11 @@ msgstr "Website is in onderhoud!"
 msgid "Wednesday"
 msgstr "Woensdag"
 
-#: src/routes/_authenticated/app/$appId.tsx:438
+#: ../../../lib/web/src/components/restore-banner.tsx:80
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Uw account is hier naartoe verplaatst vanuit {source}. Totdat u het daar verwijdert, kunnen berichten en meldingen beide servers bereiken, wordt een deel van uw inhoud nog steeds van de oude server geleverd, en kan het een paar minuten duren voordat volgers u hier vinden."
+
+#: src/routes/_authenticated/app/$appId.tsx:407
 msgid "Your personal version override"
 msgstr "Uw persoonlijke versie-override"
 
@@ -1496,6 +1578,6 @@ msgstr "Uw persoonlijke versie-override"
 msgid "Your preference"
 msgstr "Uw voorkeur"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Your Version"
 msgstr "Uw versie"

@@ -31,11 +31,11 @@ msgstr "{0} hat nûkirin, {failed} têk çû"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} hat sazkirin."
 
-#: src/routes/_authenticated/app/$appId.tsx:389
+#: src/routes/_authenticated/app/$appId.tsx:358
 msgid "{track} (default, version {version})"
 msgstr "{track} (standard, guhertoya {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:390
+#: src/routes/_authenticated/app/$appId.tsx:359
 msgid "{track} (version {version})"
 msgstr "{track} (guhertoya {version})"
 
@@ -137,7 +137,7 @@ msgid "All apps updated"
 msgstr "Hemû sepan hatin nûkirin"
 
 #: src/features/apps/index.tsx:141
-#: src/routes/_authenticated/app/$appId.tsx:119
+#: src/routes/_authenticated/app/$appId.tsx:88
 msgid "App"
 msgstr "Sepan"
 
@@ -150,7 +150,7 @@ msgstr "Çalakiyên sepanê"
 msgid "App information"
 msgstr "Agahiyên sepanê"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:182
 msgid "App information and configuration"
 msgstr "Agahî û mîhengên sepanê"
 
@@ -161,12 +161,12 @@ msgstr "Agahî û mîhengên sepanê"
 msgid "App installed"
 msgstr "Sepan hat sazkirin"
 
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:121
 msgid "App not found"
 msgstr "Sepan nehat dîtin"
 
-#: src/routes/_authenticated/app/$appId.tsx:216
+#: src/routes/_authenticated/app/$appId.tsx:185
 msgid "Application ID"
 msgstr "Nasnameya sepanê"
 
@@ -185,6 +185,10 @@ msgstr "Tu bawer î ku dixwazî derkevî? Tu ê hewce bikî ku ji nû ve têkev�
 msgid "Asc"
 msgstr "Hilkişîn"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Koda rastandinê"
+
 #: src/features/apps/components/install-dialog.tsx:73
 msgid "Available version:"
 msgstr "Versiyona berdest:"
@@ -202,9 +206,9 @@ msgstr "Berdest, lê nehatî sazkirin"
 msgid "Back"
 msgstr "Vegere"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:165
+#: src/routes/_authenticated/app/$appId.tsx:96
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:134
 msgid "Back to apps"
 msgstr "Vegere sepanan"
 
@@ -219,6 +223,7 @@ msgid "Boost interest"
 msgstr "Berjewendiyê zêde bike"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -230,15 +235,15 @@ msgstr "Berjewendiyê zêde bike"
 #: src/features/apps/index.tsx:516
 #: src/features/apps/index.tsx:556
 #: src/features/apps/index.tsx:605
-#: src/routes/_authenticated/app/$appId.tsx:567
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Cancel"
 msgstr "Betal bike"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Kategoriya vê agahdariyê"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Kategoriya agahdariyê biguherîne"
 
@@ -368,6 +373,10 @@ msgstr "Agahî û hûragahiyên kontekstê."
 msgid "Continue"
 msgstr "Berdewam bike"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Bi {label} berdewam be"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Kopî bike"
@@ -380,7 +389,19 @@ msgstr "Sepan nehat sazkirin."
 msgid "Could not load this document. Please try again later."
 msgstr "Ev belge nikarîbû were barkirin. Ji kerema xwe re paşê dîsa biceribîne."
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Kod nehate şandin. Ji kerema xwe dîsa biceribîne."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Verastkirina ji nû ve nehate destpêkirin. Ji kerema xwe dîsa biceribîne."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Bi wê hesabê re piştrastkirin pêk nehat. Ji kerema xwe dîsa biceribîne."
+
+#: src/routes/_authenticated/app/$appId.tsx:195
 msgid "Current Version"
 msgstr "Versiyona niha"
 
@@ -411,26 +432,30 @@ msgstr "Standard"
 msgid "Default AI account"
 msgstr "Hesabê standard yê AI"
 
-#: src/routes/_authenticated/app/$appId.tsx:447
+#: src/routes/_authenticated/app/$appId.tsx:416
 msgid "Default for all users"
 msgstr "Standard ji bo hemû bikarhêneran"
 
-#: src/routes/_authenticated/app/$appId.tsx:446
+#: src/routes/_authenticated/app/$appId.tsx:415
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Standard ji bo hemû bikarhêneran (versiyona {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:312
 msgid "Default for all users updated"
 msgstr "Standard ji bo hemû bikarhêneran hat nûkirin"
 
-#: src/routes/_authenticated/app/$appId.tsx:430
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Default track"
 msgstr "Tracka standard"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:429
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Default track (version {0})"
 msgstr "Tracka standard (versiyona {0})"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:88
+msgid "Delete your account on the old server"
+msgstr "Hesabê xwe li ser serverê kevn jêbirin"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -459,6 +484,10 @@ msgstr "Sepanên pêşkeftinê"
 msgid "Direction"
 msgstr "Arasteyî"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:71
+msgid "Dismiss"
+msgstr "Red bike"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Panela kêlekê ya mobîl nîşan dide."
@@ -471,9 +500,21 @@ msgstr "Daxe"
 msgid "Dyslexia-friendly"
 msgstr "Hevhewş ji bo dîslêksiyê"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Koda e-nameyê"
+
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Enabled Services"
 msgstr "Servîsên çalakkirî"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Koda ji e-nameya xwe binivîse"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Koda authenticator-a xwe têkevê"
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -491,7 +532,7 @@ msgstr "Pir mezin"
 msgid "Failed to add account"
 msgstr "Zêdekirina hesabê neserkeftî bû"
 
-#: src/routes/_authenticated/app/$appId.tsx:493
+#: src/routes/_authenticated/app/$appId.tsx:463
 msgid "Failed to grant permission"
 msgstr "Dayîna destûrê neserkeftî bû"
 
@@ -499,7 +540,7 @@ msgstr "Dayîna destûrê neserkeftî bû"
 msgid "Failed to remove account"
 msgstr "Rakirina hesabê neserkeftî bû"
 
-#: src/routes/_authenticated/app/$appId.tsx:475
+#: src/routes/_authenticated/app/$appId.tsx:445
 msgid "Failed to revoke permission"
 msgstr "Betalkirina destûrê neserkeftî bû"
 
@@ -507,16 +548,16 @@ msgstr "Betalkirina destûrê neserkeftî bû"
 msgid "Failed to send verification code"
 msgstr "Şandina koda rastandinê neserkeftî bû"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Rojanekirina kategoriyê neserkeftî bû"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:315
 msgid "Failed to update default"
 msgstr "Rojanekirina pêşfaravabûn neserkeftî bû"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:326
+#: src/routes/_authenticated/app/$appId.tsx:295
 msgid "Failed to update preference"
 msgstr "Rojanekirina tercîhê neserkeftî bû"
 
@@ -528,7 +569,7 @@ msgstr "Rojanekirina pêşfaravabûna sîstemê neserkeftî bû"
 msgid "File:"
 msgstr "Pel:"
 
-#: src/routes/_authenticated/app/$appId.tsx:221
+#: src/routes/_authenticated/app/$appId.tsx:190
 msgid "Fingerprint"
 msgstr "Tilîya destan"
 
@@ -537,6 +578,10 @@ msgstr "Tilîya destan"
 #: src/features/apps/components/install-dialog.tsx:78
 msgid "Fingerprint:"
 msgstr "Tilîya destan:"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:77
+msgid "Finish moving your account"
+msgstr "Veguheztina hesabê xwe biqedînin"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -592,15 +637,15 @@ msgstr "Here rûpela {pageNumber}"
 msgid "Go to previous page"
 msgstr "Biçe rûpelê pêşîn"
 
-#: src/routes/_authenticated/app/$appId.tsx:531
+#: src/routes/_authenticated/app/$appId.tsx:501
 msgid "Grant"
 msgstr "Bide"
 
-#: src/routes/_authenticated/app/$appId.tsx:536
+#: src/routes/_authenticated/app/$appId.tsx:506
 msgid "Grant permission"
 msgstr "Destûrê bide"
 
-#: src/routes/_authenticated/app/$appId.tsx:591
+#: src/routes/_authenticated/app/$appId.tsx:561
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Destûrên bide ku ev sepan bigihîje taybetmendiyên sîstemê"
 
@@ -627,11 +672,11 @@ msgstr "Mal"
 msgid "Hot"
 msgstr "Germ"
 
-#: src/routes/_authenticated/app/$appId.tsx:251
+#: src/routes/_authenticated/app/$appId.tsx:220
 msgid "HTTP Paths"
 msgstr "Rêçên HTTP"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:181
 msgid "Identity"
 msgstr "Nasname"
 
@@ -751,7 +796,7 @@ msgstr "Bi serkeftî derket"
 msgid "Logging out…"
 msgstr "Tê derketin…"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "Manage capabilities granted to this application"
 msgstr "Şiyaniyên ku ji vê sepanê re hatine dayîn bi rê ve bibe"
 
@@ -841,11 +886,11 @@ msgstr "Tu app a li hev tê tune"
 msgid "No paths configured."
 msgstr "Tu rê nehatine mîhengkirin."
 
-#: src/routes/_authenticated/app/$appId.tsx:590
+#: src/routes/_authenticated/app/$appId.tsx:560
 msgid "No permissions granted"
 msgstr "Tu destûr nehatine dayîn"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "No permissions granted to this app"
 msgstr "Ji vê app re tu destûr nehatine dayîn"
 
@@ -874,7 +919,7 @@ msgstr "Tu xizmet nehatine mîhengkirin."
 msgid "No time zone found."
 msgstr "Tu herêma demê nehat dîtin."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Hêj tu tomarê mijarê tune — piştî agahdariya pêştir dîsa biceribîne."
 
@@ -896,7 +941,7 @@ msgstr "Tu"
 msgid "Normal"
 msgstr "Asayî"
 
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:333
 msgid "Not versioned"
 msgstr "Bê guherto"
 
@@ -936,6 +981,14 @@ msgstr "Yên din"
 msgid "Owner"
 msgstr "Xwedî"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr ""
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Verastkirina passkey têk çû. Ji kerema xwe dîsa biceribîne."
+
 #: src/features/apps/index.tsx:544
 msgid "Paste the install link:"
 msgstr "Girêdana sazkirinê binivîse:"
@@ -953,15 +1006,15 @@ msgstr "Beralîkirina rêyan"
 msgid "Paths"
 msgstr "Rê"
 
-#: src/routes/_authenticated/app/$appId.tsx:488
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Permission granted"
 msgstr "Destûr hate dayîn"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Permission revoked"
 msgstr "Destûr hate vekişandin"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Permissions"
 msgstr "Destûr"
 
@@ -973,7 +1026,7 @@ msgstr "Ji kerema xwe nasnameya app binivîse"
 msgid "Preference updated"
 msgstr "Tercih hate nûkirin"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Preferred Version"
 msgstr "Guhertoya tercîhkirî"
 
@@ -991,9 +1044,13 @@ msgstr "Nepenî"
 msgid "Profile"
 msgstr "Profîl"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:204
 msgid "Provided Classes"
 msgstr "Çînên Peydakirî"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:96
+msgid "Re-link your accounts on this server"
+msgstr "Hesabên xwe li vî serverî ji nû ve girêdin"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -1041,6 +1098,10 @@ msgstr "Balkêşiyê rake"
 msgid "Removed {0} unused version{1}"
 msgstr "{0} guhertoyên nekarîn{1} hatin rakirin"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Dîsa e-nameyê bişîne"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1050,15 +1111,15 @@ msgstr "Bişkojka veguhastinê"
 msgid "Reset all settings to default values"
 msgstr "Hemû mîhengan ber bi standardan ve veguhêze"
 
-#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:612
 msgid "Revoke"
 msgstr "Vekişîne"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:619
 msgid "Revoke permission"
 msgstr "Destûrê vekişîne"
 
-#: src/routes/_authenticated/app/$appId.tsx:647
+#: src/routes/_authenticated/app/$appId.tsx:617
 msgid "Revoke permission?"
 msgstr "Destûrê vekişîne?"
 
@@ -1112,7 +1173,7 @@ msgstr "Bigere..."
 msgid "Searching..."
 msgstr "Tê gerîn..."
 
-#: src/routes/_authenticated/app/$appId.tsx:538
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "Select a capability to grant to {appName}."
 msgstr "Şiyanekê hilbijêre ku ji {appName} re bide."
 
@@ -1148,13 +1209,17 @@ msgstr "Beralîkirina malperê hilbijêre"
 msgid "Select theme preference"
 msgstr "Tercîha temayê hilbijêre"
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "Select which version of this app to use"
 msgstr "Kîjan guhertoya vê sepanê tê bikaranîn hilbijêre"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:95
 msgid "Send again"
 msgstr "Dîsa bişîne"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "E-nameyê bişîne"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
@@ -1241,7 +1306,7 @@ msgstr "Pergal"
 msgid "System default"
 msgstr "Standarda pergalê"
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "System Default"
 msgstr "Standarda Pergalê"
 
@@ -1257,7 +1322,7 @@ msgstr "Tag"
 msgid "Teams/Apps"
 msgstr "Tîm/Sepan"
 
-#: src/routes/_authenticated/app/$appId.tsx:232
+#: src/routes/_authenticated/app/$appId.tsx:201
 msgid "Technical Capabilities"
 msgstr "Kapasîteyên Teknîk"
 
@@ -1266,16 +1331,20 @@ msgstr "Kapasîteyên Teknîk"
 msgid "Terms and conditions"
 msgstr "Mercên bikaranînê"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Ew kod çewt e an dema wê qediyaye."
+
 #: src/features/apps/index.tsx:116
 #: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "Sepan bi serkeftî hat sazkirin."
 
-#: src/routes/_authenticated/app/$appId.tsx:153
+#: src/routes/_authenticated/app/$appId.tsx:122
 msgid "The requested app could not be found."
 msgstr "Sepana xwestî nehate dîtin."
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "The version used by users who haven't made a choice"
 msgstr "Guhertoya ku ji aliyê bikarhênerên ku hilbijartin nekirine ve tê bikaranîn"
 
@@ -1287,7 +1356,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Mîhengên Temayê"
 
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:334
 msgid "This app does not have version management"
 msgstr "Vê sepanê rêvebirina guhertoyan tune ye"
 
@@ -1295,8 +1364,8 @@ msgstr "Vê sepanê rêvebirina guhertoyan tune ye"
 msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
 msgstr "Ev sepan rasterast ji weşanvanê wê hatî sazkirin û nehatiye nirxandin. Dibe ku malware be."
 
-#. placeholder {0}: formatPermission(permission.permission, t)
-#: src/routes/_authenticated/app/$appId.tsx:648
+#. placeholder {0}: permission.name
+#: src/routes/_authenticated/app/$appId.tsx:618
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Ev dê destûra \"{0}\" ji {appName} betal bike. Dibe ku sepan rast neşixule."
 
@@ -1330,7 +1399,7 @@ msgid "Top"
 msgstr "Jor"
 
 #: src/features/apps/index.tsx:680
-#: src/routes/_authenticated/app/$appId.tsx:384
+#: src/routes/_authenticated/app/$appId.tsx:353
 msgid "Track"
 msgstr "Track"
 
@@ -1382,7 +1451,7 @@ msgstr "Agahdariya guhertoyê nayê barkirin"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Beralîkirina bo têketinê ne mumkin e. Ji kerema xwe dîsa biceribîne."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Nehatiye diyarkirin"
 
@@ -1422,6 +1491,10 @@ msgstr "Tê nûkirin..."
 msgid "Use system default"
 msgstr "Standarda pergalê bi kar bîne"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Passkey-ya xwe bikar bîne"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
 msgstr "Bikarhêner"
@@ -1438,6 +1511,7 @@ msgstr "Koda verifîkasyonê hat şandin"
 msgid "Verification failed"
 msgstr "Verifîkasyon têk çû"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1447,7 +1521,7 @@ msgstr "Verifîke bike"
 msgid "Verify email address"
 msgstr "Navnîşana e-nameyê verifîke bike"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:367
 msgid "Version"
 msgstr "Guherto"
 
@@ -1456,13 +1530,17 @@ msgstr "Guherto"
 msgid "Version {0}"
 msgstr "Guhertoya {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:292
 msgid "Version changed"
 msgstr "Guherto hat guherandin"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "Version Management"
 msgstr "Rêvebirina Guhertoyan"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Wêneya pêşgir a vîdeoyê"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1488,7 +1566,11 @@ msgstr "Malper di rewşa lêkirinê de ye!"
 msgid "Wednesday"
 msgstr "Çarşem"
 
-#: src/routes/_authenticated/app/$appId.tsx:438
+#: ../../../lib/web/src/components/restore-banner.tsx:80
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Hesabê we ji {source} hat vir veguheztin. Heya ku hûn wê li wir jênebin, peyam û agahdarî dikarin gihîjin her du servaran, hin naveroka we ji serverê kevn tê dayîn û şopîner dibe ku çend hûrdeman hewce bikin ku we li vir bibînin."
+
+#: src/routes/_authenticated/app/$appId.tsx:407
 msgid "Your personal version override"
 msgstr "Guhertoya te ya kesane"
 
@@ -1496,6 +1578,6 @@ msgstr "Guhertoya te ya kesane"
 msgid "Your preference"
 msgstr "Tercîha te"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Your Version"
 msgstr "Guhertoya Te"

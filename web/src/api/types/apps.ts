@@ -31,6 +31,7 @@ export interface Track {
 
 export interface Permission {
   permission: string
+  name: string
   granted: boolean
   restricted: boolean
   admin: boolean
@@ -38,4 +39,18 @@ export interface Permission {
 
 export interface AppPermissions {
   permissions: Permission[]
+}
+
+// One entry of the full permission catalog returned by /apps/-/permissions/catalog.
+// The catalog is the source of truth for which permissions exist, their
+// translated names, and their security levels.
+export interface PermissionCatalogEntry {
+  permission: string
+  name: string
+  restricted: boolean
+  admin: boolean
+}
+
+export interface PermissionCatalog {
+  permissions: PermissionCatalogEntry[]
 }

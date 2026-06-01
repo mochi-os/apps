@@ -40,6 +40,7 @@ import {
 } from '@/hooks/useVersions'
 import {
   useAppPermissions,
+  usePermissionCatalog,
   useSetPermission,
 } from '@/hooks/usePermissions'
 import type { Permission } from '@/api/types/apps'
@@ -57,39 +58,6 @@ export const Route = createFileRoute('/_authenticated/app/$appId')({
   },
 })
 
-// All available permissions. Labels are returned via a function so the
-// translations are resolved at render time (and re-resolved on locale change).
-function buildAllPermissions(t: (descriptor: TemplateStringsArray) => string) {
-  return [
-    { permission: 'account/read', restricted: false, label: t`Read connected accounts` },
-    { permission: 'account/manage', restricted: false, label: t`Manage connected accounts` },
-    { permission: 'account/ai', restricted: true, label: t`Use AI services` },
-    { permission: 'account/mcp', restricted: true, label: t`Use MCP services` },
-    { permission: 'account/notify', restricted: true, label: t`Send account notifications` },
-    { permission: 'group/manage', restricted: false, label: t`Manage groups` },
-    { permission: 'interests/read', restricted: false, label: t`Read interests` },
-    { permission: 'interests/write', restricted: false, label: t`Write interests` },
-    { permission: 'user/read', restricted: true, label: t`Read user data` },
-    { permission: 'setting/write', restricted: true, label: t`Modify system settings` },
-    { permission: 'permission/manage', restricted: true, label: t`Manage permissions` },
-    { permission: 'webpush/send', restricted: true, label: t`Send notifications` },
-  ]
-}
-
-function formatPermission(
-  permission: string,
-  t: (descriptor: TemplateStringsArray, ...values: unknown[]) => string,
-): string {
-  if (permission.startsWith('service/')) {
-    return t`Handle ${permission.slice(8)} service`
-  }
-  if (permission.startsWith('url:')) {
-    return t`Access ${permission.slice(4)}`
-  }
-  const found = buildAllPermissions(t).find((p) => p.permission === permission)
-  return found?.label || permission
-}
-
 function AppPage() {
   const { t } = useLingui()
   const { appId } = Route.useParams()
@@ -101,6 +69,7 @@ function AppPage() {
   // Prefetch versions and permissions data so tabs load instantly
   useAppVersions(appId)
   useAppPermissions(appId)
+  usePermissionCatalog()
 
   const setActiveTab = (newTab: TabType) => {
     void navigate({
@@ -457,6 +426,7 @@ function VersionsTab({ appId }: { appId: string }) {
 function PermissionsTab({ appId, appName }: { appId: string; appName: string }) {
   const { t } = useLingui()
   const { data, isLoading, error, refetch } = useAppPermissions(appId)
+  const { data: catalog } = usePermissionCatalog()
   const setPermission = useSetPermission()
   const [grantDialogOpen, setGrantDialogOpen] = useState(false)
   const [revokingPermission, setRevokingPermission] = useState<string | null>(null)
@@ -511,12 +481,12 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
 
   const grantedPermissions = (data?.permissions ?? [])
     .filter((p) => p.granted && !p.permission.startsWith('_'))
-    .sort((a, b) => naturalCompare(formatPermission(a.permission, t), formatPermission(b.permission, t)))
+    .sort((a, b) => naturalCompare(a.name, b.name))
 
   const grantedSet = new Set(grantedPermissions.map((p) => p.permission))
-  const availablePermissions = buildAllPermissions(t)
+  const availablePermissions = (catalog?.permissions ?? [])
     .filter((p) => !grantedSet.has(p.permission))
-    .sort((a, b) => naturalCompare(a.label, b.label))
+    .sort((a, b) => naturalCompare(a.name, b.name))
 
   return (
     <Section
@@ -552,7 +522,7 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
                     ) : (
                       <Shield className='text-primary h-4 w-4' />
                     )}
-                    <span className="font-medium">{p.label}</span>
+                    <span className="font-medium">{p.name}</span>
                   </div>
                   {grantingPermission === p.permission ? (
                     <Loader2 className='h-4 w-4 animate-spin' />
@@ -580,7 +550,7 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
               onRevoke={handleRevoke}
               isRevoking={revokingPermission === permission.permission}
               appName={appName}
-              canRevoke={!(appId === 'apps' && permission.permission === 'permission/manage')}
+              canRevoke={!(appId === 'apps' && permission.permission === 'permissions/manage')}
             />
           ))
         ) : (
@@ -622,7 +592,7 @@ function PermissionRow({
           <Shield className='text-primary h-4 w-4' />
         )}
         <div>
-          <p className="font-medium">{formatPermission(permission.permission, t)}</p>
+          <p className="font-medium">{permission.name}</p>
         </div>
       </div>
       {canRevoke && (
@@ -645,7 +615,7 @@ function PermissionRow({
             open={confirmOpen}
             onOpenChange={setConfirmOpen}
             title={t`Revoke permission?`}
-            desc={t`This will revoke the "${formatPermission(permission.permission, t)}" permission from ${appName}. The app may stop working correctly.`}
+            desc={t`This will revoke the "${permission.name}" permission from ${appName}. The app may stop working correctly.`}
             confirmText={t`Revoke permission`}
             destructive
             handleConfirm={() => onRevoke(permission.permission)}

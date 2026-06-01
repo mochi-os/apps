@@ -31,11 +31,11 @@ msgstr "{0} uppfærðar, {failed} mistókust"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} hefur verið sett upp."
 
-#: src/routes/_authenticated/app/$appId.tsx:389
+#: src/routes/_authenticated/app/$appId.tsx:358
 msgid "{track} (default, version {version})"
 msgstr "{track} (sjálfgefið, útgáfa {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:390
+#: src/routes/_authenticated/app/$appId.tsx:359
 msgid "{track} (version {version})"
 msgstr "{track} (útgáfa {version})"
 
@@ -137,7 +137,7 @@ msgid "All apps updated"
 msgstr "Öll forrit uppfærð"
 
 #: src/features/apps/index.tsx:141
-#: src/routes/_authenticated/app/$appId.tsx:119
+#: src/routes/_authenticated/app/$appId.tsx:88
 msgid "App"
 msgstr "Forrit"
 
@@ -150,7 +150,7 @@ msgstr "Forritsaðgerðir"
 msgid "App information"
 msgstr "Forritsupplýsingar"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:182
 msgid "App information and configuration"
 msgstr "Upplýsingar og stillingar forrits"
 
@@ -161,12 +161,12 @@ msgstr "Upplýsingar og stillingar forrits"
 msgid "App installed"
 msgstr "Forrit uppsett"
 
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:121
 msgid "App not found"
 msgstr "Forrit fannst ekki"
 
-#: src/routes/_authenticated/app/$appId.tsx:216
+#: src/routes/_authenticated/app/$appId.tsx:185
 msgid "Application ID"
 msgstr "Forritaauðkenni"
 
@@ -185,6 +185,10 @@ msgstr "Ertu viss um að þú viljir skrá þig út? Þú þarft að skrá þig 
 msgid "Asc"
 msgstr "Hækkandi"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Auðkennisnúmer"
+
 #: src/features/apps/components/install-dialog.tsx:73
 msgid "Available version:"
 msgstr "Tiltæk útgáfa:"
@@ -202,9 +206,9 @@ msgstr "Tiltækt, en ekki uppsett"
 msgid "Back"
 msgstr "Til baka"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:165
+#: src/routes/_authenticated/app/$appId.tsx:96
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:134
 msgid "Back to apps"
 msgstr "Til baka í forrit"
 
@@ -219,6 +223,7 @@ msgid "Boost interest"
 msgstr "Auka áhuga"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -230,15 +235,15 @@ msgstr "Auka áhuga"
 #: src/features/apps/index.tsx:516
 #: src/features/apps/index.tsx:556
 #: src/features/apps/index.tsx:605
-#: src/routes/_authenticated/app/$appId.tsx:567
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Cancel"
 msgstr "Hætta við"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Flokkur fyrir þessa tilkynningu"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Breyta flokki tilkynningar"
 
@@ -368,6 +373,10 @@ msgstr "Samhengisupplýsingar og smáatriði."
 msgid "Continue"
 msgstr "Halda áfram"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Halda áfram með {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Afrita"
@@ -380,7 +389,19 @@ msgstr "Ekki tókst að setja forritið upp."
 msgid "Could not load this document. Please try again later."
 msgstr "Ekki tókst að hlaða þessu skjali. Reyndu aftur síðar."
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Ekki tókst að senda kóðann. Reyndu aftur."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Ekki tókst að hefja endurauðkenningu. Reyndu aftur."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Ekki tókst að staðfesta með þeim reikningi. Reyndu aftur."
+
+#: src/routes/_authenticated/app/$appId.tsx:195
 msgid "Current Version"
 msgstr "Núverandi útgáfa"
 
@@ -411,26 +432,30 @@ msgstr "Sjálfgefið"
 msgid "Default AI account"
 msgstr "Sjálfgefinn gervigreindarreikningur"
 
-#: src/routes/_authenticated/app/$appId.tsx:447
+#: src/routes/_authenticated/app/$appId.tsx:416
 msgid "Default for all users"
 msgstr "Sjálfgefið fyrir alla notendur"
 
-#: src/routes/_authenticated/app/$appId.tsx:446
+#: src/routes/_authenticated/app/$appId.tsx:415
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Sjálfgefið fyrir alla notendur (útgáfa {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:312
 msgid "Default for all users updated"
 msgstr "Sjálfgefið fyrir alla notendur uppfært"
 
-#: src/routes/_authenticated/app/$appId.tsx:430
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Default track"
 msgstr "Sjálfgefin rás"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:429
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Default track (version {0})"
 msgstr "Sjálfgefin rás (útgáfa {0})"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:88
+msgid "Delete your account on the old server"
+msgstr "Eyddu reikningnum þínum á gamla þjóninum"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -459,6 +484,10 @@ msgstr "Þróunarforrit"
 msgid "Direction"
 msgstr "Stefna"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:71
+msgid "Dismiss"
+msgstr "Hafna"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Sýnir hliðarstiku farsíma."
@@ -471,9 +500,21 @@ msgstr "Hlaða niður"
 msgid "Dyslexia-friendly"
 msgstr "Lesblinduvænt"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Tölvupóstkóði"
+
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Enabled Services"
 msgstr "Virk þjónusta"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Sláðu inn kóðann úr tölvupóstinum þínum"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Sláðu inn auðkenniskóðann þinn"
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -491,7 +532,7 @@ msgstr "Mjög stórt"
 msgid "Failed to add account"
 msgstr "Tókst ekki að bæta við reikningi"
 
-#: src/routes/_authenticated/app/$appId.tsx:493
+#: src/routes/_authenticated/app/$appId.tsx:463
 msgid "Failed to grant permission"
 msgstr "Tókst ekki að veita heimild"
 
@@ -499,7 +540,7 @@ msgstr "Tókst ekki að veita heimild"
 msgid "Failed to remove account"
 msgstr "Tókst ekki að fjarlægja reikning"
 
-#: src/routes/_authenticated/app/$appId.tsx:475
+#: src/routes/_authenticated/app/$appId.tsx:445
 msgid "Failed to revoke permission"
 msgstr "Tókst ekki að afturkalla heimild"
 
@@ -507,16 +548,16 @@ msgstr "Tókst ekki að afturkalla heimild"
 msgid "Failed to send verification code"
 msgstr "Tókst ekki að senda staðfestingarkóða"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Tókst ekki að uppfæra flokk"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:315
 msgid "Failed to update default"
 msgstr "Tókst ekki að uppfæra sjálfgefið gildi"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:326
+#: src/routes/_authenticated/app/$appId.tsx:295
 msgid "Failed to update preference"
 msgstr "Tókst ekki að uppfæra kjör"
 
@@ -528,7 +569,7 @@ msgstr "Tókst ekki að uppfæra sjálfgefið kerfisgildi"
 msgid "File:"
 msgstr "Skrá:"
 
-#: src/routes/_authenticated/app/$appId.tsx:221
+#: src/routes/_authenticated/app/$appId.tsx:190
 msgid "Fingerprint"
 msgstr "Fingrafar"
 
@@ -537,6 +578,10 @@ msgstr "Fingrafar"
 #: src/features/apps/components/install-dialog.tsx:78
 msgid "Fingerprint:"
 msgstr "Fingrafar:"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:77
+msgid "Finish moving your account"
+msgstr "Kláraðu að færa reikninginn þinn"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -592,15 +637,15 @@ msgstr "Fara á síðu {pageNumber}"
 msgid "Go to previous page"
 msgstr "Fara á fyrri síðu"
 
-#: src/routes/_authenticated/app/$appId.tsx:531
+#: src/routes/_authenticated/app/$appId.tsx:501
 msgid "Grant"
 msgstr "Veita"
 
-#: src/routes/_authenticated/app/$appId.tsx:536
+#: src/routes/_authenticated/app/$appId.tsx:506
 msgid "Grant permission"
 msgstr "Veita heimild"
 
-#: src/routes/_authenticated/app/$appId.tsx:591
+#: src/routes/_authenticated/app/$appId.tsx:561
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Veita heimildir svo þetta forrit geti nálgast kerfisaðgerðir"
 
@@ -627,11 +672,11 @@ msgstr "Heim"
 msgid "Hot"
 msgstr "Heitt"
 
-#: src/routes/_authenticated/app/$appId.tsx:251
+#: src/routes/_authenticated/app/$appId.tsx:220
 msgid "HTTP Paths"
 msgstr "HTTP-slóðir"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:181
 msgid "Identity"
 msgstr "Auðkenni"
 
@@ -751,7 +796,7 @@ msgstr "Útskráning tókst"
 msgid "Logging out…"
 msgstr "Útskrái…"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "Manage capabilities granted to this application"
 msgstr "Stjórna heimildum sem veittar eru þessu forriti"
 
@@ -841,11 +886,11 @@ msgstr "Engin samsvarandi forrit"
 msgid "No paths configured."
 msgstr "Engar slóðir stilltar."
 
-#: src/routes/_authenticated/app/$appId.tsx:590
+#: src/routes/_authenticated/app/$appId.tsx:560
 msgid "No permissions granted"
 msgstr "Engin leyfi veitt"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "No permissions granted to this app"
 msgstr "Engar heimildir veittar þessu forriti"
 
@@ -874,7 +919,7 @@ msgstr "Engar þjónustur stilltar."
 msgid "No time zone found."
 msgstr "Ekkert tímabelti fannst."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Engin færsla um efni ennþá — reyndu aftur eftir næstu tilkynningu."
 
@@ -896,7 +941,7 @@ msgstr "Ekkert"
 msgid "Normal"
 msgstr "Venjulegt"
 
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:333
 msgid "Not versioned"
 msgstr "Ekki útgáfumerkt"
 
@@ -936,6 +981,14 @@ msgstr "Annað"
 msgid "Owner"
 msgstr "Eigandi"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "Aðgangslykill"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Staðfesting aðgangslykils mistókst. Reyndu aftur."
+
 #: src/features/apps/index.tsx:544
 msgid "Paste the install link:"
 msgstr "Límdu uppsetningartengilinn:"
@@ -953,15 +1006,15 @@ msgstr "Slóðabeining"
 msgid "Paths"
 msgstr "Slóðir"
 
-#: src/routes/_authenticated/app/$appId.tsx:488
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Permission granted"
 msgstr "Leyfi veitt"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Permission revoked"
 msgstr "Leyfi afturkallað"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Permissions"
 msgstr "Leyfi"
 
@@ -973,7 +1026,7 @@ msgstr "Sláðu inn auðkenni forrits"
 msgid "Preference updated"
 msgstr "Kjörstilling uppfærð"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Preferred Version"
 msgstr "Æskilega útgáfa"
 
@@ -991,9 +1044,13 @@ msgstr "Friðhelgi"
 msgid "Profile"
 msgstr "Síða"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:204
 msgid "Provided Classes"
 msgstr "Útvegaðir flokkar"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:96
+msgid "Re-link your accounts on this server"
+msgstr "Tengdu reikninga þína aftur á þessum þjóni"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -1041,6 +1098,10 @@ msgstr "Fjarlægja áhuga"
 msgid "Removed {0} unused version{1}"
 msgstr "Fjarlægði {0} ónotaða útgáfu{1}"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Senda tölvupóst aftur"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1050,15 +1111,15 @@ msgstr "Endurstilla"
 msgid "Reset all settings to default values"
 msgstr "Endurstilla allar stillingar á sjálfgefin gildi"
 
-#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:612
 msgid "Revoke"
 msgstr "Afturkalla"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:619
 msgid "Revoke permission"
 msgstr "Afturkalla heimild"
 
-#: src/routes/_authenticated/app/$appId.tsx:647
+#: src/routes/_authenticated/app/$appId.tsx:617
 msgid "Revoke permission?"
 msgstr "Afturkalla heimild?"
 
@@ -1112,7 +1173,7 @@ msgstr "Leita..."
 msgid "Searching..."
 msgstr "Leita..."
 
-#: src/routes/_authenticated/app/$appId.tsx:538
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "Select a capability to grant to {appName}."
 msgstr "Veldu möguleika til að veita {appName}."
 
@@ -1148,13 +1209,17 @@ msgstr "Veldu stefnu vefsvæðis"
 msgid "Select theme preference"
 msgstr "Veldu þemastillingu"
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "Select which version of this app to use"
 msgstr "Veldu hvaða útgáfu af þessu forriti á að nota"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:95
 msgid "Send again"
 msgstr "Senda aftur"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Senda tölvupóst"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
@@ -1241,7 +1306,7 @@ msgstr "Kerfi"
 msgid "System default"
 msgstr "Sjálfgefið kerfi"
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "System Default"
 msgstr "Sjálfgefið kerfi"
 
@@ -1257,7 +1322,7 @@ msgstr "Merki"
 msgid "Teams/Apps"
 msgstr "Teymi/Forrit"
 
-#: src/routes/_authenticated/app/$appId.tsx:232
+#: src/routes/_authenticated/app/$appId.tsx:201
 msgid "Technical Capabilities"
 msgstr "Tæknigeta"
 
@@ -1266,16 +1331,20 @@ msgstr "Tæknigeta"
 msgid "Terms and conditions"
 msgstr "Skilmálar og skilyrði"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Þessi kóði er rangur eða útrunninn."
+
 #: src/features/apps/index.tsx:116
 #: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "Forritið hefur verið uppsett með góðum árangri."
 
-#: src/routes/_authenticated/app/$appId.tsx:153
+#: src/routes/_authenticated/app/$appId.tsx:122
 msgid "The requested app could not be found."
 msgstr "Umbeðna forritið fannst ekki."
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "The version used by users who haven't made a choice"
 msgstr "Útgáfan sem notuð er af notendum sem hafa ekki valið"
 
@@ -1287,7 +1356,7 @@ msgstr "Þema"
 msgid "Theme Settings"
 msgstr "Þemastillingar"
 
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:334
 msgid "This app does not have version management"
 msgstr "Þetta forrit hefur ekki útgáfustjórnun"
 
@@ -1295,8 +1364,8 @@ msgstr "Þetta forrit hefur ekki útgáfustjórnun"
 msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
 msgstr "Þetta forrit er sett upp beint frá útgefanda sínum og hefur ekki verið skoðað. Það gæti verið spilliforrit."
 
-#. placeholder {0}: formatPermission(permission.permission, t)
-#: src/routes/_authenticated/app/$appId.tsx:648
+#. placeholder {0}: permission.name
+#: src/routes/_authenticated/app/$appId.tsx:618
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Þetta mun afturkalla \"{0}\" heimildina frá {appName}. Forritið gæti hætt að virka rétt."
 
@@ -1330,7 +1399,7 @@ msgid "Top"
 msgstr "Efst"
 
 #: src/features/apps/index.tsx:680
-#: src/routes/_authenticated/app/$appId.tsx:384
+#: src/routes/_authenticated/app/$appId.tsx:353
 msgid "Track"
 msgstr "Rás"
 
@@ -1382,7 +1451,7 @@ msgstr "Ekki tókst að hlaða útgáfuupplýsingum"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Ekki tókst að endurbeina á innskráningu. Reyndu aftur."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Ekki úthlutað"
 
@@ -1422,6 +1491,10 @@ msgstr "Uppfæri..."
 msgid "Use system default"
 msgstr "Nota sjálfgefið kerfis"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Notaðu aðgangslykilinn þinn"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
 msgstr "Notandi"
@@ -1438,6 +1511,7 @@ msgstr "Sannprófunarkóði sendur"
 msgid "Verification failed"
 msgstr "Sannprófun mistókst"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1447,7 +1521,7 @@ msgstr "Sannprófa"
 msgid "Verify email address"
 msgstr "Sannprófa netfang"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:367
 msgid "Version"
 msgstr "Útgáfa"
 
@@ -1456,13 +1530,17 @@ msgstr "Útgáfa"
 msgid "Version {0}"
 msgstr "Útgáfa {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:292
 msgid "Version changed"
 msgstr "Útgáfu breytt"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "Version Management"
 msgstr "Útgáfustjórnun"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Smámynd myndbands"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1488,7 +1566,11 @@ msgstr "Vefsvæðið er í viðhaldi!"
 msgid "Wednesday"
 msgstr "Miðvikudagur"
 
-#: src/routes/_authenticated/app/$appId.tsx:438
+#: ../../../lib/web/src/components/restore-banner.tsx:80
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Reikningurinn þinn var fluttur hingað frá {source}. Þar til þú eyðir honum þar, geta skilaboð og tilkynningar náð til beggja þjóna, hluti af efni þínu heldur áfram að vera þjónað af gamla þjóninum og fylgjendur gætu þurft nokkrar mínútur að finna þig hér."
+
+#: src/routes/_authenticated/app/$appId.tsx:407
 msgid "Your personal version override"
 msgstr "Persónuleg útgáfu-undantekning þín"
 
@@ -1496,6 +1578,6 @@ msgstr "Persónuleg útgáfu-undantekning þín"
 msgid "Your preference"
 msgstr "Stilling þín"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Your Version"
 msgstr "Útgáfan þín"

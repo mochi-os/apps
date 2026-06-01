@@ -31,11 +31,11 @@ msgstr "{0} an sabunta, {failed} sun gaza"
 msgid "{0} v{1} has been installed."
 msgstr "An shigar da {0} v{1}."
 
-#: src/routes/_authenticated/app/$appId.tsx:389
+#: src/routes/_authenticated/app/$appId.tsx:358
 msgid "{track} (default, version {version})"
 msgstr "{track} (tsoho, sigar {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:390
+#: src/routes/_authenticated/app/$appId.tsx:359
 msgid "{track} (version {version})"
 msgstr "{track} (sigar {version})"
 
@@ -137,7 +137,7 @@ msgid "All apps updated"
 msgstr "An sabunta duk apps"
 
 #: src/features/apps/index.tsx:141
-#: src/routes/_authenticated/app/$appId.tsx:119
+#: src/routes/_authenticated/app/$appId.tsx:88
 msgid "App"
 msgstr "App"
 
@@ -150,7 +150,7 @@ msgstr "Ayyukan app"
 msgid "App information"
 msgstr "Bayanin app"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:182
 msgid "App information and configuration"
 msgstr "Bayani da saiti na app"
 
@@ -161,12 +161,12 @@ msgstr "Bayani da saiti na app"
 msgid "App installed"
 msgstr "An shigar da app"
 
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:121
 msgid "App not found"
 msgstr "Ba a sami app ba"
 
-#: src/routes/_authenticated/app/$appId.tsx:216
+#: src/routes/_authenticated/app/$appId.tsx:185
 msgid "Application ID"
 msgstr "Application ID"
 
@@ -185,6 +185,10 @@ msgstr "Ka tabbata kana son fita? Za ka buƙaci shiga kuma don shiga asusunka."
 msgid "Asc"
 msgstr "Asc"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Code na authenticator"
+
 #: src/features/apps/components/install-dialog.tsx:73
 msgid "Available version:"
 msgstr "Sigar da ake da ita:"
@@ -202,9 +206,9 @@ msgstr "Ana samu, amma ba a shigar ba"
 msgid "Back"
 msgstr "Komawa"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:165
+#: src/routes/_authenticated/app/$appId.tsx:96
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:134
 msgid "Back to apps"
 msgstr "Komawa ga apps"
 
@@ -219,6 +223,7 @@ msgid "Boost interest"
 msgstr "Ƙara sha'awa"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -230,15 +235,15 @@ msgstr "Ƙara sha'awa"
 #: src/features/apps/index.tsx:516
 #: src/features/apps/index.tsx:556
 #: src/features/apps/index.tsx:605
-#: src/routes/_authenticated/app/$appId.tsx:567
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Cancel"
 msgstr "Soke"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Rukuni don wannan sanarwa"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Sauya rukunin sanarwa"
 
@@ -368,6 +373,10 @@ msgstr "Bayanan da suka shafi mahallin da cikakkun bayanai."
 msgid "Continue"
 msgstr "Ci gaba"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Ci gaba da {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Kwafi"
@@ -380,7 +389,19 @@ msgstr "Ba a iya shigar da manhajar ba."
 msgid "Could not load this document. Please try again later."
 msgstr "Ba a iya loda wannan takarda ba. Da fatan a sake gwadawa daga baya."
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "An kasa aika lambar. Don Allah a sake gwadawa."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "An kasa fara sake tantancewa. Don Allah a sake gwadawa."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "An kasa tabbatar da wannan asusun. Da fatan za a sake gwadawa."
+
+#: src/routes/_authenticated/app/$appId.tsx:195
 msgid "Current Version"
 msgstr "Sigar Yanzu"
 
@@ -411,26 +432,30 @@ msgstr "Default"
 msgid "Default AI account"
 msgstr "Default AI asusu"
 
-#: src/routes/_authenticated/app/$appId.tsx:447
+#: src/routes/_authenticated/app/$appId.tsx:416
 msgid "Default for all users"
 msgstr "Tsoho ga duk masu amfani"
 
-#: src/routes/_authenticated/app/$appId.tsx:446
+#: src/routes/_authenticated/app/$appId.tsx:415
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Tsoho ga duk masu amfani (sigar {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:312
 msgid "Default for all users updated"
 msgstr "An sabunta default ga duk masu amfani"
 
-#: src/routes/_authenticated/app/$appId.tsx:430
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Default track"
 msgstr "Tsohon hanya"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:429
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Default track (version {0})"
 msgstr "Tsohon hanya (sigar {0})"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:88
+msgid "Delete your account on the old server"
+msgstr "Goge asusu ka akan tsohon uwar garken"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -459,6 +484,10 @@ msgstr "Apps na ci gaba"
 msgid "Direction"
 msgstr "Hanya"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:71
+msgid "Dismiss"
+msgstr "Kau da shi"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Yana nuna sidebar na wayar hannu."
@@ -471,9 +500,21 @@ msgstr "Sauke"
 msgid "Dyslexia-friendly"
 msgstr "Mai dacewa da rashin karatu"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr ""
+
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Enabled Services"
 msgstr "Sabis ɗin da aka kunna"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Shigar da lambar daga imel ɗinka"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Shigar da lambar mai tantancewarka"
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -491,7 +532,7 @@ msgstr "Babba sosai"
 msgid "Failed to add account"
 msgstr "An gaza ƙara account"
 
-#: src/routes/_authenticated/app/$appId.tsx:493
+#: src/routes/_authenticated/app/$appId.tsx:463
 msgid "Failed to grant permission"
 msgstr "An gaza ba da izini"
 
@@ -499,7 +540,7 @@ msgstr "An gaza ba da izini"
 msgid "Failed to remove account"
 msgstr "An gaza cire account"
 
-#: src/routes/_authenticated/app/$appId.tsx:475
+#: src/routes/_authenticated/app/$appId.tsx:445
 msgid "Failed to revoke permission"
 msgstr "An gaza janye izini"
 
@@ -507,16 +548,16 @@ msgstr "An gaza janye izini"
 msgid "Failed to send verification code"
 msgstr "An gaza aika verification code"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "An gaza sabunta category"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:315
 msgid "Failed to update default"
 msgstr "An gaza sabunta default"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:326
+#: src/routes/_authenticated/app/$appId.tsx:295
 msgid "Failed to update preference"
 msgstr "An gaza sabunta preference"
 
@@ -528,7 +569,7 @@ msgstr "An gaza sabunta default na system"
 msgid "File:"
 msgstr "Fayil:"
 
-#: src/routes/_authenticated/app/$appId.tsx:221
+#: src/routes/_authenticated/app/$appId.tsx:190
 msgid "Fingerprint"
 msgstr "Sawun yatsa"
 
@@ -537,6 +578,10 @@ msgstr "Sawun yatsa"
 #: src/features/apps/components/install-dialog.tsx:78
 msgid "Fingerprint:"
 msgstr "Hatsi:"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:77
+msgid "Finish moving your account"
+msgstr "Kammala ƙaurar asusunka"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -592,15 +637,15 @@ msgstr "Je shafi {pageNumber}"
 msgid "Go to previous page"
 msgstr "Tafi shafi na baya"
 
-#: src/routes/_authenticated/app/$appId.tsx:531
+#: src/routes/_authenticated/app/$appId.tsx:501
 msgid "Grant"
 msgstr "Ba da"
 
-#: src/routes/_authenticated/app/$appId.tsx:536
+#: src/routes/_authenticated/app/$appId.tsx:506
 msgid "Grant permission"
 msgstr "Ba da izini"
 
-#: src/routes/_authenticated/app/$appId.tsx:591
+#: src/routes/_authenticated/app/$appId.tsx:561
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Ba da izini don ƙyale wannan app ya iya amfani da fasalin system"
 
@@ -627,11 +672,11 @@ msgstr "Gida"
 msgid "Hot"
 msgstr "Mai zafi"
 
-#: src/routes/_authenticated/app/$appId.tsx:251
+#: src/routes/_authenticated/app/$appId.tsx:220
 msgid "HTTP Paths"
 msgstr "HTTP Paths"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:181
 msgid "Identity"
 msgstr "Asali"
 
@@ -751,7 +796,7 @@ msgstr "An fita cikin nasara"
 msgid "Logging out…"
 msgstr "Ana fita…"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "Manage capabilities granted to this application"
 msgstr "Sarrafa damar da aka bai wa wannan aikace-aikacen"
 
@@ -841,11 +886,11 @@ msgstr "Babu apps masu daidai"
 msgid "No paths configured."
 msgstr "Babu hanyoyin da aka tsara."
 
-#: src/routes/_authenticated/app/$appId.tsx:590
+#: src/routes/_authenticated/app/$appId.tsx:560
 msgid "No permissions granted"
 msgstr "Ba a bada permissions ba"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "No permissions granted to this app"
 msgstr "Ba a ba da izini ga wannan app ba"
 
@@ -874,7 +919,7 @@ msgstr "Babu sabis da aka tsara."
 msgid "No time zone found."
 msgstr "Ba a sami time zone ba."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Babu rikodin topic tukuna — sake gwadawa bayan sanarwa ta gaba."
 
@@ -896,7 +941,7 @@ msgstr "Babu"
 msgid "Normal"
 msgstr "Na al'ada"
 
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:333
 msgid "Not versioned"
 msgstr "Ba a yi version ba"
 
@@ -936,6 +981,14 @@ msgstr "Sauran"
 msgid "Owner"
 msgstr "Mai shi"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "Maɓallin shiga"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Tantance maɓallin shiga ya gaza. Don Allah a sake gwadawa."
+
 #: src/features/apps/index.tsx:544
 msgid "Paste the install link:"
 msgstr "Liƙa link na shigarwa:"
@@ -953,15 +1006,15 @@ msgstr "Path routing"
 msgid "Paths"
 msgstr "Paths"
 
-#: src/routes/_authenticated/app/$appId.tsx:488
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Permission granted"
 msgstr "An bayar da izini"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Permission revoked"
 msgstr "An janye izini"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Permissions"
 msgstr "Izini"
 
@@ -973,7 +1026,7 @@ msgstr "Da fatan shigar da app ID"
 msgid "Preference updated"
 msgstr "An sabunta abin da kake so"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Preferred Version"
 msgstr "Sigar da ake so"
 
@@ -991,9 +1044,13 @@ msgstr "Sirri"
 msgid "Profile"
 msgstr "Profile"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:204
 msgid "Provided Classes"
 msgstr "Classes da aka bayar"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:96
+msgid "Re-link your accounts on this server"
+msgstr "Sake haɗa asusunka a wannan uwar garken"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -1041,6 +1098,10 @@ msgstr "Cire sha'awa"
 msgid "Removed {0} unused version{1}"
 msgstr "An cire {0} version{1} da ba a yi amfani ba"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Sake aika imel"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1050,15 +1111,15 @@ msgstr "Saiti"
 msgid "Reset all settings to default values"
 msgstr "Mayar da duk saituna zuwa ƙimar asali"
 
-#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:612
 msgid "Revoke"
 msgstr "Janyewa"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:619
 msgid "Revoke permission"
 msgstr "Soke izini"
 
-#: src/routes/_authenticated/app/$appId.tsx:647
+#: src/routes/_authenticated/app/$appId.tsx:617
 msgid "Revoke permission?"
 msgstr "Janye izini?"
 
@@ -1112,7 +1173,7 @@ msgstr "Bincika..."
 msgid "Searching..."
 msgstr "Ana bincike..."
 
-#: src/routes/_authenticated/app/$appId.tsx:538
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "Select a capability to grant to {appName}."
 msgstr "Zaɓi damar da za a bai wa {appName}."
 
@@ -1148,13 +1209,17 @@ msgstr "Zaɓi alkiblar shafin"
 msgid "Select theme preference"
 msgstr "Zaɓi zaɓin theme"
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "Select which version of this app to use"
 msgstr "Zaɓi wace sigar wannan app za a yi amfani"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:95
 msgid "Send again"
 msgstr "Aika kuma"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Aika email"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
@@ -1241,7 +1306,7 @@ msgstr "System"
 msgid "System default"
 msgstr "Default na system"
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "System Default"
 msgstr "Default na System"
 
@@ -1257,7 +1322,7 @@ msgstr "Tag"
 msgid "Teams/Apps"
 msgstr "Tawagogi/Apps"
 
-#: src/routes/_authenticated/app/$appId.tsx:232
+#: src/routes/_authenticated/app/$appId.tsx:201
 msgid "Technical Capabilities"
 msgstr "Iyawa na Fasaha"
 
@@ -1266,16 +1331,20 @@ msgstr "Iyawa na Fasaha"
 msgid "Terms and conditions"
 msgstr "Sharuɗɗa da yanayi"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Wannan lambar ba daidai ba ce ko kuma ta kare."
+
 #: src/features/apps/index.tsx:116
 #: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "An shigar da app cikin nasara."
 
-#: src/routes/_authenticated/app/$appId.tsx:153
+#: src/routes/_authenticated/app/$appId.tsx:122
 msgid "The requested app could not be found."
 msgstr "Ba a sami app ɗin da aka nema ba."
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "The version used by users who haven't made a choice"
 msgstr "Sigar da masu amfani waɗanda ba su yi zaɓi suke amfani da ita"
 
@@ -1287,7 +1356,7 @@ msgstr "Theme"
 msgid "Theme Settings"
 msgstr "Saitunan Theme"
 
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:334
 msgid "This app does not have version management"
 msgstr "Wannan app ba shi da gudanar da sigar"
 
@@ -1295,8 +1364,8 @@ msgstr "Wannan app ba shi da gudanar da sigar"
 msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
 msgstr "Wannan app yana shigar da kai tsaye daga mawallafin sa kuma ba a duba shi ba. Yana iya zama malware."
 
-#. placeholder {0}: formatPermission(permission.permission, t)
-#: src/routes/_authenticated/app/$appId.tsx:648
+#. placeholder {0}: permission.name
+#: src/routes/_authenticated/app/$appId.tsx:618
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Wannan zai soke izinin \"{0}\" daga {appName}. App ɗin na iya daina aiki yadda ya kamata."
 
@@ -1330,7 +1399,7 @@ msgid "Top"
 msgstr "Sama"
 
 #: src/features/apps/index.tsx:680
-#: src/routes/_authenticated/app/$appId.tsx:384
+#: src/routes/_authenticated/app/$appId.tsx:353
 msgid "Track"
 msgstr "Track"
 
@@ -1382,7 +1451,7 @@ msgstr "Ba a iya loda bayanin sigar"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Ba a iya tura zuwa login. Da fatan sake gwadawa."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Ba a sanya wa kowa"
 
@@ -1422,6 +1491,10 @@ msgstr "Ana sabuntawa..."
 msgid "Use system default"
 msgstr "Yi amfani da tsohon tsarin"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Yi amfani da maɓallin shiganka"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
 msgstr "Mai amfani"
@@ -1438,6 +1511,7 @@ msgstr "An aika lambar tabbatarwa"
 msgid "Verification failed"
 msgstr "Tabbatarwa ya gaza"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1447,7 +1521,7 @@ msgstr "Tabbatar"
 msgid "Verify email address"
 msgstr "Tabbatar da adireshin imel"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:367
 msgid "Version"
 msgstr "Sigar"
 
@@ -1456,13 +1530,17 @@ msgstr "Sigar"
 msgid "Version {0}"
 msgstr "Sigar {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:292
 msgid "Version changed"
 msgstr "An canza sigar"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "Version Management"
 msgstr "Gudanar da Sigar"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Ƙaramin hoton bidiyo"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1488,7 +1566,11 @@ msgstr "Shafin yana cikin kulawa!"
 msgid "Wednesday"
 msgstr "Laraba"
 
-#: src/routes/_authenticated/app/$appId.tsx:438
+#: ../../../lib/web/src/components/restore-banner.tsx:80
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "An ƙauri asusunka zuwa nan daga {source}. Sai ka goge shi a can, saƙonni da sanarwa na iya kai ga uwar garken biyu, wasu abubuwan ka suna ci gaba da samarwa daga tsohon uwar garken, kuma mabiyanka na iya ɗaukar 'yan mintoci don su same ka nan."
+
+#: src/routes/_authenticated/app/$appId.tsx:407
 msgid "Your personal version override"
 msgstr "Override na sigar na musamman"
 
@@ -1496,6 +1578,6 @@ msgstr "Override na sigar na musamman"
 msgid "Your preference"
 msgstr "Zaɓinka"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Your Version"
 msgstr "Sigar ku"

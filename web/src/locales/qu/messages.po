@@ -31,11 +31,11 @@ msgstr "{0} musuqchasqa, {failed} mana atikurqachu"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} installasqa kapun."
 
-#: src/routes/_authenticated/app/$appId.tsx:389
+#: src/routes/_authenticated/app/$appId.tsx:358
 msgid "{track} (default, version {version})"
 msgstr "{track} (default, version {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:390
+#: src/routes/_authenticated/app/$appId.tsx:359
 msgid "{track} (version {version})"
 msgstr "{track} (version {version})"
 
@@ -137,7 +137,7 @@ msgid "All apps updated"
 msgstr "Llapan apps musuqchasqa"
 
 #: src/features/apps/index.tsx:141
-#: src/routes/_authenticated/app/$appId.tsx:119
+#: src/routes/_authenticated/app/$appId.tsx:88
 msgid "App"
 msgstr "App"
 
@@ -150,7 +150,7 @@ msgstr "App ruwaykuna"
 msgid "App information"
 msgstr "App willariy"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:182
 msgid "App information and configuration"
 msgstr "App willariy hinaspa configuración"
 
@@ -161,12 +161,12 @@ msgstr "App willariy hinaspa configuración"
 msgid "App installed"
 msgstr "App churasqa"
 
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:121
 msgid "App not found"
 msgstr "App mana tarisqa"
 
-#: src/routes/_authenticated/app/$appId.tsx:216
+#: src/routes/_authenticated/app/$appId.tsx:185
 msgid "Application ID"
 msgstr "Aplicación ID"
 
@@ -185,6 +185,10 @@ msgstr "Lluqsiyta munanki? Kutichiy yaykunaykipaq cuenta-yki-pi."
 msgid "Asc"
 msgstr "Wichaymanta"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Authenticator código"
+
 #: src/features/apps/components/install-dialog.tsx:73
 msgid "Available version:"
 msgstr "Atikuq version:"
@@ -202,9 +206,9 @@ msgstr "Atikuq, ichaqa mana churasqachu"
 msgid "Back"
 msgstr "Kutichiy"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:165
+#: src/routes/_authenticated/app/$appId.tsx:96
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:134
 msgid "Back to apps"
 msgstr "Apps-man kutichiy"
 
@@ -219,6 +223,7 @@ msgid "Boost interest"
 msgstr "Munay yapay"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -230,15 +235,15 @@ msgstr "Munay yapay"
 #: src/features/apps/index.tsx:516
 #: src/features/apps/index.tsx:556
 #: src/features/apps/index.tsx:605
-#: src/routes/_authenticated/app/$appId.tsx:567
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Cancel"
 msgstr "Mana ruway"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Kay willaykuna categoría"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Willaykuna categoría tikray"
 
@@ -368,6 +373,10 @@ msgstr "Contextual willariy hinaspa willariykuna."
 msgid "Continue"
 msgstr "Qatiy"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "{label} wan catiy"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Copiay"
@@ -380,7 +389,19 @@ msgstr "Aplikasyonta mana sipiyta atikurqanchu."
 msgid "Could not load this document. Please try again later."
 msgstr "Kay documento mana cargasqa karqachu. Qhipaman ruway."
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Codigoqa mana apachiy atikurqanchu. Ama hina kaspa watiqmanta ruway."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Kutin yaykuy mana qallariy atikurqanchu. Ama hina kaspa watiqmanta ruway."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Chay cuentawanqa mana takyachiyta atikurqachu. Ama hina kaspa watiqmanta llamk'apuy."
+
+#: src/routes/_authenticated/app/$appId.tsx:195
 msgid "Current Version"
 msgstr "Kunan Version"
 
@@ -411,26 +432,30 @@ msgstr "Default"
 msgid "Default AI account"
 msgstr "Default AI cuenta"
 
-#: src/routes/_authenticated/app/$appId.tsx:447
+#: src/routes/_authenticated/app/$appId.tsx:416
 msgid "Default for all users"
 msgstr "Llapan runakunapaq default"
 
-#: src/routes/_authenticated/app/$appId.tsx:446
+#: src/routes/_authenticated/app/$appId.tsx:415
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Llapan runakunapaq default (version {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:312
 msgid "Default for all users updated"
 msgstr "Llapan runakunapaq default musuqchasqa"
 
-#: src/routes/_authenticated/app/$appId.tsx:430
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Default track"
 msgstr "Default track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:429
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Default track (version {0})"
 msgstr "Default track (version {0})"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:88
+msgid "Delete your account on the old server"
+msgstr "Ñawpaq serverpi cuenta-ykita qichuy"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -459,6 +484,10 @@ msgstr "Wiñasqa apps"
 msgid "Direction"
 msgstr "Imayna"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:71
+msgid "Dismiss"
+msgstr "Wischuy"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Movil sidebar qhawachin."
@@ -471,9 +500,21 @@ msgstr "Uray chaskiy"
 msgid "Dyslexia-friendly"
 msgstr "Disleksia llamkaywanmi"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Email código"
+
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Enabled Services"
 msgstr "Kallpachasqa Servicio"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Email nikiymanta hamuq código yaykuchiy"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Takyachiqniykiq codigonta yaykuchiy"
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -491,7 +532,7 @@ msgstr "Sinchi hatun"
 msgid "Failed to add account"
 msgstr "Mana cuentata yapayta atinchu"
 
-#: src/routes/_authenticated/app/$appId.tsx:493
+#: src/routes/_authenticated/app/$appId.tsx:463
 msgid "Failed to grant permission"
 msgstr "Mana permisota haywayta atinchu"
 
@@ -499,7 +540,7 @@ msgstr "Mana permisota haywayta atinchu"
 msgid "Failed to remove account"
 msgstr "Mana cuentata pichayta atinchu"
 
-#: src/routes/_authenticated/app/$appId.tsx:475
+#: src/routes/_authenticated/app/$appId.tsx:445
 msgid "Failed to revoke permission"
 msgstr "Mana permisota qichuyta atinchu"
 
@@ -507,16 +548,16 @@ msgstr "Mana permisota qichuyta atinchu"
 msgid "Failed to send verification code"
 msgstr "Mana sut'inchay códigota apachiyta atinchu"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Mana categoríata musuqyachiyta atinchu"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:315
 msgid "Failed to update default"
 msgstr "Mana ñawpaq churasqata musuqyachiyta atinchu"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:326
+#: src/routes/_authenticated/app/$appId.tsx:295
 msgid "Failed to update preference"
 msgstr "Mana munakuyta musuqyachiyta atinchu"
 
@@ -528,7 +569,7 @@ msgstr "Mana sistema ñawpaq churasqata musuqyachiyta atinchu"
 msgid "File:"
 msgstr "Archivo:"
 
-#: src/routes/_authenticated/app/$appId.tsx:221
+#: src/routes/_authenticated/app/$appId.tsx:190
 msgid "Fingerprint"
 msgstr "Fingerprint"
 
@@ -537,6 +578,10 @@ msgstr "Fingerprint"
 #: src/features/apps/components/install-dialog.tsx:78
 msgid "Fingerprint:"
 msgstr "Fingerprint:"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:77
+msgid "Finish moving your account"
+msgstr "Cuenta-ykita apaykachay tukuchiy"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -592,15 +637,15 @@ msgstr "{pageNumber} p’anqaman riy"
 msgid "Go to previous page"
 msgstr "Ñawpa paginaman riy"
 
-#: src/routes/_authenticated/app/$appId.tsx:531
+#: src/routes/_authenticated/app/$appId.tsx:501
 msgid "Grant"
 msgstr "Haywaykuy"
 
-#: src/routes/_authenticated/app/$appId.tsx:536
+#: src/routes/_authenticated/app/$appId.tsx:506
 msgid "Grant permission"
 msgstr "Permisota haywaykuy"
 
-#: src/routes/_authenticated/app/$appId.tsx:591
+#: src/routes/_authenticated/app/$appId.tsx:561
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Kay app sistema ruraykunaman yaykunanpaq permisokunata haywaykuy"
 
@@ -627,11 +672,11 @@ msgstr "Wasi"
 msgid "Hot"
 msgstr "Q'uñi"
 
-#: src/routes/_authenticated/app/$appId.tsx:251
+#: src/routes/_authenticated/app/$appId.tsx:220
 msgid "HTTP Paths"
 msgstr "HTTP Ñankuna"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:181
 msgid "Identity"
 msgstr "Identity"
 
@@ -751,7 +796,7 @@ msgstr "Allinta lluqsirqun"
 msgid "Logging out…"
 msgstr "Lluqsichkan…"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "Manage capabilities granted to this application"
 msgstr "Kay aplicacionman haywasqa atiykunata kamachiy"
 
@@ -841,11 +886,11 @@ msgstr "Mana tupaq appkuna"
 msgid "No paths configured."
 msgstr "Mana ñankuna churasqa."
 
-#: src/routes/_authenticated/app/$appId.tsx:590
+#: src/routes/_authenticated/app/$appId.tsx:560
 msgid "No permissions granted"
 msgstr "Mana permisokuna qusqa"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "No permissions granted to this app"
 msgstr "Kay appman mana permisokuna qusqa"
 
@@ -874,7 +919,7 @@ msgstr "Mana servicekuna churasqa."
 msgid "No time zone found."
 msgstr "Mana time zone tarisqachu."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Manaraq topic registro — qatiqnin notificacionmanta watiqmanta ruway."
 
@@ -896,7 +941,7 @@ msgstr "Mana"
 msgid "Normal"
 msgstr "Walliq"
 
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:333
 msgid "Not versioned"
 msgstr "Mana versionasqa"
 
@@ -936,6 +981,14 @@ msgstr "Huk"
 msgid "Owner"
 msgstr "Apuq"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr ""
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Yaykuna llaveq takyachiynin mana atikurqanchu. Ama hina kaspa watiqmanta ruway."
+
 #: src/features/apps/index.tsx:544
 msgid "Paste the install link:"
 msgstr "Sipiy link-ta churay:"
@@ -953,15 +1006,15 @@ msgstr "Ñan ruteo"
 msgid "Paths"
 msgstr "Ñankuna"
 
-#: src/routes/_authenticated/app/$appId.tsx:488
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Permission granted"
 msgstr "Permiso qusqa"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Permission revoked"
 msgstr "Permiso qichusqa"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Permissions"
 msgstr "Permisokuna"
 
@@ -973,7 +1026,7 @@ msgstr "Ama hina, app IDta churay"
 msgid "Preference updated"
 msgstr "Munay musuqchasqa"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Preferred Version"
 msgstr "Munay version"
 
@@ -991,9 +1044,13 @@ msgstr "Pakaynin"
 msgid "Profile"
 msgstr "Perfil"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:204
 msgid "Provided Classes"
 msgstr "Qusqa Clasekuna"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:96
+msgid "Re-link your accounts on this server"
+msgstr "Kay serverpi cuenta-ykikunata watiqmanta huñuy"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -1041,6 +1098,10 @@ msgstr "Munayta qichuy"
 msgid "Removed {0} unused version{1}"
 msgstr "{0} mana llamk'achisqa version qichusqa{1}"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Correota kutiy apachiy"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1050,15 +1111,15 @@ msgstr "Kutichiy"
 msgid "Reset all settings to default values"
 msgstr "Llapan configuracionkunata por defecto valoresman kutichiy"
 
-#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:612
 msgid "Revoke"
 msgstr "Qichuy"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:619
 msgid "Revoke permission"
 msgstr "Permisota qichuy"
 
-#: src/routes/_authenticated/app/$appId.tsx:647
+#: src/routes/_authenticated/app/$appId.tsx:617
 msgid "Revoke permission?"
 msgstr "Permisota qichuy?"
 
@@ -1112,7 +1173,7 @@ msgstr "Maskay..."
 msgid "Searching..."
 msgstr "Maskashan..."
 
-#: src/routes/_authenticated/app/$appId.tsx:538
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "Select a capability to grant to {appName}."
 msgstr "{appName}-man qonapaq capacityta akllay."
 
@@ -1148,13 +1209,17 @@ msgstr "Sitio direccionta akllay"
 msgid "Select theme preference"
 msgstr "Tema munayta akllay"
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "Select which version of this app to use"
 msgstr "Kay app mayqin versionta apaykachananta akllay"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:95
 msgid "Send again"
 msgstr "Watiqmanta apachiy"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Email apachiy"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
@@ -1241,7 +1306,7 @@ msgstr "Sistema"
 msgid "System default"
 msgstr "Sistema default"
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "System Default"
 msgstr "Sistema Default"
 
@@ -1257,7 +1322,7 @@ msgstr "Tag"
 msgid "Teams/Apps"
 msgstr "Huñukuna/Appkuna"
 
-#: src/routes/_authenticated/app/$appId.tsx:232
+#: src/routes/_authenticated/app/$appId.tsx:201
 msgid "Technical Capabilities"
 msgstr "Técnico Atiykuna"
 
@@ -1266,16 +1331,20 @@ msgstr "Técnico Atiykuna"
 msgid "Terms and conditions"
 msgstr "Condicionkuna"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Chay codigoqa mana allinchu utaq pisipasqañam."
+
 #: src/features/apps/index.tsx:116
 #: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "App allinta installasqa kapun."
 
-#: src/routes/_authenticated/app/$appId.tsx:153
+#: src/routes/_authenticated/app/$appId.tsx:122
 msgid "The requested app could not be found."
 msgstr "Mañasqa app mana tarisqachu."
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "The version used by users who haven't made a choice"
 msgstr "Mana akllasqa apaykachaqkuna apaykachasqa version"
 
@@ -1287,7 +1356,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Tema Wakichiykuna"
 
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:334
 msgid "This app does not have version management"
 msgstr "Kay appqa mana version managementniyuqchu"
 
@@ -1295,8 +1364,8 @@ msgstr "Kay appqa mana version managementniyuqchu"
 msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
 msgstr "Kay app publisherninmanta directamente installasqa, mana qhawasqachu. Malwarekuyta atin."
 
-#. placeholder {0}: formatPermission(permission.permission, t)
-#: src/routes/_authenticated/app/$appId.tsx:648
+#. placeholder {0}: permission.name
+#: src/routes/_authenticated/app/$appId.tsx:618
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Kayqa {appName}manta \"{0}\" permisota qichunqa. Appqa allinta llamkayta sayachinman."
 
@@ -1330,7 +1399,7 @@ msgid "Top"
 msgstr "Hawan"
 
 #: src/features/apps/index.tsx:680
-#: src/routes/_authenticated/app/$appId.tsx:384
+#: src/routes/_authenticated/app/$appId.tsx:353
 msgid "Track"
 msgstr "Track"
 
@@ -1382,7 +1451,7 @@ msgstr "Version willakuyta mana cargachiyta atikurqanchu"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Loginman mana tikrachiyta atikurqanchu. Ama hina kaspa kutimanta ruway."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Mana akllasqa"
 
@@ -1422,6 +1491,10 @@ msgstr "Musuqchachkan..."
 msgid "Use system default"
 msgstr "Sistema defaultta apaykachay"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Yaykuna llaveykita llamk'achiy"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
 msgstr "Apaykachaq"
@@ -1438,6 +1511,7 @@ msgstr "Qhawariy codigo apachisqa"
 msgid "Verification failed"
 msgstr "Qhawariy mana atikurqanchu"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1447,7 +1521,7 @@ msgstr "Qhaway"
 msgid "Verify email address"
 msgstr "Email direccionta qhaway"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:367
 msgid "Version"
 msgstr "Version"
 
@@ -1456,13 +1530,17 @@ msgstr "Version"
 msgid "Version {0}"
 msgstr "Version {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:292
 msgid "Version changed"
 msgstr "Version tikrasqa"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "Version Management"
 msgstr "Version Management"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Vidiyup uñanchanan"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1488,7 +1566,11 @@ msgstr "Website mantenimientopi kachkan!"
 msgid "Wednesday"
 msgstr "Quyllurchaw"
 
-#: src/routes/_authenticated/app/$appId.tsx:438
+#: ../../../lib/web/src/components/restore-banner.tsx:80
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Cuenta-yki {source} llaqtamanta kaypi churasqa karqan. Chaypeqa manaraj qichuykiptiyki, willakuykuna hinaspa sut'ichakuykuna iskay serverkunaman chayayta atinku, imaymayki wakin ñawpaq servermanta kamachikapusqanmi kachkan, hinaspa qhatiqniykim kaypi tarisunkaypaq huk minutokunata suyayta atinku."
+
+#: src/routes/_authenticated/app/$appId.tsx:407
 msgid "Your personal version override"
 msgstr "Personal version overrideniyki"
 
@@ -1496,6 +1578,6 @@ msgstr "Personal version overrideniyki"
 msgid "Your preference"
 msgstr "Munayniyki"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Your Version"
 msgstr "Versionniyki"

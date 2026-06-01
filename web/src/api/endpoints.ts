@@ -30,6 +30,7 @@ const endpoints = {
   // Permissions
   permissions: {
     list: '/apps/-/permissions/list',
+    catalog: '/apps/-/permissions/catalog',
     grant: '/apps/-/permissions/grant',
     revoke: '/apps/-/permissions/revoke',
     set: '/apps/-/permissions/set',

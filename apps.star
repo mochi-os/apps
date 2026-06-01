@@ -903,6 +903,10 @@ def action_permissions_list(a):
 	perms = mochi.permission.list(app_id)
 	a.json({"permissions": perms})
 
+def action_permissions_catalog(a):
+	"""List all defined permissions with their translated names and security levels"""
+	a.json({"permissions": mochi.permission.catalog()})
+
 def action_permissions_revoke(a):
 	"""Revoke a permission from an app"""
 	app_id = a.input("app")

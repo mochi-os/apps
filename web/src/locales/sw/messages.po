@@ -31,11 +31,11 @@ msgstr "{0} zimesasishwa, {failed} zimeshindwa"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} imesakinishwa."
 
-#: src/routes/_authenticated/app/$appId.tsx:389
+#: src/routes/_authenticated/app/$appId.tsx:358
 msgid "{track} (default, version {version})"
 msgstr "{track} (chaguo-msingi, toleo {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:390
+#: src/routes/_authenticated/app/$appId.tsx:359
 msgid "{track} (version {version})"
 msgstr "{track} (toleo {version})"
 
@@ -137,7 +137,7 @@ msgid "All apps updated"
 msgstr "Programu zote zimesasishwa"
 
 #: src/features/apps/index.tsx:141
-#: src/routes/_authenticated/app/$appId.tsx:119
+#: src/routes/_authenticated/app/$appId.tsx:88
 msgid "App"
 msgstr "Programu"
 
@@ -150,7 +150,7 @@ msgstr "Vitendo vya programu"
 msgid "App information"
 msgstr "Maelezo ya programu"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:182
 msgid "App information and configuration"
 msgstr "Maelezo na usanidi wa programu"
 
@@ -161,12 +161,12 @@ msgstr "Maelezo na usanidi wa programu"
 msgid "App installed"
 msgstr "Programu imesakinishwa"
 
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:121
 msgid "App not found"
 msgstr "Programu haijapatikana"
 
-#: src/routes/_authenticated/app/$appId.tsx:216
+#: src/routes/_authenticated/app/$appId.tsx:185
 msgid "Application ID"
 msgstr "Kitambulisho cha Programu"
 
@@ -185,6 +185,10 @@ msgstr "Una uhakika unataka kuondoka? Utahitaji kuingia tena kufikia akaunti yak
 msgid "Asc"
 msgstr "Pandisha"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Msimbo wa mthibitishaji"
+
 #: src/features/apps/components/install-dialog.tsx:73
 msgid "Available version:"
 msgstr "Toleo linalopatikana:"
@@ -202,9 +206,9 @@ msgstr "Inapatikana, lakini haijasakinishwa"
 msgid "Back"
 msgstr "Rudi"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:165
+#: src/routes/_authenticated/app/$appId.tsx:96
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:134
 msgid "Back to apps"
 msgstr "Rudi kwa programu"
 
@@ -219,6 +223,7 @@ msgid "Boost interest"
 msgstr "Ongeza mvuto"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -230,15 +235,15 @@ msgstr "Ongeza mvuto"
 #: src/features/apps/index.tsx:516
 #: src/features/apps/index.tsx:556
 #: src/features/apps/index.tsx:605
-#: src/routes/_authenticated/app/$appId.tsx:567
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Cancel"
 msgstr "Ghairi"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Kategoria ya arifa hii"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Badilisha kategoria ya arifa"
 
@@ -368,6 +373,10 @@ msgstr "Maelezo ya muktadha na undani."
 msgid "Continue"
 msgstr "Endelea"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Endelea na {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Nakili"
@@ -380,7 +389,19 @@ msgstr "Programu haikuweza kusakinishwa."
 msgid "Could not load this document. Please try again later."
 msgstr "Haikuweza kupakia hati hii. Tafadhali jaribu tena baadaye."
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Imeshindwa kutuma msimbo. Tafadhali jaribu tena."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Imeshindwa kuanza uthibitishaji upya. Tafadhali jaribu tena."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Imeshindwa kuthibitisha kwa akaunti hiyo. Tafadhali jaribu tena."
+
+#: src/routes/_authenticated/app/$appId.tsx:195
 msgid "Current Version"
 msgstr "Toleo la Sasa"
 
@@ -411,26 +432,30 @@ msgstr "Chaguo-msingi"
 msgid "Default AI account"
 msgstr "Akaunti chaguo-msingi ya AI"
 
-#: src/routes/_authenticated/app/$appId.tsx:447
+#: src/routes/_authenticated/app/$appId.tsx:416
 msgid "Default for all users"
 msgstr "Chaguo-msingi kwa watumiaji wote"
 
-#: src/routes/_authenticated/app/$appId.tsx:446
+#: src/routes/_authenticated/app/$appId.tsx:415
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Chaguo-msingi kwa watumiaji wote (toleo {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:312
 msgid "Default for all users updated"
 msgstr "Chaguo-msingi kwa watumiaji wote limesasishwa"
 
-#: src/routes/_authenticated/app/$appId.tsx:430
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Default track"
 msgstr "Wimbo chaguo-msingi"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:429
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Default track (version {0})"
 msgstr "Wimbo chaguo-msingi (toleo {0})"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:88
+msgid "Delete your account on the old server"
+msgstr "Futa akaunti yako kwenye seva ya zamani"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -459,6 +484,10 @@ msgstr "Programu za maendeleo"
 msgid "Direction"
 msgstr "Mwelekeo"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:71
+msgid "Dismiss"
+msgstr "Ondoa"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Huonyesha utepe wa simu."
@@ -471,9 +500,21 @@ msgstr "Pakua"
 msgid "Dyslexia-friendly"
 msgstr "Rahisi kwa dyslexia"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Msimbo wa barua pepe"
+
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Enabled Services"
 msgstr "Huduma Zilizowashwa"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Weka msimbo kutoka kwa barua pepe yako"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Weka msimbo wako wa kithibitishaji"
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -491,7 +532,7 @@ msgstr "Kubwa zaidi"
 msgid "Failed to add account"
 msgstr "Imeshindwa kuongeza akaunti"
 
-#: src/routes/_authenticated/app/$appId.tsx:493
+#: src/routes/_authenticated/app/$appId.tsx:463
 msgid "Failed to grant permission"
 msgstr "Imeshindwa kutoa ruhusa"
 
@@ -499,7 +540,7 @@ msgstr "Imeshindwa kutoa ruhusa"
 msgid "Failed to remove account"
 msgstr "Imeshindwa kuondoa akaunti"
 
-#: src/routes/_authenticated/app/$appId.tsx:475
+#: src/routes/_authenticated/app/$appId.tsx:445
 msgid "Failed to revoke permission"
 msgstr "Imeshindwa kufuta ruhusa"
 
@@ -507,16 +548,16 @@ msgstr "Imeshindwa kufuta ruhusa"
 msgid "Failed to send verification code"
 msgstr "Imeshindwa kutuma msimbo wa uthibitisho"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Imeshindwa kusasisha kategoria"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:315
 msgid "Failed to update default"
 msgstr "Imeshindwa kusasisha chaguo-msingi"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:326
+#: src/routes/_authenticated/app/$appId.tsx:295
 msgid "Failed to update preference"
 msgstr "Imeshindwa kusasisha pendeleo"
 
@@ -528,7 +569,7 @@ msgstr "Imeshindwa kusasisha chaguo-msingi la mfumo"
 msgid "File:"
 msgstr "Faili:"
 
-#: src/routes/_authenticated/app/$appId.tsx:221
+#: src/routes/_authenticated/app/$appId.tsx:190
 msgid "Fingerprint"
 msgstr "Alama ya kidole"
 
@@ -537,6 +578,10 @@ msgstr "Alama ya kidole"
 #: src/features/apps/components/install-dialog.tsx:78
 msgid "Fingerprint:"
 msgstr "Alama ya kidole:"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:77
+msgid "Finish moving your account"
+msgstr "Maliza kuhamisha akaunti yako"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -592,15 +637,15 @@ msgstr "Nenda ukurasa {pageNumber}"
 msgid "Go to previous page"
 msgstr "Nenda kwenye ukurasa uliopita"
 
-#: src/routes/_authenticated/app/$appId.tsx:531
+#: src/routes/_authenticated/app/$appId.tsx:501
 msgid "Grant"
 msgstr "Toa"
 
-#: src/routes/_authenticated/app/$appId.tsx:536
+#: src/routes/_authenticated/app/$appId.tsx:506
 msgid "Grant permission"
 msgstr "Toa ruhusa"
 
-#: src/routes/_authenticated/app/$appId.tsx:591
+#: src/routes/_authenticated/app/$appId.tsx:561
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Toa ruhusa kuruhusu programu hii kufikia vipengele vya mfumo"
 
@@ -627,11 +672,11 @@ msgstr "Nyumbani"
 msgid "Hot"
 msgstr "Moto"
 
-#: src/routes/_authenticated/app/$appId.tsx:251
+#: src/routes/_authenticated/app/$appId.tsx:220
 msgid "HTTP Paths"
 msgstr "Njia za HTTP"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:181
 msgid "Identity"
 msgstr "Utambulisho"
 
@@ -751,7 +796,7 @@ msgstr "Umetoka kwa ufanisi"
 msgid "Logging out…"
 msgstr "Inatoka…"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "Manage capabilities granted to this application"
 msgstr "Dhibiti uwezo uliotolewa kwa programu hii"
 
@@ -841,11 +886,11 @@ msgstr "Hakuna programu zinazoendana"
 msgid "No paths configured."
 msgstr "Hakuna njia zilizowekwa."
 
-#: src/routes/_authenticated/app/$appId.tsx:590
+#: src/routes/_authenticated/app/$appId.tsx:560
 msgid "No permissions granted"
 msgstr "Hakuna ruhusa zilizotolewa"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "No permissions granted to this app"
 msgstr "Hakuna ruhusa zilizotolewa kwa programu hii"
 
@@ -874,7 +919,7 @@ msgstr "Hakuna huduma zilizowekwa."
 msgid "No time zone found."
 msgstr "Hakuna saa za eneo zilizopatikana."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Hakuna rekodi ya mada bado — jaribu tena baada ya arifa inayofuata."
 
@@ -896,7 +941,7 @@ msgstr "Hakuna"
 msgid "Normal"
 msgstr "Kawaida"
 
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:333
 msgid "Not versioned"
 msgstr "Haijawekwa katika toleo"
 
@@ -936,6 +981,14 @@ msgstr "Nyingine"
 msgid "Owner"
 msgstr "Mmiliki"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "Pasiki"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Uthibitishaji wa ufunguo umeshindwa. Tafadhali jaribu tena."
+
 #: src/features/apps/index.tsx:544
 msgid "Paste the install link:"
 msgstr "Bandika kiungo cha kusakinisha:"
@@ -953,15 +1006,15 @@ msgstr "Uelekezaji wa njia"
 msgid "Paths"
 msgstr "Njia"
 
-#: src/routes/_authenticated/app/$appId.tsx:488
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Permission granted"
 msgstr "Ruhusa imetolewa"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Permission revoked"
 msgstr "Ruhusa imeondolewa"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Permissions"
 msgstr "Ruhusa"
 
@@ -973,7 +1026,7 @@ msgstr "Tafadhali ingiza kitambulisho cha programu"
 msgid "Preference updated"
 msgstr "Pendeleo limesasishwa"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Preferred Version"
 msgstr "Toleo unalopendelea"
 
@@ -991,9 +1044,13 @@ msgstr "Faragha"
 msgid "Profile"
 msgstr "Wasifu"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:204
 msgid "Provided Classes"
 msgstr "Madarasa Yaliyotolewa"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:96
+msgid "Re-link your accounts on this server"
+msgstr "Unganisha tena akaunti zako kwenye seva hii"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -1041,6 +1098,10 @@ msgstr "Ondoa shauku"
 msgid "Removed {0} unused version{1}"
 msgstr "Imeondolewa {0} toleo{1} lisilotumika"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Tuma barua pepe tena"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1050,15 +1111,15 @@ msgstr "Weka upya"
 msgid "Reset all settings to default values"
 msgstr "Weka upya mipangilio yote kwa thamani chaguo-msingi"
 
-#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:612
 msgid "Revoke"
 msgstr "Batilisha"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:619
 msgid "Revoke permission"
 msgstr "Tengua ruhusa"
 
-#: src/routes/_authenticated/app/$appId.tsx:647
+#: src/routes/_authenticated/app/$appId.tsx:617
 msgid "Revoke permission?"
 msgstr "Batilisha ruhusa?"
 
@@ -1112,7 +1173,7 @@ msgstr "Tafuta..."
 msgid "Searching..."
 msgstr "Inatafuta..."
 
-#: src/routes/_authenticated/app/$appId.tsx:538
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "Select a capability to grant to {appName}."
 msgstr "Chagua uwezo wa kuipa {appName}."
 
@@ -1148,13 +1209,17 @@ msgstr "Chagua mwelekeo wa tovuti"
 msgid "Select theme preference"
 msgstr "Chagua mapendeleo ya mandhari"
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "Select which version of this app to use"
 msgstr "Chagua toleo gani la programu hii la kutumia"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:95
 msgid "Send again"
 msgstr "Tuma tena"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Tuma barua pepe"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
@@ -1241,7 +1306,7 @@ msgstr "Mfumo"
 msgid "System default"
 msgstr "Chaguo-msingi la mfumo"
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "System Default"
 msgstr "Chaguo-msingi la Mfumo"
 
@@ -1257,7 +1322,7 @@ msgstr "Lebo"
 msgid "Teams/Apps"
 msgstr "Timu/Programu"
 
-#: src/routes/_authenticated/app/$appId.tsx:232
+#: src/routes/_authenticated/app/$appId.tsx:201
 msgid "Technical Capabilities"
 msgstr "Uwezo wa Kiufundi"
 
@@ -1266,16 +1331,20 @@ msgstr "Uwezo wa Kiufundi"
 msgid "Terms and conditions"
 msgstr "Masharti na vigezo"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Msimbo huo si sahihi au umekwisha muda wake."
+
 #: src/features/apps/index.tsx:116
 #: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "Programu imesakinishwa kwa mafanikio."
 
-#: src/routes/_authenticated/app/$appId.tsx:153
+#: src/routes/_authenticated/app/$appId.tsx:122
 msgid "The requested app could not be found."
 msgstr "Programu iliyoombwa haikuweza kupatikana."
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "The version used by users who haven't made a choice"
 msgstr "Toleo linalotumiwa na watumiaji ambao hawajafanya chaguo"
 
@@ -1287,7 +1356,7 @@ msgstr "Mandhari"
 msgid "Theme Settings"
 msgstr "Mipangilio ya Mandhari"
 
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:334
 msgid "This app does not have version management"
 msgstr "Programu hii haina usimamizi wa toleo"
 
@@ -1295,8 +1364,8 @@ msgstr "Programu hii haina usimamizi wa toleo"
 msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
 msgstr "Programu hii inasakinishwa moja kwa moja kutoka kwa mchapishaji wake na haijachunguzwa. Inaweza kuwa programu hasidi."
 
-#. placeholder {0}: formatPermission(permission.permission, t)
-#: src/routes/_authenticated/app/$appId.tsx:648
+#. placeholder {0}: permission.name
+#: src/routes/_authenticated/app/$appId.tsx:618
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Hii itatengua ruhusa ya \"{0}\" kutoka {appName}. Programu inaweza kuacha kufanya kazi vizuri."
 
@@ -1330,7 +1399,7 @@ msgid "Top"
 msgstr "Juu"
 
 #: src/features/apps/index.tsx:680
-#: src/routes/_authenticated/app/$appId.tsx:384
+#: src/routes/_authenticated/app/$appId.tsx:353
 msgid "Track"
 msgstr "Track"
 
@@ -1382,7 +1451,7 @@ msgstr "Imeshindwa kupakia taarifa ya toleo"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Imeshindwa kuelekeza upya kwenye kuingia. Tafadhali jaribu tena."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Haijapewa"
 
@@ -1422,6 +1491,10 @@ msgstr "Inasasisha..."
 msgid "Use system default"
 msgstr "Tumia chaguo-msingi la mfumo"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Tumia ufunguo wako"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
 msgstr "Mtumiaji"
@@ -1438,6 +1511,7 @@ msgstr "Msimbo wa uthibitishaji umetumwa"
 msgid "Verification failed"
 msgstr "Uthibitishaji umeshindwa"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1447,7 +1521,7 @@ msgstr "Thibitisha"
 msgid "Verify email address"
 msgstr "Thibitisha anwani ya barua pepe"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:367
 msgid "Version"
 msgstr "Toleo"
 
@@ -1456,13 +1530,17 @@ msgstr "Toleo"
 msgid "Version {0}"
 msgstr "Toleo {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:292
 msgid "Version changed"
 msgstr "Toleo limebadilishwa"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "Version Management"
 msgstr "Usimamizi wa Toleo"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Kijipicha cha video"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1488,7 +1566,11 @@ msgstr "Tovuti iko chini ya matengenezo!"
 msgid "Wednesday"
 msgstr "Jumatano"
 
-#: src/routes/_authenticated/app/$appId.tsx:438
+#: ../../../lib/web/src/components/restore-banner.tsx:80
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Akaunti yako ilihamishiwa hapa kutoka {source}. Mpaka uifute hapo, ujumbe na arifa zinaweza kufikia seva zote mbili, baadhi ya maudhui yako bado yanatolewa kutoka seva ya zamani, na wafuasi wanaweza kuchukua dakika chache kukupata hapa."
+
+#: src/routes/_authenticated/app/$appId.tsx:407
 msgid "Your personal version override"
 msgstr "Ubadilishaji wa toleo lako binafsi"
 
@@ -1496,6 +1578,6 @@ msgstr "Ubadilishaji wa toleo lako binafsi"
 msgid "Your preference"
 msgstr "Mapendeleo yako"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Your Version"
 msgstr "Toleo lako"

@@ -31,11 +31,11 @@ msgstr "{0} atnaujinta, {failed} nepavyko"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} įdiegta."
 
-#: src/routes/_authenticated/app/$appId.tsx:389
+#: src/routes/_authenticated/app/$appId.tsx:358
 msgid "{track} (default, version {version})"
 msgstr "{track} (numatytoji, versija {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:390
+#: src/routes/_authenticated/app/$appId.tsx:359
 msgid "{track} (version {version})"
 msgstr "{track} (versija {version})"
 
@@ -137,7 +137,7 @@ msgid "All apps updated"
 msgstr "Visos programėlės atnaujintos"
 
 #: src/features/apps/index.tsx:141
-#: src/routes/_authenticated/app/$appId.tsx:119
+#: src/routes/_authenticated/app/$appId.tsx:88
 msgid "App"
 msgstr "Programėlė"
 
@@ -150,7 +150,7 @@ msgstr "Programėlės veiksmai"
 msgid "App information"
 msgstr "Programėlės informacija"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:182
 msgid "App information and configuration"
 msgstr "Programėlės informacija ir konfigūracija"
 
@@ -161,12 +161,12 @@ msgstr "Programėlės informacija ir konfigūracija"
 msgid "App installed"
 msgstr "Programėlė įdiegta"
 
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:121
 msgid "App not found"
 msgstr "Programėlė nerasta"
 
-#: src/routes/_authenticated/app/$appId.tsx:216
+#: src/routes/_authenticated/app/$appId.tsx:185
 msgid "Application ID"
 msgstr "Programos ID"
 
@@ -185,6 +185,10 @@ msgstr "Ar tikrai norite atsijungti? Norėdami pasiekti paskyrą, turėsite vėl
 msgid "Asc"
 msgstr "Did."
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Autentifikatoriaus kodas"
+
 #: src/features/apps/components/install-dialog.tsx:73
 msgid "Available version:"
 msgstr "Prieinama versija:"
@@ -202,9 +206,9 @@ msgstr "Prieinama, bet neįdiegta"
 msgid "Back"
 msgstr "Atgal"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:165
+#: src/routes/_authenticated/app/$appId.tsx:96
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:134
 msgid "Back to apps"
 msgstr "Atgal į programėles"
 
@@ -219,6 +223,7 @@ msgid "Boost interest"
 msgstr "Padidinti susidomėjimą"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -230,15 +235,15 @@ msgstr "Padidinti susidomėjimą"
 #: src/features/apps/index.tsx:516
 #: src/features/apps/index.tsx:556
 #: src/features/apps/index.tsx:605
-#: src/routes/_authenticated/app/$appId.tsx:567
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Cancel"
 msgstr "Atšaukti"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Šio pranešimo kategorija"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Pakeisti pranešimo kategoriją"
 
@@ -368,6 +373,10 @@ msgstr "Kontekstinė informacija ir detalės."
 msgid "Continue"
 msgstr "Tęsti"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Tęsti su {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Kopijuoti"
@@ -380,7 +389,19 @@ msgstr "Nepavyko įdiegti programėlės."
 msgid "Could not load this document. Please try again later."
 msgstr "Nepavyko įkelti šio dokumento. Pabandykite dar kartą vėliau."
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Nepavyko išsiųsti kodo. Bandykite dar kartą."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Nepavyko pradėti pakartotinio tapatybės patvirtinimo. Bandykite dar kartą."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Nepavyko patvirtinti su ta paskyra. Bandykite dar kartą."
+
+#: src/routes/_authenticated/app/$appId.tsx:195
 msgid "Current Version"
 msgstr "Dabartinė versija"
 
@@ -411,26 +432,30 @@ msgstr "Numatytasis"
 msgid "Default AI account"
 msgstr "Numatytoji DI paskyra"
 
-#: src/routes/_authenticated/app/$appId.tsx:447
+#: src/routes/_authenticated/app/$appId.tsx:416
 msgid "Default for all users"
 msgstr "Numatytasis visiems vartotojams"
 
-#: src/routes/_authenticated/app/$appId.tsx:446
+#: src/routes/_authenticated/app/$appId.tsx:415
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Numatytasis visiems vartotojams (versija {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:312
 msgid "Default for all users updated"
 msgstr "Numatytasis visiems vartotojams atnaujintas"
 
-#: src/routes/_authenticated/app/$appId.tsx:430
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Default track"
 msgstr "Numatytasis track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:429
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Default track (version {0})"
 msgstr "Numatytasis track (versija {0})"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:88
+msgid "Delete your account on the old server"
+msgstr "Ištrinkite paskyrą senajame serveryje"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -459,6 +484,10 @@ msgstr "Kūrimo programėlės"
 msgid "Direction"
 msgstr "Kryptis"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:71
+msgid "Dismiss"
+msgstr "Atmesti"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Rodo mobiliąją šoninę juostą."
@@ -471,9 +500,21 @@ msgstr "Atsisiųsti"
 msgid "Dyslexia-friendly"
 msgstr "Tinkama disleksijai"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "El. pašto kodas"
+
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Enabled Services"
 msgstr "Įjungtos paslaugos"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Įveskite kodą iš savo el. laiško"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Įveskite autentifikatoriaus kodą"
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -491,7 +532,7 @@ msgstr "Labai didelis"
 msgid "Failed to add account"
 msgstr "Nepavyko pridėti paskyros"
 
-#: src/routes/_authenticated/app/$appId.tsx:493
+#: src/routes/_authenticated/app/$appId.tsx:463
 msgid "Failed to grant permission"
 msgstr "Nepavyko suteikti leidimo"
 
@@ -499,7 +540,7 @@ msgstr "Nepavyko suteikti leidimo"
 msgid "Failed to remove account"
 msgstr "Nepavyko pašalinti paskyros"
 
-#: src/routes/_authenticated/app/$appId.tsx:475
+#: src/routes/_authenticated/app/$appId.tsx:445
 msgid "Failed to revoke permission"
 msgstr "Nepavyko atšaukti leidimo"
 
@@ -507,16 +548,16 @@ msgstr "Nepavyko atšaukti leidimo"
 msgid "Failed to send verification code"
 msgstr "Nepavyko išsiųsti patvirtinimo kodo"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Nepavyko atnaujinti kategorijos"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:315
 msgid "Failed to update default"
 msgstr "Nepavyko atnaujinti numatytojo"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:326
+#: src/routes/_authenticated/app/$appId.tsx:295
 msgid "Failed to update preference"
 msgstr "Nepavyko atnaujinti nuostatos"
 
@@ -528,7 +569,7 @@ msgstr "Nepavyko atnaujinti sistemos numatytojo"
 msgid "File:"
 msgstr "Failas:"
 
-#: src/routes/_authenticated/app/$appId.tsx:221
+#: src/routes/_authenticated/app/$appId.tsx:190
 msgid "Fingerprint"
 msgstr "Pirštų atspaudas"
 
@@ -537,6 +578,10 @@ msgstr "Pirštų atspaudas"
 #: src/features/apps/components/install-dialog.tsx:78
 msgid "Fingerprint:"
 msgstr "Pirštų atspaudas:"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:77
+msgid "Finish moving your account"
+msgstr "Užbaikite paskyros perkėlimą"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -592,15 +637,15 @@ msgstr "Eiti į puslapį {pageNumber}"
 msgid "Go to previous page"
 msgstr "Eiti į ankstesnį puslapį"
 
-#: src/routes/_authenticated/app/$appId.tsx:531
+#: src/routes/_authenticated/app/$appId.tsx:501
 msgid "Grant"
 msgstr "Suteikti"
 
-#: src/routes/_authenticated/app/$appId.tsx:536
+#: src/routes/_authenticated/app/$appId.tsx:506
 msgid "Grant permission"
 msgstr "Suteikti leidimą"
 
-#: src/routes/_authenticated/app/$appId.tsx:591
+#: src/routes/_authenticated/app/$appId.tsx:561
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Suteikite leidimus, kad ši programėlė galėtų pasiekti sistemos funkcijas"
 
@@ -627,11 +672,11 @@ msgstr "Pradžia"
 msgid "Hot"
 msgstr "Karšta"
 
-#: src/routes/_authenticated/app/$appId.tsx:251
+#: src/routes/_authenticated/app/$appId.tsx:220
 msgid "HTTP Paths"
 msgstr "HTTP keliai"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:181
 msgid "Identity"
 msgstr "Tapatybė"
 
@@ -751,7 +796,7 @@ msgstr "Sėkmingai atsijungta"
 msgid "Logging out…"
 msgstr "Atsijungiama…"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "Manage capabilities granted to this application"
 msgstr "Tvarkykite šiai programai suteiktas galimybes"
 
@@ -841,11 +886,11 @@ msgstr "Atitinkančių programų nėra"
 msgid "No paths configured."
 msgstr "Kelių nesukonfigūruota."
 
-#: src/routes/_authenticated/app/$appId.tsx:590
+#: src/routes/_authenticated/app/$appId.tsx:560
 msgid "No permissions granted"
 msgstr "Leidimų nesuteikta"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "No permissions granted to this app"
 msgstr "Šiai programai leidimų nesuteikta"
 
@@ -874,7 +919,7 @@ msgstr "Paslaugų nesukonfigūruota."
 msgid "No time zone found."
 msgstr "Laiko juostų nerasta."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Dar nėra temos įrašo — bandykite dar kartą po kito pranešimo."
 
@@ -896,7 +941,7 @@ msgstr "Nėra"
 msgid "Normal"
 msgstr "Normalus"
 
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:333
 msgid "Not versioned"
 msgstr "Be versijos"
 
@@ -936,6 +981,14 @@ msgstr "Kita"
 msgid "Owner"
 msgstr "Savininkas"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "Slaptaraktis"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Slaptarakčio patvirtinimas nepavyko. Bandykite dar kartą."
+
 #: src/features/apps/index.tsx:544
 msgid "Paste the install link:"
 msgstr "Įklijuokite diegimo nuorodą:"
@@ -953,15 +1006,15 @@ msgstr "Kelio nukreipimas"
 msgid "Paths"
 msgstr "Keliai"
 
-#: src/routes/_authenticated/app/$appId.tsx:488
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Permission granted"
 msgstr "Leidimas suteiktas"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Permission revoked"
 msgstr "Leidimas atšauktas"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Permissions"
 msgstr "Leidimai"
 
@@ -973,7 +1026,7 @@ msgstr "Įveskite programos ID"
 msgid "Preference updated"
 msgstr "Nuostata atnaujinta"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Preferred Version"
 msgstr "Pageidaujama versija"
 
@@ -991,9 +1044,13 @@ msgstr "Privatumas"
 msgid "Profile"
 msgstr "Profilis"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:204
 msgid "Provided Classes"
 msgstr "Pateiktos klasės"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:96
+msgid "Re-link your accounts on this server"
+msgstr "Iš naujo susiekite paskyras šiame serveryje"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -1041,6 +1098,10 @@ msgstr "Šalinti susidomėjimą"
 msgid "Removed {0} unused version{1}"
 msgstr "Pašalinta {0} nepanaudotų versijų {1}"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Siųsti el. laišką dar kartą"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1050,15 +1111,15 @@ msgstr "Atstatyti"
 msgid "Reset all settings to default values"
 msgstr "Atstatyti visus nustatymus į numatytąsias reikšmes"
 
-#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:612
 msgid "Revoke"
 msgstr "Atšaukti"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:619
 msgid "Revoke permission"
 msgstr "Atšaukti leidimą"
 
-#: src/routes/_authenticated/app/$appId.tsx:647
+#: src/routes/_authenticated/app/$appId.tsx:617
 msgid "Revoke permission?"
 msgstr "Atšaukti leidimą?"
 
@@ -1112,7 +1173,7 @@ msgstr "Ieškoti..."
 msgid "Searching..."
 msgstr "Ieškoma..."
 
-#: src/routes/_authenticated/app/$appId.tsx:538
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "Select a capability to grant to {appName}."
 msgstr "Pasirinkite galimybę, kurią suteikti {appName}."
 
@@ -1148,13 +1209,17 @@ msgstr "Pasirinkite svetainės kryptį"
 msgid "Select theme preference"
 msgstr "Pasirinkite temos nustatymą"
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "Select which version of this app to use"
 msgstr "Pasirinkite, kurią šios programėlės versiją naudoti"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:95
 msgid "Send again"
 msgstr "Siųsti dar kartą"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Siųsti el. laišką"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
@@ -1241,7 +1306,7 @@ msgstr "Sistema"
 msgid "System default"
 msgstr "Sistemos numatytoji"
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "System Default"
 msgstr "Sistemos numatytoji"
 
@@ -1257,7 +1322,7 @@ msgstr "Žyma"
 msgid "Teams/Apps"
 msgstr "Komandos / programėlės"
 
-#: src/routes/_authenticated/app/$appId.tsx:232
+#: src/routes/_authenticated/app/$appId.tsx:201
 msgid "Technical Capabilities"
 msgstr "Techninės galimybės"
 
@@ -1266,16 +1331,20 @@ msgstr "Techninės galimybės"
 msgid "Terms and conditions"
 msgstr "Sąlygos ir nuostatos"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Šis kodas neteisingas arba nebegalioja."
+
 #: src/features/apps/index.tsx:116
 #: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "Programėlė sėkmingai įdiegta."
 
-#: src/routes/_authenticated/app/$appId.tsx:153
+#: src/routes/_authenticated/app/$appId.tsx:122
 msgid "The requested app could not be found."
 msgstr "Reikiamos programėlės nepavyko rasti."
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "The version used by users who haven't made a choice"
 msgstr "Versija, kurią naudoja vartotojai, nepasirinkę savos"
 
@@ -1287,7 +1356,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Temos nustatymai"
 
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:334
 msgid "This app does not have version management"
 msgstr "Ši programėlė neturi versijų valdymo"
 
@@ -1295,8 +1364,8 @@ msgstr "Ši programėlė neturi versijų valdymo"
 msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
 msgstr "Ši programėlė įdiegta tiesiogiai iš jos leidėjo ir nebuvo patikrinta. Ji gali būti kenkėjiška."
 
-#. placeholder {0}: formatPermission(permission.permission, t)
-#: src/routes/_authenticated/app/$appId.tsx:648
+#. placeholder {0}: permission.name
+#: src/routes/_authenticated/app/$appId.tsx:618
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Tai atšauks „{0}“ leidimą iš {appName}. Programėlė gali nustoti tinkamai veikti."
 
@@ -1330,7 +1399,7 @@ msgid "Top"
 msgstr "Viršus"
 
 #: src/features/apps/index.tsx:680
-#: src/routes/_authenticated/app/$appId.tsx:384
+#: src/routes/_authenticated/app/$appId.tsx:353
 msgid "Track"
 msgstr "Track"
 
@@ -1382,7 +1451,7 @@ msgstr "Nepavyko įkelti versijos informacijos"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Nepavyko peradresuoti į prisijungimą. Bandykite dar kartą."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Nepriskirta"
 
@@ -1422,6 +1491,10 @@ msgstr "Atnaujinama..."
 msgid "Use system default"
 msgstr "Naudoti sistemos numatytąjį"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Naudokite savo slaptaraktį"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
 msgstr "Vartotojas"
@@ -1438,6 +1511,7 @@ msgstr "Patvirtinimo kodas išsiųstas"
 msgid "Verification failed"
 msgstr "Patvirtinimas nepavyko"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1447,7 +1521,7 @@ msgstr "Patvirtinti"
 msgid "Verify email address"
 msgstr "Patvirtinti el. pašto adresą"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:367
 msgid "Version"
 msgstr "Versija"
 
@@ -1456,13 +1530,17 @@ msgstr "Versija"
 msgid "Version {0}"
 msgstr "Versija {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:292
 msgid "Version changed"
 msgstr "Versija pakeista"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "Version Management"
 msgstr "Versijų valdymas"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Vaizdo įrašo miniatiūra"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1488,7 +1566,11 @@ msgstr "Svetainė atnaujinama!"
 msgid "Wednesday"
 msgstr "Trečiadienis"
 
-#: src/routes/_authenticated/app/$appId.tsx:438
+#: ../../../lib/web/src/components/restore-banner.tsx:80
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Jūsų paskyra buvo perkelta čia iš {source}. Kol jos ten neištrinate, žinutės ir pranešimai gali pasiekti abu serverius, dalis jūsų turinio toliau pateikiama iš senojo serverio, o pasekėjams gali prireikti kelių minučių jus rasti čia."
+
+#: src/routes/_authenticated/app/$appId.tsx:407
 msgid "Your personal version override"
 msgstr "Jūsų asmeninis versijos pakeitimas"
 
@@ -1496,6 +1578,6 @@ msgstr "Jūsų asmeninis versijos pakeitimas"
 msgid "Your preference"
 msgstr "Jūsų pasirinkimas"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Your Version"
 msgstr "Jūsų versija"

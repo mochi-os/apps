@@ -31,11 +31,11 @@ msgstr "{0} atjaunināts, {failed} neizdevās"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ir instalēts."
 
-#: src/routes/_authenticated/app/$appId.tsx:389
+#: src/routes/_authenticated/app/$appId.tsx:358
 msgid "{track} (default, version {version})"
 msgstr "{track} (noklusējums, versija {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:390
+#: src/routes/_authenticated/app/$appId.tsx:359
 msgid "{track} (version {version})"
 msgstr "{track} (versija {version})"
 
@@ -137,7 +137,7 @@ msgid "All apps updated"
 msgstr "Visas lietotnes atjauninātas"
 
 #: src/features/apps/index.tsx:141
-#: src/routes/_authenticated/app/$appId.tsx:119
+#: src/routes/_authenticated/app/$appId.tsx:88
 msgid "App"
 msgstr "Lietotne"
 
@@ -150,7 +150,7 @@ msgstr "Lietotnes darbības"
 msgid "App information"
 msgstr "Lietotnes informācija"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:182
 msgid "App information and configuration"
 msgstr "Lietotnes informācija un konfigurācija"
 
@@ -161,12 +161,12 @@ msgstr "Lietotnes informācija un konfigurācija"
 msgid "App installed"
 msgstr "Lietotne instalēta"
 
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:121
 msgid "App not found"
 msgstr "Lietotne nav atrasta"
 
-#: src/routes/_authenticated/app/$appId.tsx:216
+#: src/routes/_authenticated/app/$appId.tsx:185
 msgid "Application ID"
 msgstr "Lietotnes ID"
 
@@ -185,6 +185,10 @@ msgstr "Vai tiešām vēlies izrakstīties? Lai piekļūtu kontam, būs jāpiera
 msgid "Asc"
 msgstr "Aug."
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Authenticator kods"
+
 #: src/features/apps/components/install-dialog.tsx:73
 msgid "Available version:"
 msgstr "Pieejamā versija:"
@@ -202,9 +206,9 @@ msgstr "Pieejama, bet nav instalēta"
 msgid "Back"
 msgstr "Atpakaļ"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:165
+#: src/routes/_authenticated/app/$appId.tsx:96
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:134
 msgid "Back to apps"
 msgstr "Atpakaļ uz lietotnēm"
 
@@ -219,6 +223,7 @@ msgid "Boost interest"
 msgstr "Veicināt interesi"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -230,15 +235,15 @@ msgstr "Veicināt interesi"
 #: src/features/apps/index.tsx:516
 #: src/features/apps/index.tsx:556
 #: src/features/apps/index.tsx:605
-#: src/routes/_authenticated/app/$appId.tsx:567
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Cancel"
 msgstr "Atcelt"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Šī paziņojuma kategorija"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Mainīt paziņojuma kategoriju"
 
@@ -368,6 +373,10 @@ msgstr "Konteksta informācija un detaļas."
 msgid "Continue"
 msgstr "Turpināt"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Turpināt ar {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Kopēt"
@@ -380,7 +389,19 @@ msgstr "Lietotni neizdevās instalēt."
 msgid "Could not load this document. Please try again later."
 msgstr "Nevarēja ielādēt šo dokumentu. Lūdzu, mēģini vēlāk vēlreiz."
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Neizdevās nosūtīt kodu. Lūdzu, mēģiniet vēlreiz."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Neizdevās sākt atkārtotu autentifikāciju. Lūdzu, mēģiniet vēlreiz."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Neizdevās verificēt ar šo kontu. Lūdzu, mēģiniet vēlreiz."
+
+#: src/routes/_authenticated/app/$appId.tsx:195
 msgid "Current Version"
 msgstr "Pašreizējā versija"
 
@@ -411,26 +432,30 @@ msgstr "Noklusētais"
 msgid "Default AI account"
 msgstr "Noklusētais AI konts"
 
-#: src/routes/_authenticated/app/$appId.tsx:447
+#: src/routes/_authenticated/app/$appId.tsx:416
 msgid "Default for all users"
 msgstr "Noklusējums visiem lietotājiem"
 
-#: src/routes/_authenticated/app/$appId.tsx:446
+#: src/routes/_authenticated/app/$appId.tsx:415
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Noklusējums visiem lietotājiem (versija {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:312
 msgid "Default for all users updated"
 msgstr "Noklusējums visiem lietotājiem atjaunināts"
 
-#: src/routes/_authenticated/app/$appId.tsx:430
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Default track"
 msgstr "Noklusētais Track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:429
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Default track (version {0})"
 msgstr "Noklusētais Track (versija {0})"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:88
+msgid "Delete your account on the old server"
+msgstr "Dzēsiet savu kontu vecajā serverī"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -459,6 +484,10 @@ msgstr "Izstrādes lietotnes"
 msgid "Direction"
 msgstr "Virziens"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:71
+msgid "Dismiss"
+msgstr "Aizvērt"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Parāda mobilo sānu joslu."
@@ -471,9 +500,21 @@ msgstr "Lejupielādēt"
 msgid "Dyslexia-friendly"
 msgstr "Disleksijai draudzīgs"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "E-pasta kods"
+
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Enabled Services"
 msgstr "Iespējotie pakalpojumi"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Ievadiet kodu no sava e-pasta"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Ievadiet autentifikatora kodu"
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -491,7 +532,7 @@ msgstr "Ļoti liels"
 msgid "Failed to add account"
 msgstr "Neizdevās pievienot kontu"
 
-#: src/routes/_authenticated/app/$appId.tsx:493
+#: src/routes/_authenticated/app/$appId.tsx:463
 msgid "Failed to grant permission"
 msgstr "Neizdevās piešķirt atļauju"
 
@@ -499,7 +540,7 @@ msgstr "Neizdevās piešķirt atļauju"
 msgid "Failed to remove account"
 msgstr "Neizdevās noņemt kontu"
 
-#: src/routes/_authenticated/app/$appId.tsx:475
+#: src/routes/_authenticated/app/$appId.tsx:445
 msgid "Failed to revoke permission"
 msgstr "Neizdevās atsaukt atļauju"
 
@@ -507,16 +548,16 @@ msgstr "Neizdevās atsaukt atļauju"
 msgid "Failed to send verification code"
 msgstr "Neizdevās nosūtīt verifikācijas kodu"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Neizdevās atjaunināt kategoriju"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:315
 msgid "Failed to update default"
 msgstr "Neizdevās atjaunināt noklusējumu"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:326
+#: src/routes/_authenticated/app/$appId.tsx:295
 msgid "Failed to update preference"
 msgstr "Neizdevās atjaunināt preferenci"
 
@@ -528,7 +569,7 @@ msgstr "Neizdevās atjaunināt sistēmas noklusējumu"
 msgid "File:"
 msgstr "Fails:"
 
-#: src/routes/_authenticated/app/$appId.tsx:221
+#: src/routes/_authenticated/app/$appId.tsx:190
 msgid "Fingerprint"
 msgstr "Pirkstu nospiedums"
 
@@ -537,6 +578,10 @@ msgstr "Pirkstu nospiedums"
 #: src/features/apps/components/install-dialog.tsx:78
 msgid "Fingerprint:"
 msgstr "Pirkstu nospiedums:"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:77
+msgid "Finish moving your account"
+msgstr "Pabeidziet konta pārvietošanu"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -592,15 +637,15 @@ msgstr "Doties uz lapu {pageNumber}"
 msgid "Go to previous page"
 msgstr "Iet uz iepriekšējo lapu"
 
-#: src/routes/_authenticated/app/$appId.tsx:531
+#: src/routes/_authenticated/app/$appId.tsx:501
 msgid "Grant"
 msgstr "Piešķirt"
 
-#: src/routes/_authenticated/app/$appId.tsx:536
+#: src/routes/_authenticated/app/$appId.tsx:506
 msgid "Grant permission"
 msgstr "Piešķirt atļauju"
 
-#: src/routes/_authenticated/app/$appId.tsx:591
+#: src/routes/_authenticated/app/$appId.tsx:561
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Piešķiriet atļaujas, lai šī lietotne varētu piekļūt sistēmas funkcijām"
 
@@ -627,11 +672,11 @@ msgstr "Sākums"
 msgid "Hot"
 msgstr "Aktuāli"
 
-#: src/routes/_authenticated/app/$appId.tsx:251
+#: src/routes/_authenticated/app/$appId.tsx:220
 msgid "HTTP Paths"
 msgstr "HTTP ceļi"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:181
 msgid "Identity"
 msgstr "Identitāte"
 
@@ -751,7 +796,7 @@ msgstr "Izrakstīšanās veiksmīga"
 msgid "Logging out…"
 msgstr "Izrakstās…"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "Manage capabilities granted to this application"
 msgstr "Pārvaldiet šai lietotnei piešķirtās iespējas"
 
@@ -841,11 +886,11 @@ msgstr "Nav atbilstošu lietotņu"
 msgid "No paths configured."
 msgstr "Ceļi nav konfigurēti."
 
-#: src/routes/_authenticated/app/$appId.tsx:590
+#: src/routes/_authenticated/app/$appId.tsx:560
 msgid "No permissions granted"
 msgstr "Nav piešķirtu atļauju"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "No permissions granted to this app"
 msgstr "Šai lietotnei nav piešķirtu atļauju"
 
@@ -874,7 +919,7 @@ msgstr "Pakalpojumi nav konfigurēti."
 msgid "No time zone found."
 msgstr "Laika josla nav atrasta."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Vēl nav tēmas ieraksta — mēģiniet vēlreiz pēc nākamā paziņojuma."
 
@@ -896,7 +941,7 @@ msgstr "Nav"
 msgid "Normal"
 msgstr "Normāls"
 
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:333
 msgid "Not versioned"
 msgstr "Nav versionēts"
 
@@ -936,6 +981,14 @@ msgstr "Cits"
 msgid "Owner"
 msgstr "Īpašnieks"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "Piekļuves atslēga"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Piekļuves atslēgas pārbaude neizdevās. Lūdzu, mēģiniet vēlreiz."
+
 #: src/features/apps/index.tsx:544
 msgid "Paste the install link:"
 msgstr "Ielīmējiet instalēšanas saiti:"
@@ -953,15 +1006,15 @@ msgstr "Ceļa maršrutēšana"
 msgid "Paths"
 msgstr "Ceļi"
 
-#: src/routes/_authenticated/app/$appId.tsx:488
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Permission granted"
 msgstr "Atļauja piešķirta"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Permission revoked"
 msgstr "Atļauja atsaukta"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Permissions"
 msgstr "Atļaujas"
 
@@ -973,7 +1026,7 @@ msgstr "Lūdzu, ievadiet lietotnes ID"
 msgid "Preference updated"
 msgstr "Preference atjaunināta"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Preferred Version"
 msgstr "Vēlamā versija"
 
@@ -991,9 +1044,13 @@ msgstr "Privātums"
 msgid "Profile"
 msgstr "Profils"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:204
 msgid "Provided Classes"
 msgstr "Nodrošinātās klases"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:96
+msgid "Re-link your accounts on this server"
+msgstr "Atkārtoti saistiet savus kontus šajā serverī"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -1041,6 +1098,10 @@ msgstr "Noņemt interesi"
 msgid "Removed {0} unused version{1}"
 msgstr "Noņemta {0} neizmantota versija{1}"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Sūtīt e-pastu vēlreiz"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1050,15 +1111,15 @@ msgstr "Atiestatīt"
 msgid "Reset all settings to default values"
 msgstr "Atiestatīt visus iestatījumus uz noklusējuma vērtībām"
 
-#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:612
 msgid "Revoke"
 msgstr "Atsaukt"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:619
 msgid "Revoke permission"
 msgstr "Atsaukt atļauju"
 
-#: src/routes/_authenticated/app/$appId.tsx:647
+#: src/routes/_authenticated/app/$appId.tsx:617
 msgid "Revoke permission?"
 msgstr "Atsaukt atļauju?"
 
@@ -1112,7 +1173,7 @@ msgstr "Meklēt..."
 msgid "Searching..."
 msgstr "Meklē..."
 
-#: src/routes/_authenticated/app/$appId.tsx:538
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "Select a capability to grant to {appName}."
 msgstr "Atlasiet iespēju, ko piešķirt {appName}."
 
@@ -1148,13 +1209,17 @@ msgstr "Izvēlieties vietnes virzienu"
 msgid "Select theme preference"
 msgstr "Izvēlieties motīva preferenci"
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "Select which version of this app to use"
 msgstr "Izvēlieties, kuru šīs lietotnes versiju izmantot"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:95
 msgid "Send again"
 msgstr "Sūtīt vēlreiz"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Sūtīt e-pastu"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
@@ -1241,7 +1306,7 @@ msgstr "Sistēma"
 msgid "System default"
 msgstr "Sistēmas noklusētais"
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "System Default"
 msgstr "Sistēmas noklusētais"
 
@@ -1257,7 +1322,7 @@ msgstr "Tags"
 msgid "Teams/Apps"
 msgstr "Komandas/Lietotnes"
 
-#: src/routes/_authenticated/app/$appId.tsx:232
+#: src/routes/_authenticated/app/$appId.tsx:201
 msgid "Technical Capabilities"
 msgstr "Tehniskās iespējas"
 
@@ -1266,16 +1331,20 @@ msgstr "Tehniskās iespējas"
 msgid "Terms and conditions"
 msgstr "Lietošanas nosacījumi"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Šis kods ir nepareizs vai tā derīguma termiņš ir beidzies."
+
 #: src/features/apps/index.tsx:116
 #: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "Lietotne ir veiksmīgi instalēta."
 
-#: src/routes/_authenticated/app/$appId.tsx:153
+#: src/routes/_authenticated/app/$appId.tsx:122
 msgid "The requested app could not be found."
 msgstr "Pieprasīto lietotni nevarēja atrast."
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "The version used by users who haven't made a choice"
 msgstr "Versija, ko izmanto lietotāji, kuri nav izvēlējušies"
 
@@ -1287,7 +1356,7 @@ msgstr "Tēma"
 msgid "Theme Settings"
 msgstr "Tēmas iestatījumi"
 
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:334
 msgid "This app does not have version management"
 msgstr "Šai lietotnei nav versiju pārvaldības"
 
@@ -1295,8 +1364,8 @@ msgstr "Šai lietotnei nav versiju pārvaldības"
 msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
 msgstr "Šī lietotne ir instalēta tieši no tās izdevēja un nav pārbaudīta. Tā var būt ļaunprātīga programmatūra."
 
-#. placeholder {0}: formatPermission(permission.permission, t)
-#: src/routes/_authenticated/app/$appId.tsx:648
+#. placeholder {0}: permission.name
+#: src/routes/_authenticated/app/$appId.tsx:618
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Tas atsauks atļauju \"{0}\" no {appName}. Lietotne var pārstāt darboties pareizi."
 
@@ -1330,7 +1399,7 @@ msgid "Top"
 msgstr "Augšā"
 
 #: src/features/apps/index.tsx:680
-#: src/routes/_authenticated/app/$appId.tsx:384
+#: src/routes/_authenticated/app/$appId.tsx:353
 msgid "Track"
 msgstr "Track"
 
@@ -1382,7 +1451,7 @@ msgstr "Nevar ielādēt versijas informāciju"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Nevar pāradresēt uz pieteikšanos. Lūdzu, mēģiniet vēlreiz."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Nepiešķirts"
 
@@ -1422,6 +1491,10 @@ msgstr "Notiek atjaunināšana..."
 msgid "Use system default"
 msgstr "Izmantot sistēmas noklusējumu"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Izmantojiet savu piekļuves atslēgu"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
 msgstr "Lietotājs"
@@ -1438,6 +1511,7 @@ msgstr "Verifikācijas kods nosūtīts"
 msgid "Verification failed"
 msgstr "Verifikācija neizdevās"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1447,7 +1521,7 @@ msgstr "Verificēt"
 msgid "Verify email address"
 msgstr "Verificēt e-pasta adresi"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:367
 msgid "Version"
 msgstr "Versija"
 
@@ -1456,13 +1530,17 @@ msgstr "Versija"
 msgid "Version {0}"
 msgstr "Versija {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:292
 msgid "Version changed"
 msgstr "Versija mainīta"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "Version Management"
 msgstr "Versiju pārvaldība"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Video sīktēls"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1488,7 +1566,11 @@ msgstr "Vietne tiek apkopta!"
 msgid "Wednesday"
 msgstr "Trešdiena"
 
-#: src/routes/_authenticated/app/$appId.tsx:438
+#: ../../../lib/web/src/components/restore-banner.tsx:80
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Jūsu konts tika pārvietots šeit no {source}. Kamēr to tur nedzēšat, ziņojumi un paziņojumi var sasniegt abus serverus, daļa jūsu satura joprojām tiek apkalpota no vecā servera un sekotājiem var paiet dažas minūtes, lai atrastu jūs šeit."
+
+#: src/routes/_authenticated/app/$appId.tsx:407
 msgid "Your personal version override"
 msgstr "Jūsu personīgā versijas pārrakstīšana"
 
@@ -1496,6 +1578,6 @@ msgstr "Jūsu personīgā versijas pārrakstīšana"
 msgid "Your preference"
 msgstr "Jūsu preference"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Your Version"
 msgstr "Jūsu versija"

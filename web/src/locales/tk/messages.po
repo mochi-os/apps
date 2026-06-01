@@ -31,11 +31,11 @@ msgstr "{0} täzelendi, {failed} şowsuz boldy"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} gurnaldy."
 
-#: src/routes/_authenticated/app/$appId.tsx:389
+#: src/routes/_authenticated/app/$appId.tsx:358
 msgid "{track} (default, version {version})"
 msgstr "{track} (esasy, görnüş {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:390
+#: src/routes/_authenticated/app/$appId.tsx:359
 msgid "{track} (version {version})"
 msgstr "{track} (görnüş {version})"
 
@@ -137,7 +137,7 @@ msgid "All apps updated"
 msgstr "Ähli programmalar täzelendi"
 
 #: src/features/apps/index.tsx:141
-#: src/routes/_authenticated/app/$appId.tsx:119
+#: src/routes/_authenticated/app/$appId.tsx:88
 msgid "App"
 msgstr "Programma"
 
@@ -150,7 +150,7 @@ msgstr "Programma hereketleri"
 msgid "App information"
 msgstr "Programma maglumaty"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:182
 msgid "App information and configuration"
 msgstr "Programma maglumaty we konfigurasiýasy"
 
@@ -161,12 +161,12 @@ msgstr "Programma maglumaty we konfigurasiýasy"
 msgid "App installed"
 msgstr "Programma gurnaldy"
 
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:121
 msgid "App not found"
 msgstr "Programma tapylmady"
 
-#: src/routes/_authenticated/app/$appId.tsx:216
+#: src/routes/_authenticated/app/$appId.tsx:185
 msgid "Application ID"
 msgstr "Programma ID"
 
@@ -185,6 +185,10 @@ msgstr "Çykmak isleýärsiňizmi? Hasabyňyza girmek üçin täzeden girmeli bo
 msgid "Asc"
 msgstr "Aşak"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Autentifikator kody"
+
 #: src/features/apps/components/install-dialog.tsx:73
 msgid "Available version:"
 msgstr "Elýeterli wersiýa:"
@@ -202,9 +206,9 @@ msgstr "Elýeterli, ýöne gurulmadyk"
 msgid "Back"
 msgstr "Yza"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:165
+#: src/routes/_authenticated/app/$appId.tsx:96
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:134
 msgid "Back to apps"
 msgstr "Programmalara yza"
 
@@ -219,6 +223,7 @@ msgid "Boost interest"
 msgstr "Gyzyklanmany ýokarlandyrmak"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -230,15 +235,15 @@ msgstr "Gyzyklanmany ýokarlandyrmak"
 #: src/features/apps/index.tsx:516
 #: src/features/apps/index.tsx:556
 #: src/features/apps/index.tsx:605
-#: src/routes/_authenticated/app/$appId.tsx:567
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Cancel"
 msgstr "Ýatyrmak"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Bu bildiriş üçin kategoriýa"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Bildiriş kategoriýasyny üýtgetmek"
 
@@ -368,6 +373,10 @@ msgstr "Kontekstual maglumat we jikme-jiklikler."
 msgid "Continue"
 msgstr "Dowam etmek"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "{label} bilen dowam et"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Nusgalamak"
@@ -380,7 +389,19 @@ msgstr "Programmany gurnap bolmady."
 msgid "Could not load this document. Please try again later."
 msgstr "Bu resminamany ýüklemedi. Soň gaýtadan synanyşyň."
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Kody ugratmak başartmady. Täzeden synanyşyň."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Gaýtadan tassyklamany başlatmak başartmady. Täzeden synanyşyň."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Şol hasap bilen barlap bolmady. Täzeden synanyşyň."
+
+#: src/routes/_authenticated/app/$appId.tsx:195
 msgid "Current Version"
 msgstr "Häzirki wersiýa"
 
@@ -411,26 +432,30 @@ msgstr "Adaty"
 msgid "Default AI account"
 msgstr "Adaty AI hasap"
 
-#: src/routes/_authenticated/app/$appId.tsx:447
+#: src/routes/_authenticated/app/$appId.tsx:416
 msgid "Default for all users"
 msgstr "Ähli ulanyjylar üçin adaty"
 
-#: src/routes/_authenticated/app/$appId.tsx:446
+#: src/routes/_authenticated/app/$appId.tsx:415
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Ähli ulanyjylar üçin adaty (wersiýa {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:312
 msgid "Default for all users updated"
 msgstr "Ähli ulanyjylar üçin adaty täzelendi"
 
-#: src/routes/_authenticated/app/$appId.tsx:430
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Default track"
 msgstr "Adaty track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:429
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Default track (version {0})"
 msgstr "Adaty track (wersiýa {0})"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:88
+msgid "Delete your account on the old server"
+msgstr "Köne serwerdäki hasabyňyzy pozy"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -459,6 +484,10 @@ msgstr "Ösüş programmalary"
 msgid "Direction"
 msgstr "Ugur"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:71
+msgid "Dismiss"
+msgstr "Goýbermek"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Mobil gapdal paneli görkezýär."
@@ -471,9 +500,21 @@ msgstr "Ýükläp al"
 msgid "Dyslexia-friendly"
 msgstr "Disleksiýa uýgunlaşan"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "E-poçta kody"
+
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Enabled Services"
 msgstr "Işjeň hyzmatlar"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "E-poçtaňyzdaky kody giriziň"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Autentifikator koduňyzy giriziň"
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -491,7 +532,7 @@ msgstr "Goşmaça uly"
 msgid "Failed to add account"
 msgstr "Hasap goşulmady"
 
-#: src/routes/_authenticated/app/$appId.tsx:493
+#: src/routes/_authenticated/app/$appId.tsx:463
 msgid "Failed to grant permission"
 msgstr "Rugsat berilmedi"
 
@@ -499,7 +540,7 @@ msgstr "Rugsat berilmedi"
 msgid "Failed to remove account"
 msgstr "Hasap aýrylmady"
 
-#: src/routes/_authenticated/app/$appId.tsx:475
+#: src/routes/_authenticated/app/$appId.tsx:445
 msgid "Failed to revoke permission"
 msgstr "Rugsat ýatyrylmady"
 
@@ -507,16 +548,16 @@ msgstr "Rugsat ýatyrylmady"
 msgid "Failed to send verification code"
 msgstr "Tassyklama kody iberilmedi"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Kategoriýa täzelenmedi"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:315
 msgid "Failed to update default"
 msgstr "Deslapky täzelenmedi"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:326
+#: src/routes/_authenticated/app/$appId.tsx:295
 msgid "Failed to update preference"
 msgstr "Saýlama täzelenmedi"
 
@@ -528,7 +569,7 @@ msgstr "Ulgam deslapkysy täzelenmedi"
 msgid "File:"
 msgstr "Faýl:"
 
-#: src/routes/_authenticated/app/$appId.tsx:221
+#: src/routes/_authenticated/app/$appId.tsx:190
 msgid "Fingerprint"
 msgstr "Barmak yzy"
 
@@ -537,6 +578,10 @@ msgstr "Barmak yzy"
 #: src/features/apps/components/install-dialog.tsx:78
 msgid "Fingerprint:"
 msgstr "Barmak yzy:"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:77
+msgid "Finish moving your account"
+msgstr "Hasabyňyzy göçürip gutaryň"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -592,15 +637,15 @@ msgstr "{pageNumber} sahypa geç"
 msgid "Go to previous page"
 msgstr "Öňki sahypa git"
 
-#: src/routes/_authenticated/app/$appId.tsx:531
+#: src/routes/_authenticated/app/$appId.tsx:501
 msgid "Grant"
 msgstr "Ber"
 
-#: src/routes/_authenticated/app/$appId.tsx:536
+#: src/routes/_authenticated/app/$appId.tsx:506
 msgid "Grant permission"
 msgstr "Rugsat ber"
 
-#: src/routes/_authenticated/app/$appId.tsx:591
+#: src/routes/_authenticated/app/$appId.tsx:561
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Bu programma ulgam aýratynlyklaryna girmäge rugsat ber"
 
@@ -627,11 +672,11 @@ msgstr "Baş sahypa"
 msgid "Hot"
 msgstr "Gyzgyn"
 
-#: src/routes/_authenticated/app/$appId.tsx:251
+#: src/routes/_authenticated/app/$appId.tsx:220
 msgid "HTTP Paths"
 msgstr "HTTP ýollary"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:181
 msgid "Identity"
 msgstr "Şahsyýet"
 
@@ -751,7 +796,7 @@ msgstr "Üstünlikli çykyldy"
 msgid "Logging out…"
 msgstr "Çykylýar…"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "Manage capabilities granted to this application"
 msgstr "Bu programma berlen mümkinçilikleri dolandyr"
 
@@ -841,11 +886,11 @@ msgstr "Gabat gelýän programmalar ýok"
 msgid "No paths configured."
 msgstr "Ýollar düzülmedi."
 
-#: src/routes/_authenticated/app/$appId.tsx:590
+#: src/routes/_authenticated/app/$appId.tsx:560
 msgid "No permissions granted"
 msgstr "Berlen rugsatlar ýok"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "No permissions granted to this app"
 msgstr "Bu programma berlen rugsatlar ýok"
 
@@ -874,7 +919,7 @@ msgstr "Hyzmatlar düzülmedi."
 msgid "No time zone found."
 msgstr "Wagt zolagy tapylmady."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Heniz mowzuk ýazgysy ýok — indiki bildirişden soň gaýtadan synanyşyň."
 
@@ -896,7 +941,7 @@ msgstr "Hiç biri"
 msgid "Normal"
 msgstr "Adaty"
 
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:333
 msgid "Not versioned"
 msgstr "Wersiýalanmadyk"
 
@@ -936,6 +981,14 @@ msgstr "Beýleki"
 msgid "Owner"
 msgstr "Eýesi"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr ""
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Giriş açary bilen tassyklamak şowsuz boldy. Täzeden synanyşyň."
+
 #: src/features/apps/index.tsx:544
 msgid "Paste the install link:"
 msgstr "Gurnaýyş baglanyşygyny goýuň:"
@@ -953,15 +1006,15 @@ msgstr "Ýol marşruty"
 msgid "Paths"
 msgstr "Ýollar"
 
-#: src/routes/_authenticated/app/$appId.tsx:488
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Permission granted"
 msgstr "Rugsat berildi"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Permission revoked"
 msgstr "Rugsat ýatyryldy"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Permissions"
 msgstr "Rugsatlar"
 
@@ -973,7 +1026,7 @@ msgstr "Programma ID giriziň"
 msgid "Preference updated"
 msgstr "Saýlama täzelendi"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Preferred Version"
 msgstr "Halaýan wersiýaňyz"
 
@@ -991,9 +1044,13 @@ msgstr "Gizlinlik"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:204
 msgid "Provided Classes"
 msgstr "Berlen klaslar"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:96
+msgid "Re-link your accounts on this server"
+msgstr "Bu serwerde hasaplaryňyzy täzeden baglanyşdyryň"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -1041,6 +1098,10 @@ msgstr "Gyzyklanmany aýyr"
 msgid "Removed {0} unused version{1}"
 msgstr "{0} ulanylmaýan wersiýa{1} aýryldy"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "E-poçtany gaýtadan iber"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1050,15 +1111,15 @@ msgstr "Täzeden başlat"
 msgid "Reset all settings to default values"
 msgstr "Ähli sazlamalary deslapky bahalara gaýtar"
 
-#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:612
 msgid "Revoke"
 msgstr "Ýatyr"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:619
 msgid "Revoke permission"
 msgstr "Rugsady ýatyr"
 
-#: src/routes/_authenticated/app/$appId.tsx:647
+#: src/routes/_authenticated/app/$appId.tsx:617
 msgid "Revoke permission?"
 msgstr "Rugsady ýatyrmak?"
 
@@ -1112,7 +1173,7 @@ msgstr "Gözle..."
 msgid "Searching..."
 msgstr "Gözlenýär..."
 
-#: src/routes/_authenticated/app/$appId.tsx:538
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "Select a capability to grant to {appName}."
 msgstr "{appName} -e bermek üçin ukyp saýla."
 
@@ -1148,13 +1209,17 @@ msgstr "Saýtyň ugruny saýla"
 msgid "Select theme preference"
 msgstr "Tema saýlawyňy saýla"
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "Select which version of this app to use"
 msgstr "Bu programmanyň haýsy görnüşini ulanjagyňy saýla"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:95
 msgid "Send again"
 msgstr "Täzeden iber"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "E-poçt iber"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
@@ -1241,7 +1306,7 @@ msgstr "Ulgam"
 msgid "System default"
 msgstr "Ulgamyň esasy"
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "System Default"
 msgstr "Ulgamyň esasy"
 
@@ -1257,7 +1322,7 @@ msgstr "Bellik"
 msgid "Teams/Apps"
 msgstr "Toparlar/Programmalar"
 
-#: src/routes/_authenticated/app/$appId.tsx:232
+#: src/routes/_authenticated/app/$appId.tsx:201
 msgid "Technical Capabilities"
 msgstr "Tehniki başarnyklar"
 
@@ -1266,16 +1331,20 @@ msgstr "Tehniki başarnyklar"
 msgid "Terms and conditions"
 msgstr "Şertler"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Ol kod nädogry ýa-da möhleti geçen."
+
 #: src/features/apps/index.tsx:116
 #: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "Programma üstünlikli gurnaldy."
 
-#: src/routes/_authenticated/app/$appId.tsx:153
+#: src/routes/_authenticated/app/$appId.tsx:122
 msgid "The requested app could not be found."
 msgstr "Soralan programma tapylmady."
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "The version used by users who haven't made a choice"
 msgstr "Saýlaw etmedik ulanyjylar tarapyndan ulanylýan görnüş"
 
@@ -1287,7 +1356,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Tema sazlamalary"
 
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:334
 msgid "This app does not have version management"
 msgstr "Bu programmada görnüş dolandyryşy ýok"
 
@@ -1295,8 +1364,8 @@ msgstr "Bu programmada görnüş dolandyryşy ýok"
 msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
 msgstr "Bu programma çap edijisinden göni gurnaldy we barlanan däl. Ol zyýanly programma bolup biler."
 
-#. placeholder {0}: formatPermission(permission.permission, t)
-#: src/routes/_authenticated/app/$appId.tsx:648
+#. placeholder {0}: permission.name
+#: src/routes/_authenticated/app/$appId.tsx:618
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Bu {appName} -dan \"{0}\" rugsadyny ýatyrar. Programma dogry işlemegi bes edip biler."
 
@@ -1330,7 +1399,7 @@ msgid "Top"
 msgstr "Ýokarky"
 
 #: src/features/apps/index.tsx:680
-#: src/routes/_authenticated/app/$appId.tsx:384
+#: src/routes/_authenticated/app/$appId.tsx:353
 msgid "Track"
 msgstr "Yzarla"
 
@@ -1382,7 +1451,7 @@ msgstr "Görnüş maglumatlary ýüklenip bilinmedi"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Girişe ugradyp bolmady. Gaýtadan synanyş."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Bellenilmedik"
 
@@ -1422,6 +1491,10 @@ msgstr "Täzelenýär..."
 msgid "Use system default"
 msgstr "Ulgamyň esasy ulan"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Giriş açaryňyzy ulanyň"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
 msgstr "Ulanyjy"
@@ -1438,6 +1511,7 @@ msgstr "Tassyklama kody iberildi"
 msgid "Verification failed"
 msgstr "Tassyklama şowsuz boldy"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1447,7 +1521,7 @@ msgstr "Tassykla"
 msgid "Verify email address"
 msgstr "E-poçta salgysyny tassykla"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:367
 msgid "Version"
 msgstr "Görnüş"
 
@@ -1456,13 +1530,17 @@ msgstr "Görnüş"
 msgid "Version {0}"
 msgstr "Görnüş {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:292
 msgid "Version changed"
 msgstr "Görnüş üýtgedildi"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "Version Management"
 msgstr "Görnüş dolandyryşy"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Wideo eskizi"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1488,7 +1566,11 @@ msgstr "Web sahypasy abatlaýyşa düşdi!"
 msgid "Wednesday"
 msgstr "Çarşenbe"
 
-#: src/routes/_authenticated/app/$appId.tsx:438
+#: ../../../lib/web/src/components/restore-banner.tsx:80
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Hasabyňyz {source} serwерinden bu ýere geçirildi. Şol ýerden pozýançaňyz, habarlar we duýduryşlar iki serwere hem ýetip biler, käbir mazmunyňyz köne serweriň üsti bilen berler, yzarlaýanlar sizi bu ýerde tapmak üçin birnäçe minut gerek bolup biler."
+
+#: src/routes/_authenticated/app/$appId.tsx:407
 msgid "Your personal version override"
 msgstr "Şahsy görnüş düzgüniň"
 
@@ -1496,6 +1578,6 @@ msgstr "Şahsy görnüş düzgüniň"
 msgid "Your preference"
 msgstr "Saýlawyň"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Your Version"
 msgstr "Seniň görnüşiň"

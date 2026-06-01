@@ -31,11 +31,11 @@ msgstr "{0} oppdatert, {failed} mislukka"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} er installert."
 
-#: src/routes/_authenticated/app/$appId.tsx:389
+#: src/routes/_authenticated/app/$appId.tsx:358
 msgid "{track} (default, version {version})"
 msgstr "{track} (standard, versjon {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:390
+#: src/routes/_authenticated/app/$appId.tsx:359
 msgid "{track} (version {version})"
 msgstr "{track} (versjon {version})"
 
@@ -137,7 +137,7 @@ msgid "All apps updated"
 msgstr "Alle appar oppdaterte"
 
 #: src/features/apps/index.tsx:141
-#: src/routes/_authenticated/app/$appId.tsx:119
+#: src/routes/_authenticated/app/$appId.tsx:88
 msgid "App"
 msgstr "App"
 
@@ -150,7 +150,7 @@ msgstr "App-handlingar"
 msgid "App information"
 msgstr "App-informasjon"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:182
 msgid "App information and configuration"
 msgstr "App-informasjon og oppsett"
 
@@ -161,12 +161,12 @@ msgstr "App-informasjon og oppsett"
 msgid "App installed"
 msgstr "App installert"
 
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:121
 msgid "App not found"
 msgstr "Fann ikkje appen"
 
-#: src/routes/_authenticated/app/$appId.tsx:216
+#: src/routes/_authenticated/app/$appId.tsx:185
 msgid "Application ID"
 msgstr "Applikasjons-ID"
 
@@ -185,6 +185,10 @@ msgstr "Er du sikker på at du vil logge ut? Du må logge inn att for å få til
 msgid "Asc"
 msgstr "Stig"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr ""
+
 #: src/features/apps/components/install-dialog.tsx:73
 msgid "Available version:"
 msgstr "Tilgjengeleg versjon:"
@@ -202,9 +206,9 @@ msgstr "Tilgjengeleg, men ikkje installert"
 msgid "Back"
 msgstr "Tilbake"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:165
+#: src/routes/_authenticated/app/$appId.tsx:96
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:134
 msgid "Back to apps"
 msgstr "Tilbake til appar"
 
@@ -219,6 +223,7 @@ msgid "Boost interest"
 msgstr "Auk interesse"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -230,15 +235,15 @@ msgstr "Auk interesse"
 #: src/features/apps/index.tsx:516
 #: src/features/apps/index.tsx:556
 #: src/features/apps/index.tsx:605
-#: src/routes/_authenticated/app/$appId.tsx:567
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Kategori for dette varselet"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Endre varselkategori"
 
@@ -368,6 +373,10 @@ msgstr "Kontekstinformasjon og detaljar."
 msgid "Continue"
 msgstr "Hald fram"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Kopier"
@@ -380,7 +389,19 @@ msgstr "Kunne ikkje installera appen."
 msgid "Could not load this document. Please try again later."
 msgstr ""
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr ""
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr ""
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr ""
+
+#: src/routes/_authenticated/app/$appId.tsx:195
 msgid "Current Version"
 msgstr "Noverande versjon"
 
@@ -411,26 +432,30 @@ msgstr "Standard"
 msgid "Default AI account"
 msgstr "Standard KI-konto"
 
-#: src/routes/_authenticated/app/$appId.tsx:447
+#: src/routes/_authenticated/app/$appId.tsx:416
 msgid "Default for all users"
 msgstr "Standard for alle brukarar"
 
-#: src/routes/_authenticated/app/$appId.tsx:446
+#: src/routes/_authenticated/app/$appId.tsx:415
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Standard for alle brukarar (versjon {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:312
 msgid "Default for all users updated"
 msgstr "Standard for alle brukarar oppdatert"
 
-#: src/routes/_authenticated/app/$appId.tsx:430
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Default track"
 msgstr "Standardspor"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:429
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Default track (version {0})"
 msgstr "Standardspor (versjon {0})"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:88
+msgid "Delete your account on the old server"
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -459,6 +484,10 @@ msgstr "Utviklingsappar"
 msgid "Direction"
 msgstr "Retning"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:71
+msgid "Dismiss"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Viser mobil sidestolpe."
@@ -471,9 +500,21 @@ msgstr "Last ned"
 msgid "Dyslexia-friendly"
 msgstr ""
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr ""
+
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Enabled Services"
 msgstr "Aktiverte tenester"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr ""
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr ""
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -491,7 +532,7 @@ msgstr ""
 msgid "Failed to add account"
 msgstr "Klarte ikkje leggja til konto"
 
-#: src/routes/_authenticated/app/$appId.tsx:493
+#: src/routes/_authenticated/app/$appId.tsx:463
 msgid "Failed to grant permission"
 msgstr "Klarte ikkje gje løyve"
 
@@ -499,7 +540,7 @@ msgstr "Klarte ikkje gje løyve"
 msgid "Failed to remove account"
 msgstr "Klarte ikkje fjerna konto"
 
-#: src/routes/_authenticated/app/$appId.tsx:475
+#: src/routes/_authenticated/app/$appId.tsx:445
 msgid "Failed to revoke permission"
 msgstr "Klarte ikkje trekkja attende løyve"
 
@@ -507,16 +548,16 @@ msgstr "Klarte ikkje trekkja attende løyve"
 msgid "Failed to send verification code"
 msgstr "Klarte ikkje senda stadfestingskode"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Klarte ikkje oppdatera kategori"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:315
 msgid "Failed to update default"
 msgstr "Klarte ikkje oppdatera standard"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:326
+#: src/routes/_authenticated/app/$appId.tsx:295
 msgid "Failed to update preference"
 msgstr "Klarte ikkje oppdatera preferanse"
 
@@ -528,7 +569,7 @@ msgstr "Klarte ikkje oppdatera systemstandard"
 msgid "File:"
 msgstr "Fil:"
 
-#: src/routes/_authenticated/app/$appId.tsx:221
+#: src/routes/_authenticated/app/$appId.tsx:190
 msgid "Fingerprint"
 msgstr "Fingeravtrykk"
 
@@ -537,6 +578,10 @@ msgstr "Fingeravtrykk"
 #: src/features/apps/components/install-dialog.tsx:78
 msgid "Fingerprint:"
 msgstr "Fingeravtrykk:"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:77
+msgid "Finish moving your account"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -592,15 +637,15 @@ msgstr ""
 msgid "Go to previous page"
 msgstr "Gå til førre side"
 
-#: src/routes/_authenticated/app/$appId.tsx:531
+#: src/routes/_authenticated/app/$appId.tsx:501
 msgid "Grant"
 msgstr "Gje"
 
-#: src/routes/_authenticated/app/$appId.tsx:536
+#: src/routes/_authenticated/app/$appId.tsx:506
 msgid "Grant permission"
 msgstr "Gje løyve"
 
-#: src/routes/_authenticated/app/$appId.tsx:591
+#: src/routes/_authenticated/app/$appId.tsx:561
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Gje løyve så denne appen kan få tilgang til systemfunksjonar"
 
@@ -627,11 +672,11 @@ msgstr "Heim"
 msgid "Hot"
 msgstr "Het"
 
-#: src/routes/_authenticated/app/$appId.tsx:251
+#: src/routes/_authenticated/app/$appId.tsx:220
 msgid "HTTP Paths"
 msgstr "HTTP-stiar"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:181
 msgid "Identity"
 msgstr "Identitet"
 
@@ -751,7 +796,7 @@ msgstr "Logga ut"
 msgid "Logging out…"
 msgstr "Loggar ut…"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "Manage capabilities granted to this application"
 msgstr "Handsam funksjonane som er gjevne til denne applikasjonen"
 
@@ -841,11 +886,11 @@ msgstr "Ingen samsvarande appar"
 msgid "No paths configured."
 msgstr "Ingen stiar er sette opp."
 
-#: src/routes/_authenticated/app/$appId.tsx:590
+#: src/routes/_authenticated/app/$appId.tsx:560
 msgid "No permissions granted"
 msgstr "Ingen løyve gjevne"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "No permissions granted to this app"
 msgstr "Ingen løyve gjevne til denne appen"
 
@@ -874,7 +919,7 @@ msgstr "Ingen tenester er sette opp."
 msgid "No time zone found."
 msgstr "Inga tidssone funne."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Inga emneoppføring enno — prøv igjen etter neste varsel."
 
@@ -896,7 +941,7 @@ msgstr "Ingen"
 msgid "Normal"
 msgstr "Normal"
 
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:333
 msgid "Not versioned"
 msgstr "Ikkje versjonert"
 
@@ -936,6 +981,14 @@ msgstr "Anna"
 msgid "Owner"
 msgstr "Eigar"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr ""
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr ""
+
 #: src/features/apps/index.tsx:544
 msgid "Paste the install link:"
 msgstr "Lim inn installasjonslenkja:"
@@ -953,15 +1006,15 @@ msgstr "Stiruting"
 msgid "Paths"
 msgstr "Stiar"
 
-#: src/routes/_authenticated/app/$appId.tsx:488
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Permission granted"
 msgstr "Løyve gjeve"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Permission revoked"
 msgstr "Løyve trekt tilbake"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Permissions"
 msgstr "Løyve"
 
@@ -973,7 +1026,7 @@ msgstr "Skriv ein app-ID"
 msgid "Preference updated"
 msgstr "Innstilling oppdatert"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Preferred Version"
 msgstr "Føretrekt versjon"
 
@@ -991,9 +1044,13 @@ msgstr "Privacy"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:204
 msgid "Provided Classes"
 msgstr "Leverte klassar"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:96
+msgid "Re-link your accounts on this server"
+msgstr ""
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -1041,6 +1098,10 @@ msgstr "Fjern interesse"
 msgid "Removed {0} unused version{1}"
 msgstr "Fjerna {0} ubrukt versjon{1}"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr ""
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1050,15 +1111,15 @@ msgstr "Tilbakestill"
 msgid "Reset all settings to default values"
 msgstr "Tilbakestill alle innstillingar til standardverdiar"
 
-#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:612
 msgid "Revoke"
 msgstr "Trekk tilbake"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:619
 msgid "Revoke permission"
 msgstr "Trekk tilbake løyve"
 
-#: src/routes/_authenticated/app/$appId.tsx:647
+#: src/routes/_authenticated/app/$appId.tsx:617
 msgid "Revoke permission?"
 msgstr "Trekk tilbake løyve?"
 
@@ -1112,7 +1173,7 @@ msgstr "Søk..."
 msgid "Searching..."
 msgstr "Søkjer..."
 
-#: src/routes/_authenticated/app/$appId.tsx:538
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "Select a capability to grant to {appName}."
 msgstr "Vel ein evne å gje til {appName}."
 
@@ -1148,12 +1209,16 @@ msgstr "Vel sideretning"
 msgid "Select theme preference"
 msgstr "Vel temapreferanse"
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "Select which version of this app to use"
 msgstr "Vel kva versjon av denne appen som skal brukast"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:95
 msgid "Send again"
+msgstr ""
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
 msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:133
@@ -1241,7 +1306,7 @@ msgstr "System"
 msgid "System default"
 msgstr "Systemstandard"
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "System Default"
 msgstr "Systemstandard"
 
@@ -1257,7 +1322,7 @@ msgstr "Etikett"
 msgid "Teams/Apps"
 msgstr "Lag/Appar"
 
-#: src/routes/_authenticated/app/$appId.tsx:232
+#: src/routes/_authenticated/app/$appId.tsx:201
 msgid "Technical Capabilities"
 msgstr "Tekniske moglegheiter"
 
@@ -1266,16 +1331,20 @@ msgstr "Tekniske moglegheiter"
 msgid "Terms and conditions"
 msgstr ""
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr ""
+
 #: src/features/apps/index.tsx:116
 #: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "Appen er installert."
 
-#: src/routes/_authenticated/app/$appId.tsx:153
+#: src/routes/_authenticated/app/$appId.tsx:122
 msgid "The requested app could not be found."
 msgstr "Den førespurde appen vart ikkje funnen."
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "The version used by users who haven't made a choice"
 msgstr "Versjonen som vert brukt av brukarar som ikkje har gjort eit val"
 
@@ -1287,7 +1356,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Temainnstillingar"
 
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:334
 msgid "This app does not have version management"
 msgstr "Denne appen har ikkje versjonshandsaming"
 
@@ -1295,8 +1364,8 @@ msgstr "Denne appen har ikkje versjonshandsaming"
 msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
 msgstr "Denne appen er installert direkte frå utgjevaren og er ikkje vurdert. Han kan vera skadeleg programvare."
 
-#. placeholder {0}: formatPermission(permission.permission, t)
-#: src/routes/_authenticated/app/$appId.tsx:648
+#. placeholder {0}: permission.name
+#: src/routes/_authenticated/app/$appId.tsx:618
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Dette vil oppheve \"{0}\"-tilgangen frå {appName}. Appen kan slutte å fungere rett."
 
@@ -1330,7 +1399,7 @@ msgid "Top"
 msgstr "Topp"
 
 #: src/features/apps/index.tsx:680
-#: src/routes/_authenticated/app/$appId.tsx:384
+#: src/routes/_authenticated/app/$appId.tsx:353
 msgid "Track"
 msgstr "Spor"
 
@@ -1382,7 +1451,7 @@ msgstr "Kunne ikkje laste versjonsinformasjon"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Kunne ikkje omdirigere til innlogging. Prøv igjen."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Ikkje tildelt"
 
@@ -1422,6 +1491,10 @@ msgstr "Oppdaterer..."
 msgid "Use system default"
 msgstr "Bruk systemstandard"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr ""
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
 msgstr "Brukar"
@@ -1438,6 +1511,7 @@ msgstr "Stadfestingskode sendt"
 msgid "Verification failed"
 msgstr "Stadfesting mislukkast"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1447,7 +1521,7 @@ msgstr "Stadfest"
 msgid "Verify email address"
 msgstr "Stadfest e-postadresse"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:367
 msgid "Version"
 msgstr "Versjon"
 
@@ -1456,13 +1530,17 @@ msgstr "Versjon"
 msgid "Version {0}"
 msgstr "Versjon {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:292
 msgid "Version changed"
 msgstr "Versjon endra"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "Version Management"
 msgstr "Versjonshandsaming"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1488,7 +1566,11 @@ msgstr "Nettstaden er under vedlikehald!"
 msgid "Wednesday"
 msgstr "Onsdag"
 
-#: src/routes/_authenticated/app/$appId.tsx:438
+#: ../../../lib/web/src/components/restore-banner.tsx:80
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr ""
+
+#: src/routes/_authenticated/app/$appId.tsx:407
 msgid "Your personal version override"
 msgstr "Din personlege versjonsoverstyring"
 
@@ -1496,6 +1578,6 @@ msgstr "Din personlege versjonsoverstyring"
 msgid "Your preference"
 msgstr "Din preferanse"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Your Version"
 msgstr "Versjonen din"

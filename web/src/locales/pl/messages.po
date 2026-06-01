@@ -31,11 +31,11 @@ msgstr "{0} zaktualizowano, {failed} nie powiodło się"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} została zainstalowana."
 
-#: src/routes/_authenticated/app/$appId.tsx:389
+#: src/routes/_authenticated/app/$appId.tsx:358
 msgid "{track} (default, version {version})"
 msgstr "{track} (domyślne, wersja {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:390
+#: src/routes/_authenticated/app/$appId.tsx:359
 msgid "{track} (version {version})"
 msgstr "{track} (wersja {version})"
 
@@ -137,7 +137,7 @@ msgid "All apps updated"
 msgstr "Wszystkie aplikacje zaktualizowane"
 
 #: src/features/apps/index.tsx:141
-#: src/routes/_authenticated/app/$appId.tsx:119
+#: src/routes/_authenticated/app/$appId.tsx:88
 msgid "App"
 msgstr "Aplikacja"
 
@@ -150,7 +150,7 @@ msgstr "Akcje aplikacji"
 msgid "App information"
 msgstr "Informacje o aplikacji"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:182
 msgid "App information and configuration"
 msgstr "Informacje i konfiguracja aplikacji"
 
@@ -161,12 +161,12 @@ msgstr "Informacje i konfiguracja aplikacji"
 msgid "App installed"
 msgstr "Aplikacja zainstalowana"
 
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:121
 msgid "App not found"
 msgstr "Nie znaleziono aplikacji"
 
-#: src/routes/_authenticated/app/$appId.tsx:216
+#: src/routes/_authenticated/app/$appId.tsx:185
 msgid "Application ID"
 msgstr "ID aplikacji"
 
@@ -185,6 +185,10 @@ msgstr "Czy na pewno chcesz się wylogować? Aby uzyskać dostęp do konta, będ
 msgid "Asc"
 msgstr "Rosn."
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Kod uwierzytelniający"
+
 #: src/features/apps/components/install-dialog.tsx:73
 msgid "Available version:"
 msgstr "Dostępna wersja:"
@@ -202,9 +206,9 @@ msgstr "Dostępne, ale nie zainstalowane"
 msgid "Back"
 msgstr "Wstecz"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:148
-#: src/routes/_authenticated/app/$appId.tsx:165
+#: src/routes/_authenticated/app/$appId.tsx:96
+#: src/routes/_authenticated/app/$appId.tsx:117
+#: src/routes/_authenticated/app/$appId.tsx:134
 msgid "Back to apps"
 msgstr "Powrót do aplikacji"
 
@@ -219,6 +223,7 @@ msgid "Boost interest"
 msgstr "Zwiększ zainteresowanie"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -230,15 +235,15 @@ msgstr "Zwiększ zainteresowanie"
 #: src/features/apps/index.tsx:516
 #: src/features/apps/index.tsx:556
 #: src/features/apps/index.tsx:605
-#: src/routes/_authenticated/app/$appId.tsx:567
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Kategoria tego powiadomienia"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Zmień kategorię powiadomienia"
 
@@ -368,6 +373,10 @@ msgstr "Informacje kontekstowe i szczegóły."
 msgid "Continue"
 msgstr "Kontynuuj"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Kontynuuj z {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Kopiuj"
@@ -380,7 +389,19 @@ msgstr "Nie udało się zainstalować aplikacji."
 msgid "Could not load this document. Please try again later."
 msgstr "Nie można wczytać tego dokumentu. Spróbuj ponownie później."
 
-#: src/routes/_authenticated/app/$appId.tsx:226
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Nie udało się wysłać kodu. Spróbuj ponownie."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Nie udało się rozpocząć ponownego uwierzytelniania. Spróbuj ponownie."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Nie udało się zweryfikować przy użyciu tego konta. Spróbuj ponownie."
+
+#: src/routes/_authenticated/app/$appId.tsx:195
 msgid "Current Version"
 msgstr "Bieżąca wersja"
 
@@ -411,26 +432,30 @@ msgstr "Domyślny"
 msgid "Default AI account"
 msgstr "Domyślne konto AI"
 
-#: src/routes/_authenticated/app/$appId.tsx:447
+#: src/routes/_authenticated/app/$appId.tsx:416
 msgid "Default for all users"
 msgstr "Domyślne dla wszystkich użytkowników"
 
-#: src/routes/_authenticated/app/$appId.tsx:446
+#: src/routes/_authenticated/app/$appId.tsx:415
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Domyślne dla wszystkich użytkowników (wersja {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:312
 msgid "Default for all users updated"
 msgstr "Domyślne dla wszystkich użytkowników zaktualizowane"
 
-#: src/routes/_authenticated/app/$appId.tsx:430
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Default track"
 msgstr "Domyślny kanał"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:429
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Default track (version {0})"
 msgstr "Domyślny kanał (wersja {0})"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:88
+msgid "Delete your account on the old server"
+msgstr "Usuń swoje konto na starym serwerze"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -459,6 +484,10 @@ msgstr "Aplikacje rozwojowe"
 msgid "Direction"
 msgstr "Kierunek"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:71
+msgid "Dismiss"
+msgstr "Odrzuć"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Wyświetla pasek boczny mobilny."
@@ -471,9 +500,21 @@ msgstr "Pobierz"
 msgid "Dyslexia-friendly"
 msgstr "Przyjazna dla dysleksji"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Kod e-mail"
+
+#: src/routes/_authenticated/app/$appId.tsx:212
 msgid "Enabled Services"
 msgstr "Włączone usługi"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Wprowadź kod z wiadomości e-mail"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Wprowadź kod z aplikacji uwierzytelniającej"
 
 #: src/features/apps/components/install-dialog.tsx:82
 msgid "Entity:"
@@ -491,7 +532,7 @@ msgstr "Bardzo duży"
 msgid "Failed to add account"
 msgstr "Nie udało się dodać konta"
 
-#: src/routes/_authenticated/app/$appId.tsx:493
+#: src/routes/_authenticated/app/$appId.tsx:463
 msgid "Failed to grant permission"
 msgstr "Nie udało się przyznać uprawnienia"
 
@@ -499,7 +540,7 @@ msgstr "Nie udało się przyznać uprawnienia"
 msgid "Failed to remove account"
 msgstr "Nie udało się usunąć konta"
 
-#: src/routes/_authenticated/app/$appId.tsx:475
+#: src/routes/_authenticated/app/$appId.tsx:445
 msgid "Failed to revoke permission"
 msgstr "Nie udało się odebrać uprawnienia"
 
@@ -507,16 +548,16 @@ msgstr "Nie udało się odebrać uprawnienia"
 msgid "Failed to send verification code"
 msgstr "Nie udało się wysłać kodu weryfikacyjnego"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Nie udało się zaktualizować kategorii"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:315
 msgid "Failed to update default"
 msgstr "Nie udało się zaktualizować wartości domyślnej"
 
 #: src/features/routing/use-routing-data.ts:25
-#: src/routes/_authenticated/app/$appId.tsx:326
+#: src/routes/_authenticated/app/$appId.tsx:295
 msgid "Failed to update preference"
 msgstr "Nie udało się zaktualizować preferencji"
 
@@ -528,7 +569,7 @@ msgstr "Nie udało się zaktualizować ustawień domyślnych systemu"
 msgid "File:"
 msgstr "Plik:"
 
-#: src/routes/_authenticated/app/$appId.tsx:221
+#: src/routes/_authenticated/app/$appId.tsx:190
 msgid "Fingerprint"
 msgstr "Odcisk palca"
 
@@ -537,6 +578,10 @@ msgstr "Odcisk palca"
 #: src/features/apps/components/install-dialog.tsx:78
 msgid "Fingerprint:"
 msgstr "Odcisk palca:"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:77
+msgid "Finish moving your account"
+msgstr "Zakończ przenoszenie konta"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -592,15 +637,15 @@ msgstr "Przejdź do strony {pageNumber}"
 msgid "Go to previous page"
 msgstr "Przejdź do poprzedniej strony"
 
-#: src/routes/_authenticated/app/$appId.tsx:531
+#: src/routes/_authenticated/app/$appId.tsx:501
 msgid "Grant"
 msgstr "Przyznaj"
 
-#: src/routes/_authenticated/app/$appId.tsx:536
+#: src/routes/_authenticated/app/$appId.tsx:506
 msgid "Grant permission"
 msgstr "Przyznaj uprawnienie"
 
-#: src/routes/_authenticated/app/$appId.tsx:591
+#: src/routes/_authenticated/app/$appId.tsx:561
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Przyznaj uprawnienia, aby zezwolić tej aplikacji na dostęp do funkcji systemu"
 
@@ -627,11 +672,11 @@ msgstr "Główna"
 msgid "Hot"
 msgstr "Popularne"
 
-#: src/routes/_authenticated/app/$appId.tsx:251
+#: src/routes/_authenticated/app/$appId.tsx:220
 msgid "HTTP Paths"
 msgstr "Ścieżki HTTP"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:181
 msgid "Identity"
 msgstr "Tożsamość"
 
@@ -751,7 +796,7 @@ msgstr "Pomyślnie wylogowano"
 msgid "Logging out…"
 msgstr "Wylogowywanie…"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "Manage capabilities granted to this application"
 msgstr "Zarządzaj uprawnieniami przyznanymi tej aplikacji"
 
@@ -841,11 +886,11 @@ msgstr "Brak pasujących aplikacji"
 msgid "No paths configured."
 msgstr "Nie skonfigurowano żadnych ścieżek."
 
-#: src/routes/_authenticated/app/$appId.tsx:590
+#: src/routes/_authenticated/app/$appId.tsx:560
 msgid "No permissions granted"
 msgstr "Nie przyznano żadnych uprawnień"
 
-#: src/routes/_authenticated/app/$appId.tsx:525
+#: src/routes/_authenticated/app/$appId.tsx:495
 msgid "No permissions granted to this app"
 msgstr "Nie przyznano żadnych uprawnień tej aplikacji"
 
@@ -874,7 +919,7 @@ msgstr "Nie skonfigurowano żadnych usług."
 msgid "No time zone found."
 msgstr "Nie znaleziono strefy czasowej."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Brak jeszcze rekordu tematu — spróbuj ponownie po następnym powiadomieniu."
 
@@ -896,7 +941,7 @@ msgstr "Brak"
 msgid "Normal"
 msgstr "Normalny"
 
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:333
 msgid "Not versioned"
 msgstr "Bez wersji"
 
@@ -936,6 +981,14 @@ msgstr "Inne"
 msgid "Owner"
 msgstr "Właściciel"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "Klucz dostępu"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Weryfikacja kluczem dostępu nie powiodła się. Spróbuj ponownie."
+
 #: src/features/apps/index.tsx:544
 msgid "Paste the install link:"
 msgstr "Wklej link instalacyjny:"
@@ -953,15 +1006,15 @@ msgstr "Routing ścieżek"
 msgid "Paths"
 msgstr "Ścieżki"
 
-#: src/routes/_authenticated/app/$appId.tsx:488
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Permission granted"
 msgstr "Uprawnienie przyznane"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Permission revoked"
 msgstr "Uprawnienie cofnięte"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:493
 msgid "Permissions"
 msgstr "Uprawnienia"
 
@@ -973,7 +1026,7 @@ msgstr "Wprowadź identyfikator aplikacji"
 msgid "Preference updated"
 msgstr "Zaktualizowano preferencję"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Preferred Version"
 msgstr "Preferowana wersja"
 
@@ -991,9 +1044,13 @@ msgstr "Prywatność"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:204
 msgid "Provided Classes"
 msgstr "Udostępniane klasy"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:96
+msgid "Re-link your accounts on this server"
+msgstr "Ponownie powiąż swoje konta na tym serwerze"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -1041,6 +1098,10 @@ msgstr "Usuń zainteresowanie"
 msgid "Removed {0} unused version{1}"
 msgstr "Usunięto {0} nieużywanych wersji{1}"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Wyślij e-mail ponownie"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1050,15 +1111,15 @@ msgstr "Zresetuj"
 msgid "Reset all settings to default values"
 msgstr "Zresetuj wszystkie ustawienia do wartości domyślnych"
 
-#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:612
 msgid "Revoke"
 msgstr "Odwołaj"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:619
 msgid "Revoke permission"
 msgstr "Cofnij uprawnienie"
 
-#: src/routes/_authenticated/app/$appId.tsx:647
+#: src/routes/_authenticated/app/$appId.tsx:617
 msgid "Revoke permission?"
 msgstr "Odwołać uprawnienie?"
 
@@ -1112,7 +1173,7 @@ msgstr "Szukaj..."
 msgid "Searching..."
 msgstr "Wyszukiwanie..."
 
-#: src/routes/_authenticated/app/$appId.tsx:538
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "Select a capability to grant to {appName}."
 msgstr "Wybierz uprawnienie do przyznania dla {appName}."
 
@@ -1148,13 +1209,17 @@ msgstr "Wybierz kierunek witryny"
 msgid "Select theme preference"
 msgstr "Wybierz preferencję motywu"
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "Select which version of this app to use"
 msgstr "Wybierz, której wersji tej aplikacji użyć"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:95
 msgid "Send again"
 msgstr "Wyślij ponownie"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Wyślij e-mail"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
@@ -1241,7 +1306,7 @@ msgstr "System"
 msgid "System default"
 msgstr "Domyślne systemu"
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "System Default"
 msgstr "Domyślne systemu"
 
@@ -1257,7 +1322,7 @@ msgstr "Tag"
 msgid "Teams/Apps"
 msgstr "Zespoły/Aplikacje"
 
-#: src/routes/_authenticated/app/$appId.tsx:232
+#: src/routes/_authenticated/app/$appId.tsx:201
 msgid "Technical Capabilities"
 msgstr "Możliwości techniczne"
 
@@ -1266,16 +1331,20 @@ msgstr "Możliwości techniczne"
 msgid "Terms and conditions"
 msgstr "Regulamin"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Ten kod jest nieprawidłowy lub wygasł."
+
 #: src/features/apps/index.tsx:116
 #: src/features/apps/index.tsx:223
 msgid "The app has been installed successfully."
 msgstr "Aplikacja została zainstalowana pomyślnie."
 
-#: src/routes/_authenticated/app/$appId.tsx:153
+#: src/routes/_authenticated/app/$appId.tsx:122
 msgid "The requested app could not be found."
 msgstr "Nie można znaleźć żądanej aplikacji."
 
-#: src/routes/_authenticated/app/$appId.tsx:422
+#: src/routes/_authenticated/app/$appId.tsx:391
 msgid "The version used by users who haven't made a choice"
 msgstr "Wersja używana przez użytkowników, którzy nie dokonali wyboru"
 
@@ -1287,7 +1356,7 @@ msgstr "Motyw"
 msgid "Theme Settings"
 msgstr "Ustawienia motywu"
 
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:334
 msgid "This app does not have version management"
 msgstr "Ta aplikacja nie ma zarządzania wersjami"
 
@@ -1295,8 +1364,8 @@ msgstr "Ta aplikacja nie ma zarządzania wersjami"
 msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
 msgstr "Ta aplikacja jest instalowana bezpośrednio od jej wydawcy i nie została zweryfikowana. Może to być złośliwe oprogramowanie."
 
-#. placeholder {0}: formatPermission(permission.permission, t)
-#: src/routes/_authenticated/app/$appId.tsx:648
+#. placeholder {0}: permission.name
+#: src/routes/_authenticated/app/$appId.tsx:618
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Spowoduje to cofnięcie uprawnienia \"{0}\" z {appName}. Aplikacja może przestać działać poprawnie."
 
@@ -1330,7 +1399,7 @@ msgid "Top"
 msgstr "Góra"
 
 #: src/features/apps/index.tsx:680
-#: src/routes/_authenticated/app/$appId.tsx:384
+#: src/routes/_authenticated/app/$appId.tsx:353
 msgid "Track"
 msgstr "Ścieżka"
 
@@ -1382,7 +1451,7 @@ msgstr "Nie można załadować informacji o wersji"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Nie można przekierować do logowania. Spróbuj ponownie."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Nieprzypisane"
 
@@ -1422,6 +1491,10 @@ msgstr "Aktualizowanie..."
 msgid "Use system default"
 msgstr "Użyj domyślnego systemu"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Użyj klucza dostępu"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
 msgstr "Użytkownik"
@@ -1438,6 +1511,7 @@ msgstr "Kod weryfikacyjny wysłany"
 msgid "Verification failed"
 msgstr "Weryfikacja nie powiodła się"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1447,7 +1521,7 @@ msgstr "Weryfikuj"
 msgid "Verify email address"
 msgstr "Zweryfikuj adres e-mail"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:367
 msgid "Version"
 msgstr "Wersja"
 
@@ -1456,13 +1530,17 @@ msgstr "Wersja"
 msgid "Version {0}"
 msgstr "Wersja {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:292
 msgid "Version changed"
 msgstr "Wersja zmieniona"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "Version Management"
 msgstr "Zarządzanie wersjami"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Miniatura wideo"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1488,7 +1566,11 @@ msgstr "Witryna jest w trakcie konserwacji!"
 msgid "Wednesday"
 msgstr "Środa"
 
-#: src/routes/_authenticated/app/$appId.tsx:438
+#: ../../../lib/web/src/components/restore-banner.tsx:80
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Twoje konto zostało przeniesione tutaj z {source}. Dopóki go tam nie usuniesz, wiadomości i powiadomienia mogą docierać do obu serwerów, część twoich treści nadal jest serwowana ze starego serwera, a obserwujący mogą potrzebować kilku minut, aby cię tu znaleźć."
+
+#: src/routes/_authenticated/app/$appId.tsx:407
 msgid "Your personal version override"
 msgstr "Twoje osobiste nadpisanie wersji"
 
@@ -1496,6 +1578,6 @@ msgstr "Twoje osobiste nadpisanie wersji"
 msgid "Your preference"
 msgstr "Twoja preferencja"
 
-#: src/routes/_authenticated/app/$appId.tsx:437
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "Your Version"
 msgstr "Twoja wersja"
