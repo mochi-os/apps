@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { apiClient } from '@mochi/web'
+import { requestHelpers } from '@mochi/web'
 import endpoints from '@/api/endpoints'
 
 interface VersionPref {
@@ -20,13 +20,10 @@ interface AppVersionsResponse {
 export function useAppVersions(appId: string | null) {
   return useQuery({
     queryKey: ['app-versions', appId],
-    queryFn: async () => {
-      const response = await apiClient.get<{ data: AppVersionsResponse }>(
-        endpoints.appVersions,
-        { params: { app: appId } }
-      )
-      return response.data.data
-    },
+    queryFn: () =>
+      requestHelpers.get<AppVersionsResponse>(endpoints.appVersions, {
+        params: { app: appId },
+      }),
     enabled: !!appId,
   })
 }
@@ -34,10 +31,8 @@ export function useAppVersions(appId: string | null) {
 export function useSetUserVersion() {
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: async (data: { app: string; version?: string; track?: string }) => {
-      const response = await apiClient.post(endpoints.versionSet, data)
-      return response.data
-    },
+    mutationFn: (data: { app: string; version?: string; track?: string }) =>
+      requestHelpers.post(endpoints.versionSet, data),
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['app-versions', variables.app] })
       queryClient.invalidateQueries({ queryKey: ['apps'] })
@@ -48,10 +43,8 @@ export function useSetUserVersion() {
 export function useSetSystemVersion() {
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: async (data: { app: string; version?: string; track?: string }) => {
-      const response = await apiClient.post(endpoints.systemVersionSet, data)
-      return response.data
-    },
+    mutationFn: (data: { app: string; version?: string; track?: string }) =>
+      requestHelpers.post(endpoints.systemVersionSet, data),
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['app-versions', variables.app] })
       queryClient.invalidateQueries({ queryKey: ['apps'] })

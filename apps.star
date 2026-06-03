@@ -50,7 +50,8 @@ def action_view(a):
 	id = a.input("id")
 	app = mochi.app.get(id)
 	if not app:
-		return {"status": 404, "error": "App not found", "data": {}}
+		a.error.label(404, "errors.app_not_found")
+		return
 
 	if is_entity_id(app["id"]):
 		fp = mochi.entity.fingerprint(app["id"])
@@ -63,15 +64,18 @@ def action_view(a):
 def action_market(a):
 	s = mochi.remote.stream("1JYmMpQU7fxvTrwHpNpiwKCgUg3odWqX7s9t1cLswSMAro5M2P", "recommendations", "list", {"type": "app", "language": "en"})
 	if not s:
-		return {"status": 500, "error": "Failed to connect to Recommendations", "data": {}}
+		a.error.label(500, "errors.failed_to_connect_to_recommendations")
+		return
 	r = s.read()
 	if r.get("status") != "200":
-		return {"status": 500, "error": "Failed to connect to Recommendations", "data": {}}
+		a.error.label(500, "errors.failed_to_connect_to_recommendations")
+		return
 
 	market = []
 	items = s.read()
 	if type(items) not in ["list", "tuple"]:
-		return {"status": 500, "error": "Invalid response from Recommendations", "data": {}}
+		a.error.label(500, "errors.invalid_response_from_recommendations")
+		return
 	for item in items:
 		if not mochi.app.get(item["entity"]):
 			market.append({"id": item["entity"], "name": item["name"], "blurb": item["blurb"]})
@@ -82,9 +86,11 @@ def action_market(a):
 def action_information(a):
 	id = a.input("id")
 	if not id:
-		return {"status": 400, "error": "App ID is required", "data": {}}
+		a.error.label(400, "errors.app_id_required")
+		return
 	if len(id) > 51:
-		return {"status": 400, "error": "Invalid app ID", "data": {}}
+		a.error.label(400, "errors.invalid_app_id")
+		return
 
 	# If URL is provided, resolve it to a peer ID
 	url = a.input("url")
@@ -92,14 +98,17 @@ def action_information(a):
 	if url:
 		peer = mochi.remote.peer(url)
 		if not peer:
-			return {"status": 500, "error": "Failed to connect to server at " + url, "data": {}}
+			a.error.label(500, "errors.failed_to_connect_to_server", url=url)
+			return
 
 	s = mochi.remote.stream(id, "publisher", "information", {"app": id}, peer)
 	if not s:
-		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
+		a.error.label(500, "errors.failed_to_connect_to_publisher")
+		return
 	r = s.read()
 	if r.get("status") != "200":
-		return {"status": 500, "error": "Failed to get app information", "data": {}}
+		a.error.label(500, "errors.failed_to_get_app_information")
+		return
 
 	app = s.read()
 	fp = mochi.entity.fingerprint(app["id"])
@@ -112,50 +121,63 @@ def action_information(a):
 def action_version(a):
 	id = a.input("id")
 	if not id:
-		return {"status": 400, "error": "App ID is required", "data": {}}
+		a.error.label(400, "errors.app_id_required")
+		return
 	if len(id) > 51:
-		return {"status": 400, "error": "Invalid app ID", "data": {}}
+		a.error.label(400, "errors.invalid_app_id")
+		return
 	track = a.input("track", "")
 	if len(track) > 50:
-		return {"status": 400, "error": "Invalid track", "data": {}}
+		a.error.label(400, "errors.invalid_track")
+		return
 
 	s = mochi.remote.stream(id, "publisher", "version", {"app": id, "track": track})
 	if not s:
-		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
+		a.error.label(500, "errors.failed_to_connect_to_publisher")
+		return
 	r = s.read()
 	if r.get("status") != "200":
-		return {"status": 500, "error": r.get("message", "Failed to get version"), "data": {}}
+		a.error.label(500, "errors.failed_to_get_version")
+		return
 
-	return s.read()
+	return {"data": s.read()}
 
 # Install an app from a publisher entity
 def action_install_publisher(a):
 	# Check if user is allowed to install apps
 	if a.user.role != "administrator":
 		if mochi.setting.get("apps_install_user") != "true":
-			return {"status": 403, "error": "App installation is restricted to administrators", "data": {}}
+			a.error.label(403, "errors.app_installation_restricted_to_administrators")
+			return
 
 	id = a.input("id")
 	version = a.input("version")
 	peer = a.input("peer")
 	if not id:
-		return {"status": 400, "error": "App ID is required", "data": {}}
+		a.error.label(400, "errors.app_id_required")
+		return
 	if len(id) > 51:
-		return {"status": 400, "error": "Invalid app ID", "data": {}}
+		a.error.label(400, "errors.invalid_app_id")
+		return
 	if not version:
-		return {"status": 400, "error": "Version is required", "data": {}}
+		a.error.label(400, "errors.version_required")
+		return
 	if not mochi.text.valid(version, "version"):
-		return {"status": 400, "error": "Invalid version format", "data": {}}
+		a.error.label(400, "errors.invalid_version_format")
+		return
 	if peer and len(peer) > 51:
-		return {"status": 400, "error": "Invalid peer ID", "data": {}}
+		a.error.label(400, "errors.invalid_peer_id")
+		return
 
 	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
 	s = mochi.remote.stream(id, "publisher", "get", {"version": version}, peer)
 	if not s:
-		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
+		a.error.label(500, "errors.failed_to_connect_to_publisher")
+		return
 	r = s.read()
 	if r.get("status") != "200":
-		return {"status": 500, "error": r.get("message", "Failed to download app"), "data": {}}
+		a.error.label(500, "errors.failed_to_download_app")
+		return
 
 	s.read.file(file)
 	mochi.app.package.install(id, file, False, peer)
@@ -167,19 +189,24 @@ def action_install_publisher(a):
 def action_install_file(a):
 	# Only administrators can install apps from files
 	if a.user.role != "administrator":
-		return {"status": 403, "error": "App installation is restricted to administrators", "data": {}}
+		a.error.label(403, "errors.app_installation_restricted_to_administrators")
+		return
 
 	file = a.input("file")
 	if not file:
-		return {"status": 400, "error": "No file provided", "data": {}}
+		a.error.label(400, "errors.no_file_provided")
+		return
 	if not mochi.text.valid(file, "filename"):
-		return {"status": 400, "error": "Invalid filename", "data": {}}
+		a.error.label(400, "errors.invalid_filename")
+		return
 	if not file.endswith(".zip"):
-		return {"status": 400, "error": "File must be a .zip archive", "data": {}}
+		a.error.label(400, "errors.file_must_be_a_zip_archive")
+		return
 
 	privacy = a.input("privacy", "private")
 	if privacy != "public" and privacy != "private":
-		return {"status": 400, "error": "Privacy must be 'public' or 'private'", "data": {}}
+		a.error.label(400, "errors.invalid_privacy")
+		return
 
 	# Save uploaded file
 	a.upload("file", file)
@@ -188,13 +215,15 @@ def action_install_file(a):
 	info = mochi.app.package.get(file)
 	if not info:
 		mochi.file.delete(file)
-		return {"status": 400, "error": "Failed to read app info from archive", "data": {}}
+		a.error.label(400, "errors.failed_to_read_app_information")
+		return
 
 	# Create an entity for this app using the name from the archive
 	entity = mochi.entity.create("app", info["name"], privacy)
 	if not entity:
 		mochi.file.delete(file)
-		return {"status": 500, "error": "Failed to create app entity", "data": {}}
+		a.error.label(500, "errors.failed_to_create_app_entity")
+		return
 
 	# Install the app
 	version = mochi.app.package.install(entity, file)
@@ -228,18 +257,22 @@ def parse_install_input(input):
 def action_install_id(a):
 	if a.user.role != "administrator":
 		if mochi.setting.get("apps_install_user") != "true":
-			return {"status": 403, "error": "App installation is restricted to administrators", "data": {}}
+			a.error.label(403, "errors.app_installation_restricted_to_administrators")
+			return
 
 	input = a.input("id")
 	if not input:
-		return {"status": 400, "error": "App ID is required", "data": {}}
+		a.error.label(400, "errors.app_id_required")
+		return
 
 	id, publisher = parse_install_input(input.strip())
 
 	if len(id) > 51:
-		return {"status": 400, "error": "Invalid app ID", "data": {}}
+		a.error.label(400, "errors.invalid_app_id")
+		return
 	if publisher and len(publisher) > 51:
-		return {"status": 400, "error": "Invalid publisher ID", "data": {}}
+		a.error.label(400, "errors.invalid_publisher_id")
+		return
 
 	# Get app information - route to publisher if known, otherwise use directory
 	if publisher:
@@ -247,13 +280,16 @@ def action_install_id(a):
 	else:
 		entry = mochi.directory.get(id)
 		if not entry:
-			return {"status": 404, "error": "App not found in directory. Use the install link from the app's publisher page.", "data": {}}
+			a.error.label(404, "errors.app_not_found_in_directory")
+			return
 		s = mochi.remote.stream(id, "publisher", "information", {"app": id})
 	if not s:
-		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
+		a.error.label(500, "errors.failed_to_connect_to_publisher")
+		return
 	r = s.read()
 	if r.get("status") != "200":
-		return {"status": 500, "error": r.get("message", "Failed to get app information"), "data": {}}
+		a.error.label(500, "errors.failed_to_get_app_information")
+		return
 
 	app = s.read()
 	tracks = s.read()
@@ -267,7 +303,8 @@ def action_install_id(a):
 			break
 
 	if not version:
-		return {"status": 404, "error": "No version available for track: " + default_track, "data": {}}
+		a.error.label(404, "errors.no_version_available_for_track", track=default_track)
+		return
 
 	# Download and install
 	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
@@ -276,10 +313,12 @@ def action_install_id(a):
 	else:
 		s = mochi.remote.stream(id, "publisher", "get", {"app": id, "version": version})
 	if not s:
-		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
+		a.error.label(500, "errors.failed_to_connect_to_publisher")
+		return
 	r = s.read()
 	if r.get("status") != "200":
-		return {"status": 500, "error": r.get("message", "Failed to download app"), "data": {}}
+		a.error.label(500, "errors.failed_to_download_app")
+		return
 
 	s.read.file(file)
 	mochi.app.package.install(id, file, False, publisher)
@@ -418,20 +457,24 @@ def action_updates(a):
 def action_upgrade(a):
 	if a.user.role != "administrator":
 		if mochi.setting.get("apps_install_user") != "true":
-			return {"status": 403, "error": "App upgrades restricted to administrators", "data": {}}
+			a.error.label(403, "errors.app_upgrades_restricted_to_administrators")
+			return
 
 	id = a.input("id")
 	version = a.input("version")
 
 	if not id or len(id) > 51:
-		return {"status": 400, "error": "Invalid app ID", "data": {}}
+		a.error.label(400, "errors.invalid_app_id")
+		return
 	if not version or not mochi.text.valid(version, "version"):
-		return {"status": 400, "error": "Invalid version", "data": {}}
+		a.error.label(400, "errors.invalid_version")
+		return
 
 	# Get current app to find publisher
 	app = mochi.app.get(id)
 	if not app:
-		return {"status": 404, "error": "App not installed", "data": {}}
+		a.error.label(404, "errors.app_not_installed")
+		return
 
 	# Determine publisher
 	publisher = ""
@@ -441,7 +484,8 @@ def action_upgrade(a):
 	else:
 		entry = mochi.directory.get(id)
 		if not entry:
-			return {"status": 400, "error": "Cannot upgrade: publisher unknown", "data": {}}
+			a.error.label(400, "errors.cannot_upgrade_publisher_unknown")
+			return
 
 	# Download and install - route to publisher, pass app ID in content
 	file = "upgrade_" + mochi.random.alphanumeric(8) + ".zip"
@@ -450,10 +494,12 @@ def action_upgrade(a):
 	else:
 		s = mochi.remote.stream(id, "publisher", "get", {"app": id, "version": version})
 	if not s:
-		return {"status": 500, "error": "Failed to connect to publisher", "data": {}}
+		a.error.label(500, "errors.failed_to_connect_to_publisher")
+		return
 	r = s.read()
 	if r.get("status") != "200":
-		return {"status": 500, "error": r.get("message", "Failed to download app"), "data": {}}
+		a.error.label(500, "errors.failed_to_download_app")
+		return
 
 	s.read.file(file)
 	mochi.app.package.install(id, file, False, publisher)
@@ -465,13 +511,15 @@ def action_upgrade(a):
 def action_directory_search(a):
 	if a.user.role != "administrator":
 		if mochi.setting.get("apps_install_user") != "true":
-			return {"status": 403, "error": "App installation is restricted to administrators", "data": {}}
+			a.error.label(403, "errors.app_installation_restricted_to_administrators")
+			return
 
 	query = a.input("q", "")
 	if not query or len(query) < 2:
 		return {"data": {"apps": []}}
 	if len(query) > 100:
-		return {"status": 400, "error": "Search query too long", "data": {}}
+		a.error.label(400, "errors.search_query_too_long")
+		return
 
 	entries = mochi.directory.search("app", query, True)
 
@@ -490,10 +538,6 @@ def action_directory_search(a):
 	return {"data": {"apps": out}}
 
 # Multi-version apps support (requires Mochi 0.3+)
-
-# Check if multi-version apps feature is available
-def action_available(a):
-	return {"data": {"available": True, "version": "0.3"}}
 
 def action_routing(a):
 	"""Get routing info: what's declared by apps, what's bound system/user level"""
@@ -573,13 +617,13 @@ def action_user_apps(a):
 	services = a.user.app.service.list()
 	paths = a.user.app.path.list()
 
-	a.json({
+	return {"data": {
 		"apps": apps,
 		"versions": versions,
 		"classes": classes,
 		"services": services,
 		"paths": paths,
-	})
+	}}
 
 def action_user_apps_app(a):
 	"""Get version info for a single app"""
@@ -616,7 +660,7 @@ def action_user_apps_app(a):
 	if user_pref and user_pref.get("track"):
 		user_track = user_pref["track"]
 		if user_track not in tracks:
-			track_warning = "Track '" + user_track + "' no longer exists on the publisher"
+			track_warning = mochi.app.label("warnings.track_no_longer_exists", track=user_track)
 
 	result = {
 		"versions": versions,
@@ -628,7 +672,7 @@ def action_user_apps_app(a):
 		"track_warning": track_warning,
 	}
 
-	a.json({"data": result})
+	return {"data": result}
 
 def action_user_apps_version_set(a):
 	"""Set user's preferred version or track for an app"""
@@ -656,7 +700,7 @@ def action_user_apps_version_set(a):
 			mochi.app.version.download(app_id, version)
 
 	a.user.app.version.set(app_id, version, track)
-	a.json({"ok": True})
+	return {"data": {"ok": True}}
 
 def action_version_download(a):
 	"""Download a specific app version from publisher without activating it"""
@@ -682,7 +726,7 @@ def action_version_download(a):
 		return
 
 	ok = mochi.app.version.download(app_id, version)
-	a.json({"ok": ok})
+	return {"data": {"ok": ok}}
 
 def action_user_apps_routing_set(a):
 	"""Set user's routing override for a class, service, or path"""
@@ -719,7 +763,7 @@ def action_user_apps_routing_set(a):
 		a.error.label(400, "errors.invalid_routing_type")
 		return
 
-	a.json({"ok": True})
+	return {"data": {"ok": True}}
 
 def action_user_apps_reset(a):
 	"""Reset all user app preferences to system defaults"""
@@ -736,7 +780,7 @@ def action_user_apps_reset(a):
 	for path in a.user.app.path.list():
 		a.user.app.path.delete(path)
 
-	a.json({"ok": True})
+	return {"data": {"ok": True}}
 
 # System app management (admin only)
 
@@ -750,7 +794,7 @@ def action_system_apps_list(a):
 		app["versions"] = mochi.app.version.list(app["id"])
 		app["tracks"] = mochi.app.track.list(app["id"])
 
-	a.json({"apps": apps})
+	return {"data": {"apps": apps}}
 
 def action_system_apps_get(a):
 	"""Get details for a specific app"""
@@ -766,12 +810,12 @@ def action_system_apps_get(a):
 	tracks = mochi.app.track.list(app_id)
 	default = mochi.app.version.get(app_id)
 
-	a.json({
+	return {"data": {
 		"app": app_id,
 		"versions": versions,
 		"tracks": tracks,
 		"default": default,
-	})
+	}}
 
 def action_system_apps_version_set(a):
 	"""Set default version or track for an app"""
@@ -802,7 +846,7 @@ def action_system_apps_version_set(a):
 			mochi.app.version.download(app_id, version)
 
 	mochi.app.version.set(app_id, version, track)
-	a.json({"ok": True})
+	return {"data": {"ok": True}}
 
 def action_system_apps_track_set(a):
 	"""Set a track to point to a specific version"""
@@ -827,7 +871,7 @@ def action_system_apps_track_set(a):
 		return
 
 	mochi.app.track.set(app_id, track, version)
-	a.json({"ok": True})
+	return {"data": {"ok": True}}
 
 def action_system_apps_cleanup(a):
 	"""Remove unused app versions"""
@@ -835,18 +879,18 @@ def action_system_apps_cleanup(a):
 		return
 
 	removed = mochi.app.cleanup()
-	a.json({"removed": removed})
+	return {"data": {"removed": removed}}
 
 def action_system_apps_routing(a):
 	"""Get all system routing (class, service, path)"""
 	if not require_admin(a):
 		return
 
-	a.json({
+	return {"data": {
 		"classes": getattr(mochi.app, "class").list(),
 		"services": mochi.app.service.list(),
 		"paths": mochi.app.path.list(),
-	})
+	}}
 
 def action_system_apps_routing_set(a):
 	"""Set system routing for a class, service, or path"""
@@ -886,7 +930,7 @@ def action_system_apps_routing_set(a):
 		a.error.label(400, "errors.invalid_routing_type")
 		return
 
-	a.json({"ok": True})
+	return {"data": {"ok": True}}
 
 # Permissions management
 
@@ -901,11 +945,11 @@ def action_permissions_list(a):
 		return
 
 	perms = mochi.permission.list(app_id)
-	a.json({"permissions": perms})
+	return {"data": {"permissions": perms}}
 
 def action_permissions_catalog(a):
 	"""List all defined permissions with their translated names and security levels"""
-	a.json({"permissions": mochi.permission.catalog()})
+	return {"data": {"permissions": mochi.permission.catalog()}}
 
 def action_permissions_revoke(a):
 	"""Revoke a permission from an app"""
@@ -926,7 +970,7 @@ def action_permissions_revoke(a):
 		return
 
 	mochi.permission.revoke(app_id, permission)
-	a.json({"status": "revoked", "permission": permission})
+	return {"data": {"status": "revoked", "permission": permission}}
 
 def action_permissions_set(a):
 	"""Set a permission for an app (for settings page, allows restricted permissions)"""
@@ -959,7 +1003,7 @@ def action_permissions_set(a):
 
 	if enabled:
 		mochi.permission.grant(app_id, permission)
-		a.json({"status": "granted", "permission": permission})
+		return {"data": {"status": "granted", "permission": permission}}
 	else:
 		mochi.permission.revoke(app_id, permission)
-		a.json({"status": "revoked", "permission": permission})
+		return {"data": {"status": "revoked", "permission": permission}}

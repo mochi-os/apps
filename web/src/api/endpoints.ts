@@ -18,7 +18,6 @@ const endpoints = {
     upgrade: '/apps/-/upgrade',
   },
   // Multi-version apps (0.3+)
-  available: '/apps/-/available',
   appVersions: '/apps/-/user/preferences/app',
   versionSet: '/apps/-/user/preferences/version/set',
   systemVersionSet: '/apps/-/system/version/set',
@@ -31,7 +30,6 @@ const endpoints = {
   permissions: {
     list: '/apps/-/permissions/list',
     catalog: '/apps/-/permissions/catalog',
-    grant: '/apps/-/permissions/grant',
     revoke: '/apps/-/permissions/revoke',
     set: '/apps/-/permissions/set',
   },
