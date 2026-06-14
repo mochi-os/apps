@@ -31,7 +31,7 @@ import {
   DataChip,
   getErrorMessage,
 } from '@mochi/web'
-import { Package, ExternalLink, Download, RefreshCw, MoreHorizontal, Trash2 } from 'lucide-react'
+import { Package, ExternalLink, Download, RefreshCw, MoreHorizontal, Trash2, Loader2 } from 'lucide-react'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
 import type { DirectoryApp } from '@/api/apps'
 import {
@@ -520,6 +520,7 @@ export function Apps() {
                 onClick={handleDirectoryInstall}
                 disabled={installByIdMutation.isPending}
               >
+                {installByIdMutation.isPending ? <Loader2 className='size-4 animate-spin' /> : <Download className='size-4' />}
                 {installByIdMutation.isPending ? t`Installing...` : t`Install`}
               </Button>
             </ResponsiveDialogFooter>
@@ -608,6 +609,7 @@ export function Apps() {
                 onClick={handleFileInstall}
                 disabled={installFromFileMutation.isPending}
               >
+                {installFromFileMutation.isPending ? <Loader2 className='size-4 animate-spin' /> : <Download className='size-4' />}
                 {installFromFileMutation.isPending
                   ? t`Installing...` : t`Install`}
               </Button>

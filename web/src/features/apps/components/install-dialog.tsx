@@ -10,6 +10,7 @@ import {
 } from '@mochi/web'
 import type { MarketApp, AppInfo, Track } from '@/api/types/apps'
 
+import { Download, Loader2 } from 'lucide-react'
 import { Trans, useLingui } from '@lingui/react/macro'
 interface InstallDialogProps {
   open: boolean
@@ -112,6 +113,7 @@ export function InstallDialog({
             }}
             disabled={isLoading || isInstalling || !appInfo?.tracks.length}
           >
+            {isInstalling ? <Loader2 className='size-4 animate-spin' /> : <Download className='size-4' />}
             {isInstalling ? t`Installing...` : t`Install`}
           </Button>
         </ResponsiveDialogFooter>
