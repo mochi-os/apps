@@ -514,7 +514,7 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
                   key={p.permission}
                   onClick={() => handleGrant(p.permission)}
                   disabled={grantingPermission !== null}
-                  className='hover:bg-accent flex w-full items-center justify-between rounded-lg border p-3.5 text-start text-sm transition-colors disabled:opacity-50'
+                  className='hover:bg-hover flex w-full items-center justify-between rounded-lg border p-3.5 text-start text-sm transition-colors disabled:opacity-50'
                 >
                   <div className='flex items-center gap-3'>
                     {p.restricted ? (
@@ -584,7 +584,7 @@ function PermissionRow({
   const [confirmOpen, setConfirmOpen] = useState(false)
 
   return (
-    <div className='flex items-center justify-between group rounded-lg border px-4 py-3 transition-colors hover:bg-muted/30'>
+    <div className='flex items-center justify-between group rounded-lg border px-4 py-3 transition-colors hover:bg-hover/30'>
       <div className='flex items-center gap-3 text-sm'>
         {permission.restricted ? (
           <ShieldAlert className='text-destructive h-4 w-4' />
