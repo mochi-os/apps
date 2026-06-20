@@ -108,7 +108,7 @@ msgstr "เพิ่มแท็ก..."
 msgid "Add team/app"
 msgstr "เพิ่มทีม/แอป"
 
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:594
 msgid "Add to directory"
 msgstr "เพิ่มไปยังไดเรกทอรี"
 
@@ -116,7 +116,8 @@ msgstr "เพิ่มไปยังไดเรกทอรี"
 msgid "Add to existing notifications"
 msgstr "เพิ่มไปยังการแจ้งเตือนที่มีอยู่"
 
-#: ../../../lib/web/src/components/view-tabs.tsx:57
+#: ../../../lib/web/src/components/view-tabs.tsx:81
+#: ../../../lib/web/src/components/view-tabs.tsx:82
 msgid "Add view"
 msgstr "เพิ่มมุมมอง"
 
@@ -197,7 +198,7 @@ msgstr "น้อยไปมาก"
 msgid "Authenticator code"
 msgstr "รหัส Authenticator"
 
-#: src/features/apps/components/install-dialog.tsx:73
+#: src/features/apps/components/install-dialog.tsx:74
 msgid "Available version:"
 msgstr "เวอร์ชันที่มี:"
 
@@ -234,15 +235,16 @@ msgstr "เพิ่มความสนใจ"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
+#: ../../../lib/web/src/components/ui/editable-field-row.tsx:129
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/apps/components/app-info-dialog.tsx:143
-#: src/features/apps/components/install-dialog.tsx:102
+#: src/features/apps/components/install-dialog.tsx:103
 #: src/features/apps/index.tsx:516
-#: src/features/apps/index.tsx:556
-#: src/features/apps/index.tsx:605
+#: src/features/apps/index.tsx:557
+#: src/features/apps/index.tsx:606
 #: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Cancel"
 msgstr "ยกเลิก"
@@ -365,8 +367,8 @@ msgstr "ตั้งค่าว่าแอปใดจัดการเอน
 msgid "Configure which app handles inter-app service calls."
 msgstr "ตั้งค่าว่าแอปใดจัดการการเรียกบริการระหว่างแอป"
 
-#: ../../../lib/web/src/components/place-picker.tsx:155
-#: ../../../lib/web/src/components/travelling-picker.tsx:299
+#: ../../../lib/web/src/components/place-picker.tsx:156
+#: ../../../lib/web/src/components/travelling-picker.tsx:300
 msgid "Confirm"
 msgstr "ยืนยัน"
 
@@ -513,6 +515,10 @@ msgstr "ดาวน์โหลด"
 msgid "Dyslexia-friendly"
 msgstr "เหมาะสำหรับผู้บกพร่องการอ่าน"
 
+#: ../../../lib/web/src/components/ui/editable-field-row.tsx:151
+msgid "Edit {label}"
+msgstr "แก้ไข {label}"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:286
 msgid "Email code"
 msgstr "รหัสอีเมล"
@@ -529,7 +535,7 @@ msgstr "ป้อนรหัสจากอีเมลของคุณ"
 msgid "Enter your authenticator code"
 msgstr "ป้อนรหัสจากแอปยืนยันตัวตนของคุณ"
 
-#: src/features/apps/components/install-dialog.tsx:82
+#: src/features/apps/components/install-dialog.tsx:83
 msgid "Entity:"
 msgstr "เอนทิตี:"
 
@@ -578,7 +584,7 @@ msgstr "ไม่สามารถอัปเดตการตั้งค่
 msgid "Failed to update system default"
 msgstr "ไม่สามารถอัปเดตค่าเริ่มต้นของระบบได้"
 
-#: src/features/apps/index.tsx:586
+#: src/features/apps/index.tsx:587
 msgid "File:"
 msgstr "ไฟล์:"
 
@@ -588,7 +594,7 @@ msgstr "Fingerprint"
 
 #: src/features/apps/components/app-info-dialog.tsx:75
 #: src/features/apps/components/app-info-dialog.tsx:100
-#: src/features/apps/components/install-dialog.tsx:78
+#: src/features/apps/components/install-dialog.tsx:79
 msgid "Fingerprint:"
 msgstr "ลายนิ้วมือ:"
 
@@ -702,10 +708,10 @@ msgid "Inset"
 msgstr "ฝังเข้าด้านใน"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
-#: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:523
-#: src/features/apps/index.tsx:564
-#: src/features/apps/index.tsx:612
+#: src/features/apps/components/install-dialog.tsx:117
+#: src/features/apps/index.tsx:524
+#: src/features/apps/index.tsx:565
+#: src/features/apps/index.tsx:614
 msgid "Install"
 msgstr "ติดตั้ง"
 
@@ -723,12 +729,12 @@ msgid "Install failed"
 msgstr "ติดตั้งไม่สำเร็จ"
 
 #: src/features/apps/index.tsx:279
-#: src/features/apps/index.tsx:582
+#: src/features/apps/index.tsx:583
 msgid "Install from file"
 msgstr "ติดตั้งจากไฟล์"
 
 #: src/features/apps/index.tsx:275
-#: src/features/apps/index.tsx:540
+#: src/features/apps/index.tsx:541
 msgid "Install from publisher"
 msgstr "ติดตั้งจาก Publisher"
 
@@ -737,10 +743,10 @@ msgid "Installed apps"
 msgstr "แอปที่ติดตั้งแล้ว"
 
 #: src/features/apps/components/app-info-dialog.tsx:124
-#: src/features/apps/components/install-dialog.tsx:115
-#: src/features/apps/index.tsx:523
-#: src/features/apps/index.tsx:564
-#: src/features/apps/index.tsx:612
+#: src/features/apps/components/install-dialog.tsx:117
+#: src/features/apps/index.tsx:524
+#: src/features/apps/index.tsx:565
+#: src/features/apps/index.tsx:614
 msgid "Installing..."
 msgstr "กำลังติดตั้ง..."
 
@@ -778,7 +784,7 @@ msgstr "สว่าง"
 msgid "Load more"
 msgstr "โหลดเพิ่ม"
 
-#: src/features/apps/components/install-dialog.tsx:68
+#: src/features/apps/components/install-dialog.tsx:69
 msgid "Loading version information..."
 msgstr "กำลังโหลดข้อมูลเวอร์ชัน..."
 
@@ -958,6 +964,10 @@ msgstr "ไม่มี"
 msgid "Normal"
 msgstr "ปกติ"
 
+#: ../../../lib/web/src/components/ui/editable-field-row.tsx:143
+msgid "Not set"
+msgstr "ยังไม่ได้ตั้งค่า"
+
 #: src/routes/_authenticated/app/$appId.tsx:333
 msgid "Not versioned"
 msgstr "ไม่มีการกำหนดเวอร์ชัน"
@@ -1014,7 +1024,7 @@ msgstr "การยืนยันด้วยพาสคีย์ล้มเ
 msgid "Passkeys"
 msgstr "พาสคีย์"
 
-#: src/features/apps/index.tsx:544
+#: src/features/apps/index.tsx:545
 msgid "Paste the install link:"
 msgstr "วางลิงก์ติดตั้ง:"
 
@@ -1168,6 +1178,7 @@ msgstr "แถวต่อหน้า"
 msgid "Saturday"
 msgstr "วันเสาร์"
 
+#: ../../../lib/web/src/components/ui/editable-field-row.tsx:119
 #: ../../../lib/web/src/components/ui/secret-field.tsx:74
 msgid "Save"
 msgstr "บันทึก"
@@ -1440,7 +1451,7 @@ msgstr "สลับธีม"
 msgid "Top"
 msgstr "บนสุด"
 
-#: src/features/apps/index.tsx:680
+#: src/features/apps/index.tsx:682
 #: src/routes/_authenticated/app/$appId.tsx:353
 msgid "Track"
 msgstr "แทร็ก"
@@ -1488,7 +1499,7 @@ msgstr "ไม่สามารถเชื่อมต่อบริการ
 msgid "Unable to load app information. The app may not exist or the publisher may be offline."
 msgstr "ไม่สามารถโหลดข้อมูลแอปได้ แอปอาจไม่มีอยู่หรือผู้เผยแพร่อาจออฟไลน์"
 
-#: src/features/apps/components/install-dialog.tsx:90
+#: src/features/apps/components/install-dialog.tsx:91
 msgid "Unable to load version information"
 msgstr "ไม่สามารถโหลดข้อมูลเวอร์ชันได้"
 
@@ -1517,7 +1528,7 @@ msgstr "สหรัฐอเมริกา"
 msgid "Unverified"
 msgstr "ยังไม่ยืนยัน"
 
-#: src/features/apps/index.tsx:676
+#: src/features/apps/index.tsx:678
 msgid "Update"
 msgstr "อัปเดต"
 
