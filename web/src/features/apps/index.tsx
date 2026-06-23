@@ -35,6 +35,9 @@ import {
   Skeleton,
   DataChip,
   getErrorMessage,
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
 } from '@mochi/web'
 import { Package, ExternalLink, Download, RefreshCw, MoreHorizontal, Trash2, Loader2 } from 'lucide-react'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
@@ -247,20 +250,24 @@ export function Apps() {
       {(() => {
         const actionMenu = (
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant='ghost'
-                size='icon'
-                aria-label={t`App actions`}
-                title={t`App actions`}
-              >
-                {upgradeMutation.isPending ? (
-                  <RefreshCw className='h-4 w-4 animate-spin' />
-                ) : (
-                  <MoreHorizontal className='h-4 w-4' />
-                )}
-              </Button>
-            </DropdownMenuTrigger>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant='ghost'
+                    size='icon'
+                    aria-label={t`App actions`}
+                  >
+                    {upgradeMutation.isPending ? (
+                      <RefreshCw className='h-4 w-4 animate-spin' />
+                    ) : (
+                      <MoreHorizontal className='h-4 w-4' />
+                    )}
+                  </Button>
+                </DropdownMenuTrigger>
+              </TooltipTrigger>
+              <TooltipContent>{t`App actions`}</TooltipContent>
+            </Tooltip>
             <DropdownMenuContent align='end'>
               {availableUpdates && availableUpdates.length > 0 && (
                 <DropdownMenuItem

@@ -35,7 +35,11 @@ import {
   ResponsiveDialogFooter,
   ResponsiveDialogHeader,
   ResponsiveDialogTitle,
-  ResponsiveDialogTrigger, naturalCompare,} from '@mochi/web'
+  ResponsiveDialogTrigger, naturalCompare,
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@mochi/web'
 import { Loader2, Plus, Shield, ShieldAlert, X, Package } from 'lucide-react'
 import { useInstalledAppsQuery } from '@/hooks/useApps'
 import {
@@ -602,20 +606,25 @@ function PermissionRow({
       </div>
       {canRevoke && (
         <>
-          <Button 
-            variant='ghost' 
-            size='sm' 
-            disabled={isRevoking}
-            onClick={() => setConfirmOpen(true)}
-            className="text-muted-foreground h-8 w-8 p-0 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100"
-          >
-            {isRevoking ? (
-              <Loader2 className='h-4 w-4 animate-spin' />
-            ) : (
-              <X className='h-4 w-4' />
-            )}
-            <span className='sr-only'><Trans>Revoke</Trans></span>
-          </Button>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                variant='ghost'
+                size='sm'
+                disabled={isRevoking}
+                onClick={() => setConfirmOpen(true)}
+                className="text-muted-foreground h-8 w-8 p-0 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100"
+              >
+                {isRevoking ? (
+                  <Loader2 className='h-4 w-4 animate-spin' />
+                ) : (
+                  <X className='h-4 w-4' />
+                )}
+                <span className='sr-only'><Trans>Revoke</Trans></span>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent><Trans>Revoke</Trans></TooltipContent>
+          </Tooltip>
           <ConfirmDialog
             open={confirmOpen}
             onOpenChange={setConfirmOpen}
