@@ -7,6 +7,8 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { requestHelpers } from '@mochi/web'
 import endpoints from '@/api/endpoints'
 
+const NO_TOAST = { mochi: { showGlobalErrorToast: false } } as const
+
 interface VersionPref {
   version: string
   track: string
@@ -37,7 +39,7 @@ export function useSetUserVersion() {
   const queryClient = useQueryClient()
   return useMutation({
     mutationFn: (data: { app: string; version?: string; track?: string }) =>
-      requestHelpers.post(endpoints.versionSet, data),
+      requestHelpers.post(endpoints.versionSet, data, NO_TOAST),
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['app-versions', variables.app] })
       queryClient.invalidateQueries({ queryKey: ['apps'] })
@@ -49,7 +51,7 @@ export function useSetSystemVersion() {
   const queryClient = useQueryClient()
   return useMutation({
     mutationFn: (data: { app: string; version?: string; track?: string }) =>
-      requestHelpers.post(endpoints.systemVersionSet, data),
+      requestHelpers.post(endpoints.systemVersionSet, data, NO_TOAST),
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['app-versions', variables.app] })
       queryClient.invalidateQueries({ queryKey: ['apps'] })

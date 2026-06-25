@@ -19,23 +19,23 @@ msgid "{0} (development)"
 msgstr "{0} (pag-develop)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:194
+#: src/features/apps/index.tsx:202
 msgid "{0} updated, {failed} failed"
 msgstr "{0} na-update, {failed} ang nabigo"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:149
-#: src/features/apps/index.tsx:171
+#: src/features/apps/index.tsx:157
+#: src/features/apps/index.tsx:177
 msgid "{0} v{1} has been installed."
 msgstr "Naka-install na ang {0} v{1}."
 
-#: src/routes/_authenticated/app/$appId.tsx:367
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "{track} (default, version {version})"
 msgstr "{track} (default, bersyon {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:368
+#: src/routes/_authenticated/app/$appId.tsx:370
 msgid "{track} (version {version})"
 msgstr "{track} (bersyon {version})"
 
@@ -108,7 +108,7 @@ msgstr "Magdagdag ng tag..."
 msgid "Add team/app"
 msgstr "Magdagdag ng team/app"
 
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:626
 msgid "Add to directory"
 msgstr "Idagdag sa directory"
 
@@ -133,7 +133,7 @@ msgstr "AI"
 msgid "All"
 msgstr "Lahat"
 
-#: src/features/apps/index.tsx:190
+#: src/features/apps/index.tsx:198
 msgid "All apps updated"
 msgstr "Na-update lahat ng app"
 
@@ -145,13 +145,13 @@ msgstr "May naganap na error"
 msgid "An unexpected error occurred"
 msgstr "May naganap na hindi inaasahang error"
 
-#: src/features/apps/index.tsx:149
+#: src/features/apps/index.tsx:157
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "App"
 
-#: src/features/apps/index.tsx:259
-#: src/features/apps/index.tsx:269
+#: src/features/apps/index.tsx:279
+#: src/features/apps/index.tsx:289
 msgid "App actions"
 msgstr "Mga app action"
 
@@ -167,8 +167,13 @@ msgstr "Impormasyon at configuration ng app"
 #: src/features/apps/index.tsx:148
 #: src/features/apps/index.tsx:170
 #: src/features/apps/index.tsx:230
-msgid "App installed"
-msgstr "Na-install ang app"
+#~ msgid "App installed"
+#~ msgstr "Na-install ang app"
+
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:249
+msgid "App installed successfully"
+msgstr ""
 
 #: src/routes/_authenticated/app/$appId.tsx:126
 #: src/routes/_authenticated/app/$appId.tsx:130
@@ -181,8 +186,8 @@ msgstr "Application ID"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:62
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:63
+#: src/features/apps/index.tsx:330
 msgid "Apps"
 msgstr "Mga app"
 
@@ -211,7 +216,7 @@ msgstr "Available na bersyon:"
 msgid "Available versions:"
 msgstr "Mga available na bersyon:"
 
-#: src/features/apps/index.tsx:404
+#: src/features/apps/index.tsx:424
 msgid "Available, but not installed"
 msgstr "Available, ngunit hindi naka-install"
 
@@ -247,10 +252,10 @@ msgstr "Palakasin ang interes"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:108
-#: src/features/apps/index.tsx:528
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:618
-#: src/routes/_authenticated/app/$appId.tsx:546
+#: src/features/apps/index.tsx:548
+#: src/features/apps/index.tsx:589
+#: src/features/apps/index.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:551
 msgid "Cancel"
 msgstr "Kanselahin"
 
@@ -297,11 +302,12 @@ msgstr "Class routing"
 msgid "Classes"
 msgstr "Mga class"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:319
 msgid "Clean up unused versions"
 msgstr "Linisin ang mga hindi nagagamit na bersyon"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:319
 msgid "Cleaning up..."
 msgstr "Naglilinis..."
 
@@ -354,8 +360,8 @@ msgstr "Isara ang paghahanap"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Collapse"
 msgstr "I-collapse"
 
@@ -413,7 +419,10 @@ msgstr "Magpatuloy gamit ang {label}"
 msgid "Copy"
 msgstr "Kopyahin"
 
-#: src/features/apps/index.tsx:156
+#: src/features/apps/index.tsx:130
+#: src/features/apps/index.tsx:158
+#: src/features/apps/index.tsx:178
+#: src/features/apps/index.tsx:250
 msgid "Could not install app."
 msgstr "Hindi ma-install ang app."
 
@@ -468,24 +477,24 @@ msgstr "Default"
 msgid "Default AI account"
 msgstr "Default na AI account"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:427
 msgid "Default for all users"
 msgstr "Default para sa lahat ng user"
 
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:426
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Default para sa lahat ng user (bersyon {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:321
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Default for all users updated"
 msgstr "Na-update ang default para sa lahat ng user"
 
-#: src/routes/_authenticated/app/$appId.tsx:408
+#: src/routes/_authenticated/app/$appId.tsx:410
 msgid "Default track"
 msgstr "Default na track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:407
+#: src/routes/_authenticated/app/$appId.tsx:409
 msgid "Default track (version {0})"
 msgstr "Default na track (bersyon {0})"
 
@@ -516,7 +525,7 @@ msgstr "Details Panel"
 msgid "Detect from web browser"
 msgstr "Tukuyin mula sa web browser"
 
-#: src/features/apps/index.tsx:379
+#: src/features/apps/index.tsx:399
 msgid "Development apps"
 msgstr "Mga development app"
 
@@ -568,8 +577,8 @@ msgstr "Entity:"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Expand"
 msgstr "Palawakin"
 
@@ -585,7 +594,11 @@ msgstr "Sobrang laki"
 msgid "Failed to add account"
 msgstr "Nabigong magdagdag ng account"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/features/apps/index.tsx:214
+msgid "Failed to clean up apps"
+msgstr ""
+
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Failed to grant permission"
 msgstr "Nabigong magbigay ng permission"
 
@@ -593,7 +606,7 @@ msgstr "Nabigong magbigay ng permission"
 msgid "Failed to remove account"
 msgstr "Nabigong tanggalin ang account"
 
-#: src/routes/_authenticated/app/$appId.tsx:454
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Failed to revoke permission"
 msgstr "Nabigong i-revoke ang permission"
 
@@ -609,16 +622,16 @@ msgstr "Nabigong i-update ang category"
 msgid "Failed to update default"
 msgstr "Nabigong i-update ang default"
 
-#: src/features/routing/use-routing-data.ts:30
-#: src/routes/_authenticated/app/$appId.tsx:304
+#: src/features/routing/use-routing-data.ts:33
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Failed to update preference"
 msgstr "Nabigong i-update ang preference"
 
-#: src/features/routing/use-routing-data.ts:44
+#: src/features/routing/use-routing-data.ts:53
 msgid "Failed to update system default"
 msgstr "Nabigong i-update ang system default"
 
-#: src/features/apps/index.tsx:599
+#: src/features/apps/index.tsx:619
 msgid "File:"
 msgstr "File:"
 
@@ -652,7 +665,7 @@ msgstr "Biyernes"
 msgid "From"
 msgstr "Mula sa"
 
-#: src/features/apps/index.tsx:459
+#: src/features/apps/index.tsx:479
 msgid "From the directory"
 msgstr "Mula sa directory"
 
@@ -695,17 +708,21 @@ msgstr "Pumunta sa pahina {pageNumber}"
 msgid "Go to previous page"
 msgstr "Pumunta sa previous page"
 
-#: src/routes/_authenticated/app/$appId.tsx:510
+#: src/routes/_authenticated/app/$appId.tsx:515
 msgid "Grant"
 msgstr "Ibigay"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:520
 msgid "Grant permission"
 msgstr "Magbigay ng permission"
 
-#: src/routes/_authenticated/app/$appId.tsx:570
+#: src/routes/_authenticated/app/$appId.tsx:575
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Magbigay ng mga permission para payagan ang app na ito na ma-access ang mga system feature"
+
+#: src/routes/_authenticated/app/$appId.tsx:471
+msgid "Granting permission..."
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
@@ -752,44 +769,48 @@ msgstr "Inset"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Install"
 msgstr "I-install"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:519
+#: src/features/apps/index.tsx:539
 msgid "Install {0}?"
 msgstr "I-install ang {0}?"
 
-#: src/features/apps/index.tsx:352
+#: src/features/apps/index.tsx:372
 msgid "Install apps from the market or upload your own"
 msgstr "Mag-install ng mga app mula sa market o mag-upload ng sarili mo"
 
 #: src/features/apps/index.tsx:155
-msgid "Install failed"
-msgstr "Nabigo ang pag-install"
+#~ msgid "Install failed"
+#~ msgstr "Nabigo ang pag-install"
 
-#: src/features/apps/index.tsx:291
-#: src/features/apps/index.tsx:595
+#: src/features/apps/index.tsx:311
+#: src/features/apps/index.tsx:615
 msgid "Install from file"
 msgstr "I-install mula sa file"
 
-#: src/features/apps/index.tsx:287
-#: src/features/apps/index.tsx:553
+#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:573
 msgid "Install from publisher"
 msgstr "I-install mula sa publisher"
 
-#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:355
 msgid "Installed apps"
 msgstr "Mga naka-install na app"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:128
+#: src/features/apps/index.tsx:155
+#: src/features/apps/index.tsx:175
+#: src/features/apps/index.tsx:248
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Installing..."
 msgstr "Nag-i-install..."
 
@@ -859,7 +880,7 @@ msgstr "Matagumpay na nag-log out"
 msgid "Logging out…"
 msgstr "Nagla-log out…"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Manage capabilities granted to this application"
 msgstr "Pamahalaan ang mga kakayahan na ibinigay sa application na ito"
 
@@ -906,11 +927,11 @@ msgstr "Susunod na imahe"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Walang naka-configure na access rule. Magdagdag ng mga rule upang kontrolin kung sino ang maaaring mag-access sa resource na ito."
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "No apps could be updated."
 msgstr "Walang app na ma-update."
 
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:371
 msgid "No apps installed"
 msgstr "Walang naka-install na app"
 
@@ -922,11 +943,11 @@ msgstr "Walang naka-configure na mga klase."
 msgid "No connected accounts"
 msgstr "Walang nakakonektang account"
 
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:466
 msgid "No description"
 msgstr "Walang paglalarawan"
 
-#: src/features/apps/index.tsx:384
+#: src/features/apps/index.tsx:404
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Walang mga development app na tumutugma sa \"{searchQuery}\""
 
@@ -934,20 +955,20 @@ msgstr "Walang mga development app na tumutugma sa \"{searchQuery}\""
 msgid "No groups available"
 msgstr "Walang available na grupo"
 
-#: src/features/apps/index.tsx:477
+#: src/features/apps/index.tsx:497
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Walang mga maaaring i-install na app sa direktoryo na tumutugma sa \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:378
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Walang mga naka-install na app na tumutugma sa \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:496
 msgid "No matches in directory"
 msgstr "Walang tugma sa direktoryo"
 
-#: src/features/apps/index.tsx:357
-#: src/features/apps/index.tsx:383
+#: src/features/apps/index.tsx:377
+#: src/features/apps/index.tsx:403
 msgid "No matching apps"
 msgstr "Walang tugmang app"
 
@@ -955,11 +976,11 @@ msgstr "Walang tugmang app"
 msgid "No paths configured."
 msgstr "Walang naka-configure na mga path."
 
-#: src/routes/_authenticated/app/$appId.tsx:569
+#: src/routes/_authenticated/app/$appId.tsx:574
 msgid "No permissions granted"
 msgstr "Walang ibinigay na permission"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "No permissions granted to this app"
 msgstr "Walang mga pahintulot na ibinigay sa app na ito"
 
@@ -971,7 +992,7 @@ msgstr "Walang nakitang lugar"
 msgid "No profile"
 msgstr "Walang profile"
 
-#: src/features/apps/index.tsx:429
+#: src/features/apps/index.tsx:449
 msgid "No recommendations available"
 msgstr "Walang available na rekomendasyon"
 
@@ -992,7 +1013,7 @@ msgstr "Walang nakitang time zone."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Wala pang topic record — subukan muli pagkatapos ng susunod na notification."
 
-#: src/features/apps/index.tsx:205
+#: src/features/apps/index.tsx:217
 msgid "No unused versions to clean up"
 msgstr "Walang hindi nagamit na bersyon na lilinisin"
 
@@ -1014,7 +1035,7 @@ msgstr "Karaniwan"
 msgid "Not set"
 msgstr "Hindi naka-set"
 
-#: src/routes/_authenticated/app/$appId.tsx:342
+#: src/routes/_authenticated/app/$appId.tsx:344
 msgid "Not versioned"
 msgstr "Hindi bersyonado"
 
@@ -1035,8 +1056,8 @@ msgstr "Ay! Hindi Nahanap ang Pahina!"
 msgid "Open account actions"
 msgstr "Buksan ang mga aksyon ng account"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Buksan ang mga aksyon"
 
@@ -1075,7 +1096,7 @@ msgstr "Nabigo ang pag-verify ng passkey. Pakisubukang muli."
 msgid "Passkeys"
 msgstr "Mga Passkey"
 
-#: src/features/apps/index.tsx:557
+#: src/features/apps/index.tsx:577
 msgid "Paste the install link:"
 msgstr "I-paste ang link sa pag-install:"
 
@@ -1092,15 +1113,15 @@ msgstr "Path routing"
 msgid "Paths"
 msgstr "Mga Path"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:472
 msgid "Permission granted"
 msgstr "Naibigay ang permission"
 
-#: src/routes/_authenticated/app/$appId.tsx:450
+#: src/routes/_authenticated/app/$appId.tsx:453
 msgid "Permission revoked"
 msgstr "Binawi ang permission"
 
-#: src/routes/_authenticated/app/$appId.tsx:502
+#: src/routes/_authenticated/app/$appId.tsx:507
 msgid "Permissions"
 msgstr "Mga Permission"
 
@@ -1108,15 +1129,15 @@ msgstr "Mga Permission"
 msgid "Please check your internet connection and try again."
 msgstr "Pakitingnan ang iyong koneksyon sa internet at subukang muli."
 
-#: src/features/apps/index.tsx:140
+#: src/features/apps/index.tsx:147
 msgid "Please enter an app ID"
 msgstr "Mangyaring maglagay ng app ID"
 
-#: src/features/routing/use-routing-data.ts:27
+#: src/features/routing/use-routing-data.ts:32
 msgid "Preference updated"
 msgstr "Na-update ang kagustuhan"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Preferred Version"
 msgstr "Ginustong bersyon"
 
@@ -1153,7 +1174,7 @@ msgstr "Muling irehistro ang iyong mga passkey sa server na ito"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:219
 #: ../../../lib/web/src/components/search-entity-page.tsx:194
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:425
 msgid "Recommended"
 msgstr "Inirerekomenda"
 
@@ -1193,9 +1214,9 @@ msgstr "Alisin ang access?"
 msgid "Remove interest"
 msgstr "Alisin ang interes"
 
-#. placeholder {0}: data.removed
-#. placeholder {1}: data.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:207
+#. placeholder {0}: result.removed
+#. placeholder {1}: result.removed === 1 ? '' : 's'
+#: src/features/apps/index.tsx:220
 msgid "Removed {0} unused version{1}"
 msgstr "Naalis ang {0} na hindi nagamit na bersyon{1}"
 
@@ -1212,18 +1233,22 @@ msgstr "I-reset"
 msgid "Reset all settings to default values"
 msgstr "I-reset ang lahat ng setting sa mga default na halaga"
 
-#: src/routes/_authenticated/app/$appId.tsx:623
-#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:628
+#: src/routes/_authenticated/app/$appId.tsx:631
 msgid "Revoke"
 msgstr "Bawiin"
 
-#: src/routes/_authenticated/app/$appId.tsx:633
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission"
 msgstr "Bawiin ang pahintulot"
 
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission?"
 msgstr "Bawiin ang permission?"
+
+#: src/routes/_authenticated/app/$appId.tsx:452
+msgid "Revoking permission..."
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:361
 msgid "Right to Left"
@@ -1242,11 +1267,18 @@ msgstr "Sabado"
 msgid "Save"
 msgstr "I-save"
 
-#: src/features/apps/index.tsx:324
+#: src/features/routing/use-routing-data.ts:31
+#: src/features/routing/use-routing-data.ts:50
+#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:322
+msgid "Saving..."
+msgstr ""
+
+#: src/features/apps/index.tsx:344
 msgid "Search apps"
 msgstr "Maghanap ng app"
 
-#: src/features/apps/index.tsx:323
+#: src/features/apps/index.tsx:343
 msgid "Search apps..."
 msgstr "Maghanap ng app..."
 
@@ -1280,7 +1312,7 @@ msgstr "Maghanap..."
 msgid "Searching..."
 msgstr "Naghahanap..."
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Select a capability to grant to {appName}."
 msgstr "Pumili ng kakayahan na ibibigay sa {appName}."
 
@@ -1316,7 +1348,7 @@ msgstr "Pumili ng direksyon ng site"
 msgid "Select theme preference"
 msgstr "Pumili ng theme preference"
 
-#: src/routes/_authenticated/app/$appId.tsx:396
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Select which version of this app to use"
 msgstr "Piliin kung aling bersyon ng app na ito ang gagamitin"
 
@@ -1429,11 +1461,11 @@ msgstr "System"
 msgid "System default"
 msgstr "System default"
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "System Default"
 msgstr "System Default"
 
-#: src/features/routing/use-routing-data.ts:41
+#: src/features/routing/use-routing-data.ts:51
 msgid "System default updated"
 msgstr "Na-update ang system default"
 
@@ -1465,14 +1497,14 @@ msgstr "Mali ang code na iyon o nag-expire na."
 
 #: src/features/apps/index.tsx:124
 #: src/features/apps/index.tsx:231
-msgid "The app has been installed successfully."
-msgstr "Matagumpay na na-install ang app."
+#~ msgid "The app has been installed successfully."
+#~ msgstr "Matagumpay na na-install ang app."
 
 #: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "Hindi nakita ang hiniling na app."
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "The version used by users who haven't made a choice"
 msgstr "Ang bersyon na ginagamit ng mga user na hindi pa pumipili"
 
@@ -1484,7 +1516,7 @@ msgstr "Theme"
 msgid "Theme Settings"
 msgstr "Mga Setting ng Theme"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:345
 msgid "This app does not have version management"
 msgstr "Walang version management ang app na ito"
 
@@ -1493,7 +1525,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Ang app na ito ay direktang naka-install mula sa publisher nito at hindi pa nasusuri. Maaaring ito ay malware."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:632
+#: src/routes/_authenticated/app/$appId.tsx:637
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Babawiin nito ang \"{0}\" na pahintulot mula sa {appName}. Maaaring tumigil sa paggana nang tama ang app."
 
@@ -1510,10 +1542,10 @@ msgstr "I-toggle ang mga column"
 msgid "Toggle right panel"
 msgstr "I-toggle ang kanang panel"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "I-toggle ang seksyon"
 
@@ -1536,8 +1568,8 @@ msgstr "I-toggle ang theme"
 msgid "Top"
 msgstr "Itaas"
 
-#: src/features/apps/index.tsx:694
-#: src/routes/_authenticated/app/$appId.tsx:362
+#: src/features/apps/index.tsx:714
+#: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Track"
 msgstr "Track"
 
@@ -1576,7 +1608,7 @@ msgstr "Mag-type para maghanap..."
 msgid "Unable to connect to remote server"
 msgstr "Hindi makakonekta sa malayong server"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:444
 msgid "Unable to connect to the recommendations service"
 msgstr "Hindi makakonekta sa recommendations service"
 
@@ -1601,7 +1633,7 @@ msgstr "Walang nakatalaga"
 msgid "Unauthorized Access"
 msgstr "Hindi Pinahihintulutang Pag-access"
 
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:443
 msgid "Unavailable"
 msgstr "Hindi available"
 
@@ -1613,19 +1645,19 @@ msgstr "United States"
 msgid "Unverified"
 msgstr "Hindi naberipika"
 
-#: src/features/apps/index.tsx:690
+#: src/features/apps/index.tsx:710
 msgid "Update"
 msgstr "I-update"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Update all"
 msgstr "I-update lahat"
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "Update failed"
 msgstr "Nabigo ang pag-update"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Updating..."
 msgstr "Ina-update..."
 
@@ -1663,7 +1695,7 @@ msgstr "Beripikahin"
 msgid "Verify email address"
 msgstr "Beripikahin ang email address"
 
-#: src/routes/_authenticated/app/$appId.tsx:376
+#: src/routes/_authenticated/app/$appId.tsx:378
 msgid "Version"
 msgstr "Bersyon"
 
@@ -1672,11 +1704,11 @@ msgstr "Bersyon"
 msgid "Version {0}"
 msgstr "Bersyon {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:302
 msgid "Version changed"
 msgstr "Nabago ang bersyon"
 
-#: src/routes/_authenticated/app/$appId.tsx:395
+#: src/routes/_authenticated/app/$appId.tsx:397
 msgid "Version Management"
 msgstr "Pamamahala ng Bersyon"
 
@@ -1713,7 +1745,7 @@ msgstr "Miyerkules"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ang iyong account ay inilipat dito mula sa {source}. Hanggang hindi mo ito binubura doon, ang mga mensahe at abiso ay maaaring maabot ang parehong mga server, ang ilan sa iyong nilalaman ay patuloy na pinaglilingkuran mula sa lumang server, at ang mga tagasunod ay maaaring maglaan ng ilang minuto upang mahanap ka dito."
 
-#: src/routes/_authenticated/app/$appId.tsx:416
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "Your personal version override"
 msgstr "Iyong personal na version override"
 
@@ -1721,6 +1753,6 @@ msgstr "Iyong personal na version override"
 msgid "Your preference"
 msgstr "Ang iyong kagustuhan"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Your Version"
 msgstr "Ang iyong bersyon"

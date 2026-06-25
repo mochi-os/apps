@@ -19,23 +19,23 @@ msgid "{0} (development)"
 msgstr "{0} (ontwikkeling)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:194
+#: src/features/apps/index.tsx:202
 msgid "{0} updated, {failed} failed"
 msgstr "{0} bygewerk, {failed} misluk"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:149
-#: src/features/apps/index.tsx:171
+#: src/features/apps/index.tsx:157
+#: src/features/apps/index.tsx:177
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} is geïnstalleer."
 
-#: src/routes/_authenticated/app/$appId.tsx:367
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "{track} (default, version {version})"
 msgstr "{track} (standaard, weergawe {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:368
+#: src/routes/_authenticated/app/$appId.tsx:370
 msgid "{track} (version {version})"
 msgstr "{track} (weergawe {version})"
 
@@ -108,7 +108,7 @@ msgstr "Voeg etiket by..."
 msgid "Add team/app"
 msgstr "Voeg span/app by"
 
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:626
 msgid "Add to directory"
 msgstr "Voeg by gids"
 
@@ -133,7 +133,7 @@ msgstr "KI"
 msgid "All"
 msgstr "Alle"
 
-#: src/features/apps/index.tsx:190
+#: src/features/apps/index.tsx:198
 msgid "All apps updated"
 msgstr "Alle apps opgedateer"
 
@@ -145,13 +145,13 @@ msgstr "Daar het 'n fout voorgekom"
 msgid "An unexpected error occurred"
 msgstr "'n Onverwagte fout het voorgekom"
 
-#: src/features/apps/index.tsx:149
+#: src/features/apps/index.tsx:157
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Toepassing"
 
-#: src/features/apps/index.tsx:259
-#: src/features/apps/index.tsx:269
+#: src/features/apps/index.tsx:279
+#: src/features/apps/index.tsx:289
 msgid "App actions"
 msgstr "App-aksies"
 
@@ -167,8 +167,13 @@ msgstr "App-inligting en -konfigurasie"
 #: src/features/apps/index.tsx:148
 #: src/features/apps/index.tsx:170
 #: src/features/apps/index.tsx:230
-msgid "App installed"
-msgstr "App geïnstalleer"
+#~ msgid "App installed"
+#~ msgstr "App geïnstalleer"
+
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:249
+msgid "App installed successfully"
+msgstr ""
 
 #: src/routes/_authenticated/app/$appId.tsx:126
 #: src/routes/_authenticated/app/$appId.tsx:130
@@ -181,8 +186,8 @@ msgstr "Toepassings-ID"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:62
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:63
+#: src/features/apps/index.tsx:330
 msgid "Apps"
 msgstr "Apps"
 
@@ -211,7 +216,7 @@ msgstr "Beskikbare weergawe:"
 msgid "Available versions:"
 msgstr "Beskikbare weergawes:"
 
-#: src/features/apps/index.tsx:404
+#: src/features/apps/index.tsx:424
 msgid "Available, but not installed"
 msgstr "Beskikbaar, maar nie geïnstalleer nie"
 
@@ -247,10 +252,10 @@ msgstr "Versterk belangstelling"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:108
-#: src/features/apps/index.tsx:528
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:618
-#: src/routes/_authenticated/app/$appId.tsx:546
+#: src/features/apps/index.tsx:548
+#: src/features/apps/index.tsx:589
+#: src/features/apps/index.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:551
 msgid "Cancel"
 msgstr "Kanselleer"
 
@@ -297,11 +302,12 @@ msgstr "Klasroetering"
 msgid "Classes"
 msgstr "Klasse"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:319
 msgid "Clean up unused versions"
 msgstr "Maak ongebruikte weergawes skoon"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:319
 msgid "Cleaning up..."
 msgstr "Maak skoon..."
 
@@ -354,8 +360,8 @@ msgstr "Sluit soektog"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Collapse"
 msgstr "Vou in"
 
@@ -413,7 +419,10 @@ msgstr "Gaan voort met {label}"
 msgid "Copy"
 msgstr "Kopieer"
 
-#: src/features/apps/index.tsx:156
+#: src/features/apps/index.tsx:130
+#: src/features/apps/index.tsx:158
+#: src/features/apps/index.tsx:178
+#: src/features/apps/index.tsx:250
 msgid "Could not install app."
 msgstr "Kon nie program installeer nie."
 
@@ -468,24 +477,24 @@ msgstr "Verstek"
 msgid "Default AI account"
 msgstr "Verstek KI-rekening"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:427
 msgid "Default for all users"
 msgstr "Standaard vir alle gebruikers"
 
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:426
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Standaard vir alle gebruikers (weergawe {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:321
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Default for all users updated"
 msgstr "Verstek vir alle gebruikers opgedateer"
 
-#: src/routes/_authenticated/app/$appId.tsx:408
+#: src/routes/_authenticated/app/$appId.tsx:410
 msgid "Default track"
 msgstr "Standaardspoor"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:407
+#: src/routes/_authenticated/app/$appId.tsx:409
 msgid "Default track (version {0})"
 msgstr "Standaardspoor (weergawe {0})"
 
@@ -516,7 +525,7 @@ msgstr "Besonderhede-paneel"
 msgid "Detect from web browser"
 msgstr "Spoor op vanaf webblaaier"
 
-#: src/features/apps/index.tsx:379
+#: src/features/apps/index.tsx:399
 msgid "Development apps"
 msgstr "Ontwikkelings-apps"
 
@@ -568,8 +577,8 @@ msgstr "Entiteit:"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Expand"
 msgstr "Vou uit"
 
@@ -585,7 +594,11 @@ msgstr "Ekstra groot"
 msgid "Failed to add account"
 msgstr "Kon nie rekening byvoeg nie"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/features/apps/index.tsx:214
+msgid "Failed to clean up apps"
+msgstr ""
+
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Failed to grant permission"
 msgstr "Kon nie toestemming verleen nie"
 
@@ -593,7 +606,7 @@ msgstr "Kon nie toestemming verleen nie"
 msgid "Failed to remove account"
 msgstr "Kon nie rekening verwyder nie"
 
-#: src/routes/_authenticated/app/$appId.tsx:454
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Failed to revoke permission"
 msgstr "Kon nie toestemming herroep nie"
 
@@ -609,16 +622,16 @@ msgstr "Kon nie kategorie opdateer nie"
 msgid "Failed to update default"
 msgstr "Kon nie verstek opdateer nie"
 
-#: src/features/routing/use-routing-data.ts:30
-#: src/routes/_authenticated/app/$appId.tsx:304
+#: src/features/routing/use-routing-data.ts:33
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Failed to update preference"
 msgstr "Kon nie voorkeur opdateer nie"
 
-#: src/features/routing/use-routing-data.ts:44
+#: src/features/routing/use-routing-data.ts:53
 msgid "Failed to update system default"
 msgstr "Kon nie stelselverstek opdateer nie"
 
-#: src/features/apps/index.tsx:599
+#: src/features/apps/index.tsx:619
 msgid "File:"
 msgstr "Lêer:"
 
@@ -652,7 +665,7 @@ msgstr "Vrydag"
 msgid "From"
 msgstr "Van"
 
-#: src/features/apps/index.tsx:459
+#: src/features/apps/index.tsx:479
 msgid "From the directory"
 msgstr "Vanaf die gids"
 
@@ -695,17 +708,21 @@ msgstr "Gaan na bladsy {pageNumber}"
 msgid "Go to previous page"
 msgstr "Gaan na vorige bladsy"
 
-#: src/routes/_authenticated/app/$appId.tsx:510
+#: src/routes/_authenticated/app/$appId.tsx:515
 msgid "Grant"
 msgstr "Verleen"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:520
 msgid "Grant permission"
 msgstr "Verleen toestemming"
 
-#: src/routes/_authenticated/app/$appId.tsx:570
+#: src/routes/_authenticated/app/$appId.tsx:575
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Verleen toestemmings om hierdie toepassing toegang tot stelselfunksies te gee"
+
+#: src/routes/_authenticated/app/$appId.tsx:471
+msgid "Granting permission..."
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
@@ -752,44 +769,48 @@ msgstr "Ingebed"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Install"
 msgstr "Installeer"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:519
+#: src/features/apps/index.tsx:539
 msgid "Install {0}?"
 msgstr "Installeer {0}?"
 
-#: src/features/apps/index.tsx:352
+#: src/features/apps/index.tsx:372
 msgid "Install apps from the market or upload your own"
 msgstr "Installeer toepassings vanaf die mark of laai jou eie op"
 
 #: src/features/apps/index.tsx:155
-msgid "Install failed"
-msgstr "Installasie het misluk"
+#~ msgid "Install failed"
+#~ msgstr "Installasie het misluk"
 
-#: src/features/apps/index.tsx:291
-#: src/features/apps/index.tsx:595
+#: src/features/apps/index.tsx:311
+#: src/features/apps/index.tsx:615
 msgid "Install from file"
 msgstr "Installeer vanaf lêer"
 
-#: src/features/apps/index.tsx:287
-#: src/features/apps/index.tsx:553
+#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:573
 msgid "Install from publisher"
 msgstr "Installeer vanaf uitgewer"
 
-#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:355
 msgid "Installed apps"
 msgstr "Geïnstalleerde toepassings"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:128
+#: src/features/apps/index.tsx:155
+#: src/features/apps/index.tsx:175
+#: src/features/apps/index.tsx:248
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Installing..."
 msgstr "Installeer..."
 
@@ -859,7 +880,7 @@ msgstr "Suksesvol afgemeld"
 msgid "Logging out…"
 msgstr "Besig om af te meld…"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Manage capabilities granted to this application"
 msgstr "Bestuur vermoëns wat aan hierdie toepassing toegestaan is"
 
@@ -906,11 +927,11 @@ msgstr "Volgende prent"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Geen toegangsreëls gekonfigureer nie. Voeg reëls by om te beheer wie toegang tot hierdie hulpbron het."
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "No apps could be updated."
 msgstr "Geen programme kon opgedateer word nie."
 
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:371
 msgid "No apps installed"
 msgstr "Geen programme geïnstalleer nie"
 
@@ -922,11 +943,11 @@ msgstr "Geen klasse opgestel nie."
 msgid "No connected accounts"
 msgstr "Geen gekoppelde rekeninge nie"
 
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:466
 msgid "No description"
 msgstr "Geen beskrywing"
 
-#: src/features/apps/index.tsx:384
+#: src/features/apps/index.tsx:404
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Geen ontwikkelingstoepassings stem ooreen met \"{searchQuery}\""
 
@@ -934,20 +955,20 @@ msgstr "Geen ontwikkelingstoepassings stem ooreen met \"{searchQuery}\""
 msgid "No groups available"
 msgstr "Geen groepe beskikbaar nie"
 
-#: src/features/apps/index.tsx:477
+#: src/features/apps/index.tsx:497
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Geen installeerbare toepassings in die gids stem ooreen met \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:378
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Geen geïnstalleerde toepassings stem ooreen met \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:496
 msgid "No matches in directory"
 msgstr "Geen passe in gids nie"
 
-#: src/features/apps/index.tsx:357
-#: src/features/apps/index.tsx:383
+#: src/features/apps/index.tsx:377
+#: src/features/apps/index.tsx:403
 msgid "No matching apps"
 msgstr "Geen passende programme nie"
 
@@ -955,11 +976,11 @@ msgstr "Geen passende programme nie"
 msgid "No paths configured."
 msgstr "Geen paaie opgestel nie."
 
-#: src/routes/_authenticated/app/$appId.tsx:569
+#: src/routes/_authenticated/app/$appId.tsx:574
 msgid "No permissions granted"
 msgstr "Geen toestemmings verleen nie"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "No permissions granted to this app"
 msgstr "Geen toestemmings aan hierdie toepassing toegestaan nie"
 
@@ -971,7 +992,7 @@ msgstr "Geen plekke gevind nie"
 msgid "No profile"
 msgstr "Geen profiel"
 
-#: src/features/apps/index.tsx:429
+#: src/features/apps/index.tsx:449
 msgid "No recommendations available"
 msgstr "Geen aanbevelings beskikbaar nie"
 
@@ -992,7 +1013,7 @@ msgstr "Geen tydsone gevind nie."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Nog geen onderwerprekord nie — probeer weer na die volgende kennisgewing."
 
-#: src/features/apps/index.tsx:205
+#: src/features/apps/index.tsx:217
 msgid "No unused versions to clean up"
 msgstr "Geen ongebruikte weergawes om op te ruim nie"
 
@@ -1014,7 +1035,7 @@ msgstr "Normaal"
 msgid "Not set"
 msgstr "Nie ingestel nie"
 
-#: src/routes/_authenticated/app/$appId.tsx:342
+#: src/routes/_authenticated/app/$appId.tsx:344
 msgid "Not versioned"
 msgstr "Nie geweergawe nie"
 
@@ -1035,8 +1056,8 @@ msgstr "Oeps! Bladsy nie gevind nie!"
 msgid "Open account actions"
 msgstr "Maak rekeningaksies oop"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Maak aksies oop"
 
@@ -1075,7 +1096,7 @@ msgstr "Wagsleutel-verifikasie het misluk. Probeer asseblief weer."
 msgid "Passkeys"
 msgstr "Wagwoordsleutels"
 
-#: src/features/apps/index.tsx:557
+#: src/features/apps/index.tsx:577
 msgid "Paste the install link:"
 msgstr "Plak die installasieskakel:"
 
@@ -1092,15 +1113,15 @@ msgstr "Padroete"
 msgid "Paths"
 msgstr "Paaie"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:472
 msgid "Permission granted"
 msgstr "Toestemming verleen"
 
-#: src/routes/_authenticated/app/$appId.tsx:450
+#: src/routes/_authenticated/app/$appId.tsx:453
 msgid "Permission revoked"
 msgstr "Toestemming herroep"
 
-#: src/routes/_authenticated/app/$appId.tsx:502
+#: src/routes/_authenticated/app/$appId.tsx:507
 msgid "Permissions"
 msgstr "Toestemmings"
 
@@ -1108,15 +1129,15 @@ msgstr "Toestemmings"
 msgid "Please check your internet connection and try again."
 msgstr "Gaan asseblief jou internetverbinding na en probeer weer."
 
-#: src/features/apps/index.tsx:140
+#: src/features/apps/index.tsx:147
 msgid "Please enter an app ID"
 msgstr "Voer asseblief 'n program-ID in"
 
-#: src/features/routing/use-routing-data.ts:27
+#: src/features/routing/use-routing-data.ts:32
 msgid "Preference updated"
 msgstr "Voorkeur opgedateer"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Preferred Version"
 msgstr "Voorkeurweergawe"
 
@@ -1153,7 +1174,7 @@ msgstr "Herregistreer jou wagwoordsleutels op hierdie bediener"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:219
 #: ../../../lib/web/src/components/search-entity-page.tsx:194
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:425
 msgid "Recommended"
 msgstr "Aanbeveel"
 
@@ -1193,9 +1214,9 @@ msgstr "Verwyder toegang?"
 msgid "Remove interest"
 msgstr "Verwyder belangstelling"
 
-#. placeholder {0}: data.removed
-#. placeholder {1}: data.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:207
+#. placeholder {0}: result.removed
+#. placeholder {1}: result.removed === 1 ? '' : 's'
+#: src/features/apps/index.tsx:220
 msgid "Removed {0} unused version{1}"
 msgstr "{0} ongebruikte weergawe{1} verwyder"
 
@@ -1212,18 +1233,22 @@ msgstr "Stel terug"
 msgid "Reset all settings to default values"
 msgstr "Stel alle instellings terug na verstekwaardes"
 
-#: src/routes/_authenticated/app/$appId.tsx:623
-#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:628
+#: src/routes/_authenticated/app/$appId.tsx:631
 msgid "Revoke"
 msgstr "Herroep"
 
-#: src/routes/_authenticated/app/$appId.tsx:633
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission"
 msgstr "Trek toestemming terug"
 
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission?"
 msgstr "Herroep toestemming?"
+
+#: src/routes/_authenticated/app/$appId.tsx:452
+msgid "Revoking permission..."
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:361
 msgid "Right to Left"
@@ -1242,11 +1267,18 @@ msgstr "Saterdag"
 msgid "Save"
 msgstr "Stoor"
 
-#: src/features/apps/index.tsx:324
+#: src/features/routing/use-routing-data.ts:31
+#: src/features/routing/use-routing-data.ts:50
+#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:322
+msgid "Saving..."
+msgstr ""
+
+#: src/features/apps/index.tsx:344
 msgid "Search apps"
 msgstr "Soek programme"
 
-#: src/features/apps/index.tsx:323
+#: src/features/apps/index.tsx:343
 msgid "Search apps..."
 msgstr "Soek programme..."
 
@@ -1280,7 +1312,7 @@ msgstr "Soek..."
 msgid "Searching..."
 msgstr "Besig om te soek..."
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Select a capability to grant to {appName}."
 msgstr "Kies 'n vermoë om aan {appName} toe te staan."
 
@@ -1316,7 +1348,7 @@ msgstr "Kies werfrigting"
 msgid "Select theme preference"
 msgstr "Kies tema-voorkeur"
 
-#: src/routes/_authenticated/app/$appId.tsx:396
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Select which version of this app to use"
 msgstr "Kies watter weergawe van hierdie program om te gebruik"
 
@@ -1429,11 +1461,11 @@ msgstr "Stelsel"
 msgid "System default"
 msgstr "Stelselverstek"
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "System Default"
 msgstr "Stelselverstek"
 
-#: src/features/routing/use-routing-data.ts:41
+#: src/features/routing/use-routing-data.ts:51
 msgid "System default updated"
 msgstr "Stelselverstek opgedateer"
 
@@ -1465,14 +1497,14 @@ msgstr "Daardie kode is verkeerd of het verval."
 
 #: src/features/apps/index.tsx:124
 #: src/features/apps/index.tsx:231
-msgid "The app has been installed successfully."
-msgstr "Die program is suksesvol geïnstalleer."
+#~ msgid "The app has been installed successfully."
+#~ msgstr "Die program is suksesvol geïnstalleer."
 
 #: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "Die versoekde program kon nie gevind word nie."
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "The version used by users who haven't made a choice"
 msgstr "Die weergawe wat gebruik word deur gebruikers wat nie 'n keuse gemaak het nie"
 
@@ -1484,7 +1516,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Tema-instellings"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:345
 msgid "This app does not have version management"
 msgstr "Hierdie program het nie weergawebestuur nie"
 
@@ -1493,7 +1525,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Hierdie toepassing word direk vanaf sy uitgewer geïnstalleer en is nie nagegaan nie. Dit kan kwaadwillige sagteware wees."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:632
+#: src/routes/_authenticated/app/$appId.tsx:637
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Dit sal die \"{0}\" toestemming van {appName} terugtrek. Die toepassing kan ophou om korrek te werk."
 
@@ -1510,10 +1542,10 @@ msgstr "Skakel kolomme"
 msgid "Toggle right panel"
 msgstr "Wissel regterpaneel"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Wissel afdeling"
 
@@ -1536,8 +1568,8 @@ msgstr "Skakel tema"
 msgid "Top"
 msgstr "Bo"
 
-#: src/features/apps/index.tsx:694
-#: src/routes/_authenticated/app/$appId.tsx:362
+#: src/features/apps/index.tsx:714
+#: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Track"
 msgstr "Baan"
 
@@ -1576,7 +1608,7 @@ msgstr "Tik om te soek..."
 msgid "Unable to connect to remote server"
 msgstr "Kan nie aan afgeleë bediener koppel nie"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:444
 msgid "Unable to connect to the recommendations service"
 msgstr "Kan nie aan die aanbevelingsdiens koppel nie"
 
@@ -1601,7 +1633,7 @@ msgstr "Nie toegewys nie"
 msgid "Unauthorized Access"
 msgstr "Nie-toegelate toegang"
 
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:443
 msgid "Unavailable"
 msgstr "Nie beskikbaar nie"
 
@@ -1613,19 +1645,19 @@ msgstr "Verenigde State"
 msgid "Unverified"
 msgstr "Ongeverifieer"
 
-#: src/features/apps/index.tsx:690
+#: src/features/apps/index.tsx:710
 msgid "Update"
 msgstr "Opdateer"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Update all"
 msgstr "Opdateer alles"
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "Update failed"
 msgstr "Opdatering het misluk"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Updating..."
 msgstr "Besig om op te dateer..."
 
@@ -1663,7 +1695,7 @@ msgstr "Verifieer"
 msgid "Verify email address"
 msgstr "Verifieer e-posadres"
 
-#: src/routes/_authenticated/app/$appId.tsx:376
+#: src/routes/_authenticated/app/$appId.tsx:378
 msgid "Version"
 msgstr "Weergawe"
 
@@ -1672,11 +1704,11 @@ msgstr "Weergawe"
 msgid "Version {0}"
 msgstr "Weergawe {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:302
 msgid "Version changed"
 msgstr "Weergawe verander"
 
-#: src/routes/_authenticated/app/$appId.tsx:395
+#: src/routes/_authenticated/app/$appId.tsx:397
 msgid "Version Management"
 msgstr "Weergawebestuur"
 
@@ -1713,7 +1745,7 @@ msgstr "Woensdag"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Jou rekening is hierheen geskuif vanaf {source}. Totdat jy dit daar uitvee, kan boodskappe en kennisgewings albei bedieners bereik, word sommige van jou inhoud steeds vanaf die ou bediener bedien, en kan volgelinge 'n paar minute neem om jou hier te vind."
 
-#: src/routes/_authenticated/app/$appId.tsx:416
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "Your personal version override"
 msgstr "Jou persoonlike weergawe-omleiding"
 
@@ -1721,6 +1753,6 @@ msgstr "Jou persoonlike weergawe-omleiding"
 msgid "Your preference"
 msgstr "Jou voorkeur"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Your Version"
 msgstr "Jou Weergawe"

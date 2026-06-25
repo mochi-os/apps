@@ -19,23 +19,23 @@ msgid "{0} (development)"
 msgstr "{0} (udvikling)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:194
+#: src/features/apps/index.tsx:202
 msgid "{0} updated, {failed} failed"
 msgstr "{0} opdateret, {failed} mislykkedes"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:149
-#: src/features/apps/index.tsx:171
+#: src/features/apps/index.tsx:157
+#: src/features/apps/index.tsx:177
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} er blevet installeret."
 
-#: src/routes/_authenticated/app/$appId.tsx:367
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "{track} (default, version {version})"
 msgstr "{track} (standard, version {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:368
+#: src/routes/_authenticated/app/$appId.tsx:370
 msgid "{track} (version {version})"
 msgstr "{track} (version {version})"
 
@@ -108,7 +108,7 @@ msgstr "Tilføj tag..."
 msgid "Add team/app"
 msgstr "Tilføj team/app"
 
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:626
 msgid "Add to directory"
 msgstr "Tilføj til katalog"
 
@@ -133,7 +133,7 @@ msgstr "AI"
 msgid "All"
 msgstr "Alle"
 
-#: src/features/apps/index.tsx:190
+#: src/features/apps/index.tsx:198
 msgid "All apps updated"
 msgstr "Alle apps opdateret"
 
@@ -145,13 +145,13 @@ msgstr "Der opstod en fejl"
 msgid "An unexpected error occurred"
 msgstr "Der opstod en uventet fejl"
 
-#: src/features/apps/index.tsx:149
+#: src/features/apps/index.tsx:157
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "App"
 
-#: src/features/apps/index.tsx:259
-#: src/features/apps/index.tsx:269
+#: src/features/apps/index.tsx:279
+#: src/features/apps/index.tsx:289
 msgid "App actions"
 msgstr "App-handlinger"
 
@@ -167,8 +167,13 @@ msgstr "App-information og konfiguration"
 #: src/features/apps/index.tsx:148
 #: src/features/apps/index.tsx:170
 #: src/features/apps/index.tsx:230
-msgid "App installed"
-msgstr "App installeret"
+#~ msgid "App installed"
+#~ msgstr "App installeret"
+
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:249
+msgid "App installed successfully"
+msgstr ""
 
 #: src/routes/_authenticated/app/$appId.tsx:126
 #: src/routes/_authenticated/app/$appId.tsx:130
@@ -181,8 +186,8 @@ msgstr "Applikations-ID"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:62
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:63
+#: src/features/apps/index.tsx:330
 msgid "Apps"
 msgstr "Apps"
 
@@ -211,7 +216,7 @@ msgstr "Tilgængelig version:"
 msgid "Available versions:"
 msgstr "Tilgængelige versioner:"
 
-#: src/features/apps/index.tsx:404
+#: src/features/apps/index.tsx:424
 msgid "Available, but not installed"
 msgstr "Tilgængelig, men ikke installeret"
 
@@ -247,10 +252,10 @@ msgstr "Fremhæv interesse"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:108
-#: src/features/apps/index.tsx:528
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:618
-#: src/routes/_authenticated/app/$appId.tsx:546
+#: src/features/apps/index.tsx:548
+#: src/features/apps/index.tsx:589
+#: src/features/apps/index.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:551
 msgid "Cancel"
 msgstr "Annuller"
 
@@ -297,11 +302,12 @@ msgstr "Klasseruting"
 msgid "Classes"
 msgstr "Klasser"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:319
 msgid "Clean up unused versions"
 msgstr "Ryd op i ubrugte versioner"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:319
 msgid "Cleaning up..."
 msgstr "Rydder op..."
 
@@ -354,8 +360,8 @@ msgstr "Luk søgning"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Collapse"
 msgstr "Skjul"
 
@@ -413,7 +419,10 @@ msgstr "Fortsæt med {label}"
 msgid "Copy"
 msgstr "Kopier"
 
-#: src/features/apps/index.tsx:156
+#: src/features/apps/index.tsx:130
+#: src/features/apps/index.tsx:158
+#: src/features/apps/index.tsx:178
+#: src/features/apps/index.tsx:250
 msgid "Could not install app."
 msgstr "Kunne ikke installere appen."
 
@@ -468,24 +477,24 @@ msgstr "Standard"
 msgid "Default AI account"
 msgstr "Standard AI-konto"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:427
 msgid "Default for all users"
 msgstr "Standard for alle brugere"
 
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:426
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Standard for alle brugere (version {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:321
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Default for all users updated"
 msgstr "Standard for alle brugere opdateret"
 
-#: src/routes/_authenticated/app/$appId.tsx:408
+#: src/routes/_authenticated/app/$appId.tsx:410
 msgid "Default track"
 msgstr "Standardspor"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:407
+#: src/routes/_authenticated/app/$appId.tsx:409
 msgid "Default track (version {0})"
 msgstr "Standardspor (version {0})"
 
@@ -516,7 +525,7 @@ msgstr "Detaljepanel"
 msgid "Detect from web browser"
 msgstr "Registrer fra webbrowser"
 
-#: src/features/apps/index.tsx:379
+#: src/features/apps/index.tsx:399
 msgid "Development apps"
 msgstr "Udviklingsapps"
 
@@ -568,8 +577,8 @@ msgstr "Entitet:"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Expand"
 msgstr "Udvid"
 
@@ -585,7 +594,11 @@ msgstr "Ekstra stor"
 msgid "Failed to add account"
 msgstr "Kunne ikke tilføje konto"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/features/apps/index.tsx:214
+msgid "Failed to clean up apps"
+msgstr ""
+
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Failed to grant permission"
 msgstr "Kunne ikke tildele tilladelse"
 
@@ -593,7 +606,7 @@ msgstr "Kunne ikke tildele tilladelse"
 msgid "Failed to remove account"
 msgstr "Kunne ikke fjerne konto"
 
-#: src/routes/_authenticated/app/$appId.tsx:454
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Failed to revoke permission"
 msgstr "Kunne ikke tilbagekalde tilladelse"
 
@@ -609,16 +622,16 @@ msgstr "Kunne ikke opdatere kategori"
 msgid "Failed to update default"
 msgstr "Kunne ikke opdatere standard"
 
-#: src/features/routing/use-routing-data.ts:30
-#: src/routes/_authenticated/app/$appId.tsx:304
+#: src/features/routing/use-routing-data.ts:33
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Failed to update preference"
 msgstr "Kunne ikke opdatere præference"
 
-#: src/features/routing/use-routing-data.ts:44
+#: src/features/routing/use-routing-data.ts:53
 msgid "Failed to update system default"
 msgstr "Kunne ikke opdatere systemstandard"
 
-#: src/features/apps/index.tsx:599
+#: src/features/apps/index.tsx:619
 msgid "File:"
 msgstr "Fil:"
 
@@ -652,7 +665,7 @@ msgstr "Fredag"
 msgid "From"
 msgstr "Fra"
 
-#: src/features/apps/index.tsx:459
+#: src/features/apps/index.tsx:479
 msgid "From the directory"
 msgstr "Fra kataloget"
 
@@ -695,17 +708,21 @@ msgstr "Gå til side {pageNumber}"
 msgid "Go to previous page"
 msgstr "Gå til forrige side"
 
-#: src/routes/_authenticated/app/$appId.tsx:510
+#: src/routes/_authenticated/app/$appId.tsx:515
 msgid "Grant"
 msgstr "Tildel"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:520
 msgid "Grant permission"
 msgstr "Tildel tilladelse"
 
-#: src/routes/_authenticated/app/$appId.tsx:570
+#: src/routes/_authenticated/app/$appId.tsx:575
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Tildel tilladelser, så denne app kan tilgå systemfunktioner"
+
+#: src/routes/_authenticated/app/$appId.tsx:471
+msgid "Granting permission..."
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
@@ -752,44 +769,48 @@ msgstr "Indsat"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Install"
 msgstr "Installér"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:519
+#: src/features/apps/index.tsx:539
 msgid "Install {0}?"
 msgstr "Installér {0}?"
 
-#: src/features/apps/index.tsx:352
+#: src/features/apps/index.tsx:372
 msgid "Install apps from the market or upload your own"
 msgstr "Installér apps fra markedet eller upload dine egne"
 
 #: src/features/apps/index.tsx:155
-msgid "Install failed"
-msgstr "Installation mislykkedes"
+#~ msgid "Install failed"
+#~ msgstr "Installation mislykkedes"
 
-#: src/features/apps/index.tsx:291
-#: src/features/apps/index.tsx:595
+#: src/features/apps/index.tsx:311
+#: src/features/apps/index.tsx:615
 msgid "Install from file"
 msgstr "Installér fra fil"
 
-#: src/features/apps/index.tsx:287
-#: src/features/apps/index.tsx:553
+#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:573
 msgid "Install from publisher"
 msgstr "Installér fra udgiver"
 
-#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:355
 msgid "Installed apps"
 msgstr "Installerede apps"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:128
+#: src/features/apps/index.tsx:155
+#: src/features/apps/index.tsx:175
+#: src/features/apps/index.tsx:248
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Installing..."
 msgstr "Installerer..."
 
@@ -859,7 +880,7 @@ msgstr "Logget ud"
 msgid "Logging out…"
 msgstr "Logger ud…"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Manage capabilities granted to this application"
 msgstr "Administrer funktioner tildelt til denne applikation"
 
@@ -906,11 +927,11 @@ msgstr "Næste billede"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Ingen adgangsregler konfigureret. Tilføj regler for at styre, hvem der har adgang til denne ressource."
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "No apps could be updated."
 msgstr "Ingen apps kunne opdateres."
 
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:371
 msgid "No apps installed"
 msgstr "Ingen apps installeret"
 
@@ -922,11 +943,11 @@ msgstr "Ingen klasser konfigureret."
 msgid "No connected accounts"
 msgstr "Ingen tilknyttede konti"
 
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:466
 msgid "No description"
 msgstr "Ingen beskrivelse"
 
-#: src/features/apps/index.tsx:384
+#: src/features/apps/index.tsx:404
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Ingen udviklings-apps matcher \"{searchQuery}\""
 
@@ -934,20 +955,20 @@ msgstr "Ingen udviklings-apps matcher \"{searchQuery}\""
 msgid "No groups available"
 msgstr "Ingen grupper tilgængelige"
 
-#: src/features/apps/index.tsx:477
+#: src/features/apps/index.tsx:497
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Ingen installérbare apps i biblioteket matcher \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:378
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Ingen installerede apps matcher \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:496
 msgid "No matches in directory"
 msgstr "Ingen match i mappen"
 
-#: src/features/apps/index.tsx:357
-#: src/features/apps/index.tsx:383
+#: src/features/apps/index.tsx:377
+#: src/features/apps/index.tsx:403
 msgid "No matching apps"
 msgstr "Ingen matchende apps"
 
@@ -955,11 +976,11 @@ msgstr "Ingen matchende apps"
 msgid "No paths configured."
 msgstr "Ingen stier konfigureret."
 
-#: src/routes/_authenticated/app/$appId.tsx:569
+#: src/routes/_authenticated/app/$appId.tsx:574
 msgid "No permissions granted"
 msgstr "Ingen tilladelser givet"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "No permissions granted to this app"
 msgstr "Ingen tilladelser tildelt til denne app"
 
@@ -971,7 +992,7 @@ msgstr "Ingen steder fundet"
 msgid "No profile"
 msgstr "Ingen profil"
 
-#: src/features/apps/index.tsx:429
+#: src/features/apps/index.tsx:449
 msgid "No recommendations available"
 msgstr "Ingen anbefalinger tilgængelige"
 
@@ -992,7 +1013,7 @@ msgstr "Ingen tidszone fundet."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Ingen emnepost endnu — prøv igen efter næste notifikation."
 
-#: src/features/apps/index.tsx:205
+#: src/features/apps/index.tsx:217
 msgid "No unused versions to clean up"
 msgstr "Ingen ubrugte versioner at rydde op"
 
@@ -1014,7 +1035,7 @@ msgstr "Normal"
 msgid "Not set"
 msgstr "Ikke angivet"
 
-#: src/routes/_authenticated/app/$appId.tsx:342
+#: src/routes/_authenticated/app/$appId.tsx:344
 msgid "Not versioned"
 msgstr "Ikke versioneret"
 
@@ -1035,8 +1056,8 @@ msgstr "Ups! Siden blev ikke fundet!"
 msgid "Open account actions"
 msgstr "Åbn kontohandlinger"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Åbn handlinger"
 
@@ -1075,7 +1096,7 @@ msgstr "Verificering med adgangsnøgle mislykkedes. Prøv igen."
 msgid "Passkeys"
 msgstr "Adgangsnøgler"
 
-#: src/features/apps/index.tsx:557
+#: src/features/apps/index.tsx:577
 msgid "Paste the install link:"
 msgstr "Indsæt installationslinket:"
 
@@ -1092,15 +1113,15 @@ msgstr "Stiruting"
 msgid "Paths"
 msgstr "Stier"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:472
 msgid "Permission granted"
 msgstr "Tilladelse givet"
 
-#: src/routes/_authenticated/app/$appId.tsx:450
+#: src/routes/_authenticated/app/$appId.tsx:453
 msgid "Permission revoked"
 msgstr "Tilladelse tilbagekaldt"
 
-#: src/routes/_authenticated/app/$appId.tsx:502
+#: src/routes/_authenticated/app/$appId.tsx:507
 msgid "Permissions"
 msgstr "Tilladelser"
 
@@ -1108,15 +1129,15 @@ msgstr "Tilladelser"
 msgid "Please check your internet connection and try again."
 msgstr "Tjek din internetforbindelse, og prøv igen."
 
-#: src/features/apps/index.tsx:140
+#: src/features/apps/index.tsx:147
 msgid "Please enter an app ID"
 msgstr "Indtast et app-id"
 
-#: src/features/routing/use-routing-data.ts:27
+#: src/features/routing/use-routing-data.ts:32
 msgid "Preference updated"
 msgstr "Præference opdateret"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Preferred Version"
 msgstr "Foretrukken version"
 
@@ -1153,7 +1174,7 @@ msgstr "Registrer dine adgangsnøgler på denne server igen"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:219
 #: ../../../lib/web/src/components/search-entity-page.tsx:194
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:425
 msgid "Recommended"
 msgstr "Anbefalet"
 
@@ -1193,9 +1214,9 @@ msgstr "Fjern adgang?"
 msgid "Remove interest"
 msgstr "Fjern interesse"
 
-#. placeholder {0}: data.removed
-#. placeholder {1}: data.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:207
+#. placeholder {0}: result.removed
+#. placeholder {1}: result.removed === 1 ? '' : 's'
+#: src/features/apps/index.tsx:220
 msgid "Removed {0} unused version{1}"
 msgstr "Fjernede {0} ubrugt(e) version{1}"
 
@@ -1212,18 +1233,22 @@ msgstr "Nulstil"
 msgid "Reset all settings to default values"
 msgstr "Nulstil alle indstillinger til standardværdier"
 
-#: src/routes/_authenticated/app/$appId.tsx:623
-#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:628
+#: src/routes/_authenticated/app/$appId.tsx:631
 msgid "Revoke"
 msgstr "Tilbagekald"
 
-#: src/routes/_authenticated/app/$appId.tsx:633
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission"
 msgstr "Tilbagekald tilladelse"
 
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission?"
 msgstr "Tilbagekald tilladelse?"
+
+#: src/routes/_authenticated/app/$appId.tsx:452
+msgid "Revoking permission..."
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:361
 msgid "Right to Left"
@@ -1242,11 +1267,18 @@ msgstr "Lørdag"
 msgid "Save"
 msgstr "Gem"
 
-#: src/features/apps/index.tsx:324
+#: src/features/routing/use-routing-data.ts:31
+#: src/features/routing/use-routing-data.ts:50
+#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:322
+msgid "Saving..."
+msgstr ""
+
+#: src/features/apps/index.tsx:344
 msgid "Search apps"
 msgstr "Søg i apps"
 
-#: src/features/apps/index.tsx:323
+#: src/features/apps/index.tsx:343
 msgid "Search apps..."
 msgstr "Søg i apps..."
 
@@ -1280,7 +1312,7 @@ msgstr "Søg..."
 msgid "Searching..."
 msgstr "Søger..."
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Select a capability to grant to {appName}."
 msgstr "Vælg en funktion at tildele til {appName}."
 
@@ -1316,7 +1348,7 @@ msgstr "Vælg sideretning"
 msgid "Select theme preference"
 msgstr "Vælg temapræference"
 
-#: src/routes/_authenticated/app/$appId.tsx:396
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Select which version of this app to use"
 msgstr "Vælg hvilken version af denne app der skal bruges"
 
@@ -1429,11 +1461,11 @@ msgstr "System"
 msgid "System default"
 msgstr "Systemstandard"
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "System Default"
 msgstr "Systemstandard"
 
-#: src/features/routing/use-routing-data.ts:41
+#: src/features/routing/use-routing-data.ts:51
 msgid "System default updated"
 msgstr "Systemstandard opdateret"
 
@@ -1465,14 +1497,14 @@ msgstr "Koden er forkert eller udløbet."
 
 #: src/features/apps/index.tsx:124
 #: src/features/apps/index.tsx:231
-msgid "The app has been installed successfully."
-msgstr "Appen er blevet installeret."
+#~ msgid "The app has been installed successfully."
+#~ msgstr "Appen er blevet installeret."
 
 #: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "Den anmodede app kunne ikke findes."
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "The version used by users who haven't made a choice"
 msgstr "Versionen brugt af brugere, der ikke har truffet et valg"
 
@@ -1484,7 +1516,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Temaindstillinger"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:345
 msgid "This app does not have version management"
 msgstr "Denne app har ikke versionsstyring"
 
@@ -1493,7 +1525,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Denne app installeres direkte fra dens udgiver og er ikke blevet kontrolleret. Det kan være malware."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:632
+#: src/routes/_authenticated/app/$appId.tsx:637
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Dette vil tilbagekalde \"{0}\"-tilladelsen fra {appName}. App'en kan holde op med at fungere korrekt."
 
@@ -1510,10 +1542,10 @@ msgstr "Skift kolonner"
 msgid "Toggle right panel"
 msgstr "Skift højre panel"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Skift sektion"
 
@@ -1536,8 +1568,8 @@ msgstr "Skift tema"
 msgid "Top"
 msgstr "Top"
 
-#: src/features/apps/index.tsx:694
-#: src/routes/_authenticated/app/$appId.tsx:362
+#: src/features/apps/index.tsx:714
+#: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Track"
 msgstr "Spor"
 
@@ -1576,7 +1608,7 @@ msgstr "Skriv for at søge..."
 msgid "Unable to connect to remote server"
 msgstr "Kunne ikke oprette forbindelse til fjernserveren"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:444
 msgid "Unable to connect to the recommendations service"
 msgstr "Kan ikke forbinde til anbefalingstjenesten"
 
@@ -1601,7 +1633,7 @@ msgstr "Ikke tildelt"
 msgid "Unauthorized Access"
 msgstr "Uautoriseret adgang"
 
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:443
 msgid "Unavailable"
 msgstr "Ikke tilgængelig"
 
@@ -1613,19 +1645,19 @@ msgstr "USA"
 msgid "Unverified"
 msgstr "Uverificeret"
 
-#: src/features/apps/index.tsx:690
+#: src/features/apps/index.tsx:710
 msgid "Update"
 msgstr "Opdater"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Update all"
 msgstr "Opdater alle"
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "Update failed"
 msgstr "Opdatering mislykkedes"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Updating..."
 msgstr "Opdaterer..."
 
@@ -1663,7 +1695,7 @@ msgstr "Verificer"
 msgid "Verify email address"
 msgstr "Verificer e-mailadresse"
 
-#: src/routes/_authenticated/app/$appId.tsx:376
+#: src/routes/_authenticated/app/$appId.tsx:378
 msgid "Version"
 msgstr "Version"
 
@@ -1672,11 +1704,11 @@ msgstr "Version"
 msgid "Version {0}"
 msgstr "Version {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:302
 msgid "Version changed"
 msgstr "Version ændret"
 
-#: src/routes/_authenticated/app/$appId.tsx:395
+#: src/routes/_authenticated/app/$appId.tsx:397
 msgid "Version Management"
 msgstr "Versionsstyring"
 
@@ -1713,7 +1745,7 @@ msgstr "Onsdag"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Din konto blev flyttet hertil fra {source}. Indtil du sletter den dér, kan beskeder og notifikationer nå begge servere, noget af dit indhold serveres stadig fra den gamle server, og følgere kan have brug for et par minutter på at finde dig her."
 
-#: src/routes/_authenticated/app/$appId.tsx:416
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "Your personal version override"
 msgstr "Din personlige versionstilsidesættelse"
 
@@ -1721,6 +1753,6 @@ msgstr "Din personlige versionstilsidesættelse"
 msgid "Your preference"
 msgstr "Din præference"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Your Version"
 msgstr "Din version"

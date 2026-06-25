@@ -3,7 +3,7 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-import { toast, getErrorMessage } from '@mochi/web'
+import { getErrorMessage, toastAction } from '@mochi/web'
 import { useLingui } from '@lingui/react/macro'
 import {
   useRoutingQuery,
@@ -19,32 +19,43 @@ export function useRoutingData() {
   const setUserRouting = useSetUserRoutingMutation()
   const setSystemRouting = useSetSystemRoutingMutation()
 
-  const handleUserChange = (type: RoutingType, name: string, appId: string) => {
-    setUserRouting.mutate(
-      { type, name, app: appId },
-      {
-        onSuccess: () => {
-          toast.success(t`Preference updated`)
-        },
-        onError: (error) => {
-          toast.error(getErrorMessage(error, t`Failed to update preference`))
-        },
-      }
-    )
+  const handleUserChange = async (
+    type: RoutingType,
+    name: string,
+    appId: string
+  ) => {
+    try {
+      await toastAction(
+        setUserRouting.mutateAsync({ type, name, app: appId }),
+        {
+          loading: t`Saving...`,
+          success: t`Preference updated`,
+          error: (err) => getErrorMessage(err, t`Failed to update preference`),
+        }
+      )
+    } catch {
+      // toastAction already showed error
+    }
   }
 
-  const handleSystemChange = (type: RoutingType, name: string, appId: string) => {
-    setSystemRouting.mutate(
-      { type, name, app: appId },
-      {
-        onSuccess: () => {
-          toast.success(t`System default updated`)
-        },
-        onError: (error) => {
-          toast.error(getErrorMessage(error, t`Failed to update system default`))
-        },
-      }
-    )
+  const handleSystemChange = async (
+    type: RoutingType,
+    name: string,
+    appId: string
+  ) => {
+    try {
+      await toastAction(
+        setSystemRouting.mutateAsync({ type, name, app: appId }),
+        {
+          loading: t`Saving...`,
+          success: t`System default updated`,
+          error: (err) =>
+            getErrorMessage(err, t`Failed to update system default`),
+        }
+      )
+    } catch {
+      // toastAction already showed error
+    }
   }
 
   return {

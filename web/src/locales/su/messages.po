@@ -19,23 +19,23 @@ msgid "{0} (development)"
 msgstr "{0} (pamekaran)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:194
+#: src/features/apps/index.tsx:202
 msgid "{0} updated, {failed} failed"
 msgstr "{0} diapdet, {failed} gagal"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:149
-#: src/features/apps/index.tsx:171
+#: src/features/apps/index.tsx:157
+#: src/features/apps/index.tsx:177
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} tos dipasang."
 
-#: src/routes/_authenticated/app/$appId.tsx:367
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "{track} (default, version {version})"
 msgstr "{track} (standar, versi {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:368
+#: src/routes/_authenticated/app/$appId.tsx:370
 msgid "{track} (version {version})"
 msgstr "{track} (versi {version})"
 
@@ -108,7 +108,7 @@ msgstr "Tambah tag..."
 msgid "Add team/app"
 msgstr "Tambah tim/aplikasi"
 
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:626
 msgid "Add to directory"
 msgstr "Tambah ka diréktori"
 
@@ -133,7 +133,7 @@ msgstr "AI"
 msgid "All"
 msgstr "Sadaya"
 
-#: src/features/apps/index.tsx:190
+#: src/features/apps/index.tsx:198
 msgid "All apps updated"
 msgstr "Sadaya aplikasi diropéa"
 
@@ -145,13 +145,13 @@ msgstr "Aya kasalahan"
 msgid "An unexpected error occurred"
 msgstr "Aya kasalahan anu teu disangka-sangka"
 
-#: src/features/apps/index.tsx:149
+#: src/features/apps/index.tsx:157
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Aplikasi"
 
-#: src/features/apps/index.tsx:259
-#: src/features/apps/index.tsx:269
+#: src/features/apps/index.tsx:279
+#: src/features/apps/index.tsx:289
 msgid "App actions"
 msgstr "Aksi aplikasi"
 
@@ -167,8 +167,13 @@ msgstr "Inpormasi jeung konfigurasi aplikasi"
 #: src/features/apps/index.tsx:148
 #: src/features/apps/index.tsx:170
 #: src/features/apps/index.tsx:230
-msgid "App installed"
-msgstr "Aplikasi dipasang"
+#~ msgid "App installed"
+#~ msgstr "Aplikasi dipasang"
+
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:249
+msgid "App installed successfully"
+msgstr ""
 
 #: src/routes/_authenticated/app/$appId.tsx:126
 #: src/routes/_authenticated/app/$appId.tsx:130
@@ -181,8 +186,8 @@ msgstr "ID Aplikasi"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:62
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:63
+#: src/features/apps/index.tsx:330
 msgid "Apps"
 msgstr "Aplikasi"
 
@@ -211,7 +216,7 @@ msgstr "Vérsi nu aya:"
 msgid "Available versions:"
 msgstr "Vérsi nu aya:"
 
-#: src/features/apps/index.tsx:404
+#: src/features/apps/index.tsx:424
 msgid "Available, but not installed"
 msgstr "Aya, tapi teu dipasang"
 
@@ -247,10 +252,10 @@ msgstr "Tingkatkeun minat"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:108
-#: src/features/apps/index.tsx:528
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:618
-#: src/routes/_authenticated/app/$appId.tsx:546
+#: src/features/apps/index.tsx:548
+#: src/features/apps/index.tsx:589
+#: src/features/apps/index.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:551
 msgid "Cancel"
 msgstr "Batalkeun"
 
@@ -297,11 +302,12 @@ msgstr "Routing kelas"
 msgid "Classes"
 msgstr "Kelas"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:319
 msgid "Clean up unused versions"
 msgstr "Bersihkeun vérsi nu teu dipaké"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:319
 msgid "Cleaning up..."
 msgstr "Ngaberesihan..."
 
@@ -354,8 +360,8 @@ msgstr "Tutup panéangan"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Collapse"
 msgstr "Lipet"
 
@@ -413,7 +419,10 @@ msgstr "Teraskeun nganggo {label}"
 msgid "Copy"
 msgstr "Salin"
 
-#: src/features/apps/index.tsx:156
+#: src/features/apps/index.tsx:130
+#: src/features/apps/index.tsx:158
+#: src/features/apps/index.tsx:178
+#: src/features/apps/index.tsx:250
 msgid "Could not install app."
 msgstr "Henteu tiasa masang aplikasi."
 
@@ -468,24 +477,24 @@ msgstr "Standar"
 msgid "Default AI account"
 msgstr "Akun AI standar"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:427
 msgid "Default for all users"
 msgstr "Standar pikeun sadaya pamaké"
 
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:426
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Standar pikeun sadaya pamaké (vérsi {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:321
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Default for all users updated"
 msgstr "Standar pikeun sadaya pamaké diropéa"
 
-#: src/routes/_authenticated/app/$appId.tsx:408
+#: src/routes/_authenticated/app/$appId.tsx:410
 msgid "Default track"
 msgstr "Track standar"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:407
+#: src/routes/_authenticated/app/$appId.tsx:409
 msgid "Default track (version {0})"
 msgstr "Track standar (vérsi {0})"
 
@@ -516,7 +525,7 @@ msgstr "Panel Détil"
 msgid "Detect from web browser"
 msgstr "Deteksi ti browser web"
 
-#: src/features/apps/index.tsx:379
+#: src/features/apps/index.tsx:399
 msgid "Development apps"
 msgstr "Aplikasi pamekaran"
 
@@ -568,8 +577,8 @@ msgstr "Éntitas:"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Expand"
 msgstr "Buka"
 
@@ -585,7 +594,11 @@ msgstr "Gedé pisan"
 msgid "Failed to add account"
 msgstr "Gagal nambahkeun akun"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/features/apps/index.tsx:214
+msgid "Failed to clean up apps"
+msgstr ""
+
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Failed to grant permission"
 msgstr "Gagal masihan idin"
 
@@ -593,7 +606,7 @@ msgstr "Gagal masihan idin"
 msgid "Failed to remove account"
 msgstr "Gagal mupus akun"
 
-#: src/routes/_authenticated/app/$appId.tsx:454
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Failed to revoke permission"
 msgstr "Gagal nyabut idin"
 
@@ -609,16 +622,16 @@ msgstr "Gagal ngamutahirkeun katégori"
 msgid "Failed to update default"
 msgstr "Gagal ngamutahirkeun baku"
 
-#: src/features/routing/use-routing-data.ts:30
-#: src/routes/_authenticated/app/$appId.tsx:304
+#: src/features/routing/use-routing-data.ts:33
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Failed to update preference"
 msgstr "Gagal ngamutahirkeun préferénsi"
 
-#: src/features/routing/use-routing-data.ts:44
+#: src/features/routing/use-routing-data.ts:53
 msgid "Failed to update system default"
 msgstr "Gagal ngamutahirkeun baku sistem"
 
-#: src/features/apps/index.tsx:599
+#: src/features/apps/index.tsx:619
 msgid "File:"
 msgstr "Berkas:"
 
@@ -652,7 +665,7 @@ msgstr "Jumaah"
 msgid "From"
 msgstr "Ti"
 
-#: src/features/apps/index.tsx:459
+#: src/features/apps/index.tsx:479
 msgid "From the directory"
 msgstr "Ti diréktori"
 
@@ -695,17 +708,21 @@ msgstr "Buka kaca {pageNumber}"
 msgid "Go to previous page"
 msgstr "Ka kaca saméméhna"
 
-#: src/routes/_authenticated/app/$appId.tsx:510
+#: src/routes/_authenticated/app/$appId.tsx:515
 msgid "Grant"
 msgstr "Bikeun"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:520
 msgid "Grant permission"
 msgstr "Bikeun idin"
 
-#: src/routes/_authenticated/app/$appId.tsx:570
+#: src/routes/_authenticated/app/$appId.tsx:575
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Bikeun idin pikeun ngidinan aplikasi ieu ngakses fitur sistem"
+
+#: src/routes/_authenticated/app/$appId.tsx:471
+msgid "Granting permission..."
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
@@ -752,44 +769,48 @@ msgstr "Sisipan"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Install"
 msgstr "Pasang"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:519
+#: src/features/apps/index.tsx:539
 msgid "Install {0}?"
 msgstr "Pasang {0}?"
 
-#: src/features/apps/index.tsx:352
+#: src/features/apps/index.tsx:372
 msgid "Install apps from the market or upload your own"
 msgstr "Pasang aplikasi tina pasar atawa unggah punya anjeun"
 
 #: src/features/apps/index.tsx:155
-msgid "Install failed"
-msgstr "Pamasangan gagal"
+#~ msgid "Install failed"
+#~ msgstr "Pamasangan gagal"
 
-#: src/features/apps/index.tsx:291
-#: src/features/apps/index.tsx:595
+#: src/features/apps/index.tsx:311
+#: src/features/apps/index.tsx:615
 msgid "Install from file"
 msgstr "Pasang ti berkas"
 
-#: src/features/apps/index.tsx:287
-#: src/features/apps/index.tsx:553
+#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:573
 msgid "Install from publisher"
 msgstr "Pasang ti publisher"
 
-#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:355
 msgid "Installed apps"
 msgstr "Aplikasi nu geus dipasang"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:128
+#: src/features/apps/index.tsx:155
+#: src/features/apps/index.tsx:175
+#: src/features/apps/index.tsx:248
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Installing..."
 msgstr "Masang..."
 
@@ -859,7 +880,7 @@ msgstr "Hasil kaluar"
 msgid "Logging out…"
 msgstr "Keur kaluar…"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Manage capabilities granted to this application"
 msgstr "Atur kamampuh nu dipasihan ka aplikasi ieu"
 
@@ -906,11 +927,11 @@ msgstr "Gambar salajengna"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Euweuh aturan aksés. Tambahan aturan pikeun ngatur saha nu bisa ngakses sumber ieu."
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "No apps could be updated."
 msgstr "Teu aya app nu bisa diropéa."
 
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:371
 msgid "No apps installed"
 msgstr "Teu aya app nu dipasang"
 
@@ -922,11 +943,11 @@ msgstr "Euweuh kelas dikonfigurasi."
 msgid "No connected accounts"
 msgstr "Teu aya akun nu kasambung"
 
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:466
 msgid "No description"
 msgstr "Euweuh pedaran"
 
-#: src/features/apps/index.tsx:384
+#: src/features/apps/index.tsx:404
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Teu aya app pamekaran cocog jeung \"{searchQuery}\""
 
@@ -934,20 +955,20 @@ msgstr "Teu aya app pamekaran cocog jeung \"{searchQuery}\""
 msgid "No groups available"
 msgstr "Teu aya grup"
 
-#: src/features/apps/index.tsx:477
+#: src/features/apps/index.tsx:497
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Teu aya app pikeun dipasang dina diréktori cocog jeung \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:378
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Teu aya app dipasang cocog jeung \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:496
 msgid "No matches in directory"
 msgstr "Teu aya nu cocog dina diréktori"
 
-#: src/features/apps/index.tsx:357
-#: src/features/apps/index.tsx:383
+#: src/features/apps/index.tsx:377
+#: src/features/apps/index.tsx:403
 msgid "No matching apps"
 msgstr "Teu aya app cocog"
 
@@ -955,11 +976,11 @@ msgstr "Teu aya app cocog"
 msgid "No paths configured."
 msgstr "Euweuh path dikonfigurasi."
 
-#: src/routes/_authenticated/app/$appId.tsx:569
+#: src/routes/_authenticated/app/$appId.tsx:574
 msgid "No permissions granted"
 msgstr "Teu aya idin nu dibikeun"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "No permissions granted to this app"
 msgstr "Teu aya idin nu dibikeun ka app ieu"
 
@@ -971,7 +992,7 @@ msgstr "Teu manggih tempat"
 msgid "No profile"
 msgstr "Euweuh profil"
 
-#: src/features/apps/index.tsx:429
+#: src/features/apps/index.tsx:449
 msgid "No recommendations available"
 msgstr "Teu aya rekomendasi"
 
@@ -992,7 +1013,7 @@ msgstr "Teu manggih zona waktu."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Tacan aya catetan topik — coba deui sanggeus bewara salajengna."
 
-#: src/features/apps/index.tsx:205
+#: src/features/apps/index.tsx:217
 msgid "No unused versions to clean up"
 msgstr "Teu aya versi anu teu kapaké pikeun dipupus"
 
@@ -1014,7 +1035,7 @@ msgstr "Normal"
 msgid "Not set"
 msgstr "Teu disetel"
 
-#: src/routes/_authenticated/app/$appId.tsx:342
+#: src/routes/_authenticated/app/$appId.tsx:344
 msgid "Not versioned"
 msgstr "Teu dibuat versi"
 
@@ -1035,8 +1056,8 @@ msgstr "Aduh! Kaca Teu Kapanggih!"
 msgid "Open account actions"
 msgstr "Buka aksi akun"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Buka aksi"
 
@@ -1075,7 +1096,7 @@ msgstr "Pamariksaan konci akses gagal. Mangga cobian deui."
 msgid "Passkeys"
 msgstr "Passkey"
 
-#: src/features/apps/index.tsx:557
+#: src/features/apps/index.tsx:577
 msgid "Paste the install link:"
 msgstr "Témpél tautan pamasangan:"
 
@@ -1092,15 +1113,15 @@ msgstr "Path routing"
 msgid "Paths"
 msgstr "Paths"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:472
 msgid "Permission granted"
 msgstr "Idin dibikeun"
 
-#: src/routes/_authenticated/app/$appId.tsx:450
+#: src/routes/_authenticated/app/$appId.tsx:453
 msgid "Permission revoked"
 msgstr "Idin dicabut"
 
-#: src/routes/_authenticated/app/$appId.tsx:502
+#: src/routes/_authenticated/app/$appId.tsx:507
 msgid "Permissions"
 msgstr "Idin"
 
@@ -1108,15 +1129,15 @@ msgstr "Idin"
 msgid "Please check your internet connection and try again."
 msgstr "Mangga pariksa sambungan internet anjeun teras cobian deui."
 
-#: src/features/apps/index.tsx:140
+#: src/features/apps/index.tsx:147
 msgid "Please enter an app ID"
 msgstr "Mangga asupkeun ID app"
 
-#: src/features/routing/use-routing-data.ts:27
+#: src/features/routing/use-routing-data.ts:32
 msgid "Preference updated"
 msgstr "Préferénsi diropéa"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Preferred Version"
 msgstr "Versi Pikaresepeun"
 
@@ -1153,7 +1174,7 @@ msgstr "Daptarkeun deui konci akses anjeun dina ieu server"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:219
 #: ../../../lib/web/src/components/search-entity-page.tsx:194
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:425
 msgid "Recommended"
 msgstr "Direkomendasikeun"
 
@@ -1193,9 +1214,9 @@ msgstr "Cabut aksés?"
 msgid "Remove interest"
 msgstr "Cabut minat"
 
-#. placeholder {0}: data.removed
-#. placeholder {1}: data.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:207
+#. placeholder {0}: result.removed
+#. placeholder {1}: result.removed === 1 ? '' : 's'
+#: src/features/apps/index.tsx:220
 msgid "Removed {0} unused version{1}"
 msgstr "Dicabut {0} versi nu teu dipaké{1}"
 
@@ -1212,18 +1233,22 @@ msgstr "Reset"
 msgid "Reset all settings to default values"
 msgstr "Setel ulang sakabéh setélan ka nilai baku"
 
-#: src/routes/_authenticated/app/$appId.tsx:623
-#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:628
+#: src/routes/_authenticated/app/$appId.tsx:631
 msgid "Revoke"
 msgstr "Cabut"
 
-#: src/routes/_authenticated/app/$appId.tsx:633
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission"
 msgstr "Cabut idin"
 
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission?"
 msgstr "Cabut idin?"
+
+#: src/routes/_authenticated/app/$appId.tsx:452
+msgid "Revoking permission..."
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:361
 msgid "Right to Left"
@@ -1242,11 +1267,18 @@ msgstr "Saptu"
 msgid "Save"
 msgstr "Simpen"
 
-#: src/features/apps/index.tsx:324
+#: src/features/routing/use-routing-data.ts:31
+#: src/features/routing/use-routing-data.ts:50
+#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:322
+msgid "Saving..."
+msgstr ""
+
+#: src/features/apps/index.tsx:344
 msgid "Search apps"
 msgstr "Paluruh app"
 
-#: src/features/apps/index.tsx:323
+#: src/features/apps/index.tsx:343
 msgid "Search apps..."
 msgstr "Paluruh app..."
 
@@ -1280,7 +1312,7 @@ msgstr "Paluruh..."
 msgid "Searching..."
 msgstr "Maluruh..."
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Select a capability to grant to {appName}."
 msgstr "Pilih kamampuhan pikeun dibikeun ka {appName}."
 
@@ -1316,7 +1348,7 @@ msgstr "Pilih arah situs"
 msgid "Select theme preference"
 msgstr "Pilih préferénsi téma"
 
-#: src/routes/_authenticated/app/$appId.tsx:396
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Select which version of this app to use"
 msgstr "Pilih versi app ieu nu rék dipaké"
 
@@ -1429,11 +1461,11 @@ msgstr "Sistem"
 msgid "System default"
 msgstr "Standar sistem"
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "System Default"
 msgstr "Standar Sistem"
 
-#: src/features/routing/use-routing-data.ts:41
+#: src/features/routing/use-routing-data.ts:51
 msgid "System default updated"
 msgstr "Standar sistem diapdet"
 
@@ -1465,14 +1497,14 @@ msgstr "Kode éta salah atawa parantos kadaluwarsa."
 
 #: src/features/apps/index.tsx:124
 #: src/features/apps/index.tsx:231
-msgid "The app has been installed successfully."
-msgstr "App tos hasil dipasang."
+#~ msgid "The app has been installed successfully."
+#~ msgstr "App tos hasil dipasang."
 
 #: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "App nu dipenta teu kapendak."
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "The version used by users who haven't made a choice"
 msgstr "Versi nu dipaké ku pamaké nu can milih"
 
@@ -1484,7 +1516,7 @@ msgstr "Téma"
 msgid "Theme Settings"
 msgstr "Setélan Téma"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:345
 msgid "This app does not have version management"
 msgstr "App ieu teu boga manajemén versi"
 
@@ -1493,7 +1525,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "App ieu dipasang langsung ti panerbitna sarta tacan ditaliti. Bisa jadi malware."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:632
+#: src/routes/_authenticated/app/$appId.tsx:637
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Ieu bakal nyabut idin \"{0}\" ti {appName}. App bisa jadi eureun bener."
 
@@ -1510,10 +1542,10 @@ msgstr "Toggle kolom"
 msgid "Toggle right panel"
 msgstr "Ganti panel katuhu"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Toggle bagian"
 
@@ -1536,8 +1568,8 @@ msgstr "Toggle téma"
 msgid "Top"
 msgstr "Luhur"
 
-#: src/features/apps/index.tsx:694
-#: src/routes/_authenticated/app/$appId.tsx:362
+#: src/features/apps/index.tsx:714
+#: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Track"
 msgstr "Lacak"
 
@@ -1576,7 +1608,7 @@ msgstr "Ketik pikeun néangan..."
 msgid "Unable to connect to remote server"
 msgstr "Teu tiasa nyambung ka server jarak jauh"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:444
 msgid "Unable to connect to the recommendations service"
 msgstr "Teu tiasa nyambungkeun ka layanan rékoméndasi"
 
@@ -1601,7 +1633,7 @@ msgstr "Teu ditugaskeun"
 msgid "Unauthorized Access"
 msgstr "Aksés Teu Diidinan"
 
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:443
 msgid "Unavailable"
 msgstr "Teu sayogi"
 
@@ -1613,19 +1645,19 @@ msgstr "Amérika Serikat"
 msgid "Unverified"
 msgstr "Tacan diverifikasi"
 
-#: src/features/apps/index.tsx:690
+#: src/features/apps/index.tsx:710
 msgid "Update"
 msgstr "Apdet"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Update all"
 msgstr "Apdet sadayana"
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "Update failed"
 msgstr "Apdet gagal"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Updating..."
 msgstr "Ngapdet..."
 
@@ -1663,7 +1695,7 @@ msgstr "Verifikasi"
 msgid "Verify email address"
 msgstr "Verifikasi alamat email"
 
-#: src/routes/_authenticated/app/$appId.tsx:376
+#: src/routes/_authenticated/app/$appId.tsx:378
 msgid "Version"
 msgstr "Versi"
 
@@ -1672,11 +1704,11 @@ msgstr "Versi"
 msgid "Version {0}"
 msgstr "Versi {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:302
 msgid "Version changed"
 msgstr "Versi diganti"
 
-#: src/routes/_authenticated/app/$appId.tsx:395
+#: src/routes/_authenticated/app/$appId.tsx:397
 msgid "Version Management"
 msgstr "Manajemén Versi"
 
@@ -1713,7 +1745,7 @@ msgstr "Rebo"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Akun anjeun dipindahkeun ka dieu ti {source}. Dugi ka anjeun mupus éta di ditu, pesen jeung béwara tiasa dugi ka dua server, sababaraha konten anjeun tetep disajikan ti server lami, sareng pangéntép tiasa butuh sababaraha menit pikeun mendakan anjeun di dieu."
 
-#: src/routes/_authenticated/app/$appId.tsx:416
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "Your personal version override"
 msgstr "Override versi pribadi anjeun"
 
@@ -1721,6 +1753,6 @@ msgstr "Override versi pribadi anjeun"
 msgid "Your preference"
 msgstr "Préferénsi anjeun"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Your Version"
 msgstr "Versi Anjeun"

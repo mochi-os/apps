@@ -19,23 +19,23 @@ msgid "{0} (development)"
 msgstr "{0} (kehitys)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:194
+#: src/features/apps/index.tsx:202
 msgid "{0} updated, {failed} failed"
 msgstr "{0} päivitetty, {failed} epäonnistui"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:149
-#: src/features/apps/index.tsx:171
+#: src/features/apps/index.tsx:157
+#: src/features/apps/index.tsx:177
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} on asennettu."
 
-#: src/routes/_authenticated/app/$appId.tsx:367
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "{track} (default, version {version})"
 msgstr "{track} (oletus, versio {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:368
+#: src/routes/_authenticated/app/$appId.tsx:370
 msgid "{track} (version {version})"
 msgstr "{track} (versio {version})"
 
@@ -108,7 +108,7 @@ msgstr "Lisää tunniste..."
 msgid "Add team/app"
 msgstr "Lisää tiimi/sovellus"
 
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:626
 msgid "Add to directory"
 msgstr "Lisää hakemistoon"
 
@@ -133,7 +133,7 @@ msgstr "Tekoäly"
 msgid "All"
 msgstr "Kaikki"
 
-#: src/features/apps/index.tsx:190
+#: src/features/apps/index.tsx:198
 msgid "All apps updated"
 msgstr "Kaikki sovellukset päivitetty"
 
@@ -145,13 +145,13 @@ msgstr "Tapahtui virhe"
 msgid "An unexpected error occurred"
 msgstr "Tapahtui odottamaton virhe"
 
-#: src/features/apps/index.tsx:149
+#: src/features/apps/index.tsx:157
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Sovellus"
 
-#: src/features/apps/index.tsx:259
-#: src/features/apps/index.tsx:269
+#: src/features/apps/index.tsx:279
+#: src/features/apps/index.tsx:289
 msgid "App actions"
 msgstr "Sovelluksen toiminnot"
 
@@ -167,8 +167,13 @@ msgstr "Sovelluksen tiedot ja asetukset"
 #: src/features/apps/index.tsx:148
 #: src/features/apps/index.tsx:170
 #: src/features/apps/index.tsx:230
-msgid "App installed"
-msgstr "Sovellus asennettu"
+#~ msgid "App installed"
+#~ msgstr "Sovellus asennettu"
+
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:249
+msgid "App installed successfully"
+msgstr ""
 
 #: src/routes/_authenticated/app/$appId.tsx:126
 #: src/routes/_authenticated/app/$appId.tsx:130
@@ -181,8 +186,8 @@ msgstr "Sovelluksen tunnus"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:62
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:63
+#: src/features/apps/index.tsx:330
 msgid "Apps"
 msgstr "Sovellukset"
 
@@ -211,7 +216,7 @@ msgstr "Saatavilla oleva versio:"
 msgid "Available versions:"
 msgstr "Saatavilla olevat versiot:"
 
-#: src/features/apps/index.tsx:404
+#: src/features/apps/index.tsx:424
 msgid "Available, but not installed"
 msgstr "Saatavilla, mutta ei asennettu"
 
@@ -247,10 +252,10 @@ msgstr "Korosta kiinnostusta"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:108
-#: src/features/apps/index.tsx:528
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:618
-#: src/routes/_authenticated/app/$appId.tsx:546
+#: src/features/apps/index.tsx:548
+#: src/features/apps/index.tsx:589
+#: src/features/apps/index.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:551
 msgid "Cancel"
 msgstr "Peruuta"
 
@@ -297,11 +302,12 @@ msgstr "Luokan reititys"
 msgid "Classes"
 msgstr "Luokat"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:319
 msgid "Clean up unused versions"
 msgstr "Siivoa käyttämättömät versiot"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:319
 msgid "Cleaning up..."
 msgstr "Siivotaan..."
 
@@ -354,8 +360,8 @@ msgstr "Sulje haku"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Collapse"
 msgstr "Tiivistä"
 
@@ -413,7 +419,10 @@ msgstr "Jatka käyttäen palvelua {label}"
 msgid "Copy"
 msgstr "Kopioi"
 
-#: src/features/apps/index.tsx:156
+#: src/features/apps/index.tsx:130
+#: src/features/apps/index.tsx:158
+#: src/features/apps/index.tsx:178
+#: src/features/apps/index.tsx:250
 msgid "Could not install app."
 msgstr "Sovelluksen asentaminen ei onnistunut."
 
@@ -468,24 +477,24 @@ msgstr "Oletus"
 msgid "Default AI account"
 msgstr "Oletustekoälytili"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:427
 msgid "Default for all users"
 msgstr "Oletus kaikille käyttäjille"
 
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:426
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Oletus kaikille käyttäjille (versio {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:321
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Default for all users updated"
 msgstr "Kaikkien käyttäjien oletus päivitetty"
 
-#: src/routes/_authenticated/app/$appId.tsx:408
+#: src/routes/_authenticated/app/$appId.tsx:410
 msgid "Default track"
 msgstr "Oletusraita"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:407
+#: src/routes/_authenticated/app/$appId.tsx:409
 msgid "Default track (version {0})"
 msgstr "Oletusraita (versio {0})"
 
@@ -516,7 +525,7 @@ msgstr "Tietopaneeli"
 msgid "Detect from web browser"
 msgstr "Tunnista selaimesta"
 
-#: src/features/apps/index.tsx:379
+#: src/features/apps/index.tsx:399
 msgid "Development apps"
 msgstr "Kehityssovellukset"
 
@@ -568,8 +577,8 @@ msgstr "Entiteetti:"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Expand"
 msgstr "Laajenna"
 
@@ -585,7 +594,11 @@ msgstr "Erittäin suuri"
 msgid "Failed to add account"
 msgstr "Tilin lisääminen epäonnistui"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/features/apps/index.tsx:214
+msgid "Failed to clean up apps"
+msgstr ""
+
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Failed to grant permission"
 msgstr "Käyttöoikeuden myöntäminen epäonnistui"
 
@@ -593,7 +606,7 @@ msgstr "Käyttöoikeuden myöntäminen epäonnistui"
 msgid "Failed to remove account"
 msgstr "Tilin poisto epäonnistui"
 
-#: src/routes/_authenticated/app/$appId.tsx:454
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Failed to revoke permission"
 msgstr "Käyttöoikeuden peruutus epäonnistui"
 
@@ -609,16 +622,16 @@ msgstr "Kategorian päivitys epäonnistui"
 msgid "Failed to update default"
 msgstr "Oletuksen päivitys epäonnistui"
 
-#: src/features/routing/use-routing-data.ts:30
-#: src/routes/_authenticated/app/$appId.tsx:304
+#: src/features/routing/use-routing-data.ts:33
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Failed to update preference"
 msgstr "Asetuksen päivitys epäonnistui"
 
-#: src/features/routing/use-routing-data.ts:44
+#: src/features/routing/use-routing-data.ts:53
 msgid "Failed to update system default"
 msgstr "Järjestelmän oletuksen päivitys epäonnistui"
 
-#: src/features/apps/index.tsx:599
+#: src/features/apps/index.tsx:619
 msgid "File:"
 msgstr "Tiedosto:"
 
@@ -652,7 +665,7 @@ msgstr "Perjantai"
 msgid "From"
 msgstr "Lähettäjä"
 
-#: src/features/apps/index.tsx:459
+#: src/features/apps/index.tsx:479
 msgid "From the directory"
 msgstr "Hakemistosta"
 
@@ -695,17 +708,21 @@ msgstr "Siirry sivulle {pageNumber}"
 msgid "Go to previous page"
 msgstr "Siirry edelliselle sivulle"
 
-#: src/routes/_authenticated/app/$appId.tsx:510
+#: src/routes/_authenticated/app/$appId.tsx:515
 msgid "Grant"
 msgstr "Myönnä"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:520
 msgid "Grant permission"
 msgstr "Myönnä käyttöoikeus"
 
-#: src/routes/_authenticated/app/$appId.tsx:570
+#: src/routes/_authenticated/app/$appId.tsx:575
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Myönnä käyttöoikeudet, jotta tämä sovellus voi käyttää järjestelmän ominaisuuksia"
+
+#: src/routes/_authenticated/app/$appId.tsx:471
+msgid "Granting permission..."
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
@@ -752,44 +769,48 @@ msgstr "Sisennetty"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Install"
 msgstr "Asenna"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:519
+#: src/features/apps/index.tsx:539
 msgid "Install {0}?"
 msgstr "Asennetaanko {0}?"
 
-#: src/features/apps/index.tsx:352
+#: src/features/apps/index.tsx:372
 msgid "Install apps from the market or upload your own"
 msgstr "Asenna sovelluksia markkinoilta tai lähetä omasi"
 
 #: src/features/apps/index.tsx:155
-msgid "Install failed"
-msgstr "Asennus epäonnistui"
+#~ msgid "Install failed"
+#~ msgstr "Asennus epäonnistui"
 
-#: src/features/apps/index.tsx:291
-#: src/features/apps/index.tsx:595
+#: src/features/apps/index.tsx:311
+#: src/features/apps/index.tsx:615
 msgid "Install from file"
 msgstr "Asenna tiedostosta"
 
-#: src/features/apps/index.tsx:287
-#: src/features/apps/index.tsx:553
+#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:573
 msgid "Install from publisher"
 msgstr "Asenna julkaisijalta"
 
-#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:355
 msgid "Installed apps"
 msgstr "Asennetut sovellukset"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:128
+#: src/features/apps/index.tsx:155
+#: src/features/apps/index.tsx:175
+#: src/features/apps/index.tsx:248
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Installing..."
 msgstr "Asennetaan..."
 
@@ -859,7 +880,7 @@ msgstr "Uloskirjautuminen onnistui"
 msgid "Logging out…"
 msgstr "Kirjaudutaan ulos…"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Manage capabilities granted to this application"
 msgstr "Hallitse tälle sovellukselle myönnettyjä oikeuksia"
 
@@ -906,11 +927,11 @@ msgstr "Seuraava kuva"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Käyttöoikeussääntöjä ei ole määritetty. Lisää sääntöjä hallitaksesi, kuka voi käyttää tätä resurssia."
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "No apps could be updated."
 msgstr "Yhtään sovellusta ei voitu päivittää."
 
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:371
 msgid "No apps installed"
 msgstr "Ei asennettuja sovelluksia"
 
@@ -922,11 +943,11 @@ msgstr "Luokkia ei ole määritetty."
 msgid "No connected accounts"
 msgstr "Ei yhdistettyjä tilejä"
 
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:466
 msgid "No description"
 msgstr "Ei kuvausta"
 
-#: src/features/apps/index.tsx:384
+#: src/features/apps/index.tsx:404
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Ei kehityssovelluksia, jotka vastaavat hakua \"{searchQuery}\""
 
@@ -934,20 +955,20 @@ msgstr "Ei kehityssovelluksia, jotka vastaavat hakua \"{searchQuery}\""
 msgid "No groups available"
 msgstr "Ei saatavilla olevia ryhmiä"
 
-#: src/features/apps/index.tsx:477
+#: src/features/apps/index.tsx:497
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Ei asennettavissa olevia sovelluksia hakemistossa, jotka vastaavat hakua \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:378
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Ei asennettuja sovelluksia, jotka vastaavat hakua \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:496
 msgid "No matches in directory"
 msgstr "Ei osumia hakemistossa"
 
-#: src/features/apps/index.tsx:357
-#: src/features/apps/index.tsx:383
+#: src/features/apps/index.tsx:377
+#: src/features/apps/index.tsx:403
 msgid "No matching apps"
 msgstr "Ei vastaavia sovelluksia"
 
@@ -955,11 +976,11 @@ msgstr "Ei vastaavia sovelluksia"
 msgid "No paths configured."
 msgstr "Polkuja ei ole määritetty."
 
-#: src/routes/_authenticated/app/$appId.tsx:569
+#: src/routes/_authenticated/app/$appId.tsx:574
 msgid "No permissions granted"
 msgstr "Ei myönnettyjä käyttöoikeuksia"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "No permissions granted to this app"
 msgstr "Tälle sovellukselle ei ole myönnetty käyttöoikeuksia"
 
@@ -971,7 +992,7 @@ msgstr "Paikkoja ei löytynyt"
 msgid "No profile"
 msgstr "Ei profiilia"
 
-#: src/features/apps/index.tsx:429
+#: src/features/apps/index.tsx:449
 msgid "No recommendations available"
 msgstr "Ei saatavilla olevia suosituksia"
 
@@ -992,7 +1013,7 @@ msgstr "Aikavyöhykettä ei löytynyt."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Ei vielä aihetietoa — yritä uudelleen seuraavan ilmoituksen jälkeen."
 
-#: src/features/apps/index.tsx:205
+#: src/features/apps/index.tsx:217
 msgid "No unused versions to clean up"
 msgstr "Ei käyttämättömiä versioita siivottavaksi"
 
@@ -1014,7 +1035,7 @@ msgstr "Normaali"
 msgid "Not set"
 msgstr "Ei asetettu"
 
-#: src/routes/_authenticated/app/$appId.tsx:342
+#: src/routes/_authenticated/app/$appId.tsx:344
 msgid "Not versioned"
 msgstr "Ei versioitu"
 
@@ -1035,8 +1056,8 @@ msgstr "Hups! Sivua ei löytynyt!"
 msgid "Open account actions"
 msgstr "Avaa tilin toiminnot"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Avaa toiminnot"
 
@@ -1075,7 +1096,7 @@ msgstr "Avainkoodin vahvistus epäonnistui. Yritä uudelleen."
 msgid "Passkeys"
 msgstr "Avainkoodit"
 
-#: src/features/apps/index.tsx:557
+#: src/features/apps/index.tsx:577
 msgid "Paste the install link:"
 msgstr "Liitä asennuslinkki:"
 
@@ -1092,15 +1113,15 @@ msgstr "Polkureititys"
 msgid "Paths"
 msgstr "Polut"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:472
 msgid "Permission granted"
 msgstr "Käyttöoikeus myönnetty"
 
-#: src/routes/_authenticated/app/$appId.tsx:450
+#: src/routes/_authenticated/app/$appId.tsx:453
 msgid "Permission revoked"
 msgstr "Käyttöoikeus peruutettu"
 
-#: src/routes/_authenticated/app/$appId.tsx:502
+#: src/routes/_authenticated/app/$appId.tsx:507
 msgid "Permissions"
 msgstr "Käyttöoikeudet"
 
@@ -1108,15 +1129,15 @@ msgstr "Käyttöoikeudet"
 msgid "Please check your internet connection and try again."
 msgstr "Tarkista internetyhteytesi ja yritä uudelleen."
 
-#: src/features/apps/index.tsx:140
+#: src/features/apps/index.tsx:147
 msgid "Please enter an app ID"
 msgstr "Syötä sovelluksen tunnus"
 
-#: src/features/routing/use-routing-data.ts:27
+#: src/features/routing/use-routing-data.ts:32
 msgid "Preference updated"
 msgstr "Mieltymys päivitetty"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Preferred Version"
 msgstr "Ensisijainen versio"
 
@@ -1153,7 +1174,7 @@ msgstr "Rekisteröi pääsyavaimesi uudelleen tällä palvelimella"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:219
 #: ../../../lib/web/src/components/search-entity-page.tsx:194
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:425
 msgid "Recommended"
 msgstr "Suositeltu"
 
@@ -1193,9 +1214,9 @@ msgstr "Poistetaanko käyttöoikeus?"
 msgid "Remove interest"
 msgstr "Poista kiinnostus"
 
-#. placeholder {0}: data.removed
-#. placeholder {1}: data.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:207
+#. placeholder {0}: result.removed
+#. placeholder {1}: result.removed === 1 ? '' : 's'
+#: src/features/apps/index.tsx:220
 msgid "Removed {0} unused version{1}"
 msgstr "Poistettu {0} käyttämätöntä versiota{1}"
 
@@ -1212,18 +1233,22 @@ msgstr "Nollaa"
 msgid "Reset all settings to default values"
 msgstr "Palauta kaikki asetukset oletusarvoihin"
 
-#: src/routes/_authenticated/app/$appId.tsx:623
-#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:628
+#: src/routes/_authenticated/app/$appId.tsx:631
 msgid "Revoke"
 msgstr "Peruuta"
 
-#: src/routes/_authenticated/app/$appId.tsx:633
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission"
 msgstr "Peruuta käyttöoikeus"
 
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission?"
 msgstr "Peruutetaanko käyttöoikeus?"
+
+#: src/routes/_authenticated/app/$appId.tsx:452
+msgid "Revoking permission..."
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:361
 msgid "Right to Left"
@@ -1242,11 +1267,18 @@ msgstr "Lauantai"
 msgid "Save"
 msgstr "Tallenna"
 
-#: src/features/apps/index.tsx:324
+#: src/features/routing/use-routing-data.ts:31
+#: src/features/routing/use-routing-data.ts:50
+#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:322
+msgid "Saving..."
+msgstr ""
+
+#: src/features/apps/index.tsx:344
 msgid "Search apps"
 msgstr "Hae sovelluksia"
 
-#: src/features/apps/index.tsx:323
+#: src/features/apps/index.tsx:343
 msgid "Search apps..."
 msgstr "Hae sovelluksia..."
 
@@ -1280,7 +1312,7 @@ msgstr "Hae..."
 msgid "Searching..."
 msgstr "Haetaan..."
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Select a capability to grant to {appName}."
 msgstr "Valitse käyttöoikeus, joka myönnetään sovellukselle {appName}."
 
@@ -1316,7 +1348,7 @@ msgstr "Valitse sivuston suunta"
 msgid "Select theme preference"
 msgstr "Valitse teeman asetus"
 
-#: src/routes/_authenticated/app/$appId.tsx:396
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Select which version of this app to use"
 msgstr "Valitse käytettävä sovelluksen versio"
 
@@ -1429,11 +1461,11 @@ msgstr "Järjestelmä"
 msgid "System default"
 msgstr "Järjestelmän oletus"
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "System Default"
 msgstr "Järjestelmän oletus"
 
-#: src/features/routing/use-routing-data.ts:41
+#: src/features/routing/use-routing-data.ts:51
 msgid "System default updated"
 msgstr "Järjestelmän oletus päivitetty"
 
@@ -1465,14 +1497,14 @@ msgstr "Koodi on virheellinen tai vanhentunut."
 
 #: src/features/apps/index.tsx:124
 #: src/features/apps/index.tsx:231
-msgid "The app has been installed successfully."
-msgstr "Sovellus on asennettu onnistuneesti."
+#~ msgid "The app has been installed successfully."
+#~ msgstr "Sovellus on asennettu onnistuneesti."
 
 #: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "Pyydettyä sovellusta ei löytynyt."
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "The version used by users who haven't made a choice"
 msgstr "Versio, jota käyttävät käyttäjät, jotka eivät ole tehneet valintaa"
 
@@ -1484,7 +1516,7 @@ msgstr "Teema"
 msgid "Theme Settings"
 msgstr "Teema-asetukset"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:345
 msgid "This app does not have version management"
 msgstr "Tällä sovelluksella ei ole versionhallintaa"
 
@@ -1493,7 +1525,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Tämä sovellus asennetaan suoraan sen julkaisijalta, eikä sitä ole tarkistettu. Se voi olla haittaohjelma."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:632
+#: src/routes/_authenticated/app/$appId.tsx:637
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Tämä peruuttaa käyttöoikeuden \"{0}\" sovellukselta {appName}. Sovellus saattaa lakata toimimasta oikein."
 
@@ -1510,10 +1542,10 @@ msgstr "Vaihda sarakkeet"
 msgid "Toggle right panel"
 msgstr "Vaihda oikeaa paneelia"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Näytä tai piilota osio"
 
@@ -1536,8 +1568,8 @@ msgstr "Vaihda teema"
 msgid "Top"
 msgstr "Ylin"
 
-#: src/features/apps/index.tsx:694
-#: src/routes/_authenticated/app/$appId.tsx:362
+#: src/features/apps/index.tsx:714
+#: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Track"
 msgstr "Seuraa"
 
@@ -1576,7 +1608,7 @@ msgstr "Kirjoita hakeaksesi..."
 msgid "Unable to connect to remote server"
 msgstr "Etäpalvelimeen ei saatu yhteyttä"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:444
 msgid "Unable to connect to the recommendations service"
 msgstr "Suosituspalveluun ei saada yhteyttä"
 
@@ -1601,7 +1633,7 @@ msgstr "Ei määritetty"
 msgid "Unauthorized Access"
 msgstr "Pääsy ei sallittu"
 
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:443
 msgid "Unavailable"
 msgstr "Ei saatavilla"
 
@@ -1613,19 +1645,19 @@ msgstr "Yhdysvallat"
 msgid "Unverified"
 msgstr "Vahvistamaton"
 
-#: src/features/apps/index.tsx:690
+#: src/features/apps/index.tsx:710
 msgid "Update"
 msgstr "Päivitä"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Update all"
 msgstr "Päivitä kaikki"
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "Update failed"
 msgstr "Päivitys epäonnistui"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Updating..."
 msgstr "Päivitetään..."
 
@@ -1663,7 +1695,7 @@ msgstr "Vahvista"
 msgid "Verify email address"
 msgstr "Vahvista sähköpostiosoite"
 
-#: src/routes/_authenticated/app/$appId.tsx:376
+#: src/routes/_authenticated/app/$appId.tsx:378
 msgid "Version"
 msgstr "Versio"
 
@@ -1672,11 +1704,11 @@ msgstr "Versio"
 msgid "Version {0}"
 msgstr "Versio {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:302
 msgid "Version changed"
 msgstr "Versio vaihdettu"
 
-#: src/routes/_authenticated/app/$appId.tsx:395
+#: src/routes/_authenticated/app/$appId.tsx:397
 msgid "Version Management"
 msgstr "Versionhallinta"
 
@@ -1713,7 +1745,7 @@ msgstr "Keskiviikko"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Tilisi siirrettiin tänne kohteesta {source}. Kunnes poistat sen sieltä, viestit ja ilmoitukset voivat tavoittaa molemmat palvelimet, osa sisällöstäsi toimitetaan edelleen vanhalta palvelimelta ja seuraajillasi voi kestää muutama minuutti löytää sinut täältä."
 
-#: src/routes/_authenticated/app/$appId.tsx:416
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "Your personal version override"
 msgstr "Henkilökohtainen versio-ohitus"
 
@@ -1721,6 +1753,6 @@ msgstr "Henkilökohtainen versio-ohitus"
 msgid "Your preference"
 msgstr "Sinun mieltymyksesi"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Your Version"
 msgstr "Sinun versiosi"

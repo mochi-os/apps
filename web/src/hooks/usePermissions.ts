@@ -8,6 +8,8 @@ import type { AppPermissions, PermissionCatalog } from '@/api/types/apps'
 import endpoints from '@/api/endpoints'
 import { requestHelpers } from '@mochi/web'
 
+const NO_TOAST = { mochi: { showGlobalErrorToast: false } } as const
+
 export function useAppPermissions(appId: string | null) {
   return useQuery({
     queryKey: ['app-permissions', appId],
@@ -34,11 +36,15 @@ export function useSetPermission() {
   const queryClient = useQueryClient()
   return useMutation({
     mutationFn: (data: { app: string; permission: string; enabled: boolean }) =>
-      requestHelpers.post(endpoints.permissions.set, {
-        app: data.app,
-        permission: data.permission,
-        enabled: data.enabled.toString(),
-      }),
+      requestHelpers.post(
+        endpoints.permissions.set,
+        {
+          app: data.app,
+          permission: data.permission,
+          enabled: data.enabled.toString(),
+        },
+        NO_TOAST
+      ),
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['app-permissions', variables.app] })
     },

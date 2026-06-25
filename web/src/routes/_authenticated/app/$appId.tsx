@@ -24,7 +24,7 @@ import {
   Skeleton,
   usePageTitle,
   getErrorMessage,
-  toast,
+  toastAction,
   Section,
   FieldRow,
   DataChip,
@@ -287,44 +287,46 @@ function VersionsTab({ appId }: { appId: string }) {
     return ''
   })()
 
-  const handleUserVersionChange = (value: string) => {
+  const handleUserVersionChange = async (value: string) => {
     const parsed = parseVersionValue(value)
     const { track } = parsed
     let { version } = parsed
     if (track && versionData?.tracks?.[track]) {
       version = versionData.tracks[track]
     }
-    setUserVersion.mutate(
-      { app: appId, version, track },
-      {
-        onSuccess: () => {
-          toast.success(t`Version changed`)
-        },
-        onError: (error) => {
-          toast.error(getErrorMessage(error, t`Failed to update preference`))
-        },
-      }
-    )
+    try {
+      await toastAction(
+        setUserVersion.mutateAsync({ app: appId, version, track }),
+        {
+          loading: t`Saving...`,
+          success: t`Version changed`,
+          error: (err) => getErrorMessage(err, t`Failed to update preference`),
+        }
+      )
+    } catch {
+      // toastAction already showed error
+    }
   }
 
-  const handleSystemVersionChange = (value: string) => {
+  const handleSystemVersionChange = async (value: string) => {
     const parsed = parseVersionValue(value)
     const { track } = parsed
     let { version } = parsed
     if (track && versionData?.tracks?.[track]) {
       version = versionData.tracks[track]
     }
-    setSystemVersion.mutate(
-      { app: appId, version, track },
-      {
-        onSuccess: () => {
-          toast.success(t`Default for all users updated`)
-        },
-        onError: (error) => {
-          toast.error(getErrorMessage(error, t`Failed to update default`))
-        },
-      }
-    )
+    try {
+      await toastAction(
+        setSystemVersion.mutateAsync({ app: appId, version, track }),
+        {
+          loading: t`Saving...`,
+          success: t`Default for all users updated`,
+          error: (err) => getErrorMessage(err, t`Failed to update default`),
+        }
+      )
+    } catch {
+      // toastAction already showed error
+    }
   }
 
   if (isLoadingVersions) {
@@ -441,39 +443,42 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
   const [revokingPermission, setRevokingPermission] = useState<string | null>(null)
   const [grantingPermission, setGrantingPermission] = useState<string | null>(null)
 
-  const handleRevoke = (permission: string) => {
+  const handleRevoke = async (permission: string) => {
     setRevokingPermission(permission)
-    setPermission.mutate(
-      { app: appId, permission, enabled: false },
-      {
-        onSuccess: () => {
-          toast.success(t`Permission revoked`)
-          setRevokingPermission(null)
-        },
-        onError: (error) => {
-          toast.error(getErrorMessage(error, t`Failed to revoke permission`))
-          setRevokingPermission(null)
-        },
-      }
-    )
+    try {
+      await toastAction(
+        setPermission.mutateAsync({ app: appId, permission, enabled: false }),
+        {
+          loading: t`Revoking permission...`,
+          success: t`Permission revoked`,
+          error: (err) =>
+            getErrorMessage(err, t`Failed to revoke permission`),
+        }
+      )
+    } catch {
+      // toastAction already showed error
+    } finally {
+      setRevokingPermission(null)
+    }
   }
 
-  const handleGrant = (permission: string) => {
+  const handleGrant = async (permission: string) => {
     setGrantingPermission(permission)
-    setPermission.mutate(
-      { app: appId, permission, enabled: true },
-      {
-        onSuccess: () => {
-          toast.success(t`Permission granted`)
-          setGrantingPermission(null)
-          setGrantDialogOpen(false)
-        },
-        onError: (error) => {
-          toast.error(getErrorMessage(error, t`Failed to grant permission`))
-          setGrantingPermission(null)
-        },
-      }
-    )
+    try {
+      await toastAction(
+        setPermission.mutateAsync({ app: appId, permission, enabled: true }),
+        {
+          loading: t`Granting permission...`,
+          success: t`Permission granted`,
+          error: (err) => getErrorMessage(err, t`Failed to grant permission`),
+        }
+      )
+      setGrantDialogOpen(false)
+    } catch {
+      // toastAction already showed error
+    } finally {
+      setGrantingPermission(null)
+    }
   }
 
   if (error) {

@@ -19,23 +19,23 @@ msgid "{0} (development)"
 msgstr "{0} (geliştirme)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:194
+#: src/features/apps/index.tsx:202
 msgid "{0} updated, {failed} failed"
 msgstr "{0} güncellendi, {failed} başarısız"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:149
-#: src/features/apps/index.tsx:171
+#: src/features/apps/index.tsx:157
+#: src/features/apps/index.tsx:177
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} yüklendi."
 
-#: src/routes/_authenticated/app/$appId.tsx:367
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "{track} (default, version {version})"
 msgstr "{track} (varsayılan, sürüm {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:368
+#: src/routes/_authenticated/app/$appId.tsx:370
 msgid "{track} (version {version})"
 msgstr "{track} (sürüm {version})"
 
@@ -108,7 +108,7 @@ msgstr "Etiket ekle..."
 msgid "Add team/app"
 msgstr "Takım/uygulama ekle"
 
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:626
 msgid "Add to directory"
 msgstr "Dizine ekle"
 
@@ -133,7 +133,7 @@ msgstr "AI"
 msgid "All"
 msgstr "Tümü"
 
-#: src/features/apps/index.tsx:190
+#: src/features/apps/index.tsx:198
 msgid "All apps updated"
 msgstr "Tüm uygulamalar güncellendi"
 
@@ -145,13 +145,13 @@ msgstr "Bir hata oluştu"
 msgid "An unexpected error occurred"
 msgstr "Beklenmeyen bir hata oluştu"
 
-#: src/features/apps/index.tsx:149
+#: src/features/apps/index.tsx:157
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Uygulama"
 
-#: src/features/apps/index.tsx:259
-#: src/features/apps/index.tsx:269
+#: src/features/apps/index.tsx:279
+#: src/features/apps/index.tsx:289
 msgid "App actions"
 msgstr "Uygulama eylemleri"
 
@@ -167,8 +167,13 @@ msgstr "Uygulama bilgileri ve yapılandırması"
 #: src/features/apps/index.tsx:148
 #: src/features/apps/index.tsx:170
 #: src/features/apps/index.tsx:230
-msgid "App installed"
-msgstr "Uygulama yüklendi"
+#~ msgid "App installed"
+#~ msgstr "Uygulama yüklendi"
+
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:249
+msgid "App installed successfully"
+msgstr ""
 
 #: src/routes/_authenticated/app/$appId.tsx:126
 #: src/routes/_authenticated/app/$appId.tsx:130
@@ -181,8 +186,8 @@ msgstr "Uygulama kimliği"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:62
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:63
+#: src/features/apps/index.tsx:330
 msgid "Apps"
 msgstr "Uygulamalar"
 
@@ -211,7 +216,7 @@ msgstr "Mevcut sürüm:"
 msgid "Available versions:"
 msgstr "Mevcut sürümler:"
 
-#: src/features/apps/index.tsx:404
+#: src/features/apps/index.tsx:424
 msgid "Available, but not installed"
 msgstr "Mevcut, ancak yüklenmedi"
 
@@ -247,10 +252,10 @@ msgstr "İlgiyi artır"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:108
-#: src/features/apps/index.tsx:528
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:618
-#: src/routes/_authenticated/app/$appId.tsx:546
+#: src/features/apps/index.tsx:548
+#: src/features/apps/index.tsx:589
+#: src/features/apps/index.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:551
 msgid "Cancel"
 msgstr "İptal"
 
@@ -297,11 +302,12 @@ msgstr "Sınıf yönlendirmesi"
 msgid "Classes"
 msgstr "Sınıflar"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:319
 msgid "Clean up unused versions"
 msgstr "Kullanılmayan sürümleri temizle"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:319
 msgid "Cleaning up..."
 msgstr "Temizleniyor..."
 
@@ -354,8 +360,8 @@ msgstr "Aramayı kapat"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Collapse"
 msgstr "Daralt"
 
@@ -413,7 +419,10 @@ msgstr "{label} ile devam et"
 msgid "Copy"
 msgstr "Kopyala"
 
-#: src/features/apps/index.tsx:156
+#: src/features/apps/index.tsx:130
+#: src/features/apps/index.tsx:158
+#: src/features/apps/index.tsx:178
+#: src/features/apps/index.tsx:250
 msgid "Could not install app."
 msgstr "Uygulama yüklenemedi."
 
@@ -468,24 +477,24 @@ msgstr "Varsayılan"
 msgid "Default AI account"
 msgstr "Varsayılan AI hesabı"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:427
 msgid "Default for all users"
 msgstr "Tüm kullanıcılar için varsayılan"
 
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:426
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Tüm kullanıcılar için varsayılan (sürüm {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:321
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Default for all users updated"
 msgstr "Tüm kullanıcılar için varsayılan güncellendi"
 
-#: src/routes/_authenticated/app/$appId.tsx:408
+#: src/routes/_authenticated/app/$appId.tsx:410
 msgid "Default track"
 msgstr "Varsayılan track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:407
+#: src/routes/_authenticated/app/$appId.tsx:409
 msgid "Default track (version {0})"
 msgstr "Varsayılan track (sürüm {0})"
 
@@ -516,7 +525,7 @@ msgstr "Ayrıntılar paneli"
 msgid "Detect from web browser"
 msgstr "Web tarayıcıdan algıla"
 
-#: src/features/apps/index.tsx:379
+#: src/features/apps/index.tsx:399
 msgid "Development apps"
 msgstr "Geliştirme uygulamaları"
 
@@ -568,8 +577,8 @@ msgstr "Varlık:"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Expand"
 msgstr "Genişlet"
 
@@ -585,7 +594,11 @@ msgstr "Çok büyük"
 msgid "Failed to add account"
 msgstr "Hesap eklenemedi"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/features/apps/index.tsx:214
+msgid "Failed to clean up apps"
+msgstr ""
+
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Failed to grant permission"
 msgstr "İzin verilemedi"
 
@@ -593,7 +606,7 @@ msgstr "İzin verilemedi"
 msgid "Failed to remove account"
 msgstr "Hesap kaldırılamadı"
 
-#: src/routes/_authenticated/app/$appId.tsx:454
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Failed to revoke permission"
 msgstr "İzin iptal edilemedi"
 
@@ -609,16 +622,16 @@ msgstr "Kategori güncellenemedi"
 msgid "Failed to update default"
 msgstr "Varsayılan güncellenemedi"
 
-#: src/features/routing/use-routing-data.ts:30
-#: src/routes/_authenticated/app/$appId.tsx:304
+#: src/features/routing/use-routing-data.ts:33
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Failed to update preference"
 msgstr "Tercih güncellenemedi"
 
-#: src/features/routing/use-routing-data.ts:44
+#: src/features/routing/use-routing-data.ts:53
 msgid "Failed to update system default"
 msgstr "Sistem varsayılanı güncellenemedi"
 
-#: src/features/apps/index.tsx:599
+#: src/features/apps/index.tsx:619
 msgid "File:"
 msgstr "Dosya:"
 
@@ -652,7 +665,7 @@ msgstr "Cuma"
 msgid "From"
 msgstr "Kimden"
 
-#: src/features/apps/index.tsx:459
+#: src/features/apps/index.tsx:479
 msgid "From the directory"
 msgstr "Dizinden"
 
@@ -695,17 +708,21 @@ msgstr "{pageNumber}. sayfaya git"
 msgid "Go to previous page"
 msgstr "Önceki sayfaya git"
 
-#: src/routes/_authenticated/app/$appId.tsx:510
+#: src/routes/_authenticated/app/$appId.tsx:515
 msgid "Grant"
 msgstr "Ver"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:520
 msgid "Grant permission"
 msgstr "İzin ver"
 
-#: src/routes/_authenticated/app/$appId.tsx:570
+#: src/routes/_authenticated/app/$appId.tsx:575
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Bu uygulamanın sistem özelliklerine erişmesi için izin verin"
+
+#: src/routes/_authenticated/app/$appId.tsx:471
+msgid "Granting permission..."
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
@@ -752,44 +769,48 @@ msgstr "İç"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Install"
 msgstr "Yükle"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:519
+#: src/features/apps/index.tsx:539
 msgid "Install {0}?"
 msgstr "{0} yüklensin mi?"
 
-#: src/features/apps/index.tsx:352
+#: src/features/apps/index.tsx:372
 msgid "Install apps from the market or upload your own"
 msgstr "Pazardan uygulama yükleyin veya kendi uygulamanızı yükleyin"
 
 #: src/features/apps/index.tsx:155
-msgid "Install failed"
-msgstr "Yükleme başarısız"
+#~ msgid "Install failed"
+#~ msgstr "Yükleme başarısız"
 
-#: src/features/apps/index.tsx:291
-#: src/features/apps/index.tsx:595
+#: src/features/apps/index.tsx:311
+#: src/features/apps/index.tsx:615
 msgid "Install from file"
 msgstr "Dosyadan yükle"
 
-#: src/features/apps/index.tsx:287
-#: src/features/apps/index.tsx:553
+#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:573
 msgid "Install from publisher"
 msgstr "Yayımcıdan yükle"
 
-#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:355
 msgid "Installed apps"
 msgstr "Yüklü uygulamalar"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:128
+#: src/features/apps/index.tsx:155
+#: src/features/apps/index.tsx:175
+#: src/features/apps/index.tsx:248
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Installing..."
 msgstr "Yükleniyor..."
 
@@ -859,7 +880,7 @@ msgstr "Oturum başarıyla kapatıldı"
 msgid "Logging out…"
 msgstr "Oturum kapatılıyor…"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Manage capabilities granted to this application"
 msgstr "Bu uygulamaya verilen yetkileri yönetin"
 
@@ -906,11 +927,11 @@ msgstr "Sonraki görsel"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Erişim kuralı yapılandırılmamış. Bu kaynağa kimin erişebileceğini kontrol etmek için kural ekleyin."
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "No apps could be updated."
 msgstr "Hiçbir uygulama güncellenemedi."
 
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:371
 msgid "No apps installed"
 msgstr "Yüklü uygulama yok"
 
@@ -922,11 +943,11 @@ msgstr "Sınıf yapılandırılmamış."
 msgid "No connected accounts"
 msgstr "Bağlı hesap yok"
 
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:466
 msgid "No description"
 msgstr "Açıklama yok"
 
-#: src/features/apps/index.tsx:384
+#: src/features/apps/index.tsx:404
 msgid "No development apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" ile eşleşen geliştirme uygulaması yok"
 
@@ -934,20 +955,20 @@ msgstr "\"{searchQuery}\" ile eşleşen geliştirme uygulaması yok"
 msgid "No groups available"
 msgstr "Grup yok"
 
-#: src/features/apps/index.tsx:477
+#: src/features/apps/index.tsx:497
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Dizinde \"{searchQuery}\" ile eşleşen yüklenebilir uygulama yok"
 
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:378
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" ile eşleşen yüklü uygulama yok"
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:496
 msgid "No matches in directory"
 msgstr "Dizinde eşleşme yok"
 
-#: src/features/apps/index.tsx:357
-#: src/features/apps/index.tsx:383
+#: src/features/apps/index.tsx:377
+#: src/features/apps/index.tsx:403
 msgid "No matching apps"
 msgstr "Eşleşen uygulama yok"
 
@@ -955,11 +976,11 @@ msgstr "Eşleşen uygulama yok"
 msgid "No paths configured."
 msgstr "Yol yapılandırılmamış."
 
-#: src/routes/_authenticated/app/$appId.tsx:569
+#: src/routes/_authenticated/app/$appId.tsx:574
 msgid "No permissions granted"
 msgstr "İzin verilmedi"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "No permissions granted to this app"
 msgstr "Bu uygulamaya izin verilmedi"
 
@@ -971,7 +992,7 @@ msgstr "Yer bulunamadı"
 msgid "No profile"
 msgstr "Profil yok"
 
-#: src/features/apps/index.tsx:429
+#: src/features/apps/index.tsx:449
 msgid "No recommendations available"
 msgstr "Öneri yok"
 
@@ -992,7 +1013,7 @@ msgstr "Saat dilimi bulunamadı."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Henüz konu kaydı yok — bir sonraki bildirimden sonra tekrar deneyin."
 
-#: src/features/apps/index.tsx:205
+#: src/features/apps/index.tsx:217
 msgid "No unused versions to clean up"
 msgstr "Temizlenecek kullanılmayan sürüm yok"
 
@@ -1014,7 +1035,7 @@ msgstr "Normal"
 msgid "Not set"
 msgstr "Ayarlanmamış"
 
-#: src/routes/_authenticated/app/$appId.tsx:342
+#: src/routes/_authenticated/app/$appId.tsx:344
 msgid "Not versioned"
 msgstr "Sürümlenmemiş"
 
@@ -1035,8 +1056,8 @@ msgstr "Hata! Sayfa bulunamadı!"
 msgid "Open account actions"
 msgstr "Hesap eylemlerini aç"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "İşlemleri aç"
 
@@ -1075,7 +1096,7 @@ msgstr "Geçiş anahtarı doğrulaması başarısız oldu. Lütfen tekrar deneyi
 msgid "Passkeys"
 msgstr "Passkey'ler"
 
-#: src/features/apps/index.tsx:557
+#: src/features/apps/index.tsx:577
 msgid "Paste the install link:"
 msgstr "Yükleme bağlantısını yapıştırın:"
 
@@ -1092,15 +1113,15 @@ msgstr "Yol yönlendirmesi"
 msgid "Paths"
 msgstr "Yollar"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:472
 msgid "Permission granted"
 msgstr "İzin verildi"
 
-#: src/routes/_authenticated/app/$appId.tsx:450
+#: src/routes/_authenticated/app/$appId.tsx:453
 msgid "Permission revoked"
 msgstr "İzin iptal edildi"
 
-#: src/routes/_authenticated/app/$appId.tsx:502
+#: src/routes/_authenticated/app/$appId.tsx:507
 msgid "Permissions"
 msgstr "İzinler"
 
@@ -1108,15 +1129,15 @@ msgstr "İzinler"
 msgid "Please check your internet connection and try again."
 msgstr "Lütfen internet bağlantınızı kontrol edip tekrar deneyin."
 
-#: src/features/apps/index.tsx:140
+#: src/features/apps/index.tsx:147
 msgid "Please enter an app ID"
 msgstr "Lütfen bir uygulama kimliği girin"
 
-#: src/features/routing/use-routing-data.ts:27
+#: src/features/routing/use-routing-data.ts:32
 msgid "Preference updated"
 msgstr "Tercih güncellendi"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Preferred Version"
 msgstr "Tercih edilen sürüm"
 
@@ -1153,7 +1174,7 @@ msgstr "Bu sunucuda parola anahtarlarınızı yeniden kaydedin"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:219
 #: ../../../lib/web/src/components/search-entity-page.tsx:194
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:425
 msgid "Recommended"
 msgstr "Önerilen"
 
@@ -1193,9 +1214,9 @@ msgstr "Erişim kaldırılsın mı?"
 msgid "Remove interest"
 msgstr "İlgiyi kaldır"
 
-#. placeholder {0}: data.removed
-#. placeholder {1}: data.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:207
+#. placeholder {0}: result.removed
+#. placeholder {1}: result.removed === 1 ? '' : 's'
+#: src/features/apps/index.tsx:220
 msgid "Removed {0} unused version{1}"
 msgstr "{0} kullanılmayan sürüm{1} kaldırıldı"
 
@@ -1212,18 +1233,22 @@ msgstr "Sıfırla"
 msgid "Reset all settings to default values"
 msgstr "Tüm ayarları varsayılan değerlere sıfırla"
 
-#: src/routes/_authenticated/app/$appId.tsx:623
-#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:628
+#: src/routes/_authenticated/app/$appId.tsx:631
 msgid "Revoke"
 msgstr "İptal et"
 
-#: src/routes/_authenticated/app/$appId.tsx:633
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission"
 msgstr "İzni iptal et"
 
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission?"
 msgstr "İzin iptal edilsin mi?"
+
+#: src/routes/_authenticated/app/$appId.tsx:452
+msgid "Revoking permission..."
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:361
 msgid "Right to Left"
@@ -1242,11 +1267,18 @@ msgstr "Cumartesi"
 msgid "Save"
 msgstr "Kaydet"
 
-#: src/features/apps/index.tsx:324
+#: src/features/routing/use-routing-data.ts:31
+#: src/features/routing/use-routing-data.ts:50
+#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:322
+msgid "Saving..."
+msgstr ""
+
+#: src/features/apps/index.tsx:344
 msgid "Search apps"
 msgstr "Uygulamalarda ara"
 
-#: src/features/apps/index.tsx:323
+#: src/features/apps/index.tsx:343
 msgid "Search apps..."
 msgstr "Uygulamalarda ara..."
 
@@ -1280,7 +1312,7 @@ msgstr "Ara..."
 msgid "Searching..."
 msgstr "Aranıyor..."
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Select a capability to grant to {appName}."
 msgstr "{appName} uygulamasına verilecek bir yetenek seçin."
 
@@ -1316,7 +1348,7 @@ msgstr "Site yönünü seç"
 msgid "Select theme preference"
 msgstr "Tema tercihi seç"
 
-#: src/routes/_authenticated/app/$appId.tsx:396
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Select which version of this app to use"
 msgstr "Bu uygulamanın hangi sürümünün kullanılacağını seç"
 
@@ -1429,11 +1461,11 @@ msgstr "Sistem"
 msgid "System default"
 msgstr "Sistem varsayılanı"
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "System Default"
 msgstr "Sistem varsayılanı"
 
-#: src/features/routing/use-routing-data.ts:41
+#: src/features/routing/use-routing-data.ts:51
 msgid "System default updated"
 msgstr "Sistem varsayılanı güncellendi"
 
@@ -1465,14 +1497,14 @@ msgstr "Bu kod yanlış veya süresi dolmuş."
 
 #: src/features/apps/index.tsx:124
 #: src/features/apps/index.tsx:231
-msgid "The app has been installed successfully."
-msgstr "Uygulama başarıyla yüklendi."
+#~ msgid "The app has been installed successfully."
+#~ msgstr "Uygulama başarıyla yüklendi."
 
 #: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "İstenen uygulama bulunamadı."
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "The version used by users who haven't made a choice"
 msgstr "Henüz seçim yapmamış kullanıcılar tarafından kullanılan sürüm"
 
@@ -1484,7 +1516,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Tema ayarları"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:345
 msgid "This app does not have version management"
 msgstr "Bu uygulamanın sürüm yönetimi yok"
 
@@ -1493,7 +1525,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Bu uygulama doğrudan yayıncısından yüklenmiş ve incelenmemiştir. Zararlı yazılım olabilir."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:632
+#: src/routes/_authenticated/app/$appId.tsx:637
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Bu işlem \"{0}\" iznini {appName} uygulamasından iptal edecek. Uygulama düzgün çalışmayı durdurabilir."
 
@@ -1510,10 +1542,10 @@ msgstr "Sütunları aç/kapat"
 msgid "Toggle right panel"
 msgstr "Sağ paneli aç/kapat"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Bölümü aç/kapat"
 
@@ -1536,8 +1568,8 @@ msgstr "Temayı değiştir"
 msgid "Top"
 msgstr "Üst"
 
-#: src/features/apps/index.tsx:694
-#: src/routes/_authenticated/app/$appId.tsx:362
+#: src/features/apps/index.tsx:714
+#: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Track"
 msgstr "Track"
 
@@ -1576,7 +1608,7 @@ msgstr "Aramak için yaz..."
 msgid "Unable to connect to remote server"
 msgstr "Uzak sunucuya bağlanılamadı"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:444
 msgid "Unable to connect to the recommendations service"
 msgstr "Öneri servisine bağlanılamadı"
 
@@ -1601,7 +1633,7 @@ msgstr "Atanmamış"
 msgid "Unauthorized Access"
 msgstr "Yetkisiz erişim"
 
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:443
 msgid "Unavailable"
 msgstr "Kullanılamıyor"
 
@@ -1613,19 +1645,19 @@ msgstr "Amerika Birleşik Devletleri"
 msgid "Unverified"
 msgstr "Doğrulanmamış"
 
-#: src/features/apps/index.tsx:690
+#: src/features/apps/index.tsx:710
 msgid "Update"
 msgstr "Güncelle"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Update all"
 msgstr "Tümünü güncelle"
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "Update failed"
 msgstr "Güncelleme başarısız"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Updating..."
 msgstr "Güncelleniyor..."
 
@@ -1663,7 +1695,7 @@ msgstr "Doğrula"
 msgid "Verify email address"
 msgstr "E-posta adresini doğrula"
 
-#: src/routes/_authenticated/app/$appId.tsx:376
+#: src/routes/_authenticated/app/$appId.tsx:378
 msgid "Version"
 msgstr "Sürüm"
 
@@ -1672,11 +1704,11 @@ msgstr "Sürüm"
 msgid "Version {0}"
 msgstr "Sürüm {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:302
 msgid "Version changed"
 msgstr "Sürüm değiştirildi"
 
-#: src/routes/_authenticated/app/$appId.tsx:395
+#: src/routes/_authenticated/app/$appId.tsx:397
 msgid "Version Management"
 msgstr "Sürüm yönetimi"
 
@@ -1713,7 +1745,7 @@ msgstr "Çarşamba"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Hesabınız {source} adresinden buraya taşındı. Orada silene kadar mesajlar ve bildirimler her iki sunucuya da ulaşabilir, bazı içerikleriniz eski sunucudan sunulmaya devam eder ve takipçileriniz sizi burada bulmak için birkaç dakika bekleyebilir."
 
-#: src/routes/_authenticated/app/$appId.tsx:416
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "Your personal version override"
 msgstr "Kişisel sürüm geçersiz kılman"
 
@@ -1721,6 +1753,6 @@ msgstr "Kişisel sürüm geçersiz kılman"
 msgid "Your preference"
 msgstr "Tercihin"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Your Version"
 msgstr "Senin sürümün"

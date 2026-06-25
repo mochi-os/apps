@@ -7,6 +7,8 @@ import { requestHelpers } from '@mochi/web'
 import endpoints from '@/api/endpoints'
 import type { InstalledApp, MarketApp, AppInfo, Track } from '@/api/types/apps'
 
+const NO_TOAST = { mochi: { showGlobalErrorToast: false } } as const
+
 const listInstalledApps = async (): Promise<{
   installed: InstalledApp[]
   development: InstalledApp[]
@@ -76,7 +78,7 @@ const installFromFile = async (
     installed: boolean
     id: string
     version: string
-  }>(endpoints.apps.installFile, formData)
+  }>(endpoints.apps.installFile, formData, NO_TOAST)
   return response
 }
 
@@ -148,7 +150,9 @@ const upgrade = async (
 
 const cleanup = async (): Promise<{ removed: number }> => {
   const response = await requestHelpers.post<{ removed: number }>(
-    endpoints.cleanup
+    endpoints.cleanup,
+    undefined,
+    NO_TOAST
   )
   return response
 }
@@ -184,7 +188,8 @@ const setUserRouting = async (
 ): Promise<{ ok: boolean }> => {
   const response = await requestHelpers.post<{ ok: boolean }>(
     endpoints.routingSet,
-    { type, name, app }
+    { type, name, app },
+    NO_TOAST
   )
   return response
 }
@@ -196,7 +201,8 @@ const setSystemRouting = async (
 ): Promise<{ ok: boolean }> => {
   const response = await requestHelpers.post<{ ok: boolean }>(
     endpoints.systemRoutingSet,
-    { type, name, app }
+    { type, name, app },
+    NO_TOAST
   )
   return response
 }

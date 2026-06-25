@@ -32,6 +32,7 @@ import {
   useDebounce,
   usePageTitle,
   toast,
+  toastAction,
   Skeleton,
   DataChip,
   getErrorMessage,
@@ -113,21 +114,27 @@ export function Apps() {
   // Server-side filter in action_updates already returns only strictly-newer versions
   const availableUpdates = updatesData?.updates
 
-  const handleInstall = (version: string) => {
+  const handleInstall = async (version: string) => {
     if (!selectedAppId) return
 
-    installFromPublisherMutation.mutate(
-      { id: selectedAppId, version, peer: appInfo?.peer },
-      {
-        onSuccess: () => {
-          toast.success(t`App installed`, {
-            description: t`The app has been installed successfully.`,
-          })
-          setSelectedAppId(null)
-          setSelectedMarketApp(null)
-        },
-      }
-    )
+    try {
+      await toastAction(
+        installFromPublisherMutation.mutateAsync({
+          id: selectedAppId,
+          version,
+          peer: appInfo?.peer,
+        }),
+        {
+          loading: t`Installing...`,
+          success: t`App installed successfully`,
+          error: (err) => getErrorMessage(err, t`Could not install app.`),
+        }
+      )
+      setSelectedAppId(null)
+      setSelectedMarketApp(null)
+    } catch {
+      // toastAction already showed error
+    }
   }
 
   const handleMarketAppClick = (app: MarketApp) => {
@@ -135,45 +142,46 @@ export function Apps() {
     setSelectedAppId(app.id)
   }
 
-  const handlePublisherInstall = () => {
+  const handlePublisherInstall = async () => {
     if (!appIdInput.trim()) {
       toast.error(t`Please enter an app ID`)
       return
     }
 
-    installByIdMutation.mutate(
-      { id: appIdInput.trim() },
-      {
-        onSuccess: (data) => {
-          toast.success(t`App installed`, {
-            description: t`${data.name || t`App`} v${data.version} has been installed.`,
-          })
-          setInstallFromPublisher(false)
-          setAppIdInput('')
-        },
-        onError: (error) => {
-          toast.error(t`Install failed`, {
-            description: getErrorMessage(error, t`Could not install app.`),
-          })
-        },
-      }
-    )
+    try {
+      await toastAction(
+        installByIdMutation.mutateAsync({ id: appIdInput.trim() }),
+        {
+          loading: t`Installing...`,
+          success: (data) =>
+            t`${data.name || t`App`} v${data.version} has been installed.`,
+          error: (err) => getErrorMessage(err, t`Could not install app.`),
+        }
+      )
+      setInstallFromPublisher(false)
+      setAppIdInput('')
+    } catch {
+      // toastAction already showed error
+    }
   }
 
-  const handleDirectoryInstall = () => {
+  const handleDirectoryInstall = async () => {
     if (!selectedDirectoryApp) return
     const target = selectedDirectoryApp
-    installByIdMutation.mutate(
-      { id: target.id },
-      {
-        onSuccess: (data) => {
-          toast.success(t`App installed`, {
-            description: t`${data.name || target.name} v${data.version} has been installed.`,
-          })
-          setSelectedDirectoryApp(null)
-        },
-      }
-    )
+    try {
+      await toastAction(
+        installByIdMutation.mutateAsync({ id: target.id }),
+        {
+          loading: t`Installing...`,
+          success: (data) =>
+            t`${data.name || target.name} v${data.version} has been installed.`,
+          error: (err) => getErrorMessage(err, t`Could not install app.`),
+        }
+      )
+      setSelectedDirectoryApp(null)
+    } catch {
+      // toastAction already showed error
+    }
   }
 
   const handleUpdateAll = async () => {
@@ -198,16 +206,23 @@ export function Apps() {
     refetchUpdates()
   }
 
-  const handleCleanup = () => {
-    cleanupMutation.mutate(undefined, {
-      onSuccess: (data) => {
-        if (data.removed === 0) {
-          toast.info(t`No unused versions to clean up`)
-        } else {
-          toast.success(t`Removed ${data.removed} unused version${data.removed === 1 ? '' : 's'}`)
-        }
-      },
-    })
+  const handleCleanup = async () => {
+    try {
+      const result = await toastAction(cleanupMutation.mutateAsync(), {
+        loading: t`Cleaning up...`,
+        success: false,
+        error: (err) => getErrorMessage(err, t`Failed to clean up apps`),
+      })
+      if (result.removed === 0) {
+        toast.info(t`No unused versions to clean up`)
+      } else {
+        toast.success(
+          t`Removed ${result.removed} unused version${result.removed === 1 ? '' : 's'}`
+        )
+      }
+    } catch {
+      // toastAction already showed error
+    }
   }
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -220,22 +235,27 @@ export function Apps() {
     e.target.value = ''
   }
 
-  const handleFileInstall = () => {
+  const handleFileInstall = async () => {
     if (!selectedFile) return
 
-    installFromFileMutation.mutate(
-      { file: selectedFile, privacy: allowDiscovery ? 'public' : 'private' },
-      {
-        onSuccess: () => {
-          toast.success(t`App installed`, {
-            description: t`The app has been installed successfully.`,
-          })
-          setInstallFromFile(false)
-          setSelectedFile(null)
-          setAllowDiscovery(false)
-        },
-      }
-    )
+    try {
+      await toastAction(
+        installFromFileMutation.mutateAsync({
+          file: selectedFile,
+          privacy: allowDiscovery ? 'public' : 'private',
+        }),
+        {
+          loading: t`Installing...`,
+          success: t`App installed successfully`,
+          error: (err) => getErrorMessage(err, t`Could not install app.`),
+        }
+      )
+      setInstallFromFile(false)
+      setSelectedFile(null)
+      setAllowDiscovery(false)
+    } catch {
+      // toastAction already showed error
+    }
   }
 
   return (

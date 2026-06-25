@@ -19,23 +19,23 @@ msgid "{0} (development)"
 msgstr "{0} (desarrollo)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:194
+#: src/features/apps/index.tsx:202
 msgid "{0} updated, {failed} failed"
 msgstr "{0} actualizadas, {failed} fallidas"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:149
-#: src/features/apps/index.tsx:171
+#: src/features/apps/index.tsx:157
+#: src/features/apps/index.tsx:177
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} se ha instalado."
 
-#: src/routes/_authenticated/app/$appId.tsx:367
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "{track} (default, version {version})"
 msgstr "{track} (predeterminado, versión {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:368
+#: src/routes/_authenticated/app/$appId.tsx:370
 msgid "{track} (version {version})"
 msgstr "{track} (versión {version})"
 
@@ -108,7 +108,7 @@ msgstr "Añadir etiqueta..."
 msgid "Add team/app"
 msgstr "Añadir equipo/app"
 
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:626
 msgid "Add to directory"
 msgstr "Añadir al directorio"
 
@@ -133,7 +133,7 @@ msgstr "IA"
 msgid "All"
 msgstr "Todos"
 
-#: src/features/apps/index.tsx:190
+#: src/features/apps/index.tsx:198
 msgid "All apps updated"
 msgstr "Todas las apps actualizadas"
 
@@ -145,13 +145,13 @@ msgstr "Se produjo un error"
 msgid "An unexpected error occurred"
 msgstr "Se produjo un error inesperado"
 
-#: src/features/apps/index.tsx:149
+#: src/features/apps/index.tsx:157
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Aplicación"
 
-#: src/features/apps/index.tsx:259
-#: src/features/apps/index.tsx:269
+#: src/features/apps/index.tsx:279
+#: src/features/apps/index.tsx:289
 msgid "App actions"
 msgstr "Acciones de la app"
 
@@ -167,8 +167,13 @@ msgstr "Información y configuración de la app"
 #: src/features/apps/index.tsx:148
 #: src/features/apps/index.tsx:170
 #: src/features/apps/index.tsx:230
-msgid "App installed"
-msgstr "App instalada"
+#~ msgid "App installed"
+#~ msgstr "App instalada"
+
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:249
+msgid "App installed successfully"
+msgstr ""
 
 #: src/routes/_authenticated/app/$appId.tsx:126
 #: src/routes/_authenticated/app/$appId.tsx:130
@@ -181,8 +186,8 @@ msgstr "ID de la aplicación"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:62
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:63
+#: src/features/apps/index.tsx:330
 msgid "Apps"
 msgstr "Apps"
 
@@ -211,7 +216,7 @@ msgstr "Versión disponible:"
 msgid "Available versions:"
 msgstr "Versiones disponibles:"
 
-#: src/features/apps/index.tsx:404
+#: src/features/apps/index.tsx:424
 msgid "Available, but not installed"
 msgstr "Disponible, pero no instalada"
 
@@ -247,10 +252,10 @@ msgstr "Aumentar interés"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:108
-#: src/features/apps/index.tsx:528
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:618
-#: src/routes/_authenticated/app/$appId.tsx:546
+#: src/features/apps/index.tsx:548
+#: src/features/apps/index.tsx:589
+#: src/features/apps/index.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:551
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -297,11 +302,12 @@ msgstr "Enrutamiento de clases"
 msgid "Classes"
 msgstr "Clases"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:319
 msgid "Clean up unused versions"
 msgstr "Limpiar versiones sin usar"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:319
 msgid "Cleaning up..."
 msgstr "Limpiando..."
 
@@ -354,8 +360,8 @@ msgstr "Cerrar búsqueda"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Collapse"
 msgstr "Contraer"
 
@@ -413,7 +419,10 @@ msgstr "Continuar con {label}"
 msgid "Copy"
 msgstr "Copiar"
 
-#: src/features/apps/index.tsx:156
+#: src/features/apps/index.tsx:130
+#: src/features/apps/index.tsx:158
+#: src/features/apps/index.tsx:178
+#: src/features/apps/index.tsx:250
 msgid "Could not install app."
 msgstr "No se ha podido instalar la aplicación."
 
@@ -468,24 +477,24 @@ msgstr "Predeterminado"
 msgid "Default AI account"
 msgstr "Cuenta de IA predeterminada"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:427
 msgid "Default for all users"
 msgstr "Predeterminado para todos los usuarios"
 
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:426
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Predeterminado para todos los usuarios (versión {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:321
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Default for all users updated"
 msgstr "Valor predeterminado para todos los usuarios actualizado"
 
-#: src/routes/_authenticated/app/$appId.tsx:408
+#: src/routes/_authenticated/app/$appId.tsx:410
 msgid "Default track"
 msgstr "Canal predeterminado"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:407
+#: src/routes/_authenticated/app/$appId.tsx:409
 msgid "Default track (version {0})"
 msgstr "Canal predeterminado (versión {0})"
 
@@ -516,7 +525,7 @@ msgstr "Panel de detalles"
 msgid "Detect from web browser"
 msgstr "Detectar desde el navegador web"
 
-#: src/features/apps/index.tsx:379
+#: src/features/apps/index.tsx:399
 msgid "Development apps"
 msgstr "Apps de desarrollo"
 
@@ -568,8 +577,8 @@ msgstr "Entidad:"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Expand"
 msgstr "Expandir"
 
@@ -585,7 +594,11 @@ msgstr "Extra grande"
 msgid "Failed to add account"
 msgstr "Error al añadir la cuenta"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/features/apps/index.tsx:214
+msgid "Failed to clean up apps"
+msgstr ""
+
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Failed to grant permission"
 msgstr "Error al conceder el permiso"
 
@@ -593,7 +606,7 @@ msgstr "Error al conceder el permiso"
 msgid "Failed to remove account"
 msgstr "Error al quitar la cuenta"
 
-#: src/routes/_authenticated/app/$appId.tsx:454
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Failed to revoke permission"
 msgstr "Error al revocar el permiso"
 
@@ -609,16 +622,16 @@ msgstr "Error al actualizar la categoría"
 msgid "Failed to update default"
 msgstr "Error al actualizar el valor predeterminado"
 
-#: src/features/routing/use-routing-data.ts:30
-#: src/routes/_authenticated/app/$appId.tsx:304
+#: src/features/routing/use-routing-data.ts:33
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Failed to update preference"
 msgstr "Error al actualizar la preferencia"
 
-#: src/features/routing/use-routing-data.ts:44
+#: src/features/routing/use-routing-data.ts:53
 msgid "Failed to update system default"
 msgstr "Error al actualizar el valor predeterminado del sistema"
 
-#: src/features/apps/index.tsx:599
+#: src/features/apps/index.tsx:619
 msgid "File:"
 msgstr "Archivo:"
 
@@ -652,7 +665,7 @@ msgstr "Viernes"
 msgid "From"
 msgstr "De"
 
-#: src/features/apps/index.tsx:459
+#: src/features/apps/index.tsx:479
 msgid "From the directory"
 msgstr "Desde el directorio"
 
@@ -695,17 +708,21 @@ msgstr "Ir a la página {pageNumber}"
 msgid "Go to previous page"
 msgstr "Ir a la página anterior"
 
-#: src/routes/_authenticated/app/$appId.tsx:510
+#: src/routes/_authenticated/app/$appId.tsx:515
 msgid "Grant"
 msgstr "Conceder"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:520
 msgid "Grant permission"
 msgstr "Conceder permiso"
 
-#: src/routes/_authenticated/app/$appId.tsx:570
+#: src/routes/_authenticated/app/$appId.tsx:575
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Concede permisos para permitir que esta aplicación acceda a las funciones del sistema"
+
+#: src/routes/_authenticated/app/$appId.tsx:471
+msgid "Granting permission..."
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
@@ -752,44 +769,48 @@ msgstr "Insertado"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Install"
 msgstr "Instalar"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:519
+#: src/features/apps/index.tsx:539
 msgid "Install {0}?"
 msgstr "¿Instalar {0}?"
 
-#: src/features/apps/index.tsx:352
+#: src/features/apps/index.tsx:372
 msgid "Install apps from the market or upload your own"
 msgstr "Instala aplicaciones del mercado o sube las tuyas"
 
 #: src/features/apps/index.tsx:155
-msgid "Install failed"
-msgstr "La instalación ha fallado"
+#~ msgid "Install failed"
+#~ msgstr "La instalación ha fallado"
 
-#: src/features/apps/index.tsx:291
-#: src/features/apps/index.tsx:595
+#: src/features/apps/index.tsx:311
+#: src/features/apps/index.tsx:615
 msgid "Install from file"
 msgstr "Instalar desde archivo"
 
-#: src/features/apps/index.tsx:287
-#: src/features/apps/index.tsx:553
+#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:573
 msgid "Install from publisher"
 msgstr "Instalar desde el editor"
 
-#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:355
 msgid "Installed apps"
 msgstr "Aplicaciones instaladas"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:128
+#: src/features/apps/index.tsx:155
+#: src/features/apps/index.tsx:175
+#: src/features/apps/index.tsx:248
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Installing..."
 msgstr "Instalando..."
 
@@ -859,7 +880,7 @@ msgstr "Sesión cerrada correctamente"
 msgid "Logging out…"
 msgstr "Cerrando sesión…"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Manage capabilities granted to this application"
 msgstr "Gestionar permisos otorgados a esta aplicación"
 
@@ -906,11 +927,11 @@ msgstr "Siguiente imagen"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "No hay reglas de acceso configuradas. Añade reglas para controlar quién puede acceder a este recurso."
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "No apps could be updated."
 msgstr "No se pudo actualizar ninguna aplicación."
 
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:371
 msgid "No apps installed"
 msgstr "No hay aplicaciones instaladas"
 
@@ -922,11 +943,11 @@ msgstr "No hay clases configuradas."
 msgid "No connected accounts"
 msgstr "No hay cuentas conectadas"
 
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:466
 msgid "No description"
 msgstr "Sin descripción"
 
-#: src/features/apps/index.tsx:384
+#: src/features/apps/index.tsx:404
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Ninguna aplicación de desarrollo coincide con \"{searchQuery}\""
 
@@ -934,20 +955,20 @@ msgstr "Ninguna aplicación de desarrollo coincide con \"{searchQuery}\""
 msgid "No groups available"
 msgstr "No hay grupos disponibles"
 
-#: src/features/apps/index.tsx:477
+#: src/features/apps/index.tsx:497
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Ninguna aplicación instalable en el directorio coincide con \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:378
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Ninguna aplicación instalada coincide con \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:496
 msgid "No matches in directory"
 msgstr "Sin coincidencias en el directorio"
 
-#: src/features/apps/index.tsx:357
-#: src/features/apps/index.tsx:383
+#: src/features/apps/index.tsx:377
+#: src/features/apps/index.tsx:403
 msgid "No matching apps"
 msgstr "No hay aplicaciones coincidentes"
 
@@ -955,11 +976,11 @@ msgstr "No hay aplicaciones coincidentes"
 msgid "No paths configured."
 msgstr "No hay rutas configuradas."
 
-#: src/routes/_authenticated/app/$appId.tsx:569
+#: src/routes/_authenticated/app/$appId.tsx:574
 msgid "No permissions granted"
 msgstr "No se han concedido permisos"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "No permissions granted to this app"
 msgstr "No se han otorgado permisos a esta aplicación"
 
@@ -971,7 +992,7 @@ msgstr "No se encontraron lugares"
 msgid "No profile"
 msgstr "Sin perfil"
 
-#: src/features/apps/index.tsx:429
+#: src/features/apps/index.tsx:449
 msgid "No recommendations available"
 msgstr "No hay recomendaciones disponibles"
 
@@ -992,7 +1013,7 @@ msgstr "No se encontró ninguna zona horaria."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Aún no hay registro del tema; vuelve a intentarlo tras la próxima notificación."
 
-#: src/features/apps/index.tsx:205
+#: src/features/apps/index.tsx:217
 msgid "No unused versions to clean up"
 msgstr "No hay versiones sin usar que limpiar"
 
@@ -1014,7 +1035,7 @@ msgstr "Normal"
 msgid "Not set"
 msgstr "Sin establecer"
 
-#: src/routes/_authenticated/app/$appId.tsx:342
+#: src/routes/_authenticated/app/$appId.tsx:344
 msgid "Not versioned"
 msgstr "Sin versión"
 
@@ -1035,8 +1056,8 @@ msgstr "¡Vaya! Página no encontrada"
 msgid "Open account actions"
 msgstr "Abrir acciones de cuenta"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Abrir acciones"
 
@@ -1075,7 +1096,7 @@ msgstr "La verificación con la clave de acceso ha fallado. Inténtalo de nuevo.
 msgid "Passkeys"
 msgstr "Claves de acceso"
 
-#: src/features/apps/index.tsx:557
+#: src/features/apps/index.tsx:577
 msgid "Paste the install link:"
 msgstr "Pega el enlace de instalación:"
 
@@ -1092,15 +1113,15 @@ msgstr "Enrutamiento por ruta"
 msgid "Paths"
 msgstr "Rutas"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:472
 msgid "Permission granted"
 msgstr "Permiso concedido"
 
-#: src/routes/_authenticated/app/$appId.tsx:450
+#: src/routes/_authenticated/app/$appId.tsx:453
 msgid "Permission revoked"
 msgstr "Permiso revocado"
 
-#: src/routes/_authenticated/app/$appId.tsx:502
+#: src/routes/_authenticated/app/$appId.tsx:507
 msgid "Permissions"
 msgstr "Permisos"
 
@@ -1108,15 +1129,15 @@ msgstr "Permisos"
 msgid "Please check your internet connection and try again."
 msgstr "Comprueba tu conexión a internet e inténtalo de nuevo."
 
-#: src/features/apps/index.tsx:140
+#: src/features/apps/index.tsx:147
 msgid "Please enter an app ID"
 msgstr "Introduce un ID de aplicación"
 
-#: src/features/routing/use-routing-data.ts:27
+#: src/features/routing/use-routing-data.ts:32
 msgid "Preference updated"
 msgstr "Preferencia actualizada"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Preferred Version"
 msgstr "Versión preferida"
 
@@ -1153,7 +1174,7 @@ msgstr "Vuelve a registrar tus llaves de acceso en este servidor"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:219
 #: ../../../lib/web/src/components/search-entity-page.tsx:194
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:425
 msgid "Recommended"
 msgstr "Recomendado"
 
@@ -1193,9 +1214,9 @@ msgstr "¿Eliminar el acceso?"
 msgid "Remove interest"
 msgstr "Eliminar interés"
 
-#. placeholder {0}: data.removed
-#. placeholder {1}: data.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:207
+#. placeholder {0}: result.removed
+#. placeholder {1}: result.removed === 1 ? '' : 's'
+#: src/features/apps/index.tsx:220
 msgid "Removed {0} unused version{1}"
 msgstr "Se eliminaron {0} versiones sin usar{1}"
 
@@ -1212,18 +1233,22 @@ msgstr "Restablecer"
 msgid "Reset all settings to default values"
 msgstr "Restablecer todos los ajustes a sus valores predeterminados"
 
-#: src/routes/_authenticated/app/$appId.tsx:623
-#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:628
+#: src/routes/_authenticated/app/$appId.tsx:631
 msgid "Revoke"
 msgstr "Revocar"
 
-#: src/routes/_authenticated/app/$appId.tsx:633
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission"
 msgstr "Revocar permiso"
 
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission?"
 msgstr "¿Revocar permiso?"
+
+#: src/routes/_authenticated/app/$appId.tsx:452
+msgid "Revoking permission..."
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:361
 msgid "Right to Left"
@@ -1242,11 +1267,18 @@ msgstr "Sábado"
 msgid "Save"
 msgstr "Guardar"
 
-#: src/features/apps/index.tsx:324
+#: src/features/routing/use-routing-data.ts:31
+#: src/features/routing/use-routing-data.ts:50
+#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:322
+msgid "Saving..."
+msgstr ""
+
+#: src/features/apps/index.tsx:344
 msgid "Search apps"
 msgstr "Buscar aplicaciones"
 
-#: src/features/apps/index.tsx:323
+#: src/features/apps/index.tsx:343
 msgid "Search apps..."
 msgstr "Buscar aplicaciones..."
 
@@ -1280,7 +1312,7 @@ msgstr "Buscar..."
 msgid "Searching..."
 msgstr "Buscando..."
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Select a capability to grant to {appName}."
 msgstr "Selecciona un permiso para otorgar a {appName}."
 
@@ -1316,7 +1348,7 @@ msgstr "Seleccionar dirección del sitio"
 msgid "Select theme preference"
 msgstr "Seleccionar preferencia de tema"
 
-#: src/routes/_authenticated/app/$appId.tsx:396
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Select which version of this app to use"
 msgstr "Selecciona qué versión de esta aplicación usar"
 
@@ -1429,11 +1461,11 @@ msgstr "Sistema"
 msgid "System default"
 msgstr "Predeterminado del sistema"
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "System Default"
 msgstr "Predeterminado del sistema"
 
-#: src/features/routing/use-routing-data.ts:41
+#: src/features/routing/use-routing-data.ts:51
 msgid "System default updated"
 msgstr "Predeterminado del sistema actualizado"
 
@@ -1465,14 +1497,14 @@ msgstr "Ese código es incorrecto o ha caducado."
 
 #: src/features/apps/index.tsx:124
 #: src/features/apps/index.tsx:231
-msgid "The app has been installed successfully."
-msgstr "La aplicación se ha instalado correctamente."
+#~ msgid "The app has been installed successfully."
+#~ msgstr "La aplicación se ha instalado correctamente."
 
 #: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "No se ha podido encontrar la aplicación solicitada."
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "The version used by users who haven't made a choice"
 msgstr "La versión utilizada por los usuarios que no han hecho una elección"
 
@@ -1484,7 +1516,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Ajustes de tema"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:345
 msgid "This app does not have version management"
 msgstr "Esta aplicación no tiene gestión de versiones"
 
@@ -1493,7 +1525,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Esta aplicación se instala directamente desde su editor y no ha sido verificada. Podría ser malware."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:632
+#: src/routes/_authenticated/app/$appId.tsx:637
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Esto revocará el permiso \"{0}\" de {appName}. La aplicación podría dejar de funcionar correctamente."
 
@@ -1510,10 +1542,10 @@ msgstr "Alternar columnas"
 msgid "Toggle right panel"
 msgstr "Alternar panel derecho"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Alternar sección"
 
@@ -1536,8 +1568,8 @@ msgstr "Alternar tema"
 msgid "Top"
 msgstr "Arriba"
 
-#: src/features/apps/index.tsx:694
-#: src/routes/_authenticated/app/$appId.tsx:362
+#: src/features/apps/index.tsx:714
+#: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Track"
 msgstr "Canal"
 
@@ -1576,7 +1608,7 @@ msgstr "Escribe para buscar..."
 msgid "Unable to connect to remote server"
 msgstr "No se pudo conectar al servidor remoto"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:444
 msgid "Unable to connect to the recommendations service"
 msgstr "No se ha podido conectar con el servicio de recomendaciones"
 
@@ -1601,7 +1633,7 @@ msgstr "Sin asignar"
 msgid "Unauthorized Access"
 msgstr "Acceso no permitido"
 
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:443
 msgid "Unavailable"
 msgstr "No disponible"
 
@@ -1613,19 +1645,19 @@ msgstr "Estados Unidos"
 msgid "Unverified"
 msgstr "Sin verificar"
 
-#: src/features/apps/index.tsx:690
+#: src/features/apps/index.tsx:710
 msgid "Update"
 msgstr "Actualizar"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Update all"
 msgstr "Actualizar todo"
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "Update failed"
 msgstr "La actualización ha fallado"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Updating..."
 msgstr "Actualizando..."
 
@@ -1663,7 +1695,7 @@ msgstr "Verificar"
 msgid "Verify email address"
 msgstr "Verificar dirección de correo electrónico"
 
-#: src/routes/_authenticated/app/$appId.tsx:376
+#: src/routes/_authenticated/app/$appId.tsx:378
 msgid "Version"
 msgstr "Versión"
 
@@ -1672,11 +1704,11 @@ msgstr "Versión"
 msgid "Version {0}"
 msgstr "Versión {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:302
 msgid "Version changed"
 msgstr "Versión cambiada"
 
-#: src/routes/_authenticated/app/$appId.tsx:395
+#: src/routes/_authenticated/app/$appId.tsx:397
 msgid "Version Management"
 msgstr "Gestión de versiones"
 
@@ -1713,7 +1745,7 @@ msgstr "Miércoles"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Tu cuenta fue trasladada aquí desde {source}. Hasta que la elimines allí, los mensajes y notificaciones pueden llegar a ambos servidores, parte de tu contenido seguirá siendo servido desde el servidor antiguo y tus seguidores pueden tardar unos minutos en encontrarte aquí."
 
-#: src/routes/_authenticated/app/$appId.tsx:416
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "Your personal version override"
 msgstr "Tu sustitución personal de versión"
 
@@ -1721,6 +1753,6 @@ msgstr "Tu sustitución personal de versión"
 msgid "Your preference"
 msgstr "Tu preferencia"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Your Version"
 msgstr "Tu versión"

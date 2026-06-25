@@ -19,23 +19,23 @@ msgid "{0} (development)"
 msgstr "{0} (zhvillim)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:194
+#: src/features/apps/index.tsx:202
 msgid "{0} updated, {failed} failed"
 msgstr "{0} u përditësuan, {failed} dështuan"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:149
-#: src/features/apps/index.tsx:171
+#: src/features/apps/index.tsx:157
+#: src/features/apps/index.tsx:177
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} u instalua."
 
-#: src/routes/_authenticated/app/$appId.tsx:367
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "{track} (default, version {version})"
 msgstr "{track} (parazgjedhur, versioni {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:368
+#: src/routes/_authenticated/app/$appId.tsx:370
 msgid "{track} (version {version})"
 msgstr "{track} (versioni {version})"
 
@@ -108,7 +108,7 @@ msgstr "Shto etiketë..."
 msgid "Add team/app"
 msgstr "Shto ekip/aplikacion"
 
-#: src/features/apps/index.tsx:606
+#: src/features/apps/index.tsx:626
 msgid "Add to directory"
 msgstr "Shto në direktori"
 
@@ -133,7 +133,7 @@ msgstr "AI"
 msgid "All"
 msgstr "Të gjitha"
 
-#: src/features/apps/index.tsx:190
+#: src/features/apps/index.tsx:198
 msgid "All apps updated"
 msgstr "Të gjithë aplikacionet u përditësuan"
 
@@ -145,13 +145,13 @@ msgstr "Ndodhi një gabim"
 msgid "An unexpected error occurred"
 msgstr "Ndodhi një gabim i papritur"
 
-#: src/features/apps/index.tsx:149
+#: src/features/apps/index.tsx:157
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Aplikacioni"
 
-#: src/features/apps/index.tsx:259
-#: src/features/apps/index.tsx:269
+#: src/features/apps/index.tsx:279
+#: src/features/apps/index.tsx:289
 msgid "App actions"
 msgstr "Veprime të aplikacionit"
 
@@ -167,8 +167,13 @@ msgstr "Informacioni dhe konfigurimi i aplikacionit"
 #: src/features/apps/index.tsx:148
 #: src/features/apps/index.tsx:170
 #: src/features/apps/index.tsx:230
-msgid "App installed"
-msgstr "Aplikacioni u instalua"
+#~ msgid "App installed"
+#~ msgstr "Aplikacioni u instalua"
+
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:249
+msgid "App installed successfully"
+msgstr ""
 
 #: src/routes/_authenticated/app/$appId.tsx:126
 #: src/routes/_authenticated/app/$appId.tsx:130
@@ -181,8 +186,8 @@ msgstr "ID e aplikacionit"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:62
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:63
+#: src/features/apps/index.tsx:330
 msgid "Apps"
 msgstr "Aplikacionet"
 
@@ -211,7 +216,7 @@ msgstr "Versioni i disponueshëm:"
 msgid "Available versions:"
 msgstr "Versionet e disponueshme:"
 
-#: src/features/apps/index.tsx:404
+#: src/features/apps/index.tsx:424
 msgid "Available, but not installed"
 msgstr "I disponueshëm, por i painstaluar"
 
@@ -247,10 +252,10 @@ msgstr "Rrit interesin"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:108
-#: src/features/apps/index.tsx:528
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:618
-#: src/routes/_authenticated/app/$appId.tsx:546
+#: src/features/apps/index.tsx:548
+#: src/features/apps/index.tsx:589
+#: src/features/apps/index.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:551
 msgid "Cancel"
 msgstr "Anulo"
 
@@ -297,11 +302,12 @@ msgstr "Drejtimi i klasës"
 msgid "Classes"
 msgstr "Klasat"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:319
 msgid "Clean up unused versions"
 msgstr "Pastro versionet e papërdorura"
 
-#: src/features/apps/index.tsx:299
+#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:319
 msgid "Cleaning up..."
 msgstr "Po pastron..."
 
@@ -354,8 +360,8 @@ msgstr "Mbyll kërkimin"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Collapse"
 msgstr "Palos"
 
@@ -413,7 +419,10 @@ msgstr "Vazhdo me {label}"
 msgid "Copy"
 msgstr "Kopjo"
 
-#: src/features/apps/index.tsx:156
+#: src/features/apps/index.tsx:130
+#: src/features/apps/index.tsx:158
+#: src/features/apps/index.tsx:178
+#: src/features/apps/index.tsx:250
 msgid "Could not install app."
 msgstr "Aplikacioni nuk mund të instalohej."
 
@@ -468,24 +477,24 @@ msgstr "I parazgjedhur"
 msgid "Default AI account"
 msgstr "Llogaria e parazgjedhur AI"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:427
 msgid "Default for all users"
 msgstr "I parazgjedhur për të gjithë përdoruesit"
 
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:426
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "I parazgjedhur për të gjithë përdoruesit (versioni {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:321
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Default for all users updated"
 msgstr "I parazgjedhuri për të gjithë përdoruesit u përditësua"
 
-#: src/routes/_authenticated/app/$appId.tsx:408
+#: src/routes/_authenticated/app/$appId.tsx:410
 msgid "Default track"
 msgstr "Track-u i parazgjedhur"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:407
+#: src/routes/_authenticated/app/$appId.tsx:409
 msgid "Default track (version {0})"
 msgstr "Track-u i parazgjedhur (versioni {0})"
 
@@ -516,7 +525,7 @@ msgstr "Paneli i detajeve"
 msgid "Detect from web browser"
 msgstr "Zbulo nga shfletuesi i web-it"
 
-#: src/features/apps/index.tsx:379
+#: src/features/apps/index.tsx:399
 msgid "Development apps"
 msgstr "Aplikacione zhvillimi"
 
@@ -568,8 +577,8 @@ msgstr "Entiteti:"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:253
+#: ../../../lib/web/src/components/tree-row.tsx:267
 msgid "Expand"
 msgstr "Zgjero"
 
@@ -585,7 +594,11 @@ msgstr "Shumë i madh"
 msgid "Failed to add account"
 msgstr "Shtimi i llogarisë dështoi"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/features/apps/index.tsx:214
+msgid "Failed to clean up apps"
+msgstr ""
+
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Failed to grant permission"
 msgstr "Dhënia e lejes dështoi"
 
@@ -593,7 +606,7 @@ msgstr "Dhënia e lejes dështoi"
 msgid "Failed to remove account"
 msgstr "Heqja e llogarisë dështoi"
 
-#: src/routes/_authenticated/app/$appId.tsx:454
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Failed to revoke permission"
 msgstr "Revokimi i lejes dështoi"
 
@@ -609,16 +622,16 @@ msgstr "Përditësimi i kategorisë dështoi"
 msgid "Failed to update default"
 msgstr "Përditësimi i të paracaktuarit dështoi"
 
-#: src/features/routing/use-routing-data.ts:30
-#: src/routes/_authenticated/app/$appId.tsx:304
+#: src/features/routing/use-routing-data.ts:33
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Failed to update preference"
 msgstr "Përditësimi i preferencës dështoi"
 
-#: src/features/routing/use-routing-data.ts:44
+#: src/features/routing/use-routing-data.ts:53
 msgid "Failed to update system default"
 msgstr "Përditësimi i të paracaktuarit të sistemit dështoi"
 
-#: src/features/apps/index.tsx:599
+#: src/features/apps/index.tsx:619
 msgid "File:"
 msgstr "Skedari:"
 
@@ -652,7 +665,7 @@ msgstr "E premte"
 msgid "From"
 msgstr "Nga"
 
-#: src/features/apps/index.tsx:459
+#: src/features/apps/index.tsx:479
 msgid "From the directory"
 msgstr "Nga drejtoria"
 
@@ -695,17 +708,21 @@ msgstr "Shko te faqja {pageNumber}"
 msgid "Go to previous page"
 msgstr "Shko në faqen e mëparshme"
 
-#: src/routes/_authenticated/app/$appId.tsx:510
+#: src/routes/_authenticated/app/$appId.tsx:515
 msgid "Grant"
 msgstr "Jep"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:520
 msgid "Grant permission"
 msgstr "Jep lejen"
 
-#: src/routes/_authenticated/app/$appId.tsx:570
+#: src/routes/_authenticated/app/$appId.tsx:575
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Jep lejet për të lejuar këtë aplikacion të qaset te veçoritë e sistemit"
+
+#: src/routes/_authenticated/app/$appId.tsx:471
+msgid "Granting permission..."
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
@@ -752,44 +769,48 @@ msgstr "I brendshëm"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Install"
 msgstr "Instalo"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:519
+#: src/features/apps/index.tsx:539
 msgid "Install {0}?"
 msgstr "Të instalohet {0}?"
 
-#: src/features/apps/index.tsx:352
+#: src/features/apps/index.tsx:372
 msgid "Install apps from the market or upload your own"
 msgstr "Instaloni aplikacione nga tregu ose ngarkoni tuajat"
 
 #: src/features/apps/index.tsx:155
-msgid "Install failed"
-msgstr "Instalimi dështoi"
+#~ msgid "Install failed"
+#~ msgstr "Instalimi dështoi"
 
-#: src/features/apps/index.tsx:291
-#: src/features/apps/index.tsx:595
+#: src/features/apps/index.tsx:311
+#: src/features/apps/index.tsx:615
 msgid "Install from file"
 msgstr "Instalo nga skedari"
 
-#: src/features/apps/index.tsx:287
-#: src/features/apps/index.tsx:553
+#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:573
 msgid "Install from publisher"
 msgstr "Instalo nga publisher"
 
-#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:355
 msgid "Installed apps"
 msgstr "Aplikacionet e instaluara"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:122
-#: src/features/apps/index.tsx:536
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:626
+#: src/features/apps/index.tsx:128
+#: src/features/apps/index.tsx:155
+#: src/features/apps/index.tsx:175
+#: src/features/apps/index.tsx:248
+#: src/features/apps/index.tsx:556
+#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:646
 msgid "Installing..."
 msgstr "Duke instaluar..."
 
@@ -859,7 +880,7 @@ msgstr "U dol me sukses"
 msgid "Logging out…"
 msgstr "Duke dalë…"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Manage capabilities granted to this application"
 msgstr "Menaxho aftësitë e dhëna këtij aplikacioni"
 
@@ -906,11 +927,11 @@ msgstr "Imazhi tjetër"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Asnjë rregull qasjeje i konfiguruar. Shto rregulla për të kontrolluar kush mund të qaset në këtë burim."
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "No apps could be updated."
 msgstr "Asnjë aplikacion nuk mund të përditësohet."
 
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:371
 msgid "No apps installed"
 msgstr "Asnjë aplikacion i instaluar"
 
@@ -922,11 +943,11 @@ msgstr "Asnjë klasë e konfiguruar."
 msgid "No connected accounts"
 msgstr "Asnjë llogari e lidhur"
 
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:466
 msgid "No description"
 msgstr "Pa përshkrim"
 
-#: src/features/apps/index.tsx:384
+#: src/features/apps/index.tsx:404
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Asnjë aplikacion zhvillimi nuk përputhet me \"{searchQuery}\""
 
@@ -934,20 +955,20 @@ msgstr "Asnjë aplikacion zhvillimi nuk përputhet me \"{searchQuery}\""
 msgid "No groups available"
 msgstr "Asnjë grup i disponueshëm"
 
-#: src/features/apps/index.tsx:477
+#: src/features/apps/index.tsx:497
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Asnjë aplikacion i instalueshëm në direktori nuk përputhet me \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:378
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Asnjë aplikacion i instaluar nuk përputhet me \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:496
 msgid "No matches in directory"
 msgstr "Asnjë përputhje në direktori"
 
-#: src/features/apps/index.tsx:357
-#: src/features/apps/index.tsx:383
+#: src/features/apps/index.tsx:377
+#: src/features/apps/index.tsx:403
 msgid "No matching apps"
 msgstr "Asnjë aplikacion përputhës"
 
@@ -955,11 +976,11 @@ msgstr "Asnjë aplikacion përputhës"
 msgid "No paths configured."
 msgstr "Asnjë shteg i konfiguruar."
 
-#: src/routes/_authenticated/app/$appId.tsx:569
+#: src/routes/_authenticated/app/$appId.tsx:574
 msgid "No permissions granted"
 msgstr "Asnjë leje e dhënë"
 
-#: src/routes/_authenticated/app/$appId.tsx:504
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "No permissions granted to this app"
 msgstr "Asnjë leje e dhënë për këtë aplikacion"
 
@@ -971,7 +992,7 @@ msgstr "S'u gjet asnjë vend"
 msgid "No profile"
 msgstr "Pa profil"
 
-#: src/features/apps/index.tsx:429
+#: src/features/apps/index.tsx:449
 msgid "No recommendations available"
 msgstr "Asnjë rekomandim i disponueshëm"
 
@@ -992,7 +1013,7 @@ msgstr "S'u gjet asnjë zonë kohore."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Ende asnjë regjistrim teme — provoni përsëri pas njoftimit tjetër."
 
-#: src/features/apps/index.tsx:205
+#: src/features/apps/index.tsx:217
 msgid "No unused versions to clean up"
 msgstr "Asnjë version i papërdorur për t'u pastruar"
 
@@ -1014,7 +1035,7 @@ msgstr "Normale"
 msgid "Not set"
 msgstr "I pacaktuar"
 
-#: src/routes/_authenticated/app/$appId.tsx:342
+#: src/routes/_authenticated/app/$appId.tsx:344
 msgid "Not versioned"
 msgstr "I paversionuar"
 
@@ -1035,8 +1056,8 @@ msgstr "Ups! Faqja s'u gjet!"
 msgid "Open account actions"
 msgstr "Hap veprimet e llogarisë"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Hap veprimet"
 
@@ -1075,7 +1096,7 @@ msgstr "Verifikimi i çelësit të hyrjes dështoi. Ju lutemi provoni përsëri.
 msgid "Passkeys"
 msgstr "Kyçet"
 
-#: src/features/apps/index.tsx:557
+#: src/features/apps/index.tsx:577
 msgid "Paste the install link:"
 msgstr "Ngjit lidhjen e instalimit:"
 
@@ -1092,15 +1113,15 @@ msgstr "Drejtimi i shtegut"
 msgid "Paths"
 msgstr "Shtigjet"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:472
 msgid "Permission granted"
 msgstr "Leja u dha"
 
-#: src/routes/_authenticated/app/$appId.tsx:450
+#: src/routes/_authenticated/app/$appId.tsx:453
 msgid "Permission revoked"
 msgstr "Leja u revokua"
 
-#: src/routes/_authenticated/app/$appId.tsx:502
+#: src/routes/_authenticated/app/$appId.tsx:507
 msgid "Permissions"
 msgstr "Lejet"
 
@@ -1108,15 +1129,15 @@ msgstr "Lejet"
 msgid "Please check your internet connection and try again."
 msgstr "Kontrolloni lidhjen tuaj me internetin dhe provoni përsëri."
 
-#: src/features/apps/index.tsx:140
+#: src/features/apps/index.tsx:147
 msgid "Please enter an app ID"
 msgstr "Ju lutemi futni një ID aplikacioni"
 
-#: src/features/routing/use-routing-data.ts:27
+#: src/features/routing/use-routing-data.ts:32
 msgid "Preference updated"
 msgstr "Preferenca u përditësua"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Preferred Version"
 msgstr "Versioni i preferuar"
 
@@ -1153,7 +1174,7 @@ msgstr "Riregjistroni çelësat tuaj të hyrjes në këtë server"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:219
 #: ../../../lib/web/src/components/search-entity-page.tsx:194
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:425
 msgid "Recommended"
 msgstr "I rekomanduar"
 
@@ -1193,9 +1214,9 @@ msgstr "Të hiqet qasja?"
 msgid "Remove interest"
 msgstr "Hiq interesin"
 
-#. placeholder {0}: data.removed
-#. placeholder {1}: data.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:207
+#. placeholder {0}: result.removed
+#. placeholder {1}: result.removed === 1 ? '' : 's'
+#: src/features/apps/index.tsx:220
 msgid "Removed {0} unused version{1}"
 msgstr "U hoqën {0} versione të papërdorur{1}"
 
@@ -1212,18 +1233,22 @@ msgstr "Rivendos"
 msgid "Reset all settings to default values"
 msgstr "Rivendos të gjitha cilësimet në vlerat parazgjedhura"
 
-#: src/routes/_authenticated/app/$appId.tsx:623
-#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:628
+#: src/routes/_authenticated/app/$appId.tsx:631
 msgid "Revoke"
 msgstr "Revoko"
 
-#: src/routes/_authenticated/app/$appId.tsx:633
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission"
 msgstr "Revoko lejen"
 
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission?"
 msgstr "Të revokohet leja?"
+
+#: src/routes/_authenticated/app/$appId.tsx:452
+msgid "Revoking permission..."
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:361
 msgid "Right to Left"
@@ -1242,11 +1267,18 @@ msgstr "E shtunë"
 msgid "Save"
 msgstr "Ruaj"
 
-#: src/features/apps/index.tsx:324
+#: src/features/routing/use-routing-data.ts:31
+#: src/features/routing/use-routing-data.ts:50
+#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:322
+msgid "Saving..."
+msgstr ""
+
+#: src/features/apps/index.tsx:344
 msgid "Search apps"
 msgstr "Kërko aplikacione"
 
-#: src/features/apps/index.tsx:323
+#: src/features/apps/index.tsx:343
 msgid "Search apps..."
 msgstr "Kërko aplikacione..."
 
@@ -1280,7 +1312,7 @@ msgstr "Kërko..."
 msgid "Searching..."
 msgstr "Duke kërkuar..."
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Select a capability to grant to {appName}."
 msgstr "Zgjidh një aftësi për t'i dhënë {appName}."
 
@@ -1316,7 +1348,7 @@ msgstr "Zgjidh drejtimin e faqes"
 msgid "Select theme preference"
 msgstr "Zgjidh preferencën e temës"
 
-#: src/routes/_authenticated/app/$appId.tsx:396
+#: src/routes/_authenticated/app/$appId.tsx:398
 msgid "Select which version of this app to use"
 msgstr "Zgjidh cilin version të këtij aplikacioni të përdorësh"
 
@@ -1429,11 +1461,11 @@ msgstr "Sistemi"
 msgid "System default"
 msgstr "Parazgjedhja e sistemit"
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "System Default"
 msgstr "Parazgjedhja e sistemit"
 
-#: src/features/routing/use-routing-data.ts:41
+#: src/features/routing/use-routing-data.ts:51
 msgid "System default updated"
 msgstr "Parazgjedhja e sistemit u përditësua"
 
@@ -1465,14 +1497,14 @@ msgstr "Ai kod është i pasaktë ose ka skaduar."
 
 #: src/features/apps/index.tsx:124
 #: src/features/apps/index.tsx:231
-msgid "The app has been installed successfully."
-msgstr "Aplikacioni u instalua me sukses."
+#~ msgid "The app has been installed successfully."
+#~ msgstr "Aplikacioni u instalua me sukses."
 
 #: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "Aplikacioni i kërkuar nuk u gjet."
 
-#: src/routes/_authenticated/app/$appId.tsx:400
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "The version used by users who haven't made a choice"
 msgstr "Versioni i përdorur nga përdoruesit që nuk kanë bërë një zgjedhje"
 
@@ -1484,7 +1516,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Cilësimet e temës"
 
-#: src/routes/_authenticated/app/$appId.tsx:343
+#: src/routes/_authenticated/app/$appId.tsx:345
 msgid "This app does not have version management"
 msgstr "Ky aplikacion nuk ka menaxhim versioni"
 
@@ -1493,7 +1525,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Ky aplikacion është instaluar drejtpërdrejt nga publikuesi i tij dhe nuk është verifikuar. Mund të jetë malware."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:632
+#: src/routes/_authenticated/app/$appId.tsx:637
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Kjo do të revokojë lejen \"{0}\" nga {appName}. Aplikacioni mund të ndalojë së funksionuari saktë."
 
@@ -1510,10 +1542,10 @@ msgstr "Ndrysho kolonat"
 msgid "Toggle right panel"
 msgstr "Ndërro panelin e djathtë"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Ndrysho seksionin"
 
@@ -1536,8 +1568,8 @@ msgstr "Ndrysho temën"
 msgid "Top"
 msgstr "Lart"
 
-#: src/features/apps/index.tsx:694
-#: src/routes/_authenticated/app/$appId.tsx:362
+#: src/features/apps/index.tsx:714
+#: src/routes/_authenticated/app/$appId.tsx:364
 msgid "Track"
 msgstr "Track"
 
@@ -1576,7 +1608,7 @@ msgstr "Shkruaj për të kërkuar..."
 msgid "Unable to connect to remote server"
 msgstr "Nuk u lidh dot me serverin në distancë"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:444
 msgid "Unable to connect to the recommendations service"
 msgstr "Nuk mund të lidhet me shërbimin e rekomandimeve"
 
@@ -1601,7 +1633,7 @@ msgstr "I pacaktuar"
 msgid "Unauthorized Access"
 msgstr "Akses i paautorizuar"
 
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:443
 msgid "Unavailable"
 msgstr "I padisponueshëm"
 
@@ -1613,19 +1645,19 @@ msgstr "Shtetet e Bashkuara"
 msgid "Unverified"
 msgstr "I paverifikuar"
 
-#: src/features/apps/index.tsx:690
+#: src/features/apps/index.tsx:710
 msgid "Update"
 msgstr "Përditëso"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Update all"
 msgstr "Përditëso të gjitha"
 
-#: src/features/apps/index.tsx:192
+#: src/features/apps/index.tsx:200
 msgid "Update failed"
 msgstr "Përditësimi dështoi"
 
-#: src/features/apps/index.tsx:280
+#: src/features/apps/index.tsx:300
 msgid "Updating..."
 msgstr "Duke përditësuar..."
 
@@ -1663,7 +1695,7 @@ msgstr "Verifiko"
 msgid "Verify email address"
 msgstr "Verifiko adresën e email-it"
 
-#: src/routes/_authenticated/app/$appId.tsx:376
+#: src/routes/_authenticated/app/$appId.tsx:378
 msgid "Version"
 msgstr "Versioni"
 
@@ -1672,11 +1704,11 @@ msgstr "Versioni"
 msgid "Version {0}"
 msgstr "Versioni {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:302
 msgid "Version changed"
 msgstr "Versioni ndryshoi"
 
-#: src/routes/_authenticated/app/$appId.tsx:395
+#: src/routes/_authenticated/app/$appId.tsx:397
 msgid "Version Management"
 msgstr "Menaxhimi i versioneve"
 
@@ -1713,7 +1745,7 @@ msgstr "E mërkurë"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Llogaria juaj u zhvendos këtu nga {source}. Derisa ta fshini atje, mesazhet dhe njoftimet mund të arrijnë në të dy serverët, një pjesë e përmbajtjes suaj vazhdon të shërbejë nga serveri i vjetër dhe ndjekësit mund të kenë nevojë për disa minuta që t'ju gjejnë këtu."
 
-#: src/routes/_authenticated/app/$appId.tsx:416
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "Your personal version override"
 msgstr "Mbivendosja jote personale e versionit"
 
@@ -1721,6 +1753,6 @@ msgstr "Mbivendosja jote personale e versionit"
 msgid "Your preference"
 msgstr "Preferenca jote"
 
-#: src/routes/_authenticated/app/$appId.tsx:415
+#: src/routes/_authenticated/app/$appId.tsx:417
 msgid "Your Version"
 msgstr "Versioni yt"
