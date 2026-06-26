@@ -187,23 +187,41 @@ export function Apps() {
   const handleUpdateAll = async () => {
     if (!availableUpdates?.length) return
 
-    const results = await Promise.allSettled(
-      availableUpdates.map((update) =>
-        upgradeMutation.mutateAsync({ id: update.id, version: update.available })
+    try {
+      const results = await toastAction(
+        Promise.allSettled(
+          availableUpdates.map((update) =>
+            upgradeMutation.mutateAsync({
+              id: update.id,
+              version: update.available,
+            })
+          )
+        ),
+        {
+          loading: t`Updating apps...`,
+          success: false,
+          error: (e) => getErrorMessage(e, t`Failed to update apps`),
+        }
       )
-    )
 
-    const failed = results.filter((r) => r.status === 'rejected').length
-    if (failed === 0) {
-      toast.success(t`All apps updated`)
-    } else if (failed === results.length) {
-      toast.error(t`Update failed`, { description: t`No apps could be updated.` })
-    } else {
-      toast.warning(t`${results.length - failed} updated, ${failed} failed`)
+      const failed = results.filter((r) => r.status === 'rejected').length
+      if (failed === 0) {
+        toast.success(t`All apps updated`)
+      } else if (failed === results.length) {
+        toast.error(t`Update failed`, {
+          description: t`No apps could be updated.`,
+        })
+      } else {
+        toast.warning(
+          t`${results.length - failed} updated, ${failed} failed`
+        )
+      }
+
+      refetchInstalled()
+      refetchUpdates()
+    } catch {
+      // toastAction already showed error
     }
-
-    refetchInstalled()
-    refetchUpdates()
   }
 
   const handleCleanup = async () => {
