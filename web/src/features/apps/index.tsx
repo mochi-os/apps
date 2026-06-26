@@ -126,7 +126,10 @@ export function Apps() {
         }),
         {
           loading: t`Installing...`,
-          success: t`App installed successfully`,
+          success: t`App installed`,
+          successOptions: () => ({
+            description: t`The app has been installed successfully.`,
+          }),
           error: (err) => getErrorMessage(err, t`Could not install app.`),
         }
       )
