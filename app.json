@@ -18,7 +18,8 @@
 		"schema": 1,
 		"file": "apps.db",
 		"create": {"function": "database_create"},
-		"upgrade": {"function": "database_upgrade"}
+		"upgrade": {"function": "database_upgrade"},
+		"replicate": {"exclude": {"tables": ["updates_cache"]}}
 	},
 
 	"icons": [
