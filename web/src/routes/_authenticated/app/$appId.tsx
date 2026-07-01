@@ -288,6 +288,7 @@ function VersionsTab({ appId }: { appId: string }) {
   })()
 
   const handleUserVersionChange = async (value: string) => {
+    if (value === userValue) return
     const parsed = parseVersionValue(value)
     const { track } = parsed
     let { version } = parsed
@@ -309,6 +310,7 @@ function VersionsTab({ appId }: { appId: string }) {
   }
 
   const handleSystemVersionChange = async (value: string) => {
+    if (value === systemValue) return
     const parsed = parseVersionValue(value)
     const { track } = parsed
     let { version } = parsed
