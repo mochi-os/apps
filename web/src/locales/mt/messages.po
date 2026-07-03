@@ -31,11 +31,11 @@ msgstr "{0} aġġornati, {failed} fallew"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ġie installat."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (default, verżjoni {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (verżjoni {version})"
 
@@ -137,11 +137,11 @@ msgstr "Kollha"
 msgid "All apps updated"
 msgstr "L-apps kollha aġġornati"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Seħħet żball"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Seħħ żball mhux mistenni"
 
@@ -251,7 +251,7 @@ msgstr "Saħħaħ l-interess"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Ikkanċella"
 
@@ -473,24 +473,24 @@ msgstr "Default"
 msgid "Default AI account"
 msgstr "Kont AI default"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Default għall-utenti kollha"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Default għall-utenti kollha (verżjoni {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Default għall-utenti kollha aġġornat"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Track default"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Track default (verżjoni {0})"
 
@@ -598,7 +598,7 @@ msgstr "Ma rnexxiex jiżdied il-kont"
 msgid "Failed to clean up apps"
 msgstr "Ma rnexxiex li jitnaddfu l-apps"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Ma rnexxiex tingħata l-permess"
 
@@ -606,7 +606,7 @@ msgstr "Ma rnexxiex tingħata l-permess"
 msgid "Failed to remove account"
 msgstr "Ma rnexxiex jitneħħa l-kont"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Ma rnexxiex jiġi rrevokat il-permess"
 
@@ -622,12 +622,12 @@ msgstr "Ma rnexxiex li jiġu aġġornati l-apps"
 msgid "Failed to update category"
 msgstr "Ma rnexxiex tiġi aġġornata l-kategorija"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Ma rnexxiex jiġi aġġornat id-default"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Ma rnexxiex tiġi aġġornata l-preferenza"
 
@@ -712,19 +712,19 @@ msgstr "Mur fil-paġna {pageNumber}"
 msgid "Go to previous page"
 msgstr "Mur il-paġna ta' qabel"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Agħti"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Agħti permess"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Agħti permessi biex tippermetti lil din l-app taċċessa l-funzjonijiet tas-sistema"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Qed nagħti permess..."
 
@@ -884,7 +884,7 @@ msgstr "Ħareġ b'suċċess"
 msgid "Logging out…"
 msgstr "Qed joħroġ…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Immaniġġja l-kapaċitajiet mogħtija lil din l-applikazzjoni"
 
@@ -914,7 +914,7 @@ msgstr "It-Tnejn"
 msgid "Multiple apps declare this resource"
 msgstr "Diversi apps jiddikjaraw din ir-riżorsa"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Żball tan-network"
 
@@ -980,11 +980,11 @@ msgstr "L-ebda apps li jaqblu"
 msgid "No paths configured."
 msgstr "L-ebda paths ikkonfigurati."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "L-ebda permessi mogħtija"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "L-ebda permessi mogħtija lil din l-app"
 
@@ -1039,7 +1039,7 @@ msgstr "Normali"
 msgid "Not set"
 msgstr "Mhux issettjat"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Mhux verżjonat"
 
@@ -1117,19 +1117,19 @@ msgstr "Routing tal-path"
 msgid "Paths"
 msgstr "Paths"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Permess mogħti"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Permess revokat"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Permessi"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Jekk jogħġbok iċċekkja l-konnessjoni tal-internet tiegħek u erġa' pprova."
 
@@ -1141,7 +1141,7 @@ msgstr "Jekk jogħġbok daħħal app ID"
 msgid "Preference updated"
 msgstr "Preferenza aġġornata"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Verżjoni Preferuta"
 
@@ -1237,20 +1237,20 @@ msgstr "Reset"
 msgid "Reset all settings to default values"
 msgstr "Irriżetta s-settings kollha għall-valuri default"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Irrevoka"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Irrevoka permess"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Tirrevoka l-permess?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Qed nirrevoka l-permess..."
 
@@ -1273,8 +1273,8 @@ msgstr "Issejvja"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Qed jiġi ssejvjat..."
 
@@ -1316,7 +1316,7 @@ msgstr "Fittex..."
 msgid "Searching..."
 msgstr "Qed ifittex..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Agħżel kapaċità biex tagħti lil {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Agħżel direzzjoni tas-sit"
 msgid "Select theme preference"
 msgstr "Agħżel preferenza tat-tema"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Agħżel liema verżjoni ta' din l-app tuża"
 
@@ -1368,8 +1368,8 @@ msgstr "Ibgħat email"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Żball tas-server"
 
@@ -1391,7 +1391,7 @@ msgstr "Tiddirieġi servizz"
 msgid "Services"
 msgstr "Servizzi"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Sessjoni skadiet"
 
@@ -1465,7 +1465,7 @@ msgstr "Sistema"
 msgid "System default"
 msgstr "Default tas-sistema"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Default tas-Sistema"
 
@@ -1507,7 +1507,7 @@ msgstr "L-app ġiet installata b'suċċess."
 msgid "The requested app could not be found."
 msgstr "L-app mitluba ma nstabitx."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Il-verżjoni użata mill-utenti li ma għamlux għażla"
 
@@ -1519,7 +1519,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Settings tat-Tema"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Din l-app m'għandhiex ġestjoni tal-verżjonijiet"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Din l-app hija installata direttament mill-pubblikatur tagħha u ma ġietx ivverifikata. Tista' tkun malware."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Dan se jirrevoka l-permess \"{0}\" minn {appName}. L-app jista' jieqaf jaħdem korrettement."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Quċċata"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Track"
 
@@ -1607,7 +1607,7 @@ msgstr "Ittajpja biex tfittex utenti"
 msgid "Type to search..."
 msgstr "Ittajpja biex tfittex..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Ma jistax jaqbad mas-server remot"
 
@@ -1702,7 +1702,7 @@ msgstr "Ivverifika"
 msgid "Verify email address"
 msgstr "Ivverifika l-indirizz tal-email"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Verżjoni"
 
@@ -1711,11 +1711,11 @@ msgstr "Verżjoni"
 msgid "Version {0}"
 msgstr "Verżjoni {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Verżjoni mibdula"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Ġestjoni tal-Verżjoni"
 
@@ -1752,7 +1752,7 @@ msgstr "L-Erbgħa"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Il-kont tiegħek ġie miċċaqqlaq hawn minn {source}. Sakemm tħassru hemm, il-messaġġi u n-notifiki jistgħu jaslu fuq iż-żewġ servers, xi kontenut tiegħek jibqa' jingħata mis-server il-qadim, u s-segwaċi jistgħu jieħdu ftit minuti biex isibuk hawn."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "L-override personali tiegħek tal-verżjoni"
 
@@ -1760,6 +1760,6 @@ msgstr "L-override personali tiegħek tal-verżjoni"
 msgid "Your preference"
 msgstr "Il-preferenza tiegħek"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Verżjoni Tiegħek"

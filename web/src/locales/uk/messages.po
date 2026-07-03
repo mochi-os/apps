@@ -31,11 +31,11 @@ msgstr "{0} оновлено, {failed} не вдалося"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} встановлено."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (за замовчуванням, версія {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (версія {version})"
 
@@ -137,11 +137,11 @@ msgstr "Усі"
 msgid "All apps updated"
 msgstr "Усі застосунки оновлено"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Сталася помилка"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Сталася неочікувана помилка"
 
@@ -251,7 +251,7 @@ msgstr "Підвищити інтерес"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Скасувати"
 
@@ -473,24 +473,24 @@ msgstr "За замовчуванням"
 msgid "Default AI account"
 msgstr "AI-обліковий запис за замовчуванням"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "За замовчуванням для всіх користувачів"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "За замовчуванням для всіх користувачів (версія {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Значення за замовчуванням для всіх користувачів оновлено"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Канал за замовчуванням"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Канал за замовчуванням (версія {0})"
 
@@ -598,7 +598,7 @@ msgstr "Не вдалося додати обліковий запис"
 msgid "Failed to clean up apps"
 msgstr "Не вдалося очистити застосунки"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Не вдалося надати дозвіл"
 
@@ -606,7 +606,7 @@ msgstr "Не вдалося надати дозвіл"
 msgid "Failed to remove account"
 msgstr "Не вдалося видалити обліковий запис"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Не вдалося відкликати дозвіл"
 
@@ -622,12 +622,12 @@ msgstr "Не вдалося оновити застосунки"
 msgid "Failed to update category"
 msgstr "Не вдалося оновити категорію"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Не вдалося оновити значення за замовчуванням"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Не вдалося оновити налаштування"
 
@@ -712,19 +712,19 @@ msgstr "Перейти на сторінку {pageNumber}"
 msgid "Go to previous page"
 msgstr "Перейти на попередню сторінку"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Надати"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Надати дозвіл"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Надайте дозволи, щоб цей застосунок мав доступ до системних функцій"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Надання дозволу..."
 
@@ -884,7 +884,7 @@ msgstr "Вихід виконано успішно"
 msgid "Logging out…"
 msgstr "Виконується вихід…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Керувати можливостями, наданими цьому застосунку"
 
@@ -914,7 +914,7 @@ msgstr "Понеділок"
 msgid "Multiple apps declare this resource"
 msgstr "Кілька додатків оголошують цей ресурс"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Помилка мережі"
 
@@ -980,11 +980,11 @@ msgstr "Немає відповідних додатків"
 msgid "No paths configured."
 msgstr "Жодних шляхів не налаштовано."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Дозволів не надано"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Цьому застосунку не надано дозволів"
 
@@ -1039,7 +1039,7 @@ msgstr "Звичайний"
 msgid "Not set"
 msgstr "Не встановлено"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Без версії"
 
@@ -1117,19 +1117,19 @@ msgstr "Маршрутизація шляхів"
 msgid "Paths"
 msgstr "Шляхи"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Дозвіл надано"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Дозвіл відкликано"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Дозволи"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Будь ласка, перевірте підключення до Інтернету та спробуйте ще раз."
 
@@ -1141,7 +1141,7 @@ msgstr "Будь ласка, введіть ID додатку"
 msgid "Preference updated"
 msgstr "Параметр оновлено"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Бажана версія"
 
@@ -1237,20 +1237,20 @@ msgstr "Скинути"
 msgid "Reset all settings to default values"
 msgstr "Скинути всі налаштування до значень за замовчуванням"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Відкликати"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Відкликати дозвіл"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Відкликати дозвіл?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Скасування дозволу..."
 
@@ -1273,8 +1273,8 @@ msgstr "Зберегти"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Збереження..."
 
@@ -1316,7 +1316,7 @@ msgstr "Пошук..."
 msgid "Searching..."
 msgstr "Пошук..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Виберіть можливість, щоб надати її {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Виберіть напрямок сайту"
 msgid "Select theme preference"
 msgstr "Виберіть тему"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Виберіть, яку версію цього застосунку використовувати"
 
@@ -1368,8 +1368,8 @@ msgstr "Надіслати лист"
 msgid "Serif"
 msgstr "Із засічками"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Помилка сервера"
 
@@ -1391,7 +1391,7 @@ msgstr "Маршрутизація сервісів"
 msgid "Services"
 msgstr "Сервіси"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Термін сесії минув"
 
@@ -1465,7 +1465,7 @@ msgstr "Система"
 msgid "System default"
 msgstr "За замовчуванням системи"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "За замовчуванням системи"
 
@@ -1507,7 +1507,7 @@ msgstr "Застосунок успішно встановлено."
 msgid "The requested app could not be found."
 msgstr "Запитуваний застосунок не знайдено."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Версія, яку використовують користувачі, які не зробили вибір"
 
@@ -1519,7 +1519,7 @@ msgstr "Тема"
 msgid "Theme Settings"
 msgstr "Налаштування теми"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Цей застосунок не підтримує керування версіями"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Цей застосунок встановлюється безпосередньо від його видавця і не пройшов перевірку. Це може бути зловмисне програмне забезпечення."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Це відкличе дозвіл \"{0}\" від {appName}. Застосунок може перестати працювати правильно."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Верх"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Трек"
 
@@ -1607,7 +1607,7 @@ msgstr "Введіть для пошуку користувачів"
 msgid "Type to search..."
 msgstr "Введіть для пошуку..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Не вдалося підключитися до віддаленого сервера"
 
@@ -1702,7 +1702,7 @@ msgstr "Перевірити"
 msgid "Verify email address"
 msgstr "Підтвердити електронну адресу"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Версія"
 
@@ -1711,11 +1711,11 @@ msgstr "Версія"
 msgid "Version {0}"
 msgstr "Версія {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Версію змінено"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Керування версіями"
 
@@ -1752,7 +1752,7 @@ msgstr "Середа"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ваш обліковий запис переміщено сюди з {source}. Поки ви не видалите його там, повідомлення та сповіщення можуть надходити на обидва сервери, частина вашого вмісту продовжить надаватися зі старого сервера, а підписникам може знадобитися кілька хвилин, щоб знайти вас тут."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Ваше особисте перевизначення версії"
 
@@ -1760,6 +1760,6 @@ msgstr "Ваше особисте перевизначення версії"
 msgid "Your preference"
 msgstr "Ваші налаштування"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Ваша версія"

@@ -31,11 +31,11 @@ msgstr "{0} ອັບເດດແລ້ວ, {failed} ລົ້ມເຫຼວ"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ຖືກຕິດຕັ້ງແລ້ວ."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (default, ເວີຊັນ {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (ເວີຊັນ {version})"
 
@@ -137,11 +137,11 @@ msgstr "ທັງໝົດ"
 msgid "All apps updated"
 msgstr "ອັບເດດແອັບທັງໝົດແລ້ວ"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "ເກີດຂໍ້ຜິດພາດ"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຄາດຄິດ"
 
@@ -251,7 +251,7 @@ msgstr "ເພີ່ມຄວາມສົນໃຈ"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "ຍົກເລີກ"
 
@@ -473,24 +473,24 @@ msgstr "ຄ່າເລີ່ມຕົ້ນ"
 msgid "Default AI account"
 msgstr "ບັນຊີ AI ເລີ່ມຕົ້ນ"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "ຄ່າເລີ່ມຕົ້ນສຳລັບຜູ້ໃຊ້ທັງໝົດ"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "ຄ່າເລີ່ມຕົ້ນສຳລັບຜູ້ໃຊ້ທັງໝົດ (ເວີຊັນ {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "ອັບເດດຄ່າເລີ່ມຕົ້ນສຳລັບຜູ້ໃຊ້ທັງໝົດແລ້ວ"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "ແທຣັກເລີ່ມຕົ້ນ"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "ແທຣັກເລີ່ມຕົ້ນ (ເວີຊັນ {0})"
 
@@ -598,7 +598,7 @@ msgstr "ເພີ່ມບັນຊີລົ້ມເຫຼວ"
 msgid "Failed to clean up apps"
 msgstr "ລ້າງແອັບບໍ່ສຳເລັດ"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "ໃຫ້ສິດລົ້ມເຫຼວ"
 
@@ -606,7 +606,7 @@ msgstr "ໃຫ້ສິດລົ້ມເຫຼວ"
 msgid "Failed to remove account"
 msgstr "ຍ້າຍບັນຊີລົ້ມເຫຼວ"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "ຖອນສິດລົ້ມເຫຼວ"
 
@@ -622,12 +622,12 @@ msgstr "ອັບເດດແອັບບໍ່ສຳເລັດ"
 msgid "Failed to update category"
 msgstr "ອັບເດດໝວດໝູ່ລົ້ມເຫຼວ"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "ອັບເດດຄ່າເລີ່ມຕົ້ນລົ້ມເຫຼວ"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "ອັບເດດຄ່າເລືອກລົ້ມເຫຼວ"
 
@@ -712,19 +712,19 @@ msgstr "ໄປຫາໜ້າ {pageNumber}"
 msgid "Go to previous page"
 msgstr "ໄປໜ້າກ່ອນໜ້າ"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "ໃຫ້ສິດ"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "ໃຫ້ສິດ"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "ໃຫ້ສິດເພື່ອອະນຸຍາດໃຫ້ແອັບນີ້ເຂົ້າເຖິງຄຸນສົມບັດຂອງລະບົບ"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "ກຳລັງໃຫ້ສິດອະນຸຍາດ..."
 
@@ -884,7 +884,7 @@ msgstr "ອອກຈາກລະບົບສຳເລັດແລ້ວ"
 msgid "Logging out…"
 msgstr "ກຳລັງອອກຈາກລະບົບ…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "ຈັດການຄວາມສາມາດທີ່ໃຫ້ສິດແກ່ແອັບພລິເຄຊັນນີ້"
 
@@ -914,7 +914,7 @@ msgstr "ວັນຈັນ"
 msgid "Multiple apps declare this resource"
 msgstr "ມີຫຼາຍແອັບປະກາດຊັບພະຍາກອນນີ້"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "ຂໍ້ຜິດພາດເຄືອຂ່າຍ"
 
@@ -980,11 +980,11 @@ msgstr "ບໍ່ມີແອັບທີ່ກົງກັນ"
 msgid "No paths configured."
 msgstr "ບໍ່ມີເສັ້ນທາງທີ່ຕັ້ງຄ່າໄວ້."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "ບໍ່ມີສິດທີ່ໄດ້ຮັບ"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "ບໍ່ມີສິດທີ່ໄດ້ຮັບສຳລັບແອັບນີ້"
 
@@ -1039,7 +1039,7 @@ msgstr "ປົກກະຕິ"
 msgid "Not set"
 msgstr "ບໍ່ໄດ້ຕັ້ງຄ່າ"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "ບໍ່ມີເວີຊັນ"
 
@@ -1117,19 +1117,19 @@ msgstr "ການຮ້ອງຂໍເສັ້ນທາງ"
 msgid "Paths"
 msgstr "ເສັ້ນທາງ"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "ໃຫ້ສິດແລ້ວ"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "ຖອນສິດແລ້ວ"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "ສິດ"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "ກະລຸນາກວດສອບການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານ ແລະ ລອງໃໝ່ອີກຄັ້ງ."
 
@@ -1141,7 +1141,7 @@ msgstr "ກະລຸນາປ້ອນ ID ແອັບ"
 msgid "Preference updated"
 msgstr "ອັບເດດການຕັ້ງຄ່າແລ້ວ"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "ເວີຊັນທີ່ມັກ"
 
@@ -1237,20 +1237,20 @@ msgstr "ຣີເຊັດ"
 msgid "Reset all settings to default values"
 msgstr "ຣີເຊັດການຕັ້ງຄ່າທັງໝົດເປັນຄ່າເລີ່ມຕົ້ນ"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "ຖອນ"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "ຖອນສິດ"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "ຖອນສິດ?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "ກຳລັງຖອນສິດອະນຸຍາດ..."
 
@@ -1273,8 +1273,8 @@ msgstr "ບັນທຶກ"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "ກຳລັງບັນທຶກ..."
 
@@ -1316,7 +1316,7 @@ msgstr "ຄົ້ນຫາ..."
 msgid "Searching..."
 msgstr "ກຳລັງຄົ້ນຫາ..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "ເລືອກຄວາມສາມາດທີ່ຈະໃຫ້ກັບ {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "ເລືອກທິດທາງເວັບໄຊ"
 msgid "Select theme preference"
 msgstr "ເລືອກຄວາມຕ້ອງການຮູບແບບ"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "ເລືອກເວີຊັນຂອງແອັບນີ້ທີ່ຈະໃຊ້"
 
@@ -1368,8 +1368,8 @@ msgstr "ສົ່ງອີເມວ"
 msgid "Serif"
 msgstr "ເຊຣິບ"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "ຂໍ້ຜິດພາດເຊີບເວີ"
 
@@ -1391,7 +1391,7 @@ msgstr "ການນຳທາງບໍລິການ"
 msgid "Services"
 msgstr "ບໍລິການ"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Session ໝົດອາຍຸແລ້ວ"
 
@@ -1465,7 +1465,7 @@ msgstr "ລະບົບ"
 msgid "System default"
 msgstr "ຄ່າເລີ່ມຕົ້ນຂອງລະບົບ"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "ຄ່າເລີ່ມຕົ້ນຂອງລະບົບ"
 
@@ -1507,7 +1507,7 @@ msgstr "ແອັບຖືກຕິດຕັ້ງສຳເລັດແລ້ວ
 msgid "The requested app could not be found."
 msgstr "ບໍ່ສາມາດຊອກຫາແອັບທີ່ຮ້ອງຂໍໄດ້."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "ເວີຊັນທີ່ໃຊ້ໂດຍຜູ້ໃຊ້ທີ່ຍັງບໍ່ໄດ້ເລືອກ"
 
@@ -1519,7 +1519,7 @@ msgstr "ຮູບແບບ"
 msgid "Theme Settings"
 msgstr "ການຕັ້ງຄ່າຮູບແບບ"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "ແອັບນີ້ບໍ່ມີການຈັດການເວີຊັນ"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "ແອັບນີ້ຖືກຕິດຕັ້ງໂດຍກົງຈາກຜູ້ເຜີຍແຜ່ແລະຍັງບໍ່ໄດ້ຮັບການກວດສອບ. ມັນອາດເປັນ malware."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "ນີ້ຈະຖອນຄືນສິດ \"{0}\" ຈາກ {appName}. ແອັບອາດຈະຢຸດເຮັດວຽກຢ່າງຖືກຕ້ອງ."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "ເທິງ"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Track"
 
@@ -1607,7 +1607,7 @@ msgstr "ພິມເພື່ອຄົ້ນຫາຜູ້ໃຊ້"
 msgid "Type to search..."
 msgstr "ພິມເພື່ອຄົ້ນຫາ..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "ບໍ່ສາມາດເຊື່ອມຕໍ່ກັບເຊີບເວີໄລຍະໄກໄດ້"
 
@@ -1702,7 +1702,7 @@ msgstr "ຢືນຢັນ"
 msgid "Verify email address"
 msgstr "ຢືນຢັນທີ່ຢູ່ອີເມວ"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "ເວີຊັນ"
 
@@ -1711,11 +1711,11 @@ msgstr "ເວີຊັນ"
 msgid "Version {0}"
 msgstr "ເວີຊັນ {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "ເວີຊັນຖືກປ່ຽນແປງ"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "ການຈັດການເວີຊັນ"
 
@@ -1752,7 +1752,7 @@ msgstr "ວັນພຸດ"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "ບັນຊີຂອງທ່ານໄດ້ຍ້າຍມາທີ່ນີ້ຈາກ {source}. ຈົນກວ່າທ່ານຈະລຶບມັນທີ່ນັ້ນ, ຂໍ້ຄວາມ ແລະ ການແຈ້ງເຕືອນອາດຈະໄປຮອດທັງສອງເຊີຟເວີ, ບາງເນື້ອຫາຂອງທ່ານຍັງຄົງໃຫ້ບໍລິການຈາກເຊີຟເວີເກົ່າ, ແລະ ຜູ້ຕິດຕາມອາດຈະໃຊ້ເວລາສອງສາມນາທີເພື່ອຊອກຫາທ່ານທີ່ນີ້."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "ການແທນທີ່ເວີຊັນສ່ວນຕົວຂອງທ່ານ"
 
@@ -1760,6 +1760,6 @@ msgstr "ການແທນທີ່ເວີຊັນສ່ວນຕົວຂອ
 msgid "Your preference"
 msgstr "ຄວາມຕ້ອງການຂອງທ່ານ"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "ເວີຊັນຂອງທ່ານ"

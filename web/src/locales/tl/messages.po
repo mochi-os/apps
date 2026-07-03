@@ -31,11 +31,11 @@ msgstr "{0} na-update, {failed} ang nabigo"
 msgid "{0} v{1} has been installed."
 msgstr "Naka-install na ang {0} v{1}."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (default, bersyon {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (bersyon {version})"
 
@@ -137,11 +137,11 @@ msgstr "Lahat"
 msgid "All apps updated"
 msgstr "Na-update lahat ng app"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "May naganap na error"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "May naganap na hindi inaasahang error"
 
@@ -251,7 +251,7 @@ msgstr "Palakasin ang interes"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Kanselahin"
 
@@ -473,24 +473,24 @@ msgstr "Default"
 msgid "Default AI account"
 msgstr "Default na AI account"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Default para sa lahat ng user"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Default para sa lahat ng user (bersyon {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Na-update ang default para sa lahat ng user"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Default na track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Default na track (bersyon {0})"
 
@@ -598,7 +598,7 @@ msgstr "Nabigong magdagdag ng account"
 msgid "Failed to clean up apps"
 msgstr "Nabigong linisin ang mga app"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Nabigong magbigay ng permission"
 
@@ -606,7 +606,7 @@ msgstr "Nabigong magbigay ng permission"
 msgid "Failed to remove account"
 msgstr "Nabigong tanggalin ang account"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Nabigong i-revoke ang permission"
 
@@ -622,12 +622,12 @@ msgstr "Nabigong i-update ang mga app"
 msgid "Failed to update category"
 msgstr "Nabigong i-update ang category"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Nabigong i-update ang default"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Nabigong i-update ang preference"
 
@@ -712,19 +712,19 @@ msgstr "Pumunta sa pahina {pageNumber}"
 msgid "Go to previous page"
 msgstr "Pumunta sa previous page"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Ibigay"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Magbigay ng permission"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Magbigay ng mga permission para payagan ang app na ito na ma-access ang mga system feature"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Nagbibigay ng pahintulot..."
 
@@ -884,7 +884,7 @@ msgstr "Matagumpay na nag-log out"
 msgid "Logging out…"
 msgstr "Nagla-log out…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Pamahalaan ang mga kakayahan na ibinigay sa application na ito"
 
@@ -914,7 +914,7 @@ msgstr "Lunes"
 msgid "Multiple apps declare this resource"
 msgstr "Maraming app ang nagde-declare ng resource na ito"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Error sa network"
 
@@ -980,11 +980,11 @@ msgstr "Walang tugmang app"
 msgid "No paths configured."
 msgstr "Walang naka-configure na mga path."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Walang ibinigay na permission"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Walang mga pahintulot na ibinigay sa app na ito"
 
@@ -1039,7 +1039,7 @@ msgstr "Karaniwan"
 msgid "Not set"
 msgstr "Hindi naka-set"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Hindi bersyonado"
 
@@ -1117,19 +1117,19 @@ msgstr "Path routing"
 msgid "Paths"
 msgstr "Mga Path"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Naibigay ang permission"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Binawi ang permission"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Mga Permission"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Pakitingnan ang iyong koneksyon sa internet at subukang muli."
 
@@ -1141,7 +1141,7 @@ msgstr "Mangyaring maglagay ng app ID"
 msgid "Preference updated"
 msgstr "Na-update ang kagustuhan"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Ginustong bersyon"
 
@@ -1237,20 +1237,20 @@ msgstr "I-reset"
 msgid "Reset all settings to default values"
 msgstr "I-reset ang lahat ng setting sa mga default na halaga"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Bawiin"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Bawiin ang pahintulot"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Bawiin ang permission?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Binabawi ang pahintulot..."
 
@@ -1273,8 +1273,8 @@ msgstr "I-save"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Sini-save..."
 
@@ -1316,7 +1316,7 @@ msgstr "Maghanap..."
 msgid "Searching..."
 msgstr "Naghahanap..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Pumili ng kakayahan na ibibigay sa {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Pumili ng direksyon ng site"
 msgid "Select theme preference"
 msgstr "Pumili ng theme preference"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Piliin kung aling bersyon ng app na ito ang gagamitin"
 
@@ -1368,8 +1368,8 @@ msgstr "Magpadala ng email"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Error sa server"
 
@@ -1391,7 +1391,7 @@ msgstr "Service routing"
 msgid "Services"
 msgstr "Mga service"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Nag-expire na ang session"
 
@@ -1465,7 +1465,7 @@ msgstr "System"
 msgid "System default"
 msgstr "System default"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "System Default"
 
@@ -1507,7 +1507,7 @@ msgstr "Matagumpay na na-install ang app."
 msgid "The requested app could not be found."
 msgstr "Hindi nakita ang hiniling na app."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Ang bersyon na ginagamit ng mga user na hindi pa pumipili"
 
@@ -1519,7 +1519,7 @@ msgstr "Theme"
 msgid "Theme Settings"
 msgstr "Mga Setting ng Theme"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Walang version management ang app na ito"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Ang app na ito ay direktang naka-install mula sa publisher nito at hindi pa nasusuri. Maaaring ito ay malware."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Babawiin nito ang \"{0}\" na pahintulot mula sa {appName}. Maaaring tumigil sa paggana nang tama ang app."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Itaas"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Track"
 
@@ -1607,7 +1607,7 @@ msgstr "Mag-type para maghanap ng user"
 msgid "Type to search..."
 msgstr "Mag-type para maghanap..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Hindi makakonekta sa malayong server"
 
@@ -1702,7 +1702,7 @@ msgstr "Beripikahin"
 msgid "Verify email address"
 msgstr "Beripikahin ang email address"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Bersyon"
 
@@ -1711,11 +1711,11 @@ msgstr "Bersyon"
 msgid "Version {0}"
 msgstr "Bersyon {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Nabago ang bersyon"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Pamamahala ng Bersyon"
 
@@ -1752,7 +1752,7 @@ msgstr "Miyerkules"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ang iyong account ay inilipat dito mula sa {source}. Hanggang hindi mo ito binubura doon, ang mga mensahe at abiso ay maaaring maabot ang parehong mga server, ang ilan sa iyong nilalaman ay patuloy na pinaglilingkuran mula sa lumang server, at ang mga tagasunod ay maaaring maglaan ng ilang minuto upang mahanap ka dito."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Iyong personal na version override"
 
@@ -1760,6 +1760,6 @@ msgstr "Iyong personal na version override"
 msgid "Your preference"
 msgstr "Ang iyong kagustuhan"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Ang iyong bersyon"

@@ -31,11 +31,11 @@ msgstr "{0} шинэчилсэн, {failed} амжилтгүй"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} суулгагдлаа."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (анхдагч, хувилбар {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (хувилбар {version})"
 
@@ -137,11 +137,11 @@ msgstr "Бүгд"
 msgid "All apps updated"
 msgstr "Бүх апп шинэчлэгдсэн"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Алдаа гарлаа"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Гэнэтийн алдаа гарлаа"
 
@@ -251,7 +251,7 @@ msgstr "Сонирхлыг идэвхжүүлэх"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Цуцлах"
 
@@ -473,24 +473,24 @@ msgstr "Үндсэн"
 msgid "Default AI account"
 msgstr "Үндсэн AI бүртгэл"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Бүх хэрэглэгчдийн үндсэн"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Бүх хэрэглэгчдийн үндсэн (хувилбар {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Бүх хэрэглэгчдийн үндсэн утга шинэчлэгдсэн"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Үндсэн track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Үндсэн track (хувилбар {0})"
 
@@ -598,7 +598,7 @@ msgstr "Бүртгэл нэмж чадсангүй"
 msgid "Failed to clean up apps"
 msgstr "Аппуудыг цэвэрлэж чадсангүй"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Зөвшөөрөл олгож чадсангүй"
 
@@ -606,7 +606,7 @@ msgstr "Зөвшөөрөл олгож чадсангүй"
 msgid "Failed to remove account"
 msgstr "Бүртгэл хасч чадсангүй"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Зөвшөөрлийг хүчингүй болгож чадсангүй"
 
@@ -622,12 +622,12 @@ msgstr "Аппуудыг шинэчилж чадсангүй"
 msgid "Failed to update category"
 msgstr "Ангилал шинэчилж чадсангүй"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Үндсэнг шинэчилж чадсангүй"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Тохиргоог шинэчилж чадсангүй"
 
@@ -712,19 +712,19 @@ msgstr "{pageNumber} хуудас руу очих"
 msgid "Go to previous page"
 msgstr "Өмнөх хуудас руу очих"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Олгох"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Зөвшөөрөл олгох"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Энэ апп-д системийн боломжуудад хандах зөвшөөрөл олгох"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Зөвшөөрөл олгож байна..."
 
@@ -884,7 +884,7 @@ msgstr "Амжилттай гарлаа"
 msgid "Logging out…"
 msgstr "Гарч байна…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Энэ програмд олгосон чадваруудыг удирдах"
 
@@ -914,7 +914,7 @@ msgstr "Даваа"
 msgid "Multiple apps declare this resource"
 msgstr "Олон апп энэ нөөцийг зарласан"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Сүлжээний алдаа"
 
@@ -980,11 +980,11 @@ msgstr "Тохирох апп алга"
 msgid "No paths configured."
 msgstr "Зам тохируулаагүй байна."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Зөвшөөрөл олгоогүй"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Энэ апп-д зөвшөөрөл олгоогүй"
 
@@ -1039,7 +1039,7 @@ msgstr "Энгийн"
 msgid "Not set"
 msgstr "Тохируулаагүй"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Хувилбаргүй"
 
@@ -1117,19 +1117,19 @@ msgstr "Замын чиглүүлэлт"
 msgid "Paths"
 msgstr "Замууд"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Зөвшөөрөл олгогдсон"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Зөвшөөрөл цуцлагдсан"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Зөвшөөрөл"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Интернет холболтоо шалгаад дахин оролдоно уу."
 
@@ -1141,7 +1141,7 @@ msgstr "Апп-ын ID оруулна уу"
 msgid "Preference updated"
 msgstr "Тохиргоо шинэчлэгдсэн"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Илүүд үздэг хувилбар"
 
@@ -1237,20 +1237,20 @@ msgstr "Шинэчлэх"
 msgid "Reset all settings to default values"
 msgstr "Бүх тохиргоог анхдагч утгад нь сэргээх"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Цуцлах"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Зөвшөөрөл цуцлах"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Зөвшөөрөл цуцлах уу?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Зөвшөөрлийг цуцалж байна..."
 
@@ -1273,8 +1273,8 @@ msgstr "Хадгалах"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Хадгалж байна..."
 
@@ -1316,7 +1316,7 @@ msgstr "Хайх..."
 msgid "Searching..."
 msgstr "Хайж байна..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "{appName}-д олгох чадварыг сонгоно уу."
 
@@ -1352,7 +1352,7 @@ msgstr "Сайтын чиглэл сонгох"
 msgid "Select theme preference"
 msgstr "Загварын тохируулга сонгох"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Энэ программын аль хувилбарыг ашиглахаа сонгох"
 
@@ -1368,8 +1368,8 @@ msgstr "Имэйл илгээх"
 msgid "Serif"
 msgstr "Сериф"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Серверийн алдаа"
 
@@ -1391,7 +1391,7 @@ msgstr "Үйлчилгээний чиглүүлэлт"
 msgid "Services"
 msgstr "Үйлчилгээнүүд"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Сесс хугацаа дууссан"
 
@@ -1465,7 +1465,7 @@ msgstr "Систем"
 msgid "System default"
 msgstr "Системийн анхдагч"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Системийн анхдагч"
 
@@ -1507,7 +1507,7 @@ msgstr "Программ амжилттай суулгагдлаа."
 msgid "The requested app could not be found."
 msgstr "Хүссэн программ олдсонгүй."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Сонголт хийгээгүй хэрэглэгчдийн хэрэглэдэг хувилбар"
 
@@ -1519,7 +1519,7 @@ msgstr "Загвар"
 msgid "Theme Settings"
 msgstr "Загварын тохиргоо"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Энэ программ хувилбарын удирдлагатай биш"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Энэ программ нь хэвлэгчээс шууд суулгасан бөгөөд шалгагдаагүй. Хорт код байж магадгүй."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Энэ нь {appName}-аас \"{0}\" зөвшөөрлийг цуцална. Программ зөв ажиллахаа болих байж магадгүй."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Дээд"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Track"
 
@@ -1607,7 +1607,7 @@ msgstr "Хэрэглэгч хайхын тулд бичих"
 msgid "Type to search..."
 msgstr "Хайхын тулд бичих..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Алсын сервер рүү холбогдож чадсангүй"
 
@@ -1702,7 +1702,7 @@ msgstr "Баталгаажуулах"
 msgid "Verify email address"
 msgstr "Имэйл хаягийг баталгаажуулах"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Хувилбар"
 
@@ -1711,11 +1711,11 @@ msgstr "Хувилбар"
 msgid "Version {0}"
 msgstr "Хувилбар {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Хувилбар өөрчлөгдсөн"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Хувилбарын удирдлага"
 
@@ -1752,7 +1752,7 @@ msgstr "Лхагва гараг"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Таны бүртгэл {source}-с энд шилжсэн. Тэнд устгах хүртэл мессеж, мэдэгдлүүд хоёр сервер рүү хүрч болно, таны зарим контент хуучин серверээс ирсээр байж болно, дагагчид таныг эндээс олоход хэдэн минут зарцуулж магадгүй."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Таны хувийн хувилбарын давхарга"
 
@@ -1760,6 +1760,6 @@ msgstr "Таны хувийн хувилбарын давхарга"
 msgid "Your preference"
 msgstr "Таны тохируулга"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Таны хувилбар"

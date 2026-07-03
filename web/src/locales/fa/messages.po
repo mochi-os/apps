@@ -31,11 +31,11 @@ msgstr "{0} به‌روزرسانی شد، {failed} ناموفق"
 msgid "{0} v{1} has been installed."
 msgstr "{0} نسخه {1} نصب شد."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (پیش‌فرض، نسخه {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (نسخه {version})"
 
@@ -137,11 +137,11 @@ msgstr "همه"
 msgid "All apps updated"
 msgstr "همهٔ برنامه‌ها به‌روزرسانی شدند"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "خطایی رخ داد"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "خطای غیرمنتظره‌ای رخ داد"
 
@@ -251,7 +251,7 @@ msgstr "تقویت علاقه"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "لغو"
 
@@ -473,24 +473,24 @@ msgstr "پیش‌فرض"
 msgid "Default AI account"
 msgstr "حساب پیش‌فرض هوش مصنوعی"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "پیش‌فرض برای همهٔ کاربران"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "پیش‌فرض برای همهٔ کاربران (نسخهٔ {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "پیش‌فرض برای همهٔ کاربران به‌روزرسانی شد"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Track پیش‌فرض"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Track پیش‌فرض (نسخهٔ {0})"
 
@@ -598,7 +598,7 @@ msgstr "افزودن حساب ناموفق بود"
 msgid "Failed to clean up apps"
 msgstr "پاک‌سازی برنامه‌ها ناموفق بود"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "اعطای مجوز ناموفق بود"
 
@@ -606,7 +606,7 @@ msgstr "اعطای مجوز ناموفق بود"
 msgid "Failed to remove account"
 msgstr "حذف حساب ناموفق بود"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "لغو مجوز ناموفق بود"
 
@@ -622,12 +622,12 @@ msgstr "به‌روزرسانی برنامه‌ها ناموفق بود"
 msgid "Failed to update category"
 msgstr "به‌روزرسانی دسته ناموفق بود"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "به‌روزرسانی پیش‌فرض ناموفق بود"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "به‌روزرسانی ترجیح ناموفق بود"
 
@@ -712,19 +712,19 @@ msgstr "رفتن به صفحه {pageNumber}"
 msgid "Go to previous page"
 msgstr "رفتن به صفحه قبل"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "اعطا"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "اعطای مجوز"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "برای اجازه دسترسی این اپ به امکانات سیستم، مجوزها را اعطا کنید"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "در حال اعطای مجوز..."
 
@@ -884,7 +884,7 @@ msgstr "با موفقیت خارج شد"
 msgid "Logging out…"
 msgstr "در حال خروج…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "مدیریت قابلیت‌های اعطاشده به این برنامه"
 
@@ -914,7 +914,7 @@ msgstr "دوشنبه"
 msgid "Multiple apps declare this resource"
 msgstr "چند اپ این منبع را اعلام می‌کنند"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "خطای شبکه"
 
@@ -980,11 +980,11 @@ msgstr "برنامه مطابقی وجود ندارد"
 msgid "No paths configured."
 msgstr "هیچ مسیری پیکربندی نشده است."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "هیچ مجوزی اعطا نشده است"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "هیچ مجوزی به این برنامه اعطا نشده است"
 
@@ -1039,7 +1039,7 @@ msgstr "معمولی"
 msgid "Not set"
 msgstr "تنظیم نشده"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "نسخه‌گذاری نشده"
 
@@ -1117,19 +1117,19 @@ msgstr "مسیریابی Path"
 msgid "Paths"
 msgstr "مسیرها"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "مجوز اعطا شد"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "مجوز لغو شد"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "مجوزها"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "لطفاً اتصال اینترنت خود را بررسی کرده و دوباره تلاش کنید."
 
@@ -1141,7 +1141,7 @@ msgstr "لطفاً شناسه برنامه را وارد کنید"
 msgid "Preference updated"
 msgstr "ترجیح به‌روزرسانی شد"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "نسخه ترجیحی"
 
@@ -1237,20 +1237,20 @@ msgstr "بازنشانی"
 msgid "Reset all settings to default values"
 msgstr "بازنشانی همه تنظیمات به مقادیر پیش‌فرض"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "لغو"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "لغو مجوز"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "لغو مجوز؟"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "در حال لغو مجوز..."
 
@@ -1273,8 +1273,8 @@ msgstr "ذخیره"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "در حال ذخیره..."
 
@@ -1316,7 +1316,7 @@ msgstr "جست‌وجو..."
 msgid "Searching..."
 msgstr "در حال جست‌وجو..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "قابلیتی را برای اعطا به {appName} انتخاب کنید."
 
@@ -1352,7 +1352,7 @@ msgstr "انتخاب جهت سایت"
 msgid "Select theme preference"
 msgstr "انتخاب ترجیح تم"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "انتخاب نسخه‌ای از این اپ که استفاده شود"
 
@@ -1368,8 +1368,8 @@ msgstr "ارسال ایمیل"
 msgid "Serif"
 msgstr "سریف"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "خطای سرور"
 
@@ -1391,7 +1391,7 @@ msgstr "مسیریابی سرویس"
 msgid "Services"
 msgstr "سرویس‌ها"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "نشست منقضی شد"
 
@@ -1465,7 +1465,7 @@ msgstr "سیستم"
 msgid "System default"
 msgstr "پیش‌فرض سیستم"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "پیش‌فرض سیستم"
 
@@ -1507,7 +1507,7 @@ msgstr "اپ با موفقیت نصب شد."
 msgid "The requested app could not be found."
 msgstr "اپ درخواست‌شده یافت نشد."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "نسخه‌ای که برای کاربرانی استفاده می‌شود که انتخابی نکرده‌اند"
 
@@ -1519,7 +1519,7 @@ msgstr "تم"
 msgid "Theme Settings"
 msgstr "تنظیمات تم"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "این اپ مدیریت نسخه ندارد"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "این اپ مستقیماً از ناشر آن نصب شده و بررسی نشده است. ممکن است بدافزار باشد."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "این کار مجوز «{0}» را از {appName} لغو می‌کند. ممکن است اپ به‌درستی کار نکند."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "بالا"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Track"
 
@@ -1607,7 +1607,7 @@ msgstr "برای جست‌وجوی کاربران تایپ کنید"
 msgid "Type to search..."
 msgstr "برای جست‌وجو تایپ کنید..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "اتصال به سرور راه دور ممکن نیست"
 
@@ -1702,7 +1702,7 @@ msgstr "تأیید"
 msgid "Verify email address"
 msgstr "تأیید نشانی ایمیل"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "نسخه"
 
@@ -1711,11 +1711,11 @@ msgstr "نسخه"
 msgid "Version {0}"
 msgstr "نسخه {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "نسخه تغییر کرد"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "مدیریت نسخه"
 
@@ -1752,7 +1752,7 @@ msgstr "چهارشنبه"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "حساب کاربری شما از {source} به اینجا منتقل شده است. تا زمانی که آن را آنجا حذف نکنید، پیام‌ها و اعلان‌ها ممکن است به هر دو سرور برسند، بخشی از محتوای شما همچنان از سرور قدیمی ارائه می‌شود، و دنبال‌کنندگان ممکن است چند دقیقه‌ای طول بکشد تا شما را اینجا پیدا کنند."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "بازنویسی نسخه شخصی شما"
 
@@ -1760,6 +1760,6 @@ msgstr "بازنویسی نسخه شخصی شما"
 msgid "Your preference"
 msgstr "ترجیح شما"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "نسخه شما"

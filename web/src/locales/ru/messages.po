@@ -31,11 +31,11 @@ msgstr "{0} обновлено, {failed} не удалось"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} установлено."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (по умолчанию, версия {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (версия {version})"
 
@@ -137,11 +137,11 @@ msgstr "Все"
 msgid "All apps updated"
 msgstr "Все приложения обновлены"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Произошла ошибка"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Произошла непредвиденная ошибка"
 
@@ -251,7 +251,7 @@ msgstr "Усилить интерес"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -473,24 +473,24 @@ msgstr "По умолчанию"
 msgid "Default AI account"
 msgstr "Аккаунт ИИ по умолчанию"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "По умолчанию для всех пользователей"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "По умолчанию для всех пользователей (версия {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Значение по умолчанию для всех пользователей обновлено"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Канал по умолчанию"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Канал по умолчанию (версия {0})"
 
@@ -598,7 +598,7 @@ msgstr "Не удалось добавить аккаунт"
 msgid "Failed to clean up apps"
 msgstr "Не удалось очистить приложения"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Не удалось предоставить разрешение"
 
@@ -606,7 +606,7 @@ msgstr "Не удалось предоставить разрешение"
 msgid "Failed to remove account"
 msgstr "Не удалось удалить аккаунт"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Не удалось отозвать разрешение"
 
@@ -622,12 +622,12 @@ msgstr "Не удалось обновить приложения"
 msgid "Failed to update category"
 msgstr "Не удалось обновить категорию"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Не удалось обновить значение по умолчанию"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Не удалось обновить настройку"
 
@@ -712,19 +712,19 @@ msgstr "Перейти на страницу {pageNumber}"
 msgid "Go to previous page"
 msgstr "Перейти на предыдущую страницу"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Предоставить"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Предоставить разрешение"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Предоставьте разрешения, чтобы это приложение могло получить доступ к системным функциям"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Предоставление разрешения..."
 
@@ -884,7 +884,7 @@ msgstr "Выход выполнен успешно"
 msgid "Logging out…"
 msgstr "Выход…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Управление возможностями, предоставленными этому приложению"
 
@@ -914,7 +914,7 @@ msgstr "Понедельник"
 msgid "Multiple apps declare this resource"
 msgstr "Несколько приложений объявляют этот ресурс"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Ошибка сети"
 
@@ -980,11 +980,11 @@ msgstr "Нет подходящих приложений"
 msgid "No paths configured."
 msgstr "Пути не настроены."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Разрешения не предоставлены"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Этому приложению не предоставлены разрешения"
 
@@ -1039,7 +1039,7 @@ msgstr "Обычный"
 msgid "Not set"
 msgstr "Не задано"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Без версии"
 
@@ -1117,19 +1117,19 @@ msgstr "Маршрутизация по пути"
 msgid "Paths"
 msgstr "Пути"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Разрешение предоставлено"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Разрешение отозвано"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Разрешения"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Проверьте подключение к интернету и попробуйте снова."
 
@@ -1141,7 +1141,7 @@ msgstr "Пожалуйста, введите ID приложения"
 msgid "Preference updated"
 msgstr "Предпочтение обновлено"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Предпочитаемая версия"
 
@@ -1237,20 +1237,20 @@ msgstr "Сбросить"
 msgid "Reset all settings to default values"
 msgstr "Сбросить все настройки к значениям по умолчанию"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Отозвать"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Отозвать разрешение"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Отозвать разрешение?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Отзыв разрешения..."
 
@@ -1273,8 +1273,8 @@ msgstr "Сохранить"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Сохранение..."
 
@@ -1316,7 +1316,7 @@ msgstr "Поиск..."
 msgid "Searching..."
 msgstr "Поиск..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Выберите возможность для предоставления {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Выберите направление сайта"
 msgid "Select theme preference"
 msgstr "Выберите предпочтение темы"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Выберите, какую версию приложения использовать"
 
@@ -1368,8 +1368,8 @@ msgstr "Отправить письмо"
 msgid "Serif"
 msgstr "С засечками"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Ошибка сервера"
 
@@ -1391,7 +1391,7 @@ msgstr "Маршрутизация сервисов"
 msgid "Services"
 msgstr "Сервисы"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Сеанс истёк"
 
@@ -1465,7 +1465,7 @@ msgstr "Система"
 msgid "System default"
 msgstr "Системные настройки"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Системные настройки"
 
@@ -1507,7 +1507,7 @@ msgstr "Приложение успешно установлено."
 msgid "The requested app could not be found."
 msgstr "Запрошенное приложение не найдено."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Версия, используемая пользователями, не сделавшими выбор"
 
@@ -1519,7 +1519,7 @@ msgstr "Тема"
 msgid "Theme Settings"
 msgstr "Настройки темы"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Это приложение не имеет управления версиями"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Это приложение устанавливается непосредственно от его издателя и не было проверено. Это может быть вредоносное ПО."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Это отзовёт разрешение \"{0}\" у {appName}. Приложение может перестать работать корректно."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Верх"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Трек"
 
@@ -1607,7 +1607,7 @@ msgstr "Введите для поиска пользователей"
 msgid "Type to search..."
 msgstr "Введите для поиска..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Не удалось подключиться к удалённому серверу"
 
@@ -1702,7 +1702,7 @@ msgstr "Подтвердить"
 msgid "Verify email address"
 msgstr "Подтвердить адрес email"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Версия"
 
@@ -1711,11 +1711,11 @@ msgstr "Версия"
 msgid "Version {0}"
 msgstr "Версия {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Версия изменена"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Управление версиями"
 
@@ -1752,7 +1752,7 @@ msgstr "Среда"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ваш аккаунт был перенесён сюда с {source}. Пока вы не удалите его там, сообщения и уведомления могут поступать на оба сервера, часть вашего контента по-прежнему обслуживается со старого сервера, а подписчикам может потребоваться несколько минут, чтобы найти вас здесь."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Ваше персональное переопределение версии"
 
@@ -1760,6 +1760,6 @@ msgstr "Ваше персональное переопределение вер�
 msgid "Your preference"
 msgstr "Ваше предпочтение"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Ваша версия"

@@ -31,11 +31,11 @@ msgstr "{0} oñembohekopyahu, {failed} ndoiporãi"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} oñehupi."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (ypygua, versión {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (versión {version})"
 
@@ -137,11 +137,11 @@ msgstr "Opaite"
 msgid "All apps updated"
 msgstr "Opaite app oñembojeguáma"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Oĩ peteĩ jejavy"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Oĩ peteĩ jejavy ñeha'ãrõ'ỹva"
 
@@ -251,7 +251,7 @@ msgstr "Boost mba'erekohápe"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Heja"
 
@@ -473,24 +473,24 @@ msgstr "Default"
 msgid "Default AI account"
 msgstr "Default AI tetãygua"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Default opaite puruhárape g̃uarã"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Default opaite puruhárape g̃uarã (versión {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Default opaite puruhárape g̃uarã oñembojeguáma"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Default track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Default track (versión {0})"
 
@@ -598,7 +598,7 @@ msgstr "Ndaikatúi oñembojuaju cuenta"
 msgid "Failed to clean up apps"
 msgstr "Ndaikatúi oñemopotĩ umi app"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Ndaikatúi oñeme'ẽ permiso"
 
@@ -606,7 +606,7 @@ msgstr "Ndaikatúi oñeme'ẽ permiso"
 msgid "Failed to remove account"
 msgstr "Ndaikatúi oñembogue cuenta"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Ndaikatúi oñembogue permiso"
 
@@ -622,12 +622,12 @@ msgstr "Ndaikatúi oñembohekopyahu umi app"
 msgid "Failed to update category"
 msgstr "Ndaikatúi oñembohera'ã pyahu categoría"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Ndaikatúi oñembohera'ã pyahu default"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Ndaikatúi oñembohera'ã pyahu preferencia"
 
@@ -712,19 +712,19 @@ msgstr "Tereho kuatiarogue {pageNumber}-pe"
 msgid "Go to previous page"
 msgstr "Mboyvegua kuatiaroguépe"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Eme'ẽ"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Eme'ẽ permiso"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Eme'ẽ permisos eme'ẽ haguã ko app-pe acceso sistema funcionalidades-pe"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Oñemeʼẽhína moneĩ..."
 
@@ -884,7 +884,7 @@ msgstr "Osẽ porã"
 msgid "Logging out…"
 msgstr "Osẽhína…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Eñangareko capacidades oñeme'ẽva ko app-pe"
 
@@ -914,7 +914,7 @@ msgstr "Arakõi"
 msgid "Multiple apps declare this resource"
 msgstr "Apps heta omombe'u ko recurso"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Jejavy ñanduti rehegua"
 
@@ -980,11 +980,11 @@ msgstr "Ndaipóri apps ojuajúva"
 msgid "No paths configured."
 msgstr "Ndaipóri tape oñembosako'íva"
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Ndaipóri permisos ome'ẽva'ekue"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Ndaipóri permisos ome'ẽva'ekue ko app-pe"
 
@@ -1039,7 +1039,7 @@ msgstr "Iko háicha"
 msgid "Not set"
 msgstr "Noñemoĩri"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Versión'ỹre"
 
@@ -1117,19 +1117,19 @@ msgstr "Tape ñemboguata"
 msgid "Paths"
 msgstr "Tape"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Permiso oñeme'ẽ"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Permiso oñepe'a"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Permisos"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Ehechami nde internet conexión ha eha'ã jey."
 
@@ -1141,7 +1141,7 @@ msgstr "Emoinge app ID"
 msgid "Preference updated"
 msgstr "Ñembojeroviaa oñembohekopyahu"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Versión Iporãvéva"
 
@@ -1237,20 +1237,20 @@ msgstr "Embojevy"
 msgid "Reset all settings to default values"
 msgstr "Embojevy opa ñembosako'i ypy peguávape"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Embogue"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Embogue permiso"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Embogue permiso?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Ojepeʼahína moneĩ..."
 
@@ -1273,8 +1273,8 @@ msgstr "Ñongatu"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Oñeñongatuhína..."
 
@@ -1316,7 +1316,7 @@ msgstr "Eheka..."
 msgid "Searching..."
 msgstr "Ohekahína..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Eporavo peteĩ capacidad eme'ẽ haguã {appName}-pe."
 
@@ -1352,7 +1352,7 @@ msgstr "Eiporavo táva ñemboja'o"
 msgid "Select theme preference"
 msgstr "Eiporavo theme jeporavo"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Eiporavo ko tembiporu mba'éichapa eiporu"
 
@@ -1368,8 +1368,8 @@ msgstr "Emondo email"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Jejavy servidor rehegua"
 
@@ -1391,7 +1391,7 @@ msgstr "Tembiapo ñemoĩporã"
 msgid "Services"
 msgstr "Tembiapokuéra"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Sesión opa"
 
@@ -1465,7 +1465,7 @@ msgstr "Sistema"
 msgid "System default"
 msgstr "Sistema ypy"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Sistema Ypy"
 
@@ -1507,7 +1507,7 @@ msgstr "Tembiporu oñehupi porãma."
 msgid "The requested app could not be found."
 msgstr "Tembiporu oñejeruréva ndojejuhúi."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Versión oiporúva mboapurevaharakuéra ndojeporavovéiva"
 
@@ -1519,7 +1519,7 @@ msgstr "Theme"
 msgid "Theme Settings"
 msgstr "Theme Ñemboheko"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Ko tembiporu ndorekói versión jehekoñongatu"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Ko tembiporu oñehupi pe publicador-gui añoite ha ndojehesa'ỹijói gueteri. Ikatu malware."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Kóva oityta \"{0}\" permiso {appName}-gui. Tembiporu ikatu opyta ndoikói porã."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Yvate"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Track"
 
@@ -1607,7 +1607,7 @@ msgstr "Ehai eheka mboapurevahára"
 msgid "Type to search..."
 msgstr "Ehai eheka..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Ndaikatúi ojeike servidor mombyrýpe"
 
@@ -1702,7 +1702,7 @@ msgstr "Ehesa'ỹijo"
 msgid "Verify email address"
 msgstr "Ehesa'ỹijo email tape"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Versión"
 
@@ -1711,11 +1711,11 @@ msgstr "Versión"
 msgid "Version {0}"
 msgstr "Versión {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Versión oñemoambue"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Versión Ñembohekoñongatu"
 
@@ -1752,7 +1752,7 @@ msgstr "Mba'embohopapa"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Nde cuenta oiko ko'ápe {source} guive. Peve reipe'a upépe, marandu ha mba'emimi ikatu ogueru servidor mokõive-pe, nde mba'e mba'eapo ambuéva ohasave ypykue servidor guive, ha erekopy'araka'e minutopi peve reko'ata ko'ápe."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Ne tee versión jeporavo"
 
@@ -1760,6 +1760,6 @@ msgstr "Ne tee versión jeporavo"
 msgid "Your preference"
 msgstr "Ne jeporavo"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Ne Versión"

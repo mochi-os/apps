@@ -31,11 +31,11 @@ msgstr "{0} uppdaterade, {failed} misslyckades"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} har installerats."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (standard, version {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (version {version})"
 
@@ -137,11 +137,11 @@ msgstr "Alla"
 msgid "All apps updated"
 msgstr "Alla appar uppdaterade"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Ett fel uppstod"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Ett oväntat fel uppstod"
 
@@ -251,7 +251,7 @@ msgstr "Öka intresse"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -473,24 +473,24 @@ msgstr "Standard"
 msgid "Default AI account"
 msgstr "Standard AI-konto"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Standard för alla användare"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Standard för alla användare (version {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Standard för alla användare uppdaterad"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Standardspår"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Standardspår (version {0})"
 
@@ -598,7 +598,7 @@ msgstr "Kunde inte lägga till konto"
 msgid "Failed to clean up apps"
 msgstr "Det gick inte att rensa upp appar"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Kunde inte bevilja behörighet"
 
@@ -606,7 +606,7 @@ msgstr "Kunde inte bevilja behörighet"
 msgid "Failed to remove account"
 msgstr "Kunde inte ta bort konto"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Kunde inte återkalla behörighet"
 
@@ -622,12 +622,12 @@ msgstr "Det gick inte att uppdatera appar"
 msgid "Failed to update category"
 msgstr "Kunde inte uppdatera kategori"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Kunde inte uppdatera standard"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Kunde inte uppdatera inställning"
 
@@ -712,19 +712,19 @@ msgstr "Gå till sida {pageNumber}"
 msgid "Go to previous page"
 msgstr "Gå till föregående sida"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Bevilja"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Bevilja behörighet"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Bevilja behörigheter så att appen får åtkomst till systemfunktioner"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Beviljar behörighet..."
 
@@ -884,7 +884,7 @@ msgstr "Utloggad"
 msgid "Logging out…"
 msgstr "Loggar ut…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Hantera funktioner som beviljats denna applikation"
 
@@ -914,7 +914,7 @@ msgstr "Måndag"
 msgid "Multiple apps declare this resource"
 msgstr "Flera appar deklarerar denna resurs"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Nätverksfel"
 
@@ -980,11 +980,11 @@ msgstr "Inga matchande appar"
 msgid "No paths configured."
 msgstr "Inga sökvägar konfigurerade."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Inga behörigheter beviljade"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Inga behörigheter beviljade denna app"
 
@@ -1039,7 +1039,7 @@ msgstr "Normal"
 msgid "Not set"
 msgstr "Ej inställd"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Ej versionshanterad"
 
@@ -1117,19 +1117,19 @@ msgstr "Sökvägsrutting"
 msgid "Paths"
 msgstr "Sökvägar"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Behörighet beviljad"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Behörighet återkallad"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Behörigheter"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Kontrollera din internetanslutning och försök igen."
 
@@ -1141,7 +1141,7 @@ msgstr "Ange ett app-ID"
 msgid "Preference updated"
 msgstr "Inställning uppdaterad"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Föredragen version"
 
@@ -1237,20 +1237,20 @@ msgstr "Återställ"
 msgid "Reset all settings to default values"
 msgstr "Återställ alla inställningar till standardvärden"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Återkalla"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Återkalla behörighet"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Återkalla behörighet?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Återkallar behörighet..."
 
@@ -1273,8 +1273,8 @@ msgstr "Spara"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Sparar..."
 
@@ -1316,7 +1316,7 @@ msgstr "Sök..."
 msgid "Searching..."
 msgstr "Söker..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Välj en funktion att bevilja till {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Välj webbplatsriktning"
 msgid "Select theme preference"
 msgstr "Välj temainställning"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Välj vilken version av den här appen som ska användas"
 
@@ -1368,8 +1368,8 @@ msgstr "Skicka e-post"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Serverfel"
 
@@ -1391,7 +1391,7 @@ msgstr "Tjänstedirigering"
 msgid "Services"
 msgstr "Tjänster"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Sessionen har löpt ut"
 
@@ -1465,7 +1465,7 @@ msgstr "System"
 msgid "System default"
 msgstr "Systemstandard"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Systemstandard"
 
@@ -1507,7 +1507,7 @@ msgstr "Appen har installerats."
 msgid "The requested app could not be found."
 msgstr "Den begärda appen kunde inte hittas."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Versionen som används av användare som inte har gjort ett val"
 
@@ -1519,7 +1519,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Temainställningar"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Den här appen har ingen versionshantering"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Denna app installeras direkt från utgivaren och har inte granskats. Det kan vara skadlig kod."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Detta kommer att återkalla behörigheten \"{0}\" från {appName}. Appen kan sluta fungera korrekt."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Topp"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Spår"
 
@@ -1607,7 +1607,7 @@ msgstr "Skriv för att söka användare"
 msgid "Type to search..."
 msgstr "Skriv för att söka..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Det gick inte att ansluta till fjärrservern"
 
@@ -1702,7 +1702,7 @@ msgstr "Verifiera"
 msgid "Verify email address"
 msgstr "Verifiera e-postadress"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Version"
 
@@ -1711,11 +1711,11 @@ msgstr "Version"
 msgid "Version {0}"
 msgstr "Version {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Version ändrad"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Versionshantering"
 
@@ -1752,7 +1752,7 @@ msgstr "Onsdag"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ditt konto flyttades hit från {source}. Tills du tar bort det där kan meddelanden och notiser nå båda servrarna, en del av ditt innehåll fortsätter att levereras från den gamla servern och följare kan behöva några minuter för att hitta dig här."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Din personliga versionsöverskridning"
 
@@ -1760,6 +1760,6 @@ msgstr "Din personliga versionsöverskridning"
 msgid "Your preference"
 msgstr "Din inställning"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Din version"

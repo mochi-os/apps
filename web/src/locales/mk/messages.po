@@ -31,11 +31,11 @@ msgstr "{0} ажурирани, {failed} не успеале"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} е инсталиран."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (стандардно, верзија {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (верзија {version})"
 
@@ -137,11 +137,11 @@ msgstr "Сите"
 msgid "All apps updated"
 msgstr "Сите апликации се ажурирани"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Се појави грешка"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Се појави неочекувана грешка"
 
@@ -251,7 +251,7 @@ msgstr "Поттикни интерес"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Откажи"
 
@@ -473,24 +473,24 @@ msgstr "Стандардно"
 msgid "Default AI account"
 msgstr "Стандардна AI сметка"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Стандардно за сите корисници"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Стандардно за сите корисници (верзија {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Стандардното за сите корисници е ажурирано"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Стандарден track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Стандарден track (верзија {0})"
 
@@ -598,7 +598,7 @@ msgstr "Неуспешно додавање на сметка"
 msgid "Failed to clean up apps"
 msgstr "Не успеа расчистувањето на апликациите"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Неуспешно доделување на дозвола"
 
@@ -606,7 +606,7 @@ msgstr "Неуспешно доделување на дозвола"
 msgid "Failed to remove account"
 msgstr "Неуспешно отстранување на сметка"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Неуспешно повлекување на дозвола"
 
@@ -622,12 +622,12 @@ msgstr "Не успеа ажурирањето на апликациите"
 msgid "Failed to update category"
 msgstr "Неуспешно ажурирање на категорија"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Неуспешно ажурирање на стандардно"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Неуспешно ажурирање на преференција"
 
@@ -712,19 +712,19 @@ msgstr "Оди на страница {pageNumber}"
 msgid "Go to previous page"
 msgstr "Оди на претходната страница"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Дозволи"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Дозволи дозвола"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Дозволете дозволи за оваа апликација да пристапи до системски функции"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Се доделува дозвола..."
 
@@ -884,7 +884,7 @@ msgstr "Успешно одјавен"
 msgid "Logging out…"
 msgstr "Се одјавува…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Управувајте со способностите доделени на оваа апликација"
 
@@ -914,7 +914,7 @@ msgstr "Понеделник"
 msgid "Multiple apps declare this resource"
 msgstr "Повеќе апликации го декларираат овој ресурс"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Грешка во мрежата"
 
@@ -980,11 +980,11 @@ msgstr "Нема совпаѓачки апликации"
 msgid "No paths configured."
 msgstr "Не се конфигурирани патеки."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Не се доделени дозволи"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Не се доделени дозволи на оваа апликација"
 
@@ -1039,7 +1039,7 @@ msgstr "Нормално"
 msgid "Not set"
 msgstr "Не е поставено"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Не е верзионирано"
 
@@ -1117,19 +1117,19 @@ msgstr "Patch на патека"
 msgid "Paths"
 msgstr "Патеки"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Дозволата е доделена"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Дозволата е отповикана"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Дозволи"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Проверете ја вашата интернет-врска и обидете се повторно."
 
@@ -1141,7 +1141,7 @@ msgstr "Внесете ID на апликација"
 msgid "Preference updated"
 msgstr "Преференцата е ажурирана"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Претпочитана верзија"
 
@@ -1237,20 +1237,20 @@ msgstr "Ресетирај"
 msgid "Reset all settings to default values"
 msgstr "Ресетирај ги сите поставки на стандардни вредности"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Отповикај"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Отповикај дозвола"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Да ја отповикаме дозволата?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Се одзема дозволата..."
 
@@ -1273,8 +1273,8 @@ msgstr "Зачувај"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Зачувување..."
 
@@ -1316,7 +1316,7 @@ msgstr "Пребарувај..."
 msgid "Searching..."
 msgstr "Пребарување..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Изберете способност за доделување на {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Изберете насока на страницата"
 msgid "Select theme preference"
 msgstr "Изберете преференца за тема"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Изберете која верзија на оваа апликација да ја користите"
 
@@ -1368,8 +1368,8 @@ msgstr "Испрати е-пошта"
 msgid "Serif"
 msgstr "Сериф"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Грешка на серверот"
 
@@ -1391,7 +1391,7 @@ msgstr "Пренасочување на услуги"
 msgid "Services"
 msgstr "Услуги"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Сесијата истече"
 
@@ -1465,7 +1465,7 @@ msgstr "Систем"
 msgid "System default"
 msgstr "Стандардно за системот"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Стандардно за системот"
 
@@ -1507,7 +1507,7 @@ msgstr "Апликацијата е успешно инсталирана."
 msgid "The requested app could not be found."
 msgstr "Бараната апликација не можеше да се пронајде."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Верзијата што ја користат корисниците кои не направиле избор"
 
@@ -1519,7 +1519,7 @@ msgstr "Тема"
 msgid "Theme Settings"
 msgstr "Поставки на темата"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Оваа апликација нема управување со верзии"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Оваа апликација е инсталирана директно од нејзиниот издавач и не е проверена. Може да биде злонамерен софтвер."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Ова ќе ја отповика дозволата „{0}“ од {appName}. Апликацијата можеби ќе престане да работи правилно."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Врв"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Track"
 
@@ -1607,7 +1607,7 @@ msgstr "Внесете за да пребарувате корисници"
 msgid "Type to search..."
 msgstr "Внесете за пребарување..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Не може да се поврзе со далечинскиот сервер"
 
@@ -1702,7 +1702,7 @@ msgstr "Потврди"
 msgid "Verify email address"
 msgstr "Потврди ја адресата на е-пошта"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Верзија"
 
@@ -1711,11 +1711,11 @@ msgstr "Верзија"
 msgid "Version {0}"
 msgstr "Верзија {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Верзијата е променета"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Управување со верзии"
 
@@ -1752,7 +1752,7 @@ msgstr "Среда"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Вашиот профил беше преместен овде од {source}. Додека не го избришете таму, пораките и известувањата може да достигнат до двата сервера, дел од вашата содржина продолжува да се служи од старата сервер, а следбениците може да потребат неколку минути за да ве најдат овде."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Ваше лично надминување на верзијата"
 
@@ -1760,6 +1760,6 @@ msgstr "Ваше лично надминување на верзијата"
 msgid "Your preference"
 msgstr "Вашата преференца"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Вашата верзија"

@@ -31,11 +31,11 @@ msgstr "{0} uuendatud, {failed} ebaõnnestus"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} on paigaldatud."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (vaikimisi, versioon {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (versioon {version})"
 
@@ -137,11 +137,11 @@ msgstr "Kõik"
 msgid "All apps updated"
 msgstr "Kõik rakendused uuendatud"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Tekkis viga"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Tekkis ootamatu viga"
 
@@ -251,7 +251,7 @@ msgstr "Tõsta huvi"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Tühista"
 
@@ -473,24 +473,24 @@ msgstr "Vaikimisi"
 msgid "Default AI account"
 msgstr "Vaikimisi AI konto"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Vaikimisi kõigile kasutajatele"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Vaikimisi kõigile kasutajatele (versioon {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Vaikimisi kõigile kasutajatele uuendatud"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Vaikimisi Track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Vaikimisi Track (versioon {0})"
 
@@ -598,7 +598,7 @@ msgstr "Konto lisamine ebaõnnestus"
 msgid "Failed to clean up apps"
 msgstr "Rakenduste korrastamine ebaõnnestus"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Õiguse andmine ebaõnnestus"
 
@@ -606,7 +606,7 @@ msgstr "Õiguse andmine ebaõnnestus"
 msgid "Failed to remove account"
 msgstr "Konto eemaldamine ebaõnnestus"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Õiguse tühistamine ebaõnnestus"
 
@@ -622,12 +622,12 @@ msgstr "Rakenduste värskendamine ebaõnnestus"
 msgid "Failed to update category"
 msgstr "Kategooria värskendamine ebaõnnestus"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Vaikeväärtuse värskendamine ebaõnnestus"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Eelistuse värskendamine ebaõnnestus"
 
@@ -712,19 +712,19 @@ msgstr "Mine lehele {pageNumber}"
 msgid "Go to previous page"
 msgstr "Mine eelmisele lehele"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Anna"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Anna õigus"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Anna õigused, et see rakendus pääseks ligi süsteemi funktsioonidele"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Loa andmine..."
 
@@ -884,7 +884,7 @@ msgstr "Edukalt välja logitud"
 msgid "Logging out…"
 msgstr "Välja logimine…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Halda sellele rakendusele antud võimekusi"
 
@@ -914,7 +914,7 @@ msgstr "Esmaspäev"
 msgid "Multiple apps declare this resource"
 msgstr "Mitu rakendust deklareerivad selle ressursi"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Võrguviga"
 
@@ -980,11 +980,11 @@ msgstr "Vastavaid rakendusi pole"
 msgid "No paths configured."
 msgstr "Teid pole seadistatud."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Õigusi pole antud"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Sellele rakendusele pole õigusi antud"
 
@@ -1039,7 +1039,7 @@ msgstr "Tavaline"
 msgid "Not set"
 msgstr "Pole määratud"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Pole versioonitud"
 
@@ -1117,19 +1117,19 @@ msgstr "Tee marsruutimine"
 msgid "Paths"
 msgstr "Teed"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Õigus antud"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Õigus tühistatud"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Õigused"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Kontrolli internetiühendust ja proovi uuesti."
 
@@ -1141,7 +1141,7 @@ msgstr "Palun sisesta rakenduse ID"
 msgid "Preference updated"
 msgstr "Eelistus uuendatud"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Eelistatud versioon"
 
@@ -1237,20 +1237,20 @@ msgstr "Lähtesta"
 msgid "Reset all settings to default values"
 msgstr "Lähtesta kõik seaded vaikeväärtustele"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Tühista"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Tühista õigus"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Kas tühistada õigus?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Loa tühistamine..."
 
@@ -1273,8 +1273,8 @@ msgstr "Salvesta"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Salvestamine..."
 
@@ -1316,7 +1316,7 @@ msgstr "Otsi..."
 msgid "Searching..."
 msgstr "Otsimine..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Vali võimalus, mille anda rakendusele {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Vali saidi suund"
 msgid "Select theme preference"
 msgstr "Vali teema eelistus"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Vali, millist selle rakenduse versiooni kasutada"
 
@@ -1368,8 +1368,8 @@ msgstr "Saada e-kiri"
 msgid "Serif"
 msgstr "Seriif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Serveri viga"
 
@@ -1391,7 +1391,7 @@ msgstr "Teenuste suunamine"
 msgid "Services"
 msgstr "Teenused"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Sessioon aegunud"
 
@@ -1465,7 +1465,7 @@ msgstr "Süsteem"
 msgid "System default"
 msgstr "Süsteemi vaikeväärtus"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Süsteemi vaikeväärtus"
 
@@ -1507,7 +1507,7 @@ msgstr "Rakendus on edukalt paigaldatud."
 msgid "The requested app could not be found."
 msgstr "Soovitud rakendust ei leitud."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Versioon, mida kasutavad kasutajad, kes pole valikut teinud"
 
@@ -1519,7 +1519,7 @@ msgstr "Teema"
 msgid "Theme Settings"
 msgstr "Teema seaded"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Sellel rakendusel pole versioonihaldust"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "See rakendus on paigaldatud otse selle avaldajalt ja seda pole kontrollitud. See võib olla pahavara."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "See tühistab loa \"{0}\" rakenduselt {appName}. Rakendus võib lakata korralikult töötamast."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Üles"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Track"
 
@@ -1607,7 +1607,7 @@ msgstr "Kirjuta kasutajate otsimiseks"
 msgid "Type to search..."
 msgstr "Kirjuta otsimiseks..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Kaugserveriga ei õnnestu ühendust luua"
 
@@ -1702,7 +1702,7 @@ msgstr "Kontrolli"
 msgid "Verify email address"
 msgstr "Kontrolli e-posti aadressi"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Versioon"
 
@@ -1711,11 +1711,11 @@ msgstr "Versioon"
 msgid "Version {0}"
 msgstr "Versioon {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Versioon muudetud"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Versioonihaldus"
 
@@ -1752,7 +1752,7 @@ msgstr "Kolmapäev"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Sinu konto liideti siia asukohast {source}. Kuni sa selle sealt ei kustuta, võivad sõnumid ja teavitused jõuda mõlemale serverile, osa sinu sisust tarbitakse jätkuvalt vanalt serverilt ning jälgijatel võib kuluda mõni minut, et sind siit leida."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Sinu isiklik versioonialistus"
 
@@ -1760,6 +1760,6 @@ msgstr "Sinu isiklik versioonialistus"
 msgid "Your preference"
 msgstr "Sinu eelistus"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Sinu versioon"

@@ -31,11 +31,11 @@ msgstr "{0} eguneratu, {failed}-(e)k huts egin"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} instalatu da."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (lehenetsia, {version} bertsioa)"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} ({version} bertsioa)"
 
@@ -137,11 +137,11 @@ msgstr "Guztiak"
 msgid "All apps updated"
 msgstr "Aplikazio guztiak eguneratuta"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Errore bat gertatu da"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Ustekabeko errore bat gertatu da"
 
@@ -251,7 +251,7 @@ msgstr "Bultzatu interesa"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Utzi"
 
@@ -473,24 +473,24 @@ msgstr "Lehenetsia"
 msgid "Default AI account"
 msgstr "Lehenetsitako AA kontua"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Erabiltzaile guztientzat lehenetsia"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Erabiltzaile guztientzat lehenetsia ({effectiveDefaultVersion} bertsioa)"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Erabiltzaile guztientzat lehenetsia eguneratu da"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Lehenetsitako pista"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Lehenetsitako pista ({0} bertsioa)"
 
@@ -598,7 +598,7 @@ msgstr "Ezin izan da kontua gehitu"
 msgid "Failed to clean up apps"
 msgstr "Ezin izan dira aplikazioak garbitu"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Ezin izan da baimena eman"
 
@@ -606,7 +606,7 @@ msgstr "Ezin izan da baimena eman"
 msgid "Failed to remove account"
 msgstr "Ezin izan da kontua kendu"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Ezin izan da baimena baliogabetu"
 
@@ -622,12 +622,12 @@ msgstr "Ezin izan dira aplikazioak eguneratu"
 msgid "Failed to update category"
 msgstr "Ezin izan da kategoria eguneratu"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Ezin izan da lehenetsia eguneratu"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Ezin izan da hobespena eguneratu"
 
@@ -712,19 +712,19 @@ msgstr "Joan {pageNumber} orrira"
 msgid "Go to previous page"
 msgstr "Joan aurreko orrira"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Eman"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Eman baimena"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Eman baimenak aplikazio honek sistemaren ezaugarrietara sar dadin"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Baimena ematen..."
 
@@ -884,7 +884,7 @@ msgstr "Saioa ondo amaituta"
 msgid "Logging out…"
 msgstr "Saioa amaitzen…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Kudeatu aplikazio honi emandako gaitasunak"
 
@@ -914,7 +914,7 @@ msgstr "Astelehena"
 msgid "Multiple apps declare this resource"
 msgstr "Hainbat aplikaziok deklaratzen dute baliabide hau"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Sareko errorea"
 
@@ -980,11 +980,11 @@ msgstr "Bat datorren aplikaziorik ez"
 msgid "No paths configured."
 msgstr "Ez da biderik konfiguratu."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Ez da baimenik eman"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Ez zaio aplikazio honi baimenik eman"
 
@@ -1039,7 +1039,7 @@ msgstr "Arrunta"
 msgid "Not set"
 msgstr "Ezarri gabe"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Bertsionatu gabe"
 
@@ -1117,19 +1117,19 @@ msgstr "Bidearen ibilbideratzea"
 msgid "Paths"
 msgstr "Bideak"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Baimena eman da"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Baimena indargabetuta"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Baimenak"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Egiaztatu zure interneteko konexioa eta saiatu berriro."
 
@@ -1141,7 +1141,7 @@ msgstr "Mesedez sartu aplikazioaren IDa"
 msgid "Preference updated"
 msgstr "Hobespena eguneratu da"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Hobetsitako bertsioa"
 
@@ -1237,20 +1237,20 @@ msgstr "Berrezarri"
 msgid "Reset all settings to default values"
 msgstr "Berrezarri ezarpen guztiak balio lehenetsietara"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Indargabetu"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Indargabetu baimena"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Baimena indargabetu?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Baimena kentzen..."
 
@@ -1273,8 +1273,8 @@ msgstr "Gorde"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Gordetzen..."
 
@@ -1316,7 +1316,7 @@ msgstr "Bilatu..."
 msgid "Searching..."
 msgstr "Bilatzen..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Hautatu {appName}-ri eman beharreko gaitasun bat."
 
@@ -1352,7 +1352,7 @@ msgstr "Hautatu gunearen norabidea"
 msgid "Select theme preference"
 msgstr "Hautatu gaiaren hobespena"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Hautatu aplikazio honen zein bertsio erabili"
 
@@ -1368,8 +1368,8 @@ msgstr "Bidali emaila"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Zerbitzariaren errorea"
 
@@ -1391,7 +1391,7 @@ msgstr "Zerbitzuen bideratzea"
 msgid "Services"
 msgstr "Zerbitzuak"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Saioa iraungi da"
 
@@ -1465,7 +1465,7 @@ msgstr "Sistema"
 msgid "System default"
 msgstr "Sistemako lehenetsia"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Sistemako lehenetsia"
 
@@ -1507,7 +1507,7 @@ msgstr "Aplikazioa ondo instalatu da."
 msgid "The requested app could not be found."
 msgstr "Eskatutako aplikazioa ezin izan da aurkitu."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Aukerarik egin ez duten erabiltzaileek erabiltzen duten bertsioa"
 
@@ -1519,7 +1519,7 @@ msgstr "Gaia"
 msgid "Theme Settings"
 msgstr "Gaiaren ezarpenak"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Aplikazio honek ez du bertsio-kudeaketarik"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Aplikazio hau bere argitaratzailetik zuzenean instalatu da eta ez da egiaztatu. Malware izan daiteke."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Honek \"{0}\" baimena baliogabetuko du {appName}-tik. Aplikazioak agian funtzionatzeari utziko dio behar bezala."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Goia"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Pista"
 
@@ -1607,7 +1607,7 @@ msgstr "Idatzi erabiltzaileak bilatzeko"
 msgid "Type to search..."
 msgstr "Idatzi bilatzeko..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Ezin izan da urruneko zerbitzarira konektatu"
 
@@ -1702,7 +1702,7 @@ msgstr "Egiaztatu"
 msgid "Verify email address"
 msgstr "Egiaztatu helbide elektronikoa"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Bertsioa"
 
@@ -1711,11 +1711,11 @@ msgstr "Bertsioa"
 msgid "Version {0}"
 msgstr "{0} bertsioa"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Bertsioa aldatu da"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Bertsioen kudeaketa"
 
@@ -1752,7 +1752,7 @@ msgstr "Asteazkena"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Zure kontua {source}-etik hona mugitu da. Han ezabatu arte, mezuak eta jakinarazpenak bi zerbitzarietara irits daitezke, zure edukiaren zati bat zerbitzari zaharretik ematen jarraitzen du, eta jarraitzaileek minutu batzuk behar izan ditzakete zu hemen aurkitzeko."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Zure bertsio-gainidatze pertsonala"
 
@@ -1760,6 +1760,6 @@ msgstr "Zure bertsio-gainidatze pertsonala"
 msgid "Your preference"
 msgstr "Zure hobespena"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Zure bertsioa"

@@ -31,11 +31,11 @@ msgstr "{0} hat nûkirin, {failed} têk çû"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} hat sazkirin."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (standard, guhertoya {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (guhertoya {version})"
 
@@ -137,11 +137,11 @@ msgstr "Hemû"
 msgid "All apps updated"
 msgstr "Hemû sepan hatin nûkirin"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Çewtiyek çêbû"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Çewtiyeke neçaverêkirî çêbû"
 
@@ -251,7 +251,7 @@ msgstr "Berjewendiyê zêde bike"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Betal bike"
 
@@ -473,24 +473,24 @@ msgstr "Standard"
 msgid "Default AI account"
 msgstr "Hesabê standard yê AI"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Standard ji bo hemû bikarhêneran"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Standard ji bo hemû bikarhêneran (versiyona {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Standard ji bo hemû bikarhêneran hat nûkirin"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Tracka standard"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Tracka standard (versiyona {0})"
 
@@ -598,7 +598,7 @@ msgstr "Zêdekirina hesabê neserkeftî bû"
 msgid "Failed to clean up apps"
 msgstr "Sepan nehatin paqijkirin"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Dayîna destûrê neserkeftî bû"
 
@@ -606,7 +606,7 @@ msgstr "Dayîna destûrê neserkeftî bû"
 msgid "Failed to remove account"
 msgstr "Rakirina hesabê neserkeftî bû"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Betalkirina destûrê neserkeftî bû"
 
@@ -622,12 +622,12 @@ msgstr "Sepan nehatin nûkirin"
 msgid "Failed to update category"
 msgstr "Rojanekirina kategoriyê neserkeftî bû"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Rojanekirina pêşfaravabûn neserkeftî bû"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Rojanekirina tercîhê neserkeftî bû"
 
@@ -712,19 +712,19 @@ msgstr "Here rûpela {pageNumber}"
 msgid "Go to previous page"
 msgstr "Biçe rûpelê pêşîn"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Bide"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Destûrê bide"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Destûrên bide ku ev sepan bigihîje taybetmendiyên sîstemê"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Destûr tê dayîn..."
 
@@ -884,7 +884,7 @@ msgstr "Bi serkeftî derket"
 msgid "Logging out…"
 msgstr "Tê derketin…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Şiyaniyên ku ji vê sepanê re hatine dayîn bi rê ve bibe"
 
@@ -914,7 +914,7 @@ msgstr "Duşem"
 msgid "Multiple apps declare this resource"
 msgstr "Çend sepan vê çavkaniyê dîyar dikin"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Çewtiya torê"
 
@@ -980,11 +980,11 @@ msgstr "Tu app a li hev tê tune"
 msgid "No paths configured."
 msgstr "Tu rê nehatine mîhengkirin."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Tu destûr nehatine dayîn"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Ji vê app re tu destûr nehatine dayîn"
 
@@ -1039,7 +1039,7 @@ msgstr "Asayî"
 msgid "Not set"
 msgstr "Nehatiye danîn"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Bê guherto"
 
@@ -1117,19 +1117,19 @@ msgstr "Beralîkirina rêyan"
 msgid "Paths"
 msgstr "Rê"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Destûr hate dayîn"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Destûr hate vekişandin"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Destûr"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Ji kerema xwe girêdana xwe ya înternetê kontrol bike û dîsa biceribîne."
 
@@ -1141,7 +1141,7 @@ msgstr "Ji kerema xwe nasnameya app binivîse"
 msgid "Preference updated"
 msgstr "Tercih hate nûkirin"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Guhertoya tercîhkirî"
 
@@ -1237,20 +1237,20 @@ msgstr "Bişkojka veguhastinê"
 msgid "Reset all settings to default values"
 msgstr "Hemû mîhengan ber bi standardan ve veguhêze"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Vekişîne"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Destûrê vekişîne"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Destûrê vekişîne?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Destûr tê vekişandin..."
 
@@ -1273,8 +1273,8 @@ msgstr "Tomar bike"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Tê tomarkirin..."
 
@@ -1316,7 +1316,7 @@ msgstr "Bigere..."
 msgid "Searching..."
 msgstr "Tê gerîn..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Şiyanekê hilbijêre ku ji {appName} re bide."
 
@@ -1352,7 +1352,7 @@ msgstr "Beralîkirina malperê hilbijêre"
 msgid "Select theme preference"
 msgstr "Tercîha temayê hilbijêre"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Kîjan guhertoya vê sepanê tê bikaranîn hilbijêre"
 
@@ -1368,8 +1368,8 @@ msgstr "E-nameyê bişîne"
 msgid "Serif"
 msgstr "Serîf"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Çewtiya rajekarê"
 
@@ -1391,7 +1391,7 @@ msgstr "Beralîkirina servîsê"
 msgid "Services"
 msgstr "Servîs"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Danişîn dawî bû"
 
@@ -1465,7 +1465,7 @@ msgstr "Pergal"
 msgid "System default"
 msgstr "Standarda pergalê"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Standarda Pergalê"
 
@@ -1507,7 +1507,7 @@ msgstr "Sepan bi serkeftî hat sazkirin."
 msgid "The requested app could not be found."
 msgstr "Sepana xwestî nehate dîtin."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Guhertoya ku ji aliyê bikarhênerên ku hilbijartin nekirine ve tê bikaranîn"
 
@@ -1519,7 +1519,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Mîhengên Temayê"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Vê sepanê rêvebirina guhertoyan tune ye"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Ev sepan rasterast ji weşanvanê wê hatî sazkirin û nehatiye nirxandin. Dibe ku malware be."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Ev dê destûra \"{0}\" ji {appName} betal bike. Dibe ku sepan rast neşixule."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Jor"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Track"
 
@@ -1607,7 +1607,7 @@ msgstr "Ji bo lêgerîna bikarhêneran binivîse"
 msgid "Type to search..."
 msgstr "Ji bo lêgerînê binivîse..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Nikare bi rajekarê dûr ve girê bide"
 
@@ -1702,7 +1702,7 @@ msgstr "Verifîke bike"
 msgid "Verify email address"
 msgstr "Navnîşana e-nameyê verifîke bike"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Guherto"
 
@@ -1711,11 +1711,11 @@ msgstr "Guherto"
 msgid "Version {0}"
 msgstr "Guhertoya {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Guherto hat guherandin"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Rêvebirina Guhertoyan"
 
@@ -1752,7 +1752,7 @@ msgstr "Çarşem"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Hesabê we ji {source} hat vir veguheztin. Heya ku hûn wê li wir jênebin, peyam û agahdarî dikarin gihîjin her du servaran, hin naveroka we ji serverê kevn tê dayîn û şopîner dibe ku çend hûrdeman hewce bikin ku we li vir bibînin."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Guhertoya te ya kesane"
 
@@ -1760,6 +1760,6 @@ msgstr "Guhertoya te ya kesane"
 msgid "Your preference"
 msgstr "Tercîha te"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Guhertoya Te"

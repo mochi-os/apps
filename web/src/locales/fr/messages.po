@@ -31,11 +31,11 @@ msgstr "{0} mises à jour, {failed} échouées"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} a été installée."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (par défaut, version {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (version {version})"
 
@@ -137,11 +137,11 @@ msgstr "Tout"
 msgid "All apps updated"
 msgstr "Toutes les applications mises à jour"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Une erreur s'est produite"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Une erreur inattendue s'est produite"
 
@@ -251,7 +251,7 @@ msgstr "Augmenter l'intérêt"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -473,24 +473,24 @@ msgstr "Par défaut"
 msgid "Default AI account"
 msgstr "Compte IA par défaut"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Par défaut pour tous les utilisateurs"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Par défaut pour tous les utilisateurs (version {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Valeur par défaut pour tous les utilisateurs mise à jour"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Canal par défaut"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Canal par défaut (version {0})"
 
@@ -598,7 +598,7 @@ msgstr "Échec de l'ajout du compte"
 msgid "Failed to clean up apps"
 msgstr "Échec du nettoyage des applications"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Échec de l'octroi de la permission"
 
@@ -606,7 +606,7 @@ msgstr "Échec de l'octroi de la permission"
 msgid "Failed to remove account"
 msgstr "Échec de la suppression du compte"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Échec de la révocation de la permission"
 
@@ -622,12 +622,12 @@ msgstr "Échec de la mise à jour des applications"
 msgid "Failed to update category"
 msgstr "Échec de la mise à jour de la catégorie"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Échec de la mise à jour de la valeur par défaut"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Échec de la mise à jour de la préférence"
 
@@ -712,19 +712,19 @@ msgstr "Aller à la page {pageNumber}"
 msgid "Go to previous page"
 msgstr "Aller à la page précédente"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Accorder"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Accorder la permission"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Accorder des permissions pour permettre à cette app d'accéder aux fonctionnalités système"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Octroi de l'autorisation..."
 
@@ -884,7 +884,7 @@ msgstr "Déconnexion réussie"
 msgid "Logging out…"
 msgstr "Déconnexion en cours…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Gérer les capacités accordées à cette application"
 
@@ -914,7 +914,7 @@ msgstr "Lundi"
 msgid "Multiple apps declare this resource"
 msgstr "Plusieurs apps déclarent cette ressource"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Erreur réseau"
 
@@ -980,11 +980,11 @@ msgstr "Aucune application correspondante"
 msgid "No paths configured."
 msgstr "Aucun chemin configuré."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Aucune permission accordée"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Aucune permission accordée à cette application"
 
@@ -1039,7 +1039,7 @@ msgstr "Normal"
 msgid "Not set"
 msgstr "Non défini"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Non versionné"
 
@@ -1117,19 +1117,19 @@ msgstr "Routage de chemin"
 msgid "Paths"
 msgstr "Chemins"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Permission accordée"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Permission révoquée"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Permissions"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Veuillez vérifier votre connexion Internet et réessayer."
 
@@ -1141,7 +1141,7 @@ msgstr "Veuillez saisir un ID d'application"
 msgid "Preference updated"
 msgstr "Préférence mise à jour"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Version préférée"
 
@@ -1237,20 +1237,20 @@ msgstr "Réinitialiser"
 msgid "Reset all settings to default values"
 msgstr "Réinitialiser tous les paramètres aux valeurs par défaut"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Révoquer"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Révoquer la permission"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Révoquer la permission ?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Révocation de l'autorisation..."
 
@@ -1273,8 +1273,8 @@ msgstr "Enregistrer"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Enregistrement…"
 
@@ -1316,7 +1316,7 @@ msgstr "Rechercher…"
 msgid "Searching..."
 msgstr "Recherche..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Sélectionnez une capacité à accorder à {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Sélectionner la direction du site"
 msgid "Select theme preference"
 msgstr "Sélectionner la préférence de thème"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Choisir la version de cette app à utiliser"
 
@@ -1368,8 +1368,8 @@ msgstr "Envoyer l'e-mail"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Erreur du serveur"
 
@@ -1391,7 +1391,7 @@ msgstr "Routage de service"
 msgid "Services"
 msgstr "Services"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Session expirée"
 
@@ -1465,7 +1465,7 @@ msgstr "Système"
 msgid "System default"
 msgstr "Valeur par défaut système"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Par défaut du système"
 
@@ -1507,7 +1507,7 @@ msgstr "L'application a été installée avec succès."
 msgid "The requested app could not be found."
 msgstr "L'application demandée est introuvable."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "La version utilisée par les utilisateurs qui n'ont pas fait de choix"
 
@@ -1519,7 +1519,7 @@ msgstr "Thème"
 msgid "Theme Settings"
 msgstr "Paramètres du thème"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Cette app n'a pas de gestion de versions"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Cette application est installée directement depuis son éditeur et n'a pas été vérifiée. Il peut s'agir d'un logiciel malveillant."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Cela révoquera la permission \"{0}\" de {appName}. L'application peut cesser de fonctionner correctement."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Meilleur"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Piste"
 
@@ -1607,7 +1607,7 @@ msgstr "Tapez pour rechercher des utilisateurs"
 msgid "Type to search..."
 msgstr "Tapez pour rechercher…"
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Impossible de se connecter au serveur distant"
 
@@ -1702,7 +1702,7 @@ msgstr "Vérifier"
 msgid "Verify email address"
 msgstr "Vérifier l'adresse e-mail"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Version"
 
@@ -1711,11 +1711,11 @@ msgstr "Version"
 msgid "Version {0}"
 msgstr "Version {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Version modifiée"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Gestion des versions"
 
@@ -1752,7 +1752,7 @@ msgstr "Mercredi"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Votre compte a été déplacé ici depuis {source}. Tant que vous ne le supprimez pas là-bas, les messages et notifications peuvent parvenir aux deux serveurs, une partie de votre contenu continue d'être servie depuis l'ancien serveur, et vos abonnés peuvent avoir besoin de quelques minutes pour vous trouver ici."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Votre remplacement de version personnel"
 
@@ -1760,6 +1760,6 @@ msgstr "Votre remplacement de version personnel"
 msgid "Your preference"
 msgstr "Votre préférence"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Votre version"

@@ -31,11 +31,11 @@ msgstr "{0} uppfærðar, {failed} mistókust"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} hefur verið sett upp."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (sjálfgefið, útgáfa {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (útgáfa {version})"
 
@@ -137,11 +137,11 @@ msgstr "Allt"
 msgid "All apps updated"
 msgstr "Öll forrit uppfærð"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Villa kom upp"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Óvænt villa kom upp"
 
@@ -251,7 +251,7 @@ msgstr "Auka áhuga"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Hætta við"
 
@@ -473,24 +473,24 @@ msgstr "Sjálfgefið"
 msgid "Default AI account"
 msgstr "Sjálfgefinn gervigreindarreikningur"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Sjálfgefið fyrir alla notendur"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Sjálfgefið fyrir alla notendur (útgáfa {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Sjálfgefið fyrir alla notendur uppfært"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Sjálfgefin rás"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Sjálfgefin rás (útgáfa {0})"
 
@@ -598,7 +598,7 @@ msgstr "Tókst ekki að bæta við reikningi"
 msgid "Failed to clean up apps"
 msgstr "Tókst ekki að hreinsa forrit"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Tókst ekki að veita heimild"
 
@@ -606,7 +606,7 @@ msgstr "Tókst ekki að veita heimild"
 msgid "Failed to remove account"
 msgstr "Tókst ekki að fjarlægja reikning"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Tókst ekki að afturkalla heimild"
 
@@ -622,12 +622,12 @@ msgstr "Tókst ekki að uppfæra forrit"
 msgid "Failed to update category"
 msgstr "Tókst ekki að uppfæra flokk"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Tókst ekki að uppfæra sjálfgefið gildi"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Tókst ekki að uppfæra kjör"
 
@@ -712,19 +712,19 @@ msgstr "Fara á síðu {pageNumber}"
 msgid "Go to previous page"
 msgstr "Fara á fyrri síðu"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Veita"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Veita heimild"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Veita heimildir svo þetta forrit geti nálgast kerfisaðgerðir"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Veiti heimild..."
 
@@ -884,7 +884,7 @@ msgstr "Útskráning tókst"
 msgid "Logging out…"
 msgstr "Útskrái…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Stjórna heimildum sem veittar eru þessu forriti"
 
@@ -914,7 +914,7 @@ msgstr "Mánudagur"
 msgid "Multiple apps declare this resource"
 msgstr "Mörg forrit lýsa þessari auðlind"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Netvilla"
 
@@ -980,11 +980,11 @@ msgstr "Engin samsvarandi forrit"
 msgid "No paths configured."
 msgstr "Engar slóðir stilltar."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Engin leyfi veitt"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Engar heimildir veittar þessu forriti"
 
@@ -1039,7 +1039,7 @@ msgstr "Venjulegt"
 msgid "Not set"
 msgstr "Ekki stillt"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Ekki útgáfumerkt"
 
@@ -1117,19 +1117,19 @@ msgstr "Slóðabeining"
 msgid "Paths"
 msgstr "Slóðir"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Leyfi veitt"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Leyfi afturkallað"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Leyfi"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Athugaðu nettenginguna og reyndu aftur."
 
@@ -1141,7 +1141,7 @@ msgstr "Sláðu inn auðkenni forrits"
 msgid "Preference updated"
 msgstr "Kjörstilling uppfærð"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Æskilega útgáfa"
 
@@ -1237,20 +1237,20 @@ msgstr "Endurstilla"
 msgid "Reset all settings to default values"
 msgstr "Endurstilla allar stillingar á sjálfgefin gildi"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Afturkalla"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Afturkalla heimild"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Afturkalla heimild?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Afturkalla heimild..."
 
@@ -1273,8 +1273,8 @@ msgstr "Vista"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Vista..."
 
@@ -1316,7 +1316,7 @@ msgstr "Leita..."
 msgid "Searching..."
 msgstr "Leita..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Veldu möguleika til að veita {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Veldu stefnu vefsvæðis"
 msgid "Select theme preference"
 msgstr "Veldu þemastillingu"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Veldu hvaða útgáfu af þessu forriti á að nota"
 
@@ -1368,8 +1368,8 @@ msgstr "Senda tölvupóst"
 msgid "Serif"
 msgstr "Þverstrik"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Þjónsvilla"
 
@@ -1391,7 +1391,7 @@ msgstr "Leiðsögn þjónustu"
 msgid "Services"
 msgstr "Þjónustur"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Seta rann út"
 
@@ -1465,7 +1465,7 @@ msgstr "Kerfi"
 msgid "System default"
 msgstr "Sjálfgefið kerfi"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Sjálfgefið kerfi"
 
@@ -1507,7 +1507,7 @@ msgstr "Forritið hefur verið uppsett með góðum árangri."
 msgid "The requested app could not be found."
 msgstr "Umbeðna forritið fannst ekki."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Útgáfan sem notuð er af notendum sem hafa ekki valið"
 
@@ -1519,7 +1519,7 @@ msgstr "Þema"
 msgid "Theme Settings"
 msgstr "Þemastillingar"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Þetta forrit hefur ekki útgáfustjórnun"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Þetta forrit er sett upp beint frá útgefanda sínum og hefur ekki verið skoðað. Það gæti verið spilliforrit."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Þetta mun afturkalla \"{0}\" heimildina frá {appName}. Forritið gæti hætt að virka rétt."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Efst"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Rás"
 
@@ -1607,7 +1607,7 @@ msgstr "Skrifaðu til að leita að notendum"
 msgid "Type to search..."
 msgstr "Skrifaðu til að leita..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Ekki tókst að tengjast fjarþjóni"
 
@@ -1702,7 +1702,7 @@ msgstr "Sannprófa"
 msgid "Verify email address"
 msgstr "Sannprófa netfang"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Útgáfa"
 
@@ -1711,11 +1711,11 @@ msgstr "Útgáfa"
 msgid "Version {0}"
 msgstr "Útgáfa {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Útgáfu breytt"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Útgáfustjórnun"
 
@@ -1752,7 +1752,7 @@ msgstr "Miðvikudagur"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Reikningurinn þinn var fluttur hingað frá {source}. Þar til þú eyðir honum þar, geta skilaboð og tilkynningar náð til beggja þjóna, hluti af efni þínu heldur áfram að vera þjónað af gamla þjóninum og fylgjendur gætu þurft nokkrar mínútur að finna þig hér."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Persónuleg útgáfu-undantekning þín"
 
@@ -1760,6 +1760,6 @@ msgstr "Persónuleg útgáfu-undantekning þín"
 msgid "Your preference"
 msgstr "Stilling þín"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Útgáfan þín"

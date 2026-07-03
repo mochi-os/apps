@@ -31,11 +31,11 @@ msgstr "{0} täzelendi, {failed} şowsuz boldy"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} gurnaldy."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (esasy, görnüş {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (görnüş {version})"
 
@@ -137,11 +137,11 @@ msgstr "Hemmesi"
 msgid "All apps updated"
 msgstr "Ähli programmalar täzelendi"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Ýalňyşlyk ýüze çykdy"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Garaşylmadyk ýalňyşlyk ýüze çykdy"
 
@@ -251,7 +251,7 @@ msgstr "Gyzyklanmany ýokarlandyrmak"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Ýatyrmak"
 
@@ -473,24 +473,24 @@ msgstr "Adaty"
 msgid "Default AI account"
 msgstr "Adaty AI hasap"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Ähli ulanyjylar üçin adaty"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Ähli ulanyjylar üçin adaty (wersiýa {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Ähli ulanyjylar üçin adaty täzelendi"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Adaty track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Adaty track (wersiýa {0})"
 
@@ -598,7 +598,7 @@ msgstr "Hasap goşulmady"
 msgid "Failed to clean up apps"
 msgstr "Programmalary arassalamak başartmady"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Rugsat berilmedi"
 
@@ -606,7 +606,7 @@ msgstr "Rugsat berilmedi"
 msgid "Failed to remove account"
 msgstr "Hasap aýrylmady"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Rugsat ýatyrylmady"
 
@@ -622,12 +622,12 @@ msgstr "Programmalary täzelemek başartmady"
 msgid "Failed to update category"
 msgstr "Kategoriýa täzelenmedi"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Deslapky täzelenmedi"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Saýlama täzelenmedi"
 
@@ -712,19 +712,19 @@ msgstr "{pageNumber} sahypa geç"
 msgid "Go to previous page"
 msgstr "Öňki sahypa git"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Ber"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Rugsat ber"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Bu programma ulgam aýratynlyklaryna girmäge rugsat ber"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Rugsat berilýär..."
 
@@ -884,7 +884,7 @@ msgstr "Üstünlikli çykyldy"
 msgid "Logging out…"
 msgstr "Çykylýar…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Bu programma berlen mümkinçilikleri dolandyr"
 
@@ -914,7 +914,7 @@ msgstr "Duşenbe"
 msgid "Multiple apps declare this resource"
 msgstr "Birnäçe programma bu çeşmäni yglan edýär"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Tor ýalňyşlygy"
 
@@ -980,11 +980,11 @@ msgstr "Gabat gelýän programmalar ýok"
 msgid "No paths configured."
 msgstr "Ýollar düzülmedi."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Berlen rugsatlar ýok"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Bu programma berlen rugsatlar ýok"
 
@@ -1039,7 +1039,7 @@ msgstr "Adaty"
 msgid "Not set"
 msgstr "Bellenilmedik"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Wersiýalanmadyk"
 
@@ -1117,19 +1117,19 @@ msgstr "Ýol marşruty"
 msgid "Paths"
 msgstr "Ýollar"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Rugsat berildi"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Rugsat ýatyryldy"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Rugsatlar"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Internet birikmäňizi barlaň we täzeden synanyşyň."
 
@@ -1141,7 +1141,7 @@ msgstr "Programma ID giriziň"
 msgid "Preference updated"
 msgstr "Saýlama täzelendi"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Halaýan wersiýaňyz"
 
@@ -1237,20 +1237,20 @@ msgstr "Täzeden başlat"
 msgid "Reset all settings to default values"
 msgstr "Ähli sazlamalary deslapky bahalara gaýtar"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Ýatyr"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Rugsady ýatyr"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Rugsady ýatyrmak?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Rugsat yzyna alynýar..."
 
@@ -1273,8 +1273,8 @@ msgstr "Saklaýyş"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Saklanýar..."
 
@@ -1316,7 +1316,7 @@ msgstr "Gözle..."
 msgid "Searching..."
 msgstr "Gözlenýär..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "{appName} -e bermek üçin ukyp saýla."
 
@@ -1352,7 +1352,7 @@ msgstr "Saýtyň ugruny saýla"
 msgid "Select theme preference"
 msgstr "Tema saýlawyňy saýla"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Bu programmanyň haýsy görnüşini ulanjagyňy saýla"
 
@@ -1368,8 +1368,8 @@ msgstr "E-poçt iber"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Server ýalňyşlygy"
 
@@ -1391,7 +1391,7 @@ msgstr "Hyzmat ugratmasy"
 msgid "Services"
 msgstr "Hyzmatlar"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Sessiýanyň möhleti gutardy"
 
@@ -1465,7 +1465,7 @@ msgstr "Ulgam"
 msgid "System default"
 msgstr "Ulgamyň esasy"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Ulgamyň esasy"
 
@@ -1507,7 +1507,7 @@ msgstr "Programma üstünlikli gurnaldy."
 msgid "The requested app could not be found."
 msgstr "Soralan programma tapylmady."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Saýlaw etmedik ulanyjylar tarapyndan ulanylýan görnüş"
 
@@ -1519,7 +1519,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Tema sazlamalary"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Bu programmada görnüş dolandyryşy ýok"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Bu programma çap edijisinden göni gurnaldy we barlanan däl. Ol zyýanly programma bolup biler."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Bu {appName} -dan \"{0}\" rugsadyny ýatyrar. Programma dogry işlemegi bes edip biler."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Ýokarky"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Yzarla"
 
@@ -1607,7 +1607,7 @@ msgstr "Ulanyjylary gözlemek üçin ýaz"
 msgid "Type to search..."
 msgstr "Gözlemek üçin ýaz..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Uzakdaky servere birikmek başartmady"
 
@@ -1702,7 +1702,7 @@ msgstr "Tassykla"
 msgid "Verify email address"
 msgstr "E-poçta salgysyny tassykla"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Görnüş"
 
@@ -1711,11 +1711,11 @@ msgstr "Görnüş"
 msgid "Version {0}"
 msgstr "Görnüş {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Görnüş üýtgedildi"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Görnüş dolandyryşy"
 
@@ -1752,7 +1752,7 @@ msgstr "Çarşenbe"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Hasabyňyz {source} serwерinden bu ýere geçirildi. Şol ýerden pozýançaňyz, habarlar we duýduryşlar iki serwere hem ýetip biler, käbir mazmunyňyz köne serweriň üsti bilen berler, yzarlaýanlar sizi bu ýerde tapmak üçin birnäçe minut gerek bolup biler."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Şahsy görnüş düzgüniň"
 
@@ -1760,6 +1760,6 @@ msgstr "Şahsy görnüş düzgüniň"
 msgid "Your preference"
 msgstr "Saýlawyň"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Seniň görnüşiň"

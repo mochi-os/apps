@@ -31,11 +31,11 @@ msgstr "{0} haaromfameera, {failed} hin milkoofne"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} fe'ameera."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (sirnaan dursaa, fooyya'iinsa {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (fooyya'iinsa {version})"
 
@@ -137,11 +137,11 @@ msgstr "Hunda"
 msgid "All apps updated"
 msgstr "Appiilee hundi haaromfaman"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Dogoggorri uumame"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Dogoggorri hin eegamne uumame"
 
@@ -251,7 +251,7 @@ msgstr "Fedhii cimsi"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Haquu"
 
@@ -473,24 +473,24 @@ msgstr "Idilee"
 msgid "Default AI account"
 msgstr "Akkaawuntii AI idilee"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Fayyadamtoota hundaaf idilee"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Fayyadamtoota hundaaf idilee (vershinii {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Fayyadamtoota hundaaf idilee haaromfame"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Track idilee"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Track idilee (vershinii {0})"
 
@@ -598,7 +598,7 @@ msgstr "Akkaawuntii dabaluu hin dandeenye"
 msgid "Failed to clean up apps"
 msgstr "Appiiwwan qulqulleessuun hin milkoofne"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Hayyama kennuu hin dandeenye"
 
@@ -606,7 +606,7 @@ msgstr "Hayyama kennuu hin dandeenye"
 msgid "Failed to remove account"
 msgstr "Akkaawuntii haquu hin dandeenye"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Hayyama haquu hin dandeenye"
 
@@ -622,12 +622,12 @@ msgstr "Appiiwwan haaromsuun hin milkoofne"
 msgid "Failed to update category"
 msgstr "Ramaddii toattaachuu hin dandeenye"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Boorsa idilee toattaachuu hin dandeenye"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Filannoo toattaachuu hin dandeenye"
 
@@ -712,19 +712,19 @@ msgstr "Fuula {pageNumber} deemuu"
 msgid "Go to previous page"
 msgstr "Fuula duraa deemi"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Kenni"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Hayyama kenni"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Appichi tajaajiloota sirnichaa akka argatuuf hayyamoota kenni"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Hayyama kennaa jira..."
 
@@ -884,7 +884,7 @@ msgstr "Milkaa'inaan ba'e"
 msgid "Logging out…"
 msgstr "Ba'aa jiraa…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Dandeettiwwan appii kanaaf kennaman toattaachi"
 
@@ -914,7 +914,7 @@ msgstr "Wiixata"
 msgid "Multiple apps declare this resource"
 msgstr "Appiiwwan baayyeen qabeenya kana ibsa"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Dogoggora networkii"
 
@@ -980,11 +980,11 @@ msgstr "Aappiiwwan walsiman hin jiran"
 msgid "No paths configured."
 msgstr "Daandiiwwan qindaa'an hin jiran."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Hayyamoonni kennaman hin jiran"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Aappii kanaaf hayyamoonni kennaman hin jiran"
 
@@ -1039,7 +1039,7 @@ msgstr "Idilee"
 msgid "Not set"
 msgstr "Hin qabamne"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Versii hin qabu"
 
@@ -1117,19 +1117,19 @@ msgstr "Daandii guutu"
 msgid "Paths"
 msgstr "Daandiwwan"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Hayyamni kennamee"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Hayyamni haqame"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Hayyamoonni"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Maaloo walqunnamtii intarneetii kee mirkaneeffadhuutii irra deebi'ii yaali."
 
@@ -1141,7 +1141,7 @@ msgstr "Maaloo ID aappii galchi"
 msgid "Preference updated"
 msgstr "Filannoon haaromfame"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Versii filatame"
 
@@ -1237,20 +1237,20 @@ msgstr "Haaromsi"
 msgid "Reset all settings to default values"
 msgstr "Qindaa'inoota hunda gara durtiitti deebisi"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Haqi"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Hayyama haqi"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Hayyama haquuf?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Hayyama haqaa jira..."
 
@@ -1273,8 +1273,8 @@ msgstr "Olkaa'i"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Olkaa'aa jira..."
 
@@ -1316,7 +1316,7 @@ msgstr "Barbaadi..."
 msgid "Searching..."
 msgstr "Barbaadaa jira..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Dandeettii {appName} kennuuf fili."
 
@@ -1352,7 +1352,7 @@ msgstr "Kallattii saayitii filadhu"
 msgid "Select theme preference"
 msgstr "Filannoo akeeka filadhu"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Fooyya'iinsa app kanaa kam akka fayyadamtu filadhu"
 
@@ -1368,8 +1368,8 @@ msgstr "Imeelii ergi"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Dogoggora sarvarii"
 
@@ -1391,7 +1391,7 @@ msgstr "Karaa tajaajilaa"
 msgid "Services"
 msgstr "Tajaajiloota"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Yeroon turtii dhumeera"
 
@@ -1465,7 +1465,7 @@ msgstr "Sirna"
 msgid "System default"
 msgstr "Sirnaan dursaa"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Sirnaan dursaa"
 
@@ -1507,7 +1507,7 @@ msgstr "App milkaa'inaan fe'ameera."
 msgid "The requested app could not be found."
 msgstr "Appiin gaafatame hin argamne."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Fooyya'iinsi fayyadamtoota filannoo hin goone fayyadaman"
 
@@ -1519,7 +1519,7 @@ msgstr "Akeeka"
 msgid "Theme Settings"
 msgstr "Qindaa'inoota Akeeka"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Appiin kun bulchiinsa fooyya'iinsaa hin qabu"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Appiin kun kallattiidhaan maxxansaa irraa fe'ameera, hin sakatta'aminne. Hammeenya ta'uu danda'a."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Kun hayyama \"{0}\" {appName} irraa haqa. Appiin sirriitti hojjachuu dhaabuu mala."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Ol"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Trakii"
 
@@ -1607,7 +1607,7 @@ msgstr "Fayyadamtoota barbaaduuf barreessi"
 msgid "Type to search..."
 msgstr "Barbaaduuf barreessi..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Sarvara fagoo waliin walqunnamuu hin dandeenye"
 
@@ -1702,7 +1702,7 @@ msgstr "Mirkaneessi"
 msgid "Verify email address"
 msgstr "Teessoo iimeelii mirkaneessi"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Fooyya'iinsa"
 
@@ -1711,11 +1711,11 @@ msgstr "Fooyya'iinsa"
 msgid "Version {0}"
 msgstr "Fooyya'iinsa {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Fooyya'iinsi jijjiirameera"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Bulchiinsa Fooyya'iinsa"
 
@@ -1752,7 +1752,7 @@ msgstr "Roobii"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Akkaawuntiin kee {source} irraa as fidame. Achitti haqtee hanga fixtutti, ergaawwan fi beeksisawwan sarvara lamaaniyyuu ga'uu danda'u, qabeenyi kee tokko tokko sarvaraa durii irraa tajaajilamu itti fufa, fi hordoftonni si argachuu dhaaf daqiiqaawwan muraasa fudhachuu danda'u."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Fooyya'iinsa dhuunfaa kee"
 
@@ -1760,6 +1760,6 @@ msgstr "Fooyya'iinsa dhuunfaa kee"
 msgid "Your preference"
 msgstr "Filannoo kee"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Fooyya'iinsa Kee"

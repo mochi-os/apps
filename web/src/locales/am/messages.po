@@ -31,11 +31,11 @@ msgstr "{0} ተዘምኗል፣ {failed} አልተሳካም"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ተጭኗል።"
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (ነባሪ፣ ስሪት {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (ስሪት {version})"
 
@@ -137,11 +137,11 @@ msgstr "ሁሉም"
 msgid "All apps updated"
 msgstr "ሁሉም መተግበሪያዎች ተዘምነዋል"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "ስህተት ተከስቷል"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "ያልተጠበቀ ስህተት ተከስቷል"
 
@@ -251,7 +251,7 @@ msgstr "ፍላጎትን አሳድግ"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "ይቅር"
 
@@ -473,24 +473,24 @@ msgstr "ነባሪ"
 msgid "Default AI account"
 msgstr "ነባሪ የAI መለያ"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "ለሁሉም ተጠቃሚዎች ነባሪ"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "ለሁሉም ተጠቃሚዎች ነባሪ (ስሪት {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "ለሁሉም ተጠቃሚዎች ነባሪ ተዘምኗል"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "ነባሪ መንገድ"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "ነባሪ መንገድ (ስሪት {0})"
 
@@ -598,7 +598,7 @@ msgstr "መለያ መጨመር አልተሳካም"
 msgid "Failed to clean up apps"
 msgstr "መተግበሪያዎችን ማጽዳት አልተሳካም"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "ፈቃድ መስጠት አልተሳካም"
 
@@ -606,7 +606,7 @@ msgstr "ፈቃድ መስጠት አልተሳካም"
 msgid "Failed to remove account"
 msgstr "መለያን ማስወገድ አልተሳካም"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "ፈቃድን መሻር አልተሳካም"
 
@@ -622,12 +622,12 @@ msgstr "መተግበሪያዎችን ማዘመን አልተሳካም"
 msgid "Failed to update category"
 msgstr "ምድብን ማዘመን አልተሳካም"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "ነባሪን ማዘመን አልተሳካም"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "ምርጫን ማዘመን አልተሳካም"
 
@@ -712,19 +712,19 @@ msgstr "ወደ ገጽ {pageNumber} ሂድ"
 msgid "Go to previous page"
 msgstr "ወደ ቀዳሚ ገጽ ሂድ"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "ስጥ"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "ፈቃድ ስጥ"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "ይህ መተግበሪያ የስርዓት ባህሪያትን እንዲደርስ ፈቃዶችን ስጥ"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "ፈቃድ በመስጠት ላይ..."
 
@@ -884,7 +884,7 @@ msgstr "በተሳካ ሁኔታ ወጥቷል"
 msgid "Logging out…"
 msgstr "በመውጣት ላይ…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "ለዚህ መተግበሪያ የተሰጡ ችሎታዎችን ያስተዳድሩ"
 
@@ -914,7 +914,7 @@ msgstr "ሰኞ"
 msgid "Multiple apps declare this resource"
 msgstr "ብዙ መተግበሪያዎች ይህን ሀብት ያውጃሉ"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "የአውታረ መረብ ስህተት"
 
@@ -980,11 +980,11 @@ msgstr "ምንም የሚዛመዱ መተግበሪያዎች የሉም"
 msgid "No paths configured."
 msgstr "ምንም መንገዶች አልተዋቀሩም።"
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "ምንም ፍቃዶች አልተሰጡም"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "ለዚህ መተግበሪያ ምንም ፈቃዶች አልተሰጡም"
 
@@ -1039,7 +1039,7 @@ msgstr "መደበኛ"
 msgid "Not set"
 msgstr "አልተዋቀረም"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "ስሪት የለውም"
 
@@ -1117,19 +1117,19 @@ msgstr "የመንገድ ማስተላለፊያ"
 msgid "Paths"
 msgstr "መንገዶች"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "ፍቃድ ተሰጥቷል"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "ፍቃድ ተሰርዟል"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "ፍቃዶች"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "እባክዎ የበይነመረብ ግንኙነትዎን አረጋግጠው እንደገና ይሞክሩ።"
 
@@ -1141,7 +1141,7 @@ msgstr "እባክዎን የመተግበሪያ መለያ ያስገቡ"
 msgid "Preference updated"
 msgstr "ምርጫ ተዘምኗል"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "ተመራጭ ስሪት"
 
@@ -1237,20 +1237,20 @@ msgstr "ዳግም አስጀምር"
 msgid "Reset all settings to default values"
 msgstr "ሁሉንም ቅንብሮች ወደ ነባሪ እሴቶች ዳግም አስጀምር"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "ይሻሩ"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "ፈቃድ ይሰርዙ"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "ፈቃድ ይሻሩ?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "ፈቃድን በመሻር ላይ..."
 
@@ -1273,8 +1273,8 @@ msgstr "ያስቀምጡ"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "በማስቀመጥ ላይ..."
 
@@ -1316,7 +1316,7 @@ msgstr "ይፈልጉ..."
 msgid "Searching..."
 msgstr "በመፈለግ ላይ..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "ለ{appName} የሚሰጥ ችሎታ ይምረጡ።"
 
@@ -1352,7 +1352,7 @@ msgstr "የጣቢያ አቅጣጫ ይምረጡ"
 msgid "Select theme preference"
 msgstr "የገጽታ ምርጫ ይምረጡ"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "የዚህን መተግበሪያ የትኛው ስሪት እንደሚጠቀሙ ይምረጡ"
 
@@ -1368,8 +1368,8 @@ msgstr "ኢሜይል ላክ"
 msgid "Serif"
 msgstr "ሰሪፍ"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "የአገልጋይ ስህተት"
 
@@ -1391,7 +1391,7 @@ msgstr "የአገልግሎት መንገድ"
 msgid "Services"
 msgstr "አገልግሎቶች"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "ክፍለ-ጊዜ አብቅቷል"
 
@@ -1465,7 +1465,7 @@ msgstr "ስርዓት"
 msgid "System default"
 msgstr "የስርዓት ነባሪ"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "የስርዓት ነባሪ"
 
@@ -1507,7 +1507,7 @@ msgstr "መተግበሪያው በተሳካ ሁኔታ ተጭኗል።"
 msgid "The requested app could not be found."
 msgstr "የተጠየቀው መተግበሪያ ሊገኝ አልቻለም።"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "ምርጫ ላላደረጉ ተጠቃሚዎች የሚጠቀምበት ስሪት"
 
@@ -1519,7 +1519,7 @@ msgstr "ገጽታ"
 msgid "Theme Settings"
 msgstr "የገጽታ ቅንብሮች"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "ይህ መተግበሪያ የስሪት አስተዳደር የለውም"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "ይህ መተግበሪያ በቀጥታ ከአታሚው ተጭኗል እና አልተፈተሸም። ጎጂ ሶፍትዌር ሊሆን ይችላል።"
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "ይህ የ\"{0}\" ፈቃድን ከ{appName} ያስወግዳል። መተግበሪያው በትክክል መስራት ሊያቆም ይችላል።"
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "ላይ"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "ትራክ"
 
@@ -1607,7 +1607,7 @@ msgstr "ተጠቃሚዎችን ለመፈለግ ይተይቡ"
 msgid "Type to search..."
 msgstr "ለመፈለግ ይተይቡ..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "ከርቀት አገልጋይ ጋር መገናኘት አልተቻለም"
 
@@ -1702,7 +1702,7 @@ msgstr "ያረጋግጡ"
 msgid "Verify email address"
 msgstr "የኢሜይል አድራሻ ያረጋግጡ"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "ስሪት"
 
@@ -1711,11 +1711,11 @@ msgstr "ስሪት"
 msgid "Version {0}"
 msgstr "ስሪት {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "ስሪት ተቀይሯል"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "የስሪት አስተዳደር"
 
@@ -1752,7 +1752,7 @@ msgstr "ረቡዕ"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "መለያህ ከ{source} ወደዚህ ተዛውሯል። እዚያ እስኪሰርዝ ድረስ፣ መልዕክቶችና ማሳወቂያዎች ሁለቱ ሰርቨሮች ሊደርሱ ይችላሉ፣ አንዳንድ ይዘቶችህ ከድሮ ሰርቨር ሲቀርቡ ይቀጥላሉ፣ ተከታዮችህ ወደዚህ ለማግኘት ጥቂት ደቂቃዎች ሊወስድ ይችላል።"
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "የእርስዎ የግል የስሪት መተካት"
 
@@ -1760,6 +1760,6 @@ msgstr "የእርስዎ የግል የስሪት መተካት"
 msgid "Your preference"
 msgstr "የእርስዎ ምርጫ"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "የእርስዎ ስሪት"

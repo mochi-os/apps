@@ -31,11 +31,11 @@ msgstr "{0} навсозӣ шуд, {failed} ноком шуд"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} насб карда шуд."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (пешфарз, версияи {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (версияи {version})"
 
@@ -137,11 +137,11 @@ msgstr "Ҳама"
 msgid "All apps updated"
 msgstr "Ҳама барномаҳо навсозӣ карда шуданд"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Хатогӣ рух дод"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Хатогии ғайричашмдошт рух дод"
 
@@ -251,7 +251,7 @@ msgstr "Афзоиши таваҷҷуҳ"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Бекор кардан"
 
@@ -473,24 +473,24 @@ msgstr "Пешфарз"
 msgid "Default AI account"
 msgstr "Ҳисоби пешфарз AI"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Пешфарз барои ҳама корбарон"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Пешфарз барои ҳама корбарон (версияи {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Пешфарз барои ҳама корбарон навсозӣ шуд"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Track-и пешфарз"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Track-и пешфарз (версияи {0})"
 
@@ -598,7 +598,7 @@ msgstr "Илова кардани ҳисоб ба анҷом нарасид"
 msgid "Failed to clean up apps"
 msgstr "Тоза кардани барномаҳо ноком шуд"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Додани иҷозат ба анҷом нарасид"
 
@@ -606,7 +606,7 @@ msgstr "Додани иҷозат ба анҷом нарасид"
 msgid "Failed to remove account"
 msgstr "Бартараф кардани ҳисоб ба анҷом нарасид"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Лағви иҷозат ба анҷом нарасид"
 
@@ -622,12 +622,12 @@ msgstr "Навсозии барномаҳо ноком шуд"
 msgid "Failed to update category"
 msgstr "Навсозии категория ба анҷом нарасид"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Навсозии пешфарз ба анҷом нарасид"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Навсозии афзалият ба анҷом нарасид"
 
@@ -712,19 +712,19 @@ msgstr "Ба саҳифаи {pageNumber} гузаштан"
 msgid "Go to previous page"
 msgstr "Ба саҳифаи қаблӣ рафтан"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Иҷоза"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Иҷозат додан"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Барои дастрасии ин барнома ба хусусиятҳои система иҷозатҳо диҳед"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Иҷозат дода мешавад..."
 
@@ -884,7 +884,7 @@ msgstr "Бомуваффақият баромад"
 msgid "Logging out…"
 msgstr "Баромадан…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Идоракунии қобилиятҳое, ки ба ин барнома дода шудаанд"
 
@@ -914,7 +914,7 @@ msgstr "Душанбе"
 msgid "Multiple apps declare this resource"
 msgstr "Якчанд барнома ин захираро эълон мекунанд"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Хатогии шабака"
 
@@ -980,11 +980,11 @@ msgstr "Ягон барномаи мувофиқ нест"
 msgid "No paths configured."
 msgstr "Ягон роҳ танзим нашудааст."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Ягон рухсат дода нашуд"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Ба ин барнома ягон рухсат дода нашудааст"
 
@@ -1039,7 +1039,7 @@ msgstr "Муқаррарӣ"
 msgid "Not set"
 msgstr "Танзим нашудааст"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Версиядор нест"
 
@@ -1117,19 +1117,19 @@ msgstr "Масирёбии роҳ"
 msgid "Paths"
 msgstr "Роҳҳо"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Иҷозат дода шуд"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Иҷозат гирифта шуд"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Иҷозатҳо"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Лутфан пайвасти интернети худро санҷед ва аз нав кӯшиш кунед."
 
@@ -1141,7 +1141,7 @@ msgstr "Лутфан ID-и барномаро ворид кунед"
 msgid "Preference updated"
 msgstr "Афзалият навсозӣ шуд"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Версияи беҳтаршуда"
 
@@ -1237,20 +1237,20 @@ msgstr "Барқарорсозӣ"
 msgid "Reset all settings to default values"
 msgstr "Барқарорсозии ҳамаи танзимот ба қиматҳои нобаёнӣ"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Бекор кардан"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Бекор кардани иҷозат"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Иҷозатро бекор кардан?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Иҷозат бекор карда мешавад..."
 
@@ -1273,8 +1273,8 @@ msgstr "Захира"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Захира кардан..."
 
@@ -1316,7 +1316,7 @@ msgstr "Ҷустуҷӯ..."
 msgid "Searching..."
 msgstr "Ҷустуҷӯ карда мешавад..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Имкониятеро интихоб кунед, ки ба {appName} додан мехоҳед."
 
@@ -1352,7 +1352,7 @@ msgstr "Самти сайтро интихоб кунед"
 msgid "Select theme preference"
 msgstr "Афзалияти мавзӯъро интихоб кунед"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Кадом версияи ин барномаро истифода бурдан мехоҳед, интихоб кунед"
 
@@ -1368,8 +1368,8 @@ msgstr "Имейл фиристодан"
 msgid "Serif"
 msgstr "Сериф"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Хатогии сервер"
 
@@ -1391,7 +1391,7 @@ msgstr "Масирёбии хидмат"
 msgid "Services"
 msgstr "Хидматҳо"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Сессия ба охир расид"
 
@@ -1465,7 +1465,7 @@ msgstr "Система"
 msgid "System default"
 msgstr "Пешфарзи система"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Пешфарзи Система"
 
@@ -1507,7 +1507,7 @@ msgstr "Барнома бомуваффақият насб карда шуд."
 msgid "The requested app could not be found."
 msgstr "Барномаи дархостшуда ёфт нашуд."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Версияе, ки аз ҷониби корбароне, ки интихоб накардаанд, истифода мешавад"
 
@@ -1519,7 +1519,7 @@ msgstr "Мавзӯъ"
 msgid "Theme Settings"
 msgstr "Танзимоти мавзӯъ"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Ин барнома идоракунии версияҳоро надорад"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Ин барнома мустақиман аз нашркунандааш насб карда шудааст ва санҷида нашудааст. Он метавонад зараровар бошад."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Ин иҷозати \"{0}\"-ро аз {appName} бекор мекунад. Барнома метавонад дуруст кор накунад."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Боло"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Track"
 
@@ -1607,7 +1607,7 @@ msgstr "Барои ҷустуҷӯи корбарон чоп кунед"
 msgid "Type to search..."
 msgstr "Барои ҷустуҷӯ чоп кунед..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Пайвастшавӣ ба сервери дурдаст имконнопазир аст"
 
@@ -1702,7 +1702,7 @@ msgstr "Тасдиқ кардан"
 msgid "Verify email address"
 msgstr "Тасдиқи суроғаи почтаи электронӣ"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Версия"
 
@@ -1711,11 +1711,11 @@ msgstr "Версия"
 msgid "Version {0}"
 msgstr "Версияи {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Версия тағйир ёфт"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Идоракунии версияҳо"
 
@@ -1752,7 +1752,7 @@ msgstr "Чоршанбе"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ҳисоби шумо аз {source} ба ин ҷо интиқол дода шуд. То он гоҳ, ки онро дар он ҷо нест накунед, паёмҳо ва огоҳиҳо метавонанд ба ҳарду сервер расанд, қисмати муайяни мазмуни шумо аз сервери кӯҳна хизмат медиҳад ва пайравон метавонанд чанд дақиқа вақт барои ёфтани шумо дар ин ҷо сарф кунанд."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Тағирёбии версияи шахсии шумо"
 
@@ -1760,6 +1760,6 @@ msgstr "Тағирёбии версияи шахсии шумо"
 msgid "Your preference"
 msgstr "Афзалияти шумо"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Версияи Шумо"

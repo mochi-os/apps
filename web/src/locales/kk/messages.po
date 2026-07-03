@@ -31,11 +31,11 @@ msgstr "{0} жаңартылды, {failed} сәтсіз"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} орнатылды."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (әдепкі, {version} нұсқасы)"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} ({version} нұсқасы)"
 
@@ -137,11 +137,11 @@ msgstr "Барлығы"
 msgid "All apps updated"
 msgstr "Барлық қолданбалар жаңартылды"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Қате орын алды"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Күтпеген қате орын алды"
 
@@ -251,7 +251,7 @@ msgstr "Қызығушылықты арттыру"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Болдырмау"
 
@@ -473,24 +473,24 @@ msgstr "Әдепкі"
 msgid "Default AI account"
 msgstr "Әдепкі AI тіркелгісі"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Барлық пайдаланушылар үшін әдепкі"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Барлық пайдаланушылар үшін әдепкі (нұсқа {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Барлық пайдаланушылар үшін әдепкі жаңартылды"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Әдепкі track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Әдепкі track (нұсқа {0})"
 
@@ -598,7 +598,7 @@ msgstr "Тіркелгіні қосу сәтсіз аяқталды"
 msgid "Failed to clean up apps"
 msgstr "Қолданбаларды тазалау сәтсіз аяқталды"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Рұқсат беру сәтсіз аяқталды"
 
@@ -606,7 +606,7 @@ msgstr "Рұқсат беру сәтсіз аяқталды"
 msgid "Failed to remove account"
 msgstr "Тіркелгіні жою сәтсіз аяқталды"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Рұқсатты қайтарып алу сәтсіз аяқталды"
 
@@ -622,12 +622,12 @@ msgstr "Қолданбаларды жаңарту сәтсіз аяқталды"
 msgid "Failed to update category"
 msgstr "Санатты жаңарту сәтсіз аяқталды"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Әдепкіні жаңарту сәтсіз аяқталды"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Параметрді жаңарту сәтсіз аяқталды"
 
@@ -712,19 +712,19 @@ msgstr "{pageNumber} бетіне өту"
 msgid "Go to previous page"
 msgstr "Алдыңғы бетке өту"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Беру"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Рұқсат беру"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Бұл қолданбаға жүйелік мүмкіндіктерге кіруге рұқсат беру"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Рұқсат берілуде..."
 
@@ -884,7 +884,7 @@ msgstr "Жүйеден сәтті шықтыңыз"
 msgid "Logging out…"
 msgstr "Шығу…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Бұл қолданбаға берілген мүмкіндіктерді басқару"
 
@@ -914,7 +914,7 @@ msgstr "Дүйсенбі"
 msgid "Multiple apps declare this resource"
 msgstr "Бірнеше қолданбалар осы ресурсты жариялайды"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Желі қатесі"
 
@@ -980,11 +980,11 @@ msgstr "Сәйкес қолданбалар жоқ"
 msgid "No paths configured."
 msgstr "Жолдар реттелмеген."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Берілген рұқсаттар жоқ"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Бұл қолданбаға берілген рұқсаттар жоқ"
 
@@ -1039,7 +1039,7 @@ msgstr "Қалыпты"
 msgid "Not set"
 msgstr "Орнатылмаған"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Нұсқаланбаған"
 
@@ -1117,19 +1117,19 @@ msgstr "Жол маршруттау"
 msgid "Paths"
 msgstr "Жолдар"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Рұқсат берілді"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Рұқсат қайтарылды"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Рұқсаттар"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Интернет байланысын тексеріп, қайталап көріңіз."
 
@@ -1141,7 +1141,7 @@ msgstr "Қолданба ID енгізіңіз"
 msgid "Preference updated"
 msgstr "Параметр жаңартылды"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Қалаулы нұсқа"
 
@@ -1237,20 +1237,20 @@ msgstr "Қайтару"
 msgid "Reset all settings to default values"
 msgstr "Барлық параметрлерді әдепкі мәндерге қайтару"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Қайтарып алу"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Рұқсатты қайтарып алу"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Рұқсатты қайтарып алу керек пе?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Рұқсат қайтарып алынуда..."
 
@@ -1273,8 +1273,8 @@ msgstr "Сақтау"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Сақталуда..."
 
@@ -1316,7 +1316,7 @@ msgstr "Іздеу..."
 msgid "Searching..."
 msgstr "Іздеуде..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "{appName} қолданбасына беру үшін мүмкіндікті таңдаңыз."
 
@@ -1352,7 +1352,7 @@ msgstr "Сайт бағытын таңдау"
 msgid "Select theme preference"
 msgstr "Тақырып теңшелімін таңдау"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Бұл қолданбаның қай нұсқасын пайдалану керектігін таңдау"
 
@@ -1368,8 +1368,8 @@ msgstr "Электрондық пошта жіберу"
 msgid "Serif"
 msgstr "Серифті"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Сервер қатесі"
 
@@ -1391,7 +1391,7 @@ msgstr "Қызмет бағыттау"
 msgid "Services"
 msgstr "Қызметтер"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Сеанс мерзімі аяқталды"
 
@@ -1465,7 +1465,7 @@ msgstr "Жүйе"
 msgid "System default"
 msgstr "Жүйе әдепкісі"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Жүйе әдепкісі"
 
@@ -1507,7 +1507,7 @@ msgstr "Қолданба сәтті орнатылды."
 msgid "The requested app could not be found."
 msgstr "Сұралған қолданба табылмады."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Таңдау жасамаған пайдаланушылар қолданатын нұсқа"
 
@@ -1519,7 +1519,7 @@ msgstr "Тақырып"
 msgid "Theme Settings"
 msgstr "Тақырып параметрлері"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Бұл қолданбада нұсқа басқаруы жоқ"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Бұл қолданба тікелей баспагерден орнатылған және тексерілмеген. Ол зиянкес бағдарлама болуы мүмкін."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Бұл {appName}-нен \"{0}\" рұқсатын қайтарып алады. Қолданба дұрыс жұмыс істеуді тоқтатуы мүмкін."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Жоғары"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Жол"
 
@@ -1607,7 +1607,7 @@ msgstr "Пайдаланушыларды іздеу үшін теріңіз"
 msgid "Type to search..."
 msgstr "Іздеу үшін теріңіз..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Қашықтағы серверге қосылу мүмкін болмады"
 
@@ -1702,7 +1702,7 @@ msgstr "Тексеру"
 msgid "Verify email address"
 msgstr "Электрондық пошта мекенжайын тексеру"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Нұсқа"
 
@@ -1711,11 +1711,11 @@ msgstr "Нұсқа"
 msgid "Version {0}"
 msgstr "Нұсқа {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Нұсқа өзгерді"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Нұсқа басқаруы"
 
@@ -1752,7 +1752,7 @@ msgstr "Сәрсенбі"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Тіркелгіңіз {source} жерінен осында ауыстырылды. Сіз оны сол жерден жоймайынша, хабарлар мен хабарландырулар екі серверге де жетуі мүмкін, кейбір мазмұныңыз ескі серверден берілуін жалғастырады, ал жазылушылар сізді осында табу үшін бірнеше минут кетуі мүмкін."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Жеке нұсқаны қайта анықтауыңыз"
 
@@ -1760,6 +1760,6 @@ msgstr "Жеке нұсқаны қайта анықтауыңыз"
 msgid "Your preference"
 msgstr "Сіздің теңшеліміңіз"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Сіздің нұсқаңыз"

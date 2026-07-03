@@ -31,11 +31,11 @@ msgstr "{0} diperbarui, {failed} gagal"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} telah diinstal."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (default, versi {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (versi {version})"
 
@@ -137,11 +137,11 @@ msgstr "Semua"
 msgid "All apps updated"
 msgstr "Semua aplikasi diperbarui"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Terjadi kesalahan"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Terjadi kesalahan tak terduga"
 
@@ -251,7 +251,7 @@ msgstr "Tingkatkan minat"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Batal"
 
@@ -473,24 +473,24 @@ msgstr "Default"
 msgid "Default AI account"
 msgstr "Akun AI default"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Default untuk semua pengguna"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Default untuk semua pengguna (versi {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Default untuk semua pengguna diperbarui"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Trek default"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Trek default (versi {0})"
 
@@ -598,7 +598,7 @@ msgstr "Gagal menambahkan akun"
 msgid "Failed to clean up apps"
 msgstr "Gagal membersihkan aplikasi"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Gagal memberikan izin"
 
@@ -606,7 +606,7 @@ msgstr "Gagal memberikan izin"
 msgid "Failed to remove account"
 msgstr "Gagal menghapus akun"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Gagal mencabut izin"
 
@@ -622,12 +622,12 @@ msgstr "Gagal memperbarui aplikasi"
 msgid "Failed to update category"
 msgstr "Gagal memperbarui kategori"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Gagal memperbarui default"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Gagal memperbarui preferensi"
 
@@ -712,19 +712,19 @@ msgstr "Pergi ke halaman {pageNumber}"
 msgid "Go to previous page"
 msgstr "Ke halaman sebelumnya"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Berikan"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Berikan izin"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Berikan izin agar aplikasi ini dapat mengakses fitur sistem"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Memberikan izin..."
 
@@ -884,7 +884,7 @@ msgstr "Berhasil keluar"
 msgid "Logging out…"
 msgstr "Sedang keluar…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Kelola kemampuan yang diberikan ke aplikasi ini"
 
@@ -914,7 +914,7 @@ msgstr "Senin"
 msgid "Multiple apps declare this resource"
 msgstr "Beberapa aplikasi mendeklarasikan sumber daya ini"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Kesalahan jaringan"
 
@@ -980,11 +980,11 @@ msgstr "Tidak ada aplikasi yang cocok"
 msgid "No paths configured."
 msgstr "Tidak ada jalur yang dikonfigurasi."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Tidak ada izin yang diberikan"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Tidak ada izin yang diberikan ke aplikasi ini"
 
@@ -1039,7 +1039,7 @@ msgstr "Normal"
 msgid "Not set"
 msgstr "Belum diatur"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Tidak diversi"
 
@@ -1117,19 +1117,19 @@ msgstr "Routing path"
 msgid "Paths"
 msgstr "Path"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Izin diberikan"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Izin dicabut"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Izin"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Periksa koneksi internet Anda dan coba lagi."
 
@@ -1141,7 +1141,7 @@ msgstr "Harap masukkan ID aplikasi"
 msgid "Preference updated"
 msgstr "Preferensi diperbarui"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Versi pilihan"
 
@@ -1237,20 +1237,20 @@ msgstr "Reset"
 msgid "Reset all settings to default values"
 msgstr "Reset semua pengaturan ke nilai default"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Cabut"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Cabut izin"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Cabut izin?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Mencabut izin..."
 
@@ -1273,8 +1273,8 @@ msgstr "Simpan"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Menyimpan..."
 
@@ -1316,7 +1316,7 @@ msgstr "Cari..."
 msgid "Searching..."
 msgstr "Mencari..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Pilih kemampuan untuk diberikan kepada {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Pilih arah situs"
 msgid "Select theme preference"
 msgstr "Pilih preferensi tema"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Pilih versi aplikasi yang akan digunakan"
 
@@ -1368,8 +1368,8 @@ msgstr "Kirim email"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Kesalahan server"
 
@@ -1391,7 +1391,7 @@ msgstr "Perutean layanan"
 msgid "Services"
 msgstr "Layanan"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Sesi berakhir"
 
@@ -1465,7 +1465,7 @@ msgstr "Sistem"
 msgid "System default"
 msgstr "Default sistem"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Default Sistem"
 
@@ -1507,7 +1507,7 @@ msgstr "Aplikasi telah berhasil dipasang."
 msgid "The requested app could not be found."
 msgstr "Aplikasi yang diminta tidak dapat ditemukan."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Versi yang digunakan oleh pengguna yang belum membuat pilihan"
 
@@ -1519,7 +1519,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Pengaturan Tema"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Aplikasi ini tidak memiliki manajemen versi"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Aplikasi ini diinstal langsung dari penerbitnya dan belum diverifikasi. Bisa jadi malware."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Ini akan mencabut izin \"{0}\" dari {appName}. Aplikasi mungkin berhenti bekerja dengan benar."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Atas"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Jalur"
 
@@ -1607,7 +1607,7 @@ msgstr "Ketik untuk mencari pengguna"
 msgid "Type to search..."
 msgstr "Ketik untuk mencari..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Tidak dapat terhubung ke server jarak jauh"
 
@@ -1702,7 +1702,7 @@ msgstr "Verifikasi"
 msgid "Verify email address"
 msgstr "Verifikasi alamat email"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Versi"
 
@@ -1711,11 +1711,11 @@ msgstr "Versi"
 msgid "Version {0}"
 msgstr "Versi {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Versi diubah"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Manajemen Versi"
 
@@ -1752,7 +1752,7 @@ msgstr "Rabu"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Akun Anda telah dipindahkan ke sini dari {source}. Sampai Anda menghapusnya di sana, pesan dan notifikasi mungkin menjangkau kedua server, sebagian konten Anda tetap disajikan dari server lama, dan pengikut mungkin membutuhkan beberapa menit untuk menemukan Anda di sini."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Penggantian versi pribadi Anda"
 
@@ -1760,6 +1760,6 @@ msgstr "Penggantian versi pribadi Anda"
 msgid "Your preference"
 msgstr "Preferensi Anda"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Versi Anda"

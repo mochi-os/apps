@@ -31,11 +31,11 @@ msgstr "{0} تم تحديثه، {failed} فشل"
 msgid "{0} v{1} has been installed."
 msgstr "تم تثبيت {0} الإصدار {1}."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (افتراضي، الإصدار {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (الإصدار {version})"
 
@@ -137,11 +137,11 @@ msgstr "الكل"
 msgid "All apps updated"
 msgstr "تم تحديث جميع التطبيقات"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "حدث خطأ"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "حدث خطأ غير متوقع"
 
@@ -251,7 +251,7 @@ msgstr "تعزيز الاهتمام"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "إلغاء"
 
@@ -473,24 +473,24 @@ msgstr "افتراضي"
 msgid "Default AI account"
 msgstr "حساب الذكاء الاصطناعي الافتراضي"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "الافتراضي لجميع المستخدمين"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "الافتراضي لجميع المستخدمين (الإصدار {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "تم تحديث الافتراضي لجميع المستخدمين"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "المسار الافتراضي"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "المسار الافتراضي (الإصدار {0})"
 
@@ -598,7 +598,7 @@ msgstr "فشل إضافة الحساب"
 msgid "Failed to clean up apps"
 msgstr "فشل تنظيف التطبيقات"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "فشل منح الإذن"
 
@@ -606,7 +606,7 @@ msgstr "فشل منح الإذن"
 msgid "Failed to remove account"
 msgstr "فشل إزالة الحساب"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "فشل إلغاء الإذن"
 
@@ -622,12 +622,12 @@ msgstr "فشل تحديث التطبيقات"
 msgid "Failed to update category"
 msgstr "فشل تحديث الفئة"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "فشل تحديث الافتراضي"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "فشل تحديث التفضيل"
 
@@ -712,19 +712,19 @@ msgstr "الانتقال إلى الصفحة {pageNumber}"
 msgid "Go to previous page"
 msgstr "الانتقال إلى الصفحة السابقة"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "منح"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "منح الإذن"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "امنح الأذونات للسماح لهذا التطبيق بالوصول إلى ميزات النظام"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "جارٍ منح الإذن..."
 
@@ -884,7 +884,7 @@ msgstr "تم تسجيل الخروج بنجاح"
 msgid "Logging out…"
 msgstr "جاري تسجيل الخروج…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "إدارة الإمكانيات الممنوحة لهذا التطبيق"
 
@@ -914,7 +914,7 @@ msgstr "الاثنين"
 msgid "Multiple apps declare this resource"
 msgstr "تطبيقات متعددة تعلن عن هذا المورد"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "خطأ في الشبكة"
 
@@ -980,11 +980,11 @@ msgstr "لا توجد تطبيقات مطابقة"
 msgid "No paths configured."
 msgstr "لم يتم تكوين أي مسارات."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "لم يتم منح صلاحيات"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "لم تُمنح أي أذونات لهذا التطبيق"
 
@@ -1039,7 +1039,7 @@ msgstr "عادي"
 msgid "Not set"
 msgstr "غير محدد"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "غير مُصدر"
 
@@ -1117,19 +1117,19 @@ msgstr "توجيه المسار"
 msgid "Paths"
 msgstr "المسارات"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "تم منح الإذن"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "تم إلغاء الإذن"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "الأذونات"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى."
 
@@ -1141,7 +1141,7 @@ msgstr "يرجى إدخال معرف تطبيق"
 msgid "Preference updated"
 msgstr "تم تحديث التفضيل"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "الإصدار المفضل"
 
@@ -1237,20 +1237,20 @@ msgstr "إعادة تعيين"
 msgid "Reset all settings to default values"
 msgstr "إعادة تعيين كل الإعدادات إلى القيم الافتراضية"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "إلغاء"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "إلغاء الإذن"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "إلغاء الإذن؟"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "جارٍ إلغاء الإذن..."
 
@@ -1273,8 +1273,8 @@ msgstr "حفظ"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "جاري الحفظ..."
 
@@ -1316,7 +1316,7 @@ msgstr "بحث..."
 msgid "Searching..."
 msgstr "جاري البحث..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "حدد إمكانية لمنحها لـ {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "اختر اتجاه الموقع"
 msgid "Select theme preference"
 msgstr "اختر تفضيل السمة"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "اختر إصدار هذا التطبيق الذي تريد استخدامه"
 
@@ -1368,8 +1368,8 @@ msgstr "إرسال بريد إلكتروني"
 msgid "Serif"
 msgstr "سيريف"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "خطأ في الخادم"
 
@@ -1391,7 +1391,7 @@ msgstr "توجيه الخدمة"
 msgid "Services"
 msgstr "الخدمات"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "انتهت الجلسة"
 
@@ -1465,7 +1465,7 @@ msgstr "النظام"
 msgid "System default"
 msgstr "افتراضي النظام"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "افتراضي النظام"
 
@@ -1507,7 +1507,7 @@ msgstr "تم تثبيت التطبيق بنجاح."
 msgid "The requested app could not be found."
 msgstr "تعذر العثور على التطبيق المطلوب."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "الإصدار المستخدم من قبل المستخدمين الذين لم يقوموا بخيار"
 
@@ -1519,7 +1519,7 @@ msgstr "السمة"
 msgid "Theme Settings"
 msgstr "إعدادات السمة"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "هذا التطبيق لا يحتوي على إدارة إصدارات"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "يتم تثبيت هذا التطبيق مباشرة من ناشره ولم يتم فحصه. قد يكون برنامجًا ضارًا."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "سيؤدي هذا إلى إلغاء إذن \"{0}\" من {appName}. قد يتوقف التطبيق عن العمل بشكل صحيح."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "الأعلى"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "المسار"
 
@@ -1607,7 +1607,7 @@ msgstr "اكتب للبحث عن مستخدمين"
 msgid "Type to search..."
 msgstr "اكتب للبحث..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "تعذّر الاتصال بالخادم البعيد"
 
@@ -1702,7 +1702,7 @@ msgstr "تحقق"
 msgid "Verify email address"
 msgstr "التحقق من عنوان البريد الإلكتروني"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "الإصدار"
 
@@ -1711,11 +1711,11 @@ msgstr "الإصدار"
 msgid "Version {0}"
 msgstr "الإصدار {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "تم تغيير الإصدار"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "إدارة الإصدارات"
 
@@ -1752,7 +1752,7 @@ msgstr "الأربعاء"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "تم نقل حسابك إلى هنا من {source}. حتى تحذفه من هناك، قد تصل الرسائل والإشعارات إلى كلا الخادمين، وقد يظل بعض محتواك يُقدَّم من الخادم القديم، وقد يستغرق المتابعون بضع دقائق للعثور عليك هنا."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "تجاوز إصدارك الشخصي"
 
@@ -1760,6 +1760,6 @@ msgstr "تجاوز إصدارك الشخصي"
 msgid "Your preference"
 msgstr "تفضيلاتك"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "إصدارك"

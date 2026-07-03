@@ -31,11 +31,11 @@ msgstr "{0} güncellendi, {failed} başarısız"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} yüklendi."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (varsayılan, sürüm {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (sürüm {version})"
 
@@ -137,11 +137,11 @@ msgstr "Tümü"
 msgid "All apps updated"
 msgstr "Tüm uygulamalar güncellendi"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Bir hata oluştu"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Beklenmeyen bir hata oluştu"
 
@@ -251,7 +251,7 @@ msgstr "İlgiyi artır"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "İptal"
 
@@ -473,24 +473,24 @@ msgstr "Varsayılan"
 msgid "Default AI account"
 msgstr "Varsayılan AI hesabı"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Tüm kullanıcılar için varsayılan"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Tüm kullanıcılar için varsayılan (sürüm {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Tüm kullanıcılar için varsayılan güncellendi"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Varsayılan track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Varsayılan track (sürüm {0})"
 
@@ -598,7 +598,7 @@ msgstr "Hesap eklenemedi"
 msgid "Failed to clean up apps"
 msgstr "Uygulamalar temizlenemedi"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "İzin verilemedi"
 
@@ -606,7 +606,7 @@ msgstr "İzin verilemedi"
 msgid "Failed to remove account"
 msgstr "Hesap kaldırılamadı"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "İzin iptal edilemedi"
 
@@ -622,12 +622,12 @@ msgstr "Uygulamalar güncellenemedi"
 msgid "Failed to update category"
 msgstr "Kategori güncellenemedi"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Varsayılan güncellenemedi"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Tercih güncellenemedi"
 
@@ -712,19 +712,19 @@ msgstr "{pageNumber}. sayfaya git"
 msgid "Go to previous page"
 msgstr "Önceki sayfaya git"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Ver"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "İzin ver"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Bu uygulamanın sistem özelliklerine erişmesi için izin verin"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "İzin veriliyor..."
 
@@ -884,7 +884,7 @@ msgstr "Oturum başarıyla kapatıldı"
 msgid "Logging out…"
 msgstr "Oturum kapatılıyor…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Bu uygulamaya verilen yetkileri yönetin"
 
@@ -914,7 +914,7 @@ msgstr "Pazartesi"
 msgid "Multiple apps declare this resource"
 msgstr "Bu kaynağı birden fazla uygulama bildiriyor"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Ağ hatası"
 
@@ -980,11 +980,11 @@ msgstr "Eşleşen uygulama yok"
 msgid "No paths configured."
 msgstr "Yol yapılandırılmamış."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "İzin verilmedi"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Bu uygulamaya izin verilmedi"
 
@@ -1039,7 +1039,7 @@ msgstr "Normal"
 msgid "Not set"
 msgstr "Ayarlanmamış"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Sürümlenmemiş"
 
@@ -1117,19 +1117,19 @@ msgstr "Yol yönlendirmesi"
 msgid "Paths"
 msgstr "Yollar"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "İzin verildi"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "İzin iptal edildi"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "İzinler"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Lütfen internet bağlantınızı kontrol edip tekrar deneyin."
 
@@ -1141,7 +1141,7 @@ msgstr "Lütfen bir uygulama kimliği girin"
 msgid "Preference updated"
 msgstr "Tercih güncellendi"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Tercih edilen sürüm"
 
@@ -1237,20 +1237,20 @@ msgstr "Sıfırla"
 msgid "Reset all settings to default values"
 msgstr "Tüm ayarları varsayılan değerlere sıfırla"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "İptal et"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "İzni iptal et"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "İzin iptal edilsin mi?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "İzin iptal ediliyor..."
 
@@ -1273,8 +1273,8 @@ msgstr "Kaydet"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Kaydediliyor..."
 
@@ -1316,7 +1316,7 @@ msgstr "Ara..."
 msgid "Searching..."
 msgstr "Aranıyor..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "{appName} uygulamasına verilecek bir yetenek seçin."
 
@@ -1352,7 +1352,7 @@ msgstr "Site yönünü seç"
 msgid "Select theme preference"
 msgstr "Tema tercihi seç"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Bu uygulamanın hangi sürümünün kullanılacağını seç"
 
@@ -1368,8 +1368,8 @@ msgstr "E-posta gönder"
 msgid "Serif"
 msgstr "Tırnaklı"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Sunucu hatası"
 
@@ -1391,7 +1391,7 @@ msgstr "Servis yönlendirme"
 msgid "Services"
 msgstr "Servisler"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Oturum süresi doldu"
 
@@ -1465,7 +1465,7 @@ msgstr "Sistem"
 msgid "System default"
 msgstr "Sistem varsayılanı"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Sistem varsayılanı"
 
@@ -1507,7 +1507,7 @@ msgstr "Uygulama başarıyla yüklendi."
 msgid "The requested app could not be found."
 msgstr "İstenen uygulama bulunamadı."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Henüz seçim yapmamış kullanıcılar tarafından kullanılan sürüm"
 
@@ -1519,7 +1519,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Tema ayarları"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Bu uygulamanın sürüm yönetimi yok"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Bu uygulama doğrudan yayıncısından yüklenmiş ve incelenmemiştir. Zararlı yazılım olabilir."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Bu işlem \"{0}\" iznini {appName} uygulamasından iptal edecek. Uygulama düzgün çalışmayı durdurabilir."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Üst"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Track"
 
@@ -1607,7 +1607,7 @@ msgstr "Kullanıcı aramak için yaz"
 msgid "Type to search..."
 msgstr "Aramak için yaz..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Uzak sunucuya bağlanılamadı"
 
@@ -1702,7 +1702,7 @@ msgstr "Doğrula"
 msgid "Verify email address"
 msgstr "E-posta adresini doğrula"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Sürüm"
 
@@ -1711,11 +1711,11 @@ msgstr "Sürüm"
 msgid "Version {0}"
 msgstr "Sürüm {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Sürüm değiştirildi"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Sürüm yönetimi"
 
@@ -1752,7 +1752,7 @@ msgstr "Çarşamba"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Hesabınız {source} adresinden buraya taşındı. Orada silene kadar mesajlar ve bildirimler her iki sunucuya da ulaşabilir, bazı içerikleriniz eski sunucudan sunulmaya devam eder ve takipçileriniz sizi burada bulmak için birkaç dakika bekleyebilir."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Kişisel sürüm geçersiz kılman"
 
@@ -1760,6 +1760,6 @@ msgstr "Kişisel sürüm geçersiz kılman"
 msgid "Your preference"
 msgstr "Tercihin"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Senin sürümün"

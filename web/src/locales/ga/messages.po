@@ -31,11 +31,11 @@ msgstr "{0} nuashonraithe, {failed} theip"
 msgid "{0} v{1} has been installed."
 msgstr "Suiteáladh {0} v{1}."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (réamhshocrú, leagan {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (leagan {version})"
 
@@ -137,11 +137,11 @@ msgstr "Iomlán"
 msgid "All apps updated"
 msgstr "Gach aip nuashonraithe"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Tharla earráid"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Tharla earráid gan choinne"
 
@@ -251,7 +251,7 @@ msgstr "Spreag spéis"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Cealaigh"
 
@@ -473,24 +473,24 @@ msgstr "Réamhshocrú"
 msgid "Default AI account"
 msgstr "Cuntas AI réamhshocraithe"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Réamhshocrú do gach úsáideoir"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Réamhshocrú do gach úsáideoir (leagan {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Réamhshocrú do gach úsáideoir nuashonraithe"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Rian réamhshocraithe"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Rian réamhshocraithe (leagan {0})"
 
@@ -598,7 +598,7 @@ msgstr "Theip ar chuntas a chur leis"
 msgid "Failed to clean up apps"
 msgstr "Theip ar na haipeanna a ghlanadh"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Theip ar chead a thabhairt"
 
@@ -606,7 +606,7 @@ msgstr "Theip ar chead a thabhairt"
 msgid "Failed to remove account"
 msgstr "Theip ar bhaint chuntais"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Theip ar chead a chúlghairm"
 
@@ -622,12 +622,12 @@ msgstr "Theip ar na haipeanna a nuashonrú"
 msgid "Failed to update category"
 msgstr "Theip ar nuashonrú catagóire"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Theip ar nuashonrú réamhshocraithe"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Theip ar nuashonrú sainrogha"
 
@@ -712,19 +712,19 @@ msgstr "Téigh go leathanach {pageNumber}"
 msgid "Go to previous page"
 msgstr "Téigh chuig an leathanach roimhe"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Tabhair"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Tabhair cead"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Tabhair ceadanna chun gné chórais a rochtain don aip seo"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Cead á dheonú..."
 
@@ -884,7 +884,7 @@ msgstr "Logáilte amach go rathúil"
 msgid "Logging out…"
 msgstr "Á logáil amach…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Bainistigh cumais a thugtar don fheidhmchlár seo"
 
@@ -914,7 +914,7 @@ msgstr "Dé Luain"
 msgid "Multiple apps declare this resource"
 msgstr "Dearbhaíonn aipeanna iolracha an acmhainn seo"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Earráid líonra"
 
@@ -980,11 +980,11 @@ msgstr "Níl aon aip ag teacht"
 msgid "No paths configured."
 msgstr "Níl aon chosán cumraithe."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Níor deonaíodh aon chead"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Níor deonaíodh aon chead don aip seo"
 
@@ -1039,7 +1039,7 @@ msgstr "Gnách"
 msgid "Not set"
 msgstr "Gan socrú"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Gan leagan"
 
@@ -1117,19 +1117,19 @@ msgstr "Bealachú cosáin"
 msgid "Paths"
 msgstr "Cosáin"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Cead deonaithe"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Cead cúlghairthe"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Ceadanna"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Seiceáil do nasc idirlín agus bain triail eile as."
 
@@ -1141,7 +1141,7 @@ msgstr "Cuir aitheantas aipe isteach le do thoil"
 msgid "Preference updated"
 msgstr "Sainrogha nuashonraithe"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Leagan Roghnach"
 
@@ -1237,20 +1237,20 @@ msgstr "Athshocraigh"
 msgid "Reset all settings to default values"
 msgstr "Athshocraigh gach socrú chuig na luachanna réamhshocraithe"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Cúlghair"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Cúlghair cead"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Cúlghair cead?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Cead á chúlghairm..."
 
@@ -1273,8 +1273,8 @@ msgstr "Sábháil"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Á shábháil..."
 
@@ -1316,7 +1316,7 @@ msgstr "Cuardaigh..."
 msgid "Searching..."
 msgstr "Ag cuardach..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Roghnaigh cumas le deonú do {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Roghnaigh treo an tsuímh"
 msgid "Select theme preference"
 msgstr "Roghnaigh sainrogha téama"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Roghnaigh cén leagan den aip seo le húsáid"
 
@@ -1368,8 +1368,8 @@ msgstr "Seol ríomhphost"
 msgid "Serif"
 msgstr "Le serif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Earráid freastalaí"
 
@@ -1391,7 +1391,7 @@ msgstr "Ródú seirbhíse"
 msgid "Services"
 msgstr "Seirbhísí"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Seisiún imithe in éag"
 
@@ -1465,7 +1465,7 @@ msgstr "Córas"
 msgid "System default"
 msgstr "Réamhshocrú an chórais"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Réamhshocrú an Chórais"
 
@@ -1507,7 +1507,7 @@ msgstr "Suiteáladh an aip go rathúil."
 msgid "The requested app could not be found."
 msgstr "Níorbh fhéidir an aip iarrtha a aimsiú."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "An leagan a úsáideann úsáideoirí nár roghnaigh aon cheann"
 
@@ -1519,7 +1519,7 @@ msgstr "Téama"
 msgid "Theme Settings"
 msgstr "Socruithe Téama"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Níl bainistíocht leagan ag an aip seo"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Tá an aip seo suiteáilte go díreach óna foilsitheoir agus níor seiceáladh í. D'fhéadfadh gur bogearraí mailíseacha í."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Cúlghairfidh sé seo an chead \"{0}\" ó {appName}. D'fhéadfadh an aip stop a bheith ag obair i gceart."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Barr"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Rian"
 
@@ -1607,7 +1607,7 @@ msgstr "Clóscríobh chun cuardach a dhéanamh ar úsáideoirí"
 msgid "Type to search..."
 msgstr "Clóscríobh chun cuardach a dhéanamh..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Ní féidir nascadh leis an bhfreastalaí cianda"
 
@@ -1702,7 +1702,7 @@ msgstr "Fíoraigh"
 msgid "Verify email address"
 msgstr "Fíoraigh seoladh ríomhphoist"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Leagan"
 
@@ -1711,11 +1711,11 @@ msgstr "Leagan"
 msgid "Version {0}"
 msgstr "Leagan {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Leagan athraithe"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Bainistíocht Leagan"
 
@@ -1752,7 +1752,7 @@ msgstr "Céadaoin"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Aistríodh do chuntas anseo ó {source}. Go dtí go scriosann tú é ansin, d'fhéadfadh teachtaireachtaí agus fógraí an dá fhreastalaí a bhaint amach, leanann roinnt de d'ábhar á sheirbheáil ón sean-fhreastalaí, agus d'fhéadfadh sé cúpla nóiméad a thógáil ar do lucht leanúna tú a aimsiú anseo."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Sárú leagain phearsanta"
 
@@ -1760,6 +1760,6 @@ msgstr "Sárú leagain phearsanta"
 msgid "Your preference"
 msgstr "Do shainrogha"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Do Leagan"

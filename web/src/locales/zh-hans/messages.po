@@ -31,11 +31,11 @@ msgstr "{0} 已更新,{failed} 失败"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} 已安装。"
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (默认,版本 {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (版本 {version})"
 
@@ -137,11 +137,11 @@ msgstr "全部"
 msgid "All apps updated"
 msgstr "所有应用已更新"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "发生错误"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "发生意外错误"
 
@@ -251,7 +251,7 @@ msgstr "提升兴趣"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "取消"
 
@@ -473,24 +473,24 @@ msgstr "默认"
 msgid "Default AI account"
 msgstr "默认 AI 账户"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "所有用户的默认设置"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "所有用户的默认设置(版本 {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "所有用户的默认设置已更新"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "默认轨道"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "默认轨道(版本 {0})"
 
@@ -598,7 +598,7 @@ msgstr "添加账户失败"
 msgid "Failed to clean up apps"
 msgstr "清理应用失败"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "授予权限失败"
 
@@ -606,7 +606,7 @@ msgstr "授予权限失败"
 msgid "Failed to remove account"
 msgstr "移除账户失败"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "撤销权限失败"
 
@@ -622,12 +622,12 @@ msgstr "更新应用失败"
 msgid "Failed to update category"
 msgstr "更新分类失败"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "更新默认值失败"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "更新偏好设置失败"
 
@@ -712,19 +712,19 @@ msgstr "跳转到第 {pageNumber} 页"
 msgid "Go to previous page"
 msgstr "跳转到上一页"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "授予"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "授予权限"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "授予权限以允许此应用访问系统功能"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "正在授予权限..."
 
@@ -884,7 +884,7 @@ msgstr "已成功退出登录"
 msgid "Logging out…"
 msgstr "正在退出登录…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "管理授予此应用程序的功能"
 
@@ -914,7 +914,7 @@ msgstr "星期一"
 msgid "Multiple apps declare this resource"
 msgstr "多个应用声明了此资源"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "网络错误"
 
@@ -980,11 +980,11 @@ msgstr "无匹配的应用"
 msgid "No paths configured."
 msgstr "未配置任何路径。"
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "未授予任何权限"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "未授予此应用任何权限"
 
@@ -1039,7 +1039,7 @@ msgstr "标准"
 msgid "Not set"
 msgstr "未设置"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "未做版本控制"
 
@@ -1117,19 +1117,19 @@ msgstr "路径路由"
 msgid "Paths"
 msgstr "路径"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "已授予权限"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "已撤销权限"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "权限"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "请检查您的网络连接后重试。"
 
@@ -1141,7 +1141,7 @@ msgstr "请输入应用 ID"
 msgid "Preference updated"
 msgstr "偏好已更新"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "首选版本"
 
@@ -1237,20 +1237,20 @@ msgstr "重置"
 msgid "Reset all settings to default values"
 msgstr "将所有设置重置为默认值"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "撤销"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "撤销权限"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "撤销权限?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "正在撤销权限..."
 
@@ -1273,8 +1273,8 @@ msgstr "保存"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "正在保存..."
 
@@ -1316,7 +1316,7 @@ msgstr "搜索..."
 msgid "Searching..."
 msgstr "正在搜索..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "选择要授予 {appName} 的功能。"
 
@@ -1352,7 +1352,7 @@ msgstr "选择站点方向"
 msgid "Select theme preference"
 msgstr "选择主题偏好"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "选择要使用的应用版本"
 
@@ -1368,8 +1368,8 @@ msgstr "发送邮件"
 msgid "Serif"
 msgstr "衬线体"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "服务器错误"
 
@@ -1391,7 +1391,7 @@ msgstr "服务路由"
 msgid "Services"
 msgstr "服务"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "会话已过期"
 
@@ -1465,7 +1465,7 @@ msgstr "系统"
 msgid "System default"
 msgstr "系统默认"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "系统默认"
 
@@ -1507,7 +1507,7 @@ msgstr "应用已成功安装。"
 msgid "The requested app could not be found."
 msgstr "找不到请求的应用。"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "未做出选择的用户使用的版本"
 
@@ -1519,7 +1519,7 @@ msgstr "主题"
 msgid "Theme Settings"
 msgstr "主题设置"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "此应用没有版本管理功能"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "此应用直接从其发布者安装,尚未经过审查。它可能是恶意软件。"
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "这将从 {appName} 撤销 \"{0}\" 权限。应用可能会停止正常工作。"
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "顶部"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "轨道"
 
@@ -1607,7 +1607,7 @@ msgstr "输入以搜索用户"
 msgid "Type to search..."
 msgstr "输入以搜索..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "无法连接到远程服务器"
 
@@ -1702,7 +1702,7 @@ msgstr "验证"
 msgid "Verify email address"
 msgstr "验证邮箱地址"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "版本"
 
@@ -1711,11 +1711,11 @@ msgstr "版本"
 msgid "Version {0}"
 msgstr "版本 {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "版本已更改"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "版本管理"
 
@@ -1752,7 +1752,7 @@ msgstr "星期三"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "您的账户已从 {source} 迁移至此。在您于那里删除之前，消息和通知可能会同时到达两个服务器，您的部分内容仍会从旧服务器提供，关注者可能需要几分钟才能在此找到您。"
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "您的个人版本覆盖"
 
@@ -1760,6 +1760,6 @@ msgstr "您的个人版本覆盖"
 msgid "Your preference"
 msgstr "您的偏好"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "您的版本"

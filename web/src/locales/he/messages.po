@@ -31,11 +31,11 @@ msgstr "{0} עודכנו, {failed} נכשלו"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} הותקנה."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (ברירת מחדל, גרסה {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (גרסה {version})"
 
@@ -137,11 +137,11 @@ msgstr "הכול"
 msgid "All apps updated"
 msgstr "כל האפליקציות עודכנו"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "אירעה שגיאה"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "אירעה שגיאה בלתי צפויה"
 
@@ -251,7 +251,7 @@ msgstr "הגבר עניין"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "ביטול"
 
@@ -473,24 +473,24 @@ msgstr "ברירת מחדל"
 msgid "Default AI account"
 msgstr "חשבון AI ברירת מחדל"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "ברירת מחדל לכל המשתמשים"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "ברירת מחדל לכל המשתמשים (גרסה {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "ברירת המחדל לכל המשתמשים עודכנה"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "מסלול ברירת מחדל"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "מסלול ברירת מחדל (גרסה {0})"
 
@@ -598,7 +598,7 @@ msgstr "הוספת החשבון נכשלה"
 msgid "Failed to clean up apps"
 msgstr "ניקוי האפליקציות נכשל"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "הענקת ההרשאה נכשלה"
 
@@ -606,7 +606,7 @@ msgstr "הענקת ההרשאה נכשלה"
 msgid "Failed to remove account"
 msgstr "הסרת החשבון נכשלה"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "ביטול ההרשאה נכשל"
 
@@ -622,12 +622,12 @@ msgstr "עדכון האפליקציות נכשל"
 msgid "Failed to update category"
 msgstr "עדכון הקטגוריה נכשל"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "עדכון ברירת המחדל נכשל"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "עדכון ההעדפה נכשל"
 
@@ -712,19 +712,19 @@ msgstr "מעבר לעמוד {pageNumber}"
 msgid "Go to previous page"
 msgstr "עבור לדף הקודם"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "הענק"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "הענק הרשאה"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "הענק הרשאות כדי לאפשר לאפליקציה זו גישה לתכונות המערכת"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "מעניק הרשאה..."
 
@@ -884,7 +884,7 @@ msgstr "ההתנתקות בוצעה בהצלחה"
 msgid "Logging out…"
 msgstr "מתנתק…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "ניהול יכולות שניתנו לאפליקציה זו"
 
@@ -914,7 +914,7 @@ msgstr "יום שני"
 msgid "Multiple apps declare this resource"
 msgstr "מספר אפליקציות מצהירות על משאב זה"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "שגיאת רשת"
 
@@ -980,11 +980,11 @@ msgstr "אין אפליקציות תואמות"
 msgid "No paths configured."
 msgstr "לא הוגדרו נתיבים."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "לא ניתנו הרשאות"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "לא הוענקו הרשאות לאפליקציה זו"
 
@@ -1039,7 +1039,7 @@ msgstr "רגיל"
 msgid "Not set"
 msgstr "לא הוגדר"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "לא מנוהל בגרסאות"
 
@@ -1117,19 +1117,19 @@ msgstr "ניתוב נתיבים"
 msgid "Paths"
 msgstr "נתיבים"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "ההרשאה ניתנה"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "ההרשאה בוטלה"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "הרשאות"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "בדקו את חיבור האינטרנט ונסו שוב."
 
@@ -1141,7 +1141,7 @@ msgstr "הזן מזהה אפליקציה"
 msgid "Preference updated"
 msgstr "ההעדפה עודכנה"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "גרסה מועדפת"
 
@@ -1237,20 +1237,20 @@ msgstr "אפס"
 msgid "Reset all settings to default values"
 msgstr "אפס את כל ההגדרות לערכי ברירת המחדל"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "בטל"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "ביטול הרשאה"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "לבטל הרשאה?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "מבטל הרשאה..."
 
@@ -1273,8 +1273,8 @@ msgstr "שמור"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "שומר..."
 
@@ -1316,7 +1316,7 @@ msgstr "חיפוש..."
 msgid "Searching..."
 msgstr "מחפש..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "בחר יכולת להעניק ל-{appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "בחר כיוון אתר"
 msgid "Select theme preference"
 msgstr "בחר העדפת ערכת נושא"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "בחר באיזו גרסה של האפליקציה להשתמש"
 
@@ -1368,8 +1368,8 @@ msgstr "שלח אימייל"
 msgid "Serif"
 msgstr "סריף"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "שגיאת שרת"
 
@@ -1391,7 +1391,7 @@ msgstr "ניתוב שירות"
 msgid "Services"
 msgstr "שירותים"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "ההפעלה פגה"
 
@@ -1465,7 +1465,7 @@ msgstr "מערכת"
 msgid "System default"
 msgstr "ברירת מחדל של המערכת"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "ברירת מחדל של המערכת"
 
@@ -1507,7 +1507,7 @@ msgstr "האפליקציה הותקנה בהצלחה."
 msgid "The requested app could not be found."
 msgstr "האפליקציה המבוקשת לא נמצאה."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "הגרסה המשמשת משתמשים שלא בחרו"
 
@@ -1519,7 +1519,7 @@ msgstr "ערכת נושא"
 msgid "Theme Settings"
 msgstr "הגדרות ערכת נושא"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "לאפליקציה זו אין ניהול גרסאות"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "אפליקציה זו מותקנת ישירות מהמפרסם שלה ולא נבדקה. ייתכן שמדובר בתוכנה זדונית."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "פעולה זו תבטל את הרשאת \"{0}\" מ-{appName}. ייתכן שהאפליקציה תפסיק לעבוד כראוי."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "ראש"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "ערוץ"
 
@@ -1607,7 +1607,7 @@ msgstr "הקלד לחיפוש משתמשים"
 msgid "Type to search..."
 msgstr "הקלד לחיפוש..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "לא ניתן להתחבר לשרת המרוחק"
 
@@ -1702,7 +1702,7 @@ msgstr "אמת"
 msgid "Verify email address"
 msgstr "אמת כתובת אימייל"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "גרסה"
 
@@ -1711,11 +1711,11 @@ msgstr "גרסה"
 msgid "Version {0}"
 msgstr "גרסה {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "הגרסה שונתה"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "ניהול גרסאות"
 
@@ -1752,7 +1752,7 @@ msgstr "יום רביעי"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "חשבונך הועבר לכאן מ-{source}. עד שתמחק אותו שם, הודעות והתראות עשויות להגיע לשני השרתים, חלק מהתוכן שלך ממשיך להיות מוגש מהשרת הישן, ועוקבים עשויים לקחת מספר דקות למצוא אותך כאן."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "עקיפת גרסה אישית"
 
@@ -1760,6 +1760,6 @@ msgstr "עקיפת גרסה אישית"
 msgid "Your preference"
 msgstr "ההעדפה שלך"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "הגרסה שלך"

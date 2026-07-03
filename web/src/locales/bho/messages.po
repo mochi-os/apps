@@ -31,11 +31,11 @@ msgstr "{0} अपडेट भइल, {failed} विफल"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} स्थापित भइल बा।"
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (डिफ़ॉल्ट, संस्करण {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (संस्करण {version})"
 
@@ -137,11 +137,11 @@ msgstr "सब"
 msgid "All apps updated"
 msgstr "सब ऐप अद्यतन कइल गइल"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "एगो त्रुटि भइल"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "एगो अप्रत्याशित त्रुटि भइल"
 
@@ -251,7 +251,7 @@ msgstr "रुचि बढ़ाईं"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "रद्द करीं"
 
@@ -473,24 +473,24 @@ msgstr "डिफ़ॉल्ट"
 msgid "Default AI account"
 msgstr "डिफ़ॉल्ट AI खाता"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "सब उपयोगकर्ता खातिर डिफ़ॉल्ट"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "सब उपयोगकर्ता खातिर डिफ़ॉल्ट (संस्करण {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "सब उपयोगकर्ता खातिर डिफ़ॉल्ट अद्यतन कइल गइल"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "डिफ़ॉल्ट Track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "डिफ़ॉल्ट Track (संस्करण {0})"
 
@@ -598,7 +598,7 @@ msgstr "खाता जोड़े में विफल"
 msgid "Failed to clean up apps"
 msgstr "ऐप साफ करे में असफल"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "अनुमति देवे में विफल"
 
@@ -606,7 +606,7 @@ msgstr "अनुमति देवे में विफल"
 msgid "Failed to remove account"
 msgstr "खाता हटावे में विफल"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "अनुमति रद्द करे में विफल"
 
@@ -622,12 +622,12 @@ msgstr "ऐप अपडेट करे में असफल"
 msgid "Failed to update category"
 msgstr "श्रेणी अपडेट करे में विफल"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "डिफॉल्ट अपडेट करे में विफल"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "प्राथमिकता अपडेट करे में विफल"
 
@@ -712,19 +712,19 @@ msgstr "पृष्ठ {pageNumber} पर जाईं"
 msgid "Go to previous page"
 msgstr "पिछला पन्ना पर जाईं"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "दीं"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "अनुमति दीं"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "ई ऐप के सिस्टम फीचर पर पहुँच देवे खातिर अनुमति दीं"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "अनुमति दिहल जा रहल बा..."
 
@@ -884,7 +884,7 @@ msgstr "सफलतापूर्वक लॉग आउट हो गइल"
 msgid "Logging out…"
 msgstr "लॉग आउट हो रहल बा…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "ई एप्लिकेशन के दिहल क्षमता प्रबंधित करीं"
 
@@ -914,7 +914,7 @@ msgstr "सोमवार"
 msgid "Multiple apps declare this resource"
 msgstr "कई गो ऐप ई संसाधन के घोषणा करेला"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "नेटवर्क त्रुटि"
 
@@ -980,11 +980,11 @@ msgstr "कौनो मेल खाए वाला app नइखे"
 msgid "No paths configured."
 msgstr "कौनो पथ सेट नइखे।"
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "कौनो अनुमति नइखे दिहल गइल"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "ए app के कौनो अनुमति नइखे दिहल गइल"
 
@@ -1039,7 +1039,7 @@ msgstr "सामान्य"
 msgid "Not set"
 msgstr "सेट नइखे"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "संस्करणित नइखे"
 
@@ -1117,19 +1117,19 @@ msgstr "पथ रूटिंग"
 msgid "Paths"
 msgstr "पथ"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "अनुमति मिलल"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "अनुमति वापस लिहल गइल"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "अनुमति"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "कृपया आपन इंटरनेट कनेक्शन जाँचीं आ फेर से कोसिस करीं।"
 
@@ -1141,7 +1141,7 @@ msgstr "app ID डालीं"
 msgid "Preference updated"
 msgstr "वरीयता अपडेट भइल"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "पसंदीदा संस्करण"
 
@@ -1237,20 +1237,20 @@ msgstr "रीसेट करीं"
 msgid "Reset all settings to default values"
 msgstr "सब सेटिंग के डिफ़ॉल्ट मान पर रीसेट करीं"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "वापस लीं"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "अनुमति वापस लीं"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "अनुमति वापस लीं?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "अनुमति वापस लिहल जा रहल बा..."
 
@@ -1273,8 +1273,8 @@ msgstr "सहेजीं"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "सहेज रहल बा..."
 
@@ -1316,7 +1316,7 @@ msgstr "खोजीं..."
 msgid "Searching..."
 msgstr "खोज रहल बा..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "{appName} के देवे खातिर क्षमता चुनीं।"
 
@@ -1352,7 +1352,7 @@ msgstr "साइट दिशा चुनीं"
 msgid "Select theme preference"
 msgstr "थीम वरीयता चुनीं"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "एह ऐप के कवन संस्करण के उपयोग कइल जाव चुनीं"
 
@@ -1368,8 +1368,8 @@ msgstr "ईमेल भेजीं"
 msgid "Serif"
 msgstr "सेरिफ़"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "सर्वर त्रुटि"
 
@@ -1391,7 +1391,7 @@ msgstr "सेवा रूटिंग"
 msgid "Services"
 msgstr "सेवा सब"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "सत्र समाप्त भइल"
 
@@ -1465,7 +1465,7 @@ msgstr "सिस्टम"
 msgid "System default"
 msgstr "सिस्टम डिफ़ॉल्ट"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "सिस्टम डिफ़ॉल्ट"
 
@@ -1507,7 +1507,7 @@ msgstr "ऐप सफलतापूर्वक स्थापित भइल
 msgid "The requested app could not be found."
 msgstr "अनुरोध कइल गइल ऐप ना मिलल।"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "उपयोगकर्तन द्वारा उपयोग कइल जाए वाला संस्करण जे चुनाव नइखे कइले"
 
@@ -1519,7 +1519,7 @@ msgstr "थीम"
 msgid "Theme Settings"
 msgstr "थीम सेटिंग"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "एह ऐप में संस्करण प्रबंधन नइखे"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "ई ऐप सीधे ओकर प्रकाशक से स्थापित बा आ एकर जाँच नइखे भइल। ई मैलवेयर हो सकेला।"
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "ई {appName} से \"{0}\" अनुमति निरस्त कर दी। ऐप ठीक से काम करल बंद कर सकेला।"
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "ऊपर"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "ट्रैक"
 
@@ -1607,7 +1607,7 @@ msgstr "उपयोगकर्ता खोजे खातिर टाइप
 msgid "Type to search..."
 msgstr "खोजे खातिर टाइप करीं..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "रिमोट सर्वर से जुड़े में असमर्थ"
 
@@ -1702,7 +1702,7 @@ msgstr "सत्यापित करीं"
 msgid "Verify email address"
 msgstr "ईमेल पता सत्यापित करीं"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "संस्करण"
 
@@ -1711,11 +1711,11 @@ msgstr "संस्करण"
 msgid "Version {0}"
 msgstr "संस्करण {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "संस्करण बदलल गइल"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "संस्करण प्रबंधन"
 
@@ -1752,7 +1752,7 @@ msgstr "बुधवार"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "आपन खाता {source} से इहाँ हिलावल गइल। जब तक उहाँ से ना मेटाईं, संदेश आ सूचना दुनो सर्वर पर पहुँच सकेला, कुछ सामग्री पुरान सर्वर से आवत रही, आ फॉलोअर्स के इहाँ ढूंढे में कुछ मिनट लाग सकेला।"
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "आपके निजी संस्करण ओवरराइड"
 
@@ -1760,6 +1760,6 @@ msgstr "आपके निजी संस्करण ओवरराइड"
 msgid "Your preference"
 msgstr "आपके वरीयता"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "आपके संस्करण"

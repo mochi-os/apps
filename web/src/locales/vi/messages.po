@@ -31,11 +31,11 @@ msgstr "{0} đã cập nhật, {failed} đã thất bại"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} đã được cài đặt."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (mặc định, phiên bản {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (phiên bản {version})"
 
@@ -137,11 +137,11 @@ msgstr "Tất cả"
 msgid "All apps updated"
 msgstr "Đã cập nhật tất cả ứng dụng"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Đã xảy ra lỗi"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Đã xảy ra lỗi không mong muốn"
 
@@ -251,7 +251,7 @@ msgstr "Đẩy mạnh sở thích"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Hủy"
 
@@ -473,24 +473,24 @@ msgstr "Mặc định"
 msgid "Default AI account"
 msgstr "Tài khoản AI mặc định"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Mặc định cho tất cả người dùng"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Mặc định cho tất cả người dùng (phiên bản {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Đã cập nhật mặc định cho tất cả người dùng"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Kênh mặc định"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Kênh mặc định (phiên bản {0})"
 
@@ -598,7 +598,7 @@ msgstr "Không thêm tài khoản được"
 msgid "Failed to clean up apps"
 msgstr "Không thể dọn dẹp ứng dụng"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Không cấp quyền được"
 
@@ -606,7 +606,7 @@ msgstr "Không cấp quyền được"
 msgid "Failed to remove account"
 msgstr "Không xoá tài khoản được"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Không thu hồi quyền được"
 
@@ -622,12 +622,12 @@ msgstr "Không thể cập nhật ứng dụng"
 msgid "Failed to update category"
 msgstr "Không cập nhật danh mục được"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Không cập nhật mặc định được"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Không cập nhật tuỳ chọn được"
 
@@ -712,19 +712,19 @@ msgstr "Đến trang {pageNumber}"
 msgid "Go to previous page"
 msgstr "Đến trang trước"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Cấp"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Cấp quyền"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Cấp quyền để cho phép ứng dụng này truy cập các tính năng hệ thống"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Đang cấp quyền..."
 
@@ -884,7 +884,7 @@ msgstr "Đăng xuất thành công"
 msgid "Logging out…"
 msgstr "Đang đăng xuất…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Quản lý các khả năng được cấp cho ứng dụng này"
 
@@ -914,7 +914,7 @@ msgstr "Thứ Hai"
 msgid "Multiple apps declare this resource"
 msgstr "Nhiều ứng dụng khai báo tài nguyên này"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Lỗi mạng"
 
@@ -980,11 +980,11 @@ msgstr "Không có ứng dụng khớp"
 msgid "No paths configured."
 msgstr "Không có đường dẫn nào được cấu hình."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Chưa cấp quyền nào"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Không có quyền nào được cấp cho ứng dụng này"
 
@@ -1039,7 +1039,7 @@ msgstr "Thường"
 msgid "Not set"
 msgstr "Chưa đặt"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Không có phiên bản"
 
@@ -1117,19 +1117,19 @@ msgstr "Định tuyến đường dẫn"
 msgid "Paths"
 msgstr "Đường dẫn"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Đã cấp quyền"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Đã thu hồi quyền"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Quyền"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Vui lòng kiểm tra kết nối internet và thử lại."
 
@@ -1141,7 +1141,7 @@ msgstr "Vui lòng nhập ID ứng dụng"
 msgid "Preference updated"
 msgstr "Đã cập nhật tuỳ chọn"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Phiên bản ưa thích"
 
@@ -1237,20 +1237,20 @@ msgstr "Đặt lại"
 msgid "Reset all settings to default values"
 msgstr "Đặt lại tất cả cài đặt về giá trị mặc định"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Thu hồi"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Thu hồi quyền"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Thu hồi quyền?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Đang thu hồi quyền..."
 
@@ -1273,8 +1273,8 @@ msgstr "Lưu"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Đang lưu..."
 
@@ -1316,7 +1316,7 @@ msgstr "Tìm kiếm..."
 msgid "Searching..."
 msgstr "Đang tìm kiếm..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Chọn khả năng để cấp cho {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Chọn hướng trang web"
 msgid "Select theme preference"
 msgstr "Chọn tùy chọn giao diện"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Chọn phiên bản nào của ứng dụng này để sử dụng"
 
@@ -1368,8 +1368,8 @@ msgstr "Gửi email"
 msgid "Serif"
 msgstr "Có chân"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Lỗi máy chủ"
 
@@ -1391,7 +1391,7 @@ msgstr "Định tuyến dịch vụ"
 msgid "Services"
 msgstr "Dịch vụ"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Phiên đã hết hạn"
 
@@ -1465,7 +1465,7 @@ msgstr "Hệ thống"
 msgid "System default"
 msgstr "Mặc định hệ thống"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Mặc định hệ thống"
 
@@ -1507,7 +1507,7 @@ msgstr "Ứng dụng đã được cài đặt thành công."
 msgid "The requested app could not be found."
 msgstr "Không thể tìm thấy ứng dụng được yêu cầu."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Phiên bản được sử dụng bởi người dùng chưa thực hiện lựa chọn"
 
@@ -1519,7 +1519,7 @@ msgstr "Giao diện"
 msgid "Theme Settings"
 msgstr "Cài đặt giao diện"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Ứng dụng này không có quản lý phiên bản"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Ứng dụng này được cài đặt trực tiếp từ nhà phát hành và chưa được kiểm tra. Nó có thể là phần mềm độc hại."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Điều này sẽ thu hồi quyền \"{0}\" từ {appName}. Ứng dụng có thể ngừng hoạt động chính xác."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Đầu"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Kênh"
 
@@ -1607,7 +1607,7 @@ msgstr "Nhập để tìm người dùng"
 msgid "Type to search..."
 msgstr "Nhập để tìm kiếm..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Không thể kết nối đến máy chủ từ xa"
 
@@ -1702,7 +1702,7 @@ msgstr "Xác minh"
 msgid "Verify email address"
 msgstr "Xác minh địa chỉ email"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Phiên bản"
 
@@ -1711,11 +1711,11 @@ msgstr "Phiên bản"
 msgid "Version {0}"
 msgstr "Phiên bản {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Đã thay đổi phiên bản"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Quản lý phiên bản"
 
@@ -1752,7 +1752,7 @@ msgstr "Thứ tư"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Tài khoản của bạn đã được chuyển đến đây từ {source}. Cho đến khi bạn xóa nó ở đó, tin nhắn và thông báo có thể đến cả hai máy chủ, một số nội dung của bạn vẫn được phục vụ từ máy chủ cũ và người theo dõi có thể mất vài phút để tìm thấy bạn ở đây."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Ghi đè phiên bản cá nhân của bạn"
 
@@ -1760,6 +1760,6 @@ msgstr "Ghi đè phiên bản cá nhân của bạn"
 msgid "Your preference"
 msgstr "Tùy chọn của bạn"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Phiên bản của bạn"

@@ -31,11 +31,11 @@ msgstr "{0} نوي شول، {failed} ناکام شول"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} نصب شو."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (اصلي، نسخه {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (نسخه {version})"
 
@@ -137,11 +137,11 @@ msgstr "ټول"
 msgid "All apps updated"
 msgstr "ټول اپلیکیشنونه نوي شول"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "یوه تېروتنه رامنځته شوه"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "یوه ناڅاپي تېروتنه رامنځته شوه"
 
@@ -251,7 +251,7 @@ msgstr "دلچسپي ډیره کړه"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "لغوه کول"
 
@@ -473,24 +473,24 @@ msgstr "ډیفالټ"
 msgid "Default AI account"
 msgstr "د AI ډیفالټ حساب"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "د ټولو کاروونکو لپاره ډیفالټ"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "د ټولو کاروونکو لپاره ډیفالټ (نسخه {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "د ټولو کاروونکو لپاره ډیفالټ نوی شو"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "ډیفالټ Track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "ډیفالټ Track (نسخه {0})"
 
@@ -598,7 +598,7 @@ msgstr "د حساب اضافه کولو پاتې راغلل"
 msgid "Failed to clean up apps"
 msgstr "اپلیکیشنونه پاک نه شول"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "د اجازې ورکولو پاتې راغلل"
 
@@ -606,7 +606,7 @@ msgstr "د اجازې ورکولو پاتې راغلل"
 msgid "Failed to remove account"
 msgstr "د حساب لیرې کولو پاتې راغلل"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "د اجازې د لغوه کولو پاتې راغلل"
 
@@ -622,12 +622,12 @@ msgstr "اپلیکیشنونه تازه نه شول"
 msgid "Failed to update category"
 msgstr "د کټګورۍ تازه کولو پاتې راغلل"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "د ډیفالټ تازه کولو پاتې راغلل"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "د غوره توب تازه کولو پاتې راغلل"
 
@@ -712,19 +712,19 @@ msgstr "{pageNumber} پاڼې ته لاړ شئ"
 msgid "Go to previous page"
 msgstr "تیر پاڼې ته ولاړ شه"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "ورکول"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "اجازه ورکړئ"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "اجازې ورکړئ ترڅو دا اپ سیسټم ځانګړتیاوو ته لاسرسی ولري"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "اجازه ورکول کیږي..."
 
@@ -884,7 +884,7 @@ msgstr "په بریالیتوب سره لاګ آوټ شو"
 msgid "Logging out…"
 msgstr "لاګ آوټ کیږي…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "په دې اپلیکیشن باندې ورکړل شویو وړتیاو اداره کړئ"
 
@@ -914,7 +914,7 @@ msgstr "دوشنبه"
 msgid "Multiple apps declare this resource"
 msgstr "ډیر اپلیکیشنونه دا سرچینه اعلان کوي"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "د شبکې تېروتنه"
 
@@ -980,11 +980,11 @@ msgstr "هیڅ سمونوال ایپ نشته"
 msgid "No paths configured."
 msgstr "هیڅ لارې نه دي تنظیم شوې"
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "هیڅ اجازې نه دي ورکړل شوې"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "دې ایپ ته هیڅ اجازې نه دي ورکړل شوې"
 
@@ -1039,7 +1039,7 @@ msgstr "عادي"
 msgid "Not set"
 msgstr "نه دی ټاکل شوی"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "نسخه ورکړل شوې نه ده"
 
@@ -1117,19 +1117,19 @@ msgstr "د لارې لارښوونه"
 msgid "Paths"
 msgstr "لارې"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "اجازه ورکړل شوه"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "اجازه لغوه شوه"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "اجازې"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "مهرباني وکړئ خپل د انټرنیټ اړیکه وګورئ او بیا هڅه وکړئ."
 
@@ -1141,7 +1141,7 @@ msgstr "مهرباني وکړئ د ایپ ID دننه کړئ"
 msgid "Preference updated"
 msgstr "غوره توب تازه شو"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "غوره نسخه"
 
@@ -1237,20 +1237,20 @@ msgstr "بیا تنظیم"
 msgid "Reset all settings to default values"
 msgstr "ټول تنظیمات د ډیفالټ ارزښتونو ته بیرته تنظیم کړئ"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "لغوه کول"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "اجازه لغوه کړئ"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "اجازه لغوه کړو؟"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "اجازه بیرته اخیستل کیږي..."
 
@@ -1273,8 +1273,8 @@ msgstr "خوندي کول"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "د خوندي کولو په حال کې..."
 
@@ -1316,7 +1316,7 @@ msgstr "لټون..."
 msgid "Searching..."
 msgstr "د لټون په حال کې..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "د {appName} ته د ورکولو لپاره وړتیا وټاکئ."
 
@@ -1352,7 +1352,7 @@ msgstr "د سایټ لوری وټاکئ"
 msgid "Select theme preference"
 msgstr "د ښکارندوی غوره توب وټاکئ"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "د دې اپ کومه نسخه کاروئ، وټاکئ"
 
@@ -1368,8 +1368,8 @@ msgstr "بریښنالیک ولېږئ"
 msgid "Serif"
 msgstr "سيريف"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "د سرور تېروتنه"
 
@@ -1391,7 +1391,7 @@ msgstr "د خدمت لارښوونه"
 msgid "Services"
 msgstr "خدمتونه"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "ناسته پای ته ورسېده"
 
@@ -1465,7 +1465,7 @@ msgstr "سیسټم"
 msgid "System default"
 msgstr "د سیسټم اصلي"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "د سیسټم اصلي"
 
@@ -1507,7 +1507,7 @@ msgstr "اپ په بریالیتوب سره نصب شو."
 msgid "The requested app could not be found."
 msgstr "غوښتل شوی اپ ونه موندل شو."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "هغه نسخه چې د هغو کاروونکو لخوا کارول کیږي چې انتخاب یې نه دی کړی"
 
@@ -1519,7 +1519,7 @@ msgstr "ښکارندوی"
 msgid "Theme Settings"
 msgstr "د ښکارندوی ترتیبات"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "دا اپ د نسخې مدیریت نه لري"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "دا اپ مستقیم له خپل خپروونکي څخه نصب شوی او څارل شوی نه دی. دا کېدای شي malware وي."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "دا به \"{0}\" اجازه له {appName} څخه لغوه کړي. اپ ښایي په سمه توګه کار کول ودروي."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "بره"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "تعقیبول"
 
@@ -1607,7 +1607,7 @@ msgstr "د کاروونکو لټون لپاره ولیکئ"
 msgid "Type to search..."
 msgstr "د لټون لپاره ولیکئ..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "له لرې پرتي سرور سره نښلېدل ونشول"
 
@@ -1702,7 +1702,7 @@ msgstr "تصدیق"
 msgid "Verify email address"
 msgstr "د ایمیل پته تصدیق کړئ"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "نسخه"
 
@@ -1711,11 +1711,11 @@ msgstr "نسخه"
 msgid "Version {0}"
 msgstr "نسخه {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "نسخه بدله شوه"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "د نسخې مدیریت"
 
@@ -1752,7 +1752,7 @@ msgstr "چهارشنبه"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "ستاسو حساب له {source} دلته لیږدول شوی. تر هغه چې تاسو هلته یې ړنګ نه کړئ، پیغامونه او خبرتیاوې ممکن دواړه سرورونو ته ورسیږي، ستاسو د مینځپانګې یوه برخه لاهم له پخوانی سرور نه چمتو کیږي، او تعقیبونکي ممکن دلته ستاسو موندلو لپاره یو شیبه وخت ولري."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "ستاسو شخصي د نسخې لرې کول"
 
@@ -1760,6 +1760,6 @@ msgstr "ستاسو شخصي د نسخې لرې کول"
 msgid "Your preference"
 msgstr "ستاسو غوره توب"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "ستاسو نسخه"

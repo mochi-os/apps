@@ -31,11 +31,11 @@ msgstr "{0} ti ni imudojuiwọn, {failed} kuna"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ti fi sori ẹrọ."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (aiyipada, ẹya {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (ẹya {version})"
 
@@ -137,11 +137,11 @@ msgstr "Gbogbo"
 msgid "All apps updated"
 msgstr "A ti ṣe àtúnyẹ̀wò gbogbo app"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Àṣìṣe kan wáyé"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Àṣìṣe àìròtẹ́lẹ̀ kan wáyé"
 
@@ -251,7 +251,7 @@ msgstr "Mú ìfẹ́ pọ̀"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Fagilé"
 
@@ -473,24 +473,24 @@ msgstr "Àìpé"
 msgid "Default AI account"
 msgstr "Àkáǹtì AI àìpé"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Aiyipada fun gbogbo awọn olumulo"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Aiyipada fun gbogbo awọn olumulo (ẹya {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "A ti ṣe àtúnyẹ̀wò àìpé fún gbogbo àwọn olùmúlò"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Orin aiyipada"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Orin aiyipada (ẹya {0})"
 
@@ -598,7 +598,7 @@ msgstr "Kò lè fi àkántì kún"
 msgid "Failed to clean up apps"
 msgstr "Kò ṣàṣeyọrí láti nu àwọn áàpù mọ́"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Kò lè fún ní àyè"
 
@@ -606,7 +606,7 @@ msgstr "Kò lè fún ní àyè"
 msgid "Failed to remove account"
 msgstr "Kò lè mú àkántì kúrò"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Kò lè gba àyè padà"
 
@@ -622,12 +622,12 @@ msgstr "Kò ṣàṣeyọrí láti ṣe ìmúdójúìwọ̀n àwọn áàpù"
 msgid "Failed to update category"
 msgstr "Kò lè mú ẹ̀ka dòde"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Kò lè mú àbáwọlé dòde"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Kò lè mú àfẹ́ dòde"
 
@@ -712,19 +712,19 @@ msgstr "Lọ sí ojú-ìwé {pageNumber}"
 msgid "Go to previous page"
 msgstr "Lọ sí ojú-ewé tí ó ṣáájú"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Fún ní àyè"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Fún ní àyè"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Fún ní àwọn àyè láti jẹ́ kí app yìí lè wọ àwọn ohun-ìní sístẹ́mù"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Ń fún ní àṣẹ..."
 
@@ -884,7 +884,7 @@ msgstr "Ti jáde ní àṣeyọrí"
 msgid "Logging out…"
 msgstr "Ń jáde…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Ṣakoso awọn agbara ti a fun ohun elo yi"
 
@@ -914,7 +914,7 @@ msgstr "Ọjọ́ Ajé"
 msgid "Multiple apps declare this resource"
 msgstr "Ọ̀pọ̀ àpù ń kéde ohun àmúṣọ̀rọ̀ yìí"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Àṣìṣe nẹ́tíwọ́kì"
 
@@ -980,11 +980,11 @@ msgstr "Kò sí àpù tó bámu"
 msgid "No paths configured."
 msgstr "Ko si awọn ọna ti a tunto."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "A kò gba àyè kankan"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Ko si awọn igbanilaaye ti a fun app yii"
 
@@ -1039,7 +1039,7 @@ msgstr "Déédéé"
 msgid "Not set"
 msgstr "A kò ṣètò"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Kò ní ẹ̀dà"
 
@@ -1117,19 +1117,19 @@ msgstr "Routing ọ̀nà"
 msgid "Paths"
 msgstr "Àwọn ọ̀nà"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "A ti gba àyè"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "A ti gba àyè padà"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Àwọn àyè"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Jọ̀wọ́ ṣàyẹ̀wò ìsopọ̀ íntánẹ́ẹ̀tì rẹ kí o sì gbìyànjú lẹ́ẹ̀kan sí i."
 
@@ -1141,7 +1141,7 @@ msgstr "Jọ̀wọ́ tẹ ID àpù sí"
 msgid "Preference updated"
 msgstr "A ti dojú ìfẹ́ ìwọ́n"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Ẹya ti o fẹ"
 
@@ -1237,20 +1237,20 @@ msgstr "Pa padà"
 msgid "Reset all settings to default values"
 msgstr "Pa gbogbo ètò padà sí àwọn iye àbùdá"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Fagi lé"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Fagilee aṣẹ"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Fagi lé ààyè?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Ń fagilé àṣẹ..."
 
@@ -1273,8 +1273,8 @@ msgstr "Fi pamọ́"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Ń fi pamọ́..."
 
@@ -1316,7 +1316,7 @@ msgstr "Wá..."
 msgid "Searching..."
 msgstr "Ń wá..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Yan agbara lati fun {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Yan ìtọ́sọ́nà síìtì"
 msgid "Select theme preference"
 msgstr "Yan àfẹ́nilọ́kàn theme"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Yan ẹ̀dà wo ní app yìí láti lò"
 
@@ -1368,8 +1368,8 @@ msgstr "Fi ímeèlì ránṣẹ́"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Àṣìṣe sáfà"
 
@@ -1391,7 +1391,7 @@ msgstr "Service routing"
 msgid "Services"
 msgstr "Àwọn services"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Session ti parí"
 
@@ -1465,7 +1465,7 @@ msgstr "System"
 msgid "System default"
 msgstr "Ìpilẹ̀ system"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Ìpilẹ̀ System"
 
@@ -1507,7 +1507,7 @@ msgstr "App ti fi sípò pẹ̀lú àṣeyọrí."
 msgid "The requested app could not be found."
 msgstr "A kò rí app tí a béèrè."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Ẹya ti awọn olumulo ti ko ti yan lo"
 
@@ -1519,7 +1519,7 @@ msgstr "Theme"
 msgid "Theme Settings"
 msgstr "Àwọn ìṣètò Theme"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "App yìí kò ní version management"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "App yii ti fi sori ẹrọ taara lati ọdọ olutẹjade rẹ ati pe ko ti ṣe ayẹwo. O le jẹ malware."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Eyi yoo fagile aṣẹ \"{0}\" lati {appName}. App le da iṣẹ duro daradara."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Òkè"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Track"
 
@@ -1607,7 +1607,7 @@ msgstr "Tẹ láti wá àwọn user"
 msgid "Type to search..."
 msgstr "Tẹ láti wá..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Kò lè sopọ̀ mọ́ sáfà jíjìnnà"
 
@@ -1702,7 +1702,7 @@ msgstr "Jẹ́rìí sí"
 msgid "Verify email address"
 msgstr "Jẹ́rìí sí àdírẹ́sì email"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Ẹ̀dà"
 
@@ -1711,11 +1711,11 @@ msgstr "Ẹ̀dà"
 msgid "Version {0}"
 msgstr "Ẹya {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Ẹ̀dà ti yí"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Version Management"
 
@@ -1752,7 +1752,7 @@ msgstr "Ọjọ́rú"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "A gbe akonti rẹ wá ibi lati {source}. Titi iwọ o fi pa rẹ nibẹ, awọn ifiranṣẹ ati awọn iwifunni le de olupin mejeeji, diẹ ninu akoonu rẹ tẹsiwaju lati sin lati olupin atijọ, ati awọn olutẹle le gba iṣẹju diẹ lati wa ọ nibi."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Ẹ̀dà ti ara ẹni tí o yàn"
 
@@ -1760,6 +1760,6 @@ msgstr "Ẹ̀dà ti ara ẹni tí o yàn"
 msgid "Your preference"
 msgstr "Ayanfẹ rẹ"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Ẹya rẹ"

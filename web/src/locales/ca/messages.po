@@ -31,11 +31,11 @@ msgstr "{0} actualitzat, {failed} ha fallat"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} s'ha instal·lat."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (per defecte, versió {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (versió {version})"
 
@@ -137,11 +137,11 @@ msgstr "Tot"
 msgid "All apps updated"
 msgstr "Totes les aplicacions actualitzades"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "S'ha produït un error"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "S'ha produït un error inesperat"
 
@@ -251,7 +251,7 @@ msgstr "Augmenta l'interès"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Cancel·la"
 
@@ -473,24 +473,24 @@ msgstr "Per defecte"
 msgid "Default AI account"
 msgstr "Compte d'IA per defecte"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Per defecte per a tots els usuaris"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Per defecte per a tots els usuaris (versió {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Per defecte per a tots els usuaris actualitzat"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Track per defecte"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Track per defecte (versió {0})"
 
@@ -598,7 +598,7 @@ msgstr "No s'ha pogut afegir el compte"
 msgid "Failed to clean up apps"
 msgstr "No s'han pogut netejar les aplicacions"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "No s'ha pogut concedir el permís"
 
@@ -606,7 +606,7 @@ msgstr "No s'ha pogut concedir el permís"
 msgid "Failed to remove account"
 msgstr "No s'ha pogut retirar el compte"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "No s'ha pogut revocar el permís"
 
@@ -622,12 +622,12 @@ msgstr "No s'han pogut actualitzar les aplicacions"
 msgid "Failed to update category"
 msgstr "No s'ha pogut actualitzar la categoria"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "No s'ha pogut actualitzar el valor per defecte"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "No s'ha pogut actualitzar la preferència"
 
@@ -712,19 +712,19 @@ msgstr "Vés a la pàgina {pageNumber}"
 msgid "Go to previous page"
 msgstr "Vés a la pàgina anterior"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Concedeix"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Concedeix permís"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Concedeix permisos perquè aquesta aplicació pugui accedir a funcions del sistema"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "S'està concedint el permís..."
 
@@ -884,7 +884,7 @@ msgstr "S'ha tancat la sessió correctament"
 msgid "Logging out…"
 msgstr "S'està tancant la sessió…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Gestiona les capacitats concedides a aquesta aplicació"
 
@@ -914,7 +914,7 @@ msgstr "Dilluns"
 msgid "Multiple apps declare this resource"
 msgstr "Diverses aplicacions declaren aquest recurs"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Error de xarxa"
 
@@ -980,11 +980,11 @@ msgstr "No hi ha aplicacions coincidents"
 msgid "No paths configured."
 msgstr "No hi ha rutes configurades."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Cap permís concedit"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "No s'ha concedit cap permís a aquesta aplicació"
 
@@ -1039,7 +1039,7 @@ msgstr "Normal"
 msgid "Not set"
 msgstr "No establert"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Sense versió"
 
@@ -1117,19 +1117,19 @@ msgstr "Encaminament per ruta"
 msgid "Paths"
 msgstr "Rutes"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Permís concedit"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Permís revocat"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Permisos"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Comproveu la connexió a Internet i torneu-ho a provar."
 
@@ -1141,7 +1141,7 @@ msgstr "Introdueix un ID d'aplicació"
 msgid "Preference updated"
 msgstr "Preferència actualitzada"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Versió preferida"
 
@@ -1237,20 +1237,20 @@ msgstr "Restableix"
 msgid "Reset all settings to default values"
 msgstr "Restableix tota la configuració als valors per defecte"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Revoca"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Revoca el permís"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Vols revocar el permís?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "S'està revocant el permís..."
 
@@ -1273,8 +1273,8 @@ msgstr "Desa"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Desant..."
 
@@ -1316,7 +1316,7 @@ msgstr "Cerca..."
 msgid "Searching..."
 msgstr "Cercant..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Selecciona una capacitat per concedir a {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Selecciona direcció del lloc"
 msgid "Select theme preference"
 msgstr "Selecciona la preferència de tema"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Selecciona quina versió d'aquesta aplicació utilitzar"
 
@@ -1368,8 +1368,8 @@ msgstr "Envia el correu"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Error del servidor"
 
@@ -1391,7 +1391,7 @@ msgstr "Encaminament de serveis"
 msgid "Services"
 msgstr "Serveis"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Sessió expirada"
 
@@ -1465,7 +1465,7 @@ msgstr "Sistema"
 msgid "System default"
 msgstr "Per defecte del sistema"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Per defecte del sistema"
 
@@ -1507,7 +1507,7 @@ msgstr "L'aplicació s'ha instal·lat correctament."
 msgid "The requested app could not be found."
 msgstr "No s'ha pogut trobar l'aplicació sol·licitada."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "La versió que utilitzen els usuaris que no han fet una elecció"
 
@@ -1519,7 +1519,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Configuració del tema"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Aquesta aplicació no té gestió de versions"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Aquesta aplicació està instal·lada directament des del seu editor i no ha estat verificada. Pot ser programari maliciós."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Això revocarà el permís \"{0}\" de {appName}. És possible que l'aplicació deixi de funcionar correctament."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Amunt"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Pista"
 
@@ -1607,7 +1607,7 @@ msgstr "Escriu per cercar usuaris"
 msgid "Type to search..."
 msgstr "Escriu per cercar..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "No s'ha pogut connectar amb el servidor remot"
 
@@ -1702,7 +1702,7 @@ msgstr "Verifica"
 msgid "Verify email address"
 msgstr "Verifica l'adreça de correu electrònic"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Versió"
 
@@ -1711,11 +1711,11 @@ msgstr "Versió"
 msgid "Version {0}"
 msgstr "Versió {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Versió canviada"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Gestió de versions"
 
@@ -1752,7 +1752,7 @@ msgstr "Dimecres"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "El vostre compte s'ha mogut aquí des de {source}. Fins que no l'elimineu d'allà, els missatges i les notificacions poden arribar als dos servidors, part del vostre contingut es continuarà servint des de l'antic servidor i els seguidors poden trigar uns minuts a trobar-vos aquí."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "La teva substitució de versió personal"
 
@@ -1760,6 +1760,6 @@ msgstr "La teva substitució de versió personal"
 msgid "Your preference"
 msgstr "La teva preferència"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "La teva versió"

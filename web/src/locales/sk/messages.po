@@ -31,11 +31,11 @@ msgstr "{0} aktualizované, {failed} zlyhalo"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} bola nainštalovaná."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (predvolené, verzia {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} (verzia {version})"
 
@@ -137,11 +137,11 @@ msgstr "Všetko"
 msgid "All apps updated"
 msgstr "Všetky aplikácie aktualizované"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Vyskytla sa chyba"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Vyskytla sa neočakávaná chyba"
 
@@ -251,7 +251,7 @@ msgstr "Zvýšiť záujem"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Zrušiť"
 
@@ -473,24 +473,24 @@ msgstr "Predvolené"
 msgid "Default AI account"
 msgstr "Predvolený AI účet"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Predvolené pre všetkých používateľov"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Predvolené pre všetkých používateľov (verzia {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Predvolené pre všetkých používateľov aktualizované"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Predvolený track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Predvolený track (verzia {0})"
 
@@ -598,7 +598,7 @@ msgstr "Nepodarilo sa pridať účet"
 msgid "Failed to clean up apps"
 msgstr "Vyčistenie aplikácií zlyhalo"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Nepodarilo sa udeliť povolenie"
 
@@ -606,7 +606,7 @@ msgstr "Nepodarilo sa udeliť povolenie"
 msgid "Failed to remove account"
 msgstr "Nepodarilo sa odstrániť účet"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Nepodarilo sa odvolať povolenie"
 
@@ -622,12 +622,12 @@ msgstr "Aktualizácia aplikácií zlyhala"
 msgid "Failed to update category"
 msgstr "Nepodarilo sa aktualizovať kategóriu"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Nepodarilo sa aktualizovať predvolené"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Nepodarilo sa aktualizovať predvoľbu"
 
@@ -712,19 +712,19 @@ msgstr "Prejsť na stránku {pageNumber}"
 msgid "Go to previous page"
 msgstr "Prejsť na predchádzajúcu stranu"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Udeliť"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Udeliť povolenie"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Udelením povolení umožníte tejto aplikácii prístup k systémovým funkciám"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Udeľuje sa povolenie..."
 
@@ -884,7 +884,7 @@ msgstr "Úspešne odhlásené"
 msgid "Logging out…"
 msgstr "Odhlasuje sa…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Spravujte oprávnenia udelené tejto aplikácii"
 
@@ -914,7 +914,7 @@ msgstr "Pondelok"
 msgid "Multiple apps declare this resource"
 msgstr "Tento prostriedok deklaruje viacero aplikácií"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Chyba siete"
 
@@ -980,11 +980,11 @@ msgstr "Žiadne zodpovedajúce aplikácie"
 msgid "No paths configured."
 msgstr "Nie sú nakonfigurované žiadne cesty."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Žiadne udelené povolenia"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Tejto aplikácii nie sú udelené žiadne povolenia"
 
@@ -1039,7 +1039,7 @@ msgstr "Normálne"
 msgid "Not set"
 msgstr "Nenastavené"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Bez verzie"
 
@@ -1117,19 +1117,19 @@ msgstr "Smerovanie ciest"
 msgid "Paths"
 msgstr "Cesty"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Povolenie udelené"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Povolenie odvolané"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Povolenia"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Skontrolujte pripojenie na internet a skúste to znova."
 
@@ -1141,7 +1141,7 @@ msgstr "Zadajte ID aplikácie"
 msgid "Preference updated"
 msgstr "Predvoľba aktualizovaná"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Preferovaná verzia"
 
@@ -1237,20 +1237,20 @@ msgstr "Obnoviť"
 msgid "Reset all settings to default values"
 msgstr "Obnoviť všetky nastavenia na predvolené hodnoty"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Odvolať"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Odvolať povolenie"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Odvolať povolenie?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Odvoláva sa povolenie..."
 
@@ -1273,8 +1273,8 @@ msgstr "Uložiť"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Ukladám..."
 
@@ -1316,7 +1316,7 @@ msgstr "Hľadať..."
 msgid "Searching..."
 msgstr "Hľadám..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Vyberte schopnosť na udelenie aplikácii {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Vybrať smer stránky"
 msgid "Select theme preference"
 msgstr "Vybrať predvoľbu motívu"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Vybrať, ktorú verziu tejto aplikácie použiť"
 
@@ -1368,8 +1368,8 @@ msgstr "Odoslať e-mail"
 msgid "Serif"
 msgstr "Pätkové"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Chyba servera"
 
@@ -1391,7 +1391,7 @@ msgstr "Smerovanie služieb"
 msgid "Services"
 msgstr "Služby"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Platnosť relácie vypršala"
 
@@ -1465,7 +1465,7 @@ msgstr "Systém"
 msgid "System default"
 msgstr "Predvolené nastavenie systému"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Predvolené nastavenie systému"
 
@@ -1507,7 +1507,7 @@ msgstr "Aplikácia bola úspešne nainštalovaná."
 msgid "The requested app could not be found."
 msgstr "Požadovanú aplikáciu sa nepodarilo nájsť."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Verzia, ktorú používajú používatelia, ktorí si nezvolili"
 
@@ -1519,7 +1519,7 @@ msgstr "Motív"
 msgid "Theme Settings"
 msgstr "Nastavenia motívu"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Táto aplikácia nemá správu verzií"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Táto aplikácia je nainštalovaná priamo od vydavateľa a nebola preverená. Môže ísť o malvér."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Týmto sa zruší povolenie „{0}“ pre {appName}. Aplikácia môže prestať fungovať správne."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Hore"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Stopa"
 
@@ -1607,7 +1607,7 @@ msgstr "Píšte pre vyhľadanie používateľov"
 msgid "Type to search..."
 msgstr "Píšte pre vyhľadanie..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Nepodarilo sa pripojiť k vzdialenému serveru"
 
@@ -1702,7 +1702,7 @@ msgstr "Overiť"
 msgid "Verify email address"
 msgstr "Overiť e-mailovú adresu"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Verzia"
 
@@ -1711,11 +1711,11 @@ msgstr "Verzia"
 msgid "Version {0}"
 msgstr "Verzia {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Verzia zmenená"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Správa verzií"
 
@@ -1752,7 +1752,7 @@ msgstr "Streda"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Váš účet bol presunutý sem z {source}. Kým ho tam neodstránite, správy a upozornenia môžu dosiahnuť oba servery, časť vášho obsahu naďalej pochádza zo starého servera a sledovateľom môže chvíľu trvať, kým vás tu nájdu."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Vaše osobné prepísanie verzie"
 
@@ -1760,6 +1760,6 @@ msgstr "Vaše osobné prepísanie verzie"
 msgid "Your preference"
 msgstr "Vaša predvoľba"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Vaša verzia"

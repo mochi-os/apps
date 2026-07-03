@@ -31,11 +31,11 @@ msgstr "{0} frissítve, {failed} sikertelen"
 msgid "{0} v{1} has been installed."
 msgstr "A {0} v{1} telepítve."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (alapértelmezett, {version} verzió)"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{track} ({version} verzió)"
 
@@ -137,11 +137,11 @@ msgstr "Összes"
 msgid "All apps updated"
 msgstr "Az összes alkalmazás frissítve"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Hiba történt"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Váratlan hiba történt"
 
@@ -251,7 +251,7 @@ msgstr "Érdeklődés növelése"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Mégse"
 
@@ -473,24 +473,24 @@ msgstr "Alapértelmezett"
 msgid "Default AI account"
 msgstr "Alapértelmezett MI-fiók"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Alapértelmezett minden felhasználó számára"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Alapértelmezett minden felhasználó számára ({effectiveDefaultVersion} verzió)"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Az összes felhasználó alapértelmezett értéke frissítve"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Alapértelmezett sáv"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Alapértelmezett sáv ({0} verzió)"
 
@@ -598,7 +598,7 @@ msgstr "Nem sikerült hozzáadni a fiókot"
 msgid "Failed to clean up apps"
 msgstr "Az alkalmazások tisztítása sikertelen"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Nem sikerült engedélyt adni"
 
@@ -606,7 +606,7 @@ msgstr "Nem sikerült engedélyt adni"
 msgid "Failed to remove account"
 msgstr "Nem sikerült eltávolítani a fiókot"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Nem sikerült visszavonni az engedélyt"
 
@@ -622,12 +622,12 @@ msgstr "Az alkalmazások frissítése sikertelen"
 msgid "Failed to update category"
 msgstr "Nem sikerült frissíteni a kategóriát"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Nem sikerült frissíteni az alapértelmezettet"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Nem sikerült frissíteni a beállítást"
 
@@ -712,19 +712,19 @@ msgstr "Ugrás a(z) {pageNumber}. oldalra"
 msgid "Go to previous page"
 msgstr "Ugrás az előző oldalra"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Engedélyezés"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Engedély megadása"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Engedélyek megadása, hogy az alkalmazás hozzáférhessen a rendszer funkcióihoz"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Engedély megadása..."
 
@@ -884,7 +884,7 @@ msgstr "Sikeres kijelentkezés"
 msgid "Logging out…"
 msgstr "Kijelentkezés…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Az alkalmazásnak megadott képességek kezelése"
 
@@ -914,7 +914,7 @@ msgstr "Hétfő"
 msgid "Multiple apps declare this resource"
 msgstr "Több alkalmazás is deklarálja ezt az erőforrást"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Hálózati hiba"
 
@@ -980,11 +980,11 @@ msgstr "Nincs egyező alkalmazás"
 msgid "No paths configured."
 msgstr "Nincsenek útvonalak konfigurálva."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Nincsenek megadott engedélyek"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Nincs engedély megadva ennek az alkalmazásnak"
 
@@ -1039,7 +1039,7 @@ msgstr "Normál"
 msgid "Not set"
 msgstr "Nincs beállítva"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Nem verziózott"
 
@@ -1117,19 +1117,19 @@ msgstr "Útvonal-irányítás"
 msgid "Paths"
 msgstr "Útvonalak"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Engedély megadva"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Engedély visszavonva"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Engedélyek"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Ellenőrizze az internetkapcsolatát, és próbálja újra."
 
@@ -1141,7 +1141,7 @@ msgstr "Adjon meg egy alkalmazásazonosítót"
 msgid "Preference updated"
 msgstr "Preferencia frissítve"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Előnyben részesített verzió"
 
@@ -1237,20 +1237,20 @@ msgstr "Visszaállítás"
 msgid "Reset all settings to default values"
 msgstr "Minden beállítás visszaállítása alapértelmezett értékekre"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Visszavonás"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Engedély visszavonása"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "Visszavonja az engedélyt?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Engedély visszavonása..."
 
@@ -1273,8 +1273,8 @@ msgstr "Mentés"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Mentés..."
 
@@ -1316,7 +1316,7 @@ msgstr "Keresés..."
 msgid "Searching..."
 msgstr "Keresés folyamatban..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "Válasszon képességet, amelyet meg szeretne adni a következőnek: {appName}."
 
@@ -1352,7 +1352,7 @@ msgstr "Oldalirány kiválasztása"
 msgid "Select theme preference"
 msgstr "Téma beállításának kiválasztása"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Válassza ki, melyik verziót használja ennek az alkalmazásnak"
 
@@ -1368,8 +1368,8 @@ msgstr "E-mail küldése"
 msgid "Serif"
 msgstr "Talpas"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Kiszolgálóhiba"
 
@@ -1391,7 +1391,7 @@ msgstr "Szolgáltatás-útválasztás"
 msgid "Services"
 msgstr "Szolgáltatások"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "A munkamenet lejárt"
 
@@ -1465,7 +1465,7 @@ msgstr "Rendszer"
 msgid "System default"
 msgstr "Rendszer alapértelmezett"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Rendszer alapértelmezett"
 
@@ -1507,7 +1507,7 @@ msgstr "Az alkalmazás sikeresen telepítve."
 msgid "The requested app could not be found."
 msgstr "A kért alkalmazás nem található."
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "A választást nem hozó felhasználók által használt verzió"
 
@@ -1519,7 +1519,7 @@ msgstr "Téma"
 msgid "Theme Settings"
 msgstr "Témabeállítások"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Ennek az alkalmazásnak nincs verziókezelése"
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Ezt az alkalmazást közvetlenül a kiadójától telepítették, és nem ellenőrizték. Lehet, hogy kártevő."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Ez visszavonja a \"{0}\" engedélyt a következőtől: {appName}. Az alkalmazás működése leállhat."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Eleje"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Csatorna"
 
@@ -1607,7 +1607,7 @@ msgstr "Gépeljen a felhasználók kereséséhez"
 msgid "Type to search..."
 msgstr "Gépeljen a kereséshez..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Nem sikerült csatlakozni a távoli kiszolgálóhoz"
 
@@ -1702,7 +1702,7 @@ msgstr "Ellenőrzés"
 msgid "Verify email address"
 msgstr "E-mail-cím ellenőrzése"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Verzió"
 
@@ -1711,11 +1711,11 @@ msgstr "Verzió"
 msgid "Version {0}"
 msgstr "{0} verzió"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Verzió módosítva"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Verziókezelés"
 
@@ -1752,7 +1752,7 @@ msgstr "Szerda"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Fiókja ide lett áthelyezve innen: {source}. Amíg nem törli onnan, az üzenetek és értesítések mindkét szerverre eljuthatnak, tartalmának egy része továbbra is a régi szerverről lesz kiszolgálva, és a követőknek néhány percbe telhet, mire megtalálják Önt itt."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Az ön személyes verziófelülbírálása"
 
@@ -1760,6 +1760,6 @@ msgstr "Az ön személyes verziófelülbírálása"
 msgid "Your preference"
 msgstr "Az Ön preferenciája"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Az Ön verziója"

@@ -31,11 +31,11 @@ msgstr "{0} v{1} instalata."
 msgid "{0} v{1} has been installed."
 msgstr "{0} aka tagimpi."
 
-#: src/routes/_authenticated/app/$appId.tsx:369
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (default, version {version})"
 msgstr "{track} (versión {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:372
 msgid "{track} (version {version})"
 msgstr "{value, plural, one {# punto} other {# puntonaka}}"
 
@@ -137,11 +137,11 @@ msgstr "Taqpach"
 msgid "All apps updated"
 msgstr "Taqpach app machaqachata"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Mä juch'a utjawayi"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Jan suyt'ata juch'a utjawayi"
 
@@ -251,7 +251,7 @@ msgstr "Munawi jiltayaña"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:551
+#: src/routes/_authenticated/app/$appId.tsx:553
 msgid "Cancel"
 msgstr "Jaytaña"
 
@@ -473,24 +473,24 @@ msgstr "Default"
 msgid "Default AI account"
 msgstr "Default AI cuenta"
 
-#: src/routes/_authenticated/app/$appId.tsx:427
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users"
 msgstr "Default taqpach usuario taqi"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:428
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Default taqpach usuario taqi (versión {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Default for all users updated"
 msgstr "Default taqpach usuario taqi machaqachata"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:412
 msgid "Default track"
 msgstr "Default track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:411
 msgid "Default track (version {0})"
 msgstr "Default track (versión {0})"
 
@@ -598,7 +598,7 @@ msgstr "Janiw cuenta yapxataña atinkti"
 msgid "Failed to clean up apps"
 msgstr "Appanaka pichañax janiw walkiti"
 
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Failed to grant permission"
 msgstr "Janiw permiso churaña atinkti"
 
@@ -606,7 +606,7 @@ msgstr "Janiw permiso churaña atinkti"
 msgid "Failed to remove account"
 msgstr "Janiw cuenta apsuña atinkti"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:457
 msgid "Failed to revoke permission"
 msgstr "Janiw permiso apsuña atinkti"
 
@@ -622,12 +622,12 @@ msgstr "Appanaka machaqachañax janiw walkiti"
 msgid "Failed to update category"
 msgstr "Janiw categoría machaqachaña atinkti"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:326
 msgid "Failed to update default"
 msgstr "Janiw default machaqachaña atinkti"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:304
 msgid "Failed to update preference"
 msgstr "Janiw preferencia machaqachaña atinkti"
 
@@ -712,19 +712,19 @@ msgstr "{pageNumber} jananakaru saraña"
 msgid "Go to previous page"
 msgstr "Nayraqat páginar saraña"
 
-#: src/routes/_authenticated/app/$appId.tsx:515
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Churaña"
 
-#: src/routes/_authenticated/app/$appId.tsx:520
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Permiso churaña"
 
-#: src/routes/_authenticated/app/$appId.tsx:575
+#: src/routes/_authenticated/app/$appId.tsx:577
 msgid "Grant permissions to allow this app to access system features"
 msgstr "Permisonak churaña aka app sistema características apnaqañapataki"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:473
 msgid "Granting permission..."
 msgstr "Permiso churaskiwa..."
 
@@ -884,7 +884,7 @@ msgstr "Suma mistutawa"
 msgid "Logging out…"
 msgstr "Mistuskiwa…"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "Manage capabilities granted to this application"
 msgstr "Aka aplicaciónan capacidadanak churatap apnaqaña"
 
@@ -914,7 +914,7 @@ msgstr "Lunes"
 msgid "Multiple apps declare this resource"
 msgstr "Walja appnakax aka recurso uñacht'ayapxi"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Red juch'a"
 
@@ -980,11 +980,11 @@ msgstr "Jan jikxatat apps"
 msgid "No paths configured."
 msgstr "Jan thakhinak configuratati."
 
-#: src/routes/_authenticated/app/$appId.tsx:574
+#: src/routes/_authenticated/app/$appId.tsx:576
 msgid "No permissions granted"
 msgstr "Jan permisonak grantatati"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Jan permisonak grantata aka app"
 
@@ -1039,7 +1039,7 @@ msgstr "Walja"
 msgid "Not set"
 msgstr "Jan wakichata"
 
-#: src/routes/_authenticated/app/$appId.tsx:344
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "Not versioned"
 msgstr "Jan versionata"
 
@@ -1117,19 +1117,19 @@ msgstr "Thakhi routing"
 msgid "Paths"
 msgstr "Thakhinaka"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Permission granted"
 msgstr "Permiso grantata"
 
-#: src/routes/_authenticated/app/$appId.tsx:453
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Permission revoked"
 msgstr "Permiso aparata"
 
-#: src/routes/_authenticated/app/$appId.tsx:507
+#: src/routes/_authenticated/app/$appId.tsx:509
 msgid "Permissions"
 msgstr "Permisonaka"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Mira internet conexion ukat wasitat yant'asim."
 
@@ -1141,7 +1141,7 @@ msgstr "App ID mantayama"
 msgid "Preference updated"
 msgstr "Preferencia machaqachata"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Preferred Version"
 msgstr "Munat Versión"
 
@@ -1237,20 +1237,20 @@ msgstr "Kutintayama"
 msgid "Reset all settings to default values"
 msgstr "Taqi configuracionanak default valoranakar kutintayama"
 
-#: src/routes/_authenticated/app/$appId.tsx:628
-#: src/routes/_authenticated/app/$appId.tsx:631
+#: src/routes/_authenticated/app/$appId.tsx:630
+#: src/routes/_authenticated/app/$appId.tsx:633
 msgid "Revoke"
 msgstr "Aparma"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:640
 msgid "Revoke permission"
 msgstr "Permiso aparma"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:638
 msgid "Revoke permission?"
 msgstr "¿Permiso aparma?"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Revoking permission..."
 msgstr "Permiso apaqaskiwa..."
 
@@ -1273,8 +1273,8 @@ msgstr "Imaña"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:322
+#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Saving..."
 msgstr "Imaski..."
 
@@ -1316,7 +1316,7 @@ msgstr "Thaqhama..."
 msgid "Searching..."
 msgstr "Thaqhaski..."
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Select a capability to grant to {appName}."
 msgstr "{appName} grantañataki capacidad ajllima."
 
@@ -1352,7 +1352,7 @@ msgstr "Sitio dirección ajlliña"
 msgid "Select theme preference"
 msgstr "Tema preferencia ajlliña"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:400
 msgid "Select which version of this app to use"
 msgstr "Kawkïr versión aka app apnaqañasa, uka ajlliña"
 
@@ -1368,8 +1368,8 @@ msgstr "Email apayaña"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Servidor juch'a"
 
@@ -1391,7 +1391,7 @@ msgstr "Servicio routing"
 msgid "Services"
 msgstr "Servicios"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Sesión tukusi"
 
@@ -1465,7 +1465,7 @@ msgstr "Sistema"
 msgid "System default"
 msgstr "Sistema predeterminada"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "System Default"
 msgstr "Sistema Predeterminada"
 
@@ -1507,7 +1507,7 @@ msgstr "App walikiwa instalata."
 msgid "The requested app could not be found."
 msgstr "Apnaqirinakax kunkañ ajllipxki janiw, jichha apnaqata versión"
 
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:404
 msgid "The version used by users who haven't made a choice"
 msgstr "Kutsupa"
 
@@ -1519,7 +1519,7 @@ msgstr "Tema Configuración"
 msgid "Theme Settings"
 msgstr "Tema machaqachata"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:347
 msgid "This app does not have version management"
 msgstr "Aka appax Mochi staff ukatakikiwa."
 
@@ -1528,7 +1528,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Aka chatax apaqatat sasinx mayniru sapt'asiwayi, jan ukax janiw mantawimäkiti"
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:637
+#: src/routes/_authenticated/app/$appId.tsx:639
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Akax aka sesión mistuyani. Aka jichha sesionamäkpan, mayampiw mantañam."
 
@@ -1572,7 +1572,7 @@ msgid "Top"
 msgstr "Patxa nivel"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:364
+#: src/routes/_authenticated/app/$appId.tsx:366
 msgid "Track"
 msgstr "Track \"{track}\" apaqata"
 
@@ -1607,7 +1607,7 @@ msgstr "Thaqhañatak qillqam..."
 msgid "Type to search..."
 msgstr "Mensajemam qillqam…"
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Jan jaya servidorar mayachasiñjamäkiti"
 
@@ -1702,7 +1702,7 @@ msgstr "Verificaña ukat habilitaña"
 msgid "Verify email address"
 msgstr "Passkey ukamp verificaña"
 
-#: src/routes/_authenticated/app/$appId.tsx:378
+#: src/routes/_authenticated/app/$appId.tsx:380
 msgid "Version"
 msgstr "Versión Historia"
 
@@ -1711,11 +1711,11 @@ msgstr "Versión Historia"
 msgid "Version {0}"
 msgstr "Versión {0} lurata."
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Version changed"
 msgstr "Versión apayata"
 
-#: src/routes/_authenticated/app/$appId.tsx:397
+#: src/routes/_authenticated/app/$appId.tsx:399
 msgid "Version Management"
 msgstr "Versión cambiata"
 
@@ -1752,7 +1752,7 @@ msgstr "Semanax aka uru qalltani"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Juman cuenta {source} ukamanta achakata. Ukankiwa juchut'ayapkchama, ikirinakampi willt'awinakampi pä servdorankama chikañ atikaniwa, walja lurawinakasataki jach'a servdorpa ukatpachani uñakiparakiwa, ukhamaraki suyirinakaxa aka jichhxa jupast'aña pätpachani saräniwa."
 
-#: src/routes/_authenticated/app/$appId.tsx:418
+#: src/routes/_authenticated/app/$appId.tsx:420
 msgid "Your personal version override"
 msgstr "Preferenciamax"
 
@@ -1760,6 +1760,6 @@ msgstr "Preferenciamax"
 msgid "Your preference"
 msgstr "Chanim (mín {0})"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:419
 msgid "Your Version"
 msgstr "Cuentamax inakacht'atawa"
