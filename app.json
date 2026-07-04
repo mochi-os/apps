@@ -5,7 +5,7 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
 {
-	"version": "4.71",
+	"version": "4.72",
 	"label": "app.name",
 	"classes": ["app"],
 	"paths": ["apps"],
@@ -18,8 +18,7 @@
 		"schema": 1,
 		"file": "apps.db",
 		"create": {"function": "database_create"},
-		"upgrade": {"function": "database_upgrade"},
-		"replicate": {"exclude": {"tables": ["updates_cache"]}}
+		"upgrade": {"function": "database_upgrade"}
 	},
 
 	"icons": [
