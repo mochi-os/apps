@@ -13,10 +13,6 @@ UPDATES_CACHE_TTL = 300
 def database_create():
 	mochi.db.execute("create table updates_cache ( app text not null primary key, data text not null, checked integer not null )")
 
-def database_upgrade(version):
-	pass
-
-# Check if an ID looks like an entity ID (50-51 chars)
 def is_entity_id(id):
 	return len(id) >= 50 and len(id) <= 51
 
