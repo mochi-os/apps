@@ -10,6 +10,14 @@
 # of ~25 sequential P2P round-trips.
 UPDATES_CACHE_TTL = 300
 
+def database_upgrade(version):
+	if version == 2:
+		# Drop the pre-2026-07 broadcast tables left in the app data DB when
+		# broadcast state moved to the per-app system DB - inert, but stale
+		# sequence/log copies mislead diagnosis.
+		for table in ["sequence", "log", "acknowledged", "received"]:
+			mochi.db.execute("drop table if exists " + table)
+
 def database_create():
 	mochi.db.execute("create table updates_cache ( app text not null primary key, data text not null, checked integer not null )")
 
