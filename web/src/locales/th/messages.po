@@ -13,6 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. js-lingui-explicit-id
+#: ../../../lib/web/src/lib/error-normalizer.ts:204
+msgid "Please check your internet connection and try again."
+msgstr "โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณแล้วลองอีกครั้ง"
+
 #. placeholder {0}: app.name
 #: src/features/routing/routing-table.tsx:23
 msgid "{0} (development)"
@@ -31,11 +36,11 @@ msgstr "{0} อัปเดตแล้ว, {failed} ล้มเหลว"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ได้รับการติดตั้งแล้ว"
 
-#: src/routes/_authenticated/app/$appId.tsx:371
+#: src/routes/_authenticated/app/$appId.tsx:370
 msgid "{track} (default, version {version})"
 msgstr "{track} (เริ่มต้น, เวอร์ชัน {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:372
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (version {version})"
 msgstr "{track} (เวอร์ชัน {version})"
 
@@ -104,7 +109,7 @@ msgstr "เพิ่มบัญชีเพื่อรับการแจ้
 msgid "Add new account"
 msgstr "เพิ่มบัญชีใหม่"
 
-#: ../../../lib/web/src/components/post-tags.tsx:133
+#: ../../../lib/web/src/components/post-tags.tsx:137
 msgid "Add tag..."
 msgstr "เพิ่มแท็ก..."
 
@@ -163,10 +168,6 @@ msgstr "การกระทำของแอป"
 msgid "App information"
 msgstr "ข้อมูลแอป"
 
-#: src/routes/_authenticated/app/$appId.tsx:191
-msgid "App information and configuration"
-msgstr "ข้อมูลและการตั้งค่าแอป"
-
 #: src/features/apps/index.tsx:129
 msgid "App installed"
 msgstr "ติดตั้งแอปแล้ว"
@@ -180,7 +181,7 @@ msgstr "ติดตั้งแอปสำเร็จแล้ว"
 msgid "App not found"
 msgstr "ไม่พบแอป"
 
-#: src/routes/_authenticated/app/$appId.tsx:194
+#: src/routes/_authenticated/app/$appId.tsx:193
 msgid "Application ID"
 msgstr "ID แอปพลิเคชัน"
 
@@ -236,8 +237,8 @@ msgstr "กลับไปยังแอป"
 msgid "Back to home"
 msgstr "กลับไปหน้าหลัก"
 
-#: ../../../lib/web/src/components/post-tags.tsx:176
-#: ../../../lib/web/src/components/post-tags.tsx:188
+#: ../../../lib/web/src/components/post-tags.tsx:180
+#: ../../../lib/web/src/components/post-tags.tsx:192
 msgid "Boost interest"
 msgstr "เพิ่มความสนใจ"
 
@@ -255,7 +256,7 @@ msgstr "เพิ่มความสนใจ"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:553
+#: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "ยกเลิก"
 
@@ -442,8 +443,8 @@ msgstr "เริ่มการยืนยันตัวตนอีกคร
 msgid "Couldn't verify with that account. Please try again."
 msgstr "ไม่สามารถยืนยันด้วยบัญชีนั้นได้ โปรดลองอีกครั้ง"
 
-#: src/routes/_authenticated/app/$appId.tsx:204
-msgid "Current Version"
+#: src/routes/_authenticated/app/$appId.tsx:203
+msgid "Current version"
 msgstr "เวอร์ชันปัจจุบัน"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:260
@@ -481,24 +482,24 @@ msgstr "ค่าเริ่มต้น"
 msgid "Default AI account"
 msgstr "บัญชี AI เริ่มต้น"
 
-#: src/routes/_authenticated/app/$appId.tsx:429
+#: src/routes/_authenticated/app/$appId.tsx:426
 msgid "Default for all users"
 msgstr "ค่าเริ่มต้นสำหรับผู้ใช้ทั้งหมด"
 
-#: src/routes/_authenticated/app/$appId.tsx:428
+#: src/routes/_authenticated/app/$appId.tsx:425
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "ค่าเริ่มต้นสำหรับผู้ใช้ทั้งหมด (เวอร์ชัน {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:325
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Default for all users updated"
 msgstr "อัปเดตค่าเริ่มต้นสำหรับผู้ใช้ทั้งหมดแล้ว"
 
-#: src/routes/_authenticated/app/$appId.tsx:412
+#: src/routes/_authenticated/app/$appId.tsx:410
 msgid "Default track"
 msgstr "แทร็กเริ่มต้น"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:411
+#: src/routes/_authenticated/app/$appId.tsx:409
 msgid "Default track (version {0})"
 msgstr "แทร็กเริ่มต้น (เวอร์ชัน {0})"
 
@@ -567,8 +568,8 @@ msgstr "แก้ไข {label}"
 msgid "Email code"
 msgstr "รหัสอีเมล"
 
-#: src/routes/_authenticated/app/$appId.tsx:221
-msgid "Enabled Services"
+#: src/routes/_authenticated/app/$appId.tsx:220
+msgid "Enabled services"
 msgstr "บริการที่เปิดใช้งาน"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:299
@@ -606,7 +607,7 @@ msgstr "ไม่สามารถเพิ่มบัญชีได้"
 msgid "Failed to clean up apps"
 msgstr "ล้างแอปไม่สำเร็จ"
 
-#: src/routes/_authenticated/app/$appId.tsx:475
+#: src/routes/_authenticated/app/$appId.tsx:472
 msgid "Failed to grant permission"
 msgstr "ไม่สามารถให้สิทธิ์ได้"
 
@@ -614,7 +615,7 @@ msgstr "ไม่สามารถให้สิทธิ์ได้"
 msgid "Failed to remove account"
 msgstr "ไม่สามารถเอาบัญชีออกได้"
 
-#: src/routes/_authenticated/app/$appId.tsx:457
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Failed to revoke permission"
 msgstr "ไม่สามารถเพิกถอนสิทธิ์ได้"
 
@@ -630,12 +631,12 @@ msgstr "อัปเดตแอปไม่สำเร็จ"
 msgid "Failed to update category"
 msgstr "ไม่สามารถอัปเดตหมวดหมู่ได้"
 
-#: src/routes/_authenticated/app/$appId.tsx:326
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Failed to update default"
 msgstr "ไม่สามารถอัปเดตค่าเริ่มต้นได้"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:304
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Failed to update preference"
 msgstr "ไม่สามารถอัปเดตการตั้งค่าได้"
 
@@ -647,7 +648,7 @@ msgstr "ไม่สามารถอัปเดตค่าเริ่มต
 msgid "File:"
 msgstr "ไฟล์:"
 
-#: src/routes/_authenticated/app/$appId.tsx:199
+#: src/routes/_authenticated/app/$appId.tsx:198
 msgid "Fingerprint"
 msgstr "Fingerprint"
 
@@ -720,19 +721,15 @@ msgstr "ไปที่หน้า {pageNumber}"
 msgid "Go to previous page"
 msgstr "ไปหน้าก่อนหน้า"
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:514
 msgid "Grant"
 msgstr "ให้สิทธิ์"
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:519
 msgid "Grant permission"
 msgstr "ให้สิทธิ์"
 
-#: src/routes/_authenticated/app/$appId.tsx:577
-msgid "Grant permissions to allow this app to access system features"
-msgstr "ให้สิทธิ์เพื่ออนุญาตให้แอปนี้เข้าถึงฟีเจอร์ของระบบ"
-
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:470
 msgid "Granting permission..."
 msgstr "กำลังให้สิทธิ์..."
 
@@ -763,9 +760,9 @@ msgstr "หน้าหลัก"
 msgid "Hot"
 msgstr "ยอดนิยม"
 
-#: src/routes/_authenticated/app/$appId.tsx:229
-msgid "HTTP Paths"
-msgstr "HTTP Paths"
+#: src/routes/_authenticated/app/$appId.tsx:228
+msgid "HTTP paths"
+msgstr "เส้นทาง HTTP"
 
 #: src/routes/_authenticated/app/$appId.tsx:190
 msgid "Identity"
@@ -892,7 +889,7 @@ msgstr "ออกจากระบบเรียบร้อยแล้ว"
 msgid "Logging out…"
 msgstr "กำลังออกจากระบบ…"
 
-#: src/routes/_authenticated/app/$appId.tsx:511
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "Manage capabilities granted to this application"
 msgstr "จัดการความสามารถที่มอบให้แอปพลิเคชันนี้"
 
@@ -989,11 +986,11 @@ msgstr "ไม่มีแอปที่ตรงกัน"
 msgid "No paths configured."
 msgstr "ไม่ได้กำหนดค่าเส้นทาง"
 
-#: src/routes/_authenticated/app/$appId.tsx:576
+#: src/routes/_authenticated/app/$appId.tsx:573
 msgid "No permissions granted"
 msgstr "ยังไม่ได้ให้สิทธิ์"
 
-#: src/routes/_authenticated/app/$appId.tsx:511
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "No permissions granted to this app"
 msgstr "ไม่มีสิทธิ์ที่มอบให้แอปนี้"
 
@@ -1052,7 +1049,7 @@ msgstr "ไม่พบ"
 msgid "Not set"
 msgstr "ยังไม่ได้ตั้งค่า"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:345
 msgid "Not versioned"
 msgstr "ไม่มีการกำหนดเวอร์ชัน"
 
@@ -1130,21 +1127,20 @@ msgstr "การกำหนดเส้นทาง path"
 msgid "Paths"
 msgstr "Paths"
 
-#: src/routes/_authenticated/app/$appId.tsx:474
+#: src/routes/_authenticated/app/$appId.tsx:471
 msgid "Permission granted"
 msgstr "ให้สิทธิ์แล้ว"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:452
 msgid "Permission revoked"
 msgstr "เพิกถอนสิทธิ์แล้ว"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:506
 msgid "Permissions"
 msgstr "สิทธิ์"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
-#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณแล้วลองอีกครั้ง"
 
@@ -1164,8 +1160,8 @@ msgstr "โปรดรอสักครู่แล้วลองอีกค
 msgid "Preference updated"
 msgstr "อัปเดตการตั้งค่าแล้ว"
 
-#: src/routes/_authenticated/app/$appId.tsx:419
-msgid "Preferred Version"
+#: src/routes/_authenticated/app/$appId.tsx:417
+msgid "Preferred version"
 msgstr "เวอร์ชันที่ต้องการ"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
@@ -1183,8 +1179,8 @@ msgstr "ความเป็นส่วนตัว"
 msgid "Profile"
 msgstr "โปรไฟล์"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
-msgid "Provided Classes"
+#: src/routes/_authenticated/app/$appId.tsx:212
+msgid "Provided classes"
 msgstr "คลาสที่ให้มา"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:117
@@ -1200,7 +1196,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "ลงทะเบียนพาสคีย์ของคุณใหม่บนเซิร์ฟเวอร์นี้"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
-#: ../../../lib/web/src/components/search-entity-page.tsx:240
+#: ../../../lib/web/src/components/search-entity-page.tsx:242
 #: src/features/apps/index.tsx:446
 msgid "Recommended"
 msgstr "แนะนำ"
@@ -1209,8 +1205,8 @@ msgstr "แนะนำ"
 msgid "Redirecting to login."
 msgstr "กำลังเปลี่ยนเส้นทางไปยังหน้าเข้าสู่ระบบ"
 
-#: ../../../lib/web/src/components/post-tags.tsx:196
-#: ../../../lib/web/src/components/post-tags.tsx:208
+#: ../../../lib/web/src/components/post-tags.tsx:200
+#: ../../../lib/web/src/components/post-tags.tsx:212
 msgid "Reduce interest"
 msgstr "ลดความสนใจ"
 
@@ -1236,8 +1232,8 @@ msgstr "ลบกฎการเข้าถึง"
 msgid "Remove access?"
 msgstr "ลบสิทธิ์การเข้าถึง?"
 
-#: ../../../lib/web/src/components/post-tags.tsx:216
-#: ../../../lib/web/src/components/post-tags.tsx:228
+#: ../../../lib/web/src/components/post-tags.tsx:220
+#: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "ลบความสนใจ"
 
@@ -1260,20 +1256,20 @@ msgstr "รีเซ็ต"
 msgid "Reset all settings to default values"
 msgstr "รีเซ็ตการตั้งค่าทั้งหมดเป็นค่าเริ่มต้น"
 
-#: src/routes/_authenticated/app/$appId.tsx:630
-#: src/routes/_authenticated/app/$appId.tsx:633
+#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:629
 msgid "Revoke"
 msgstr "เพิกถอน"
 
-#: src/routes/_authenticated/app/$appId.tsx:640
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission"
 msgstr "เพิกถอนสิทธิ์"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:634
 msgid "Revoke permission?"
 msgstr "เพิกถอนสิทธิ์?"
 
-#: src/routes/_authenticated/app/$appId.tsx:454
+#: src/routes/_authenticated/app/$appId.tsx:451
 msgid "Revoking permission..."
 msgstr "กำลังเพิกถอนสิทธิ์..."
 
@@ -1296,8 +1292,8 @@ msgstr "บันทึก"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:302
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Saving..."
 msgstr "กำลังบันทึก..."
 
@@ -1334,12 +1330,12 @@ msgid "Search..."
 msgstr "ค้นหา..."
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
-#: ../../../lib/web/src/components/search-entity-page.tsx:198
+#: ../../../lib/web/src/components/search-entity-page.tsx:200
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "กำลังค้นหา..."
 
-#: src/routes/_authenticated/app/$appId.tsx:524
+#: src/routes/_authenticated/app/$appId.tsx:521
 msgid "Select a capability to grant to {appName}."
 msgstr "เลือกความสามารถที่จะมอบให้ {appName}"
 
@@ -1374,10 +1370,6 @@ msgstr "เลือกทิศทางไซต์"
 #: ../../../lib/web/src/components/config-drawer.tsx:202
 msgid "Select theme preference"
 msgstr "เลือกการตั้งค่าธีม"
-
-#: src/routes/_authenticated/app/$appId.tsx:400
-msgid "Select which version of this app to use"
-msgstr "เลือกเวอร์ชันของแอปที่จะใช้"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:98
 msgid "Send again"
@@ -1485,11 +1477,8 @@ msgid "System"
 msgstr "ระบบ"
 
 #: src/features/routing/routing-table.tsx:79
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "System default"
-msgstr "ค่าเริ่มต้นของระบบ"
-
-#: src/routes/_authenticated/app/$appId.tsx:404
-msgid "System Default"
 msgstr "ค่าเริ่มต้นของระบบ"
 
 #: src/features/routing/use-routing-data.ts:51
@@ -1500,8 +1489,8 @@ msgstr "อัปเดตค่าเริ่มต้นของระบบ
 msgid "Tag"
 msgstr "แท็ก"
 
-#: ../../../lib/web/src/components/post-tags.tsx:100
-#: ../../../lib/web/src/components/post-tags.tsx:111
+#: ../../../lib/web/src/components/post-tags.tsx:101
+#: ../../../lib/web/src/components/post-tags.tsx:115
 msgid "Tags"
 msgstr "แท็ก"
 
@@ -1509,8 +1498,8 @@ msgstr "แท็ก"
 msgid "Teams/Apps"
 msgstr "ทีม/แอป"
 
-#: src/routes/_authenticated/app/$appId.tsx:210
-msgid "Technical Capabilities"
+#: src/routes/_authenticated/app/$appId.tsx:209
+msgid "Technical capabilities"
 msgstr "ความสามารถทางเทคนิค"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
@@ -1534,10 +1523,6 @@ msgstr "ไม่พบแอปที่ขอ"
 msgid "The requested content could not be found."
 msgstr "ไม่พบเนื้อหาที่ร้องขอ"
 
-#: src/routes/_authenticated/app/$appId.tsx:404
-msgid "The version used by users who haven't made a choice"
-msgstr "เวอร์ชันที่ใช้โดยผู้ใช้ที่ยังไม่ได้เลือก"
-
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "ธีม"
@@ -1546,7 +1531,7 @@ msgstr "ธีม"
 msgid "Theme Settings"
 msgstr "การตั้งค่าธีม"
 
-#: src/routes/_authenticated/app/$appId.tsx:347
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "This app does not have version management"
 msgstr "แอปนี้ไม่มีการจัดการเวอร์ชัน"
 
@@ -1555,7 +1540,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "แอปนี้ติดตั้งโดยตรงจากผู้เผยแพร่และยังไม่ได้รับการตรวจสอบ อาจเป็นมัลแวร์"
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:639
+#: src/routes/_authenticated/app/$appId.tsx:635
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "การดำเนินการนี้จะเพิกถอนสิทธิ์ \"{0}\" จาก {appName} แอปอาจหยุดทำงานอย่างถูกต้อง"
 
@@ -1603,7 +1588,7 @@ msgid "Top"
 msgstr "บนสุด"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:366
+#: src/routes/_authenticated/app/$appId.tsx:365
 msgid "Track"
 msgstr "แทร็ก"
 
@@ -1612,7 +1597,7 @@ msgid "Travelling"
 msgstr "กำลังเดินทาง"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:190
-#: ../../../lib/web/src/components/search-entity-page.tsx:214
+#: ../../../lib/web/src/components/search-entity-page.tsx:216
 msgid "Try adjusting your search terms"
 msgstr "ลองปรับคำค้นหาของคุณ"
 
@@ -1733,7 +1718,7 @@ msgstr "ยืนยัน"
 msgid "Verify email address"
 msgstr "ยืนยันที่อยู่อีเมล"
 
-#: src/routes/_authenticated/app/$appId.tsx:380
+#: src/routes/_authenticated/app/$appId.tsx:379
 msgid "Version"
 msgstr "เวอร์ชัน"
 
@@ -1742,15 +1727,15 @@ msgstr "เวอร์ชัน"
 msgid "Version {0}"
 msgstr "เวอร์ชัน {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:302
 msgid "Version changed"
 msgstr "เปลี่ยนเวอร์ชันแล้ว"
 
-#: src/routes/_authenticated/app/$appId.tsx:399
-msgid "Version Management"
+#: src/routes/_authenticated/app/$appId.tsx:398
+msgid "Version management"
 msgstr "การจัดการเวอร์ชัน"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:66
+#: ../../../lib/web/src/components/attachment-gallery.tsx:74
 msgid "Video thumbnail"
 msgstr "ภาพย่อวิดีโอ"
 
@@ -1787,14 +1772,10 @@ msgstr "คุณไม่มีสิทธิ์เข้าถึงส่ว
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "บัญชีของคุณถูกย้ายมาที่นี่จาก {source} จนกว่าคุณจะลบออกที่นั่น ข้อความและการแจ้งเตือนอาจไปถึงทั้งสองเซิร์ฟเวอร์ เนื้อหาบางส่วนของคุณยังคงให้บริการจากเซิร์ฟเวอร์เดิม และผู้ติดตามอาจต้องใช้เวลาสักครู่เพื่อพบคุณที่นี่"
 
-#: src/routes/_authenticated/app/$appId.tsx:420
-msgid "Your personal version override"
-msgstr "การแทนที่เวอร์ชันส่วนตัวของคุณ"
-
 #: src/features/routing/routing-table.tsx:82
 msgid "Your preference"
 msgstr "การตั้งค่าของคุณ"
 
-#: src/routes/_authenticated/app/$appId.tsx:419
-msgid "Your Version"
+#: src/routes/_authenticated/app/$appId.tsx:417
+msgid "Your version"
 msgstr "เวอร์ชันของคุณ"

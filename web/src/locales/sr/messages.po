@@ -13,6 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. js-lingui-explicit-id
+#: ../../../lib/web/src/lib/error-normalizer.ts:204
+msgid "Please check your internet connection and try again."
+msgstr "Проверите интернет везу и покушајте поново."
+
 #. placeholder {0}: app.name
 #: src/features/routing/routing-table.tsx:23
 msgid "{0} (development)"
@@ -31,11 +36,11 @@ msgstr "{0} ажурирано, {failed} није успело"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} је инсталиран."
 
-#: src/routes/_authenticated/app/$appId.tsx:371
+#: src/routes/_authenticated/app/$appId.tsx:370
 msgid "{track} (default, version {version})"
 msgstr "{track} (подразумевано, верзија {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:372
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (version {version})"
 msgstr "{track} (верзија {version})"
 
@@ -104,7 +109,7 @@ msgstr "Додајте налог да примате обавештења и к
 msgid "Add new account"
 msgstr "Додај нови налог"
 
-#: ../../../lib/web/src/components/post-tags.tsx:133
+#: ../../../lib/web/src/components/post-tags.tsx:137
 msgid "Add tag..."
 msgstr "Додај ознаку..."
 
@@ -163,10 +168,6 @@ msgstr "Акције апликације"
 msgid "App information"
 msgstr "Информације о апликацији"
 
-#: src/routes/_authenticated/app/$appId.tsx:191
-msgid "App information and configuration"
-msgstr "Информације и конфигурација апликације"
-
 #: src/features/apps/index.tsx:129
 msgid "App installed"
 msgstr "Апликација инсталирана"
@@ -180,7 +181,7 @@ msgstr "Апликација је успешно инсталирана"
 msgid "App not found"
 msgstr "Апликација није пронађена"
 
-#: src/routes/_authenticated/app/$appId.tsx:194
+#: src/routes/_authenticated/app/$appId.tsx:193
 msgid "Application ID"
 msgstr "ID апликације"
 
@@ -236,8 +237,8 @@ msgstr "Назад на апликације"
 msgid "Back to home"
 msgstr "Назад на почетну"
 
-#: ../../../lib/web/src/components/post-tags.tsx:176
-#: ../../../lib/web/src/components/post-tags.tsx:188
+#: ../../../lib/web/src/components/post-tags.tsx:180
+#: ../../../lib/web/src/components/post-tags.tsx:192
 msgid "Boost interest"
 msgstr "Појачај интересовање"
 
@@ -255,7 +256,7 @@ msgstr "Појачај интересовање"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:553
+#: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Откажи"
 
@@ -442,8 +443,8 @@ msgstr "Поновна потврда идентитета није могла �
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Није било могуће извршити проверу са тим налогом. Покушајте поново."
 
-#: src/routes/_authenticated/app/$appId.tsx:204
-msgid "Current Version"
+#: src/routes/_authenticated/app/$appId.tsx:203
+msgid "Current version"
 msgstr "Тренутна верзија"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:260
@@ -481,24 +482,24 @@ msgstr "Подразумевано"
 msgid "Default AI account"
 msgstr "Подразумевани AI налог"
 
-#: src/routes/_authenticated/app/$appId.tsx:429
+#: src/routes/_authenticated/app/$appId.tsx:426
 msgid "Default for all users"
 msgstr "Подразумевано за све кориснике"
 
-#: src/routes/_authenticated/app/$appId.tsx:428
+#: src/routes/_authenticated/app/$appId.tsx:425
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Подразумевано за све кориснике (верзија {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:325
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Default for all users updated"
 msgstr "Подразумевано за све кориснике ажурирано"
 
-#: src/routes/_authenticated/app/$appId.tsx:412
+#: src/routes/_authenticated/app/$appId.tsx:410
 msgid "Default track"
 msgstr "Подразумевани Track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:411
+#: src/routes/_authenticated/app/$appId.tsx:409
 msgid "Default track (version {0})"
 msgstr "Подразумевани Track (верзија {0})"
 
@@ -567,8 +568,8 @@ msgstr "Уреди {label}"
 msgid "Email code"
 msgstr "Код е-поште"
 
-#: src/routes/_authenticated/app/$appId.tsx:221
-msgid "Enabled Services"
+#: src/routes/_authenticated/app/$appId.tsx:220
+msgid "Enabled services"
 msgstr "Омогућене услуге"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:299
@@ -606,7 +607,7 @@ msgstr "Додавање налога није успело"
 msgid "Failed to clean up apps"
 msgstr "Чишћење апликација није успело"
 
-#: src/routes/_authenticated/app/$appId.tsx:475
+#: src/routes/_authenticated/app/$appId.tsx:472
 msgid "Failed to grant permission"
 msgstr "Додељивање дозволе није успело"
 
@@ -614,7 +615,7 @@ msgstr "Додељивање дозволе није успело"
 msgid "Failed to remove account"
 msgstr "Уклањање налога није успело"
 
-#: src/routes/_authenticated/app/$appId.tsx:457
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Failed to revoke permission"
 msgstr "Опозивање дозволе није успело"
 
@@ -630,12 +631,12 @@ msgstr "Ажурирање апликација није успело"
 msgid "Failed to update category"
 msgstr "Ажурирање категорије није успело"
 
-#: src/routes/_authenticated/app/$appId.tsx:326
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Failed to update default"
 msgstr "Ажурирање подразумеване вредности није успело"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:304
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Failed to update preference"
 msgstr "Ажурирање поставке није успело"
 
@@ -647,7 +648,7 @@ msgstr "Ажурирање системске подразумеване вре�
 msgid "File:"
 msgstr "Датотека:"
 
-#: src/routes/_authenticated/app/$appId.tsx:199
+#: src/routes/_authenticated/app/$appId.tsx:198
 msgid "Fingerprint"
 msgstr "Отисак прста"
 
@@ -720,19 +721,15 @@ msgstr "Иди на страницу {pageNumber}"
 msgid "Go to previous page"
 msgstr "Иди на претходну страницу"
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:514
 msgid "Grant"
 msgstr "Додели"
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:519
 msgid "Grant permission"
 msgstr "Додели дозволу"
 
-#: src/routes/_authenticated/app/$appId.tsx:577
-msgid "Grant permissions to allow this app to access system features"
-msgstr "Додели дозволе да омогућите овој апликацији приступ системским функцијама"
-
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:470
 msgid "Granting permission..."
 msgstr "Додељивање дозволе..."
 
@@ -763,8 +760,8 @@ msgstr "Почетна"
 msgid "Hot"
 msgstr "Популарно"
 
-#: src/routes/_authenticated/app/$appId.tsx:229
-msgid "HTTP Paths"
+#: src/routes/_authenticated/app/$appId.tsx:228
+msgid "HTTP paths"
 msgstr "HTTP путање"
 
 #: src/routes/_authenticated/app/$appId.tsx:190
@@ -892,7 +889,7 @@ msgstr "Успешно одјављен"
 msgid "Logging out…"
 msgstr "Одјављивање…"
 
-#: src/routes/_authenticated/app/$appId.tsx:511
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "Manage capabilities granted to this application"
 msgstr "Управљајте могућностима додељеним овој апликацији"
 
@@ -989,11 +986,11 @@ msgstr "Нема одговарајућих апликација"
 msgid "No paths configured."
 msgstr "Нема конфигурисаних путања."
 
-#: src/routes/_authenticated/app/$appId.tsx:576
+#: src/routes/_authenticated/app/$appId.tsx:573
 msgid "No permissions granted"
 msgstr "Нема додељених дозвола"
 
-#: src/routes/_authenticated/app/$appId.tsx:511
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "No permissions granted to this app"
 msgstr "Нема дозвола додељених овој апликацији"
 
@@ -1052,7 +1049,7 @@ msgstr "Није пронађено"
 msgid "Not set"
 msgstr "Није постављено"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:345
 msgid "Not versioned"
 msgstr "Без верзионисања"
 
@@ -1130,21 +1127,20 @@ msgstr "Усмеравање путање"
 msgid "Paths"
 msgstr "Путање"
 
-#: src/routes/_authenticated/app/$appId.tsx:474
+#: src/routes/_authenticated/app/$appId.tsx:471
 msgid "Permission granted"
 msgstr "Дозвола додељена"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:452
 msgid "Permission revoked"
 msgstr "Дозвола одузета"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:506
 msgid "Permissions"
 msgstr "Дозволе"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
-#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "Проверите интернет везу и покушајте поново."
 
@@ -1164,8 +1160,8 @@ msgstr "Сачекајте тренутак и покушајте поново."
 msgid "Preference updated"
 msgstr "Поставка ажурирана"
 
-#: src/routes/_authenticated/app/$appId.tsx:419
-msgid "Preferred Version"
+#: src/routes/_authenticated/app/$appId.tsx:417
+msgid "Preferred version"
 msgstr "Жељена верзија"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
@@ -1183,8 +1179,8 @@ msgstr "Приватност"
 msgid "Profile"
 msgstr "Профил"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
-msgid "Provided Classes"
+#: src/routes/_authenticated/app/$appId.tsx:212
+msgid "Provided classes"
 msgstr "Достављене класе"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:117
@@ -1200,7 +1196,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Поново региструјте своје приступне кључеве на овом серверу"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
-#: ../../../lib/web/src/components/search-entity-page.tsx:240
+#: ../../../lib/web/src/components/search-entity-page.tsx:242
 #: src/features/apps/index.tsx:446
 msgid "Recommended"
 msgstr "Препоручено"
@@ -1209,8 +1205,8 @@ msgstr "Препоручено"
 msgid "Redirecting to login."
 msgstr "Преусмеравање на пријаву."
 
-#: ../../../lib/web/src/components/post-tags.tsx:196
-#: ../../../lib/web/src/components/post-tags.tsx:208
+#: ../../../lib/web/src/components/post-tags.tsx:200
+#: ../../../lib/web/src/components/post-tags.tsx:212
 msgid "Reduce interest"
 msgstr "Смањи интересовање"
 
@@ -1236,8 +1232,8 @@ msgstr "Уклони правило приступа"
 msgid "Remove access?"
 msgstr "Уклонити приступ?"
 
-#: ../../../lib/web/src/components/post-tags.tsx:216
-#: ../../../lib/web/src/components/post-tags.tsx:228
+#: ../../../lib/web/src/components/post-tags.tsx:220
+#: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "Уклони интересовање"
 
@@ -1260,20 +1256,20 @@ msgstr "Ресетуј"
 msgid "Reset all settings to default values"
 msgstr "Ресетуј сва подешавања на подразумеване вредности"
 
-#: src/routes/_authenticated/app/$appId.tsx:630
-#: src/routes/_authenticated/app/$appId.tsx:633
+#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:629
 msgid "Revoke"
 msgstr "Опозови"
 
-#: src/routes/_authenticated/app/$appId.tsx:640
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission"
 msgstr "Опозови дозволу"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:634
 msgid "Revoke permission?"
 msgstr "Опозвати дозволу?"
 
-#: src/routes/_authenticated/app/$appId.tsx:454
+#: src/routes/_authenticated/app/$appId.tsx:451
 msgid "Revoking permission..."
 msgstr "Опозивање дозволе..."
 
@@ -1296,8 +1292,8 @@ msgstr "Сачувај"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:302
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Saving..."
 msgstr "Чување..."
 
@@ -1334,12 +1330,12 @@ msgid "Search..."
 msgstr "Претражи..."
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
-#: ../../../lib/web/src/components/search-entity-page.tsx:198
+#: ../../../lib/web/src/components/search-entity-page.tsx:200
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "Претраживање..."
 
-#: src/routes/_authenticated/app/$appId.tsx:524
+#: src/routes/_authenticated/app/$appId.tsx:521
 msgid "Select a capability to grant to {appName}."
 msgstr "Изаберите способност за доделу {appName}."
 
@@ -1374,10 +1370,6 @@ msgstr "Изабери смер сајта"
 #: ../../../lib/web/src/components/config-drawer.tsx:202
 msgid "Select theme preference"
 msgstr "Изабери поставке теме"
-
-#: src/routes/_authenticated/app/$appId.tsx:400
-msgid "Select which version of this app to use"
-msgstr "Изабери коју верзију ове апликације користити"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:98
 msgid "Send again"
@@ -1485,11 +1477,8 @@ msgid "System"
 msgstr "Систем"
 
 #: src/features/routing/routing-table.tsx:79
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "System default"
-msgstr "Подразумевано системски"
-
-#: src/routes/_authenticated/app/$appId.tsx:404
-msgid "System Default"
 msgstr "Подразумевано системски"
 
 #: src/features/routing/use-routing-data.ts:51
@@ -1500,8 +1489,8 @@ msgstr "Подразумевана системска вредност ажур�
 msgid "Tag"
 msgstr "Ознака"
 
-#: ../../../lib/web/src/components/post-tags.tsx:100
-#: ../../../lib/web/src/components/post-tags.tsx:111
+#: ../../../lib/web/src/components/post-tags.tsx:101
+#: ../../../lib/web/src/components/post-tags.tsx:115
 msgid "Tags"
 msgstr "Ознаке"
 
@@ -1509,8 +1498,8 @@ msgstr "Ознаке"
 msgid "Teams/Apps"
 msgstr "Тимови/Апликације"
 
-#: src/routes/_authenticated/app/$appId.tsx:210
-msgid "Technical Capabilities"
+#: src/routes/_authenticated/app/$appId.tsx:209
+msgid "Technical capabilities"
 msgstr "Техничке могућности"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
@@ -1534,10 +1523,6 @@ msgstr "Тражена апликација није пронађена."
 msgid "The requested content could not be found."
 msgstr "Тражени садржај није пронађен."
 
-#: src/routes/_authenticated/app/$appId.tsx:404
-msgid "The version used by users who haven't made a choice"
-msgstr "Верзија коју користе корисници који нису направили избор"
-
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "Тема"
@@ -1546,7 +1531,7 @@ msgstr "Тема"
 msgid "Theme Settings"
 msgstr "Поставке теме"
 
-#: src/routes/_authenticated/app/$appId.tsx:347
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "This app does not have version management"
 msgstr "Ова апликација нема управљање верзијама"
 
@@ -1555,7 +1540,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Ова апликација је инсталирана директно од издавача и није проверена. Може бити малвер."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:639
+#: src/routes/_authenticated/app/$appId.tsx:635
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Ово ће опозвати „{0}“ дозволу од {appName}. Апликација може престати исправно да ради."
 
@@ -1603,7 +1588,7 @@ msgid "Top"
 msgstr "Врх"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:366
+#: src/routes/_authenticated/app/$appId.tsx:365
 msgid "Track"
 msgstr "Track"
 
@@ -1612,7 +1597,7 @@ msgid "Travelling"
 msgstr "Путовање"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:190
-#: ../../../lib/web/src/components/search-entity-page.tsx:214
+#: ../../../lib/web/src/components/search-entity-page.tsx:216
 msgid "Try adjusting your search terms"
 msgstr "Покушај прилагодити речи за претрагу"
 
@@ -1733,7 +1718,7 @@ msgstr "Верификуј"
 msgid "Verify email address"
 msgstr "Верификуј адресу е-поште"
 
-#: src/routes/_authenticated/app/$appId.tsx:380
+#: src/routes/_authenticated/app/$appId.tsx:379
 msgid "Version"
 msgstr "Верзија"
 
@@ -1742,15 +1727,15 @@ msgstr "Верзија"
 msgid "Version {0}"
 msgstr "Верзија {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:302
 msgid "Version changed"
 msgstr "Верзија промењена"
 
-#: src/routes/_authenticated/app/$appId.tsx:399
-msgid "Version Management"
+#: src/routes/_authenticated/app/$appId.tsx:398
+msgid "Version management"
 msgstr "Управљање верзијама"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:66
+#: ../../../lib/web/src/components/attachment-gallery.tsx:74
 msgid "Video thumbnail"
 msgstr "Сличица видеа"
 
@@ -1787,14 +1772,10 @@ msgstr "Немате приступ овом одељку."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ваш налог је премештен овде са {source}. Све док га тамо не обришете, поруке и обавештења могу стизати на оба сервера, неки ваш садржај ће и даље бити сервиран са старог сервера, а пратиоцима може требати неколико минута да вас пронађу овде."
 
-#: src/routes/_authenticated/app/$appId.tsx:420
-msgid "Your personal version override"
-msgstr "Твоје лично заобилажење верзије"
-
 #: src/features/routing/routing-table.tsx:82
 msgid "Your preference"
 msgstr "Твоје предностви"
 
-#: src/routes/_authenticated/app/$appId.tsx:419
-msgid "Your Version"
+#: src/routes/_authenticated/app/$appId.tsx:417
+msgid "Your version"
 msgstr "Твоја верзија"

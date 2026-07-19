@@ -188,7 +188,6 @@ function DetailsTab({ app }: { app: AppInfo }) {
   return (
     <Section
       title={t`Identity`}
-      description={t`App information and configuration`}
     >
       <div className="divide-y-0">
         <FieldRow label={t`Application ID`}>
@@ -201,16 +200,16 @@ function DetailsTab({ app }: { app: AppInfo }) {
           </FieldRow>
         )}
 
-        <FieldRow label={t`Current Version`}>
+        <FieldRow label={t`Current version`}>
           <DataChip value={app.latest} />
         </FieldRow>
 
         {(app.classes?.length || app.services?.length || app.paths?.length) && (
           <div className='mt-6 border-t pt-6 space-y-4'>
-            <h4 className='text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4'><Trans>Technical Capabilities</Trans></h4>
+            <h4 className='text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4'><Trans>Technical capabilities</Trans></h4>
             
             {app.classes && app.classes.length > 0 && (
-              <FieldRow label={t`Provided Classes`}>
+              <FieldRow label={t`Provided classes`}>
                 <div className="flex flex-wrap gap-2">
                   {app.classes.map(c => <DataChip key={c} value={c} />)}
                 </div>
@@ -218,7 +217,7 @@ function DetailsTab({ app }: { app: AppInfo }) {
             )}
             
             {app.services && app.services.length > 0 && (
-              <FieldRow label={t`Enabled Services`}>
+              <FieldRow label={t`Enabled services`}>
                 <div className="flex flex-wrap gap-2">
                   {app.services.map(s => <DataChip key={s} value={s} />)}
                 </div>
@@ -226,7 +225,7 @@ function DetailsTab({ app }: { app: AppInfo }) {
             )}
 
             {app.paths && app.paths.length > 0 && (
-              <FieldRow label={t`HTTP Paths`}>
+              <FieldRow label={t`HTTP paths`}>
                 <div className="flex flex-wrap gap-2">
                   {app.paths.map((p) => <DataChip key={p} value={`/${p}`} />)}
                 </div>
@@ -396,12 +395,11 @@ function VersionsTab({ appId }: { appId: string }) {
   return (
     <div className="space-y-6">
       <Section 
-        title={t`Version Management`} 
-        description={t`Select which version of this app to use`}
+        title={t`Version management`}
       >
         <div className="divide-y-0">
           {isAdmin && (
-            <FieldRow label={t`System Default`} description={t`The version used by users who haven't made a choice`}>
+            <FieldRow label={t`System default`}>
               <div className="w-full max-w-sm">
                 {renderVersionSelect(
                   systemValue,
@@ -416,8 +414,7 @@ function VersionsTab({ appId }: { appId: string }) {
           )}
 
           <FieldRow
-            label={isAdmin ? t`Your Version` : t`Preferred Version`}
-            description={t`Your personal version override`}
+            label={isAdmin ? t`Your version` : t`Preferred version`}
           >
             <div className="w-full max-w-sm">
               {renderVersionSelect(
@@ -574,7 +571,6 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
             <EmptyState
               icon={Shield}
               title={t`No permissions granted`}
-              description={t`Grant permissions to allow this app to access system features`}
             />
           </div>
         )}

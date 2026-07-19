@@ -13,6 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. js-lingui-explicit-id
+#: ../../../lib/web/src/lib/error-normalizer.ts:204
+msgid "Please check your internet connection and try again."
+msgstr "សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក រួចព្យាយាមម្តងទៀត។"
+
 #. placeholder {0}: app.name
 #: src/features/routing/routing-table.tsx:23
 msgid "{0} (development)"
@@ -31,11 +36,11 @@ msgstr "បានធ្វើបច្ចុប្បន្នភាព {0}, ប
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ត្រូវបានដំឡើង។"
 
-#: src/routes/_authenticated/app/$appId.tsx:371
+#: src/routes/_authenticated/app/$appId.tsx:370
 msgid "{track} (default, version {version})"
 msgstr "{track} (default, version {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:372
+#: src/routes/_authenticated/app/$appId.tsx:371
 msgid "{track} (version {version})"
 msgstr "{track} (version {version})"
 
@@ -104,7 +109,7 @@ msgstr "បន្ថែមគណនីដើម្បីទទួលបានក
 msgid "Add new account"
 msgstr "បន្ថែមគណនីថ្មី"
 
-#: ../../../lib/web/src/components/post-tags.tsx:133
+#: ../../../lib/web/src/components/post-tags.tsx:137
 msgid "Add tag..."
 msgstr "បន្ថែមស្លាក..."
 
@@ -163,10 +168,6 @@ msgstr "សកម្មភាពកម្មវិធី"
 msgid "App information"
 msgstr "ព័ត៌មានកម្មវិធី"
 
-#: src/routes/_authenticated/app/$appId.tsx:191
-msgid "App information and configuration"
-msgstr "ព័ត៌មាន និងការកំណត់រចនាសម្ព័ន្ធកម្មវិធី"
-
 #: src/features/apps/index.tsx:129
 msgid "App installed"
 msgstr "បានដំឡើងកម្មវិធី"
@@ -180,7 +181,7 @@ msgstr "បានដំឡើងកម្មវិធីដោយជោគជ័
 msgid "App not found"
 msgstr "រកមិនឃើញកម្មវិធី"
 
-#: src/routes/_authenticated/app/$appId.tsx:194
+#: src/routes/_authenticated/app/$appId.tsx:193
 msgid "Application ID"
 msgstr "លេខសម្គាល់កម្មវិធី"
 
@@ -236,8 +237,8 @@ msgstr "ត្រឡប់ទៅកម្មវិធី"
 msgid "Back to home"
 msgstr "ត្រឡប់ទៅទំព័រដើម"
 
-#: ../../../lib/web/src/components/post-tags.tsx:176
-#: ../../../lib/web/src/components/post-tags.tsx:188
+#: ../../../lib/web/src/components/post-tags.tsx:180
+#: ../../../lib/web/src/components/post-tags.tsx:192
 msgid "Boost interest"
 msgstr "បង្កើនចំណាប់អារម្មណ៍"
 
@@ -255,7 +256,7 @@ msgstr "បង្កើនចំណាប់អារម្មណ៍"
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:553
+#: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "បោះបង់"
 
@@ -442,8 +443,8 @@ msgstr "មិនអាចចាប់ផ្ដើមការផ្ទៀងផ
 msgid "Couldn't verify with that account. Please try again."
 msgstr "មិនអាចផ្ទៀងផ្ទាត់ជាមួយគណនីនោះបានទេ។ សូមព្យាយាមម្តងទៀត។"
 
-#: src/routes/_authenticated/app/$appId.tsx:204
-msgid "Current Version"
+#: src/routes/_authenticated/app/$appId.tsx:203
+msgid "Current version"
 msgstr "កំណែបច្ចុប្បន្ន"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:260
@@ -481,24 +482,24 @@ msgstr "លំនាំដើម"
 msgid "Default AI account"
 msgstr "គណនី AI លំនាំដើម"
 
-#: src/routes/_authenticated/app/$appId.tsx:429
+#: src/routes/_authenticated/app/$appId.tsx:426
 msgid "Default for all users"
 msgstr "លំនាំដើមសម្រាប់អ្នកប្រើប្រាស់ទាំងអស់"
 
-#: src/routes/_authenticated/app/$appId.tsx:428
+#: src/routes/_authenticated/app/$appId.tsx:425
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "លំនាំដើមសម្រាប់អ្នកប្រើប្រាស់ទាំងអស់ (កំណែ {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:325
+#: src/routes/_authenticated/app/$appId.tsx:324
 msgid "Default for all users updated"
 msgstr "បានធ្វើបច្ចុប្បន្នភាពលំនាំដើមសម្រាប់អ្នកប្រើប្រាស់ទាំងអស់"
 
-#: src/routes/_authenticated/app/$appId.tsx:412
+#: src/routes/_authenticated/app/$appId.tsx:410
 msgid "Default track"
 msgstr "ផ្លូវលំនាំដើម"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:411
+#: src/routes/_authenticated/app/$appId.tsx:409
 msgid "Default track (version {0})"
 msgstr "ផ្លូវលំនាំដើម (កំណែ {0})"
 
@@ -567,8 +568,8 @@ msgstr "កែ {label}"
 msgid "Email code"
 msgstr "កូដអ៊ីមែល"
 
-#: src/routes/_authenticated/app/$appId.tsx:221
-msgid "Enabled Services"
+#: src/routes/_authenticated/app/$appId.tsx:220
+msgid "Enabled services"
 msgstr "សេវាកម្មដែលបានបើក"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:299
@@ -606,7 +607,7 @@ msgstr "បរាជ័យក្នុងការបន្ថែមគណនី
 msgid "Failed to clean up apps"
 msgstr "មិនអាចសម្អាតកម្មវិធីបានទេ"
 
-#: src/routes/_authenticated/app/$appId.tsx:475
+#: src/routes/_authenticated/app/$appId.tsx:472
 msgid "Failed to grant permission"
 msgstr "បរាជ័យក្នុងការផ្ដល់ការអនុញ្ញាត"
 
@@ -614,7 +615,7 @@ msgstr "បរាជ័យក្នុងការផ្ដល់ការអន
 msgid "Failed to remove account"
 msgstr "បរាជ័យក្នុងការដកគណនី"
 
-#: src/routes/_authenticated/app/$appId.tsx:457
+#: src/routes/_authenticated/app/$appId.tsx:454
 msgid "Failed to revoke permission"
 msgstr "បរាជ័យក្នុងការដកហូតការអនុញ្ញាត"
 
@@ -630,12 +631,12 @@ msgstr "មិនអាចធ្វើបច្ចុប្បន្នភាព
 msgid "Failed to update category"
 msgstr "បរាជ័យក្នុងការធ្វើបច្ចុប្បន្នភាពប្រភេទ"
 
-#: src/routes/_authenticated/app/$appId.tsx:326
+#: src/routes/_authenticated/app/$appId.tsx:325
 msgid "Failed to update default"
 msgstr "បរាជ័យក្នុងការធ្វើបច្ចុប្បន្នភាពលំនាំដើម"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:304
+#: src/routes/_authenticated/app/$appId.tsx:303
 msgid "Failed to update preference"
 msgstr "បរាជ័យក្នុងការធ្វើបច្ចុប្បន្នភាពចំណូលចិត្ត"
 
@@ -647,7 +648,7 @@ msgstr "បរាជ័យក្នុងការធ្វើបច្ចុប
 msgid "File:"
 msgstr "ឯកសារ៖"
 
-#: src/routes/_authenticated/app/$appId.tsx:199
+#: src/routes/_authenticated/app/$appId.tsx:198
 msgid "Fingerprint"
 msgstr "ស្នាមម្រាមដៃ"
 
@@ -720,19 +721,15 @@ msgstr "ទៅទំព័រ {pageNumber}"
 msgid "Go to previous page"
 msgstr "ទៅទំព័រមុន"
 
-#: src/routes/_authenticated/app/$appId.tsx:517
+#: src/routes/_authenticated/app/$appId.tsx:514
 msgid "Grant"
 msgstr "ផ្ដល់"
 
-#: src/routes/_authenticated/app/$appId.tsx:522
+#: src/routes/_authenticated/app/$appId.tsx:519
 msgid "Grant permission"
 msgstr "ផ្ដល់ការអនុញ្ញាត"
 
-#: src/routes/_authenticated/app/$appId.tsx:577
-msgid "Grant permissions to allow this app to access system features"
-msgstr "ផ្ដល់ការអនុញ្ញាតដើម្បីអនុញ្ញាតឲ្យកម្មវិធីនេះចូលដំណើរការមុខងារប្រព័ន្ធ"
-
-#: src/routes/_authenticated/app/$appId.tsx:473
+#: src/routes/_authenticated/app/$appId.tsx:470
 msgid "Granting permission..."
 msgstr "កំពុងផ្តល់ការអនុញ្ញាត..."
 
@@ -763,8 +760,8 @@ msgstr "ដើម"
 msgid "Hot"
 msgstr "ក្ដៅ"
 
-#: src/routes/_authenticated/app/$appId.tsx:229
-msgid "HTTP Paths"
+#: src/routes/_authenticated/app/$appId.tsx:228
+msgid "HTTP paths"
 msgstr "ផ្លូវ HTTP"
 
 #: src/routes/_authenticated/app/$appId.tsx:190
@@ -892,7 +889,7 @@ msgstr "បានចាកចេញដោយជោគជ័យ"
 msgid "Logging out…"
 msgstr "កំពុងចាកចេញ…"
 
-#: src/routes/_authenticated/app/$appId.tsx:511
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "Manage capabilities granted to this application"
 msgstr "គ្រប់គ្រងសមត្ថភាពដែលបានផ្ដល់ទៅឲ្យកម្មវិធីនេះ"
 
@@ -989,11 +986,11 @@ msgstr "មិនមានកម្មវិធីដែលត្រូវនឹ
 msgid "No paths configured."
 msgstr "មិនមានផ្លូវដែលបានកំណត់រចនាសម្ព័ន្ធ។"
 
-#: src/routes/_authenticated/app/$appId.tsx:576
+#: src/routes/_authenticated/app/$appId.tsx:573
 msgid "No permissions granted"
 msgstr "មិនមានសិទ្ធិត្រូវបានផ្តល់"
 
-#: src/routes/_authenticated/app/$appId.tsx:511
+#: src/routes/_authenticated/app/$appId.tsx:508
 msgid "No permissions granted to this app"
 msgstr "មិនមានសិទ្ធិត្រូវបានផ្តល់ឱ្យកម្មវិធីនេះ"
 
@@ -1052,7 +1049,7 @@ msgstr "រកមិនឃើញ"
 msgid "Not set"
 msgstr "មិនបានកំណត់"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:345
 msgid "Not versioned"
 msgstr "មិនបានបង្កើតកំណែ"
 
@@ -1130,21 +1127,20 @@ msgstr "ការកំណត់ផ្លូវ"
 msgid "Paths"
 msgstr "ផ្លូវ"
 
-#: src/routes/_authenticated/app/$appId.tsx:474
+#: src/routes/_authenticated/app/$appId.tsx:471
 msgid "Permission granted"
 msgstr "បានផ្តល់សិទ្ធិ"
 
-#: src/routes/_authenticated/app/$appId.tsx:455
+#: src/routes/_authenticated/app/$appId.tsx:452
 msgid "Permission revoked"
 msgstr "បានដកសិទ្ធិ"
 
-#: src/routes/_authenticated/app/$appId.tsx:509
+#: src/routes/_authenticated/app/$appId.tsx:506
 msgid "Permissions"
 msgstr "សិទ្ធិ"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
-#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក រួចព្យាយាមម្តងទៀត។"
 
@@ -1164,8 +1160,8 @@ msgstr "សូមរង់ចាំបន្តិច ហើយព្យាយ�
 msgid "Preference updated"
 msgstr "បានធ្វើបច្ចុប្បន្នភាពចំណូលចិត្ត"
 
-#: src/routes/_authenticated/app/$appId.tsx:419
-msgid "Preferred Version"
+#: src/routes/_authenticated/app/$appId.tsx:417
+msgid "Preferred version"
 msgstr "កំណែដែលពេញចិត្ត"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
@@ -1183,8 +1179,8 @@ msgstr "ឯកជនភាព"
 msgid "Profile"
 msgstr "ប្រវត្តិរូប"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
-msgid "Provided Classes"
+#: src/routes/_authenticated/app/$appId.tsx:212
+msgid "Provided classes"
 msgstr "ថ្នាក់ដែលបានផ្តល់"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:117
@@ -1200,7 +1196,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "ចុះឈ្មោះកូនសោចូលរបស់អ្នកឡើងវិញនៅលើម៉ាស៊ីនមេនេះ"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
-#: ../../../lib/web/src/components/search-entity-page.tsx:240
+#: ../../../lib/web/src/components/search-entity-page.tsx:242
 #: src/features/apps/index.tsx:446
 msgid "Recommended"
 msgstr "បានណែនាំ"
@@ -1209,8 +1205,8 @@ msgstr "បានណែនាំ"
 msgid "Redirecting to login."
 msgstr "កំពុងបញ្ជូនបន្តទៅការចូល។"
 
-#: ../../../lib/web/src/components/post-tags.tsx:196
-#: ../../../lib/web/src/components/post-tags.tsx:208
+#: ../../../lib/web/src/components/post-tags.tsx:200
+#: ../../../lib/web/src/components/post-tags.tsx:212
 msgid "Reduce interest"
 msgstr "កាត់បន្ថយចំណាប់អារម្មណ៍"
 
@@ -1236,8 +1232,8 @@ msgstr "យកច្បាប់ចូលប្រើចេញ"
 msgid "Remove access?"
 msgstr "យកសិទ្ធិចូលប្រើចេញ?"
 
-#: ../../../lib/web/src/components/post-tags.tsx:216
-#: ../../../lib/web/src/components/post-tags.tsx:228
+#: ../../../lib/web/src/components/post-tags.tsx:220
+#: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "យកចំណាប់អារម្មណ៍ចេញ"
 
@@ -1260,20 +1256,20 @@ msgstr "កំណត់ឡើងវិញ"
 msgid "Reset all settings to default values"
 msgstr "កំណត់ការកំណត់ទាំងអស់ឡើងវិញទៅតម្លៃលំនាំដើម"
 
-#: src/routes/_authenticated/app/$appId.tsx:630
-#: src/routes/_authenticated/app/$appId.tsx:633
+#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:629
 msgid "Revoke"
 msgstr "ដកសិទ្ធិ"
 
-#: src/routes/_authenticated/app/$appId.tsx:640
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission"
 msgstr "ដកសិទ្ធិ"
 
-#: src/routes/_authenticated/app/$appId.tsx:638
+#: src/routes/_authenticated/app/$appId.tsx:634
 msgid "Revoke permission?"
 msgstr "ដកសិទ្ធិ?"
 
-#: src/routes/_authenticated/app/$appId.tsx:454
+#: src/routes/_authenticated/app/$appId.tsx:451
 msgid "Revoking permission..."
 msgstr "កំពុងដកការអនុញ្ញាត..."
 
@@ -1296,8 +1292,8 @@ msgstr "រក្សាទុក"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:302
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:301
+#: src/routes/_authenticated/app/$appId.tsx:323
 msgid "Saving..."
 msgstr "កំពុងរក្សាទុក..."
 
@@ -1334,12 +1330,12 @@ msgid "Search..."
 msgstr "ស្វែងរក..."
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
-#: ../../../lib/web/src/components/search-entity-page.tsx:198
+#: ../../../lib/web/src/components/search-entity-page.tsx:200
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "កំពុងស្វែងរក..."
 
-#: src/routes/_authenticated/app/$appId.tsx:524
+#: src/routes/_authenticated/app/$appId.tsx:521
 msgid "Select a capability to grant to {appName}."
 msgstr "ជ្រើសរើសសមត្ថភាពដើម្បីផ្តល់ឱ្យ {appName}។"
 
@@ -1374,10 +1370,6 @@ msgstr "ជ្រើសរើសទិសដៅគេហទំព័រ"
 #: ../../../lib/web/src/components/config-drawer.tsx:202
 msgid "Select theme preference"
 msgstr "ជ្រើសរើសចំណូលចិត្តរូបរាង"
-
-#: src/routes/_authenticated/app/$appId.tsx:400
-msgid "Select which version of this app to use"
-msgstr "ជ្រើសរើសកំណែណាមួយនៃកម្មវិធីនេះដែលត្រូវប្រើ"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:98
 msgid "Send again"
@@ -1485,11 +1477,8 @@ msgid "System"
 msgstr "ប្រព័ន្ធ"
 
 #: src/features/routing/routing-table.tsx:79
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "System default"
-msgstr "លំនាំដើមប្រព័ន្ធ"
-
-#: src/routes/_authenticated/app/$appId.tsx:404
-msgid "System Default"
 msgstr "លំនាំដើមប្រព័ន្ធ"
 
 #: src/features/routing/use-routing-data.ts:51
@@ -1500,8 +1489,8 @@ msgstr "បានធ្វើបច្ចុប្បន្នភាពលំន
 msgid "Tag"
 msgstr "ស្លាក"
 
-#: ../../../lib/web/src/components/post-tags.tsx:100
-#: ../../../lib/web/src/components/post-tags.tsx:111
+#: ../../../lib/web/src/components/post-tags.tsx:101
+#: ../../../lib/web/src/components/post-tags.tsx:115
 msgid "Tags"
 msgstr "ស្លាក"
 
@@ -1509,8 +1498,8 @@ msgstr "ស្លាក"
 msgid "Teams/Apps"
 msgstr "ក្រុម/កម្មវិធី"
 
-#: src/routes/_authenticated/app/$appId.tsx:210
-msgid "Technical Capabilities"
+#: src/routes/_authenticated/app/$appId.tsx:209
+msgid "Technical capabilities"
 msgstr "សមត្ថភាពបច្ចេកទេស"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
@@ -1534,10 +1523,6 @@ msgstr "មិនអាចស្វែងរកកម្មវិធីដែល
 msgid "The requested content could not be found."
 msgstr "រកមិនឃើញខ្លឹមសារដែលបានស្នើសុំទេ។"
 
-#: src/routes/_authenticated/app/$appId.tsx:404
-msgid "The version used by users who haven't made a choice"
-msgstr "កំណែដែលប្រើដោយអ្នកប្រើប្រាស់ដែលមិនបានធ្វើជម្រើស"
-
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "រូបរាង"
@@ -1546,7 +1531,7 @@ msgstr "រូបរាង"
 msgid "Theme Settings"
 msgstr "ការកំណត់រូបរាង"
 
-#: src/routes/_authenticated/app/$appId.tsx:347
+#: src/routes/_authenticated/app/$appId.tsx:346
 msgid "This app does not have version management"
 msgstr "កម្មវិធីនេះមិនមានការគ្រប់គ្រងកំណែទេ"
 
@@ -1555,7 +1540,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "កម្មវិធីនេះត្រូវបានដំឡើងដោយផ្ទាល់ពីអ្នកបោះពុម្ពផ្សាយរបស់វា ហើយមិនបានពិនិត្យ។ វាអាចជា malware។"
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:639
+#: src/routes/_authenticated/app/$appId.tsx:635
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "នេះនឹងដកហូតការអនុញ្ញាត \"{0}\" ពី {appName}។ កម្មវិធីអាចឈប់ដំណើរការត្រឹមត្រូវ។"
 
@@ -1603,7 +1588,7 @@ msgid "Top"
 msgstr "កំពូល"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:366
+#: src/routes/_authenticated/app/$appId.tsx:365
 msgid "Track"
 msgstr "Track"
 
@@ -1612,7 +1597,7 @@ msgid "Travelling"
 msgstr "កំពុងធ្វើដំណើរ"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:190
-#: ../../../lib/web/src/components/search-entity-page.tsx:214
+#: ../../../lib/web/src/components/search-entity-page.tsx:216
 msgid "Try adjusting your search terms"
 msgstr "សាកល្បងកែតម្រូវពាក្យស្វែងរករបស់អ្នក"
 
@@ -1733,7 +1718,7 @@ msgstr "ផ្ទៀងផ្ទាត់"
 msgid "Verify email address"
 msgstr "ផ្ទៀងផ្ទាត់អាសយដ្ឋានអ៊ីមែល"
 
-#: src/routes/_authenticated/app/$appId.tsx:380
+#: src/routes/_authenticated/app/$appId.tsx:379
 msgid "Version"
 msgstr "កំណែ"
 
@@ -1742,15 +1727,15 @@ msgstr "កំណែ"
 msgid "Version {0}"
 msgstr "កំណែ {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:302
 msgid "Version changed"
 msgstr "បានផ្លាស់ប្តូរកំណែ"
 
-#: src/routes/_authenticated/app/$appId.tsx:399
-msgid "Version Management"
+#: src/routes/_authenticated/app/$appId.tsx:398
+msgid "Version management"
 msgstr "ការគ្រប់គ្រងកំណែ"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:66
+#: ../../../lib/web/src/components/attachment-gallery.tsx:74
 msgid "Video thumbnail"
 msgstr "រូបភាពតូចវីដេអូ"
 
@@ -1787,14 +1772,10 @@ msgstr "អ្នកមិនមានសិទ្ធិចូលប្រើផ
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "គណនីរបស់អ្នកត្រូវបានផ្លាស់ប្តូរមកទីនេះពី {source}។ រហូតដល់អ្នកលុបវានៅទីនោះ សារ និងការជូនដំណឹងអាចទៅដល់ម៉ាស៊ីនមេទាំងពីរ មាតិកាមួយចំនួនរបស់អ្នកនៅតែត្រូវបានបម្រើពីម៉ាស៊ីនមេចាស់ ហើយអ្នកតាមដានអាចចំណាយពេលប៉ុន្មាននាទីដើម្បីរកអ្នកនៅទីនេះ។"
 
-#: src/routes/_authenticated/app/$appId.tsx:420
-msgid "Your personal version override"
-msgstr "ការបដិសេធកំណែផ្ទាល់ខ្លួនរបស់អ្នក"
-
 #: src/features/routing/routing-table.tsx:82
 msgid "Your preference"
 msgstr "ចំណូលចិត្តរបស់អ្នក"
 
-#: src/routes/_authenticated/app/$appId.tsx:419
-msgid "Your Version"
+#: src/routes/_authenticated/app/$appId.tsx:417
+msgid "Your version"
 msgstr "កំណែរបស់អ្នក"
