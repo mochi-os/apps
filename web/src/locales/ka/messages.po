@@ -36,11 +36,11 @@ msgstr "{0} ფილა დარჩა"
 msgid "{0} v{1} has been installed."
 msgstr "{0} განახლდა, {failed} ჩავარდა"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "{track} (default, version {version})"
 msgstr "{totalDescendants, plural, other {# დამატებითი პასუხი}}"
 
-#: src/routes/_authenticated/app/$appId.tsx:371
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "{track} (version {version})"
 msgstr "{track} (ნაგულისხმევი, ვერსია {version})"
 
@@ -155,7 +155,7 @@ msgid "An unexpected error occurred"
 msgstr "მოხდა მოულოდნელი შეცდომა"
 
 #: src/features/apps/index.tsx:160
-#: src/routes/_authenticated/app/$appId.tsx:97
+#: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "აპი"
 
@@ -176,12 +176,12 @@ msgstr "აპი დაყენებულია"
 msgid "App installed successfully"
 msgstr "აპი წარმატებით დაინსტალდა"
 
-#: src/routes/_authenticated/app/$appId.tsx:126
-#: src/routes/_authenticated/app/$appId.tsx:130
+#: src/routes/_authenticated/app/$appId.tsx:127
+#: src/routes/_authenticated/app/$appId.tsx:131
 msgid "App not found"
 msgstr "აპი ვერ მოიძებნა"
 
-#: src/routes/_authenticated/app/$appId.tsx:193
+#: src/routes/_authenticated/app/$appId.tsx:209
 msgid "Application ID"
 msgstr "აპლიკაციის ID"
 
@@ -225,9 +225,9 @@ msgstr "ხელმისაწვდომი, მაგრამ არ ა�
 msgid "Back"
 msgstr "უკან"
 
-#: src/routes/_authenticated/app/$appId.tsx:105
-#: src/routes/_authenticated/app/$appId.tsx:126
-#: src/routes/_authenticated/app/$appId.tsx:143
+#: src/routes/_authenticated/app/$appId.tsx:106
+#: src/routes/_authenticated/app/$appId.tsx:127
+#: src/routes/_authenticated/app/$appId.tsx:144
 msgid "Back to apps"
 msgstr "უკან აპებში"
 
@@ -252,11 +252,11 @@ msgstr "ინტერესის გაძლიერება"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
-#: src/features/apps/components/install-dialog.tsx:108
+#: src/features/apps/components/install-dialog.tsx:104
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:550
+#: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "გაუქმება"
 
@@ -443,7 +443,7 @@ msgstr "ხელახალი ავთენტიფიკაციის �
 msgid "Couldn't verify with that account. Please try again."
 msgstr "ამ ანგარიშით ვერ მოხერხდა გადამოწმება. გთხოვთ, სცადოთ თავიდან."
 
-#: src/routes/_authenticated/app/$appId.tsx:203
+#: src/routes/_authenticated/app/$appId.tsx:219
 msgid "Current version"
 msgstr "მიმდინარე ვერსია"
 
@@ -473,8 +473,8 @@ msgid "Declared by"
 msgstr "განცხადებულია"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:310
-#: src/features/routing/routing-table.tsx:128
-#: src/features/routing/routing-table.tsx:152
+#: src/features/routing/routing-table.tsx:131
+#: src/features/routing/routing-table.tsx:155
 msgid "Default"
 msgstr "ნაგულისხმევი"
 
@@ -482,24 +482,24 @@ msgstr "ნაგულისხმევი"
 msgid "Default AI account"
 msgstr "ნაგულისხმევი AI ანგარიში"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:442
 msgid "Default for all users"
 msgstr "ნაგულისხმევი ყველა მომხმარებლისთვის"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "ნაგულისხმევი ყველა მომხმარებლისთვის (ვერსია {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:340
 msgid "Default for all users updated"
 msgstr "ნაგულისხმევი ყველა მომხმარებლისთვის განახლდა"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:426
 msgid "Default track"
 msgstr "ნაგულისხმევი Track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:425
 msgid "Default track (version {0})"
 msgstr "ნაგულისხმევი Track (ვერსია {0})"
 
@@ -514,6 +514,10 @@ msgstr "კლებადი"
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Descending"
 msgstr "კლებადობით"
+
+#: src/routes/_authenticated/app/$appId.tsx:150
+msgid "Details"
+msgstr "დეტალები"
 
 #: ../../../lib/web/src/components/layout/right-panel.tsx:148
 msgid "Details Panel"
@@ -568,7 +572,7 @@ msgstr "{label}-ის რედაქტირება"
 msgid "Email code"
 msgstr "ელფოსტის კოდი"
 
-#: src/routes/_authenticated/app/$appId.tsx:220
+#: src/routes/_authenticated/app/$appId.tsx:236
 msgid "Enabled services"
 msgstr "ჩართული სერვისები"
 
@@ -607,7 +611,7 @@ msgstr "ანგარიშის დამატება ვერ მოხ
 msgid "Failed to clean up apps"
 msgstr "აპების გასუფთავება ვერ მოხერხდა"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:488
 msgid "Failed to grant permission"
 msgstr "ნებართვის მინიჭება ვერ მოხერხდა"
 
@@ -615,7 +619,7 @@ msgstr "ნებართვის მინიჭება ვერ მოხ
 msgid "Failed to remove account"
 msgstr "ანგარიშის წაშლა ვერ მოხერხდა"
 
-#: src/routes/_authenticated/app/$appId.tsx:454
+#: src/routes/_authenticated/app/$appId.tsx:470
 msgid "Failed to revoke permission"
 msgstr "ნებართვის გაუქმება ვერ მოხერხდა"
 
@@ -631,12 +635,12 @@ msgstr "აპების განახლება ვერ მოხერ
 msgid "Failed to update category"
 msgstr "კატეგორიის განახლება ვერ მოხერხდა"
 
-#: src/routes/_authenticated/app/$appId.tsx:325
+#: src/routes/_authenticated/app/$appId.tsx:341
 msgid "Failed to update default"
 msgstr "ნაგულისხმევის განახლება ვერ მოხერხდა"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:319
 msgid "Failed to update preference"
 msgstr "პარამეტრის განახლება ვერ მოხერხდა"
 
@@ -648,7 +652,7 @@ msgstr "სისტემის ნაგულისხმევის გა�
 msgid "File:"
 msgstr "ფაილი:"
 
-#: src/routes/_authenticated/app/$appId.tsx:198
+#: src/routes/_authenticated/app/$appId.tsx:214
 msgid "Fingerprint"
 msgstr "ანაბეჭდი"
 
@@ -721,15 +725,15 @@ msgstr "გვერდი {pageNumber}-ზე გადასვლა"
 msgid "Go to previous page"
 msgstr "წინა გვერდზე გადასვლა"
 
-#: src/routes/_authenticated/app/$appId.tsx:514
+#: src/routes/_authenticated/app/$appId.tsx:530
 msgid "Grant"
 msgstr "მინიჭება"
 
-#: src/routes/_authenticated/app/$appId.tsx:519
+#: src/routes/_authenticated/app/$appId.tsx:535
 msgid "Grant permission"
 msgstr "ნებართვის მინიჭება"
 
-#: src/routes/_authenticated/app/$appId.tsx:470
+#: src/routes/_authenticated/app/$appId.tsx:486
 msgid "Granting permission..."
 msgstr "ნებართვის მინიჭება..."
 
@@ -760,11 +764,11 @@ msgstr "მთავარი"
 msgid "Hot"
 msgstr "ცხელი"
 
-#: src/routes/_authenticated/app/$appId.tsx:228
+#: src/routes/_authenticated/app/$appId.tsx:244
 msgid "HTTP paths"
 msgstr "HTTP გზები"
 
-#: src/routes/_authenticated/app/$appId.tsx:190
+#: src/routes/_authenticated/app/$appId.tsx:206
 msgid "Identity"
 msgstr "ვინაობა"
 
@@ -777,7 +781,7 @@ msgid "Inset"
 msgstr "ჩაკიდებული"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
-#: src/features/apps/components/install-dialog.tsx:122
+#: src/features/apps/components/install-dialog.tsx:118
 #: src/features/apps/index.tsx:577
 #: src/features/apps/index.tsx:618
 #: src/features/apps/index.tsx:667
@@ -808,7 +812,7 @@ msgid "Installed apps"
 msgstr "დაყენებული აპლიკაციები"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
-#: src/features/apps/components/install-dialog.tsx:122
+#: src/features/apps/components/install-dialog.tsx:118
 #: src/features/apps/index.tsx:128
 #: src/features/apps/index.tsx:158
 #: src/features/apps/index.tsx:178
@@ -889,7 +893,7 @@ msgstr "წარმატებით გავიდა"
 msgid "Logging out…"
 msgstr "გასვლა…"
 
-#: src/routes/_authenticated/app/$appId.tsx:508
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Manage capabilities granted to this application"
 msgstr "მართეთ ამ აპლიკაციისთვის მინიჭებული შესაძლებლობები"
 
@@ -915,7 +919,7 @@ msgstr "მეტრიკული"
 msgid "Monday"
 msgstr "ორშაბათი"
 
-#: src/features/routing/routing-table.tsx:104
+#: src/features/routing/routing-table.tsx:107
 msgid "Multiple apps declare this resource"
 msgstr "რამდენიმე აპი აცხადებს ამ რესურსს"
 
@@ -986,11 +990,11 @@ msgstr "შესაბამისი აპები არ არის"
 msgid "No paths configured."
 msgstr "ბილიკები არ არის კონფიგურირებული."
 
-#: src/routes/_authenticated/app/$appId.tsx:573
+#: src/routes/_authenticated/app/$appId.tsx:589
 msgid "No permissions granted"
 msgstr "ნებართვები არ არის გაცემული"
 
-#: src/routes/_authenticated/app/$appId.tsx:508
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "No permissions granted to this app"
 msgstr "ამ აპისთვის ნებართვები არ არის გაცემული"
 
@@ -1049,7 +1053,7 @@ msgstr "ვერ მოიძებნა"
 msgid "Not set"
 msgstr "არ არის დაყენებული"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:361
 msgid "Not versioned"
 msgstr "ვერსირებული არ არის"
 
@@ -1070,8 +1074,8 @@ msgstr "უპს! გვერდი ვერ მოიძებნა!"
 msgid "Open account actions"
 msgstr "ანგარიშის მოქმედებების გახსნა"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:182
-#: ../../../lib/web/src/components/layout/nav-group.tsx:187
+#: ../../../lib/web/src/components/layout/nav-group.tsx:202
+#: ../../../lib/web/src/components/layout/nav-group.tsx:207
 msgid "Open actions"
 msgstr "მოქმედებების გახსნა"
 
@@ -1127,15 +1131,16 @@ msgstr "ბილიკის მარშრუტიზაცია"
 msgid "Paths"
 msgstr "ბილიკები"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:487
 msgid "Permission granted"
 msgstr "ნებართვა გაცემულია"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:468
 msgid "Permission revoked"
 msgstr "ნებართვა გაუქმდა"
 
-#: src/routes/_authenticated/app/$appId.tsx:506
+#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Permissions"
 msgstr "ნებართვები"
 
@@ -1160,7 +1165,7 @@ msgstr "გთხოვთ, ცოტა ხნით მოიცადოთ �
 msgid "Preference updated"
 msgstr "უპირატესობა განახლდა"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:433
 msgid "Preferred version"
 msgstr "სასურველი ვერსია"
 
@@ -1179,7 +1184,7 @@ msgstr "კონფიდენციალურობა"
 msgid "Profile"
 msgstr "პროფილი"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:228
 msgid "Provided classes"
 msgstr "მიწოდებული კლასები"
 
@@ -1256,20 +1261,20 @@ msgstr "გადაყენება"
 msgid "Reset all settings to default values"
 msgstr "ყველა პარამეტრის გადაყენება ნაგულისხმევ მნიშვნელობებზე"
 
-#: src/routes/_authenticated/app/$appId.tsx:626
-#: src/routes/_authenticated/app/$appId.tsx:629
+#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:645
 msgid "Revoke"
 msgstr "გაუქმება"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:652
 msgid "Revoke permission"
 msgstr "ნებართვის გაუქმება"
 
-#: src/routes/_authenticated/app/$appId.tsx:634
+#: src/routes/_authenticated/app/$appId.tsx:650
 msgid "Revoke permission?"
 msgstr "ნებართვის გაუქმება?"
 
-#: src/routes/_authenticated/app/$appId.tsx:451
+#: src/routes/_authenticated/app/$appId.tsx:467
 msgid "Revoking permission..."
 msgstr "ნებართვის გაუქმება..."
 
@@ -1292,8 +1297,8 @@ msgstr "შენახვა"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:317
+#: src/routes/_authenticated/app/$appId.tsx:339
 msgid "Saving..."
 msgstr "შენახვა..."
 
@@ -1335,7 +1340,7 @@ msgstr "ძიება..."
 msgid "Searching..."
 msgstr "ძიება..."
 
-#: src/routes/_authenticated/app/$appId.tsx:521
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Select a capability to grant to {appName}."
 msgstr "აირჩიეთ შესაძლებლობა {appName}-სთვის გადასაცემად."
 
@@ -1477,7 +1482,7 @@ msgid "System"
 msgstr "სისტემა"
 
 #: src/features/routing/routing-table.tsx:79
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "System default"
 msgstr "სისტემის ნაგულისხმევი"
 
@@ -1498,7 +1503,7 @@ msgstr "ტეგები"
 msgid "Teams/Apps"
 msgstr "გუნდები/აპები"
 
-#: src/routes/_authenticated/app/$appId.tsx:209
+#: src/routes/_authenticated/app/$appId.tsx:225
 msgid "Technical capabilities"
 msgstr "ტექნიკური შესაძლებლობები"
 
@@ -1515,7 +1520,7 @@ msgstr "ეს კოდი არასწორია ან ვადაგ�
 msgid "The app has been installed successfully."
 msgstr "აპლიკაცია წარმატებით დაინსტალირდა."
 
-#: src/routes/_authenticated/app/$appId.tsx:131
+#: src/routes/_authenticated/app/$appId.tsx:132
 msgid "The requested app could not be found."
 msgstr "მოთხოვნილი აპი ვერ მოიძებნა."
 
@@ -1531,7 +1536,7 @@ msgstr "თემა"
 msgid "Theme Settings"
 msgstr "თემის პარამეტრები"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:362
 msgid "This app does not have version management"
 msgstr "ამ აპს არ აქვს ვერსიის მართვა"
 
@@ -1540,7 +1545,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "ეს აპი დაინსტალირებულია უშუალოდ მისი გამომცემლისგან და არ არის შემოწმებული. შესაძლოა მავნე იყოს."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:635
+#: src/routes/_authenticated/app/$appId.tsx:651
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "ეს გააუქმებს \"{0}\" ნებართვას {appName}-დან. აპმა შესაძლოა შეწყვიტოს სწორად მუშაობა."
 
@@ -1557,10 +1562,10 @@ msgstr "სვეტების გადართვა"
 msgid "Toggle right panel"
 msgstr "მარჯვენა პანელის გადართვა"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:351
-#: ../../../lib/web/src/components/layout/nav-group.tsx:358
-#: ../../../lib/web/src/components/layout/nav-group.tsx:481
-#: ../../../lib/web/src/components/layout/nav-group.tsx:488
+#: ../../../lib/web/src/components/layout/nav-group.tsx:373
+#: ../../../lib/web/src/components/layout/nav-group.tsx:380
+#: ../../../lib/web/src/components/layout/nav-group.tsx:503
+#: ../../../lib/web/src/components/layout/nav-group.tsx:510
 msgid "Toggle section"
 msgstr "სექციის გადართვა"
 
@@ -1588,7 +1593,7 @@ msgid "Top"
 msgstr "ძალიან დიდი"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "სულ შეკვეთები"
 
@@ -1684,7 +1689,7 @@ msgstr "აპების განახლება..."
 msgid "Updating..."
 msgstr "განახლდა {0}"
 
-#: src/features/routing/routing-table.tsx:152
+#: src/features/routing/routing-table.tsx:155
 msgid "Use system default"
 msgstr "მთავარად გამოყენება"
 
@@ -1718,7 +1723,7 @@ msgstr "შემოწმებული"
 msgid "Verify email address"
 msgstr "შემოწმება და ჩართვა"
 
-#: src/routes/_authenticated/app/$appId.tsx:379
+#: src/routes/_authenticated/app/$appId.tsx:395
 msgid "Version"
 msgstr "passkey-ით შემოწმება"
 
@@ -1727,15 +1732,19 @@ msgstr "passkey-ით შემოწმება"
 msgid "Version {0}"
 msgstr "ვერსია აიტვირთა"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:318
 msgid "Version changed"
 msgstr "ვერსიის მართვა"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:414
 msgid "Version management"
 msgstr "ვერსიის ისტორია"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:74
+#: src/routes/_authenticated/app/$appId.tsx:151
+msgid "Versions"
+msgstr "ვერსიები"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:79
 msgid "Video thumbnail"
 msgstr "ვერსია {0} შეიქმნა."
 
@@ -1776,6 +1785,6 @@ msgstr "თქვენი ანგარიში გადმოტანი�
 msgid "Your preference"
 msgstr "თქვენი პირადი ვერსიის გადასახედი"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:433
 msgid "Your version"
 msgstr "თქვენ ვეღარ შეძლებთ {0}-ით შესვლას. დარწმუნდით, რომ კიდევ გაქვთ შესვლის სხვა გზა."

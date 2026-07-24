@@ -36,11 +36,11 @@ msgstr "{0} اپ ڈیٹ ہوا، {failed} ناکام"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} انسٹال ہو گیا ہے۔"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "{track} (default, version {version})"
 msgstr "{track} (ڈیفالٹ، ورژن {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:371
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "{track} (version {version})"
 msgstr "{track} (ورژن {version})"
 
@@ -155,7 +155,7 @@ msgid "An unexpected error occurred"
 msgstr "ایک غیر متوقع خرابی پیش آئی"
 
 #: src/features/apps/index.tsx:160
-#: src/routes/_authenticated/app/$appId.tsx:97
+#: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "ایپ"
 
@@ -176,12 +176,12 @@ msgstr "ایپ انسٹال ہو گئی"
 msgid "App installed successfully"
 msgstr "ایپ کامیابی سے انسٹال ہو گئی"
 
-#: src/routes/_authenticated/app/$appId.tsx:126
-#: src/routes/_authenticated/app/$appId.tsx:130
+#: src/routes/_authenticated/app/$appId.tsx:127
+#: src/routes/_authenticated/app/$appId.tsx:131
 msgid "App not found"
 msgstr "ایپ نہیں ملی"
 
-#: src/routes/_authenticated/app/$appId.tsx:193
+#: src/routes/_authenticated/app/$appId.tsx:209
 msgid "Application ID"
 msgstr "Application ID"
 
@@ -225,9 +225,9 @@ msgstr "دستیاب، لیکن انسٹال نہیں"
 msgid "Back"
 msgstr "واپس"
 
-#: src/routes/_authenticated/app/$appId.tsx:105
-#: src/routes/_authenticated/app/$appId.tsx:126
-#: src/routes/_authenticated/app/$appId.tsx:143
+#: src/routes/_authenticated/app/$appId.tsx:106
+#: src/routes/_authenticated/app/$appId.tsx:127
+#: src/routes/_authenticated/app/$appId.tsx:144
 msgid "Back to apps"
 msgstr "ایپس پر واپس"
 
@@ -252,11 +252,11 @@ msgstr "دلچسپی بڑھائیں"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
-#: src/features/apps/components/install-dialog.tsx:108
+#: src/features/apps/components/install-dialog.tsx:104
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:550
+#: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "منسوخ کریں"
 
@@ -443,7 +443,7 @@ msgstr "دوبارہ تصدیق شروع نہیں کی جا سکی۔ براہ ک
 msgid "Couldn't verify with that account. Please try again."
 msgstr "اس اکاؤنٹ سے تصدیق نہیں ہو سکی۔ براہ کرم دوبارہ کوشش کریں۔"
 
-#: src/routes/_authenticated/app/$appId.tsx:203
+#: src/routes/_authenticated/app/$appId.tsx:219
 msgid "Current version"
 msgstr "موجودہ ورژن"
 
@@ -473,8 +473,8 @@ msgid "Declared by"
 msgstr "اعلان کرنے والا"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:310
-#: src/features/routing/routing-table.tsx:128
-#: src/features/routing/routing-table.tsx:152
+#: src/features/routing/routing-table.tsx:131
+#: src/features/routing/routing-table.tsx:155
 msgid "Default"
 msgstr "ڈیفالٹ"
 
@@ -482,24 +482,24 @@ msgstr "ڈیفالٹ"
 msgid "Default AI account"
 msgstr "ڈیفالٹ AI اکاؤنٹ"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:442
 msgid "Default for all users"
 msgstr "تمام صارفین کے لیے ڈیفالٹ"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "تمام صارفین کے لیے ڈیفالٹ (ورژن {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:340
 msgid "Default for all users updated"
 msgstr "تمام صارفین کے لیے ڈیفالٹ اپ ڈیٹ ہو گیا"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:426
 msgid "Default track"
 msgstr "ڈیفالٹ ٹریک"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:425
 msgid "Default track (version {0})"
 msgstr "ڈیفالٹ ٹریک (ورژن {0})"
 
@@ -514,6 +514,10 @@ msgstr "گھٹتا ہوا"
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Descending"
 msgstr "نزولی"
+
+#: src/routes/_authenticated/app/$appId.tsx:150
+msgid "Details"
+msgstr "تفصیلات"
 
 #: ../../../lib/web/src/components/layout/right-panel.tsx:148
 msgid "Details Panel"
@@ -568,7 +572,7 @@ msgstr "{label} میں ترمیم کریں"
 msgid "Email code"
 msgstr "ای میل کوڈ"
 
-#: src/routes/_authenticated/app/$appId.tsx:220
+#: src/routes/_authenticated/app/$appId.tsx:236
 msgid "Enabled services"
 msgstr "فعال سروسز"
 
@@ -607,7 +611,7 @@ msgstr "اکاؤنٹ شامل کرنے میں ناکامی"
 msgid "Failed to clean up apps"
 msgstr "ایپس صاف کرنے میں ناکام"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:488
 msgid "Failed to grant permission"
 msgstr "اجازت دینے میں ناکامی"
 
@@ -615,7 +619,7 @@ msgstr "اجازت دینے میں ناکامی"
 msgid "Failed to remove account"
 msgstr "اکاؤنٹ ہٹانے میں ناکامی"
 
-#: src/routes/_authenticated/app/$appId.tsx:454
+#: src/routes/_authenticated/app/$appId.tsx:470
 msgid "Failed to revoke permission"
 msgstr "اجازت منسوخ کرنے میں ناکامی"
 
@@ -631,12 +635,12 @@ msgstr "ایپس اپ ڈیٹ کرنے میں ناکام"
 msgid "Failed to update category"
 msgstr "زمرہ اپڈیٹ کرنے میں ناکامی"
 
-#: src/routes/_authenticated/app/$appId.tsx:325
+#: src/routes/_authenticated/app/$appId.tsx:341
 msgid "Failed to update default"
 msgstr "ڈیفالٹ اپڈیٹ کرنے میں ناکامی"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:319
 msgid "Failed to update preference"
 msgstr "ترجیح اپڈیٹ کرنے میں ناکامی"
 
@@ -648,7 +652,7 @@ msgstr "سسٹم ڈیفالٹ اپڈیٹ کرنے میں ناکامی"
 msgid "File:"
 msgstr "فائل:"
 
-#: src/routes/_authenticated/app/$appId.tsx:198
+#: src/routes/_authenticated/app/$appId.tsx:214
 msgid "Fingerprint"
 msgstr "فنگر پرنٹ"
 
@@ -721,15 +725,15 @@ msgstr "صفحہ {pageNumber} پر جائیں"
 msgid "Go to previous page"
 msgstr "پچھلے صفحے پر جائیں"
 
-#: src/routes/_authenticated/app/$appId.tsx:514
+#: src/routes/_authenticated/app/$appId.tsx:530
 msgid "Grant"
 msgstr "اجازت دیں"
 
-#: src/routes/_authenticated/app/$appId.tsx:519
+#: src/routes/_authenticated/app/$appId.tsx:535
 msgid "Grant permission"
 msgstr "اجازت دیں"
 
-#: src/routes/_authenticated/app/$appId.tsx:470
+#: src/routes/_authenticated/app/$appId.tsx:486
 msgid "Granting permission..."
 msgstr "اجازت دی جا رہی ہے..."
 
@@ -760,11 +764,11 @@ msgstr "ہوم"
 msgid "Hot"
 msgstr "ہاٹ"
 
-#: src/routes/_authenticated/app/$appId.tsx:228
+#: src/routes/_authenticated/app/$appId.tsx:244
 msgid "HTTP paths"
 msgstr "HTTP پاتھز"
 
-#: src/routes/_authenticated/app/$appId.tsx:190
+#: src/routes/_authenticated/app/$appId.tsx:206
 msgid "Identity"
 msgstr "شناخت"
 
@@ -777,7 +781,7 @@ msgid "Inset"
 msgstr "انسیٹ"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
-#: src/features/apps/components/install-dialog.tsx:122
+#: src/features/apps/components/install-dialog.tsx:118
 #: src/features/apps/index.tsx:577
 #: src/features/apps/index.tsx:618
 #: src/features/apps/index.tsx:667
@@ -808,7 +812,7 @@ msgid "Installed apps"
 msgstr "انسٹال شدہ ایپس"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
-#: src/features/apps/components/install-dialog.tsx:122
+#: src/features/apps/components/install-dialog.tsx:118
 #: src/features/apps/index.tsx:128
 #: src/features/apps/index.tsx:158
 #: src/features/apps/index.tsx:178
@@ -889,7 +893,7 @@ msgstr "کامیابی سے لاگ آؤٹ ہو گئے"
 msgid "Logging out…"
 msgstr "لاگ آؤٹ ہو رہا ہے…"
 
-#: src/routes/_authenticated/app/$appId.tsx:508
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Manage capabilities granted to this application"
 msgstr "اس ایپلیکیشن کو دی گئی صلاحیتوں کا انتظام کریں"
 
@@ -915,7 +919,7 @@ msgstr "metric"
 msgid "Monday"
 msgstr "پیر"
 
-#: src/features/routing/routing-table.tsx:104
+#: src/features/routing/routing-table.tsx:107
 msgid "Multiple apps declare this resource"
 msgstr "متعدد ایپس اس resource کا اعلان کرتی ہیں"
 
@@ -986,11 +990,11 @@ msgstr "کوئی matching ایپس نہیں"
 msgid "No paths configured."
 msgstr "کوئی پاتھس کنفیگر نہیں ہیں۔"
 
-#: src/routes/_authenticated/app/$appId.tsx:573
+#: src/routes/_authenticated/app/$appId.tsx:589
 msgid "No permissions granted"
 msgstr "کوئی permissions نہیں دی گئیں"
 
-#: src/routes/_authenticated/app/$appId.tsx:508
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "No permissions granted to this app"
 msgstr "اس ایپ کو کوئی اجازت نہیں دی گئی"
 
@@ -1049,7 +1053,7 @@ msgstr "نہیں ملا"
 msgid "Not set"
 msgstr "سیٹ نہیں ہے"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:361
 msgid "Not versioned"
 msgstr "ورژن شدہ نہیں"
 
@@ -1070,8 +1074,8 @@ msgstr "اوہ! صفحہ نہیں ملا!"
 msgid "Open account actions"
 msgstr "اکاؤنٹ کی actions کھولیں"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:182
-#: ../../../lib/web/src/components/layout/nav-group.tsx:187
+#: ../../../lib/web/src/components/layout/nav-group.tsx:202
+#: ../../../lib/web/src/components/layout/nav-group.tsx:207
 msgid "Open actions"
 msgstr "کارروائیاں کھولیں"
 
@@ -1127,15 +1131,16 @@ msgstr "path routing"
 msgid "Paths"
 msgstr "paths"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:487
 msgid "Permission granted"
 msgstr "permission دی گئی"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:468
 msgid "Permission revoked"
 msgstr "permission واپس لے لی گئی"
 
-#: src/routes/_authenticated/app/$appId.tsx:506
+#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Permissions"
 msgstr "permissions"
 
@@ -1160,7 +1165,7 @@ msgstr "براہ کرم کچھ دیر انتظار کریں اور دوبارہ 
 msgid "Preference updated"
 msgstr "ترجیح اپ ڈیٹ ہو گئی"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:433
 msgid "Preferred version"
 msgstr "ترجیحی ورژن"
 
@@ -1179,7 +1184,7 @@ msgstr "پرائیویسی"
 msgid "Profile"
 msgstr "پروفائل"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:228
 msgid "Provided classes"
 msgstr "فراہم کردہ Classes"
 
@@ -1256,20 +1261,20 @@ msgstr "reset کریں"
 msgid "Reset all settings to default values"
 msgstr "تمام سیٹنگز کو ڈیفالٹ ویلیوز پر reset کریں"
 
-#: src/routes/_authenticated/app/$appId.tsx:626
-#: src/routes/_authenticated/app/$appId.tsx:629
+#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:645
 msgid "Revoke"
 msgstr "منسوخ کریں"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:652
 msgid "Revoke permission"
 msgstr "اجازت منسوخ کریں"
 
-#: src/routes/_authenticated/app/$appId.tsx:634
+#: src/routes/_authenticated/app/$appId.tsx:650
 msgid "Revoke permission?"
 msgstr "اجازت منسوخ کریں؟"
 
-#: src/routes/_authenticated/app/$appId.tsx:451
+#: src/routes/_authenticated/app/$appId.tsx:467
 msgid "Revoking permission..."
 msgstr "اجازت منسوخ کی جا رہی ہے..."
 
@@ -1292,8 +1297,8 @@ msgstr "محفوظ کریں"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:317
+#: src/routes/_authenticated/app/$appId.tsx:339
 msgid "Saving..."
 msgstr "محفوظ کیا جا رہا ہے..."
 
@@ -1335,7 +1340,7 @@ msgstr "تلاش کریں..."
 msgid "Searching..."
 msgstr "تلاش کیا جا رہا ہے..."
 
-#: src/routes/_authenticated/app/$appId.tsx:521
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Select a capability to grant to {appName}."
 msgstr "{appName} کو دینے کے لیے ایک صلاحیت منتخب کریں۔"
 
@@ -1477,7 +1482,7 @@ msgid "System"
 msgstr "سسٹم"
 
 #: src/features/routing/routing-table.tsx:79
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "System default"
 msgstr "سسٹم ڈیفالٹ"
 
@@ -1498,7 +1503,7 @@ msgstr "ٹیگز"
 msgid "Teams/Apps"
 msgstr "ٹیمز/ایپس"
 
-#: src/routes/_authenticated/app/$appId.tsx:209
+#: src/routes/_authenticated/app/$appId.tsx:225
 msgid "Technical capabilities"
 msgstr "تکنیکی صلاحیتیں"
 
@@ -1515,7 +1520,7 @@ msgstr "وہ کوڈ غلط ہے یا اس کی میعاد ختم ہو چکی ہ�
 msgid "The app has been installed successfully."
 msgstr "ایپ کامیابی سے انسٹال ہو گئی ہے۔"
 
-#: src/routes/_authenticated/app/$appId.tsx:131
+#: src/routes/_authenticated/app/$appId.tsx:132
 msgid "The requested app could not be found."
 msgstr "درخواست کردہ ایپ نہیں ملی۔"
 
@@ -1531,7 +1536,7 @@ msgstr "تھیم"
 msgid "Theme Settings"
 msgstr "تھیم سیٹنگز"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:362
 msgid "This app does not have version management"
 msgstr "اس ایپ میں ورژن مینجمنٹ نہیں ہے"
 
@@ -1540,7 +1545,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "یہ ایپ براہ راست اس کے پبلشر سے انسٹال ہوتی ہے اور اس کی جانچ نہیں کی گئی۔ یہ مال ویئر ہو سکتا ہے۔"
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:635
+#: src/routes/_authenticated/app/$appId.tsx:651
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "یہ {appName} سے \"{0}\" اجازت منسوخ کر دے گا۔ ایپ صحیح طریقے سے کام کرنا بند کر سکتی ہے۔"
 
@@ -1557,10 +1562,10 @@ msgstr "کالم ٹوگل کریں"
 msgid "Toggle right panel"
 msgstr "دائیں پینل کو ٹوگل کریں"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:351
-#: ../../../lib/web/src/components/layout/nav-group.tsx:358
-#: ../../../lib/web/src/components/layout/nav-group.tsx:481
-#: ../../../lib/web/src/components/layout/nav-group.tsx:488
+#: ../../../lib/web/src/components/layout/nav-group.tsx:373
+#: ../../../lib/web/src/components/layout/nav-group.tsx:380
+#: ../../../lib/web/src/components/layout/nav-group.tsx:503
+#: ../../../lib/web/src/components/layout/nav-group.tsx:510
 msgid "Toggle section"
 msgstr "سیکشن کھولیں/بند کریں"
 
@@ -1588,7 +1593,7 @@ msgid "Top"
 msgstr "اوپر"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "ٹریک"
 
@@ -1684,7 +1689,7 @@ msgstr "ایپس اپ ڈیٹ کی جا رہی ہیں..."
 msgid "Updating..."
 msgstr "اپ ڈیٹ کیا جا رہا ہے..."
 
-#: src/features/routing/routing-table.tsx:152
+#: src/features/routing/routing-table.tsx:155
 msgid "Use system default"
 msgstr "سسٹم ڈیفالٹ استعمال کریں"
 
@@ -1718,7 +1723,7 @@ msgstr "تصدیق کریں"
 msgid "Verify email address"
 msgstr "ای میل ایڈریس کی تصدیق کریں"
 
-#: src/routes/_authenticated/app/$appId.tsx:379
+#: src/routes/_authenticated/app/$appId.tsx:395
 msgid "Version"
 msgstr "ورژن"
 
@@ -1727,15 +1732,19 @@ msgstr "ورژن"
 msgid "Version {0}"
 msgstr "ورژن {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:318
 msgid "Version changed"
 msgstr "ورژن تبدیل ہو گیا"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:414
 msgid "Version management"
 msgstr "ورژن مینجمنٹ"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:74
+#: src/routes/_authenticated/app/$appId.tsx:151
+msgid "Versions"
+msgstr "ورژنز"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:79
 msgid "Video thumbnail"
 msgstr "ویڈیو تھمب نیل"
 
@@ -1776,6 +1785,6 @@ msgstr "آپ کا اکاؤنٹ {source} سے یہاں منتقل کر دیا گ�
 msgid "Your preference"
 msgstr "آپ کی ترجیح"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:433
 msgid "Your version"
 msgstr "آپ کا ورژن"

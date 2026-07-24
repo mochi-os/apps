@@ -36,11 +36,11 @@ msgstr "{0} અપડેટ થયું, {failed} નિષ્ફળ"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ઇન્સ્ટોલ થયું છે."
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "{track} (default, version {version})"
 msgstr "{track} (ડિફોલ્ટ, આવૃત્તિ {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:371
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "{track} (version {version})"
 msgstr "{track} (આવૃત્તિ {version})"
 
@@ -155,7 +155,7 @@ msgid "An unexpected error occurred"
 msgstr "અણધારી ભૂલ આવી"
 
 #: src/features/apps/index.tsx:160
-#: src/routes/_authenticated/app/$appId.tsx:97
+#: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "એપ્લિકેશન"
 
@@ -176,12 +176,12 @@ msgstr "એપ્લિકેશન ઇન્સ્ટૉલ થઈ"
 msgid "App installed successfully"
 msgstr "ઍપ સફળતાપૂર્વક ઇન્સ્ટોલ થઈ"
 
-#: src/routes/_authenticated/app/$appId.tsx:126
-#: src/routes/_authenticated/app/$appId.tsx:130
+#: src/routes/_authenticated/app/$appId.tsx:127
+#: src/routes/_authenticated/app/$appId.tsx:131
 msgid "App not found"
 msgstr "એપ્લિકેશન મળી નહીં"
 
-#: src/routes/_authenticated/app/$appId.tsx:193
+#: src/routes/_authenticated/app/$appId.tsx:209
 msgid "Application ID"
 msgstr "Application ID"
 
@@ -225,9 +225,9 @@ msgstr "ઉપલબ્ધ, પરંતુ ઇન્સ્ટૉલ નથી"
 msgid "Back"
 msgstr "પાછળ"
 
-#: src/routes/_authenticated/app/$appId.tsx:105
-#: src/routes/_authenticated/app/$appId.tsx:126
-#: src/routes/_authenticated/app/$appId.tsx:143
+#: src/routes/_authenticated/app/$appId.tsx:106
+#: src/routes/_authenticated/app/$appId.tsx:127
+#: src/routes/_authenticated/app/$appId.tsx:144
 msgid "Back to apps"
 msgstr "એપ્લિકેશનો પર પાછા"
 
@@ -252,11 +252,11 @@ msgstr "રુચિ વધારો"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
-#: src/features/apps/components/install-dialog.tsx:108
+#: src/features/apps/components/install-dialog.tsx:104
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:550
+#: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "રદ કરો"
 
@@ -443,7 +443,7 @@ msgstr "પુનઃપ્રમાણીકરણ શરૂ કરી શકા
 msgid "Couldn't verify with that account. Please try again."
 msgstr "તે ખાતા વડે ચકાસણી કરી શકાઈ નહીં. કૃપા કરીને ફરી પ્રયાસ કરો."
 
-#: src/routes/_authenticated/app/$appId.tsx:203
+#: src/routes/_authenticated/app/$appId.tsx:219
 msgid "Current version"
 msgstr "વર્તમાન આવૃત્તિ"
 
@@ -473,8 +473,8 @@ msgid "Declared by"
 msgstr "દ્વારા ઘોષિત"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:310
-#: src/features/routing/routing-table.tsx:128
-#: src/features/routing/routing-table.tsx:152
+#: src/features/routing/routing-table.tsx:131
+#: src/features/routing/routing-table.tsx:155
 msgid "Default"
 msgstr "ડિફૉલ્ટ"
 
@@ -482,24 +482,24 @@ msgstr "ડિફૉલ્ટ"
 msgid "Default AI account"
 msgstr "ડિફૉલ્ટ AI ખાતું"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:442
 msgid "Default for all users"
 msgstr "બધા વપરાશકર્તાઓ માટે ડિફોલ્ટ"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "બધા વપરાશકર્તાઓ માટે ડિફોલ્ટ (આવૃત્તિ {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:340
 msgid "Default for all users updated"
 msgstr "બધા વપરાશકર્તાઓ માટે ડિફૉલ્ટ અપડેટ થયું"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:426
 msgid "Default track"
 msgstr "ડિફોલ્ટ ટ્રેક"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:425
 msgid "Default track (version {0})"
 msgstr "ડિફોલ્ટ ટ્રેક (આવૃત્તિ {0})"
 
@@ -514,6 +514,10 @@ msgstr "ઊતરતા"
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Descending"
 msgstr "ઊતરતો ક્રમ"
+
+#: src/routes/_authenticated/app/$appId.tsx:150
+msgid "Details"
+msgstr "વિગતો"
 
 #: ../../../lib/web/src/components/layout/right-panel.tsx:148
 msgid "Details Panel"
@@ -568,7 +572,7 @@ msgstr "{label} સંપાદિત કરો"
 msgid "Email code"
 msgstr "ઇમેઇલ કોડ"
 
-#: src/routes/_authenticated/app/$appId.tsx:220
+#: src/routes/_authenticated/app/$appId.tsx:236
 msgid "Enabled services"
 msgstr "સક્ષમ સેવાઓ"
 
@@ -607,7 +611,7 @@ msgstr "એકાઉન્ટ ઉમેરવામાં નિષ્ફળ"
 msgid "Failed to clean up apps"
 msgstr "ઍપ સાફ કરવામાં નિષ્ફળ"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:488
 msgid "Failed to grant permission"
 msgstr "પરવાનગી આપવામાં નિષ્ફળ"
 
@@ -615,7 +619,7 @@ msgstr "પરવાનગી આપવામાં નિષ્ફળ"
 msgid "Failed to remove account"
 msgstr "એકાઉન્ટ દૂર કરવામાં નિષ્ફળ"
 
-#: src/routes/_authenticated/app/$appId.tsx:454
+#: src/routes/_authenticated/app/$appId.tsx:470
 msgid "Failed to revoke permission"
 msgstr "પરવાનગી રદ કરવામાં નિષ્ફળ"
 
@@ -631,12 +635,12 @@ msgstr "ઍપ અપડેટ કરવામાં નિષ્ફળ"
 msgid "Failed to update category"
 msgstr "કેટેગરી અપડેટ કરવામાં નિષ્ફળ"
 
-#: src/routes/_authenticated/app/$appId.tsx:325
+#: src/routes/_authenticated/app/$appId.tsx:341
 msgid "Failed to update default"
 msgstr "ડિફૉલ્ટ અપડેટ કરવામાં નિષ્ફળ"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:319
 msgid "Failed to update preference"
 msgstr "પ્રેફરન્સ અપડેટ કરવામાં નિષ્ફળ"
 
@@ -648,7 +652,7 @@ msgstr "સિસ્ટમ ડિફૉલ્ટ અપડેટ કરવામ
 msgid "File:"
 msgstr "ફાઇલ:"
 
-#: src/routes/_authenticated/app/$appId.tsx:198
+#: src/routes/_authenticated/app/$appId.tsx:214
 msgid "Fingerprint"
 msgstr "આંગળાની છાપ"
 
@@ -721,15 +725,15 @@ msgstr "પૃષ્ઠ {pageNumber} પર જાઓ"
 msgid "Go to previous page"
 msgstr "પાછલા પેજ પર જાઓ"
 
-#: src/routes/_authenticated/app/$appId.tsx:514
+#: src/routes/_authenticated/app/$appId.tsx:530
 msgid "Grant"
 msgstr "આપો"
 
-#: src/routes/_authenticated/app/$appId.tsx:519
+#: src/routes/_authenticated/app/$appId.tsx:535
 msgid "Grant permission"
 msgstr "પરવાનગી આપો"
 
-#: src/routes/_authenticated/app/$appId.tsx:470
+#: src/routes/_authenticated/app/$appId.tsx:486
 msgid "Granting permission..."
 msgstr "પરવાનગી આપી રહ્યાં છીએ..."
 
@@ -760,11 +764,11 @@ msgstr "હોમ"
 msgid "Hot"
 msgstr "હૉટ"
 
-#: src/routes/_authenticated/app/$appId.tsx:228
+#: src/routes/_authenticated/app/$appId.tsx:244
 msgid "HTTP paths"
 msgstr "HTTP પાથ્સ"
 
-#: src/routes/_authenticated/app/$appId.tsx:190
+#: src/routes/_authenticated/app/$appId.tsx:206
 msgid "Identity"
 msgstr "ઓળખ"
 
@@ -777,7 +781,7 @@ msgid "Inset"
 msgstr "ઇનસેટ"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
-#: src/features/apps/components/install-dialog.tsx:122
+#: src/features/apps/components/install-dialog.tsx:118
 #: src/features/apps/index.tsx:577
 #: src/features/apps/index.tsx:618
 #: src/features/apps/index.tsx:667
@@ -808,7 +812,7 @@ msgid "Installed apps"
 msgstr "ઇન્સ્ટૉલ થયેલી ઍપ્સ"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
-#: src/features/apps/components/install-dialog.tsx:122
+#: src/features/apps/components/install-dialog.tsx:118
 #: src/features/apps/index.tsx:128
 #: src/features/apps/index.tsx:158
 #: src/features/apps/index.tsx:178
@@ -889,7 +893,7 @@ msgstr "સફળતાપૂર્વક લૉગ આઉટ થયા"
 msgid "Logging out…"
 msgstr "લૉગ આઉટ થઈ રહ્યું છે…"
 
-#: src/routes/_authenticated/app/$appId.tsx:508
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Manage capabilities granted to this application"
 msgstr "આ એપ્લિકેશનને આપવામાં આવેલી ક્ષમતાઓનું સંચાલન કરો"
 
@@ -915,7 +919,7 @@ msgstr "મેટ્રિક"
 msgid "Monday"
 msgstr "સોમવાર"
 
-#: src/features/routing/routing-table.tsx:104
+#: src/features/routing/routing-table.tsx:107
 msgid "Multiple apps declare this resource"
 msgstr "એકથી વધુ એપ્સ આ રિસોર્સ ઘોષિત કરે છે"
 
@@ -986,11 +990,11 @@ msgstr "કોઈ મેળ ખાતી એપ્સ નથી"
 msgid "No paths configured."
 msgstr "કોઈ પાથ ગોઠવાયેલા નથી."
 
-#: src/routes/_authenticated/app/$appId.tsx:573
+#: src/routes/_authenticated/app/$appId.tsx:589
 msgid "No permissions granted"
 msgstr "કોઈ પરવાનગીઓ આપેલી નથી"
 
-#: src/routes/_authenticated/app/$appId.tsx:508
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "No permissions granted to this app"
 msgstr "આ એપને કોઈ પરવાનગી આપવામાં આવી નથી"
 
@@ -1049,7 +1053,7 @@ msgstr "મળ્યું નથી"
 msgid "Not set"
 msgstr "સેટ કર્યું નથી"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:361
 msgid "Not versioned"
 msgstr "વર્ઝન કરેલું નથી"
 
@@ -1070,8 +1074,8 @@ msgstr "ઓહ! પેજ મળ્યું નથી!"
 msgid "Open account actions"
 msgstr "ખાતાની ક્રિયાઓ ખોલો"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:182
-#: ../../../lib/web/src/components/layout/nav-group.tsx:187
+#: ../../../lib/web/src/components/layout/nav-group.tsx:202
+#: ../../../lib/web/src/components/layout/nav-group.tsx:207
 msgid "Open actions"
 msgstr "ક્રિયાઓ ખોલો"
 
@@ -1127,15 +1131,16 @@ msgstr "પાથ રાઉટિંગ"
 msgid "Paths"
 msgstr "પાથ્સ"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:487
 msgid "Permission granted"
 msgstr "પરવાનગી આપી"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:468
 msgid "Permission revoked"
 msgstr "પરવાનગી રદ કરી"
 
-#: src/routes/_authenticated/app/$appId.tsx:506
+#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Permissions"
 msgstr "પરવાનગીઓ"
 
@@ -1160,7 +1165,7 @@ msgstr "કૃપા કરીને થોડી રાહ જુઓ અને 
 msgid "Preference updated"
 msgstr "પ્રેફરન્સ અપડેટ થયું"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:433
 msgid "Preferred version"
 msgstr "પસંદગીની આવૃત્તિ"
 
@@ -1179,7 +1184,7 @@ msgstr "ગોપનીયતા"
 msgid "Profile"
 msgstr "પ્રોફાઇલ"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:228
 msgid "Provided classes"
 msgstr "પ્રદાન કરેલા ક્લાસ"
 
@@ -1256,20 +1261,20 @@ msgstr "રીસેટ કરો"
 msgid "Reset all settings to default values"
 msgstr "તમામ સેટિંગ્સને ડિફૉલ્ટ મૂલ્યો પર રીસેટ કરો"
 
-#: src/routes/_authenticated/app/$appId.tsx:626
-#: src/routes/_authenticated/app/$appId.tsx:629
+#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:645
 msgid "Revoke"
 msgstr "રદ કરો"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:652
 msgid "Revoke permission"
 msgstr "પરવાનગી રદ કરો"
 
-#: src/routes/_authenticated/app/$appId.tsx:634
+#: src/routes/_authenticated/app/$appId.tsx:650
 msgid "Revoke permission?"
 msgstr "પરવાનગી રદ કરવી છે?"
 
-#: src/routes/_authenticated/app/$appId.tsx:451
+#: src/routes/_authenticated/app/$appId.tsx:467
 msgid "Revoking permission..."
 msgstr "પરવાનગી રદ કરી રહ્યાં છીએ..."
 
@@ -1292,8 +1297,8 @@ msgstr "સાચવો"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:317
+#: src/routes/_authenticated/app/$appId.tsx:339
 msgid "Saving..."
 msgstr "સાચવી રહ્યું છે..."
 
@@ -1335,7 +1340,7 @@ msgstr "શોધો..."
 msgid "Searching..."
 msgstr "શોધી રહ્યું છે..."
 
-#: src/routes/_authenticated/app/$appId.tsx:521
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Select a capability to grant to {appName}."
 msgstr "{appName} ને આપવા માટેની ક્ષમતા પસંદ કરો."
 
@@ -1477,7 +1482,7 @@ msgid "System"
 msgstr "સિસ્ટમ"
 
 #: src/features/routing/routing-table.tsx:79
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "System default"
 msgstr "સિસ્ટમ ડિફોલ્ટ"
 
@@ -1498,7 +1503,7 @@ msgstr "ટૅગ્સ"
 msgid "Teams/Apps"
 msgstr "ટીમો/એપ્સ"
 
-#: src/routes/_authenticated/app/$appId.tsx:209
+#: src/routes/_authenticated/app/$appId.tsx:225
 msgid "Technical capabilities"
 msgstr "ટેકનિકલ ક્ષમતાઓ"
 
@@ -1515,7 +1520,7 @@ msgstr "તે કોડ ખોટો છે અથવા સમયસમાપ�
 msgid "The app has been installed successfully."
 msgstr "એપ સફળતાપૂર્વક ઇન્સ્ટોલ થઈ ગઈ છે."
 
-#: src/routes/_authenticated/app/$appId.tsx:131
+#: src/routes/_authenticated/app/$appId.tsx:132
 msgid "The requested app could not be found."
 msgstr "વિનંતી કરેલી એપ મળી નથી."
 
@@ -1531,7 +1536,7 @@ msgstr "થીમ"
 msgid "Theme Settings"
 msgstr "થીમ સેટિંગ્સ"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:362
 msgid "This app does not have version management"
 msgstr "આ એપમાં સંસ્કરણ વ્યવસ્થાપન નથી"
 
@@ -1540,7 +1545,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "આ એપ તેના પ્રકાશક પાસેથી સીધી જ ઇન્સ્ટોલ થાય છે અને તેની તપાસ કરવામાં આવી નથી. તે માલવેર હોઈ શકે છે."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:635
+#: src/routes/_authenticated/app/$appId.tsx:651
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "આ {appName} માંથી \"{0}\" પરવાનગી રદ કરશે. એપ યોગ્ય રીતે કામ કરવાનું બંધ કરી શકે છે."
 
@@ -1557,10 +1562,10 @@ msgstr "કૉલમ્સ ટૉગલ કરો"
 msgid "Toggle right panel"
 msgstr "જમણી પેનલ ટૉગલ કરો"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:351
-#: ../../../lib/web/src/components/layout/nav-group.tsx:358
-#: ../../../lib/web/src/components/layout/nav-group.tsx:481
-#: ../../../lib/web/src/components/layout/nav-group.tsx:488
+#: ../../../lib/web/src/components/layout/nav-group.tsx:373
+#: ../../../lib/web/src/components/layout/nav-group.tsx:380
+#: ../../../lib/web/src/components/layout/nav-group.tsx:503
+#: ../../../lib/web/src/components/layout/nav-group.tsx:510
 msgid "Toggle section"
 msgstr "વિભાગ ટૉગલ કરો"
 
@@ -1588,7 +1593,7 @@ msgid "Top"
 msgstr "ટોચ"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "ટ્રૅક"
 
@@ -1684,7 +1689,7 @@ msgstr "ઍપ અપડેટ કરી રહ્યાં છીએ..."
 msgid "Updating..."
 msgstr "અપડેટ કરી રહ્યું છે..."
 
-#: src/features/routing/routing-table.tsx:152
+#: src/features/routing/routing-table.tsx:155
 msgid "Use system default"
 msgstr "સિસ્ટમ ડિફોલ્ટ વાપરો"
 
@@ -1718,7 +1723,7 @@ msgstr "ચકાસો"
 msgid "Verify email address"
 msgstr "ઈમેઇલ સરનામું ચકાસો"
 
-#: src/routes/_authenticated/app/$appId.tsx:379
+#: src/routes/_authenticated/app/$appId.tsx:395
 msgid "Version"
 msgstr "સંસ્કરણ"
 
@@ -1727,15 +1732,19 @@ msgstr "સંસ્કરણ"
 msgid "Version {0}"
 msgstr "આવૃત્તિ {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:318
 msgid "Version changed"
 msgstr "સંસ્કરણ બદલાયું"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:414
 msgid "Version management"
 msgstr "સંસ્કરણ વ્યવસ્થાપન"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:74
+#: src/routes/_authenticated/app/$appId.tsx:151
+msgid "Versions"
+msgstr "વર્ઝન"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:79
 msgid "Video thumbnail"
 msgstr "વિડિયો થંબનેલ"
 
@@ -1776,6 +1785,6 @@ msgstr "તમારું ખાતું {source} પરથી અહીં �
 msgid "Your preference"
 msgstr "તમારી પસંદગી"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:433
 msgid "Your version"
 msgstr "તમારી આવૃત્તિ"

@@ -36,11 +36,11 @@ msgstr "{0} թարմացվեց, {failed} ձախողվեց"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1}-ը տեղադրվեց:"
 
-#: src/routes/_authenticated/app/$appId.tsx:370
+#: src/routes/_authenticated/app/$appId.tsx:386
 msgid "{track} (default, version {version})"
 msgstr "{track} (կանխադրված, տարբերակ {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:371
+#: src/routes/_authenticated/app/$appId.tsx:387
 msgid "{track} (version {version})"
 msgstr "{track} (տարբերակ {version})"
 
@@ -155,7 +155,7 @@ msgid "An unexpected error occurred"
 msgstr "Անսպասելի սխալ առաջացավ"
 
 #: src/features/apps/index.tsx:160
-#: src/routes/_authenticated/app/$appId.tsx:97
+#: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "Հավելվածի ID"
 
@@ -176,12 +176,12 @@ msgstr "Հավելվածը չի գտնվել"
 msgid "App installed successfully"
 msgstr "Հավելվածը հաջողությամբ տեղադրվեց"
 
-#: src/routes/_authenticated/app/$appId.tsx:126
-#: src/routes/_authenticated/app/$appId.tsx:130
+#: src/routes/_authenticated/app/$appId.tsx:127
+#: src/routes/_authenticated/app/$appId.tsx:131
 msgid "App not found"
 msgstr "Հավելվածի օգտատիրական միջերեսներ"
 
-#: src/routes/_authenticated/app/$appId.tsx:193
+#: src/routes/_authenticated/app/$appId.tsx:209
 msgid "Application ID"
 msgstr "Կիրառել"
 
@@ -225,9 +225,9 @@ msgstr "Սպասում է պատասխանի"
 msgid "Back"
 msgstr "Հետ դեպի CRM"
 
-#: src/routes/_authenticated/app/$appId.tsx:105
-#: src/routes/_authenticated/app/$appId.tsx:126
-#: src/routes/_authenticated/app/$appId.tsx:143
+#: src/routes/_authenticated/app/$appId.tsx:106
+#: src/routes/_authenticated/app/$appId.tsx:127
+#: src/routes/_authenticated/app/$appId.tsx:144
 msgid "Back to apps"
 msgstr "Հետ դեպի զրույց"
 
@@ -252,11 +252,11 @@ msgstr "Եզրագծի գույն"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
-#: src/features/apps/components/install-dialog.tsx:108
+#: src/features/apps/components/install-dialog.tsx:104
 #: src/features/apps/index.tsx:569
 #: src/features/apps/index.tsx:610
 #: src/features/apps/index.tsx:659
-#: src/routes/_authenticated/app/$appId.tsx:550
+#: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "Չեղարկել մեկնաբանությունը"
 
@@ -443,7 +443,7 @@ msgstr "Չհաջողվեց սկսել վերանույնականացումը։ �
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Չհաջողվեց ստուգել այդ հաշվով։ Խնդրում ենք նորից փորձել։"
 
-#: src/routes/_authenticated/app/$appId.tsx:203
+#: src/routes/_authenticated/app/$appId.tsx:219
 msgid "Current version"
 msgstr "Ընթացիկ գին"
 
@@ -473,8 +473,8 @@ msgid "Declared by"
 msgstr "Հայտարարված է {0}-ի կողմից"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:310
-#: src/features/routing/routing-table.tsx:128
-#: src/features/routing/routing-table.tsx:152
+#: src/features/routing/routing-table.tsx:131
+#: src/features/routing/routing-table.tsx:155
 msgid "Default"
 msgstr "Լռելյայն"
 
@@ -482,24 +482,24 @@ msgstr "Լռելյայն"
 msgid "Default AI account"
 msgstr "Լռելյայն AI հաշիվ"
 
-#: src/routes/_authenticated/app/$appId.tsx:426
+#: src/routes/_authenticated/app/$appId.tsx:442
 msgid "Default for all users"
 msgstr "Լռելյայն բոլոր օգտատերերի համար"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:441
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Լռելյայն բոլոր օգտատերերի համար (տարբերակ {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:324
+#: src/routes/_authenticated/app/$appId.tsx:340
 msgid "Default for all users updated"
 msgstr "Լռելյայնը բոլոր օգտատերերի համար թարմացված է"
 
-#: src/routes/_authenticated/app/$appId.tsx:410
+#: src/routes/_authenticated/app/$appId.tsx:426
 msgid "Default track"
 msgstr "Լռելյայն track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:409
+#: src/routes/_authenticated/app/$appId.tsx:425
 msgid "Default track (version {0})"
 msgstr "Լռելյայն track (տարբերակ {0})"
 
@@ -514,6 +514,10 @@ msgstr "Նվազող"
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Descending"
 msgstr "Նվազման կարգով"
+
+#: src/routes/_authenticated/app/$appId.tsx:150
+msgid "Details"
+msgstr "Մանրամասներ"
 
 #: ../../../lib/web/src/components/layout/right-panel.tsx:148
 msgid "Details Panel"
@@ -568,7 +572,7 @@ msgstr "Խմբագրել {label}"
 msgid "Email code"
 msgstr "Էլ․ փոստի կոդ"
 
-#: src/routes/_authenticated/app/$appId.tsx:220
+#: src/routes/_authenticated/app/$appId.tsx:236
 msgid "Enabled services"
 msgstr "Միացված ծառայություններ"
 
@@ -607,7 +611,7 @@ msgstr "Չհաջողվեց ավելացնել հաշիվը"
 msgid "Failed to clean up apps"
 msgstr "Չհաջողվեց մաքրել հավելվածները"
 
-#: src/routes/_authenticated/app/$appId.tsx:472
+#: src/routes/_authenticated/app/$appId.tsx:488
 msgid "Failed to grant permission"
 msgstr "Չհաջողվեց տրամադրել թույլտվությունը"
 
@@ -615,7 +619,7 @@ msgstr "Չհաջողվեց տրամադրել թույլտվությունը"
 msgid "Failed to remove account"
 msgstr "Չհաջողվեց հեռացնել հաշիվը"
 
-#: src/routes/_authenticated/app/$appId.tsx:454
+#: src/routes/_authenticated/app/$appId.tsx:470
 msgid "Failed to revoke permission"
 msgstr "Չհաջողվեց հետ կանչել թույլտվությունը"
 
@@ -631,12 +635,12 @@ msgstr "Չհաջողվեց թարմացնել հավելվածները"
 msgid "Failed to update category"
 msgstr "Չհաջողվեց թարմացնել կատեգորիան"
 
-#: src/routes/_authenticated/app/$appId.tsx:325
+#: src/routes/_authenticated/app/$appId.tsx:341
 msgid "Failed to update default"
 msgstr "Չհաջողվեց թարմացնել լռելյայնը"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:303
+#: src/routes/_authenticated/app/$appId.tsx:319
 msgid "Failed to update preference"
 msgstr "Չհաջողվեց թարմացնել նախընտրությունը"
 
@@ -648,7 +652,7 @@ msgstr "Չհաջողվեց թարմացնել համակարգի լռելյայ�
 msgid "File:"
 msgstr "Ֆայլ՝"
 
-#: src/routes/_authenticated/app/$appId.tsx:198
+#: src/routes/_authenticated/app/$appId.tsx:214
 msgid "Fingerprint"
 msgstr "Մատնահետք"
 
@@ -721,15 +725,15 @@ msgstr "Անցնել {pageNumber}-րդ էջ"
 msgid "Go to previous page"
 msgstr "Անցնել նախորդ էջ"
 
-#: src/routes/_authenticated/app/$appId.tsx:514
+#: src/routes/_authenticated/app/$appId.tsx:530
 msgid "Grant"
 msgstr "Տրամադրել"
 
-#: src/routes/_authenticated/app/$appId.tsx:519
+#: src/routes/_authenticated/app/$appId.tsx:535
 msgid "Grant permission"
 msgstr "Տրամադրել թույլտվություն"
 
-#: src/routes/_authenticated/app/$appId.tsx:470
+#: src/routes/_authenticated/app/$appId.tsx:486
 msgid "Granting permission..."
 msgstr "Թույլտվությունը տրամադրվում է..."
 
@@ -760,11 +764,11 @@ msgstr "Տուն"
 msgid "Hot"
 msgstr "Թեժ"
 
-#: src/routes/_authenticated/app/$appId.tsx:228
+#: src/routes/_authenticated/app/$appId.tsx:244
 msgid "HTTP paths"
 msgstr "HTTP ուղիներ"
 
-#: src/routes/_authenticated/app/$appId.tsx:190
+#: src/routes/_authenticated/app/$appId.tsx:206
 msgid "Identity"
 msgstr "Ինքնություն"
 
@@ -777,7 +781,7 @@ msgid "Inset"
 msgstr "Տեղադրել տեղական"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
-#: src/features/apps/components/install-dialog.tsx:122
+#: src/features/apps/components/install-dialog.tsx:118
 #: src/features/apps/index.tsx:577
 #: src/features/apps/index.tsx:618
 #: src/features/apps/index.tsx:667
@@ -808,7 +812,7 @@ msgid "Installed apps"
 msgstr "Անբավարար միջոցներ"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
-#: src/features/apps/components/install-dialog.tsx:122
+#: src/features/apps/components/install-dialog.tsx:118
 #: src/features/apps/index.tsx:128
 #: src/features/apps/index.tsx:158
 #: src/features/apps/index.tsx:178
@@ -889,7 +893,7 @@ msgstr "Մուտքի պահանջներ"
 msgid "Logging out…"
 msgstr "Մուտքի պահանջները թարմացվեցին"
 
-#: src/routes/_authenticated/app/$appId.tsx:508
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "Manage capabilities granted to this application"
 msgstr "Կառավարեք տոմսերը և առաջադրանքները բարեկամական և բարձր ճկուն Kanban-ի ոճի ինտերֆեյսում։"
 
@@ -915,7 +919,7 @@ msgstr "Microsoft վարձակալ"
 msgid "Monday"
 msgstr "Ամենավերջին"
 
-#: src/features/routing/routing-table.tsx:104
+#: src/features/routing/routing-table.tsx:107
 msgid "Multiple apps declare this resource"
 msgstr "Անձայնեցնել հեղինակին"
 
@@ -986,11 +990,11 @@ msgstr "Համապատասխան հավելվածներ չկան"
 msgid "No paths configured."
 msgstr "Կարգավորված ուղիներ չկան։"
 
-#: src/routes/_authenticated/app/$appId.tsx:573
+#: src/routes/_authenticated/app/$appId.tsx:589
 msgid "No permissions granted"
 msgstr "Թույլտվություններ չեն տրվել"
 
-#: src/routes/_authenticated/app/$appId.tsx:508
+#: src/routes/_authenticated/app/$appId.tsx:524
 msgid "No permissions granted to this app"
 msgstr "Այս հավելվածին թույլտվություններ չեն տրվել"
 
@@ -1049,7 +1053,7 @@ msgstr "Չի գտնվել"
 msgid "Not set"
 msgstr "Չի սահմանված"
 
-#: src/routes/_authenticated/app/$appId.tsx:345
+#: src/routes/_authenticated/app/$appId.tsx:361
 msgid "Not versioned"
 msgstr "Տարբերակված չէ"
 
@@ -1070,8 +1074,8 @@ msgstr "Ուփ։ Էջը չի գտնվել։"
 msgid "Open account actions"
 msgstr "Բացել հաշվի գործողությունները"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:182
-#: ../../../lib/web/src/components/layout/nav-group.tsx:187
+#: ../../../lib/web/src/components/layout/nav-group.tsx:202
+#: ../../../lib/web/src/components/layout/nav-group.tsx:207
 msgid "Open actions"
 msgstr "Բացել գործողությունները"
 
@@ -1127,15 +1131,16 @@ msgstr "Ուղու հղում"
 msgid "Paths"
 msgstr "Ուղիներ"
 
-#: src/routes/_authenticated/app/$appId.tsx:471
+#: src/routes/_authenticated/app/$appId.tsx:487
 msgid "Permission granted"
 msgstr "Թույլտվությունը տրվեց"
 
-#: src/routes/_authenticated/app/$appId.tsx:452
+#: src/routes/_authenticated/app/$appId.tsx:468
 msgid "Permission revoked"
 msgstr "Թույլտվությունը հետ վերցվեց"
 
-#: src/routes/_authenticated/app/$appId.tsx:506
+#: src/routes/_authenticated/app/$appId.tsx:152
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Permissions"
 msgstr "Թույլտվություններ"
 
@@ -1160,7 +1165,7 @@ msgstr "Խնդրում ենք մի փոքր սպասել և նորից փորձ�
 msgid "Preference updated"
 msgstr "Նախընտրությունը թարմացվեց"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:433
 msgid "Preferred version"
 msgstr "Նախընտրած տարբերակ"
 
@@ -1179,7 +1184,7 @@ msgstr "Գաղտնիություն"
 msgid "Profile"
 msgstr "Պրոֆիլ"
 
-#: src/routes/_authenticated/app/$appId.tsx:212
+#: src/routes/_authenticated/app/$appId.tsx:228
 msgid "Provided classes"
 msgstr "Տրամադրված դասեր"
 
@@ -1256,20 +1261,20 @@ msgstr "Վերականգնել"
 msgid "Reset all settings to default values"
 msgstr "Վերականգնել բոլոր կարգավորումները լռելյայն արժեքների"
 
-#: src/routes/_authenticated/app/$appId.tsx:626
-#: src/routes/_authenticated/app/$appId.tsx:629
+#: src/routes/_authenticated/app/$appId.tsx:642
+#: src/routes/_authenticated/app/$appId.tsx:645
 msgid "Revoke"
 msgstr "Հետ վերցնել"
 
-#: src/routes/_authenticated/app/$appId.tsx:636
+#: src/routes/_authenticated/app/$appId.tsx:652
 msgid "Revoke permission"
 msgstr "Հետ վերցնել թույլտվությունը"
 
-#: src/routes/_authenticated/app/$appId.tsx:634
+#: src/routes/_authenticated/app/$appId.tsx:650
 msgid "Revoke permission?"
 msgstr "Հետ վերցնե՞լ թույլտվությունը։"
 
-#: src/routes/_authenticated/app/$appId.tsx:451
+#: src/routes/_authenticated/app/$appId.tsx:467
 msgid "Revoking permission..."
 msgstr "Թույլտվությունը հետ է կանչվում..."
 
@@ -1292,8 +1297,8 @@ msgstr "Պահպանել"
 
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:301
-#: src/routes/_authenticated/app/$appId.tsx:323
+#: src/routes/_authenticated/app/$appId.tsx:317
+#: src/routes/_authenticated/app/$appId.tsx:339
 msgid "Saving..."
 msgstr "Պահպանում..."
 
@@ -1335,7 +1340,7 @@ msgstr "Որոնում..."
 msgid "Searching..."
 msgstr "Որոնում..."
 
-#: src/routes/_authenticated/app/$appId.tsx:521
+#: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Select a capability to grant to {appName}."
 msgstr "Ընտրեք կարողություն՝ {appName}-ին տրամադրելու համար։"
 
@@ -1477,7 +1482,7 @@ msgid "System"
 msgstr "Համակարգ"
 
 #: src/features/routing/routing-table.tsx:79
-#: src/routes/_authenticated/app/$appId.tsx:402
+#: src/routes/_authenticated/app/$appId.tsx:418
 msgid "System default"
 msgstr "Համակարգի կանխադրված"
 
@@ -1498,7 +1503,7 @@ msgstr "Թեգեր"
 msgid "Teams/Apps"
 msgstr "Թիմեր/Հավելվածներ"
 
-#: src/routes/_authenticated/app/$appId.tsx:209
+#: src/routes/_authenticated/app/$appId.tsx:225
 msgid "Technical capabilities"
 msgstr "Տեխնիկական հնարավորություններ"
 
@@ -1515,7 +1520,7 @@ msgstr "Այդ կոդը սխալ է կամ ժամկետանց է։"
 msgid "The app has been installed successfully."
 msgstr "Հավելվածը հաջողությամբ տեղադրվեց:"
 
-#: src/routes/_authenticated/app/$appId.tsx:131
+#: src/routes/_authenticated/app/$appId.tsx:132
 msgid "The requested app could not be found."
 msgstr "Հարցված հավելվածը չի կարող գտնվել:"
 
@@ -1531,7 +1536,7 @@ msgstr "Թեմա"
 msgid "Theme Settings"
 msgstr "Թեմայի կարգավորումներ"
 
-#: src/routes/_authenticated/app/$appId.tsx:346
+#: src/routes/_authenticated/app/$appId.tsx:362
 msgid "This app does not have version management"
 msgstr "Այս հավելվածը չունի տարբերակների կառավարում"
 
@@ -1540,7 +1545,7 @@ msgid "This app is installed directly from its publisher and has not been vetted
 msgstr "Այս հավելվածը տեղադրված է անմիջապես իր հրապարակողից և չի ստուգվել: Այն կարող է լինել չարամիտ ծրագիր:"
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:635
+#: src/routes/_authenticated/app/$appId.tsx:651
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Սա կչեղարկի \"{0}\" թույլտվությունը {appName}-ից: Հավելվածը կարող է դադարել ճիշտ աշխատելուց:"
 
@@ -1557,10 +1562,10 @@ msgstr "Սյունակների փոխարկում"
 msgid "Toggle right panel"
 msgstr "Փոխարկել աջ վահանակը"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:351
-#: ../../../lib/web/src/components/layout/nav-group.tsx:358
-#: ../../../lib/web/src/components/layout/nav-group.tsx:481
-#: ../../../lib/web/src/components/layout/nav-group.tsx:488
+#: ../../../lib/web/src/components/layout/nav-group.tsx:373
+#: ../../../lib/web/src/components/layout/nav-group.tsx:380
+#: ../../../lib/web/src/components/layout/nav-group.tsx:503
+#: ../../../lib/web/src/components/layout/nav-group.tsx:510
 msgid "Toggle section"
 msgstr "Փոխարկել բաժինը"
 
@@ -1588,7 +1593,7 @@ msgid "Top"
 msgstr "Վերև"
 
 #: src/features/apps/index.tsx:735
-#: src/routes/_authenticated/app/$appId.tsx:365
+#: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "Հետևել"
 
@@ -1684,7 +1689,7 @@ msgstr "Հավելվածները թարմացվում են..."
 msgid "Updating..."
 msgstr "Թարմացվում է..."
 
-#: src/features/routing/routing-table.tsx:152
+#: src/features/routing/routing-table.tsx:155
 msgid "Use system default"
 msgstr "Օգտագործել համակարգի կանխադրվածը"
 
@@ -1718,7 +1723,7 @@ msgstr "Ստուգել"
 msgid "Verify email address"
 msgstr "Ստուգել էլ. փոստի հասցեն"
 
-#: src/routes/_authenticated/app/$appId.tsx:379
+#: src/routes/_authenticated/app/$appId.tsx:395
 msgid "Version"
 msgstr "Տարբերակ"
 
@@ -1727,15 +1732,19 @@ msgstr "Տարբերակ"
 msgid "Version {0}"
 msgstr "Տարբերակ {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:302
+#: src/routes/_authenticated/app/$appId.tsx:318
 msgid "Version changed"
 msgstr "Տարբերակը փոխվեց"
 
-#: src/routes/_authenticated/app/$appId.tsx:398
+#: src/routes/_authenticated/app/$appId.tsx:414
 msgid "Version management"
 msgstr "Տարբերակների կառավարում"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:74
+#: src/routes/_authenticated/app/$appId.tsx:151
+msgid "Versions"
+msgstr "Տարբերակներ"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:79
 msgid "Video thumbnail"
 msgstr "Տեսանյութի մանրապատկեր"
 
@@ -1776,6 +1785,6 @@ msgstr "Ձեր հաշիվը տեղափոխվել է այստեղ {source}-ից: 
 msgid "Your preference"
 msgstr "Ձեր նախընտրությունը"
 
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/routes/_authenticated/app/$appId.tsx:433
 msgid "Your version"
 msgstr "Ձեր տարբերակը"

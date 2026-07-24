@@ -60,7 +60,7 @@ export function AppInfoDialog({
         </ResponsiveDialogHeader>
 
         <div className='space-y-4 py-4'>
-          <div className='flex items-start gap-2 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800'>
+          <div className='flex items-start gap-2 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-800/60 dark:bg-amber-950/20 dark:text-amber-200'>
             <AlertTriangle className='mt-0.5 h-4 w-4 shrink-0' />
             <p>
               <Trans>

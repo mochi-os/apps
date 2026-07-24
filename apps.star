@@ -10,6 +10,9 @@
 # of ~25 sequential P2P round-trips.
 UPDATES_CACHE_TTL = 300
 
+# The Recommendations service entity queried by action_market.
+RECOMMENDATIONS_ENTITY = "1JYmMpQU7fxvTrwHpNpiwKCgUg3odWqX7s9t1cLswSMAro5M2P"
+
 def database_upgrade(version):
 	if version == 2:
 		# Drop the pre-2026-07 broadcast tables left in the app data DB when
@@ -87,7 +90,7 @@ def action_view(a):
 
 # Get available apps from the Recommendations service that are not installed
 def action_market(a):
-	s = mochi.remote.stream("1JYmMpQU7fxvTrwHpNpiwKCgUg3odWqX7s9t1cLswSMAro5M2P", "recommendations", "list", {"type": "app", "language": "en"})
+	s = mochi.remote.stream(RECOMMENDATIONS_ENTITY, "recommendations", "list", {"type": "app", "language": "en"})
 	if not s:
 		a.error.label(500, "errors.failed_to_connect_to_recommendations")
 		return

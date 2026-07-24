@@ -100,11 +100,7 @@ export function InstallDialog({
 
         <ResponsiveDialogFooter>
           <ResponsiveDialogClose asChild>
-            <Button
-              variant='outline'
-              disabled={isInstalling}
-              className='border-input hover:bg-hover focus:border-input focus-visible:border-input bg-transparent shadow-none focus:ring-0 focus:outline-none focus-visible:ring-0'
-            >
+            <Button variant='outline' disabled={isInstalling}>
               <Trans>Cancel</Trans>
             </Button>
           </ResponsiveDialogClose>

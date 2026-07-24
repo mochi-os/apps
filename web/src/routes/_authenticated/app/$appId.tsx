@@ -39,6 +39,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
+  getAppPath,
 } from '@mochi/web'
 import { Loader2, Plus, Shield, ShieldAlert, X, Package } from 'lucide-react'
 import { useInstalledAppsQuery } from '@/hooks/useApps'
@@ -145,19 +146,23 @@ function AppPage() {
       <Main className='pt-2 space-y-6'>
         <div className='flex items-center border-b'>
           <div className='flex gap-1'>
-            {(['details', 'versions', 'permissions'] as const).map((tab) => (
+            {([
+              ['details', t`Details`],
+              ['versions', t`Versions`],
+              ['permissions', t`Permissions`],
+            ] as const).map(([tab, label]) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={cn(
                   'px-4 py-2 text-sm font-medium transition-colors',
-                  'border-b-2 -mb-px capitalize',
+                  'border-b-2 -mb-px',
                   activeTab === tab
                     ? 'border-primary text-foreground'
                     : 'border-transparent text-muted-foreground hover:text-foreground'
                 )}
               >
-                {tab}
+                {label}
               </button>
             ))}
           </div>
@@ -166,7 +171,18 @@ function AppPage() {
         <div className='pt-2'>
           {activeTab === 'details' && <DetailsTab app={app} />}
           {activeTab === 'versions' && <VersionsTab appId={appId} />}
-          {activeTab === 'permissions' && <PermissionsTab appId={appId} appName={app.name} />}
+          {activeTab === 'permissions' && (
+            // This app manages permissions, so revoking permissions/manage from
+            // whichever app serves this page would lock the user out of the UI
+            // that undoes it. Identify "self" by the path we are served under
+            // rather than a hardcoded id, so it holds for the published copy
+            // (an entity id) as well as the development app.
+            <PermissionsTab
+              appId={appId}
+              appName={app.name}
+              isSelf={!!app.paths?.includes(getAppPath().replace(/^\//, ''))}
+            />
+          )}
         </div>
       </Main>
     </>
@@ -433,7 +449,7 @@ function VersionsTab({ appId }: { appId: string }) {
   )
 }
 
-function PermissionsTab({ appId, appName }: { appId: string; appName: string }) {
+function PermissionsTab({ appId, appName, isSelf }: { appId: string; appName: string; isSelf: boolean }) {
   const { t } = useLingui()
   const { data, isLoading, error, refetch } = useAppPermissions(appId)
   const { data: catalog } = usePermissionCatalog()
@@ -563,7 +579,7 @@ function PermissionsTab({ appId, appName }: { appId: string; appName: string }) 
               onRevoke={handleRevoke}
               isRevoking={revokingPermission === permission.permission}
               appName={appName}
-              canRevoke={!(appId === 'apps' && permission.permission === 'permissions/manage')}
+              canRevoke={!(isSelf && permission.permission === 'permissions/manage')}
             />
           ))
         ) : (

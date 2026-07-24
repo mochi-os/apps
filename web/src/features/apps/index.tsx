@@ -724,7 +724,7 @@ function InstalledAppCard({
       <CardHeader>
         <CardTitle className='truncate text-lg'>{app.name}</CardTitle>
         <div className='flex flex-wrap items-center gap-2 mt-1.5'>
-          <DataChip value={app.latest ?? 'v1.0.0'} />
+          {app.latest && <DataChip value={app.latest} />}
           {availableVersion && availableVersion !== app.latest && (
             <DataChip
               value={availableVersion}
