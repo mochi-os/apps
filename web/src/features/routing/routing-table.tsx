@@ -94,6 +94,9 @@ export function RoutingTable({
               resource.user ||
               resource.system ||
               (resource.apps.length > 0 ? resource.apps[0].id : '')
+            // May be undefined: a stale binding can point at an app that no
+            // longer declares this resource.
+            const effectiveAppInfo = resource.apps.find((a) => a.id === effectiveApp)
 
             return (
               <tr key={name} className='border-b last:border-b-0'>
@@ -150,9 +153,9 @@ export function RoutingTable({
                       <SelectItem value='_default'>
                         <span className='text-muted-foreground'>
                           {isAdmin ? <Trans>Use system default</Trans> : <Trans>Default</Trans>}
-                          {!resource.user && effectiveApp && (
+                          {!resource.user && effectiveAppInfo && (
                             <span className='ms-1'>
-                              ({formatAppName(resource.apps.find((a) => a.id === effectiveApp)!)})
+                              ({formatAppName(effectiveAppInfo)})
                             </span>
                           )}
                         </span>
