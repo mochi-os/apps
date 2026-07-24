@@ -24,6 +24,18 @@ def database_create():
 def is_entity_id(id):
 	return len(id) >= 50 and len(id) <= 51
 
+# Delete leftover archives in packages/ from install or upgrade actions that
+# aborted partway: a failed mochi.app.package.install or package.get ends the
+# action, so the delete that follows it never runs. Swept at the start of each
+# install/upgrade action. No file timestamps are available to age-gate, so a
+# concurrent install's archive can be swept too - that install fails cleanly
+# and a retry works.
+def sweep_packages():
+	if not mochi.file.exists("packages"):
+		return
+	for file in mochi.file.list("packages"):
+		mochi.file.delete("packages/" + file)
+
 # List installed apps (only Starlark apps)
 def action_list(a):
 	all_apps = mochi.app.list()
@@ -176,7 +188,8 @@ def action_install_publisher(a):
 		a.error.label(400, "errors.invalid_peer_id")
 		return
 
-	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
+	sweep_packages()
+	file = "packages/install_" + mochi.random.alphanumeric(8) + ".zip"
 	s = mochi.remote.stream(id, "publisher", "get", {"version": version}, peer)
 	if not s:
 		a.error.label(500, "errors.failed_to_connect_to_publisher")
@@ -199,14 +212,14 @@ def action_install_file(a):
 		a.error.label(403, "errors.app_installation_restricted_to_administrators")
 		return
 
-	file = a.input("file")
-	if not file:
+	name = a.input("file")
+	if not name:
 		a.error.label(400, "errors.no_file_provided")
 		return
-	if not mochi.text.valid(file, "filename"):
+	if not mochi.text.valid(name, "filename"):
 		a.error.label(400, "errors.invalid_filename")
 		return
-	if not file.endswith(".zip"):
+	if not name.endswith(".zip"):
 		a.error.label(400, "errors.file_must_be_a_zip_archive")
 		return
 
@@ -215,7 +228,10 @@ def action_install_file(a):
 		a.error.label(400, "errors.invalid_privacy")
 		return
 
-	# Save uploaded file
+	# Save the upload under a server-side name in packages/, where leftovers
+	# from aborted attempts are swept on the next install.
+	sweep_packages()
+	file = "packages/install_" + mochi.random.alphanumeric(8) + ".zip"
 	a.upload("file", file)
 
 	# Get app info from the zip file
@@ -224,6 +240,10 @@ def action_install_file(a):
 		mochi.file.delete(file)
 		a.error.label(400, "errors.failed_to_read_app_information")
 		return
+
+	# Prove the package installs before creating its entity: a failed install
+	# aborts the action, and an entity created first would be left orphaned.
+	mochi.app.package.install("", file, True)
 
 	# Create an entity for this app using the name from the archive
 	entity = mochi.entity.create("app", info["name"], privacy)
@@ -314,7 +334,8 @@ def action_install_id(a):
 		return
 
 	# Download and install
-	file = "install_" + mochi.random.alphanumeric(8) + ".zip"
+	sweep_packages()
+	file = "packages/install_" + mochi.random.alphanumeric(8) + ".zip"
 	if publisher:
 		s = mochi.remote.stream(publisher, "publisher", "get", {"app": id, "version": version})
 	else:
@@ -495,7 +516,8 @@ def action_upgrade(a):
 			return
 
 	# Download and install - route to publisher, pass app ID in content
-	file = "upgrade_" + mochi.random.alphanumeric(8) + ".zip"
+	sweep_packages()
+	file = "packages/upgrade_" + mochi.random.alphanumeric(8) + ".zip"
 	if publisher:
 		s = mochi.remote.stream(publisher, "publisher", "get", {"app": id, "version": version})
 	else:
