@@ -24,6 +24,11 @@ def database_create():
 def is_entity_id(id):
 	return len(id) >= 50 and len(id) <= 51
 
+# Format an entity id as its grouped 9-character fingerprint (aaa-bbb-ccc).
+def format_fingerprint(id):
+	fp = mochi.entity.fingerprint(id)
+	return fp[:3] + "-" + fp[3:6] + "-" + fp[6:]
+
 # Delete leftover archives in packages/ from install or upgrade actions that
 # aborted partway: a failed mochi.app.package.install or package.get ends the
 # action, so the delete that follows it never runs. Swept at the start of each
@@ -45,15 +50,14 @@ def action_list(a):
 		if app.get("engine") != "starlark":
 			continue
 		# Add user's track/version preference (for display on cards)
-		user_pref = a.user.app.version.get(app["id"])
-		if user_pref:
-			app["user_track"] = user_pref.get("track", "")
+		user_preference = a.user.app.version.get(app["id"])
+		if user_preference:
+			app["user_track"] = user_preference.get("track", "")
 			# If user has a version preference, show that instead of latest
-			if user_pref.get("version"):
-				app["latest"] = user_pref["version"]
+			if user_preference.get("version"):
+				app["latest"] = user_preference["version"]
 		if is_entity_id(app["id"]):
-			fp = mochi.entity.fingerprint(app["id"])
-			app["fingerprint"] = fp[:3] + "-" + fp[3:6] + "-" + fp[6:]
+			app["fingerprint"] = format_fingerprint(app["id"])
 			installed.append(app)
 		else:
 			app["fingerprint"] = ""
@@ -67,14 +71,16 @@ def action_list(a):
 # View a single installed app
 def action_view(a):
 	id = a.input("id")
+	if not id or len(id) > 51:
+		a.error.label(400, "errors.invalid_app_id")
+		return
 	app = mochi.app.get(id)
 	if not app:
 		a.error.label(404, "errors.app_not_found")
 		return
 
 	if is_entity_id(app["id"]):
-		fp = mochi.entity.fingerprint(app["id"])
-		app["fingerprint"] = fp[:3] + "-" + fp[3:6] + "-" + fp[6:]
+		app["fingerprint"] = format_fingerprint(app["id"])
 	else:
 		app["fingerprint"] = ""
 	return {"data": {"app": app}}
@@ -96,8 +102,12 @@ def action_market(a):
 		a.error.label(500, "errors.invalid_response_from_recommendations")
 		return
 	for item in items:
-		if not mochi.app.get(item["entity"]):
-			market.append({"id": item["entity"], "name": item["name"], "blurb": item["blurb"]})
+		if type(item) != "dict":
+			continue
+		entity = item.get("entity")
+		if not entity or mochi.app.get(entity):
+			continue
+		market.append({"id": entity, "name": item.get("name", ""), "blurb": item.get("blurb", "")})
 
 	return {"data": {"apps": market}}
 
@@ -135,11 +145,10 @@ def action_information(a):
 	# untrusted. Fingerprint the requested id, not the response's id, and
 	# reject a publisher that answers for a different app - otherwise it could
 	# show a trusted app's fingerprint while later serving its own bytes.
-	if app.get("id") != id:
+	if type(app) != "dict" or app.get("id") != id:
 		a.error.label(502, "errors.publisher_returned_wrong_app")
 		return
-	fp = mochi.entity.fingerprint(id)
-	fingerprint = fp[:3] + "-" + fp[3:6] + "-" + fp[6:]
+	fingerprint = format_fingerprint(id)
 	tracks = s.read()
 
 	return {"data": {"app": app, "fingerprint": fingerprint, "tracks": tracks, "peer": peer}}
@@ -332,15 +341,18 @@ def action_install_id(a):
 	# Reject a publisher answering for a different app than requested: the
 	# response drives the name/track shown and the version installed, and a
 	# caller-supplied publisher is untrusted (see action_information).
-	if app.get("id") != id:
+	if type(app) != "dict" or app.get("id") != id:
 		a.error.label(502, "errors.publisher_returned_wrong_app")
+		return
+	if type(tracks) not in ["list", "tuple"]:
+		a.error.label(502, "errors.failed_to_get_app_information")
 		return
 
 	# Find version for default track
 	default_track = app.get("default_track", "Production")
 	version = ""
 	for t in tracks:
-		if t.get("track") == default_track:
+		if type(t) == "dict" and t.get("track") == default_track:
 			version = t.get("version")
 			break
 
@@ -398,7 +410,6 @@ def is_newer_version(a, b):
 def action_updates(a):
 	all_apps = mochi.app.list()
 	updates = []
-	debug = []
 	cutoff = mochi.time.now() - UPDATES_CACHE_TTL
 
 	for app in all_apps:
@@ -407,38 +418,31 @@ def action_updates(a):
 		if not is_entity_id(app["id"]):
 			continue  # Skip development apps
 
-		app_debug = {"name": app.get("name"), "id": app["id"], "active": app.get("active")}
-
 		# Get user's track preference
-		user_pref = a.user.app.version.get(app["id"])
+		user_preference = a.user.app.version.get(app["id"])
 		user_track = ""
-		if user_pref:
-			user_track = user_pref.get("track", "")
+		if user_preference:
+			user_track = user_preference.get("track", "")
 			# Only skip if user is pinned to a specific version WITHOUT a track
-			if user_pref.get("version") and not user_track:
-				app_debug["skip"] = "pinned to version " + user_pref.get("version")
-				debug.append(app_debug)
+			if user_preference.get("version") and not user_track:
 				continue
 
 		# Resolve publisher (used both to query and to attribute updates)
 		publisher = ""
-		pub_config = app.get("publisher")
-		if pub_config and pub_config.get("entity"):
-			publisher = pub_config["entity"]
+		publisher_config = app.get("publisher")
+		if publisher_config and publisher_config.get("entity"):
+			publisher = publisher_config["entity"]
 
 		# Try cache before talking to the publisher
 		remote = None
 		cached = mochi.db.row("select data, checked from updates_cache where app=?", app["id"])
 		if cached and cached["checked"] >= cutoff:
 			remote = json.decode(cached["data"])
-			app_debug["cached"] = True
 
 		if remote == None:
 			if not publisher:
 				entry = mochi.directory.get(app["id"])
 				if not entry:
-					app_debug["skip"] = "not in directory"
-					debug.append(app_debug)
 					continue  # Not in directory, skip
 
 			# Query publisher for version info (includes all tracks)
@@ -447,13 +451,9 @@ def action_updates(a):
 			else:
 				s = mochi.remote.stream(app["id"], "publisher", "version", {"app": app["id"]})
 			if not s:
-				app_debug["skip"] = "stream failed"
-				debug.append(app_debug)
 				continue
 			r = s.read()
 			if r.get("status") != "200":
-				app_debug["skip"] = "status " + str(r.get("status"))
-				debug.append(app_debug)
 				continue
 
 			remote = s.read()
@@ -465,7 +465,6 @@ def action_updates(a):
 
 		# Determine which track to check for updates
 		check_track = user_track or default_track
-		app_debug["track"] = check_track
 
 		# Find version for the track we're checking
 		remote_version = ""
@@ -477,7 +476,6 @@ def action_updates(a):
 		# Fall back to default version field if track not found in array
 		if not remote_version:
 			remote_version = remote.get("version", "")
-		app_debug["remote_version"] = remote_version
 
 		# Compare with user's active version - only report strictly newer versions
 		current = app.get("active", app.get("latest"))
@@ -489,10 +487,6 @@ def action_updates(a):
 				"available": remote_version,
 				"publisher": publisher
 			})
-			app_debug["update"] = True
-		else:
-			app_debug["skip"] = "not newer"
-		debug.append(app_debug)
 
 	return {"data": {"updates": updates}}
 
@@ -521,9 +515,9 @@ def action_upgrade(a):
 
 	# Determine publisher
 	publisher = ""
-	pub_config = app.get("publisher")
-	if pub_config and pub_config.get("entity"):
-		publisher = pub_config["entity"]
+	publisher_config = app.get("publisher")
+	if publisher_config and publisher_config.get("entity"):
+		publisher = publisher_config["entity"]
 	else:
 		entry = mochi.directory.get(id)
 		if not entry:
@@ -692,17 +686,20 @@ def action_user_apps_app(a):
 			r = s.read()
 			if r.get("status", "") == "200":
 				app_info = s.read()
-				default_track = app_info.get("default_track", "")
+				if type(app_info) == "dict":
+					default_track = app_info.get("default_track", "")
 				publisher_tracks = s.read()
-				for t in publisher_tracks:
-					tracks[t["track"]] = t["version"]
+				if type(publisher_tracks) in ["list", "tuple"]:
+					for t in publisher_tracks:
+						if type(t) == "dict" and t.get("track"):
+							tracks[t["track"]] = t.get("version", "")
 
-	user_pref = a.user.app.version.get(app_id)
+	user_preference = a.user.app.version.get(app_id)
 
 	# Check if user's track preference still exists
 	track_warning = ""
-	if user_pref and user_pref.get("track"):
-		user_track = user_pref["track"]
+	if user_preference and user_preference.get("track"):
+		user_track = user_preference["track"]
 		if user_track not in tracks:
 			track_warning = mochi.app.label("warnings.track_no_longer_exists", track=user_track)
 
@@ -710,7 +707,7 @@ def action_user_apps_app(a):
 		"versions": versions,
 		"tracks": tracks,
 		"default_track": default_track,
-		"user": user_pref,
+		"user": user_preference,
 		"system": mochi.app.version.get(app_id),
 		"is_admin": a.user.role == "administrator",
 		"track_warning": track_warning,
@@ -747,7 +744,10 @@ def action_user_apps_version_set(a):
 			if a.user.role != "administrator" and mochi.setting.get("apps_install_user") != "true":
 				a.error.label(403, "errors.not_allowed_to_install_apps")
 				return
-			mochi.app.version.download(app_id, version)
+			# Don't pin the user to a version the publisher couldn't deliver.
+			if not mochi.app.version.download(app_id, version):
+				a.error.label(502, "errors.failed_to_download_app")
+				return
 
 	a.user.app.version.set(app_id, version, track)
 	return {"data": {"ok": True}}
@@ -893,7 +893,11 @@ def action_system_apps_version_set(a):
 	if version and is_entity_id(app_id):
 		installed_versions = mochi.app.version.list(app_id)
 		if version not in installed_versions:
-			mochi.app.version.download(app_id, version)
+			# Don't pin the system default to a version the publisher couldn't
+			# deliver - that would strand every user on a missing version.
+			if not mochi.app.version.download(app_id, version):
+				a.error.label(502, "errors.failed_to_download_app")
+				return
 
 	mochi.app.version.set(app_id, version, track)
 	return {"data": {"ok": True}}
@@ -1017,6 +1021,12 @@ def action_permissions_revoke(a):
 		return
 	if len(permission) > 100:
 		a.error.label(400, "errors.invalid_permission")
+		return
+
+	# Match action_permissions_set: don't write a revoked row for an app that
+	# doesn't exist.
+	if not mochi.app.get(app_id):
+		a.error.label(404, "errors.app_not_found")
 		return
 
 	mochi.permission.revoke(app_id, permission)
