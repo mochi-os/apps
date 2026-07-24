@@ -130,7 +130,15 @@ def action_information(a):
 		return
 
 	app = s.read()
-	fp = mochi.entity.fingerprint(app["id"])
+	# A caller can point us at an arbitrary publisher (peer/url override), and
+	# core verifies no package signature, so the publisher's response is
+	# untrusted. Fingerprint the requested id, not the response's id, and
+	# reject a publisher that answers for a different app - otherwise it could
+	# show a trusted app's fingerprint while later serving its own bytes.
+	if app.get("id") != id:
+		a.error.label(502, "errors.publisher_returned_wrong_app")
+		return
+	fp = mochi.entity.fingerprint(id)
 	fingerprint = fp[:3] + "-" + fp[3:6] + "-" + fp[6:]
 	tracks = s.read()
 
@@ -320,6 +328,13 @@ def action_install_id(a):
 
 	app = s.read()
 	tracks = s.read()
+
+	# Reject a publisher answering for a different app than requested: the
+	# response drives the name/track shown and the version installed, and a
+	# caller-supplied publisher is untrusted (see action_information).
+	if app.get("id") != id:
+		a.error.label(502, "errors.publisher_returned_wrong_app")
+		return
 
 	# Find version for default track
 	default_track = app.get("default_track", "Production")
