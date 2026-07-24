@@ -726,6 +726,12 @@ def action_user_apps_version_set(a):
 	if version and is_entity_id(app_id):
 		installed_versions = mochi.app.version.list(app_id)
 		if version not in installed_versions:
+			# Core enforces the same rule inside version.download; checking
+			# here turns its aborting internal error into the same labeled
+			# 403 action_version_download returns.
+			if a.user.role != "administrator" and mochi.setting.get("apps_install_user") != "true":
+				a.error.label(403, "errors.not_allowed_to_install_apps")
+				return
 			mochi.app.version.download(app_id, version)
 
 	a.user.app.version.set(app_id, version, track)
