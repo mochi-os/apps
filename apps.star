@@ -220,7 +220,10 @@ def action_install_publisher(a):
 		return
 
 	s.read.file(file)
-	mochi.app.package.install(id, file, False, peer)
+	# Pass the version we asked for: core rejects a package declaring a
+	# different one, so a publisher cannot answer a request for this version
+	# with another version's bytes.
+	mochi.app.package.install(id, file, False, peer, version)
 	mochi.file.delete(file)
 
 	return {"data": {"installed": True, "id": id, "version": version}}
@@ -379,7 +382,9 @@ def action_install_id(a):
 		return
 
 	s.read.file(file)
-	mochi.app.package.install(id, file, False, publisher)
+	# See action_install_publisher: require the package to declare the version
+	# the publisher told us this track points at.
+	mochi.app.package.install(id, file, False, publisher, version)
 	mochi.file.delete(file)
 
 	return {"data": {"installed": True, "id": id, "version": version, "name": app.get("name", "")}}
@@ -543,7 +548,9 @@ def action_upgrade(a):
 		return
 
 	s.read.file(file)
-	mochi.app.package.install(id, file, False, publisher)
+	# See action_install_publisher: the upgrade asked for a specific version,
+	# so require the package to declare it.
+	mochi.app.package.install(id, file, False, publisher, version)
 	mochi.file.delete(file)
 
 	return {"data": {"upgraded": True, "id": id, "version": version}}
