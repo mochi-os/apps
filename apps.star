@@ -88,9 +88,18 @@ def action_view(a):
 		app["fingerprint"] = ""
 	return {"data": {"app": app}}
 
+# Read the user's BCP 47 language tag, or "en" if unset / anonymous
+def user_language(a):
+	if not a.user:
+		return "en"
+	preference = a.user.preference.get("language")
+	if not preference:
+		return "en"
+	return str(preference).strip().lower()
+
 # Get available apps from the Recommendations service that are not installed
 def action_market(a):
-	s = mochi.remote.stream(RECOMMENDATIONS_ENTITY, "recommendations", "list", {"type": "app", "language": "en"})
+	s = mochi.remote.stream(RECOMMENDATIONS_ENTITY, "recommendations", "list", {"type": "app", "language": user_language(a)})
 	if not s:
 		a.error.label(500, "errors.failed_to_connect_to_recommendations")
 		return
