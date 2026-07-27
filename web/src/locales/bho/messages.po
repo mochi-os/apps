@@ -18,21 +18,26 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "कृपया आपन इंटरनेट कनेक्शन जाँचीं आ फेर से कोसिस करीं।"
 
+#. placeholder {0}: result.removed
+#: src/features/apps/index.tsx:242
+msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
+msgstr ""
+
 #. placeholder {0}: app.name
 #: src/features/routing/routing-table.tsx:23
 msgid "{0} (development)"
 msgstr "{0} (विकास)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:220
 msgid "{0} updated, {failed} failed"
 msgstr "{0} अपडेट भइल, {failed} विफल"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:160
-#: src/features/apps/index.tsx:180
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} स्थापित भइल बा।"
 
@@ -117,7 +122,7 @@ msgstr "टैग जोड़ीं..."
 msgid "Add team/app"
 msgstr "टीम/ऐप जोड़ीं"
 
-#: src/features/apps/index.tsx:647
+#: src/features/apps/index.tsx:648
 msgid "Add to directory"
 msgstr "निर्देशिका में जोड़ीं"
 
@@ -142,7 +147,7 @@ msgstr "AI"
 msgid "All"
 msgstr "सब"
 
-#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:213
 msgid "All apps updated"
 msgstr "सब ऐप अद्यतन कइल गइल"
 
@@ -154,13 +159,13 @@ msgstr "एगो त्रुटि भइल"
 msgid "An unexpected error occurred"
 msgstr "एगो अप्रत्याशित त्रुटि भइल"
 
-#: src/features/apps/index.tsx:160
+#: src/features/apps/index.tsx:161
 #: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "ऐप"
 
-#: src/features/apps/index.tsx:300
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:301
+#: src/features/apps/index.tsx:311
 msgid "App actions"
 msgstr "ऐप क्रिया"
 
@@ -168,11 +173,11 @@ msgstr "ऐप क्रिया"
 msgid "App information"
 msgstr "ऐप जानकारी"
 
-#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:130
 msgid "App installed"
 msgstr "ऐप स्थापित कइल गइल"
 
-#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:271
 msgid "App installed successfully"
 msgstr "ऐप सफलतापूर्वक इंस्टॉल भइल"
 
@@ -187,8 +192,8 @@ msgstr "आवेदन ID"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:63
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:64
+#: src/features/apps/index.tsx:352
 msgid "Apps"
 msgstr "ऐप"
 
@@ -217,7 +222,7 @@ msgstr "उपलब्ध संस्करण:"
 msgid "Available versions:"
 msgstr "उपलब्ध संस्करण:"
 
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:446
 msgid "Available, but not installed"
 msgstr "उपलब्ध बा, बाकिर स्थापित नइखे"
 
@@ -253,9 +258,9 @@ msgstr "रुचि बढ़ाईं"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:610
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:570
+#: src/features/apps/index.tsx:611
+#: src/features/apps/index.tsx:660
 #: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "रद्द करीं"
@@ -303,12 +308,12 @@ msgstr "वर्ग रूटिंग"
 msgid "Classes"
 msgstr "वर्ग"
 
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:341
 msgid "Clean up unused versions"
 msgstr "अनुपयोगी संस्करण साफ करीं"
 
-#: src/features/apps/index.tsx:233
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:234
+#: src/features/apps/index.tsx:341
 msgid "Cleaning up..."
 msgstr "साफ कइल जा रहल बा..."
 
@@ -420,10 +425,10 @@ msgstr "{label} के साथ आगे बढ़ीं"
 msgid "Copy"
 msgstr "कॉपी करीं"
 
-#: src/features/apps/index.tsx:133
-#: src/features/apps/index.tsx:161
-#: src/features/apps/index.tsx:181
-#: src/features/apps/index.tsx:271
+#: src/features/apps/index.tsx:134
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:182
+#: src/features/apps/index.tsx:272
 msgid "Could not install app."
 msgstr "ऐप इंस्टॉल ना हो सकल।"
 
@@ -534,7 +539,7 @@ msgstr "विवरण पैनल"
 msgid "Detect from web browser"
 msgstr "Web browser से पता लगाईं"
 
-#: src/features/apps/index.tsx:420
+#: src/features/apps/index.tsx:421
 msgid "Development apps"
 msgstr "विकास ऐप"
 
@@ -607,7 +612,7 @@ msgstr "अतिरिक्त बड़ा"
 msgid "Failed to add account"
 msgstr "खाता जोड़े में विफल"
 
-#: src/features/apps/index.tsx:235
+#: src/features/apps/index.tsx:236
 msgid "Failed to clean up apps"
 msgstr "ऐप साफ करे में असफल"
 
@@ -627,7 +632,7 @@ msgstr "अनुमति रद्द करे में विफल"
 msgid "Failed to send verification code"
 msgstr "सत्यापन कोड भेजे में विफल"
 
-#: src/features/apps/index.tsx:206
+#: src/features/apps/index.tsx:207
 msgid "Failed to update apps"
 msgstr "ऐप अपडेट करे में असफल"
 
@@ -648,7 +653,7 @@ msgstr "प्राथमिकता अपडेट करे में व�
 msgid "Failed to update system default"
 msgstr "सिस्टम डिफॉल्ट अपडेट करे में विफल"
 
-#: src/features/apps/index.tsx:640
+#: src/features/apps/index.tsx:641
 msgid "File:"
 msgstr "फाइल:"
 
@@ -682,7 +687,7 @@ msgstr "शुक्रवार"
 msgid "From"
 msgstr "से"
 
-#: src/features/apps/index.tsx:500
+#: src/features/apps/index.tsx:501
 msgid "From the directory"
 msgstr "डायरेक्टरी से"
 
@@ -782,44 +787,44 @@ msgstr "अंदर"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Install"
 msgstr "इंस्टॉल करीं"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:561
 msgid "Install {0}?"
 msgstr "{0} इंस्टॉल करीं?"
 
-#: src/features/apps/index.tsx:393
+#: src/features/apps/index.tsx:394
 msgid "Install apps from the market or upload your own"
 msgstr "मार्केट से ऐप इंस्टॉल करीं भा आपन खुद के अपलोड करीं"
 
-#: src/features/apps/index.tsx:332
-#: src/features/apps/index.tsx:636
+#: src/features/apps/index.tsx:333
+#: src/features/apps/index.tsx:637
 msgid "Install from file"
 msgstr "फाइल से इंस्टॉल करीं"
 
-#: src/features/apps/index.tsx:328
-#: src/features/apps/index.tsx:594
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:595
 msgid "Install from publisher"
 msgstr "प्रकाशक से इंस्टॉल करीं"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:377
 msgid "Installed apps"
 msgstr "इंस्टॉल कइल ऐप"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:128
-#: src/features/apps/index.tsx:158
-#: src/features/apps/index.tsx:178
-#: src/features/apps/index.tsx:269
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:159
+#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Installing..."
 msgstr "इंस्टॉल हो रहल बा..."
 
@@ -868,8 +873,8 @@ msgstr "संस्करण जानकारी लोड हो रहल �
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "लोड हो रहल बा…"
+msgid "Loading..."
+msgstr "लोड हो रहल बा..."
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -941,11 +946,11 @@ msgstr "अगिला तस्वीर"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "कौनो पहुँच नियम सेट नइखे। ए संसाधन पर के पहुँच कर सकेला, ओकरा खातिर नियम जोड़ीं।"
 
-#: src/features/apps/index.tsx:215
+#: src/features/apps/index.tsx:216
 msgid "No apps could be updated."
 msgstr "कौनो app अपडेट ना हो सकल।"
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:393
 msgid "No apps installed"
 msgstr "कौनो app इंस्टॉल नइखे"
 
@@ -957,11 +962,11 @@ msgstr "कौनो क्लास सेट नइखे।"
 msgid "No connected accounts"
 msgstr "कौनो जुड़ल खाता नइखे"
 
-#: src/features/apps/index.tsx:487
+#: src/features/apps/index.tsx:488
 msgid "No description"
 msgstr "कौनो विवरण नइखे"
 
-#: src/features/apps/index.tsx:425
+#: src/features/apps/index.tsx:426
 msgid "No development apps match \"{searchQuery}\""
 msgstr "कौनो विकास app \"{searchQuery}\" से मेल ना खाइल"
 
@@ -969,20 +974,20 @@ msgstr "कौनो विकास app \"{searchQuery}\" से मेल न�
 msgid "No groups available"
 msgstr "कौनो ग्रुप उपलब्ध नइखे"
 
-#: src/features/apps/index.tsx:518
+#: src/features/apps/index.tsx:519
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "डायरेक्टरी में कौनो इंस्टॉल करे लायक app \"{searchQuery}\" से मेल ना खाइल"
 
-#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:400
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "कौनो इंस्टॉल कइल app \"{searchQuery}\" से मेल ना खाइल"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:518
 msgid "No matches in directory"
 msgstr "डायरेक्टरी में कौनो मेल नइखे"
 
-#: src/features/apps/index.tsx:398
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:425
 msgid "No matching apps"
 msgstr "कौनो मेल खाए वाला app नइखे"
 
@@ -1006,7 +1011,7 @@ msgstr "कौनो जगह ना मिलल"
 msgid "No profile"
 msgstr "कौनो प्रोफाइल नइखे"
 
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:471
 msgid "No recommendations available"
 msgstr "कौनो सिफारिश उपलब्ध नइखे"
 
@@ -1027,7 +1032,7 @@ msgstr "कौनो टाइम जोन ना मिलल।"
 msgid "No topic record yet — try again after the next notification."
 msgstr "अबहीं तक कौनो विषय रिकॉर्ड नइखे — अगिला सूचना के बाद फेर कोशिश करीं।"
 
-#: src/features/apps/index.tsx:238
+#: src/features/apps/index.tsx:239
 msgid "No unused versions to clean up"
 msgstr "साफ करे खातिर कौनो अनप्रयुक्त संस्करण नइखे"
 
@@ -1114,7 +1119,7 @@ msgstr "पासकी सत्यापन विफल हो गइल। �
 msgid "Passkeys"
 msgstr "Passkey"
 
-#: src/features/apps/index.tsx:598
+#: src/features/apps/index.tsx:599
 msgid "Paste the install link:"
 msgstr "इंस्टॉल लिंक पेस्ट करीं:"
 
@@ -1149,7 +1154,7 @@ msgstr "अनुमति"
 msgid "Please check your internet connection and try again."
 msgstr "कृपया आपन इंटरनेट कनेक्शन जाँचीं आ फेर से कोसिस करीं।"
 
-#: src/features/apps/index.tsx:150
+#: src/features/apps/index.tsx:151
 msgid "Please enter an app ID"
 msgstr "app ID डालीं"
 
@@ -1202,7 +1207,7 @@ msgstr "एह सर्वर पर आपन पासकी फिर से
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:242
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:447
 msgid "Recommended"
 msgstr "सिफारिश कइल"
 
@@ -1241,12 +1246,6 @@ msgstr "पहुँच हटाईं?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "रुचि हटाईं"
-
-#. placeholder {0}: result.removed
-#. placeholder {1}: result.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:241
-msgid "Removed {0} unused version{1}"
-msgstr "{0} अनप्रयुक्त संस्करण{1} हटावल गइल"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1302,11 +1301,11 @@ msgstr "सहेजीं"
 msgid "Saving..."
 msgstr "सहेज रहल बा..."
 
-#: src/features/apps/index.tsx:365
+#: src/features/apps/index.tsx:366
 msgid "Search apps"
 msgstr "app खोजीं"
 
-#: src/features/apps/index.tsx:364
+#: src/features/apps/index.tsx:365
 msgid "Search apps..."
 msgstr "app खोजीं..."
 
@@ -1516,7 +1515,7 @@ msgstr "नियम आ शर्त"
 msgid "That code is incorrect or has expired."
 msgstr "ऊ कोड गलत बा भा ओकर मियाद खतम हो गइल बा।"
 
-#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:132
 msgid "The app has been installed successfully."
 msgstr "ऐप सफलतापूर्वक स्थापित भइल बा।"
 
@@ -1592,7 +1591,7 @@ msgstr "बहुते जादा अनुरोध"
 msgid "Top"
 msgstr "ऊपर"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:736
 #: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "ट्रैक"
@@ -1632,7 +1631,7 @@ msgstr "खोजे खातिर टाइप करीं..."
 msgid "Unable to connect to remote server"
 msgstr "रिमोट सर्वर से जुड़े में असमर्थ"
 
-#: src/features/apps/index.tsx:465
+#: src/features/apps/index.tsx:466
 msgid "Unable to connect to the recommendations service"
 msgstr "सिफारिश सेवा से जुड़ ना सकल"
 
@@ -1657,7 +1656,7 @@ msgstr "अनसौंपल"
 msgid "Unauthorized Access"
 msgstr "अनधिकृत पहुँच"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:465
 msgid "Unavailable"
 msgstr "अनुपलब्ध"
 
@@ -1669,23 +1668,23 @@ msgstr "संयुक्त राज्य अमेरिका"
 msgid "Unverified"
 msgstr "असत्यापित"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:732
 msgid "Update"
 msgstr "अपडेट करीं"
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Update all"
 msgstr "सब अपडेट करीं"
 
-#: src/features/apps/index.tsx:214
+#: src/features/apps/index.tsx:215
 msgid "Update failed"
 msgstr "अपडेट विफल भइल"
 
-#: src/features/apps/index.tsx:204
+#: src/features/apps/index.tsx:205
 msgid "Updating apps..."
 msgstr "ऐप अपडेट कइल जा रहल बा..."
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Updating..."
 msgstr "अपडेट हो रहल बा..."
 

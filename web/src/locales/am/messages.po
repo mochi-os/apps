@@ -18,21 +18,26 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "እባክዎ የበይነመረብ ግንኙነትዎን አረጋግጠው እንደገና ይሞክሩ።"
 
+#. placeholder {0}: result.removed
+#: src/features/apps/index.tsx:242
+msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
+msgstr ""
+
 #. placeholder {0}: app.name
 #: src/features/routing/routing-table.tsx:23
 msgid "{0} (development)"
 msgstr "{0} (ልማት)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:220
 msgid "{0} updated, {failed} failed"
 msgstr "{0} ተዘምኗል፣ {failed} አልተሳካም"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:160
-#: src/features/apps/index.tsx:180
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ተጭኗል።"
 
@@ -117,7 +122,7 @@ msgstr "መለያ ጨምር..."
 msgid "Add team/app"
 msgstr "ቡድን/መተግበሪያ ጨምር"
 
-#: src/features/apps/index.tsx:647
+#: src/features/apps/index.tsx:648
 msgid "Add to directory"
 msgstr "ወደ ማውጫ ጨምር"
 
@@ -142,7 +147,7 @@ msgstr "AI"
 msgid "All"
 msgstr "ሁሉም"
 
-#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:213
 msgid "All apps updated"
 msgstr "ሁሉም መተግበሪያዎች ተዘምነዋል"
 
@@ -154,13 +159,13 @@ msgstr "ስህተት ተከስቷል"
 msgid "An unexpected error occurred"
 msgstr "ያልተጠበቀ ስህተት ተከስቷል"
 
-#: src/features/apps/index.tsx:160
+#: src/features/apps/index.tsx:161
 #: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "መተግበሪያ"
 
-#: src/features/apps/index.tsx:300
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:301
+#: src/features/apps/index.tsx:311
 msgid "App actions"
 msgstr "የመተግበሪያ እርምጃዎች"
 
@@ -168,11 +173,11 @@ msgstr "የመተግበሪያ እርምጃዎች"
 msgid "App information"
 msgstr "የመተግበሪያ መረጃ"
 
-#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:130
 msgid "App installed"
 msgstr "መተግበሪያ ተጭኗል"
 
-#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:271
 msgid "App installed successfully"
 msgstr "መተግበሪያው በተሳካ ሁኔታ ተጭኗል"
 
@@ -187,8 +192,8 @@ msgstr "የመተግበሪያ መለያ"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:63
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:64
+#: src/features/apps/index.tsx:352
 msgid "Apps"
 msgstr "መተግበሪያዎች"
 
@@ -217,7 +222,7 @@ msgstr "ያለ ስሪት:"
 msgid "Available versions:"
 msgstr "ያሉ ስሪቶች:"
 
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:446
 msgid "Available, but not installed"
 msgstr "ይገኛል፣ ግን አልተጫነም"
 
@@ -253,9 +258,9 @@ msgstr "ፍላጎትን አሳድግ"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:610
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:570
+#: src/features/apps/index.tsx:611
+#: src/features/apps/index.tsx:660
 #: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "ይቅር"
@@ -303,12 +308,12 @@ msgstr "የክፍል ማዘዋወር"
 msgid "Classes"
 msgstr "ክፍሎች"
 
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:341
 msgid "Clean up unused versions"
 msgstr "ጥቅም ላይ ያልዋሉ ስሪቶችን አጽዳ"
 
-#: src/features/apps/index.tsx:233
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:234
+#: src/features/apps/index.tsx:341
 msgid "Cleaning up..."
 msgstr "በማጽዳት ላይ..."
 
@@ -420,10 +425,10 @@ msgstr "በ{label} ይቀጥሉ"
 msgid "Copy"
 msgstr "ቅዳ"
 
-#: src/features/apps/index.tsx:133
-#: src/features/apps/index.tsx:161
-#: src/features/apps/index.tsx:181
-#: src/features/apps/index.tsx:271
+#: src/features/apps/index.tsx:134
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:182
+#: src/features/apps/index.tsx:272
 msgid "Could not install app."
 msgstr "መተግበሪያውን መጫን አልተቻለም።"
 
@@ -534,7 +539,7 @@ msgstr "የዝርዝሮች ፓነል"
 msgid "Detect from web browser"
 msgstr "ከድር አሳሽ አውቅ"
 
-#: src/features/apps/index.tsx:420
+#: src/features/apps/index.tsx:421
 msgid "Development apps"
 msgstr "የልማት መተግበሪያዎች"
 
@@ -607,7 +612,7 @@ msgstr "በጣም ትልቅ"
 msgid "Failed to add account"
 msgstr "መለያ መጨመር አልተሳካም"
 
-#: src/features/apps/index.tsx:235
+#: src/features/apps/index.tsx:236
 msgid "Failed to clean up apps"
 msgstr "መተግበሪያዎችን ማጽዳት አልተሳካም"
 
@@ -627,7 +632,7 @@ msgstr "ፈቃድን መሻር አልተሳካም"
 msgid "Failed to send verification code"
 msgstr "የማረጋገጫ ኮድ መላክ አልተሳካም"
 
-#: src/features/apps/index.tsx:206
+#: src/features/apps/index.tsx:207
 msgid "Failed to update apps"
 msgstr "መተግበሪያዎችን ማዘመን አልተሳካም"
 
@@ -648,7 +653,7 @@ msgstr "ምርጫን ማዘመን አልተሳካም"
 msgid "Failed to update system default"
 msgstr "የስርዓት ነባሪን ማዘመን አልተሳካም"
 
-#: src/features/apps/index.tsx:640
+#: src/features/apps/index.tsx:641
 msgid "File:"
 msgstr "ፋይል:"
 
@@ -682,7 +687,7 @@ msgstr "ዓርብ"
 msgid "From"
 msgstr "ከ"
 
-#: src/features/apps/index.tsx:500
+#: src/features/apps/index.tsx:501
 msgid "From the directory"
 msgstr "ከማውጫው"
 
@@ -782,44 +787,44 @@ msgstr "ውስጠኛ"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Install"
 msgstr "ጫን"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:561
 msgid "Install {0}?"
 msgstr "{0}ን ይጫን?"
 
-#: src/features/apps/index.tsx:393
+#: src/features/apps/index.tsx:394
 msgid "Install apps from the market or upload your own"
 msgstr "መተግበሪያዎችን ከገበያው ይጫኑ ወይም የራስዎን ይስቀሉ"
 
-#: src/features/apps/index.tsx:332
-#: src/features/apps/index.tsx:636
+#: src/features/apps/index.tsx:333
+#: src/features/apps/index.tsx:637
 msgid "Install from file"
 msgstr "ከፋይል ጫን"
 
-#: src/features/apps/index.tsx:328
-#: src/features/apps/index.tsx:594
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:595
 msgid "Install from publisher"
 msgstr "ከአሳታሚ ጫን"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:377
 msgid "Installed apps"
 msgstr "የተጫኑ መተግበሪያዎች"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:128
-#: src/features/apps/index.tsx:158
-#: src/features/apps/index.tsx:178
-#: src/features/apps/index.tsx:269
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:159
+#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Installing..."
 msgstr "በመጫን ላይ..."
 
@@ -868,8 +873,8 @@ msgstr "የስሪት መረጃ በመጫን ላይ..."
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "በመጫን ላይ…"
+msgid "Loading..."
+msgstr "በመጫን ላይ..."
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -941,11 +946,11 @@ msgstr "ቀጣይ ምስል"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "ምንም የድረሳ ህጎች አልተዋቀሩም። ይህን ሀብት ማን እንደሚደርስ ለመቆጣጠር ህጎችን ያክሉ።"
 
-#: src/features/apps/index.tsx:215
+#: src/features/apps/index.tsx:216
 msgid "No apps could be updated."
 msgstr "ምንም መተግበሪያዎች ሊዘመኑ አልቻሉም።"
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:393
 msgid "No apps installed"
 msgstr "ምንም መተግበሪያዎች አልተጫኑም"
 
@@ -957,11 +962,11 @@ msgstr "ምንም ክፍሎች አልተዋቀሩም።"
 msgid "No connected accounts"
 msgstr "ምንም የተገናኙ መለያዎች የሉም"
 
-#: src/features/apps/index.tsx:487
+#: src/features/apps/index.tsx:488
 msgid "No description"
 msgstr "መግለጫ የለም"
 
-#: src/features/apps/index.tsx:425
+#: src/features/apps/index.tsx:426
 msgid "No development apps match \"{searchQuery}\""
 msgstr "ከ\"{searchQuery}\" ጋር የሚዛመዱ የልማት መተግበሪያዎች የሉም"
 
@@ -969,20 +974,20 @@ msgstr "ከ\"{searchQuery}\" ጋር የሚዛመዱ የልማት መተግበሪ
 msgid "No groups available"
 msgstr "ምንም ቡድኖች የሉም"
 
-#: src/features/apps/index.tsx:518
+#: src/features/apps/index.tsx:519
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "በማውጫ ውስጥ ከ\"{searchQuery}\" ጋር የሚዛመዱ ሊጫኑ የሚችሉ መተግበሪያዎች የሉም"
 
-#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:400
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "ከ\"{searchQuery}\" ጋር የሚዛመዱ የተጫኑ መተግበሪያዎች የሉም"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:518
 msgid "No matches in directory"
 msgstr "በማውጫ ውስጥ ምንም ግጥሚያዎች የሉም"
 
-#: src/features/apps/index.tsx:398
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:425
 msgid "No matching apps"
 msgstr "ምንም የሚዛመዱ መተግበሪያዎች የሉም"
 
@@ -1006,7 +1011,7 @@ msgstr "ምንም ቦታዎች አልተገኙም"
 msgid "No profile"
 msgstr "ምንም መገለጫ የለም"
 
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:471
 msgid "No recommendations available"
 msgstr "ምንም ምክሮች የሉም"
 
@@ -1027,7 +1032,7 @@ msgstr "ምንም የሰዓት ሰቅ አልተገኘም።"
 msgid "No topic record yet — try again after the next notification."
 msgstr "እስካሁን የርዕስ መዝገብ የለም — ከቀጣዩ ማሳወቂያ በኋላ እንደገና ይሞክሩ።"
 
-#: src/features/apps/index.tsx:238
+#: src/features/apps/index.tsx:239
 msgid "No unused versions to clean up"
 msgstr "ለማጽዳት ያልተጠቀሙ ስሪቶች የሉም"
 
@@ -1114,7 +1119,7 @@ msgstr "የይለፍ ቁልፍ ማረጋገጫ አልተሳካም። እባክ�
 msgid "Passkeys"
 msgstr "ፓስኪዎች"
 
-#: src/features/apps/index.tsx:598
+#: src/features/apps/index.tsx:599
 msgid "Paste the install link:"
 msgstr "የመጫን አገናኝን ይለጥፉ:"
 
@@ -1149,7 +1154,7 @@ msgstr "ፍቃዶች"
 msgid "Please check your internet connection and try again."
 msgstr "እባክዎ የበይነመረብ ግንኙነትዎን አረጋግጠው እንደገና ይሞክሩ።"
 
-#: src/features/apps/index.tsx:150
+#: src/features/apps/index.tsx:151
 msgid "Please enter an app ID"
 msgstr "እባክዎን የመተግበሪያ መለያ ያስገቡ"
 
@@ -1202,7 +1207,7 @@ msgstr "የይለፍ ቁልፎችዎን በዚህ አገልጋይ ላይ እን�
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:242
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:447
 msgid "Recommended"
 msgstr "የተመከረ"
 
@@ -1241,12 +1246,6 @@ msgstr "ድረሳ ይወገድ?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "ፍላጎት አስወግድ"
-
-#. placeholder {0}: result.removed
-#. placeholder {1}: result.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:241
-msgid "Removed {0} unused version{1}"
-msgstr "{0} ያልተጠቀሙ ስሪት{1} ተወግደዋል"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1302,11 +1301,11 @@ msgstr "ያስቀምጡ"
 msgid "Saving..."
 msgstr "በማስቀመጥ ላይ..."
 
-#: src/features/apps/index.tsx:365
+#: src/features/apps/index.tsx:366
 msgid "Search apps"
 msgstr "መተግበሪያዎችን ይፈልጉ"
 
-#: src/features/apps/index.tsx:364
+#: src/features/apps/index.tsx:365
 msgid "Search apps..."
 msgstr "መተግበሪያዎችን ይፈልጉ..."
 
@@ -1516,7 +1515,7 @@ msgstr "ውሎችና መመሪያዎች"
 msgid "That code is incorrect or has expired."
 msgstr "ያ ኮድ የተሳሳተ ነው ወይም ጊዜው አልፎበታል።"
 
-#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:132
 msgid "The app has been installed successfully."
 msgstr "መተግበሪያው በተሳካ ሁኔታ ተጭኗል።"
 
@@ -1592,7 +1591,7 @@ msgstr "በጣም ብዙ ጥያቄዎች"
 msgid "Top"
 msgstr "ላይ"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:736
 #: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "ትራክ"
@@ -1632,7 +1631,7 @@ msgstr "ለመፈለግ ይተይቡ..."
 msgid "Unable to connect to remote server"
 msgstr "ከርቀት አገልጋይ ጋር መገናኘት አልተቻለም"
 
-#: src/features/apps/index.tsx:465
+#: src/features/apps/index.tsx:466
 msgid "Unable to connect to the recommendations service"
 msgstr "ከምክሮች አገልግሎት ጋር መገናኘት አልተቻለም"
 
@@ -1657,7 +1656,7 @@ msgstr "ያልተመደበ"
 msgid "Unauthorized Access"
 msgstr "ያልተፈቀደ መዳረሻ"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:465
 msgid "Unavailable"
 msgstr "የማይገኝ"
 
@@ -1669,23 +1668,23 @@ msgstr "ዩናይትድ ስቴትስ"
 msgid "Unverified"
 msgstr "ያልተረጋገጠ"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:732
 msgid "Update"
 msgstr "ይዘምኑ"
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Update all"
 msgstr "ሁሉንም ይዘምኑ"
 
-#: src/features/apps/index.tsx:214
+#: src/features/apps/index.tsx:215
 msgid "Update failed"
 msgstr "ዝመና አልተሳካም"
 
-#: src/features/apps/index.tsx:204
+#: src/features/apps/index.tsx:205
 msgid "Updating apps..."
 msgstr "መተግበሪያዎችን በማዘመን ላይ..."
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Updating..."
 msgstr "በማዘመን ላይ..."
 

@@ -18,21 +18,26 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Vui lòng kiểm tra kết nối internet và thử lại."
 
+#. placeholder {0}: result.removed
+#: src/features/apps/index.tsx:242
+msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
+msgstr ""
+
 #. placeholder {0}: app.name
 #: src/features/routing/routing-table.tsx:23
 msgid "{0} (development)"
 msgstr "{0} (phát triển)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:220
 msgid "{0} updated, {failed} failed"
 msgstr "{0} đã cập nhật, {failed} đã thất bại"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:160
-#: src/features/apps/index.tsx:180
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} đã được cài đặt."
 
@@ -117,7 +122,7 @@ msgstr "Thêm thẻ..."
 msgid "Add team/app"
 msgstr "Thêm nhóm/ứng dụng"
 
-#: src/features/apps/index.tsx:647
+#: src/features/apps/index.tsx:648
 msgid "Add to directory"
 msgstr "Thêm vào danh bạ"
 
@@ -142,7 +147,7 @@ msgstr "AI"
 msgid "All"
 msgstr "Tất cả"
 
-#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:213
 msgid "All apps updated"
 msgstr "Đã cập nhật tất cả ứng dụng"
 
@@ -154,13 +159,13 @@ msgstr "Đã xảy ra lỗi"
 msgid "An unexpected error occurred"
 msgstr "Đã xảy ra lỗi không mong muốn"
 
-#: src/features/apps/index.tsx:160
+#: src/features/apps/index.tsx:161
 #: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "Ứng dụng"
 
-#: src/features/apps/index.tsx:300
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:301
+#: src/features/apps/index.tsx:311
 msgid "App actions"
 msgstr "Hành động ứng dụng"
 
@@ -168,11 +173,11 @@ msgstr "Hành động ứng dụng"
 msgid "App information"
 msgstr "Thông tin ứng dụng"
 
-#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:130
 msgid "App installed"
 msgstr "Đã cài đặt ứng dụng"
 
-#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:271
 msgid "App installed successfully"
 msgstr "Đã cài đặt ứng dụng thành công"
 
@@ -187,8 +192,8 @@ msgstr "ID ứng dụng"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:63
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:64
+#: src/features/apps/index.tsx:352
 msgid "Apps"
 msgstr "Ứng dụng"
 
@@ -217,7 +222,7 @@ msgstr "Phiên bản có sẵn:"
 msgid "Available versions:"
 msgstr "Các phiên bản có sẵn:"
 
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:446
 msgid "Available, but not installed"
 msgstr "Khả dụng, nhưng chưa cài đặt"
 
@@ -253,9 +258,9 @@ msgstr "Đẩy mạnh sở thích"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:610
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:570
+#: src/features/apps/index.tsx:611
+#: src/features/apps/index.tsx:660
 #: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "Hủy"
@@ -303,12 +308,12 @@ msgstr "Định tuyến class"
 msgid "Classes"
 msgstr "Class"
 
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:341
 msgid "Clean up unused versions"
 msgstr "Dọn dẹp phiên bản không dùng"
 
-#: src/features/apps/index.tsx:233
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:234
+#: src/features/apps/index.tsx:341
 msgid "Cleaning up..."
 msgstr "Đang dọn dẹp..."
 
@@ -420,10 +425,10 @@ msgstr "Tiếp tục với {label}"
 msgid "Copy"
 msgstr "Sao chép"
 
-#: src/features/apps/index.tsx:133
-#: src/features/apps/index.tsx:161
-#: src/features/apps/index.tsx:181
-#: src/features/apps/index.tsx:271
+#: src/features/apps/index.tsx:134
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:182
+#: src/features/apps/index.tsx:272
 msgid "Could not install app."
 msgstr "Không thể cài đặt ứng dụng."
 
@@ -534,7 +539,7 @@ msgstr "Bảng chi tiết"
 msgid "Detect from web browser"
 msgstr "Phát hiện từ trình duyệt web"
 
-#: src/features/apps/index.tsx:420
+#: src/features/apps/index.tsx:421
 msgid "Development apps"
 msgstr "Ứng dụng phát triển"
 
@@ -607,7 +612,7 @@ msgstr "Rất lớn"
 msgid "Failed to add account"
 msgstr "Không thêm tài khoản được"
 
-#: src/features/apps/index.tsx:235
+#: src/features/apps/index.tsx:236
 msgid "Failed to clean up apps"
 msgstr "Không thể dọn dẹp ứng dụng"
 
@@ -627,7 +632,7 @@ msgstr "Không thu hồi quyền được"
 msgid "Failed to send verification code"
 msgstr "Không gửi mã xác minh được"
 
-#: src/features/apps/index.tsx:206
+#: src/features/apps/index.tsx:207
 msgid "Failed to update apps"
 msgstr "Không thể cập nhật ứng dụng"
 
@@ -648,7 +653,7 @@ msgstr "Không cập nhật tuỳ chọn được"
 msgid "Failed to update system default"
 msgstr "Không cập nhật mặc định hệ thống được"
 
-#: src/features/apps/index.tsx:640
+#: src/features/apps/index.tsx:641
 msgid "File:"
 msgstr "Tệp:"
 
@@ -682,7 +687,7 @@ msgstr "Thứ Sáu"
 msgid "From"
 msgstr "Từ"
 
-#: src/features/apps/index.tsx:500
+#: src/features/apps/index.tsx:501
 msgid "From the directory"
 msgstr "Từ thư mục"
 
@@ -782,44 +787,44 @@ msgstr "Lõm vào"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Install"
 msgstr "Cài đặt"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:561
 msgid "Install {0}?"
 msgstr "Cài đặt {0}?"
 
-#: src/features/apps/index.tsx:393
+#: src/features/apps/index.tsx:394
 msgid "Install apps from the market or upload your own"
 msgstr "Cài đặt ứng dụng từ chợ hoặc tải lên ứng dụng riêng"
 
-#: src/features/apps/index.tsx:332
-#: src/features/apps/index.tsx:636
+#: src/features/apps/index.tsx:333
+#: src/features/apps/index.tsx:637
 msgid "Install from file"
 msgstr "Cài đặt từ tệp"
 
-#: src/features/apps/index.tsx:328
-#: src/features/apps/index.tsx:594
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:595
 msgid "Install from publisher"
 msgstr "Cài đặt từ nhà phát hành"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:377
 msgid "Installed apps"
 msgstr "Ứng dụng đã cài đặt"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:128
-#: src/features/apps/index.tsx:158
-#: src/features/apps/index.tsx:178
-#: src/features/apps/index.tsx:269
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:159
+#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Installing..."
 msgstr "Đang cài đặt..."
 
@@ -868,8 +873,8 @@ msgstr "Đang tải thông tin phiên bản..."
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "Đang tải…"
+msgid "Loading..."
+msgstr "Đang tải..."
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -941,11 +946,11 @@ msgstr "Hình tiếp theo"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Chưa cấu hình quy tắc truy cập. Thêm quy tắc để kiểm soát ai có thể truy cập tài nguyên này."
 
-#: src/features/apps/index.tsx:215
+#: src/features/apps/index.tsx:216
 msgid "No apps could be updated."
 msgstr "Không có ứng dụng nào có thể cập nhật."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:393
 msgid "No apps installed"
 msgstr "Chưa cài đặt ứng dụng nào"
 
@@ -957,11 +962,11 @@ msgstr "Không có lớp nào được cấu hình."
 msgid "No connected accounts"
 msgstr "Không có tài khoản đã kết nối"
 
-#: src/features/apps/index.tsx:487
+#: src/features/apps/index.tsx:488
 msgid "No description"
 msgstr "Không có mô tả"
 
-#: src/features/apps/index.tsx:425
+#: src/features/apps/index.tsx:426
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Không có ứng dụng phát triển nào khớp với \"{searchQuery}\""
 
@@ -969,20 +974,20 @@ msgstr "Không có ứng dụng phát triển nào khớp với \"{searchQuery}\
 msgid "No groups available"
 msgstr "Không có nhóm nào"
 
-#: src/features/apps/index.tsx:518
+#: src/features/apps/index.tsx:519
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Không có ứng dụng nào có thể cài đặt trong thư mục khớp với \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:400
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Không có ứng dụng đã cài đặt nào khớp với \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:518
 msgid "No matches in directory"
 msgstr "Không có kết quả khớp trong thư mục"
 
-#: src/features/apps/index.tsx:398
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:425
 msgid "No matching apps"
 msgstr "Không có ứng dụng khớp"
 
@@ -1006,7 +1011,7 @@ msgstr "Không tìm thấy địa điểm nào"
 msgid "No profile"
 msgstr "Không có hồ sơ"
 
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:471
 msgid "No recommendations available"
 msgstr "Không có gợi ý nào"
 
@@ -1027,7 +1032,7 @@ msgstr "Không tìm thấy múi giờ."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Chưa có bản ghi chủ đề — hãy thử lại sau thông báo tiếp theo."
 
-#: src/features/apps/index.tsx:238
+#: src/features/apps/index.tsx:239
 msgid "No unused versions to clean up"
 msgstr "Không có phiên bản không dùng nào để dọn dẹp"
 
@@ -1114,7 +1119,7 @@ msgstr "Xác minh mã khóa không thành công. Vui lòng thử lại."
 msgid "Passkeys"
 msgstr "Passkey"
 
-#: src/features/apps/index.tsx:598
+#: src/features/apps/index.tsx:599
 msgid "Paste the install link:"
 msgstr "Dán liên kết cài đặt:"
 
@@ -1149,7 +1154,7 @@ msgstr "Quyền"
 msgid "Please check your internet connection and try again."
 msgstr "Vui lòng kiểm tra kết nối internet và thử lại."
 
-#: src/features/apps/index.tsx:150
+#: src/features/apps/index.tsx:151
 msgid "Please enter an app ID"
 msgstr "Vui lòng nhập ID ứng dụng"
 
@@ -1202,7 +1207,7 @@ msgstr "Đăng ký lại mã khóa của bạn trên máy chủ này"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:242
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:447
 msgid "Recommended"
 msgstr "Được đề xuất"
 
@@ -1241,12 +1246,6 @@ msgstr "Xoá quyền truy cập?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "Xoá sở thích"
-
-#. placeholder {0}: result.removed
-#. placeholder {1}: result.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:241
-msgid "Removed {0} unused version{1}"
-msgstr "Đã xoá {0} phiên bản không dùng{1}"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1302,11 +1301,11 @@ msgstr "Lưu"
 msgid "Saving..."
 msgstr "Đang lưu..."
 
-#: src/features/apps/index.tsx:365
+#: src/features/apps/index.tsx:366
 msgid "Search apps"
 msgstr "Tìm kiếm ứng dụng"
 
-#: src/features/apps/index.tsx:364
+#: src/features/apps/index.tsx:365
 msgid "Search apps..."
 msgstr "Tìm kiếm ứng dụng..."
 
@@ -1516,7 +1515,7 @@ msgstr "Điều khoản và điều kiện"
 msgid "That code is incorrect or has expired."
 msgstr "Mã đó không đúng hoặc đã hết hạn."
 
-#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:132
 msgid "The app has been installed successfully."
 msgstr "Ứng dụng đã được cài đặt thành công."
 
@@ -1592,7 +1591,7 @@ msgstr "Quá nhiều yêu cầu"
 msgid "Top"
 msgstr "Đầu"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:736
 #: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "Kênh"
@@ -1632,7 +1631,7 @@ msgstr "Nhập để tìm kiếm..."
 msgid "Unable to connect to remote server"
 msgstr "Không thể kết nối đến máy chủ từ xa"
 
-#: src/features/apps/index.tsx:465
+#: src/features/apps/index.tsx:466
 msgid "Unable to connect to the recommendations service"
 msgstr "Không thể kết nối với dịch vụ đề xuất"
 
@@ -1657,7 +1656,7 @@ msgstr "Chưa phân công"
 msgid "Unauthorized Access"
 msgstr "Truy cập không được phép"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:465
 msgid "Unavailable"
 msgstr "Không khả dụng"
 
@@ -1669,23 +1668,23 @@ msgstr "Hoa Kỳ"
 msgid "Unverified"
 msgstr "Chưa xác minh"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:732
 msgid "Update"
 msgstr "Cập nhật"
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Update all"
 msgstr "Cập nhật tất cả"
 
-#: src/features/apps/index.tsx:214
+#: src/features/apps/index.tsx:215
 msgid "Update failed"
 msgstr "Cập nhật thất bại"
 
-#: src/features/apps/index.tsx:204
+#: src/features/apps/index.tsx:205
 msgid "Updating apps..."
 msgstr "Đang cập nhật ứng dụng..."
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Updating..."
 msgstr "Đang cập nhật..."
 

@@ -3,6 +3,7 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
+import { plural } from '@lingui/core/macro'
 import { useState, useRef } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { useNavigate } from '@tanstack/react-router'
@@ -238,7 +239,7 @@ export function Apps() {
         toast.info(t`No unused versions to clean up`)
       } else {
         toast.success(
-          t`Removed ${result.removed} unused version${result.removed === 1 ? '' : 's'}`
+          plural(result.removed, { one: 'Removed # unused version', other: 'Removed # unused versions' })
         )
       }
     } catch {

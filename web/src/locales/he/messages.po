@@ -18,21 +18,26 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "בדקו את חיבור האינטרנט ונסו שוב."
 
+#. placeholder {0}: result.removed
+#: src/features/apps/index.tsx:242
+msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
+msgstr ""
+
 #. placeholder {0}: app.name
 #: src/features/routing/routing-table.tsx:23
 msgid "{0} (development)"
 msgstr "{0} (פיתוח)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:220
 msgid "{0} updated, {failed} failed"
 msgstr "{0} עודכנו, {failed} נכשלו"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:160
-#: src/features/apps/index.tsx:180
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} הותקנה."
 
@@ -117,7 +122,7 @@ msgstr "הוסף תגית..."
 msgid "Add team/app"
 msgstr "הוסף צוות/אפליקציה"
 
-#: src/features/apps/index.tsx:647
+#: src/features/apps/index.tsx:648
 msgid "Add to directory"
 msgstr "הוסף לספרייה"
 
@@ -142,7 +147,7 @@ msgstr "AI"
 msgid "All"
 msgstr "הכול"
 
-#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:213
 msgid "All apps updated"
 msgstr "כל האפליקציות עודכנו"
 
@@ -154,13 +159,13 @@ msgstr "אירעה שגיאה"
 msgid "An unexpected error occurred"
 msgstr "אירעה שגיאה בלתי צפויה"
 
-#: src/features/apps/index.tsx:160
+#: src/features/apps/index.tsx:161
 #: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "אפליקציה"
 
-#: src/features/apps/index.tsx:300
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:301
+#: src/features/apps/index.tsx:311
 msgid "App actions"
 msgstr "פעולות אפליקציה"
 
@@ -168,11 +173,11 @@ msgstr "פעולות אפליקציה"
 msgid "App information"
 msgstr "מידע על האפליקציה"
 
-#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:130
 msgid "App installed"
 msgstr "האפליקציה הותקנה"
 
-#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:271
 msgid "App installed successfully"
 msgstr "האפליקציה הותקנה בהצלחה"
 
@@ -187,8 +192,8 @@ msgstr "מזהה אפליקציה"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:63
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:64
+#: src/features/apps/index.tsx:352
 msgid "Apps"
 msgstr "אפליקציות"
 
@@ -217,7 +222,7 @@ msgstr "גרסה זמינה:"
 msgid "Available versions:"
 msgstr "גרסאות זמינות:"
 
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:446
 msgid "Available, but not installed"
 msgstr "זמין, אך לא מותקן"
 
@@ -253,9 +258,9 @@ msgstr "הגבר עניין"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:610
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:570
+#: src/features/apps/index.tsx:611
+#: src/features/apps/index.tsx:660
 #: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "ביטול"
@@ -303,12 +308,12 @@ msgstr "ניתוב מחלקות"
 msgid "Classes"
 msgstr "מחלקות"
 
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:341
 msgid "Clean up unused versions"
 msgstr "נקה גרסאות לא בשימוש"
 
-#: src/features/apps/index.tsx:233
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:234
+#: src/features/apps/index.tsx:341
 msgid "Cleaning up..."
 msgstr "מנקה..."
 
@@ -420,10 +425,10 @@ msgstr "המשך עם {label}"
 msgid "Copy"
 msgstr "העתק"
 
-#: src/features/apps/index.tsx:133
-#: src/features/apps/index.tsx:161
-#: src/features/apps/index.tsx:181
-#: src/features/apps/index.tsx:271
+#: src/features/apps/index.tsx:134
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:182
+#: src/features/apps/index.tsx:272
 msgid "Could not install app."
 msgstr "לא ניתן להתקין את האפליקציה."
 
@@ -534,7 +539,7 @@ msgstr "פאנל פרטים"
 msgid "Detect from web browser"
 msgstr "זיהוי מהדפדפן"
 
-#: src/features/apps/index.tsx:420
+#: src/features/apps/index.tsx:421
 msgid "Development apps"
 msgstr "אפליקציות פיתוח"
 
@@ -607,7 +612,7 @@ msgstr "גדול במיוחד"
 msgid "Failed to add account"
 msgstr "הוספת החשבון נכשלה"
 
-#: src/features/apps/index.tsx:235
+#: src/features/apps/index.tsx:236
 msgid "Failed to clean up apps"
 msgstr "ניקוי האפליקציות נכשל"
 
@@ -627,7 +632,7 @@ msgstr "ביטול ההרשאה נכשל"
 msgid "Failed to send verification code"
 msgstr "שליחת קוד האימות נכשלה"
 
-#: src/features/apps/index.tsx:206
+#: src/features/apps/index.tsx:207
 msgid "Failed to update apps"
 msgstr "עדכון האפליקציות נכשל"
 
@@ -648,7 +653,7 @@ msgstr "עדכון ההעדפה נכשל"
 msgid "Failed to update system default"
 msgstr "עדכון ברירת המחדל של המערכת נכשל"
 
-#: src/features/apps/index.tsx:640
+#: src/features/apps/index.tsx:641
 msgid "File:"
 msgstr "קובץ:"
 
@@ -682,7 +687,7 @@ msgstr "שישי"
 msgid "From"
 msgstr "מאת"
 
-#: src/features/apps/index.tsx:500
+#: src/features/apps/index.tsx:501
 msgid "From the directory"
 msgstr "מהספרייה"
 
@@ -782,44 +787,44 @@ msgstr "פנימי"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Install"
 msgstr "התקן"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:561
 msgid "Install {0}?"
 msgstr "להתקין את {0}?"
 
-#: src/features/apps/index.tsx:393
+#: src/features/apps/index.tsx:394
 msgid "Install apps from the market or upload your own"
 msgstr "התקן אפליקציות מהשוק או העלה משלך"
 
-#: src/features/apps/index.tsx:332
-#: src/features/apps/index.tsx:636
+#: src/features/apps/index.tsx:333
+#: src/features/apps/index.tsx:637
 msgid "Install from file"
 msgstr "התקן מקובץ"
 
-#: src/features/apps/index.tsx:328
-#: src/features/apps/index.tsx:594
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:595
 msgid "Install from publisher"
 msgstr "התקן ממפיץ"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:377
 msgid "Installed apps"
 msgstr "אפליקציות מותקנות"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:128
-#: src/features/apps/index.tsx:158
-#: src/features/apps/index.tsx:178
-#: src/features/apps/index.tsx:269
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:159
+#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Installing..."
 msgstr "מתקין..."
 
@@ -868,8 +873,8 @@ msgstr "טוען מידע על הגרסה..."
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "טוען…"
+msgid "Loading..."
+msgstr "טוען..."
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -941,11 +946,11 @@ msgstr "התמונה הבאה"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "לא הוגדרו כללי גישה. הוסף כללים כדי לשלוט במי יכול לגשת למשאב זה."
 
-#: src/features/apps/index.tsx:215
+#: src/features/apps/index.tsx:216
 msgid "No apps could be updated."
 msgstr "לא ניתן לעדכן אפליקציות."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:393
 msgid "No apps installed"
 msgstr "לא מותקנות אפליקציות"
 
@@ -957,11 +962,11 @@ msgstr "לא הוגדרו מחלקות."
 msgid "No connected accounts"
 msgstr "אין חשבונות מקושרים"
 
-#: src/features/apps/index.tsx:487
+#: src/features/apps/index.tsx:488
 msgid "No description"
 msgstr "אין תיאור"
 
-#: src/features/apps/index.tsx:425
+#: src/features/apps/index.tsx:426
 msgid "No development apps match \"{searchQuery}\""
 msgstr "אין אפליקציות פיתוח שתואמות \"{searchQuery}\""
 
@@ -969,20 +974,20 @@ msgstr "אין אפליקציות פיתוח שתואמות \"{searchQuery}\""
 msgid "No groups available"
 msgstr "אין קבוצות זמינות"
 
-#: src/features/apps/index.tsx:518
+#: src/features/apps/index.tsx:519
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "אין אפליקציות הניתנות להתקנה בספרייה שתואמות \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:400
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "אין אפליקציות מותקנות שתואמות \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:518
 msgid "No matches in directory"
 msgstr "אין התאמות במדריך"
 
-#: src/features/apps/index.tsx:398
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:425
 msgid "No matching apps"
 msgstr "אין אפליקציות תואמות"
 
@@ -1006,7 +1011,7 @@ msgstr "לא נמצאו מקומות"
 msgid "No profile"
 msgstr "אין פרופיל"
 
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:471
 msgid "No recommendations available"
 msgstr "אין המלצות זמינות"
 
@@ -1027,7 +1032,7 @@ msgstr "לא נמצא אזור זמן."
 msgid "No topic record yet — try again after the next notification."
 msgstr "עדיין אין רשומת נושא — נסה שוב לאחר ההתראה הבאה."
 
-#: src/features/apps/index.tsx:238
+#: src/features/apps/index.tsx:239
 msgid "No unused versions to clean up"
 msgstr "אין גרסאות לא בשימוש לניקוי"
 
@@ -1114,7 +1119,7 @@ msgstr "אימות מפתח הגישה נכשל. נסה שוב."
 msgid "Passkeys"
 msgstr "מפתחות גישה"
 
-#: src/features/apps/index.tsx:598
+#: src/features/apps/index.tsx:599
 msgid "Paste the install link:"
 msgstr "הדבק את קישור ההתקנה:"
 
@@ -1149,7 +1154,7 @@ msgstr "הרשאות"
 msgid "Please check your internet connection and try again."
 msgstr "בדקו את חיבור האינטרנט ונסו שוב."
 
-#: src/features/apps/index.tsx:150
+#: src/features/apps/index.tsx:151
 msgid "Please enter an app ID"
 msgstr "הזן מזהה אפליקציה"
 
@@ -1202,7 +1207,7 @@ msgstr "רשמו מחדש את מפתחות הגישה שלכם בשרת הזה"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:242
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:447
 msgid "Recommended"
 msgstr "מומלץ"
 
@@ -1241,12 +1246,6 @@ msgstr "להסיר גישה?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "הסר עניין"
-
-#. placeholder {0}: result.removed
-#. placeholder {1}: result.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:241
-msgid "Removed {0} unused version{1}"
-msgstr "{0, plural, one {הוסרה גרסה אחת לא בשימוש} two {הוסרו שתי גרסאות לא בשימוש} many {הוסרו {0} גרסאות לא בשימוש} other {הוסרו {0} גרסאות לא בשימוש}}"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1302,11 +1301,11 @@ msgstr "שמור"
 msgid "Saving..."
 msgstr "שומר..."
 
-#: src/features/apps/index.tsx:365
+#: src/features/apps/index.tsx:366
 msgid "Search apps"
 msgstr "חפש אפליקציות"
 
-#: src/features/apps/index.tsx:364
+#: src/features/apps/index.tsx:365
 msgid "Search apps..."
 msgstr "חפש אפליקציות..."
 
@@ -1516,7 +1515,7 @@ msgstr "תנאים והגבלות"
 msgid "That code is incorrect or has expired."
 msgstr "הקוד שגוי או שתוקפו פג."
 
-#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:132
 msgid "The app has been installed successfully."
 msgstr "האפליקציה הותקנה בהצלחה."
 
@@ -1592,7 +1591,7 @@ msgstr "יותר מדי בקשות"
 msgid "Top"
 msgstr "ראש"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:736
 #: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "ערוץ"
@@ -1632,7 +1631,7 @@ msgstr "הקלד לחיפוש..."
 msgid "Unable to connect to remote server"
 msgstr "לא ניתן להתחבר לשרת המרוחק"
 
-#: src/features/apps/index.tsx:465
+#: src/features/apps/index.tsx:466
 msgid "Unable to connect to the recommendations service"
 msgstr "לא ניתן להתחבר לשירות ההמלצות"
 
@@ -1657,7 +1656,7 @@ msgstr "לא משויך"
 msgid "Unauthorized Access"
 msgstr "גישה לא מורשית"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:465
 msgid "Unavailable"
 msgstr "לא זמין"
 
@@ -1669,23 +1668,23 @@ msgstr "ארצות הברית"
 msgid "Unverified"
 msgstr "לא מאומת"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:732
 msgid "Update"
 msgstr "עדכן"
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Update all"
 msgstr "עדכן הכל"
 
-#: src/features/apps/index.tsx:214
+#: src/features/apps/index.tsx:215
 msgid "Update failed"
 msgstr "העדכון נכשל"
 
-#: src/features/apps/index.tsx:204
+#: src/features/apps/index.tsx:205
 msgid "Updating apps..."
 msgstr "מעדכן אפליקציות..."
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Updating..."
 msgstr "מעדכן..."
 

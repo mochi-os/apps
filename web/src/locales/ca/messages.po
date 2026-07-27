@@ -18,21 +18,26 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Comproveu la connexió a Internet i torneu-ho a provar."
 
+#. placeholder {0}: result.removed
+#: src/features/apps/index.tsx:242
+msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
+msgstr ""
+
 #. placeholder {0}: app.name
 #: src/features/routing/routing-table.tsx:23
 msgid "{0} (development)"
 msgstr "{0} (desenvolupament)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:220
 msgid "{0} updated, {failed} failed"
 msgstr "{0} actualitzat, {failed} ha fallat"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:160
-#: src/features/apps/index.tsx:180
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} s'ha instal·lat."
 
@@ -117,7 +122,7 @@ msgstr "Afegeix una etiqueta..."
 msgid "Add team/app"
 msgstr "Afegeix un equip o aplicació"
 
-#: src/features/apps/index.tsx:647
+#: src/features/apps/index.tsx:648
 msgid "Add to directory"
 msgstr "Afegeix al directori"
 
@@ -142,7 +147,7 @@ msgstr "IA"
 msgid "All"
 msgstr "Tot"
 
-#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:213
 msgid "All apps updated"
 msgstr "Totes les aplicacions actualitzades"
 
@@ -154,13 +159,13 @@ msgstr "S'ha produït un error"
 msgid "An unexpected error occurred"
 msgstr "S'ha produït un error inesperat"
 
-#: src/features/apps/index.tsx:160
+#: src/features/apps/index.tsx:161
 #: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "Aplicació"
 
-#: src/features/apps/index.tsx:300
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:301
+#: src/features/apps/index.tsx:311
 msgid "App actions"
 msgstr "Accions de l'aplicació"
 
@@ -168,11 +173,11 @@ msgstr "Accions de l'aplicació"
 msgid "App information"
 msgstr "Informació de l'aplicació"
 
-#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:130
 msgid "App installed"
 msgstr "Aplicació instal·lada"
 
-#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:271
 msgid "App installed successfully"
 msgstr "Aplicació instal·lada correctament"
 
@@ -187,8 +192,8 @@ msgstr "ID de l'aplicació"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:63
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:64
+#: src/features/apps/index.tsx:352
 msgid "Apps"
 msgstr "Aplicacions"
 
@@ -217,7 +222,7 @@ msgstr "Versió disponible:"
 msgid "Available versions:"
 msgstr "Versions disponibles:"
 
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:446
 msgid "Available, but not installed"
 msgstr "Disponible, però no instal·lada"
 
@@ -253,9 +258,9 @@ msgstr "Augmenta l'interès"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:610
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:570
+#: src/features/apps/index.tsx:611
+#: src/features/apps/index.tsx:660
 #: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "Cancel·la"
@@ -303,12 +308,12 @@ msgstr "Encaminament de la classe"
 msgid "Classes"
 msgstr "Classes"
 
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:341
 msgid "Clean up unused versions"
 msgstr "Neteja les versions sense usar"
 
-#: src/features/apps/index.tsx:233
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:234
+#: src/features/apps/index.tsx:341
 msgid "Cleaning up..."
 msgstr "Netejant..."
 
@@ -420,10 +425,10 @@ msgstr "Continua amb {label}"
 msgid "Copy"
 msgstr "Copia"
 
-#: src/features/apps/index.tsx:133
-#: src/features/apps/index.tsx:161
-#: src/features/apps/index.tsx:181
-#: src/features/apps/index.tsx:271
+#: src/features/apps/index.tsx:134
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:182
+#: src/features/apps/index.tsx:272
 msgid "Could not install app."
 msgstr "No s'ha pogut instal·lar l'aplicació."
 
@@ -534,7 +539,7 @@ msgstr "Panell de detalls"
 msgid "Detect from web browser"
 msgstr "Detecta des del navegador"
 
-#: src/features/apps/index.tsx:420
+#: src/features/apps/index.tsx:421
 msgid "Development apps"
 msgstr "Aplicacions de desenvolupament"
 
@@ -607,7 +612,7 @@ msgstr "Extra gran"
 msgid "Failed to add account"
 msgstr "No s'ha pogut afegir el compte"
 
-#: src/features/apps/index.tsx:235
+#: src/features/apps/index.tsx:236
 msgid "Failed to clean up apps"
 msgstr "No s'han pogut netejar les aplicacions"
 
@@ -627,7 +632,7 @@ msgstr "No s'ha pogut revocar el permís"
 msgid "Failed to send verification code"
 msgstr "No s'ha pogut enviar el codi de verificació"
 
-#: src/features/apps/index.tsx:206
+#: src/features/apps/index.tsx:207
 msgid "Failed to update apps"
 msgstr "No s'han pogut actualitzar les aplicacions"
 
@@ -648,7 +653,7 @@ msgstr "No s'ha pogut actualitzar la preferència"
 msgid "Failed to update system default"
 msgstr "No s'ha pogut actualitzar el valor per defecte del sistema"
 
-#: src/features/apps/index.tsx:640
+#: src/features/apps/index.tsx:641
 msgid "File:"
 msgstr "Fitxer:"
 
@@ -682,7 +687,7 @@ msgstr "Divendres"
 msgid "From"
 msgstr "De"
 
-#: src/features/apps/index.tsx:500
+#: src/features/apps/index.tsx:501
 msgid "From the directory"
 msgstr "Des del directori"
 
@@ -782,44 +787,44 @@ msgstr "Inset"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Install"
 msgstr "Instal·la"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:561
 msgid "Install {0}?"
 msgstr "Instal·lar {0}?"
 
-#: src/features/apps/index.tsx:393
+#: src/features/apps/index.tsx:394
 msgid "Install apps from the market or upload your own"
 msgstr "Instal·la aplicacions des del mercat o puja les teves pròpies"
 
-#: src/features/apps/index.tsx:332
-#: src/features/apps/index.tsx:636
+#: src/features/apps/index.tsx:333
+#: src/features/apps/index.tsx:637
 msgid "Install from file"
 msgstr "Instal·la des d'un fitxer"
 
-#: src/features/apps/index.tsx:328
-#: src/features/apps/index.tsx:594
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:595
 msgid "Install from publisher"
 msgstr "Instal·la des de l'editor"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:377
 msgid "Installed apps"
 msgstr "Aplicacions instal·lades"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:128
-#: src/features/apps/index.tsx:158
-#: src/features/apps/index.tsx:178
-#: src/features/apps/index.tsx:269
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:159
+#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Installing..."
 msgstr "S'està instal·lant..."
 
@@ -868,8 +873,8 @@ msgstr "S'està carregant la informació de la versió..."
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "S'està carregant…"
+msgid "Loading..."
+msgstr "S'està carregant..."
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -941,11 +946,11 @@ msgstr "Imatge següent"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "No s'han configurat regles d'accés. Afegeix regles per controlar qui pot accedir a aquest recurs."
 
-#: src/features/apps/index.tsx:215
+#: src/features/apps/index.tsx:216
 msgid "No apps could be updated."
 msgstr "No s'ha pogut actualitzar cap aplicació."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:393
 msgid "No apps installed"
 msgstr "Cap aplicació instal·lada"
 
@@ -957,11 +962,11 @@ msgstr "Cap classe configurada."
 msgid "No connected accounts"
 msgstr "Cap compte connectat"
 
-#: src/features/apps/index.tsx:487
+#: src/features/apps/index.tsx:488
 msgid "No description"
 msgstr "Sense descripció"
 
-#: src/features/apps/index.tsx:425
+#: src/features/apps/index.tsx:426
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Cap aplicació en desenvolupament coincideix amb «{searchQuery}»"
 
@@ -969,20 +974,20 @@ msgstr "Cap aplicació en desenvolupament coincideix amb «{searchQuery}»"
 msgid "No groups available"
 msgstr "No hi ha cap grup disponible"
 
-#: src/features/apps/index.tsx:518
+#: src/features/apps/index.tsx:519
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Cap aplicació instal·lable del directori coincideix amb «{searchQuery}»"
 
-#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:400
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Cap aplicació instal·lada coincideix amb «{searchQuery}»"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:518
 msgid "No matches in directory"
 msgstr "Cap coincidència al directori"
 
-#: src/features/apps/index.tsx:398
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:425
 msgid "No matching apps"
 msgstr "No hi ha aplicacions coincidents"
 
@@ -1006,7 +1011,7 @@ msgstr "No s'ha trobat cap lloc"
 msgid "No profile"
 msgstr "Sense perfil"
 
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:471
 msgid "No recommendations available"
 msgstr "No hi ha recomanacions disponibles"
 
@@ -1027,7 +1032,7 @@ msgstr "No s'ha trobat cap fus horari."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Encara no hi ha cap registre de tema; torna-ho a provar després de la pròxima notificació."
 
-#: src/features/apps/index.tsx:238
+#: src/features/apps/index.tsx:239
 msgid "No unused versions to clean up"
 msgstr "No hi ha versions sense ús per netejar"
 
@@ -1114,7 +1119,7 @@ msgstr "Ha fallat la verificació de la clau d'accés. Torneu-ho a provar."
 msgid "Passkeys"
 msgstr "Claus d'accés"
 
-#: src/features/apps/index.tsx:598
+#: src/features/apps/index.tsx:599
 msgid "Paste the install link:"
 msgstr "Enganxa l'enllaç d'instal·lació:"
 
@@ -1149,7 +1154,7 @@ msgstr "Permisos"
 msgid "Please check your internet connection and try again."
 msgstr "Comproveu la connexió a Internet i torneu-ho a provar."
 
-#: src/features/apps/index.tsx:150
+#: src/features/apps/index.tsx:151
 msgid "Please enter an app ID"
 msgstr "Introdueix un ID d'aplicació"
 
@@ -1202,7 +1207,7 @@ msgstr "Torna a registrar les teves claus d'accés en aquest servidor"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:242
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:447
 msgid "Recommended"
 msgstr "Recomanat"
 
@@ -1241,12 +1246,6 @@ msgstr "Vols eliminar l'accés?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "Elimina l'interès"
-
-#. placeholder {0}: result.removed
-#. placeholder {1}: result.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:241
-msgid "Removed {0} unused version{1}"
-msgstr "S'han eliminat {0} versions sense ús {1}"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1302,11 +1301,11 @@ msgstr "Desa"
 msgid "Saving..."
 msgstr "Desant..."
 
-#: src/features/apps/index.tsx:365
+#: src/features/apps/index.tsx:366
 msgid "Search apps"
 msgstr "Cerca aplicacions"
 
-#: src/features/apps/index.tsx:364
+#: src/features/apps/index.tsx:365
 msgid "Search apps..."
 msgstr "Cerca aplicacions..."
 
@@ -1516,7 +1515,7 @@ msgstr "Termes i condicions"
 msgid "That code is incorrect or has expired."
 msgstr "Aquest codi és incorrecte o ha caducat."
 
-#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:132
 msgid "The app has been installed successfully."
 msgstr "L'aplicació s'ha instal·lat correctament."
 
@@ -1592,7 +1591,7 @@ msgstr "Massa sol·licituds"
 msgid "Top"
 msgstr "Amunt"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:736
 #: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "Pista"
@@ -1632,7 +1631,7 @@ msgstr "Escriu per cercar..."
 msgid "Unable to connect to remote server"
 msgstr "No s'ha pogut connectar amb el servidor remot"
 
-#: src/features/apps/index.tsx:465
+#: src/features/apps/index.tsx:466
 msgid "Unable to connect to the recommendations service"
 msgstr "No s'ha pogut connectar amb el servei de recomanacions"
 
@@ -1657,7 +1656,7 @@ msgstr "Sense assignar"
 msgid "Unauthorized Access"
 msgstr "Accés no autoritzat"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:465
 msgid "Unavailable"
 msgstr "No disponible"
 
@@ -1669,23 +1668,23 @@ msgstr "Estats Units"
 msgid "Unverified"
 msgstr "No verificat"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:732
 msgid "Update"
 msgstr "Actualitza"
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Update all"
 msgstr "Actualitza-ho tot"
 
-#: src/features/apps/index.tsx:214
+#: src/features/apps/index.tsx:215
 msgid "Update failed"
 msgstr "L'actualització ha fallat"
 
-#: src/features/apps/index.tsx:204
+#: src/features/apps/index.tsx:205
 msgid "Updating apps..."
 msgstr "S'estan actualitzant les aplicacions..."
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Updating..."
 msgstr "Actualitzant..."
 

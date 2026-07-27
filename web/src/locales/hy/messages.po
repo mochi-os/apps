@@ -18,21 +18,26 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Ստուգեք ձեր ինտերնետ կապը և կրկին փորձեք։"
 
+#. placeholder {0}: result.removed
+#: src/features/apps/index.tsx:242
+msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
+msgstr ""
+
 #. placeholder {0}: app.name
 #: src/features/routing/routing-table.tsx:23
 msgid "{0} (development)"
 msgstr "{0} (մշակում)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:220
 msgid "{0} updated, {failed} failed"
 msgstr "{0} թարմացվեց, {failed} ձախողվեց"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:160
-#: src/features/apps/index.tsx:180
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1}-ը տեղադրվեց:"
 
@@ -117,7 +122,7 @@ msgstr "Ավելացրեք պիտակներ ձեր wiki-ի էջերը խմբավ
 msgid "Add team/app"
 msgstr "Ավելացնել տեղեկատու"
 
-#: src/features/apps/index.tsx:647
+#: src/features/apps/index.tsx:648
 msgid "Add to directory"
 msgstr "Ավելացնել գոյություն ունեցող ծանուցումներին"
 
@@ -142,7 +147,7 @@ msgstr "AI"
 msgid "All"
 msgstr "Բոլոր CRM-երը"
 
-#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:213
 msgid "All apps updated"
 msgstr "Բոլոր հասանելի խմբերն արդեն ավելացված են"
 
@@ -154,13 +159,13 @@ msgstr "Սխալ առաջացավ"
 msgid "An unexpected error occurred"
 msgstr "Անսպասելի սխալ առաջացավ"
 
-#: src/features/apps/index.tsx:160
+#: src/features/apps/index.tsx:161
 #: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "Հավելվածի ID"
 
-#: src/features/apps/index.tsx:300
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:301
+#: src/features/apps/index.tsx:311
 msgid "App actions"
 msgstr "Հավելվածի բիզնես տրամաբանություն"
 
@@ -168,11 +173,11 @@ msgstr "Հավելվածի բիզնես տրամաբանություն"
 msgid "App information"
 msgstr "Հավելվածի տեղեկություններ և կարգավորում"
 
-#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:130
 msgid "App installed"
 msgstr "Հավելվածը չի գտնվել"
 
-#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:271
 msgid "App installed successfully"
 msgstr "Հավելվածը հաջողությամբ տեղադրվեց"
 
@@ -187,8 +192,8 @@ msgstr "Կիրառել"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:63
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:64
+#: src/features/apps/index.tsx:352
 msgid "Apps"
 msgstr "Իսկապե՞ս վստահ եք։"
 
@@ -217,7 +222,7 @@ msgstr "Հասանելի տարբերակներ՝"
 msgid "Available versions:"
 msgstr "Հասանելի է, բայց տեղադրված չէ"
 
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:446
 msgid "Available, but not installed"
 msgstr "Սպասում է պատասխանի"
 
@@ -253,9 +258,9 @@ msgstr "Եզրագծի գույն"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:610
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:570
+#: src/features/apps/index.tsx:611
+#: src/features/apps/index.tsx:660
 #: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "Չեղարկել մեկնաբանությունը"
@@ -303,12 +308,12 @@ msgstr "Դասի երթուղավորում"
 msgid "Classes"
 msgstr "Մաքրել չօգտագործված տարբերակները"
 
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:341
 msgid "Clean up unused versions"
 msgstr "Մաքրվում է..."
 
-#: src/features/apps/index.tsx:233
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:234
+#: src/features/apps/index.tsx:341
 msgid "Cleaning up..."
 msgstr "Մաքրել"
 
@@ -420,10 +425,10 @@ msgstr "Շարունակել {label}-ով"
 msgid "Copy"
 msgstr "Պատճենել ամենը"
 
-#: src/features/apps/index.tsx:133
-#: src/features/apps/index.tsx:161
-#: src/features/apps/index.tsx:181
-#: src/features/apps/index.tsx:271
+#: src/features/apps/index.tsx:134
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:182
+#: src/features/apps/index.tsx:272
 msgid "Could not install app."
 msgstr "Չհաջողվեց տեղադրել հավելվածը։"
 
@@ -534,7 +539,7 @@ msgstr "Մանրամասների վահանակ"
 msgid "Detect from web browser"
 msgstr "Հայտնաբերել վեբ բրաուզերից"
 
-#: src/features/apps/index.tsx:420
+#: src/features/apps/index.tsx:421
 msgid "Development apps"
 msgstr "Մշակման հավելվածներ"
 
@@ -607,7 +612,7 @@ msgstr "Շատ մեծ"
 msgid "Failed to add account"
 msgstr "Չհաջողվեց ավելացնել հաշիվը"
 
-#: src/features/apps/index.tsx:235
+#: src/features/apps/index.tsx:236
 msgid "Failed to clean up apps"
 msgstr "Չհաջողվեց մաքրել հավելվածները"
 
@@ -627,7 +632,7 @@ msgstr "Չհաջողվեց հետ կանչել թույլտվությունը"
 msgid "Failed to send verification code"
 msgstr "Չհաջողվեց ուղարկել հաստատման կոդը"
 
-#: src/features/apps/index.tsx:206
+#: src/features/apps/index.tsx:207
 msgid "Failed to update apps"
 msgstr "Չհաջողվեց թարմացնել հավելվածները"
 
@@ -648,7 +653,7 @@ msgstr "Չհաջողվեց թարմացնել նախընտրությունը"
 msgid "Failed to update system default"
 msgstr "Չհաջողվեց թարմացնել համակարգի լռելյայնը"
 
-#: src/features/apps/index.tsx:640
+#: src/features/apps/index.tsx:641
 msgid "File:"
 msgstr "Ֆայլ՝"
 
@@ -682,7 +687,7 @@ msgstr "Ուրբաթ"
 msgid "From"
 msgstr "Ումից"
 
-#: src/features/apps/index.tsx:500
+#: src/features/apps/index.tsx:501
 msgid "From the directory"
 msgstr "Գրացուցակից"
 
@@ -782,44 +787,44 @@ msgstr "Տեղադրել տեղական"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Install"
 msgstr "Տեղադրեք հավելվածներ շուկայից կամ վերբեռնեք ձեր սեփականը"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:561
 msgid "Install {0}?"
 msgstr "Տեղադրվում է {0}…"
 
-#: src/features/apps/index.tsx:393
+#: src/features/apps/index.tsx:394
 msgid "Install apps from the market or upload your own"
 msgstr "Տեղադրեք այս հավելվածը ձեր սերվերում"
 
-#: src/features/apps/index.tsx:332
-#: src/features/apps/index.tsx:636
+#: src/features/apps/index.tsx:333
+#: src/features/apps/index.tsx:637
 msgid "Install from file"
 msgstr "Տեղադրել թարմացումը"
 
-#: src/features/apps/index.tsx:328
-#: src/features/apps/index.tsx:594
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:595
 msgid "Install from publisher"
 msgstr "Տեղադրե՞լ {0}։"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:377
 msgid "Installed apps"
 msgstr "Անբավարար միջոցներ"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:128
-#: src/features/apps/index.tsx:158
-#: src/features/apps/index.tsx:178
-#: src/features/apps/index.tsx:269
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:159
+#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Installing..."
 msgstr "Հետաքրքրությունը նվազեցվեց"
 
@@ -868,8 +873,8 @@ msgstr "Տեղադրություն"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "Կողպված է"
+msgid "Loading..."
+msgstr "Կողպել"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -941,11 +946,11 @@ msgstr "Հաջորդ նկարը"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Մուտքի կանոններ կարգավորված չեն։ Ավելացրեք կանոններ՝ կառավարելու, թե ով կարող է մուտք գործել այս ռեսուրսը։"
 
-#: src/features/apps/index.tsx:215
+#: src/features/apps/index.tsx:216
 msgid "No apps could be updated."
 msgstr "Ոչ մի հավելված չհաջողվեց թարմացնել։"
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:393
 msgid "No apps installed"
 msgstr "Տեղադրված հավելվածներ չկան"
 
@@ -957,11 +962,11 @@ msgstr "Կարգավորված դասեր չկան։"
 msgid "No connected accounts"
 msgstr "Կապակցված հաշիվներ չկան"
 
-#: src/features/apps/index.tsx:487
+#: src/features/apps/index.tsx:488
 msgid "No description"
 msgstr "Նկարագրություն չկա"
 
-#: src/features/apps/index.tsx:425
+#: src/features/apps/index.tsx:426
 msgid "No development apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\"-ին համապատասխան մշակման հավելվածներ չկան"
 
@@ -969,20 +974,20 @@ msgstr "\"{searchQuery}\"-ին համապատասխան մշակման հավե�
 msgid "No groups available"
 msgstr "Հասանելի խմբեր չկան"
 
-#: src/features/apps/index.tsx:518
+#: src/features/apps/index.tsx:519
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Կատալոգում \"{searchQuery}\"-ին համապատասխան տեղադրման ենթակա հավելվածներ չկան"
 
-#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:400
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\"-ին համապատասխան տեղադրված հավելվածներ չկան"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:518
 msgid "No matches in directory"
 msgstr "Կատալոգում համընկնումներ չկան"
 
-#: src/features/apps/index.tsx:398
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:425
 msgid "No matching apps"
 msgstr "Համապատասխան հավելվածներ չկան"
 
@@ -1006,7 +1011,7 @@ msgstr "Վայրեր չեն գտնվել"
 msgid "No profile"
 msgstr "Պրոֆիլ չկա"
 
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:471
 msgid "No recommendations available"
 msgstr "Հասանելի առաջարկություններ չկան"
 
@@ -1027,7 +1032,7 @@ msgstr "Ժամային գոտի չի գտնվել։"
 msgid "No topic record yet — try again after the next notification."
 msgstr "Դեռ թեմայի գրառում չկա — փորձեք նորից հաջորդ ծանուցումից հետո։"
 
-#: src/features/apps/index.tsx:238
+#: src/features/apps/index.tsx:239
 msgid "No unused versions to clean up"
 msgstr "Չօգտագործված տարբերակներ մաքրելու համար չկան"
 
@@ -1114,7 +1119,7 @@ msgstr "Անցաբանալու ստուգումը ձախողվեց։ Խնդրո�
 msgid "Passkeys"
 msgstr "Անցաբանալիներ"
 
-#: src/features/apps/index.tsx:598
+#: src/features/apps/index.tsx:599
 msgid "Paste the install link:"
 msgstr "Տեղադրեք տեղադրման հղումը:"
 
@@ -1149,7 +1154,7 @@ msgstr "Թույլտվություններ"
 msgid "Please check your internet connection and try again."
 msgstr "Ստուգեք ձեր ինտերնետ կապը և կրկին փորձեք։"
 
-#: src/features/apps/index.tsx:150
+#: src/features/apps/index.tsx:151
 msgid "Please enter an app ID"
 msgstr "Խնդրում ենք մուտքագրել հավելվածի ID-ն"
 
@@ -1202,7 +1207,7 @@ msgstr "Կրկին գրանցեք ձեր անցաբառերը այս սերվե�
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:242
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:447
 msgid "Recommended"
 msgstr "Առաջարկվող"
 
@@ -1241,12 +1246,6 @@ msgstr "Հեռացնե՞լ մուտքը։"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "Հեռացնել հետաքրքրությունը"
-
-#. placeholder {0}: result.removed
-#. placeholder {1}: result.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:241
-msgid "Removed {0} unused version{1}"
-msgstr "Հեռացվեց {0} չօգտագործված տարբերակ{1}"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1302,11 +1301,11 @@ msgstr "Պահպանել"
 msgid "Saving..."
 msgstr "Պահպանում..."
 
-#: src/features/apps/index.tsx:365
+#: src/features/apps/index.tsx:366
 msgid "Search apps"
 msgstr "Որոնել հավելվածներ"
 
-#: src/features/apps/index.tsx:364
+#: src/features/apps/index.tsx:365
 msgid "Search apps..."
 msgstr "Որոնել հավելվածներ..."
 
@@ -1516,7 +1515,7 @@ msgstr "Պայմաններ և կանոններ"
 msgid "That code is incorrect or has expired."
 msgstr "Այդ կոդը սխալ է կամ ժամկետանց է։"
 
-#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:132
 msgid "The app has been installed successfully."
 msgstr "Հավելվածը հաջողությամբ տեղադրվեց:"
 
@@ -1592,7 +1591,7 @@ msgstr "Չափազանց շատ հարցումներ"
 msgid "Top"
 msgstr "Վերև"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:736
 #: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "Հետևել"
@@ -1632,7 +1631,7 @@ msgstr "Մուտքագրեք որոնելու համար..."
 msgid "Unable to connect to remote server"
 msgstr "Հնարավոր չէ միանալ հեռավոր սերվերին"
 
-#: src/features/apps/index.tsx:465
+#: src/features/apps/index.tsx:466
 msgid "Unable to connect to the recommendations service"
 msgstr "Հնարավոր չէ միանալ առաջարկությունների ծառայությանը"
 
@@ -1657,7 +1656,7 @@ msgstr "Չվերագրված"
 msgid "Unauthorized Access"
 msgstr "Չլիազորված մուտք"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:465
 msgid "Unavailable"
 msgstr "Անհասանելի"
 
@@ -1669,23 +1668,23 @@ msgstr "Միացյալ Նահանգներ"
 msgid "Unverified"
 msgstr "Չստուգված"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:732
 msgid "Update"
 msgstr "Թարմացնել"
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Update all"
 msgstr "Թարմացնել բոլորը"
 
-#: src/features/apps/index.tsx:214
+#: src/features/apps/index.tsx:215
 msgid "Update failed"
 msgstr "Թարմացումը ձախողվեց"
 
-#: src/features/apps/index.tsx:204
+#: src/features/apps/index.tsx:205
 msgid "Updating apps..."
 msgstr "Հավելվածները թարմացվում են..."
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Updating..."
 msgstr "Թարմացվում է..."
 

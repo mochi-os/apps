@@ -18,21 +18,26 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക."
 
+#. placeholder {0}: result.removed
+#: src/features/apps/index.tsx:242
+msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
+msgstr ""
+
 #. placeholder {0}: app.name
 #: src/features/routing/routing-table.tsx:23
 msgid "{0} (development)"
 msgstr "{0} (വികസനം)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:220
 msgid "{0} updated, {failed} failed"
 msgstr "{0} അപ്‌ഡേറ്റ് ചെയ്തു, {failed} പരാജയപ്പെട്ടു"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:160
-#: src/features/apps/index.tsx:180
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ഇൻസ്റ്റാൾ ചെയ്തു."
 
@@ -117,7 +122,7 @@ msgstr "ടാഗ് ചേർക്കുക..."
 msgid "Add team/app"
 msgstr "ടീം/ആപ്പ് ചേർക്കുക"
 
-#: src/features/apps/index.tsx:647
+#: src/features/apps/index.tsx:648
 msgid "Add to directory"
 msgstr "ഡയറക്ടറിയിലേക്ക് ചേർക്കുക"
 
@@ -142,7 +147,7 @@ msgstr "AI"
 msgid "All"
 msgstr "എല്ലാം"
 
-#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:213
 msgid "All apps updated"
 msgstr "എല്ലാ ആപ്പുകളും അപ്ഡേറ്റ് ചെയ്തു"
 
@@ -154,13 +159,13 @@ msgstr "ഒരു പിശക് സംഭവിച്ചു"
 msgid "An unexpected error occurred"
 msgstr "അപ്രതീക്ഷിത പിശക് സംഭവിച്ചു"
 
-#: src/features/apps/index.tsx:160
+#: src/features/apps/index.tsx:161
 #: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "ആപ്പ്"
 
-#: src/features/apps/index.tsx:300
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:301
+#: src/features/apps/index.tsx:311
 msgid "App actions"
 msgstr "ആപ്പ് പ്രവർത്തനങ്ങൾ"
 
@@ -168,11 +173,11 @@ msgstr "ആപ്പ് പ്രവർത്തനങ്ങൾ"
 msgid "App information"
 msgstr "ആപ്പ് വിവരങ്ങൾ"
 
-#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:130
 msgid "App installed"
 msgstr "ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്തു"
 
-#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:271
 msgid "App installed successfully"
 msgstr "ആപ്പ് വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്തു"
 
@@ -187,8 +192,8 @@ msgstr "ആപ്ലിക്കേഷൻ ID"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:63
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:64
+#: src/features/apps/index.tsx:352
 msgid "Apps"
 msgstr "ആപ്പുകൾ"
 
@@ -217,7 +222,7 @@ msgstr "ലഭ്യമായ പതിപ്പ്:"
 msgid "Available versions:"
 msgstr "ലഭ്യമായ പതിപ്പുകൾ:"
 
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:446
 msgid "Available, but not installed"
 msgstr "ലഭ്യമാണ്, പക്ഷേ ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല"
 
@@ -253,9 +258,9 @@ msgstr "താൽപ്പര്യം വർദ്ധിപ്പിക്ക�
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:610
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:570
+#: src/features/apps/index.tsx:611
+#: src/features/apps/index.tsx:660
 #: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"
@@ -303,12 +308,12 @@ msgstr "ക്ലാസ് റൂട്ടിംഗ്"
 msgid "Classes"
 msgstr "ക്ലാസുകൾ"
 
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:341
 msgid "Clean up unused versions"
 msgstr "ഉപയോഗിക്കാത്ത പതിപ്പുകൾ വൃത്തിയാക്കുക"
 
-#: src/features/apps/index.tsx:233
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:234
+#: src/features/apps/index.tsx:341
 msgid "Cleaning up..."
 msgstr "വൃത്തിയാക്കുന്നു..."
 
@@ -420,10 +425,10 @@ msgstr "{label} ഉപയോഗിച്ച് തുടരുക"
 msgid "Copy"
 msgstr "പകർത്തുക"
 
-#: src/features/apps/index.tsx:133
-#: src/features/apps/index.tsx:161
-#: src/features/apps/index.tsx:181
-#: src/features/apps/index.tsx:271
+#: src/features/apps/index.tsx:134
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:182
+#: src/features/apps/index.tsx:272
 msgid "Could not install app."
 msgstr "ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യാൻ കഴിഞ്ഞില്ല."
 
@@ -534,7 +539,7 @@ msgstr "വിശദാംശ പാനൽ"
 msgid "Detect from web browser"
 msgstr "വെബ് ബ്രൗസറിൽ നിന്ന് കണ്ടെത്തുക"
 
-#: src/features/apps/index.tsx:420
+#: src/features/apps/index.tsx:421
 msgid "Development apps"
 msgstr "ഡെവലപ്മെന്റ് ആപ്പുകൾ"
 
@@ -607,7 +612,7 @@ msgstr "അധിക വലുത്"
 msgid "Failed to add account"
 msgstr "അക്കൗണ്ട് ചേർക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/apps/index.tsx:235
+#: src/features/apps/index.tsx:236
 msgid "Failed to clean up apps"
 msgstr "ആപ്പുകൾ വൃത്തിയാക്കാൻ കഴിഞ്ഞില്ല"
 
@@ -627,7 +632,7 @@ msgstr "അനുമതി റദ്ദാക്കുന്നതിൽ പര�
 msgid "Failed to send verification code"
 msgstr "സ്ഥിരീകരണ കോഡ് അയയ്ക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/apps/index.tsx:206
+#: src/features/apps/index.tsx:207
 msgid "Failed to update apps"
 msgstr "ആപ്പുകൾ അപ്ഡേറ്റ് ചെയ്യാൻ കഴിഞ്ഞില്ല"
 
@@ -648,7 +653,7 @@ msgstr "മുൻഗണന പുതുക്കുന്നതിൽ പരാ�
 msgid "Failed to update system default"
 msgstr "സിസ്റ്റം ഡിഫോൾട്ട് പുതുക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/apps/index.tsx:640
+#: src/features/apps/index.tsx:641
 msgid "File:"
 msgstr "ഫയൽ:"
 
@@ -682,7 +687,7 @@ msgstr "വെള്ളിയാഴ്ച"
 msgid "From"
 msgstr "നിന്ന്"
 
-#: src/features/apps/index.tsx:500
+#: src/features/apps/index.tsx:501
 msgid "From the directory"
 msgstr "ഡയറക്ടറിയിൽ നിന്ന്"
 
@@ -782,44 +787,44 @@ msgstr "ഇൻസെറ്റ്"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Install"
 msgstr "ഇൻസ്റ്റാൾ ചെയ്യുക"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:561
 msgid "Install {0}?"
 msgstr "{0} ഇൻസ്റ്റാൾ ചെയ്യണോ?"
 
-#: src/features/apps/index.tsx:393
+#: src/features/apps/index.tsx:394
 msgid "Install apps from the market or upload your own"
 msgstr "മാർക്കറ്റിൽ നിന്ന് ആപ്പുകൾ ഇൻസ്റ്റാൾ ചെയ്യുക അല്ലെങ്കിൽ നിങ്ങളുടെ സ്വന്തം അപ്‌ലോഡ് ചെയ്യുക"
 
-#: src/features/apps/index.tsx:332
-#: src/features/apps/index.tsx:636
+#: src/features/apps/index.tsx:333
+#: src/features/apps/index.tsx:637
 msgid "Install from file"
 msgstr "ഫയലിൽ നിന്ന് ഇൻസ്റ്റാൾ ചെയ്യുക"
 
-#: src/features/apps/index.tsx:328
-#: src/features/apps/index.tsx:594
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:595
 msgid "Install from publisher"
 msgstr "പബ്ലിഷറിൽ നിന്ന് ഇൻസ്റ്റാൾ ചെയ്യുക"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:377
 msgid "Installed apps"
 msgstr "ഇൻസ്റ്റാൾ ചെയ്ത ആപ്പുകൾ"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:128
-#: src/features/apps/index.tsx:158
-#: src/features/apps/index.tsx:178
-#: src/features/apps/index.tsx:269
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:159
+#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Installing..."
 msgstr "ഇൻസ്റ്റാൾ ചെയ്യുന്നു..."
 
@@ -868,8 +873,8 @@ msgstr "പതിപ്പ് വിവരങ്ങൾ ലോഡുചെയ്�
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "ലോഡുചെയ്യുന്നു…"
+msgid "Loading..."
+msgstr "ലോഡുചെയ്യുന്നു..."
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -941,11 +946,11 @@ msgstr "അടുത്ത ചിത്രം"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "ആക്സസ് നിയമങ്ങളൊന്നും കോൺഫിഗർ ചെയ്തിട്ടില്ല. ഈ റിസോഴ്സ് ആർക്കെല്ലാം ആക്സസ് ചെയ്യാമെന്ന് നിയന്ത്രിക്കാൻ നിയമങ്ങൾ ചേർക്കുക."
 
-#: src/features/apps/index.tsx:215
+#: src/features/apps/index.tsx:216
 msgid "No apps could be updated."
 msgstr "ആപ്പുകളൊന്നും അപ്ഡേറ്റ് ചെയ്യാൻ കഴിഞ്ഞില്ല."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:393
 msgid "No apps installed"
 msgstr "ആപ്പുകളൊന്നും ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല"
 
@@ -957,11 +962,11 @@ msgstr "ക്ലാസുകൾ കോൺഫിഗർ ചെയ്തിട്�
 msgid "No connected accounts"
 msgstr "ബന്ധിപ്പിച്ച അക്കൗണ്ടുകളൊന്നുമില്ല"
 
-#: src/features/apps/index.tsx:487
+#: src/features/apps/index.tsx:488
 msgid "No description"
 msgstr "വിവരണമില്ല"
 
-#: src/features/apps/index.tsx:425
+#: src/features/apps/index.tsx:426
 msgid "No development apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" മായി പൊരുത്തപ്പെടുന്ന വികസന ആപ്പുകളില്ല"
 
@@ -969,20 +974,20 @@ msgstr "\"{searchQuery}\" മായി പൊരുത്തപ്പെടു�
 msgid "No groups available"
 msgstr "ഗ്രൂപ്പുകളൊന്നും ലഭ്യമല്ല"
 
-#: src/features/apps/index.tsx:518
+#: src/features/apps/index.tsx:519
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "ഡയറക്ടറിയിൽ \"{searchQuery}\" മായി പൊരുത്തപ്പെടുന്ന ഇൻസ്റ്റാൾ ചെയ്യാവുന്ന ആപ്പുകളില്ല"
 
-#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:400
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" മായി പൊരുത്തപ്പെടുന്ന ഇൻസ്റ്റാൾ ചെയ്ത ആപ്പുകളില്ല"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:518
 msgid "No matches in directory"
 msgstr "ഡയറക്ടറിയിൽ പൊരുത്തങ്ങളൊന്നുമില്ല"
 
-#: src/features/apps/index.tsx:398
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:425
 msgid "No matching apps"
 msgstr "പൊരുത്തപ്പെടുന്ന ആപ്പുകളൊന്നുമില്ല"
 
@@ -1006,7 +1011,7 @@ msgstr "സ്ഥലങ്ങളൊന്നും കണ്ടെത്തി�
 msgid "No profile"
 msgstr "പ്രൊഫൈൽ ഇല്ല"
 
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:471
 msgid "No recommendations available"
 msgstr "ശുപാർശകളൊന്നും ലഭ്യമല്ല"
 
@@ -1027,7 +1032,7 @@ msgstr "സമയ മേഖലയൊന്നും കണ്ടെത്തി�
 msgid "No topic record yet — try again after the next notification."
 msgstr "വിഷയ റെക്കോർഡ് ഇതുവരെയില്ല — അടുത്ത അറിയിപ്പിന് ശേഷം വീണ്ടും ശ്രമിക്കുക."
 
-#: src/features/apps/index.tsx:238
+#: src/features/apps/index.tsx:239
 msgid "No unused versions to clean up"
 msgstr "വൃത്തിയാക്കാൻ ഉപയോഗിക്കാത്ത വേർഷനുകളൊന്നുമില്ല"
 
@@ -1114,7 +1119,7 @@ msgstr "പാസ്‌കീ പരിശോധന പരാജയപ്പെ�
 msgid "Passkeys"
 msgstr "പാസ്കീകൾ"
 
-#: src/features/apps/index.tsx:598
+#: src/features/apps/index.tsx:599
 msgid "Paste the install link:"
 msgstr "ഇൻസ്റ്റാൾ ലിങ്ക് പേസ്റ്റ് ചെയ്യുക:"
 
@@ -1149,7 +1154,7 @@ msgstr "അനുമതികൾ"
 msgid "Please check your internet connection and try again."
 msgstr "നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക."
 
-#: src/features/apps/index.tsx:150
+#: src/features/apps/index.tsx:151
 msgid "Please enter an app ID"
 msgstr "ഒരു ആപ്പ് ID നൽകുക"
 
@@ -1202,7 +1207,7 @@ msgstr "ഈ സെർവറിൽ നിങ്ങളുടെ പാസ്‌ക
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:242
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:447
 msgid "Recommended"
 msgstr "ശുപാർശ ചെയ്യുന്ന CRM-കൾ"
 
@@ -1241,12 +1246,6 @@ msgstr "അക്കൗണ്ട് നീക്കം ചെയ്യണോ?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "item നീക്കം ചെയ്യുക"
-
-#. placeholder {0}: result.removed
-#. placeholder {1}: result.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:241
-msgid "Removed {0} unused version{1}"
-msgstr "നീക്കം ചെയ്യുന്നു..."
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1302,11 +1301,11 @@ msgstr "സേവ് ചെയ്യുക"
 msgid "Saving..."
 msgstr "സേവ് ചെയ്യുന്നു..."
 
-#: src/features/apps/index.tsx:365
+#: src/features/apps/index.tsx:366
 msgid "Search apps"
 msgstr "ആപ്പുകൾ തിരയുക"
 
-#: src/features/apps/index.tsx:364
+#: src/features/apps/index.tsx:365
 msgid "Search apps..."
 msgstr "ആപ്പുകൾ തിരയുക..."
 
@@ -1516,7 +1515,7 @@ msgstr "നിബന്ധനകളും വ്യവസ്ഥകളും"
 msgid "That code is incorrect or has expired."
 msgstr "ആ കോഡ് തെറ്റാണ് അല്ലെങ്കിൽ കാലഹരണപ്പെട്ടു."
 
-#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:132
 msgid "The app has been installed successfully."
 msgstr "ആപ്പ് വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്തു."
 
@@ -1592,7 +1591,7 @@ msgstr "വളരെയധികം അഭ്യർത്ഥനകൾ"
 msgid "Top"
 msgstr "മുകളിൽ"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:736
 #: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "ട്രാക്ക്"
@@ -1632,7 +1631,7 @@ msgstr "തിരയാൻ ടൈപ്പ് ചെയ്യുക..."
 msgid "Unable to connect to remote server"
 msgstr "റിമോട്ട് സെർവറുമായി കണക്റ്റ് ചെയ്യാൻ കഴിഞ്ഞില്ല"
 
-#: src/features/apps/index.tsx:465
+#: src/features/apps/index.tsx:466
 msgid "Unable to connect to the recommendations service"
 msgstr "ശുപാർശ സർവീസിലേക്ക് കണക്റ്റ് ചെയ്യാൻ കഴിയുന്നില്ല"
 
@@ -1657,7 +1656,7 @@ msgstr "നിയോഗിച്ചിട്ടില്ല"
 msgid "Unauthorized Access"
 msgstr "അനുവദിക്കാത്ത ആക്സസ്"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:465
 msgid "Unavailable"
 msgstr "ലഭ്യമല്ല"
 
@@ -1669,23 +1668,23 @@ msgstr "യുണൈറ്റഡ് സ്റ്റേറ്റ്സ്"
 msgid "Unverified"
 msgstr "സ്ഥിരീകരിച്ചിട്ടില്ല"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:732
 msgid "Update"
 msgstr "അപ്ഡേറ്റ്"
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Update all"
 msgstr "എല്ലാം അപ്ഡേറ്റ് ചെയ്യുക"
 
-#: src/features/apps/index.tsx:214
+#: src/features/apps/index.tsx:215
 msgid "Update failed"
 msgstr "അപ്ഡേറ്റ് പരാജയപ്പെട്ടു"
 
-#: src/features/apps/index.tsx:204
+#: src/features/apps/index.tsx:205
 msgid "Updating apps..."
 msgstr "ആപ്പുകൾ അപ്ഡേറ്റ് ചെയ്യുന്നു..."
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Updating..."
 msgstr "അപ്ഡേറ്റ് ചെയ്യുന്നു..."
 

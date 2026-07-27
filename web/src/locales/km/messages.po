@@ -18,21 +18,26 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក រួចព្យាយាមម្តងទៀត។"
 
+#. placeholder {0}: result.removed
+#: src/features/apps/index.tsx:242
+msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
+msgstr ""
+
 #. placeholder {0}: app.name
 #: src/features/routing/routing-table.tsx:23
 msgid "{0} (development)"
 msgstr "{0} (development)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:220
 msgid "{0} updated, {failed} failed"
 msgstr "បានធ្វើបច្ចុប្បន្នភាព {0}, បរាជ័យ {failed}"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:160
-#: src/features/apps/index.tsx:180
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ត្រូវបានដំឡើង។"
 
@@ -117,7 +122,7 @@ msgstr "បន្ថែមស្លាក..."
 msgid "Add team/app"
 msgstr "បន្ថែមក្រុម/កម្មវិធី"
 
-#: src/features/apps/index.tsx:647
+#: src/features/apps/index.tsx:648
 msgid "Add to directory"
 msgstr "បន្ថែមទៅថត"
 
@@ -142,7 +147,7 @@ msgstr "AI"
 msgid "All"
 msgstr "ទាំងអស់"
 
-#: src/features/apps/index.tsx:212
+#: src/features/apps/index.tsx:213
 msgid "All apps updated"
 msgstr "បានធ្វើបច្ចុប្បន្នភាពកម្មវិធីទាំងអស់"
 
@@ -154,13 +159,13 @@ msgstr "មានកំហុសកើតឡើង"
 msgid "An unexpected error occurred"
 msgstr "មានកំហុសដែលមិនបានរំពឹងទុកកើតឡើង"
 
-#: src/features/apps/index.tsx:160
+#: src/features/apps/index.tsx:161
 #: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "កម្មវិធី"
 
-#: src/features/apps/index.tsx:300
-#: src/features/apps/index.tsx:310
+#: src/features/apps/index.tsx:301
+#: src/features/apps/index.tsx:311
 msgid "App actions"
 msgstr "សកម្មភាពកម្មវិធី"
 
@@ -168,11 +173,11 @@ msgstr "សកម្មភាពកម្មវិធី"
 msgid "App information"
 msgstr "ព័ត៌មានកម្មវិធី"
 
-#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:130
 msgid "App installed"
 msgstr "បានដំឡើងកម្មវិធី"
 
-#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:271
 msgid "App installed successfully"
 msgstr "បានដំឡើងកម្មវិធីដោយជោគជ័យ"
 
@@ -187,8 +192,8 @@ msgstr "លេខសម្គាល់កម្មវិធី"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:63
-#: src/features/apps/index.tsx:351
+#: src/features/apps/index.tsx:64
+#: src/features/apps/index.tsx:352
 msgid "Apps"
 msgstr "កម្មវិធី"
 
@@ -217,7 +222,7 @@ msgstr "កំណែដែលមាន៖"
 msgid "Available versions:"
 msgstr "កំណែដែលមាន៖"
 
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:446
 msgid "Available, but not installed"
 msgstr "មាន ប៉ុន្តែមិនបានដំឡើង"
 
@@ -253,9 +258,9 @@ msgstr "បង្កើនចំណាប់អារម្មណ៍"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:569
-#: src/features/apps/index.tsx:610
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:570
+#: src/features/apps/index.tsx:611
+#: src/features/apps/index.tsx:660
 #: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "បោះបង់"
@@ -303,12 +308,12 @@ msgstr "ការនាំផ្លូវថ្នាក់"
 msgid "Classes"
 msgstr "ថ្នាក់"
 
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:341
 msgid "Clean up unused versions"
 msgstr "សម្អាតកំណែដែលមិនបានប្រើ"
 
-#: src/features/apps/index.tsx:233
-#: src/features/apps/index.tsx:340
+#: src/features/apps/index.tsx:234
+#: src/features/apps/index.tsx:341
 msgid "Cleaning up..."
 msgstr "កំពុងសម្អាត..."
 
@@ -420,10 +425,10 @@ msgstr "បន្តជាមួយ {label}"
 msgid "Copy"
 msgstr "ចម្លង"
 
-#: src/features/apps/index.tsx:133
-#: src/features/apps/index.tsx:161
-#: src/features/apps/index.tsx:181
-#: src/features/apps/index.tsx:271
+#: src/features/apps/index.tsx:134
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:182
+#: src/features/apps/index.tsx:272
 msgid "Could not install app."
 msgstr "មិនអាចដំឡើងកម្មវិធីបានទេ។"
 
@@ -534,7 +539,7 @@ msgstr "ផ្ទាំងព័ត៌មានលម្អិត"
 msgid "Detect from web browser"
 msgstr "រកឃើញពីកម្មវិធីរុករកគេហទំព័រ"
 
-#: src/features/apps/index.tsx:420
+#: src/features/apps/index.tsx:421
 msgid "Development apps"
 msgstr "កម្មវិធីអភិវឌ្ឍ"
 
@@ -607,7 +612,7 @@ msgstr "ធំពិសេស"
 msgid "Failed to add account"
 msgstr "បរាជ័យក្នុងការបន្ថែមគណនី"
 
-#: src/features/apps/index.tsx:235
+#: src/features/apps/index.tsx:236
 msgid "Failed to clean up apps"
 msgstr "មិនអាចសម្អាតកម្មវិធីបានទេ"
 
@@ -627,7 +632,7 @@ msgstr "បរាជ័យក្នុងការដកហូតការអន
 msgid "Failed to send verification code"
 msgstr "បរាជ័យក្នុងការផ្ញើកូដផ្ទៀងផ្ទាត់"
 
-#: src/features/apps/index.tsx:206
+#: src/features/apps/index.tsx:207
 msgid "Failed to update apps"
 msgstr "មិនអាចធ្វើបច្ចុប្បន្នភាពកម្មវិធីបានទេ"
 
@@ -648,7 +653,7 @@ msgstr "បរាជ័យក្នុងការធ្វើបច្ចុប
 msgid "Failed to update system default"
 msgstr "បរាជ័យក្នុងការធ្វើបច្ចុប្បន្នភាពលំនាំដើមប្រព័ន្ធ"
 
-#: src/features/apps/index.tsx:640
+#: src/features/apps/index.tsx:641
 msgid "File:"
 msgstr "ឯកសារ៖"
 
@@ -682,7 +687,7 @@ msgstr "ថ្ងៃសុក្រ"
 msgid "From"
 msgstr "ពី"
 
-#: src/features/apps/index.tsx:500
+#: src/features/apps/index.tsx:501
 msgid "From the directory"
 msgstr "ពីថត"
 
@@ -782,44 +787,44 @@ msgstr "ខាងក្នុង"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Install"
 msgstr "ដំឡើង"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:560
+#: src/features/apps/index.tsx:561
 msgid "Install {0}?"
 msgstr "ដំឡើង {0}?"
 
-#: src/features/apps/index.tsx:393
+#: src/features/apps/index.tsx:394
 msgid "Install apps from the market or upload your own"
 msgstr "ដំឡើងកម្មវិធីពីទីផ្សារ ឬផ្ទុកឡើងផ្ទាល់ខ្លួនរបស់អ្នក"
 
-#: src/features/apps/index.tsx:332
-#: src/features/apps/index.tsx:636
+#: src/features/apps/index.tsx:333
+#: src/features/apps/index.tsx:637
 msgid "Install from file"
 msgstr "ដំឡើងពីឯកសារ"
 
-#: src/features/apps/index.tsx:328
-#: src/features/apps/index.tsx:594
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:595
 msgid "Install from publisher"
 msgstr "ដំឡើងពីអ្នកបោះពុម្ពផ្សាយ"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:377
 msgid "Installed apps"
 msgstr "កម្មវិធីដែលបានដំឡើង"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:128
-#: src/features/apps/index.tsx:158
-#: src/features/apps/index.tsx:178
-#: src/features/apps/index.tsx:269
-#: src/features/apps/index.tsx:577
-#: src/features/apps/index.tsx:618
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:129
+#: src/features/apps/index.tsx:159
+#: src/features/apps/index.tsx:179
+#: src/features/apps/index.tsx:270
+#: src/features/apps/index.tsx:578
+#: src/features/apps/index.tsx:619
+#: src/features/apps/index.tsx:668
 msgid "Installing..."
 msgstr "កំពុងដំឡើង..."
 
@@ -868,8 +873,8 @@ msgstr "កំពុងផ្ទុកព័ត៌មានកំណែ..."
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "កំពុងផ្ទុក…"
+msgid "Loading..."
+msgstr "កំពុងផ្ទុក..."
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -941,11 +946,11 @@ msgstr "រូបភាពបន្ទាប់"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "មិនមានច្បាប់ចូលប្រើបានកំណត់រចនាសម្ព័ន្ធទេ។ បន្ថែមច្បាប់ដើម្បីគ្រប់គ្រងអ្នកដែលអាចចូលប្រើធនធាននេះ។"
 
-#: src/features/apps/index.tsx:215
+#: src/features/apps/index.tsx:216
 msgid "No apps could be updated."
 msgstr "មិនមានកម្មវិធីណាមួយដែលអាចធ្វើបច្ចុប្បន្នភាពបាន។"
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:393
 msgid "No apps installed"
 msgstr "មិនមានកម្មវិធីដែលបានដំឡើង"
 
@@ -957,11 +962,11 @@ msgstr "មិនមានថ្នាក់ដែលបានកំណត់រ
 msgid "No connected accounts"
 msgstr "មិនមានគណនីភ្ជាប់"
 
-#: src/features/apps/index.tsx:487
+#: src/features/apps/index.tsx:488
 msgid "No description"
 msgstr "គ្មានការពិពណ៌នា"
 
-#: src/features/apps/index.tsx:425
+#: src/features/apps/index.tsx:426
 msgid "No development apps match \"{searchQuery}\""
 msgstr "មិនមានកម្មវិធីអភិវឌ្ឍន៍ត្រូវនឹង \"{searchQuery}\""
 
@@ -969,20 +974,20 @@ msgstr "មិនមានកម្មវិធីអភិវឌ្ឍន៍ត
 msgid "No groups available"
 msgstr "មិនមានក្រុម"
 
-#: src/features/apps/index.tsx:518
+#: src/features/apps/index.tsx:519
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "មិនមានកម្មវិធីដែលអាចដំឡើងបាននៅក្នុងថតត្រូវនឹង \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:400
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "មិនមានកម្មវិធីដែលបានដំឡើងត្រូវនឹង \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:518
 msgid "No matches in directory"
 msgstr "មិនមានលទ្ធផលត្រូវនឹងនៅក្នុងថត"
 
-#: src/features/apps/index.tsx:398
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:399
+#: src/features/apps/index.tsx:425
 msgid "No matching apps"
 msgstr "មិនមានកម្មវិធីដែលត្រូវនឹង"
 
@@ -1006,7 +1011,7 @@ msgstr "រកមិនឃើញកន្លែង"
 msgid "No profile"
 msgstr "មិនមានប្រវត្តិរូប"
 
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:471
 msgid "No recommendations available"
 msgstr "មិនមានការណែនាំ"
 
@@ -1027,7 +1032,7 @@ msgstr "រកមិនឃើញតំបន់ពេលវេលា។"
 msgid "No topic record yet — try again after the next notification."
 msgstr "មិនទាន់មានកំណត់ត្រាប្រធានបទ — សាកល្បងម្តងទៀតបន្ទាប់ពីការជូនដំណឹងលើកក្រោយ។"
 
-#: src/features/apps/index.tsx:238
+#: src/features/apps/index.tsx:239
 msgid "No unused versions to clean up"
 msgstr "មិនមានកំណែដែលមិនបានប្រើដើម្បីសម្អាត"
 
@@ -1114,7 +1119,7 @@ msgstr "ការផ្ទៀងផ្ទាត់ passkey បានបរាជ
 msgid "Passkeys"
 msgstr "កូនសោចូល"
 
-#: src/features/apps/index.tsx:598
+#: src/features/apps/index.tsx:599
 msgid "Paste the install link:"
 msgstr "បិទភ្ជាប់តំណដំឡើង:"
 
@@ -1149,7 +1154,7 @@ msgstr "សិទ្ធិ"
 msgid "Please check your internet connection and try again."
 msgstr "សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក រួចព្យាយាមម្តងទៀត។"
 
-#: src/features/apps/index.tsx:150
+#: src/features/apps/index.tsx:151
 msgid "Please enter an app ID"
 msgstr "សូមបញ្ចូល app ID"
 
@@ -1202,7 +1207,7 @@ msgstr "ចុះឈ្មោះកូនសោចូលរបស់អ្នក
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:242
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:447
 msgid "Recommended"
 msgstr "បានណែនាំ"
 
@@ -1241,12 +1246,6 @@ msgstr "យកសិទ្ធិចូលប្រើចេញ?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "យកចំណាប់អារម្មណ៍ចេញ"
-
-#. placeholder {0}: result.removed
-#. placeholder {1}: result.removed === 1 ? '' : 's'
-#: src/features/apps/index.tsx:241
-msgid "Removed {0} unused version{1}"
-msgstr "បានយក {0} កំណែដែលមិនបានប្រើចេញ {1}"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1302,11 +1301,11 @@ msgstr "រក្សាទុក"
 msgid "Saving..."
 msgstr "កំពុងរក្សាទុក..."
 
-#: src/features/apps/index.tsx:365
+#: src/features/apps/index.tsx:366
 msgid "Search apps"
 msgstr "ស្វែងរកកម្មវិធី"
 
-#: src/features/apps/index.tsx:364
+#: src/features/apps/index.tsx:365
 msgid "Search apps..."
 msgstr "ស្វែងរកកម្មវិធី..."
 
@@ -1516,7 +1515,7 @@ msgstr "លក្ខខណ្ឌ"
 msgid "That code is incorrect or has expired."
 msgstr "កូដនោះមិនត្រឹមត្រូវ ឬផុតកំណត់ហើយ។"
 
-#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:132
 msgid "The app has been installed successfully."
 msgstr "កម្មវិធីត្រូវបានដំឡើងដោយជោគជ័យ។"
 
@@ -1592,7 +1591,7 @@ msgstr "សំណើច្រើនពេក"
 msgid "Top"
 msgstr "កំពូល"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:736
 #: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "Track"
@@ -1632,7 +1631,7 @@ msgstr "វាយដើម្បីស្វែងរក..."
 msgid "Unable to connect to remote server"
 msgstr "មិនអាចតភ្ជាប់ទៅម៉ាស៊ីនមេពីចម្ងាយបានទេ"
 
-#: src/features/apps/index.tsx:465
+#: src/features/apps/index.tsx:466
 msgid "Unable to connect to the recommendations service"
 msgstr "មិនអាចភ្ជាប់ទៅសេវាកម្មការផ្តល់យោបល់"
 
@@ -1657,7 +1656,7 @@ msgstr "មិនបានកំណត់"
 msgid "Unauthorized Access"
 msgstr "ការចូលប្រើដោយគ្មានសិទ្ធិ"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:465
 msgid "Unavailable"
 msgstr "មិនអាចប្រើបាន"
 
@@ -1669,23 +1668,23 @@ msgstr "សហរដ្ឋអាមេរិក"
 msgid "Unverified"
 msgstr "មិនបានផ្ទៀងផ្ទាត់"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:732
 msgid "Update"
 msgstr "ធ្វើបច្ចុប្បន្នភាព"
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Update all"
 msgstr "ធ្វើបច្ចុប្បន្នភាពទាំងអស់"
 
-#: src/features/apps/index.tsx:214
+#: src/features/apps/index.tsx:215
 msgid "Update failed"
 msgstr "ការធ្វើបច្ចុប្បន្នភាពបរាជ័យ"
 
-#: src/features/apps/index.tsx:204
+#: src/features/apps/index.tsx:205
 msgid "Updating apps..."
 msgstr "កំពុងធ្វើបច្ចុប្បន្នភាពកម្មវិធី..."
 
-#: src/features/apps/index.tsx:321
+#: src/features/apps/index.tsx:322
 msgid "Updating..."
 msgstr "កំពុងធ្វើបច្ចុប្បន្នភាព..."
 
