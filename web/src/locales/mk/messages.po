@@ -33,6 +33,11 @@ msgstr "{0, plural, one {Отстранета е # неискористена в
 msgid "{0} (development)"
 msgstr "{0} (развој)"
 
+#. placeholder {0}: item.label
+#: ../../../lib/web/src/components/config-drawer.tsx:160
+msgid "{0} option preview"
+msgstr ""
+
 #. placeholder {0}: results.length - failed
 #: src/features/apps/index.tsx:220
 msgid "{0} updated, {failed} failed"
@@ -46,9 +51,13 @@ msgstr "{0} ажурирани, {failed} не успеале"
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} е инсталиран."
 
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:174
 msgid "{entityLabel} name"
 msgstr "Име на {entityLabel}"
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:99
+msgid "{entityLabel} name is required"
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
@@ -74,6 +83,10 @@ msgstr "{track} (стандардно, верзија {version})"
 msgid "{track} (version {version})"
 msgstr "{track} (верзија {version})"
 
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
+msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 часа"
@@ -94,7 +107,7 @@ msgstr "Пристапот е одбиен"
 msgid "Access Forbidden"
 msgstr "Пристапот е забранет"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:192
+#: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "Ниво на пристап"
 
@@ -114,6 +127,7 @@ msgstr "Тип на сметка"
 msgid "Account verified"
 msgstr "Сметката е верификувана"
 
+#: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
 msgstr "Додај"
@@ -135,11 +149,12 @@ msgstr "Додај сметка"
 msgid "Add an account to receive notifications and use services."
 msgstr "Додај сметка за да примаш известувања и да користиш услуги."
 
-#: ../../../lib/web/src/features/accounts/account-picker.tsx:101
+#: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
 msgstr "Додај нова сметка"
 
 #: ../../../lib/web/src/components/post-tags.tsx:137
+#: ../../../lib/web/src/components/tag-input.tsx:40
 msgid "Add tag..."
 msgstr "Додај ознака..."
 
@@ -160,7 +175,11 @@ msgstr "Додај во постоечки известувања"
 msgid "Add view"
 msgstr "Додај приказ"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:71
+#: ../../../lib/web/src/features/access/access-dialog.tsx:332
+msgid "Adding..."
+msgstr "Додавање..."
+
+#: ../../../lib/web/src/components/config-drawer.tsx:72
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Прилагоди го изгледот и распоредот според твоите преференции."
 
@@ -176,6 +195,11 @@ msgstr "Сите"
 msgid "All apps updated"
 msgstr "Сите апликации се ажурирани"
 
+#. placeholder {0}: entityLabel.toLowerCase()
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:85
+msgid "Allow anyone to search for {0}"
+msgstr ""
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Се појави грешка"
@@ -183,6 +207,19 @@ msgstr "Се појави грешка"
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:256
 msgid "An unexpected error occurred"
 msgstr "Се појави неочекувана грешка"
+
+#: ../../../lib/web/src/features/accounts/types.ts:16
+msgid "Android push"
+msgstr ""
+
+#: ../../../lib/web/src/features/access/access-list.tsx:45
+#: ../../../lib/web/src/features/access/types.ts:42
+msgid "Anyone"
+msgstr "Секој"
+
+#: ../../../lib/web/src/features/access/types.ts:41
+msgid "Anyone who is logged in"
+msgstr ""
 
 #: src/features/apps/index.tsx:161
 #: src/routes/_authenticated/app/$appId.tsx:98
@@ -234,6 +271,11 @@ msgstr "Растечки"
 msgid "Ascending"
 msgstr "Растечки"
 
+#: ../../../lib/web/src/features/access/access-list.tsx:46
+#: ../../../lib/web/src/features/access/types.ts:41
+msgid "Authenticated users"
+msgstr "Автентицирани корисници"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:315
 msgid "Authenticator code"
 msgstr "Код за автентикација"
@@ -251,7 +293,15 @@ msgstr "Достапни верзии:"
 msgid "Available, but not installed"
 msgstr "Достапна, но не е инсталирана"
 
-#: ../../../lib/web/src/components/place-picker.tsx:155
+#: ../../../lib/web/src/components/entity-avatar.tsx:99
+msgid "Avatar"
+msgstr "Аватар"
+
+#: ../../../lib/web/src/components/entity-avatar.tsx:99
+msgid "Avatar for {name}"
+msgstr ""
+
+#: ../../../lib/web/src/components/place-picker.tsx:156
 msgid "Back"
 msgstr "Назад"
 
@@ -267,18 +317,26 @@ msgstr "Назад на апликации"
 msgid "Back to home"
 msgstr "Назад на почетна"
 
+#: ../../../lib/web/src/components/entity-banner.tsx:17
+msgid "Banner"
+msgstr "Банер"
+
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
 msgid "Boost interest"
 msgstr "Поттикни интерес"
 
+#: ../../../lib/web/src/features/accounts/types.ts:13
+msgid "Browser notifications"
+msgstr "Известувања во прелистувач"
+
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:67
 #: ../../../lib/web/src/components/step-up-dialog.tsx:363
 #: ../../../lib/web/src/components/travelling-picker.tsx:308
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:248
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:249
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
-#: ../../../lib/web/src/features/access/access-list.tsx:263
+#: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
@@ -299,19 +357,23 @@ msgstr "Категорија за ова известување"
 msgid "Change notification category"
 msgstr "Промени категорија на известување"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:328
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:198
+msgid "Check \"All\" to see your past notifications."
+msgstr "Означете „Сè“ за да ги видите претходните известувања."
+
+#: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
 msgstr "Избирај меѓу стандарден проширен, компактен само со икони, или целосен режим на распоред"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:270
+#: ../../../lib/web/src/components/config-drawer.tsx:271
 msgid "Choose between inset, floating, or standard sidebar layout"
 msgstr "Избирај меѓу вметнат, лебдечки или стандарден распоред на странична лента"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:371
+#: ../../../lib/web/src/components/config-drawer.tsx:372
 msgid "Choose between left-to-right or right-to-left site direction"
 msgstr "Избирај меѓу насока од лево кон десно или од десно кон лево"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:226
+#: ../../../lib/web/src/components/config-drawer.tsx:227
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "Избирај меѓу системска преференција, светол или темен режим"
 
@@ -342,8 +404,8 @@ msgstr "Исчисти неискористени верзии"
 msgid "Cleaning up..."
 msgstr "Чистење..."
 
-#: ../../../lib/web/src/components/colour-picker.tsx:269
-#: ../../../lib/web/src/components/colour-picker.tsx:350
+#: ../../../lib/web/src/components/colour-picker.tsx:270
+#: ../../../lib/web/src/components/colour-picker.tsx:351
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
 #: ../../../lib/web/src/components/travelling-picker.tsx:170
 #: ../../../lib/web/src/components/travelling-picker.tsx:231
@@ -351,13 +413,17 @@ msgstr "Чистење..."
 msgid "Clear"
 msgstr "Исчисти"
 
-#: ../../../lib/web/src/components/filter-bar.tsx:73
+#: ../../../lib/web/src/components/filter-bar.tsx:74
 msgid "Clear all"
 msgstr "Исчисти сè"
 
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
 msgid "Clear filters"
 msgstr "Исчисти филтри"
+
+#: ../../../lib/web/src/components/search-input.tsx:26
+msgid "Clear search"
+msgstr "Исчисти пребарување"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:177
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:181
@@ -409,7 +475,11 @@ msgstr "Удобно"
 msgid "Coming Soon!"
 msgstr "Наскоро!"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:315
+#: ../../../lib/web/src/components/ui/command.tsx:34
+msgid "Command Palette"
+msgstr ""
+
+#: ../../../lib/web/src/components/config-drawer.tsx:316
 #: ../../../lib/web/src/lib/preference-utils.ts:95
 msgid "Compact"
 msgstr "Компактно"
@@ -426,10 +496,26 @@ msgstr "Конфигурирај која апликација ракува со
 msgid "Configure which app handles inter-app service calls."
 msgstr "Конфигурирај која апликација ракува со повици на услуги меѓу апликации."
 
-#: ../../../lib/web/src/components/place-picker.tsx:159
+#: ../../../lib/web/src/components/place-picker.tsx:160
 #: ../../../lib/web/src/components/travelling-picker.tsx:316
 msgid "Confirm"
 msgstr "Потврди"
+
+#: ../../../lib/web/src/lib/chat-ui.ts:18
+msgid "Connected"
+msgstr "Поврзано"
+
+#: ../../../lib/web/src/features/accounts/account-manager.tsx:191
+msgid "Connected accounts"
+msgstr "Поврзани сметки"
+
+#: ../../../lib/web/src/lib/chat-ui.ts:21
+msgid "Connecting..."
+msgstr "Поврзување..."
+
+#: ../../../lib/web/src/lib/handle-server-error.ts:18
+msgid "Content not found."
+msgstr "Содржината не е пронајдена."
 
 #: ../../../lib/web/src/lib/query-client.ts:81
 msgid "Content not modified"
@@ -447,7 +533,15 @@ msgstr "Продолжи"
 msgid "Continue with {label}"
 msgstr "Продолжи со {label}"
 
-#: ../../../lib/web/src/components/ui/copy-button.tsx:63
+#: ../../../lib/web/src/lib/toast-utils.ts:42
+msgid "Copied"
+msgstr "Копирано"
+
+#: ../../../lib/web/src/components/ui/copy-button.tsx:25
+msgid "Copied to clipboard"
+msgstr "Копирано во клипборд"
+
+#: ../../../lib/web/src/components/ui/copy-button.tsx:64
 msgid "Copy"
 msgstr "Копирај"
 
@@ -474,15 +568,28 @@ msgstr "Не може да се започне повторна автентик
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Не успеа верификацијата со таа сметка. Обидете се повторно."
 
+#. placeholder {0}: entityLabel.toLowerCase()
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:144
+msgid "Create {0}"
+msgstr ""
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
+msgid "Creating..."
+msgstr "Создавање..."
+
+#: ../../../lib/web/src/components/map-view.tsx:208
+msgid "Current location"
+msgstr "Тековна локација"
+
 #: src/routes/_authenticated/app/$appId.tsx:219
 msgid "Current version"
 msgstr "Тековна верзија"
 
-#: ../../../lib/web/src/components/colour-picker.tsx:260
+#: ../../../lib/web/src/components/colour-picker.tsx:261
 msgid "Custom"
 msgstr "Прилагодено"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:218
+#: ../../../lib/web/src/components/config-drawer.tsx:219
 #: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:20
 msgid "Dark"
@@ -504,7 +611,7 @@ msgstr "Конфликт на податоци"
 msgid "Declared by"
 msgstr "Декларирано од"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:310
+#: ../../../lib/web/src/components/config-drawer.tsx:311
 #: src/features/routing/routing-table.tsx:131
 #: src/features/routing/routing-table.tsx:155
 msgid "Default"
@@ -547,6 +654,10 @@ msgstr "Опаѓачки"
 msgid "Descending"
 msgstr "Опаѓачки"
 
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:83
+msgid "Description"
+msgstr "Опис"
+
 #: src/routes/_authenticated/app/$appId.tsx:150
 msgid "Details"
 msgstr "Детали"
@@ -570,9 +681,18 @@ msgstr "Откриј од веб-прелистувач"
 msgid "Development apps"
 msgstr "Апликации во развој"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:340
+#: ../../../lib/web/src/components/config-drawer.tsx:341
 msgid "Direction"
 msgstr "Насока"
+
+#: ../../../lib/web/src/components/person-picker.tsx:214
+msgid "Directory"
+msgstr "Именик"
+
+#: ../../../lib/web/src/lib/chat-ui.ts:25
+#: ../../../lib/web/src/lib/chat-ui.ts:29
+msgid "Disconnected"
+msgstr "Исклучено"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:79
 #: ../../../lib/web/src/components/restore-banner.tsx:85
@@ -599,6 +719,10 @@ msgstr "Прилагодено за дислексија"
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:154
 msgid "Edit {label}"
 msgstr "Уреди {label}"
+
+#: ../../../lib/web/src/features/accounts/types.ts:15
+msgid "Email"
+msgstr "Е-пошта"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 msgid "Email code"
@@ -631,6 +755,10 @@ msgstr "Прошири"
 msgid "Expand sidebar"
 msgstr "Прошири странична лента"
 
+#: ../../../lib/web/src/features/accounts/types.ts:22
+msgid "External URL"
+msgstr "Надворешен URL"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:136
 msgid "Extra large"
 msgstr "Премногу големо"
@@ -639,13 +767,26 @@ msgstr "Премногу големо"
 msgid "Failed to add account"
 msgstr "Неуспешно додавање на сметка"
 
+#: ../../../lib/web/src/components/tag-input.tsx:39
+msgid "Failed to add tag"
+msgstr "Неуспешно додавање на ознака"
+
 #: src/features/apps/index.tsx:236
 msgid "Failed to clean up apps"
 msgstr "Не успеа расчистувањето на апликациите"
 
+#: ../../../lib/web/src/components/ui/copy-button.tsx:26
+#: ../../../lib/web/src/lib/toast-utils.ts:44
+msgid "Failed to copy"
+msgstr "Неуспешно копирање"
+
 #: src/routes/_authenticated/app/$appId.tsx:488
 msgid "Failed to grant permission"
 msgstr "Неуспешно доделување на дозвола"
+
+#: ../../../lib/web/src/hooks/use-load-more.ts:74
+msgid "Failed to load"
+msgstr "Неуспешно вчитување"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
 msgid "Failed to load image"
@@ -692,6 +833,10 @@ msgstr "Неуспешно ажурирање на системско станд
 msgid "File:"
 msgstr "Датотека:"
 
+#: ../../../lib/web/src/components/data-table/toolbar.tsx:30
+msgid "Filter..."
+msgstr "Филтрирај..."
+
 #: src/routes/_authenticated/app/$appId.tsx:214
 msgid "Fingerprint"
 msgstr "Отпечаток"
@@ -710,13 +855,17 @@ msgstr "Завршете го преместувањето на профилот
 msgid "Flat"
 msgstr "Рамна"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:257
+#: ../../../lib/web/src/components/config-drawer.tsx:258
 msgid "Floating"
 msgstr "Лебдечко"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:63
 msgid "Friday"
 msgstr "Петок"
+
+#: ../../../lib/web/src/components/person-picker.tsx:207
+msgid "Friends"
+msgstr "Пријатели"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:153
 msgid "From"
@@ -735,7 +884,7 @@ msgstr "Од директориумот"
 msgid "From theme"
 msgstr "Од темата"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:320
+#: ../../../lib/web/src/components/config-drawer.tsx:321
 msgid "Full layout"
 msgstr "Целосен распоред"
 
@@ -781,6 +930,11 @@ msgstr "Се доделува дозвола..."
 msgid "Group"
 msgstr "Група"
 
+#. placeholder {0}: name || subject.slice(1)
+#: ../../../lib/web/src/features/access/access-list.tsx:68
+msgid "Group: {0}"
+msgstr "Група: {0}"
+
 #: src/features/routing/routing-table.tsx:82
 msgid "Handler"
 msgstr "Обработувач"
@@ -821,7 +975,19 @@ msgstr "Прегледувач на слики: {0}"
 msgid "Imperial"
 msgstr "Imperial"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:252
+#: ../../../lib/web/src/features/access/types.ts:42
+msgid "Including anonymous users"
+msgstr ""
+
+#: ../../../lib/web/src/components/faceless-avatar.tsx:69
+msgid "Initials avatar"
+msgstr ""
+
+#: ../../../lib/web/src/components/faceless-avatar.tsx:69
+msgid "Initials avatar for {name}"
+msgstr ""
+
+#: ../../../lib/web/src/components/config-drawer.tsx:253
 msgid "Inset"
 msgstr "Inset"
 
@@ -872,6 +1038,10 @@ msgstr "Се инсталира..."
 msgid "Interests"
 msgstr "Интереси"
 
+#: ../../../lib/web/src/components/tag-input.tsx:38
+msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
 msgid "Invalid verification code"
 msgstr "Невалиден код за верификација"
@@ -880,12 +1050,16 @@ msgstr "Невалиден код за верификација"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Изгледа дека страницата што ја барате <0/>не постои или е отстранета."
 
+#: ../../../lib/web/src/lib/locale-format.ts:62
+msgid "Just now"
+msgstr "Штотуку"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:108
 #: ../../../lib/web/src/lib/preference-utils.ts:135
 msgid "Large"
 msgstr "Големо"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:286
+#: ../../../lib/web/src/components/config-drawer.tsx:287
 msgid "Layout"
 msgstr "Распоред"
 
@@ -894,11 +1068,15 @@ msgstr "Распоред"
 msgid "Learn more"
 msgstr "Дознај повеќе"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:354
+#: ../../../lib/web/src/components/config-drawer.tsx:355
 msgid "Left to Right"
 msgstr "Лево кон десно"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:213
+#: ../../../lib/web/src/components/post-tags.tsx:72
+msgid "Letters, numbers, spaces, and hyphens only"
+msgstr "Само букви, бројки, празни места и цртички"
+
+#: ../../../lib/web/src/components/config-drawer.tsx:214
 #: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:19
 msgid "Light"
@@ -947,11 +1125,19 @@ msgstr "Се одјавува…"
 msgid "Manage capabilities granted to this application"
 msgstr "Управувајте со способностите доделени на оваа апликација"
 
+#: ../../../lib/web/src/features/accounts/account-manager.tsx:192
+msgid "Manage your connected accounts for notifications and services."
+msgstr ""
+
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:93
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:100
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Означи сè како прочитано"
+
+#: ../../../lib/web/src/features/accounts/types.ts:17
+msgid "MCP server"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:107
 msgid "Medium"
@@ -965,6 +1151,10 @@ msgstr "Мени"
 msgid "Metric"
 msgstr "Metric"
 
+#: ../../../lib/web/src/features/accounts/types.ts:23
+msgid "Mochi web"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Monday"
 msgstr "Понеделник"
@@ -972,6 +1162,14 @@ msgstr "Понеделник"
 #: src/features/routing/routing-table.tsx:107
 msgid "Multiple apps declare this resource"
 msgstr "Повеќе апликации го декларираат овој ресурс"
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:102
+msgid "Name cannot contain angle brackets, backslash, semicolon, quotes or backticks"
+msgstr ""
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:100
+msgid "Name must be 1000 characters or less"
+msgstr "Името мора да биде до 1000 знаци"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:53
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:303
@@ -987,7 +1185,7 @@ msgstr "Ново"
 msgid "Next image"
 msgstr "Следна слика"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:160
+#: ../../../lib/web/src/features/access/access-list.tsx:165
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Не се конфигурирани правила за пристап. Додајте правила за да контролирате кој може да пристапи на овој ресурс."
 
@@ -1036,9 +1234,17 @@ msgstr "Нема совпаѓања во директориумот"
 msgid "No matching apps"
 msgstr "Нема совпаѓачки апликации"
 
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
+msgid "No notifications yet"
+msgstr "Сè уште нема известувања"
+
 #: src/features/routing/routing-table.tsx:63
 msgid "No paths configured."
 msgstr "Не се конфигурирани патеки."
+
+#: ../../../lib/web/src/components/person-picker.tsx:84
+msgid "No people found"
+msgstr "Не се пронајдени луѓе"
 
 #: src/routes/_authenticated/app/$appId.tsx:589
 msgid "No permissions granted"
@@ -1048,7 +1254,7 @@ msgstr "Не се доделени дозволи"
 msgid "No permissions granted to this app"
 msgstr "Не се доделени дозволи на оваа апликација"
 
-#: ../../../lib/web/src/components/place-picker.tsx:132
+#: ../../../lib/web/src/components/place-picker.tsx:133
 msgid "No places found"
 msgstr "Не се пронајдени места"
 
@@ -1059,6 +1265,11 @@ msgstr "Без профил"
 #: src/features/apps/index.tsx:471
 msgid "No recommendations available"
 msgstr "Нема достапни препораки"
+
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:82
+#: ../../../lib/web/src/components/search-entity-page.tsx:73
+msgid "No results found"
+msgstr "Не се пронајдени резултати"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
@@ -1085,6 +1296,7 @@ msgstr "Нема неискористени верзии за чистење"
 msgid "No users found"
 msgstr "Не се пронајдени корисници"
 
+#: ../../../lib/web/src/components/colour-picker.tsx:345
 #: ../../../lib/web/src/components/person-picker.tsx:350
 #: ../../../lib/web/src/lib/preference-utils.ts:105
 #: ../../../lib/web/src/lib/preference-utils.ts:125
@@ -1120,6 +1332,10 @@ msgstr "Известувања"
 msgid "Notifications: {0}"
 msgstr "Известувања: {0}"
 
+#: ../../../lib/web/src/components/filter-bar.tsx:35
+msgid "On"
+msgstr "Вклучено"
+
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:16
 msgid "Oops! Page Not Found!"
 msgstr "Упс! Страницата не е пронајдена!"
@@ -1134,6 +1350,10 @@ msgstr "Отвори акции на сметката"
 msgid "Open actions"
 msgstr "Отвори дејства"
 
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:133
+msgid "Open menu"
+msgstr "Отвори мени"
+
 #: ../../../lib/web/src/components/layout/top-bar.tsx:63
 #: ../../../lib/web/src/components/layout/top-bar.tsx:68
 msgid "Open navigation"
@@ -1144,8 +1364,8 @@ msgstr "Отвори навигација"
 msgid "Open navigation menu"
 msgstr "Отвори мени за навигација"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:57
-#: ../../../lib/web/src/components/config-drawer.tsx:65
+#: ../../../lib/web/src/components/config-drawer.tsx:58
+#: ../../../lib/web/src/components/config-drawer.tsx:66
 msgid "Open theme settings"
 msgstr "Отвори поставки за тема"
 
@@ -1153,7 +1373,7 @@ msgstr "Отвори поставки за тема"
 msgid "Other"
 msgstr "Друго"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:217
+#: ../../../lib/web/src/features/access/access-list.tsx:222
 msgid "Owner"
 msgstr "Сопственик"
 
@@ -1204,6 +1424,10 @@ msgstr "Дозволата е отповикана"
 msgid "Permissions"
 msgstr "Дозволи"
 
+#: ../../../lib/web/src/components/date-picker.tsx:20
+msgid "Pick a date"
+msgstr "Изберете датум"
+
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1248,9 +1472,17 @@ msgstr "Приватност"
 msgid "Profile"
 msgstr "Профил"
 
+#: ../../../lib/web/src/components/person-picker.tsx:200
+msgid "Project members"
+msgstr "Членови на проектот"
+
 #: src/routes/_authenticated/app/$appId.tsx:228
 msgid "Provided classes"
 msgstr "Обезбедени класи"
+
+#: ../../../lib/web/src/features/accounts/types.ts:21
+msgid "Push notification"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:117
 msgid "Raised"
@@ -1264,11 +1496,15 @@ msgstr "Повторно поврзете ги профилите на овој 
 msgid "Re-register your passkeys on this server"
 msgstr "Повторно регистрирајте ги вашите клучеви за пристап на овој сервер"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:216
-#: ../../../lib/web/src/components/search-entity-page.tsx:242
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:217
+#: ../../../lib/web/src/components/search-entity-page.tsx:243
 #: src/features/apps/index.tsx:447
 msgid "Recommended"
 msgstr "Препорачано"
+
+#: ../../../lib/web/src/lib/chat-ui.ts:21
+msgid "Reconnecting ({retries})..."
+msgstr ""
 
 #: ../../../lib/web/src/components/layout/authenticated-layout.tsx:133
 msgid "Redirecting to login."
@@ -1287,22 +1523,28 @@ msgstr "Релативно (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Релативно во рок од 24 часа, инаку апсолутно"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:265
+#: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
 msgstr "Отстрани"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:247
-#: ../../../lib/web/src/features/access/access-list.tsx:253
+#. placeholder {0}: filter.label
+#: ../../../lib/web/src/components/filter-bar.tsx:56
+#: ../../../lib/web/src/components/filter-bar.tsx:62
+msgid "Remove {0} filter"
+msgstr "Отстрани филтер за {0}"
+
+#: ../../../lib/web/src/features/access/access-list.tsx:252
+#: ../../../lib/web/src/features/access/access-list.tsx:258
 msgid "Remove access rule"
 msgstr "Отстрани правило за пристап"
 
 #. placeholder {0}: formatSubject(subject, data.name)
-#: ../../../lib/web/src/features/access/access-list.tsx:259
+#: ../../../lib/web/src/features/access/access-list.tsx:264
 msgid "Remove access rule for \"{0}\"?"
 msgstr "Да се отстрани правилото за пристап за „{0}“?"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:257
+#: ../../../lib/web/src/features/access/access-list.tsx:262
 msgid "Remove access?"
 msgstr "Да го отстраниме пристапот?"
 
@@ -1315,12 +1557,17 @@ msgstr "Отстрани интерес"
 msgid "Resend email"
 msgstr "Испрати ја е-поштата повторно"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:86
-#: ../../../lib/web/src/components/data-table/toolbar.tsx:81
+#: ../../../lib/web/src/components/config-drawer.tsx:87
+#: ../../../lib/web/src/components/data-table/toolbar.tsx:82
 msgid "Reset"
 msgstr "Ресетирај"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:84
+#: ../../../lib/web/src/components/config-drawer.tsx:122
+#: ../../../lib/web/src/components/config-drawer.tsx:127
+msgid "Reset {title}"
+msgstr ""
+
+#: ../../../lib/web/src/components/config-drawer.tsx:85
 msgid "Reset all settings to default values"
 msgstr "Ресетирај ги сите поставки на стандардни вредности"
 
@@ -1341,7 +1588,7 @@ msgstr "Да ја отповикаме дозволата?"
 msgid "Revoking permission..."
 msgstr "Се одзема дозволата..."
 
-#: ../../../lib/web/src/components/config-drawer.tsx:361
+#: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
 msgstr "Од десно кон лево"
 
@@ -1365,6 +1612,12 @@ msgstr "Зачувај"
 msgid "Saving..."
 msgstr "Зачувување..."
 
+#: ../../../lib/web/src/components/filter-bar.tsx:32
+#: ../../../lib/web/src/components/header-search.tsx:22
+#: ../../../lib/web/src/components/search.tsx:18
+msgid "Search"
+msgstr "Барај"
+
 #: src/features/apps/index.tsx:366
 msgid "Search apps"
 msgstr "Пребарај апликации"
@@ -1373,9 +1626,17 @@ msgstr "Пребарај апликации"
 msgid "Search apps..."
 msgstr "Пребарај апликации..."
 
-#: ../../../lib/web/src/components/place-picker.tsx:85
+#: ../../../lib/web/src/components/ui/command.tsx:35
+msgid "Search for a command to run..."
+msgstr ""
+
+#: ../../../lib/web/src/components/place-picker.tsx:86
 msgid "Search for a place"
 msgstr "Пребарај место"
+
+#: ../../../lib/web/src/components/place-picker.tsx:50
+msgid "Search for a place..."
+msgstr ""
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:250
 msgid "Search for destination..."
@@ -1394,14 +1655,21 @@ msgid "Search users"
 msgstr "Пребарај корисници"
 
 #: ../../../lib/web/src/components/person-picker.tsx:324
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:81
+#: ../../../lib/web/src/components/search-entity-page.tsx:72
 msgid "Search..."
 msgstr "Пребарувај..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:174
-#: ../../../lib/web/src/components/search-entity-page.tsx:200
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:175
+#: ../../../lib/web/src/components/search-entity-page.tsx:201
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "Пребарување..."
+
+#. placeholder {0}: item.label.toLowerCase()
+#: ../../../lib/web/src/components/config-drawer.tsx:149
+msgid "Select {0}"
+msgstr ""
 
 #: src/routes/_authenticated/app/$appId.tsx:537
 msgid "Select a capability to grant to {appName}."
@@ -1415,6 +1683,10 @@ msgstr "Изберете корисник, група или друго прав
 msgid "Select access rule"
 msgstr "Изберете правило за пристап"
 
+#: ../../../lib/web/src/features/accounts/account-picker.tsx:34
+msgid "Select account"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-add.tsx:129
 msgid "Select account type"
 msgstr "Изберете тип на сметка"
@@ -1423,19 +1695,27 @@ msgstr "Изберете тип на сметка"
 msgid "Select group"
 msgstr "Изберете група"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:304
+#: ../../../lib/web/src/components/config-drawer.tsx:305
 msgid "Select layout style"
 msgstr "Изберете стил на распоред"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:246
+#: ../../../lib/web/src/components/place-picker.tsx:49
+msgid "Select location"
+msgstr "Изберете локација"
+
+#: ../../../lib/web/src/components/person-picker.tsx:83
+msgid "Select person..."
+msgstr ""
+
+#: ../../../lib/web/src/components/config-drawer.tsx:247
 msgid "Select sidebar style"
 msgstr "Изберете стил на странична лента"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:348
+#: ../../../lib/web/src/components/config-drawer.tsx:349
 msgid "Select site direction"
 msgstr "Изберете насока на страницата"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:202
+#: ../../../lib/web/src/components/config-drawer.tsx:203
 msgid "Select theme preference"
 msgstr "Изберете преференца за тема"
 
@@ -1507,8 +1787,8 @@ msgstr "Прикажи ја лозинката"
 msgid "Showing {totalShown} of {total}"
 msgstr "Се прикажуваат {totalShown} од {total}"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:238
-#: ../../../lib/web/src/components/config-drawer.tsx:262
+#: ../../../lib/web/src/components/config-drawer.tsx:239
+#: ../../../lib/web/src/components/config-drawer.tsx:263
 #: ../../../lib/web/src/components/ui/sidebar.tsx:237
 msgid "Sidebar"
 msgstr "Странична лента"
@@ -1539,15 +1819,20 @@ msgstr "Простран"
 msgid "Stay tuned though!"
 msgstr "Но останете блиску!"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:191
+#: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "Предмет"
+
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:83
+#: ../../../lib/web/src/components/search-entity-page.tsx:74
+msgid "Subscribe"
+msgstr "Претплати се"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:65
 msgid "Sunday"
 msgstr "Недела"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:208
+#: ../../../lib/web/src/components/config-drawer.tsx:209
 #: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
 #: ../../../lib/web/src/lib/preference-utils.ts:144
@@ -1563,9 +1848,17 @@ msgstr "Стандардно за системот"
 msgid "System default updated"
 msgstr "Стандардното за системот е ажурирано"
 
-#: ../../../lib/web/src/components/tag-input.tsx:94
+#: ../../../lib/web/src/components/tag-input.tsx:95
 msgid "Tag"
 msgstr "Ознака"
+
+#: ../../../lib/web/src/components/post-tags.tsx:76
+msgid "Tag already exists"
+msgstr "Ознаката веќе постои"
+
+#: ../../../lib/web/src/components/post-tags.tsx:68
+msgid "Tag must be 50 characters or less"
+msgstr "Ознаката смее да има најмногу 50 знаци"
 
 #: ../../../lib/web/src/components/post-tags.tsx:101
 #: ../../../lib/web/src/components/post-tags.tsx:115
@@ -1605,11 +1898,11 @@ msgstr "Бараната содржина не е пронајдена."
 msgid "The site is not available at the moment."
 msgstr "Сајтот моментално не е достапен."
 
-#: ../../../lib/web/src/components/config-drawer.tsx:194
+#: ../../../lib/web/src/components/config-drawer.tsx:195
 msgid "Theme"
 msgstr "Тема"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:69
+#: ../../../lib/web/src/components/config-drawer.tsx:70
 msgid "Theme Settings"
 msgstr "Поставки на темата"
 
@@ -1686,8 +1979,8 @@ msgstr "Track"
 msgid "Travelling"
 msgstr "Патување"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:190
-#: ../../../lib/web/src/components/search-entity-page.tsx:216
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:191
+#: ../../../lib/web/src/components/search-entity-page.tsx:217
 msgid "Try adjusting your search terms"
 msgstr "Обидете се да ги прилагодите термините за пребарување"
 
@@ -1746,9 +2039,18 @@ msgstr "Неовластен пристап"
 msgid "Unavailable"
 msgstr "Недостапно"
 
+#: ../../../lib/web/src/lib/request.ts:133
+#: ../../../lib/web/src/lib/request.ts:206
+msgid "Unexpected API error"
+msgstr "Неочекувана API грешка"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:87
 msgid "United States"
 msgstr "Соединети Држави"
+
+#: ../../../lib/web/src/features/accounts/types.ts:29
+msgid "Unknown"
+msgstr "Непознато"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:135
 msgid "Unverified"
@@ -1782,6 +2084,7 @@ msgstr "Користи стандардно за системот"
 msgid "Use your passkey"
 msgstr "Користете го вашиот passkey"
 
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:86
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Корисник"
@@ -1851,6 +2154,10 @@ msgstr "Прикажи ги сите"
 msgid "View all notifications"
 msgstr "Прикажи ги сите известувања"
 
+#: ../../../lib/web/src/components/filter-bar.tsx:35
+msgid "Watched"
+msgstr "Следено"
+
 #. placeholder {0}: account.identifier
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:63
 msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
@@ -1859,6 +2166,10 @@ msgstr "Испративме код за потврда на <0>{0}</0>. Вне�
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
 msgstr "Ќе се вратиме онлајн набргу."
+
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:197
+msgid "We'll notify you when something important happens."
+msgstr "Ќе ве известиме кога ќе се случи нешто важно."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
 msgid "Website is under maintenance!"
@@ -1875,6 +2186,14 @@ msgstr "Немате пристап до овој дел."
 #: ../../../lib/web/src/features/errors/forbidden.tsx:18
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "Немате потребна дозвола <0/>за да го видите овој ресурс."
+
+#: ../../../lib/web/src/lib/show-submitted-data.tsx:9
+msgid "You submitted the following values:"
+msgstr ""
+
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
+msgid "You're all caught up!"
+msgstr "Сè видовте!"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
