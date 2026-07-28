@@ -4,6 +4,18 @@
 # This file is part of Mochi, licensed under the GNU AGPL v3 with the
 # Mochi Application Interface Exception - see license.txt and license-exception.md.
 
+# decimal(value) -> bool: whether value is a non-empty ASCII decimal string.
+# This is what .isdigit() was reached for, but isdigit() also accepts Unicode
+# digit forms (Arabic-Indic "٣", Devanagari "३") that int() rejects,
+# which aborts the action as a 500 instead of taking the guard's else branch.
+def decimal(value):
+    if not value:
+        return False
+    for c in value.elems():
+        if c not in "0123456789":
+            return False
+    return True
+
 # How long to trust a cached publisher response in action_updates (seconds).
 # 5 minutes — short enough that a freshly-deployed app shows up in the badge
 # soon, long enough that the badge load is a millisecond-scale DB hit instead
@@ -411,8 +423,8 @@ def is_newer_version(a, b):
 	for i in range(n):
 		pa = parts_a[i] if i < len(parts_a) else ""
 		pb = parts_b[i] if i < len(parts_b) else ""
-		na = int(pa) if pa.isdigit() else 0
-		nb = int(pb) if pb.isdigit() else 0
+		na = int(pa) if decimal(pa) else 0
+		nb = int(pb) if decimal(pb) else 0
 		if na > nb:
 			return True
 		if na < nb:
