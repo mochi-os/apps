@@ -75,6 +75,10 @@ msgstr "{selectedCount, plural, one {# filatame} other {# filatame}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Gochawwan waliigalaa {entityName} # filatameef} other {Gochawwan waliigalaa {manyName} # filatamaniif}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} / {totalLabel}"
+
 #: src/routes/_authenticated/app/$appId.tsx:386
 msgid "{track} (default, version {version})"
 msgstr "{track} (sirnaan dursaa, fooyya'iinsa {version})"
@@ -348,12 +352,12 @@ msgstr "Beeksisa barreessaa"
 msgid "Cancel"
 msgstr "Haquu"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "Beeksisa kanaaf ramaddii"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "Ramaddii beeksisaa jijjiiri"
 
@@ -689,6 +693,14 @@ msgstr "Kallatti"
 msgid "Directory"
 msgstr "Galmee"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr "Gati"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr "Wixinee gatuu?"
+
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
@@ -812,7 +824,7 @@ msgstr "Koodii mirkanaa ergamuu hin dandeenye"
 msgid "Failed to update apps"
 msgstr "Appiiwwan haaromsuun hin milkoofne"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "Ramaddii toattaachuu hin dandeenye"
 
@@ -1284,7 +1296,7 @@ msgstr "Tajaajilonni qindaa'an hin jiran."
 msgid "No time zone found."
 msgstr "Aanaan sa'aatii hin argamne."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "Hanga ammaatti galmeen mata duree hin jiru — beeksisa itti aanu booda irra deebi'ii yaali."
 
@@ -1428,6 +1440,7 @@ msgstr "Hayyamoonni"
 msgid "Pick a date"
 msgstr "Guyyaa filadhu"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1466,6 +1479,10 @@ msgstr "Suuraa duraa"
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 msgid "Privacy"
 msgstr "Iccitii"
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "Adeemsifamaa jira…"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
@@ -1523,6 +1540,7 @@ msgstr "Walqabataa (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Sa'aatii 24 keessatti walqabataa, kanaa alatti guutuu"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1570,6 +1588,10 @@ msgstr "{title} haaromsi"
 #: ../../../lib/web/src/components/config-drawer.tsx:85
 msgid "Reset all settings to default values"
 msgstr "Qindaa'inoota hunda gara durtiitti deebisi"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr "Irra deebi'ii yaali"
 
 #: src/routes/_authenticated/app/$appId.tsx:642
 #: src/routes/_authenticated/app/$appId.tsx:645
@@ -2027,7 +2049,7 @@ msgstr "Odeeffannoo fooyya'iinsaa fe'uu hin dandeenye"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Galaa'uutti deebi'uu hin dandeenye. Mee deebi'iitii yaali."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "Hin ramadamne"
 
@@ -2075,6 +2097,10 @@ msgstr "Appiiwwan haaromsaa jira..."
 #: src/features/apps/index.tsx:322
 msgid "Updating..."
 msgstr "Haaromsaa jira..."
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "Adeemsa fe'umsaa"
 
 #: src/features/routing/routing-table.tsx:155
 msgid "Use system default"
@@ -2199,9 +2225,21 @@ msgstr "Hunda ilaalteetta!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Akkaawuntiin kee {source} irraa as fidame. Achitti haqtee hanga fixtutti, ergaawwan fi beeksisawwan sarvara lamaaniyyuu ga'uu danda'u, qabeenyi kee tokko tokko sarvaraa durii irraa tajaajilamu itti fufa, fi hordoftonni si argachuu dhaaf daqiiqaawwan muraasa fudhachuu danda'u."
 
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr "Miiltoowwan kee ni badu."
+
 #: src/features/routing/routing-table.tsx:82
 msgid "Your preference"
 msgstr "Filannoo kee"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr "Barreeffamnii fi miiltoowwan kee ni badu."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr "Barreeffamni kee ni bada."
 
 #: src/routes/_authenticated/app/$appId.tsx:433
 msgid "Your version"

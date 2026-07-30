@@ -75,6 +75,10 @@ msgstr "{selectedCount, plural, zero {# wedi'u dewis} one {# wedi'u dewis} two {
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, zero {Camau swmp ar gyfer # {manyName} a ddewiswyd} one {Camau swmp ar gyfer # {entityName} a ddewiswyd} two {Camau swmp ar gyfer # {manyName} a ddewiswyd} few {Camau swmp ar gyfer # {manyName} a ddewiswyd} many {Camau swmp ar gyfer # {manyName} a ddewiswyd} other {Camau swmp ar gyfer # {manyName} a ddewiswyd}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} o {totalLabel}"
+
 #: src/routes/_authenticated/app/$appId.tsx:386
 msgid "{track} (default, version {version})"
 msgstr "{track} (diofyn, fersiwn {version})"
@@ -348,12 +352,12 @@ msgstr "Hysbysiadau porwr"
 msgid "Cancel"
 msgstr "Canslo"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "Categori ar gyfer yr hysbysiad hwn"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "Newid categori hysbysiad"
 
@@ -689,6 +693,14 @@ msgstr "Cyfeiriad"
 msgid "Directory"
 msgstr "Cyfeiriadur"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr "Hepgor"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr "Hepgor y drafft?"
+
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
@@ -812,7 +824,7 @@ msgstr "Methwyd anfon y cod dilysu"
 msgid "Failed to update apps"
 msgstr "Methwyd â diweddaru apiau"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "Methwyd diweddaru'r categori"
 
@@ -1284,7 +1296,7 @@ msgstr "Dim gwasanaethau wedi'u ffurfweddu."
 msgid "No time zone found."
 msgstr "Heb ddod o hyd i barth amser."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "Dim cofnod pwnc eto — rhowch gynnig arall arni ar ôl yr hysbysiad nesaf."
 
@@ -1428,6 +1440,7 @@ msgstr "Caniatadau"
 msgid "Pick a date"
 msgstr "Dewiswch ddyddiad"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1466,6 +1479,10 @@ msgstr "Delwedd flaenorol"
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 msgid "Privacy"
 msgstr "Preifatrwydd"
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "Wrthi'n prosesu…"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
@@ -1523,6 +1540,7 @@ msgstr "Cymharol (5m, 3a, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Cymharol o fewn 24 awr, fel arall yn absoliwt"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1570,6 +1588,10 @@ msgstr "Ailosod {title}"
 #: ../../../lib/web/src/components/config-drawer.tsx:85
 msgid "Reset all settings to default values"
 msgstr "Ailosod yr holl osodiadau i'r gwerthoedd diofyn"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr "Ail-geisio"
 
 #: src/routes/_authenticated/app/$appId.tsx:642
 #: src/routes/_authenticated/app/$appId.tsx:645
@@ -2027,7 +2049,7 @@ msgstr "Methu llwytho gwybodaeth fersiwn"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Methu ailgyfeirio i fewngofnodi. Rhowch gynnig arall arni."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "Heb ei neilltuo"
 
@@ -2075,6 +2097,10 @@ msgstr "Yn diweddaru apiau..."
 #: src/features/apps/index.tsx:322
 msgid "Updating..."
 msgstr "Yn diweddaru..."
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "Cynnydd llwytho i fyny"
 
 #: src/features/routing/routing-table.tsx:155
 msgid "Use system default"
@@ -2199,9 +2225,21 @@ msgstr "Rydych wedi dal i fyny!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Symudwyd eich cyfrif yma o {source}. Hyd nes y byddwch yn ei ddileu yno, gall negeseuon a hysbysiadau gyrraedd y ddau weinydd, gall peth o'ch cynnwys barhau i gael ei weini o'r hen weinydd, a gall dilynwyr gymryd ychydig funudau i ddod o hyd i chi yma."
 
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr "Bydd eich atodiadau'n cael eu colli."
+
 #: src/features/routing/routing-table.tsx:82
 msgid "Your preference"
 msgstr "Eich dewis"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr "Bydd eich testun a'ch atodiadau'n cael eu colli."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr "Bydd eich testun yn cael ei golli."
 
 #: src/routes/_authenticated/app/$appId.tsx:433
 msgid "Your version"

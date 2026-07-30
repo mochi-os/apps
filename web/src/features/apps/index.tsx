@@ -40,6 +40,8 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
+  UploadProgress,
+  useUploadProgress,
 } from '@mochi/web'
 import { Package, ExternalLink, Download, RefreshCw, MoreHorizontal, Trash2, Loader2 } from 'lucide-react'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
@@ -98,6 +100,7 @@ export function Apps() {
     )
   const installFromPublisherMutation = useInstallFromPublisherMutation()
   const installFromFileMutation = useInstallFromFileMutation()
+  const { progress: installProgress, upload } = useUploadProgress()
   const installByIdMutation = useInstallByIdMutation()
   const upgradeMutation = useUpgradeMutation()
   const cleanupMutation = useCleanupMutation()
@@ -262,10 +265,13 @@ export function Apps() {
 
     try {
       await toastAction(
-        installFromFileMutation.mutateAsync({
-          file: selectedFile,
-          privacy: allowDiscovery ? 'public' : 'private',
-        }),
+        upload((onProgress) =>
+          installFromFileMutation.mutateAsync({
+            file: selectedFile,
+            privacy: allowDiscovery ? 'public' : 'private',
+            onProgress,
+          })
+        ),
         {
           loading: t`Installing...`,
           success: t`App installed successfully`,
@@ -655,6 +661,7 @@ export function Apps() {
                 />
               </div>
             </div>
+            <UploadProgress progress={installProgress} className='pt-2' />
             <ResponsiveDialogFooter>
               <ResponsiveDialogClose asChild>
                 <Button variant='outline'><Trans>Cancel</Trans></Button>

@@ -75,6 +75,10 @@ msgstr "{selectedCount, plural, one {# चयन गरिएको} other {# �
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# चयनित {entityName} का लागि बल्क कार्यहरू} other {# चयनित {manyName} का लागि बल्क कार्यहरू}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{totalLabel}मध्ये {sentLabel}"
+
 #: src/routes/_authenticated/app/$appId.tsx:386
 msgid "{track} (default, version {version})"
 msgstr "{track} (पूर्वनिर्धारित, संस्करण {version})"
@@ -348,12 +352,12 @@ msgstr "ब्राउजर सूचनाहरू"
 msgid "Cancel"
 msgstr "रद्द गर्नुहोस्"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "यस सूचनाका लागि श्रेणी"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "सूचना श्रेणी परिवर्तन गर्नुहोस्"
 
@@ -689,6 +693,14 @@ msgstr "दिशा"
 msgid "Directory"
 msgstr "निर्देशिका"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr "हटाउनुहोस्"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr "मस्यौदा हटाउने?"
+
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
@@ -812,7 +824,7 @@ msgstr "प्रमाणीकरण कोड पठाउन असफल"
 msgid "Failed to update apps"
 msgstr "एपहरू अद्यावधिक गर्न असफल"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "वर्ग अद्यावधिक गर्न असफल"
 
@@ -1284,7 +1296,7 @@ msgstr "कुनै सेवाहरू कन्फिगर गरिएक
 msgid "No time zone found."
 msgstr "कुनै समय क्षेत्र भेटिएन।"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "अहिलेसम्म कुनै टपिक रेकर्ड छैन — अर्को सूचना पछि फेरि प्रयास गर्नुहोस्।"
 
@@ -1428,6 +1440,7 @@ msgstr "अनुमतिहरू"
 msgid "Pick a date"
 msgstr "मिति छान्नुहोस्"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1466,6 +1479,10 @@ msgstr "अघिल्लो तस्बिर"
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 msgid "Privacy"
 msgstr "गोपनीयता"
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "प्रशोधन गर्दै…"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
@@ -1523,6 +1540,7 @@ msgstr "सापेक्ष (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "२४ घण्टाभित्र सापेक्ष, अन्यथा निरपेक्ष"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1570,6 +1588,10 @@ msgstr "{title} रिसेट गर्नुहोस्"
 #: ../../../lib/web/src/components/config-drawer.tsx:85
 msgid "Reset all settings to default values"
 msgstr "सबै सेटिङहरू पूर्वनिर्धारित मानमा रिसेट गर्नुहोस्"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr "फेरि प्रयास गर्नुहोस्"
 
 #: src/routes/_authenticated/app/$appId.tsx:642
 #: src/routes/_authenticated/app/$appId.tsx:645
@@ -2027,7 +2049,7 @@ msgstr "संस्करण जानकारी लोड गर्न अ�
 msgid "Unable to redirect to login. Please try again."
 msgstr "लगइनमा रिडाइरेक्ट गर्न असमर्थ। कृपया फेरि प्रयास गर्नुहोस्।"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "नतोकिएको"
 
@@ -2075,6 +2097,10 @@ msgstr "एपहरू अद्यावधिक गर्दै..."
 #: src/features/apps/index.tsx:322
 msgid "Updating..."
 msgstr "अद्यावधिक गर्दै..."
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "अपलोड प्रगति"
 
 #: src/features/routing/routing-table.tsx:155
 msgid "Use system default"
@@ -2199,9 +2225,21 @@ msgstr "तपाईंले सबै हेर्नुभयो!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "तपाईंको खाता {source} बाट यहाँ सारिएको छ। त्यहाँ मेटाउनु नभएसम्म, सन्देश र सूचनाहरू दुवै सर्भरमा पुग्न सक्छन्, तपाईंको केही सामग्री पुरानो सर्भरबाट आउन सक्छ, र अनुयायीहरूलाई तपाईंलाई यहाँ भेट्न केही मिनेट लाग्न सक्छ।"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr "तपाईंका संलग्नकहरू हराउनेछन्।"
+
 #: src/features/routing/routing-table.tsx:82
 msgid "Your preference"
 msgstr "तपाईंको प्राथमिकता"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr "तपाईंको पाठ र संलग्नकहरू हराउनेछन्।"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr "तपाईंको पाठ हराउनेछ।"
 
 #: src/routes/_authenticated/app/$appId.tsx:433
 msgid "Your version"

@@ -75,6 +75,10 @@ msgstr "{selectedCount, plural, zero {# محدد} one {# محدد} two {# محد
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, zero {إجراءات مجمعة لـ {manyName}} one {إجراءات مجمعة لـ {entityName} واحد محدد} two {إجراءات مجمعة لـ {manyName} محددين} few {إجراءات مجمعة لـ # {manyName} محددة} many {إجراءات مجمعة لـ # {manyName} محددًا} other {إجراءات مجمعة لـ # {manyName} محدد}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} من {totalLabel}"
+
 #: src/routes/_authenticated/app/$appId.tsx:386
 msgid "{track} (default, version {version})"
 msgstr "{track} (افتراضي، الإصدار {version})"
@@ -348,12 +352,12 @@ msgstr "إشعارات المتصفح"
 msgid "Cancel"
 msgstr "إلغاء"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "فئة هذا الإشعار"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "تغيير فئة الإشعار"
 
@@ -689,6 +693,14 @@ msgstr "الاتجاه"
 msgid "Directory"
 msgstr "الدليل"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr "تجاهل"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr "تجاهل المسودة؟"
+
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
@@ -812,7 +824,7 @@ msgstr "فشل إرسال رمز التحقق"
 msgid "Failed to update apps"
 msgstr "فشل تحديث التطبيقات"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "فشل تحديث الفئة"
 
@@ -1284,7 +1296,7 @@ msgstr "لم يتم تكوين أي خدمات."
 msgid "No time zone found."
 msgstr "لم يتم العثور على منطقة زمنية."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "لا يوجد سجل موضوع بعد — حاول مرة أخرى بعد الإشعار التالي."
 
@@ -1428,6 +1440,7 @@ msgstr "الأذونات"
 msgid "Pick a date"
 msgstr "اختر تاريخًا"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1466,6 +1479,10 @@ msgstr "الصورة السابقة"
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 msgid "Privacy"
 msgstr "الخصوصية"
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "جارٍ المعالجة…"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
@@ -1523,6 +1540,7 @@ msgstr "نسبي (5د, 3س, 2ي)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "نسبي خلال 24 ساعة، وإلا مطلق"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1570,6 +1588,10 @@ msgstr "إعادة تعيين {title}"
 #: ../../../lib/web/src/components/config-drawer.tsx:85
 msgid "Reset all settings to default values"
 msgstr "إعادة تعيين كل الإعدادات إلى القيم الافتراضية"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr "إعادة المحاولة"
 
 #: src/routes/_authenticated/app/$appId.tsx:642
 #: src/routes/_authenticated/app/$appId.tsx:645
@@ -2027,7 +2049,7 @@ msgstr "تعذر تحميل معلومات الإصدار"
 msgid "Unable to redirect to login. Please try again."
 msgstr "تعذر إعادة التوجيه إلى تسجيل الدخول. يرجى المحاولة مرة أخرى."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "غير معين"
 
@@ -2075,6 +2097,10 @@ msgstr "جارٍ تحديث التطبيقات..."
 #: src/features/apps/index.tsx:322
 msgid "Updating..."
 msgstr "جاري التحديث..."
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "تقدّم الرفع"
 
 #: src/features/routing/routing-table.tsx:155
 msgid "Use system default"
@@ -2199,9 +2225,21 @@ msgstr "لقد اطّلعت على كل شيء!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "تم نقل حسابك إلى هنا من {source}. حتى تحذفه من هناك، قد تصل الرسائل والإشعارات إلى كلا الخادمين، وقد يظل بعض محتواك يُقدَّم من الخادم القديم، وقد يستغرق المتابعون بضع دقائق للعثور عليك هنا."
 
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr "سيتم فقدان مرفقاتك."
+
 #: src/features/routing/routing-table.tsx:82
 msgid "Your preference"
 msgstr "تفضيلاتك"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr "سيتم فقدان نصك ومرفقاتك."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr "سيُفقد النص."
 
 #: src/routes/_authenticated/app/$appId.tsx:433
 msgid "Your version"

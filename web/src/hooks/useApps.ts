@@ -4,6 +4,7 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import type { AxiosProgressEvent } from 'axios'
 import appsApi from '@/api/apps'
 
 const appKeys = {
@@ -67,10 +68,12 @@ export const useInstallFromFileMutation = () => {
     mutationFn: ({
       file,
       privacy,
+      onProgress,
     }: {
       file: File
       privacy: 'public' | 'private'
-    }) => appsApi.installFromFile(file, privacy),
+      onProgress?: (event: AxiosProgressEvent) => void
+    }) => appsApi.installFromFile(file, privacy, onProgress),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: appKeys.all() })
     },

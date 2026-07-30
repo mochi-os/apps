@@ -75,6 +75,10 @@ msgstr "{selectedCount, plural, one {# επιλεγμένα} other {# επιλε
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Μαζικές ενέργειες για # επιλεγμένο {entityName}} other {Μαζικές ενέργειες για # επιλεγμένα {manyName}}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} από {totalLabel}"
+
 #: src/routes/_authenticated/app/$appId.tsx:386
 msgid "{track} (default, version {version})"
 msgstr "{track} (προεπιλογή, έκδοση {version})"
@@ -348,12 +352,12 @@ msgstr "Ειδοποιήσεις προγράμματος περιήγησης"
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "Κατηγορία για αυτήν την ειδοποίηση"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "Αλλαγή κατηγορίας ειδοποίησης"
 
@@ -689,6 +693,14 @@ msgstr "Κατεύθυνση"
 msgid "Directory"
 msgstr "Κατάλογος"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr "Απόρριψη"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr "Απόρριψη πρόχειρου;"
+
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
@@ -812,7 +824,7 @@ msgstr "Αποτυχία αποστολής κωδικού επαλήθευση�
 msgid "Failed to update apps"
 msgstr "Αποτυχία ενημέρωσης εφαρμογών"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "Αποτυχία ενημέρωσης κατηγορίας"
 
@@ -1284,7 +1296,7 @@ msgstr "Δεν έχουν διαμορφωθεί υπηρεσίες."
 msgid "No time zone found."
 msgstr "Δεν βρέθηκε ζώνη ώρας."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "Δεν υπάρχει ακόμη εγγραφή θέματος — προσπαθήστε ξανά μετά την επόμενη ειδοποίηση."
 
@@ -1428,6 +1440,7 @@ msgstr "Δικαιώματα"
 msgid "Pick a date"
 msgstr "Επιλέξτε ημερομηνία"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1466,6 +1479,10 @@ msgstr "Προηγούμενη εικόνα"
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 msgid "Privacy"
 msgstr "Ιδιωτικότητα"
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "Γίνεται επεξεργασία…"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
@@ -1523,6 +1540,7 @@ msgstr "Σχετικό (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Σχετικό εντός 24 ωρών, αλλιώς απόλυτο"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1570,6 +1588,10 @@ msgstr "Επαναφορά {title}"
 #: ../../../lib/web/src/components/config-drawer.tsx:85
 msgid "Reset all settings to default values"
 msgstr "Επαναφορά όλων των ρυθμίσεων σε προεπιλεγμένες τιμές"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr "Δοκιμή ξανά"
 
 #: src/routes/_authenticated/app/$appId.tsx:642
 #: src/routes/_authenticated/app/$appId.tsx:645
@@ -2027,7 +2049,7 @@ msgstr "Δεν ήταν δυνατή η φόρτωση πληροφοριών έ
 msgid "Unable to redirect to login. Please try again."
 msgstr "Δεν ήταν δυνατή η ανακατεύθυνση στη σύνδεση. Δοκιμάστε ξανά."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "Χωρίς ανάθεση"
 
@@ -2075,6 +2097,10 @@ msgstr "Ενημέρωση εφαρμογών..."
 #: src/features/apps/index.tsx:322
 msgid "Updating..."
 msgstr "Ενημέρωση..."
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "Πρόοδος μεταφόρτωσης"
 
 #: src/features/routing/routing-table.tsx:155
 msgid "Use system default"
@@ -2199,9 +2225,21 @@ msgstr "Τα είδατε όλα!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ο λογαριασμός σας μεταφέρθηκε εδώ από {source}. Μέχρι να τον διαγράψετε εκεί, τα μηνύματα και οι ειδοποιήσεις μπορεί να φτάνουν και στους δύο διακομιστές, μέρος του περιεχομένου σας συνεχίζει να εξυπηρετείται από τον παλιό διακομιστή και οι ακόλουθοί σας ενδέχεται να χρειαστούν λίγα λεπτά για να σας βρουν εδώ."
 
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr "Τα συνημμένα σας θα χαθούν."
+
 #: src/features/routing/routing-table.tsx:82
 msgid "Your preference"
 msgstr "Η προτίμησή σας"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr "Το κείμενο και τα συνημμένα σας θα χαθούν."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr "Το κείμενό σας θα χαθεί."
 
 #: src/routes/_authenticated/app/$appId.tsx:433
 msgid "Your version"

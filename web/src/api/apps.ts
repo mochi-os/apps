@@ -4,6 +4,7 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
 import { requestHelpers } from '@mochi/web'
+import type { AxiosProgressEvent } from 'axios'
 import endpoints from '@/api/endpoints'
 import type { InstalledApp, MarketApp, AppInfo, Track } from '@/api/types/apps'
 
@@ -69,7 +70,8 @@ const installFromPublisher = async (
 
 const installFromFile = async (
   file: File,
-  privacy: 'public' | 'private' = 'private'
+  privacy: 'public' | 'private' = 'private',
+  onProgress?: (event: AxiosProgressEvent) => void
 ): Promise<{ installed: boolean; id: string; version: string }> => {
   const formData = new FormData()
   formData.append('file', file, file.name)
@@ -78,7 +80,10 @@ const installFromFile = async (
     installed: boolean
     id: string
     version: string
-  }>(endpoints.apps.installFile, formData, NO_TOAST)
+  }>(endpoints.apps.installFile, formData, {
+    ...NO_TOAST,
+    onUploadProgress: onProgress,
+  })
   return response
 }
 
