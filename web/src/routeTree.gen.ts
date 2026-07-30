@@ -12,11 +12,11 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AuthenticatedIndexRouteImport } from './routes/_authenticated/index'
 import { Route as AuthenticatedRoutingRouteImport } from './routes/_authenticated/routing'
-import { Route as AuthenticatedRoutingIndexRouteImport } from './routes/_authenticated/routing/index'
-import { Route as AuthenticatedRoutingServicesRouteImport } from './routes/_authenticated/routing/services'
-import { Route as AuthenticatedRoutingPathsRouteImport } from './routes/_authenticated/routing/paths'
-import { Route as AuthenticatedRoutingClassesRouteImport } from './routes/_authenticated/routing/classes'
 import { Route as AuthenticatedAppAppIdRouteImport } from './routes/_authenticated/app/$appId'
+import { Route as AuthenticatedRoutingIndexRouteImport } from './routes/_authenticated/routing/index'
+import { Route as AuthenticatedRoutingClassesRouteImport } from './routes/_authenticated/routing/classes'
+import { Route as AuthenticatedRoutingPathsRouteImport } from './routes/_authenticated/routing/paths'
+import { Route as AuthenticatedRoutingServicesRouteImport } from './routes/_authenticated/routing/services'
 
 const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
   id: '/_authenticated',
@@ -32,22 +32,15 @@ const AuthenticatedRoutingRoute = AuthenticatedRoutingRouteImport.update({
   path: '/routing',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedAppAppIdRoute = AuthenticatedAppAppIdRouteImport.update({
+  id: '/app/$appId',
+  path: '/app/$appId',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const AuthenticatedRoutingIndexRoute =
   AuthenticatedRoutingIndexRouteImport.update({
     id: '/',
     path: '/',
-    getParentRoute: () => AuthenticatedRoutingRoute,
-  } as any)
-const AuthenticatedRoutingServicesRoute =
-  AuthenticatedRoutingServicesRouteImport.update({
-    id: '/services',
-    path: '/services',
-    getParentRoute: () => AuthenticatedRoutingRoute,
-  } as any)
-const AuthenticatedRoutingPathsRoute =
-  AuthenticatedRoutingPathsRouteImport.update({
-    id: '/paths',
-    path: '/paths',
     getParentRoute: () => AuthenticatedRoutingRoute,
   } as any)
 const AuthenticatedRoutingClassesRoute =
@@ -56,15 +49,22 @@ const AuthenticatedRoutingClassesRoute =
     path: '/classes',
     getParentRoute: () => AuthenticatedRoutingRoute,
   } as any)
-const AuthenticatedAppAppIdRoute = AuthenticatedAppAppIdRouteImport.update({
-  id: '/app/$appId',
-  path: '/app/$appId',
-  getParentRoute: () => AuthenticatedRouteRoute,
-} as any)
+const AuthenticatedRoutingPathsRoute =
+  AuthenticatedRoutingPathsRouteImport.update({
+    id: '/paths',
+    path: '/paths',
+    getParentRoute: () => AuthenticatedRoutingRoute,
+  } as any)
+const AuthenticatedRoutingServicesRoute =
+  AuthenticatedRoutingServicesRouteImport.update({
+    id: '/services',
+    path: '/services',
+    getParentRoute: () => AuthenticatedRoutingRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
-  '/routing': typeof AuthenticatedRoutingRouteWithChildren
   '/': typeof AuthenticatedIndexRoute
+  '/routing': typeof AuthenticatedRoutingRouteWithChildren
   '/app/$appId': typeof AuthenticatedAppAppIdRoute
   '/routing/classes': typeof AuthenticatedRoutingClassesRoute
   '/routing/paths': typeof AuthenticatedRoutingPathsRoute
@@ -93,8 +93,8 @@ export interface FileRoutesById {
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    | '/routing'
     | '/'
+    | '/routing'
     | '/app/$appId'
     | '/routing/classes'
     | '/routing/paths'
@@ -129,7 +129,7 @@ declare module '@tanstack/react-router' {
     '/_authenticated': {
       id: '/_authenticated'
       path: ''
-      fullPath: ''
+      fullPath: '/'
       preLoaderRoute: typeof AuthenticatedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
@@ -147,25 +147,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedRoutingRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/app/$appId': {
+      id: '/_authenticated/app/$appId'
+      path: '/app/$appId'
+      fullPath: '/app/$appId'
+      preLoaderRoute: typeof AuthenticatedAppAppIdRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/routing/': {
       id: '/_authenticated/routing/'
       path: '/'
       fullPath: '/routing/'
       preLoaderRoute: typeof AuthenticatedRoutingIndexRouteImport
-      parentRoute: typeof AuthenticatedRoutingRoute
-    }
-    '/_authenticated/routing/services': {
-      id: '/_authenticated/routing/services'
-      path: '/services'
-      fullPath: '/routing/services'
-      preLoaderRoute: typeof AuthenticatedRoutingServicesRouteImport
-      parentRoute: typeof AuthenticatedRoutingRoute
-    }
-    '/_authenticated/routing/paths': {
-      id: '/_authenticated/routing/paths'
-      path: '/paths'
-      fullPath: '/routing/paths'
-      preLoaderRoute: typeof AuthenticatedRoutingPathsRouteImport
       parentRoute: typeof AuthenticatedRoutingRoute
     }
     '/_authenticated/routing/classes': {
@@ -175,12 +168,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedRoutingClassesRouteImport
       parentRoute: typeof AuthenticatedRoutingRoute
     }
-    '/_authenticated/app/$appId': {
-      id: '/_authenticated/app/$appId'
-      path: '/app/$appId'
-      fullPath: '/app/$appId'
-      preLoaderRoute: typeof AuthenticatedAppAppIdRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
+    '/_authenticated/routing/paths': {
+      id: '/_authenticated/routing/paths'
+      path: '/paths'
+      fullPath: '/routing/paths'
+      preLoaderRoute: typeof AuthenticatedRoutingPathsRouteImport
+      parentRoute: typeof AuthenticatedRoutingRoute
+    }
+    '/_authenticated/routing/services': {
+      id: '/_authenticated/routing/services'
+      path: '/services'
+      fullPath: '/routing/services'
+      preLoaderRoute: typeof AuthenticatedRoutingServicesRouteImport
+      parentRoute: typeof AuthenticatedRoutingRoute
     }
   }
 }
