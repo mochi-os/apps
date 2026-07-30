@@ -17,7 +17,7 @@
 set -e
 
 SCRIPT_DIR="$(dirname "$0")"
-CURL="$SCRIPT_DIR/../../../test/claude/curl.sh"
+CURL="$SCRIPT_DIR/../../../claude/scripts/curl.sh"
 
 # Colors for output
 RED='\033[0;31m'
