@@ -24,7 +24,7 @@ msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# selecionado} other {# selecionados}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:245
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# versão não utilizada removida} other {# versões não utilizadas removidas}}"
 
@@ -39,15 +39,15 @@ msgid "{0} option preview"
 msgstr "Prévia da opção {0}"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:220
+#: src/features/apps/index.tsx:223
 msgid "{0} updated, {failed} failed"
 msgstr "{0} atualizados, {failed} falharam"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:161
-#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} foi instalado."
 
@@ -58,6 +58,10 @@ msgstr "Nome do {entityLabel}"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:99
 msgid "{entityLabel} name is required"
 msgstr "O nome de {entityLabel} é obrigatório"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} ofereceu empate"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
@@ -91,6 +95,11 @@ msgstr "{track} (versão {version})"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Abrir menu (# notificação não lida)} other {Abrir menu (# notificações não lidas)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} aninhados"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 horas"
@@ -102,6 +111,10 @@ msgstr "24 horas"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Absoluto (data e hora)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "Aceitar"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -131,6 +144,7 @@ msgstr "Tipo de conta"
 msgid "Account verified"
 msgstr "Conta verificada"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -153,6 +167,14 @@ msgstr "Adicionar conta"
 msgid "Add an account to receive notifications and use services."
 msgstr "Adicione uma conta para receber notificações e usar serviços."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "Adicionar item da checklist"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "Adicionar item..."
+
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
 msgstr "Adicionar nova conta"
@@ -166,7 +188,7 @@ msgstr "Adicionar tag..."
 msgid "Add team/app"
 msgstr "Adicionar time/aplicativo"
 
-#: src/features/apps/index.tsx:648
+#: src/features/apps/index.tsx:654
 msgid "Add to directory"
 msgstr "Adicionar ao diretório"
 
@@ -195,7 +217,7 @@ msgstr "IA"
 msgid "All"
 msgstr "Todos"
 
-#: src/features/apps/index.tsx:213
+#: src/features/apps/index.tsx:216
 msgid "All apps updated"
 msgstr "Todos os aplicativos atualizados"
 
@@ -225,13 +247,13 @@ msgstr "Qualquer pessoa"
 msgid "Anyone who is logged in"
 msgstr "Qualquer pessoa logada"
 
-#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:164
 #: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "Aplicativo"
 
-#: src/features/apps/index.tsx:301
-#: src/features/apps/index.tsx:311
+#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "Ações do aplicativo"
 
@@ -239,11 +261,11 @@ msgstr "Ações do aplicativo"
 msgid "App information"
 msgstr "Informações do app"
 
-#: src/features/apps/index.tsx:130
+#: src/features/apps/index.tsx:133
 msgid "App installed"
 msgstr "Aplicativo instalado"
 
-#: src/features/apps/index.tsx:271
+#: src/features/apps/index.tsx:277
 msgid "App installed successfully"
 msgstr "App instalado com sucesso"
 
@@ -258,8 +280,8 @@ msgstr "ID do aplicativo"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:64
-#: src/features/apps/index.tsx:352
+#: src/features/apps/index.tsx:66
+#: src/features/apps/index.tsx:358
 msgid "Apps"
 msgstr "Aplicativos"
 
@@ -293,7 +315,7 @@ msgstr "Versão disponível:"
 msgid "Available versions:"
 msgstr "Versões disponíveis:"
 
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:452
 msgid "Available, but not installed"
 msgstr "Disponível, mas não instalado"
 
@@ -325,6 +347,11 @@ msgstr "Voltar para o início"
 msgid "Banner"
 msgstr "Banner"
 
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "Navegação bloqueada para link não confiável"
+
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
 msgid "Boost interest"
@@ -345,9 +372,9 @@ msgstr "Notificações do navegador"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:570
-#: src/features/apps/index.tsx:611
-#: src/features/apps/index.tsx:660
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 #: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "Cancelar"
@@ -364,6 +391,10 @@ msgstr "Alterar categoria da notificação"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:198
 msgid "Check \"All\" to see your past notifications."
 msgstr "Selecione \"Tudo\" para ver as notificações anteriores."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "Escolha um jogo na barra lateral ou inicie um novo."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -399,12 +430,12 @@ msgstr "Roteamento de classe"
 msgid "Classes"
 msgstr "Classes"
 
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:347
 msgid "Clean up unused versions"
 msgstr "Limpar versões não utilizadas"
 
-#: src/features/apps/index.tsx:234
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:237
+#: src/features/apps/index.tsx:347
 msgid "Cleaning up..."
 msgstr "Limpando..."
 
@@ -549,10 +580,10 @@ msgstr "Copiado para a área de transferência"
 msgid "Copy"
 msgstr "Copiar"
 
-#: src/features/apps/index.tsx:134
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:272
+#: src/features/apps/index.tsx:137
+#: src/features/apps/index.tsx:165
+#: src/features/apps/index.tsx:185
+#: src/features/apps/index.tsx:278
 msgid "Could not install app."
 msgstr "Não foi possível instalar o aplicativo."
 
@@ -615,6 +646,10 @@ msgstr "Conflito de dados"
 msgid "Declared by"
 msgstr "Declarado por"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "Recusar"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 #: src/features/routing/routing-table.tsx:131
 #: src/features/routing/routing-table.tsx:155
@@ -646,7 +681,7 @@ msgstr "Canal padrão"
 msgid "Default track (version {0})"
 msgstr "Canal padrão (versão {0})"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Exclua sua conta no servidor antigo"
 
@@ -681,7 +716,7 @@ msgstr "Painel de detalhes"
 msgid "Detect from web browser"
 msgstr "Detectar do navegador"
 
-#: src/features/apps/index.tsx:421
+#: src/features/apps/index.tsx:427
 msgid "Development apps"
 msgstr "Aplicativos de desenvolvimento"
 
@@ -706,8 +741,8 @@ msgstr "Descartar rascunho?"
 msgid "Disconnected"
 msgstr "Desconectado"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Dispensar"
 
@@ -783,7 +818,7 @@ msgstr "Falha ao adicionar conta"
 msgid "Failed to add tag"
 msgstr "Falha ao adicionar tag"
 
-#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:239
 msgid "Failed to clean up apps"
 msgstr "Falha ao limpar apps"
 
@@ -820,7 +855,7 @@ msgstr "Falha ao revogar permissão"
 msgid "Failed to send verification code"
 msgstr "Falha ao enviar código de verificação"
 
-#: src/features/apps/index.tsx:207
+#: src/features/apps/index.tsx:210
 msgid "Failed to update apps"
 msgstr "Falha ao atualizar apps"
 
@@ -841,7 +876,7 @@ msgstr "Falha ao atualizar preferência"
 msgid "Failed to update system default"
 msgstr "Falha ao atualizar padrão do sistema"
 
-#: src/features/apps/index.tsx:641
+#: src/features/apps/index.tsx:647
 msgid "File:"
 msgstr "Arquivo:"
 
@@ -859,7 +894,7 @@ msgstr "Impressão digital"
 msgid "Fingerprint:"
 msgstr "Impressão digital:"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Conclua a migração da sua conta"
 
@@ -883,7 +918,7 @@ msgstr "Amigos"
 msgid "From"
 msgstr "De"
 
-#: src/features/apps/index.tsx:501
+#: src/features/apps/index.tsx:507
 msgid "From the directory"
 msgstr "Do diretório"
 
@@ -1005,50 +1040,54 @@ msgstr "Embutido"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:578
-#: src/features/apps/index.tsx:619
-#: src/features/apps/index.tsx:668
+#: src/features/apps/index.tsx:584
+#: src/features/apps/index.tsx:625
+#: src/features/apps/index.tsx:675
 msgid "Install"
 msgstr "Instalar"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:561
+#: src/features/apps/index.tsx:567
 msgid "Install {0}?"
 msgstr "Instalar {0}?"
 
-#: src/features/apps/index.tsx:394
+#: src/features/apps/index.tsx:400
 msgid "Install apps from the market or upload your own"
 msgstr "Instale aplicativos do mercado ou envie os seus próprios"
 
-#: src/features/apps/index.tsx:333
-#: src/features/apps/index.tsx:637
+#: src/features/apps/index.tsx:339
+#: src/features/apps/index.tsx:643
 msgid "Install from file"
 msgstr "Instalar a partir de arquivo"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:595
+#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:601
 msgid "Install from publisher"
 msgstr "Instalar a partir do publicador"
 
-#: src/features/apps/index.tsx:377
+#: src/features/apps/index.tsx:383
 msgid "Installed apps"
 msgstr "Aplicativos instalados"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:129
-#: src/features/apps/index.tsx:159
-#: src/features/apps/index.tsx:179
-#: src/features/apps/index.tsx:270
-#: src/features/apps/index.tsx:578
-#: src/features/apps/index.tsx:619
-#: src/features/apps/index.tsx:668
+#: src/features/apps/index.tsx:132
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:182
+#: src/features/apps/index.tsx:276
+#: src/features/apps/index.tsx:584
+#: src/features/apps/index.tsx:625
+#: src/features/apps/index.tsx:675
 msgid "Installing..."
 msgstr "Instalando..."
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:42
 msgid "Interests"
 msgstr "Interesses"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "Data inválida"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1141,8 +1180,8 @@ msgstr "Gerenciar capacidades concedidas a este aplicativo"
 msgid "Manage your connected accounts for notifications and services."
 msgstr "Gerencie suas contas conectadas para notificações e serviços."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Marcar tudo como lido"
@@ -1158,6 +1197,10 @@ msgstr "Médio"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "Menu"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "Mensagem"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1192,6 +1235,11 @@ msgstr "Erro de rede"
 msgid "New"
 msgstr "Novo"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "Novo jogo"
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
@@ -1201,11 +1249,11 @@ msgstr "Próxima imagem"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Nenhuma regra de acesso configurada. Adicione regras para controlar quem pode acessar este recurso."
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:219
 msgid "No apps could be updated."
 msgstr "Nenhum aplicativo pôde ser atualizado."
 
-#: src/features/apps/index.tsx:393
+#: src/features/apps/index.tsx:399
 msgid "No apps installed"
 msgstr "Nenhum aplicativo instalado"
 
@@ -1217,32 +1265,36 @@ msgstr "Nenhuma classe configurada."
 msgid "No connected accounts"
 msgstr "Nenhuma conta conectada"
 
-#: src/features/apps/index.tsx:488
+#: src/features/apps/index.tsx:494
 msgid "No description"
 msgstr "Sem descrição"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:432
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Nenhum app de desenvolvimento corresponde a \"{searchQuery}\""
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "Ainda não há jogos"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Nenhum grupo disponível"
 
-#: src/features/apps/index.tsx:519
+#: src/features/apps/index.tsx:525
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Nenhum app instalável no diretório corresponde a \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:400
+#: src/features/apps/index.tsx:406
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Nenhum app instalado corresponde a \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:518
+#: src/features/apps/index.tsx:524
 msgid "No matches in directory"
 msgstr "Nenhuma correspondência no diretório"
 
-#: src/features/apps/index.tsx:399
-#: src/features/apps/index.tsx:425
+#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:431
 msgid "No matching apps"
 msgstr "Nenhum aplicativo correspondente"
 
@@ -1254,6 +1306,7 @@ msgstr "Ainda não há notificações"
 msgid "No paths configured."
 msgstr "Nenhum caminho configurado."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Nenhuma pessoa encontrada"
@@ -1274,7 +1327,7 @@ msgstr "Nenhum lugar encontrado"
 msgid "No profile"
 msgstr "Sem perfil"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:477
 msgid "No recommendations available"
 msgstr "Nenhuma recomendação disponível"
 
@@ -1300,7 +1353,7 @@ msgstr "Nenhum fuso horário encontrado."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Ainda não há registro do tópico — tente novamente após a próxima notificação."
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:242
 msgid "No unused versions to clean up"
 msgstr "Nenhuma versão não utilizada para limpar"
 
@@ -1340,7 +1393,7 @@ msgid "Notifications"
 msgstr "Notificações"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "Notificações: {0}"
 
@@ -1402,11 +1455,11 @@ msgstr "Chave de acesso"
 msgid "Passkey verification failed. Please try again."
 msgstr "A verificação da chave de acesso falhou. Tente novamente."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Chaves de acesso"
 
-#: src/features/apps/index.tsx:599
+#: src/features/apps/index.tsx:605
 msgid "Paste the install link:"
 msgstr "Cole o link de instalação:"
 
@@ -1446,7 +1499,7 @@ msgstr "Escolha uma data"
 msgid "Please check your internet connection and try again."
 msgstr "Verifique sua conexão com a internet e tente novamente."
 
-#: src/features/apps/index.tsx:151
+#: src/features/apps/index.tsx:154
 msgid "Please enter an app ID"
 msgstr "Digite um ID de aplicativo"
 
@@ -1505,17 +1558,17 @@ msgstr "Notificação push"
 msgid "Raised"
 msgstr "Elevado"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Reconecte suas contas neste servidor"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Registre novamente suas chaves de acesso neste servidor"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:217
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:447
+#: src/features/apps/index.tsx:453
 msgid "Recommended"
 msgstr "Recomendado"
 
@@ -1570,6 +1623,10 @@ msgstr "Remover acesso?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "Remover interesse"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "Remover item"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1640,11 +1697,11 @@ msgstr "Salvando..."
 msgid "Search"
 msgstr "Pesquisar"
 
-#: src/features/apps/index.tsx:366
+#: src/features/apps/index.tsx:372
 msgid "Search apps"
 msgstr "Pesquisar apps"
 
-#: src/features/apps/index.tsx:365
+#: src/features/apps/index.tsx:371
 msgid "Search apps..."
 msgstr "Pesquisar apps..."
 
@@ -1697,6 +1754,10 @@ msgstr "Selecionar {0}"
 msgid "Select a capability to grant to {appName}."
 msgstr "Selecione uma capacidade para conceder a {appName}."
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "Selecionar um jogo"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Selecione um usuário, grupo ou outra regra para conceder acesso."
@@ -1741,6 +1802,11 @@ msgstr "Selecionar direção do site"
 msgid "Select theme preference"
 msgstr "Selecionar preferência de tema"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "Selecionar..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "selecionados"
@@ -1757,6 +1823,11 @@ msgstr "Enviar novamente"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "Enviar e-mail"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "Enviar mensagem"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1904,7 +1975,7 @@ msgstr "Termos e condições"
 msgid "That code is incorrect or has expired."
 msgstr "Esse código está incorreto ou expirou."
 
-#: src/features/apps/index.tsx:132
+#: src/features/apps/index.tsx:135
 msgid "The app has been installed successfully."
 msgstr "O app foi instalado com sucesso."
 
@@ -1992,7 +2063,7 @@ msgstr "Muitas solicitações"
 msgid "Top"
 msgstr "Topo"
 
-#: src/features/apps/index.tsx:736
+#: src/features/apps/index.tsx:743
 #: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "Trilha"
@@ -2020,6 +2091,10 @@ msgstr "Terça-feira"
 msgid "Type a command or search..."
 msgstr "Digite um comando ou pesquise..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "Digite uma mensagem…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "Digite para pesquisar usuários"
@@ -2032,7 +2107,7 @@ msgstr "Digite para pesquisar..."
 msgid "Unable to connect to remote server"
 msgstr "Não foi possível conectar ao servidor remoto"
 
-#: src/features/apps/index.tsx:466
+#: src/features/apps/index.tsx:472
 msgid "Unable to connect to the recommendations service"
 msgstr "Não foi possível conectar ao serviço de recomendações"
 
@@ -2057,7 +2132,7 @@ msgstr "Não atribuído"
 msgid "Unauthorized Access"
 msgstr "Acesso não permitido"
 
-#: src/features/apps/index.tsx:465
+#: src/features/apps/index.tsx:471
 msgid "Unavailable"
 msgstr "Indisponível"
 
@@ -2078,23 +2153,23 @@ msgstr "Desconhecido"
 msgid "Unverified"
 msgstr "Não verificado"
 
-#: src/features/apps/index.tsx:732
+#: src/features/apps/index.tsx:739
 msgid "Update"
 msgstr "Atualizar"
 
-#: src/features/apps/index.tsx:322
+#: src/features/apps/index.tsx:328
 msgid "Update all"
 msgstr "Atualizar tudo"
 
-#: src/features/apps/index.tsx:215
+#: src/features/apps/index.tsx:218
 msgid "Update failed"
 msgstr "Falha na atualização"
 
-#: src/features/apps/index.tsx:205
+#: src/features/apps/index.tsx:208
 msgid "Updating apps..."
 msgstr "Atualizando apps..."
 
-#: src/features/apps/index.tsx:322
+#: src/features/apps/index.tsx:328
 msgid "Updating..."
 msgstr "Atualizando..."
 
@@ -2175,8 +2250,8 @@ msgstr "Visualizar"
 msgid "View all"
 msgstr "Ver tudo"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "Ver todas as notificações"
 
@@ -2221,7 +2296,7 @@ msgstr "Você enviou os seguintes valores:"
 msgid "You're all caught up!"
 msgstr "Está tudo em dia!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Sua conta foi movida para cá de {source}. Enquanto não a excluir de lá, mensagens e notificações podem chegar a ambos os servidores, parte do seu conteúdo continua sendo servido pelo servidor antigo e seguidores podem levar alguns minutos para encontrar você aqui."
 

@@ -24,7 +24,7 @@ msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# ټاکل شوی} other {# ټاکل شوي}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:245
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# ناکارول شوې نسخه لرې شوه} other {# ناکارول شوې نسخې لرې شوې}}"
 
@@ -39,15 +39,15 @@ msgid "{0} option preview"
 msgstr "د {0} انتخاب مخکتنه"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:220
+#: src/features/apps/index.tsx:223
 msgid "{0} updated, {failed} failed"
 msgstr "{0} نوي شول، {failed} ناکام شول"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:161
-#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} نصب شو."
 
@@ -58,6 +58,10 @@ msgstr "د {entityLabel} نوم"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:99
 msgid "{entityLabel} name is required"
 msgstr "د {entityLabel} نوم اړین دی"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} مساوي وړاندیز کړل"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
@@ -91,6 +95,11 @@ msgstr "{track} (نسخه {version})"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {مینو خلاص کړئ (# نالوستې خبرتیا)} other {مینو خلاص کړئ (# نالوستې خبرتیاوې)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} ځالې شوي"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 ساعته"
@@ -102,6 +111,10 @@ msgstr "24 ساعته"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "مطلق (نېټه او وخت)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "ومنه"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -131,6 +144,7 @@ msgstr "د حساب ډول"
 msgid "Account verified"
 msgstr "حساب تایید شو"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -153,6 +167,14 @@ msgstr "حساب اضافه کړئ"
 msgid "Add an account to receive notifications and use services."
 msgstr "د خبرتیاوو ترلاسه کولو او خدماتو کارولو لپاره حساب اضافه کړئ."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "د چک لیست توکی اضافه کړئ"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "توکی اضافه کړئ..."
+
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
 msgstr "نوی حساب اضافه کړئ"
@@ -166,7 +188,7 @@ msgstr "ټاګ اضافه کړئ..."
 msgid "Add team/app"
 msgstr "ټیم/اپلیکیشن اضافه کړئ"
 
-#: src/features/apps/index.tsx:648
+#: src/features/apps/index.tsx:654
 msgid "Add to directory"
 msgstr "ډایرکټرۍ ته اضافه کړئ"
 
@@ -195,7 +217,7 @@ msgstr "AI"
 msgid "All"
 msgstr "ټول"
 
-#: src/features/apps/index.tsx:213
+#: src/features/apps/index.tsx:216
 msgid "All apps updated"
 msgstr "ټول اپلیکیشنونه نوي شول"
 
@@ -225,13 +247,13 @@ msgstr "هر څوک"
 msgid "Anyone who is logged in"
 msgstr "هر څوک چې ننوتی وي"
 
-#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:164
 #: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "اپلیکیشن"
 
-#: src/features/apps/index.tsx:301
-#: src/features/apps/index.tsx:311
+#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "د اپلیکیشن کړنې"
 
@@ -239,11 +261,11 @@ msgstr "د اپلیکیشن کړنې"
 msgid "App information"
 msgstr "د اپلیکیشن معلومات"
 
-#: src/features/apps/index.tsx:130
+#: src/features/apps/index.tsx:133
 msgid "App installed"
 msgstr "اپلیکیشن نصب شو"
 
-#: src/features/apps/index.tsx:271
+#: src/features/apps/index.tsx:277
 msgid "App installed successfully"
 msgstr "اپلیکیشن په بریالیتوب سره نصب شو"
 
@@ -258,8 +280,8 @@ msgstr "د غوښتنلیک ID"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:64
-#: src/features/apps/index.tsx:352
+#: src/features/apps/index.tsx:66
+#: src/features/apps/index.tsx:358
 msgid "Apps"
 msgstr "اپلیکیشنونه"
 
@@ -293,7 +315,7 @@ msgstr "موجوده نسخه:"
 msgid "Available versions:"
 msgstr "موجودې نسخې:"
 
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:452
 msgid "Available, but not installed"
 msgstr "موجود، خو نه نصب"
 
@@ -325,6 +347,11 @@ msgstr "کور ته بېرته"
 msgid "Banner"
 msgstr "بانر"
 
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "نه باور لرونکي لینک ته نیویګیشن بنده شوه"
+
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
 msgid "Boost interest"
@@ -345,9 +372,9 @@ msgstr "د براوزر خبرتیاوې"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:570
-#: src/features/apps/index.tsx:611
-#: src/features/apps/index.tsx:660
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 #: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "لغوه کول"
@@ -364,6 +391,10 @@ msgstr "د خبرتیا کټګورۍ بدله کړه"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:198
 msgid "Check \"All\" to see your past notifications."
 msgstr "د تیرو خبرتیاوو لیدلو لپاره \"ټول\" وټاکئ."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "د څنګې پټۍ څخه لوبه وټاکئ یا نوې پیل کړئ."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -399,12 +430,12 @@ msgstr "د ټولګي مسیر"
 msgid "Classes"
 msgstr "ټولګي"
 
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:347
 msgid "Clean up unused versions"
 msgstr "نه کارول شوې نسخې پاکې کړئ"
 
-#: src/features/apps/index.tsx:234
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:237
+#: src/features/apps/index.tsx:347
 msgid "Cleaning up..."
 msgstr "پاکول کیږي..."
 
@@ -549,10 +580,10 @@ msgstr "په کلیپ بورډ کاپي شو"
 msgid "Copy"
 msgstr "کاپي کړئ"
 
-#: src/features/apps/index.tsx:134
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:272
+#: src/features/apps/index.tsx:137
+#: src/features/apps/index.tsx:165
+#: src/features/apps/index.tsx:185
+#: src/features/apps/index.tsx:278
 msgid "Could not install app."
 msgstr "اپلیکېشن ونه نصبېدلو."
 
@@ -615,6 +646,10 @@ msgstr "د ډېټا ټکر"
 msgid "Declared by"
 msgstr "اعلان شوی لخوا"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "رد کړئ"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 #: src/features/routing/routing-table.tsx:131
 #: src/features/routing/routing-table.tsx:155
@@ -646,7 +681,7 @@ msgstr "ډیفالټ Track"
 msgid "Default track (version {0})"
 msgstr "ډیفالټ Track (نسخه {0})"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "د پخوانی سرور پر سر خپل حساب ړنګ کړئ"
 
@@ -681,7 +716,7 @@ msgstr "د تفصیلاتو پینل"
 msgid "Detect from web browser"
 msgstr "د ویب براوزر څخه ومومئ"
 
-#: src/features/apps/index.tsx:421
+#: src/features/apps/index.tsx:427
 msgid "Development apps"
 msgstr "د پراختیا اپلیکیشنونه"
 
@@ -706,8 +741,8 @@ msgstr "مسوده ړنګه شي؟"
 msgid "Disconnected"
 msgstr "پرېکړل شوی"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "وردکړه"
 
@@ -783,7 +818,7 @@ msgstr "د حساب اضافه کولو پاتې راغلل"
 msgid "Failed to add tag"
 msgstr "د ټګ اضافه کولو پاتې راغلل"
 
-#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:239
 msgid "Failed to clean up apps"
 msgstr "اپلیکیشنونه پاک نه شول"
 
@@ -820,7 +855,7 @@ msgstr "د اجازې د لغوه کولو پاتې راغلل"
 msgid "Failed to send verification code"
 msgstr "د تصدیق کوډ لیږلو پاتې راغلل"
 
-#: src/features/apps/index.tsx:207
+#: src/features/apps/index.tsx:210
 msgid "Failed to update apps"
 msgstr "اپلیکیشنونه تازه نه شول"
 
@@ -841,7 +876,7 @@ msgstr "د غوره توب تازه کولو پاتې راغلل"
 msgid "Failed to update system default"
 msgstr "د سیسټم ډیفالټ تازه کولو پاتې راغلل"
 
-#: src/features/apps/index.tsx:641
+#: src/features/apps/index.tsx:647
 msgid "File:"
 msgstr "فایل:"
 
@@ -859,7 +894,7 @@ msgstr "Fingerprint"
 msgid "Fingerprint:"
 msgstr "Fingerprint:"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "د خپل حساب لیږد پای ته ورسوئ"
 
@@ -883,7 +918,7 @@ msgstr "ملګري"
 msgid "From"
 msgstr "له"
 
-#: src/features/apps/index.tsx:501
+#: src/features/apps/index.tsx:507
 msgid "From the directory"
 msgstr "له ډایرکټري"
 
@@ -1005,50 +1040,54 @@ msgstr "Inset"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:578
-#: src/features/apps/index.tsx:619
-#: src/features/apps/index.tsx:668
+#: src/features/apps/index.tsx:584
+#: src/features/apps/index.tsx:625
+#: src/features/apps/index.tsx:675
 msgid "Install"
 msgstr "نصب کړئ"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:561
+#: src/features/apps/index.tsx:567
 msgid "Install {0}?"
 msgstr "{0} نصب کړئ؟"
 
-#: src/features/apps/index.tsx:394
+#: src/features/apps/index.tsx:400
 msgid "Install apps from the market or upload your own"
 msgstr "د بازار څخه اپلیکیشنونه نصب کړئ یا خپل اپلوډ کړئ"
 
-#: src/features/apps/index.tsx:333
-#: src/features/apps/index.tsx:637
+#: src/features/apps/index.tsx:339
+#: src/features/apps/index.tsx:643
 msgid "Install from file"
 msgstr "له فایل څخه نصب کړئ"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:595
+#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:601
 msgid "Install from publisher"
 msgstr "د خپروونکي څخه نصب کړئ"
 
-#: src/features/apps/index.tsx:377
+#: src/features/apps/index.tsx:383
 msgid "Installed apps"
 msgstr "نصب شوي اپلیکیشنونه"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:129
-#: src/features/apps/index.tsx:159
-#: src/features/apps/index.tsx:179
-#: src/features/apps/index.tsx:270
-#: src/features/apps/index.tsx:578
-#: src/features/apps/index.tsx:619
-#: src/features/apps/index.tsx:668
+#: src/features/apps/index.tsx:132
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:182
+#: src/features/apps/index.tsx:276
+#: src/features/apps/index.tsx:584
+#: src/features/apps/index.tsx:625
+#: src/features/apps/index.tsx:675
 msgid "Installing..."
 msgstr "نصبیږي..."
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:42
 msgid "Interests"
 msgstr "علاقې"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "ناسمه نېټه"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1141,8 +1180,8 @@ msgstr "په دې اپلیکیشن باندې ورکړل شویو وړتیاو �
 msgid "Manage your connected accounts for notifications and services."
 msgstr "د خبرتیاوو او خدماتو لپاره خپل نښلول شوي حسابونه اداره کړئ."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "ټول د لوستل شویو په توګه نښه کړئ"
@@ -1158,6 +1197,10 @@ msgstr "منځنی"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "مینو"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "پیغام"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1192,6 +1235,11 @@ msgstr "د شبکې تېروتنه"
 msgid "New"
 msgstr "نوی"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "نوې لوبه"
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
@@ -1201,11 +1249,11 @@ msgstr "بله انځور"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "د لاسرسي قاعدې نه دي تنظیم شوې. د دې سرچینې لاسرسي د کنترول لپاره قاعدې اضافه کړئ."
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:219
 msgid "No apps could be updated."
 msgstr "هیڅ ایپ نشو تازه کیدلی."
 
-#: src/features/apps/index.tsx:393
+#: src/features/apps/index.tsx:399
 msgid "No apps installed"
 msgstr "هیڅ ایپ نه دی نصب شوی"
 
@@ -1217,32 +1265,36 @@ msgstr "هیڅ ټولګي نه دي تنظیم شوي."
 msgid "No connected accounts"
 msgstr "هیڅ نښلول شوي حسابونه نشته"
 
-#: src/features/apps/index.tsx:488
+#: src/features/apps/index.tsx:494
 msgid "No description"
 msgstr "تفصیل نشته"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:432
 msgid "No development apps match \"{searchQuery}\""
 msgstr "هیڅ پراختیایي ایپ د \"{searchQuery}\" سره سمون نه خوري"
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "تر اوسه هیڅ لوبې نشته"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "هیڅ ډلې شتون نلري"
 
-#: src/features/apps/index.tsx:519
+#: src/features/apps/index.tsx:525
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "په لارښود کې د نصب وړ هیڅ ایپ د \"{searchQuery}\" سره سمون نه خوري"
 
-#: src/features/apps/index.tsx:400
+#: src/features/apps/index.tsx:406
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "هیڅ نصب شوی ایپ د \"{searchQuery}\" سره سمون نه خوري"
 
-#: src/features/apps/index.tsx:518
+#: src/features/apps/index.tsx:524
 msgid "No matches in directory"
 msgstr "په لارښود کې هیڅ سمون نشته"
 
-#: src/features/apps/index.tsx:399
-#: src/features/apps/index.tsx:425
+#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:431
 msgid "No matching apps"
 msgstr "هیڅ سمونوال ایپ نشته"
 
@@ -1254,6 +1306,7 @@ msgstr "تر اوسه خبرتیا نشته"
 msgid "No paths configured."
 msgstr "هیڅ لارې نه دي تنظیم شوې"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "هیڅ خلک ونه موندل شول"
@@ -1274,7 +1327,7 @@ msgstr "هیڅ ځایونه ونه موندل شول"
 msgid "No profile"
 msgstr "هیڅ پروفایل نشته"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:477
 msgid "No recommendations available"
 msgstr "هیڅ سپارښتنې شتون نلري"
 
@@ -1300,7 +1353,7 @@ msgstr "هیڅ وخت زون ونه موندل شو."
 msgid "No topic record yet — try again after the next notification."
 msgstr "تر اوسه د موضوع هیڅ ریکارډ نشته — د راتلونکې خبرتیا وروسته بیا هڅه وکړئ."
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:242
 msgid "No unused versions to clean up"
 msgstr "د پاکولو لپاره هیڅ نه کارول شوې نسخې نشته"
 
@@ -1340,7 +1393,7 @@ msgid "Notifications"
 msgstr "خبرتیاوې"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "خبرتیاوې: {0}"
 
@@ -1402,11 +1455,11 @@ msgstr "پاسکي"
 msgid "Passkey verification failed. Please try again."
 msgstr "د پاس کیلۍ تایید ناکام شو. مهرباني وکړئ بیا هڅه وکړئ."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "د لاسرسي کيلۍ"
 
-#: src/features/apps/index.tsx:599
+#: src/features/apps/index.tsx:605
 msgid "Paste the install link:"
 msgstr "د نصب لینک پیسټ کړئ:"
 
@@ -1446,7 +1499,7 @@ msgstr "نېټه وټاکئ"
 msgid "Please check your internet connection and try again."
 msgstr "مهرباني وکړئ خپل د انټرنیټ اړیکه وګورئ او بیا هڅه وکړئ."
 
-#: src/features/apps/index.tsx:151
+#: src/features/apps/index.tsx:154
 msgid "Please enter an app ID"
 msgstr "مهرباني وکړئ د ایپ ID دننه کړئ"
 
@@ -1505,17 +1558,17 @@ msgstr "د پوش خبرتیا"
 msgid "Raised"
 msgstr "پورته شوی"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "پر دې سرور خپل حسابونه بیا وصل کړئ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "خپل د لاسرسي کيلۍ پدې سرور کې بیا ثبت کړئ"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:217
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:447
+#: src/features/apps/index.tsx:453
 msgid "Recommended"
 msgstr "سپارښتل شوی"
 
@@ -1570,6 +1623,10 @@ msgstr "لاسرسی لرې کړو؟"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "علاقه لرې کړئ"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "توکی لرې کړئ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1640,11 +1697,11 @@ msgstr "د خوندي کولو په حال کې..."
 msgid "Search"
 msgstr "لټون"
 
-#: src/features/apps/index.tsx:366
+#: src/features/apps/index.tsx:372
 msgid "Search apps"
 msgstr "ایپس وپلټئ"
 
-#: src/features/apps/index.tsx:365
+#: src/features/apps/index.tsx:371
 msgid "Search apps..."
 msgstr "ایپس وپلټئ..."
 
@@ -1697,6 +1754,10 @@ msgstr "{0} وټاکئ"
 msgid "Select a capability to grant to {appName}."
 msgstr "د {appName} ته د ورکولو لپاره وړتیا وټاکئ."
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "یوه لوبه وټاکئ"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "د لاسرسي د ورکولو لپاره یو کارن، ډله، یا بله قاعده وټاکئ."
@@ -1741,6 +1802,11 @@ msgstr "د سایټ لوری وټاکئ"
 msgid "Select theme preference"
 msgstr "د ښکارندوی غوره توب وټاکئ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "وټاکئ..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "غوره شوي"
@@ -1757,6 +1823,11 @@ msgstr "بیا ولیږئ"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "بریښنالیک ولېږئ"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "پیغام ولېږئ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1904,7 +1975,7 @@ msgstr "شرایط او مقررات"
 msgid "That code is incorrect or has expired."
 msgstr "هغه کوډ غلط دی یا یې موده تېره ده."
 
-#: src/features/apps/index.tsx:132
+#: src/features/apps/index.tsx:135
 msgid "The app has been installed successfully."
 msgstr "اپ په بریالیتوب سره نصب شو."
 
@@ -1992,7 +2063,7 @@ msgstr "ډېرې زیاتې غوښتنې"
 msgid "Top"
 msgstr "بره"
 
-#: src/features/apps/index.tsx:736
+#: src/features/apps/index.tsx:743
 #: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "تعقیبول"
@@ -2020,6 +2091,10 @@ msgstr "سه‌شنبه"
 msgid "Type a command or search..."
 msgstr "د کمانډ یا لټون لپاره ولیکئ..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "پیغام ولیکئ…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "د کاروونکو لټون لپاره ولیکئ"
@@ -2032,7 +2107,7 @@ msgstr "د لټون لپاره ولیکئ..."
 msgid "Unable to connect to remote server"
 msgstr "له لرې پرتي سرور سره نښلېدل ونشول"
 
-#: src/features/apps/index.tsx:466
+#: src/features/apps/index.tsx:472
 msgid "Unable to connect to the recommendations service"
 msgstr "د سپارښتنو خدمت ته نشو وصل کیدلی"
 
@@ -2057,7 +2132,7 @@ msgstr "نه ګمارل شوی"
 msgid "Unauthorized Access"
 msgstr "غیر مجاز لاسرسی"
 
-#: src/features/apps/index.tsx:465
+#: src/features/apps/index.tsx:471
 msgid "Unavailable"
 msgstr "نه شته"
 
@@ -2078,23 +2153,23 @@ msgstr "نامعلوم"
 msgid "Unverified"
 msgstr "تصدیق نه شوی"
 
-#: src/features/apps/index.tsx:732
+#: src/features/apps/index.tsx:739
 msgid "Update"
 msgstr "نوی کول"
 
-#: src/features/apps/index.tsx:322
+#: src/features/apps/index.tsx:328
 msgid "Update all"
 msgstr "ټول نوي کړئ"
 
-#: src/features/apps/index.tsx:215
+#: src/features/apps/index.tsx:218
 msgid "Update failed"
 msgstr "نوی کول ناکام شول"
 
-#: src/features/apps/index.tsx:205
+#: src/features/apps/index.tsx:208
 msgid "Updating apps..."
 msgstr "اپلیکیشنونه تازه کیږي..."
 
-#: src/features/apps/index.tsx:322
+#: src/features/apps/index.tsx:328
 msgid "Updating..."
 msgstr "نوی کیږي..."
 
@@ -2175,8 +2250,8 @@ msgstr "ولید"
 msgid "View all"
 msgstr "ټول وګورئ"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "ټولې خبرتیاوې وګورئ"
 
@@ -2221,7 +2296,7 @@ msgstr "تاسو لاندې ارزښتونه واستول:"
 msgid "You're all caught up!"
 msgstr "تاسو ټول ولیدل!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "ستاسو حساب له {source} دلته لیږدول شوی. تر هغه چې تاسو هلته یې ړنګ نه کړئ، پیغامونه او خبرتیاوې ممکن دواړه سرورونو ته ورسیږي، ستاسو د مینځپانګې یوه برخه لاهم له پخوانی سرور نه چمتو کیږي، او تعقیبونکي ممکن دلته ستاسو موندلو لپاره یو شیبه وخت ولري."
 

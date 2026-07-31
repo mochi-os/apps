@@ -24,7 +24,7 @@ msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# vybráno} few {# vybráno} other {# vybráno}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:245
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {Odebrána # nepoužívaná verze} few {Odebrány # nepoužívané verze} other {Odebráno # nepoužívaných verzí}}"
 
@@ -39,15 +39,15 @@ msgid "{0} option preview"
 msgstr "Náhled možnosti {0}"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:220
+#: src/features/apps/index.tsx:223
 msgid "{0} updated, {failed} failed"
 msgstr "{0} aktualizováno, {failed} selhalo"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:161
-#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} byla nainstalována."
 
@@ -58,6 +58,10 @@ msgstr "Název {entityLabel}"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:99
 msgid "{entityLabel} name is required"
 msgstr "Název {entityLabel} je povinný"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} nabídl remízu"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
@@ -91,6 +95,11 @@ msgstr "{track} (verze {version})"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Otevřít nabídku (# nepřečtené oznámení)} few {Otevřít nabídku (# nepřečtená oznámení)} other {Otevřít nabídku (# nepřečtených oznámení)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} vnořených"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 hodin"
@@ -102,6 +111,10 @@ msgstr "24 hodin"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Absolutní (datum a čas)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "Přijmout"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -131,6 +144,7 @@ msgstr "Typ účtu"
 msgid "Account verified"
 msgstr "Účet ověřen"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -153,6 +167,14 @@ msgstr "Přidat účet"
 msgid "Add an account to receive notifications and use services."
 msgstr "Přidejte účet pro příjem oznámení a využívání služeb."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "Přidat položku checklistu"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "Přidat položku..."
+
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
 msgstr "Přidat nový účet"
@@ -166,7 +188,7 @@ msgstr "Přidat štítek..."
 msgid "Add team/app"
 msgstr "Přidat tým/aplikaci"
 
-#: src/features/apps/index.tsx:648
+#: src/features/apps/index.tsx:654
 msgid "Add to directory"
 msgstr "Přidat do adresáře"
 
@@ -195,7 +217,7 @@ msgstr "AI"
 msgid "All"
 msgstr "Vše"
 
-#: src/features/apps/index.tsx:213
+#: src/features/apps/index.tsx:216
 msgid "All apps updated"
 msgstr "Všechny aplikace aktualizovány"
 
@@ -225,13 +247,13 @@ msgstr "Kdokoli"
 msgid "Anyone who is logged in"
 msgstr "Kdokoli, kdo je přihlášen"
 
-#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:164
 #: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "Aplikace"
 
-#: src/features/apps/index.tsx:301
-#: src/features/apps/index.tsx:311
+#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "Akce aplikace"
 
@@ -239,11 +261,11 @@ msgstr "Akce aplikace"
 msgid "App information"
 msgstr "Informace o aplikaci"
 
-#: src/features/apps/index.tsx:130
+#: src/features/apps/index.tsx:133
 msgid "App installed"
 msgstr "Aplikace nainstalována"
 
-#: src/features/apps/index.tsx:271
+#: src/features/apps/index.tsx:277
 msgid "App installed successfully"
 msgstr "Aplikace byla úspěšně nainstalována"
 
@@ -258,8 +280,8 @@ msgstr "ID aplikace"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:64
-#: src/features/apps/index.tsx:352
+#: src/features/apps/index.tsx:66
+#: src/features/apps/index.tsx:358
 msgid "Apps"
 msgstr "Aplikace"
 
@@ -293,7 +315,7 @@ msgstr "Dostupná verze:"
 msgid "Available versions:"
 msgstr "Dostupné verze:"
 
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:452
 msgid "Available, but not installed"
 msgstr "Dostupné, ale nenainstalované"
 
@@ -325,6 +347,11 @@ msgstr "Zpět na úvod"
 msgid "Banner"
 msgstr "Banner"
 
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "Navigace na nedůvěryhodný odkaz zablokována"
+
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
 msgid "Boost interest"
@@ -345,9 +372,9 @@ msgstr "Oznámení prohlížeče"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:570
-#: src/features/apps/index.tsx:611
-#: src/features/apps/index.tsx:660
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 #: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "Zrušit"
@@ -364,6 +391,10 @@ msgstr "Změnit kategorii oznámení"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:198
 msgid "Check \"All\" to see your past notifications."
 msgstr "Zaškrtněte „Vše“, chcete-li zobrazit dřívější oznámení."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "Vyberte hru z postranního panelu nebo začněte novou."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -399,12 +430,12 @@ msgstr "Směrování tříd"
 msgid "Classes"
 msgstr "Třídy"
 
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:347
 msgid "Clean up unused versions"
 msgstr "Vyčistit nepoužívané verze"
 
-#: src/features/apps/index.tsx:234
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:237
+#: src/features/apps/index.tsx:347
 msgid "Cleaning up..."
 msgstr "Probíhá čištění..."
 
@@ -549,10 +580,10 @@ msgstr "Zkopírováno do schránky"
 msgid "Copy"
 msgstr "Kopírovat"
 
-#: src/features/apps/index.tsx:134
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:272
+#: src/features/apps/index.tsx:137
+#: src/features/apps/index.tsx:165
+#: src/features/apps/index.tsx:185
+#: src/features/apps/index.tsx:278
 msgid "Could not install app."
 msgstr "Aplikaci nelze nainstalovat."
 
@@ -615,6 +646,10 @@ msgstr "Konflikt dat"
 msgid "Declared by"
 msgstr "Deklaroval"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "Odmítnout"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 #: src/features/routing/routing-table.tsx:131
 #: src/features/routing/routing-table.tsx:155
@@ -646,7 +681,7 @@ msgstr "Výchozí kanál"
 msgid "Default track (version {0})"
 msgstr "Výchozí kanál (verze {0})"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Smazat účet na starém serveru"
 
@@ -681,7 +716,7 @@ msgstr "Panel podrobností"
 msgid "Detect from web browser"
 msgstr "Detekovat z webového prohlížeče"
 
-#: src/features/apps/index.tsx:421
+#: src/features/apps/index.tsx:427
 msgid "Development apps"
 msgstr "Vývojové aplikace"
 
@@ -706,8 +741,8 @@ msgstr "Zahodit koncept?"
 msgid "Disconnected"
 msgstr "Odpojeno"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Zavřít"
 
@@ -783,7 +818,7 @@ msgstr "Nepodařilo se přidat účet"
 msgid "Failed to add tag"
 msgstr "Nepodařilo se přidat štítek"
 
-#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:239
 msgid "Failed to clean up apps"
 msgstr "Aplikace se nepodařilo vyčistit"
 
@@ -820,7 +855,7 @@ msgstr "Nepodařilo se zrušit oprávnění"
 msgid "Failed to send verification code"
 msgstr "Nepodařilo se odeslat ověřovací kód"
 
-#: src/features/apps/index.tsx:207
+#: src/features/apps/index.tsx:210
 msgid "Failed to update apps"
 msgstr "Aplikace se nepodařilo aktualizovat"
 
@@ -841,7 +876,7 @@ msgstr "Nepodařilo se aktualizovat předvolbu"
 msgid "Failed to update system default"
 msgstr "Nepodařilo se aktualizovat systémové výchozí nastavení"
 
-#: src/features/apps/index.tsx:641
+#: src/features/apps/index.tsx:647
 msgid "File:"
 msgstr "Soubor:"
 
@@ -859,7 +894,7 @@ msgstr "Otisk"
 msgid "Fingerprint:"
 msgstr "Otisk:"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Dokončit přesun účtu"
 
@@ -883,7 +918,7 @@ msgstr "Přátelé"
 msgid "From"
 msgstr "Od"
 
-#: src/features/apps/index.tsx:501
+#: src/features/apps/index.tsx:507
 msgid "From the directory"
 msgstr "Z adresáře"
 
@@ -1005,50 +1040,54 @@ msgstr "Vložené"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:578
-#: src/features/apps/index.tsx:619
-#: src/features/apps/index.tsx:668
+#: src/features/apps/index.tsx:584
+#: src/features/apps/index.tsx:625
+#: src/features/apps/index.tsx:675
 msgid "Install"
 msgstr "Nainstalovat"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:561
+#: src/features/apps/index.tsx:567
 msgid "Install {0}?"
 msgstr "Instalovat {0}?"
 
-#: src/features/apps/index.tsx:394
+#: src/features/apps/index.tsx:400
 msgid "Install apps from the market or upload your own"
 msgstr "Nainstalujte si aplikace z tržiště nebo nahrajte vlastní"
 
-#: src/features/apps/index.tsx:333
-#: src/features/apps/index.tsx:637
+#: src/features/apps/index.tsx:339
+#: src/features/apps/index.tsx:643
 msgid "Install from file"
 msgstr "Nainstalovat ze souboru"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:595
+#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:601
 msgid "Install from publisher"
 msgstr "Nainstalovat od vydavatele"
 
-#: src/features/apps/index.tsx:377
+#: src/features/apps/index.tsx:383
 msgid "Installed apps"
 msgstr "Nainstalované aplikace"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:129
-#: src/features/apps/index.tsx:159
-#: src/features/apps/index.tsx:179
-#: src/features/apps/index.tsx:270
-#: src/features/apps/index.tsx:578
-#: src/features/apps/index.tsx:619
-#: src/features/apps/index.tsx:668
+#: src/features/apps/index.tsx:132
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:182
+#: src/features/apps/index.tsx:276
+#: src/features/apps/index.tsx:584
+#: src/features/apps/index.tsx:625
+#: src/features/apps/index.tsx:675
 msgid "Installing..."
 msgstr "Instaluji..."
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:42
 msgid "Interests"
 msgstr "Zájmy"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "Neplatné datum"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1141,8 +1180,8 @@ msgstr "Spravovat oprávnění udělená této aplikaci"
 msgid "Manage your connected accounts for notifications and services."
 msgstr "Spravujte připojené účty pro oznámení a služby."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Označit vše jako přečtené"
@@ -1158,6 +1197,10 @@ msgstr "Střední"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "Menu"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "Zpráva"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1192,6 +1235,11 @@ msgstr "Chyba sítě"
 msgid "New"
 msgstr "Nové"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "Nová hra"
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
@@ -1201,11 +1249,11 @@ msgstr "Další obrázek"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Nejsou nakonfigurována žádná pravidla přístupu. Přidejte pravidla pro řízení přístupu k tomuto zdroji."
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:219
 msgid "No apps could be updated."
 msgstr "Žádné aplikace nelze aktualizovat."
 
-#: src/features/apps/index.tsx:393
+#: src/features/apps/index.tsx:399
 msgid "No apps installed"
 msgstr "Žádné nainstalované aplikace"
 
@@ -1217,32 +1265,36 @@ msgstr "Nejsou nakonfigurovány žádné třídy."
 msgid "No connected accounts"
 msgstr "Žádné připojené účty"
 
-#: src/features/apps/index.tsx:488
+#: src/features/apps/index.tsx:494
 msgid "No description"
 msgstr "Bez popisu"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:432
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Žádné vývojové aplikace neodpovídají \"{searchQuery}\""
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "Zatím žádné hry"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Žádné skupiny k dispozici"
 
-#: src/features/apps/index.tsx:519
+#: src/features/apps/index.tsx:525
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Žádné instalovatelné aplikace v adresáři neodpovídají \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:400
+#: src/features/apps/index.tsx:406
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Žádné nainstalované aplikace neodpovídají \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:518
+#: src/features/apps/index.tsx:524
 msgid "No matches in directory"
 msgstr "V adresáři žádné shody"
 
-#: src/features/apps/index.tsx:399
-#: src/features/apps/index.tsx:425
+#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:431
 msgid "No matching apps"
 msgstr "Žádné odpovídající aplikace"
 
@@ -1254,6 +1306,7 @@ msgstr "Zatím žádná oznámení"
 msgid "No paths configured."
 msgstr "Nejsou nakonfigurovány žádné cesty."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Žádní lidé nenalezeni"
@@ -1274,7 +1327,7 @@ msgstr "Žádná místa nenalezena"
 msgid "No profile"
 msgstr "Žádný profil"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:477
 msgid "No recommendations available"
 msgstr "Žádná doporučení k dispozici"
 
@@ -1300,7 +1353,7 @@ msgstr "Žádné časové pásmo nenalezeno."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Zatím žádný záznam o tématu — zkuste to znovu po dalším oznámení."
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:242
 msgid "No unused versions to clean up"
 msgstr "Žádné nepoužité verze k vyčištění"
 
@@ -1340,7 +1393,7 @@ msgid "Notifications"
 msgstr "Oznámení"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "Oznámení: {0}"
 
@@ -1402,11 +1455,11 @@ msgstr "Přístupový klíč"
 msgid "Passkey verification failed. Please try again."
 msgstr "Ověření přístupového klíče se nezdařilo. Zkuste to prosím znovu."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Přístupové klíče"
 
-#: src/features/apps/index.tsx:599
+#: src/features/apps/index.tsx:605
 msgid "Paste the install link:"
 msgstr "Vložte odkaz pro instalaci:"
 
@@ -1446,7 +1499,7 @@ msgstr "Vyberte datum"
 msgid "Please check your internet connection and try again."
 msgstr "Zkontrolujte připojení k internetu a zkuste to znovu."
 
-#: src/features/apps/index.tsx:151
+#: src/features/apps/index.tsx:154
 msgid "Please enter an app ID"
 msgstr "Zadejte ID aplikace"
 
@@ -1505,17 +1558,17 @@ msgstr "Push oznámení"
 msgid "Raised"
 msgstr "Vyvýšený"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Znovu propojit účty na tomto serveru"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Znovu zaregistrujte své přístupové klíče na tomto serveru"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:217
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:447
+#: src/features/apps/index.tsx:453
 msgid "Recommended"
 msgstr "Doporučené"
 
@@ -1570,6 +1623,10 @@ msgstr "Odebrat přístup?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "Odebrat zájem"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "Odebrat položku"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1640,11 +1697,11 @@ msgstr "Ukládá se..."
 msgid "Search"
 msgstr "Hledat"
 
-#: src/features/apps/index.tsx:366
+#: src/features/apps/index.tsx:372
 msgid "Search apps"
 msgstr "Hledat aplikace"
 
-#: src/features/apps/index.tsx:365
+#: src/features/apps/index.tsx:371
 msgid "Search apps..."
 msgstr "Hledat aplikace..."
 
@@ -1697,6 +1754,10 @@ msgstr "Vybrat {0}"
 msgid "Select a capability to grant to {appName}."
 msgstr "Vyberte oprávnění, které chcete udělit {appName}."
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "Vyberte hru"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Vyberte uživatele, skupinu nebo jiné pravidlo pro udělení přístupu."
@@ -1741,6 +1802,11 @@ msgstr "Vyberte směr písma"
 msgid "Select theme preference"
 msgstr "Vyberte preferenci motivu"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "Vyberte..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "vybráno"
@@ -1757,6 +1823,11 @@ msgstr "Odeslat znovu"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "Odeslat e-mail"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "Odeslat zprávu"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1904,7 +1975,7 @@ msgstr "Smluvní podmínky"
 msgid "That code is incorrect or has expired."
 msgstr "Tento kód je nesprávný nebo vypršela jeho platnost."
 
-#: src/features/apps/index.tsx:132
+#: src/features/apps/index.tsx:135
 msgid "The app has been installed successfully."
 msgstr "Aplikace byla úspěšně nainstalována."
 
@@ -1992,7 +2063,7 @@ msgstr "Příliš mnoho požadavků"
 msgid "Top"
 msgstr "Nahoru"
 
-#: src/features/apps/index.tsx:736
+#: src/features/apps/index.tsx:743
 #: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "Větev"
@@ -2020,6 +2091,10 @@ msgstr "Úterý"
 msgid "Type a command or search..."
 msgstr "Zadejte příkaz nebo hledejte..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "Napište zprávu…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "Napište pro hledání uživatelů"
@@ -2032,7 +2107,7 @@ msgstr "Napište pro hledání..."
 msgid "Unable to connect to remote server"
 msgstr "Nelze se připojit ke vzdálenému serveru"
 
-#: src/features/apps/index.tsx:466
+#: src/features/apps/index.tsx:472
 msgid "Unable to connect to the recommendations service"
 msgstr "Nelze se připojit ke službě doporučení"
 
@@ -2057,7 +2132,7 @@ msgstr "Nepřiřazeno"
 msgid "Unauthorized Access"
 msgstr "Neoprávněný přístup"
 
-#: src/features/apps/index.tsx:465
+#: src/features/apps/index.tsx:471
 msgid "Unavailable"
 msgstr "Nedostupné"
 
@@ -2078,23 +2153,23 @@ msgstr "Neznámý"
 msgid "Unverified"
 msgstr "Neověřeno"
 
-#: src/features/apps/index.tsx:732
+#: src/features/apps/index.tsx:739
 msgid "Update"
 msgstr "Aktualizovat"
 
-#: src/features/apps/index.tsx:322
+#: src/features/apps/index.tsx:328
 msgid "Update all"
 msgstr "Aktualizovat vše"
 
-#: src/features/apps/index.tsx:215
+#: src/features/apps/index.tsx:218
 msgid "Update failed"
 msgstr "Aktualizace selhala"
 
-#: src/features/apps/index.tsx:205
+#: src/features/apps/index.tsx:208
 msgid "Updating apps..."
 msgstr "Aktualizace aplikací..."
 
-#: src/features/apps/index.tsx:322
+#: src/features/apps/index.tsx:328
 msgid "Updating..."
 msgstr "Aktualizuje se..."
 
@@ -2175,8 +2250,8 @@ msgstr "Zobrazit"
 msgid "View all"
 msgstr "Zobrazit vše"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "Zobrazit všechna oznámení"
 
@@ -2221,7 +2296,7 @@ msgstr "Odeslali jste následující hodnoty:"
 msgid "You're all caught up!"
 msgstr "Máte vše přečteno!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Váš účet byl přesunut sem z {source}. Dokud ho tam nesmažete, zprávy a upozornění mohou dosahovat na oba servery, část vašeho obsahu je nadále obsluhována ze starého serveru a sledující vás mohou potřebovat několik minut, než vás zde najdou."
 

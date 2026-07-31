@@ -24,7 +24,7 @@ msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# चुनल} other {# चुनल}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:245
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# अप्रयुक्त संस्करण हटावल गइल} other {# अप्रयुक्त संस्करण हटावल गइल}}"
 
@@ -39,15 +39,15 @@ msgid "{0} option preview"
 msgstr "{0} विकल्प के झलक"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:220
+#: src/features/apps/index.tsx:223
 msgid "{0} updated, {failed} failed"
 msgstr "{0} अपडेट भइल, {failed} विफल"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:161
-#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} स्थापित भइल बा।"
 
@@ -58,6 +58,10 @@ msgstr "{entityLabel} के नाम"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:99
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel} के नाम जरूरी बा"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} ड्रॉ के प्रस्ताव दिहले"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
@@ -91,6 +95,11 @@ msgstr "{track} (संस्करण {version})"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {मेनू खोलीं (# बिना पढ़ल सूचना)} other {मेनू खोलीं (# बिना पढ़ल सूचना)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} नेस्टेड"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 घंटा"
@@ -102,6 +111,10 @@ msgstr "24 घंटा"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "पूर्ण (तारीख आ समय)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "स्वीकार करीं"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -131,6 +144,7 @@ msgstr "खाता प्रकार"
 msgid "Account verified"
 msgstr "खाता सत्यापित कइल गइल"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -153,6 +167,14 @@ msgstr "खाता जोड़ीं"
 msgid "Add an account to receive notifications and use services."
 msgstr "सूचना पावे आ सेवा इस्तेमाल करे खातिर एगो खाता जोड़ीं।"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "चेकलिस्ट आइटम जोड़ीं"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "आइटम जोड़ीं..."
+
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
 msgstr "नया खाता जोड़ीं"
@@ -166,7 +188,7 @@ msgstr "टैग जोड़ीं..."
 msgid "Add team/app"
 msgstr "टीम/ऐप जोड़ीं"
 
-#: src/features/apps/index.tsx:648
+#: src/features/apps/index.tsx:654
 msgid "Add to directory"
 msgstr "निर्देशिका में जोड़ीं"
 
@@ -195,7 +217,7 @@ msgstr "AI"
 msgid "All"
 msgstr "सब"
 
-#: src/features/apps/index.tsx:213
+#: src/features/apps/index.tsx:216
 msgid "All apps updated"
 msgstr "सब ऐप अद्यतन कइल गइल"
 
@@ -225,13 +247,13 @@ msgstr "केहू भी"
 msgid "Anyone who is logged in"
 msgstr "जे केहू लॉग इन बा"
 
-#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:164
 #: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "ऐप"
 
-#: src/features/apps/index.tsx:301
-#: src/features/apps/index.tsx:311
+#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "ऐप क्रिया"
 
@@ -239,11 +261,11 @@ msgstr "ऐप क्रिया"
 msgid "App information"
 msgstr "ऐप जानकारी"
 
-#: src/features/apps/index.tsx:130
+#: src/features/apps/index.tsx:133
 msgid "App installed"
 msgstr "ऐप स्थापित कइल गइल"
 
-#: src/features/apps/index.tsx:271
+#: src/features/apps/index.tsx:277
 msgid "App installed successfully"
 msgstr "ऐप सफलतापूर्वक इंस्टॉल भइल"
 
@@ -258,8 +280,8 @@ msgstr "आवेदन ID"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:64
-#: src/features/apps/index.tsx:352
+#: src/features/apps/index.tsx:66
+#: src/features/apps/index.tsx:358
 msgid "Apps"
 msgstr "ऐप"
 
@@ -293,7 +315,7 @@ msgstr "उपलब्ध संस्करण:"
 msgid "Available versions:"
 msgstr "उपलब्ध संस्करण:"
 
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:452
 msgid "Available, but not installed"
 msgstr "उपलब्ध बा, बाकिर स्थापित नइखे"
 
@@ -325,6 +347,11 @@ msgstr "घर वापस जाईं"
 msgid "Banner"
 msgstr "बैनर"
 
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "अविश्वसनीय लिंक प नेविगेशन अवरुद्ध"
+
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
 msgid "Boost interest"
@@ -345,9 +372,9 @@ msgstr "Browser सूचना"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:570
-#: src/features/apps/index.tsx:611
-#: src/features/apps/index.tsx:660
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 #: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "रद्द करीं"
@@ -364,6 +391,10 @@ msgstr "सूचना श्रेणी बदलीं"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:198
 msgid "Check \"All\" to see your past notifications."
 msgstr "पुरान सूचना देखे खातिर \"सब\" चुनीं।"
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "साइडबार से एगो खेल चुनीं भा एगो नया शुरू करीं।"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -399,12 +430,12 @@ msgstr "वर्ग रूटिंग"
 msgid "Classes"
 msgstr "वर्ग"
 
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:347
 msgid "Clean up unused versions"
 msgstr "अनुपयोगी संस्करण साफ करीं"
 
-#: src/features/apps/index.tsx:234
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:237
+#: src/features/apps/index.tsx:347
 msgid "Cleaning up..."
 msgstr "साफ कइल जा रहल बा..."
 
@@ -549,10 +580,10 @@ msgstr "क्लिपबोर्ड पर कॉपी कइल गइल"
 msgid "Copy"
 msgstr "कॉपी करीं"
 
-#: src/features/apps/index.tsx:134
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:272
+#: src/features/apps/index.tsx:137
+#: src/features/apps/index.tsx:165
+#: src/features/apps/index.tsx:185
+#: src/features/apps/index.tsx:278
 msgid "Could not install app."
 msgstr "ऐप इंस्टॉल ना हो सकल।"
 
@@ -615,6 +646,10 @@ msgstr "डेटा में टकराव"
 msgid "Declared by"
 msgstr "द्वारा घोषित"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "अस्वीकार करीं"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 #: src/features/routing/routing-table.tsx:131
 #: src/features/routing/routing-table.tsx:155
@@ -646,7 +681,7 @@ msgstr "डिफ़ॉल्ट Track"
 msgid "Default track (version {0})"
 msgstr "डिफ़ॉल्ट Track (संस्करण {0})"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "पुरान सर्वर पर आपन खाता मेटाईं"
 
@@ -681,7 +716,7 @@ msgstr "विवरण पैनल"
 msgid "Detect from web browser"
 msgstr "Web browser से पता लगाईं"
 
-#: src/features/apps/index.tsx:421
+#: src/features/apps/index.tsx:427
 msgid "Development apps"
 msgstr "विकास ऐप"
 
@@ -706,8 +741,8 @@ msgstr "ड्राफ्ट छोड़ दीं?"
 msgid "Disconnected"
 msgstr "जुड़ल नइखे"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "खारिज करीं"
 
@@ -783,7 +818,7 @@ msgstr "खाता जोड़े में विफल"
 msgid "Failed to add tag"
 msgstr "टैग जोड़े में विफल"
 
-#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:239
 msgid "Failed to clean up apps"
 msgstr "ऐप साफ करे में असफल"
 
@@ -820,7 +855,7 @@ msgstr "अनुमति रद्द करे में विफल"
 msgid "Failed to send verification code"
 msgstr "सत्यापन कोड भेजे में विफल"
 
-#: src/features/apps/index.tsx:207
+#: src/features/apps/index.tsx:210
 msgid "Failed to update apps"
 msgstr "ऐप अपडेट करे में असफल"
 
@@ -841,7 +876,7 @@ msgstr "प्राथमिकता अपडेट करे में व�
 msgid "Failed to update system default"
 msgstr "सिस्टम डिफॉल्ट अपडेट करे में विफल"
 
-#: src/features/apps/index.tsx:641
+#: src/features/apps/index.tsx:647
 msgid "File:"
 msgstr "फाइल:"
 
@@ -859,7 +894,7 @@ msgstr "फिंगरप्रिंट"
 msgid "Fingerprint:"
 msgstr "फिंगरप्रिंट:"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "आपन खाता हिलावल पूरा करीं"
 
@@ -883,7 +918,7 @@ msgstr "दोस्त"
 msgid "From"
 msgstr "से"
 
-#: src/features/apps/index.tsx:501
+#: src/features/apps/index.tsx:507
 msgid "From the directory"
 msgstr "डायरेक्टरी से"
 
@@ -1005,50 +1040,54 @@ msgstr "अंदर"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:578
-#: src/features/apps/index.tsx:619
-#: src/features/apps/index.tsx:668
+#: src/features/apps/index.tsx:584
+#: src/features/apps/index.tsx:625
+#: src/features/apps/index.tsx:675
 msgid "Install"
 msgstr "इंस्टॉल करीं"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:561
+#: src/features/apps/index.tsx:567
 msgid "Install {0}?"
 msgstr "{0} इंस्टॉल करीं?"
 
-#: src/features/apps/index.tsx:394
+#: src/features/apps/index.tsx:400
 msgid "Install apps from the market or upload your own"
 msgstr "मार्केट से ऐप इंस्टॉल करीं भा आपन खुद के अपलोड करीं"
 
-#: src/features/apps/index.tsx:333
-#: src/features/apps/index.tsx:637
+#: src/features/apps/index.tsx:339
+#: src/features/apps/index.tsx:643
 msgid "Install from file"
 msgstr "फाइल से इंस्टॉल करीं"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:595
+#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:601
 msgid "Install from publisher"
 msgstr "प्रकाशक से इंस्टॉल करीं"
 
-#: src/features/apps/index.tsx:377
+#: src/features/apps/index.tsx:383
 msgid "Installed apps"
 msgstr "इंस्टॉल कइल ऐप"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:129
-#: src/features/apps/index.tsx:159
-#: src/features/apps/index.tsx:179
-#: src/features/apps/index.tsx:270
-#: src/features/apps/index.tsx:578
-#: src/features/apps/index.tsx:619
-#: src/features/apps/index.tsx:668
+#: src/features/apps/index.tsx:132
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:182
+#: src/features/apps/index.tsx:276
+#: src/features/apps/index.tsx:584
+#: src/features/apps/index.tsx:625
+#: src/features/apps/index.tsx:675
 msgid "Installing..."
 msgstr "इंस्टॉल हो रहल बा..."
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:42
 msgid "Interests"
 msgstr "रुचि"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "अमान्य तिथि"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1141,8 +1180,8 @@ msgstr "ई एप्लिकेशन के दिहल क्षमता �
 msgid "Manage your connected accounts for notifications and services."
 msgstr "सूचना आ सेवा खातिर आपन जुड़ल खाता के प्रबंधन करीं।"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "सब के पढ़ल चिह्नित करीं"
@@ -1158,6 +1197,10 @@ msgstr "मध्यम"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "मेनू"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "संदेश"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1192,6 +1235,11 @@ msgstr "नेटवर्क त्रुटि"
 msgid "New"
 msgstr "नया"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "नया खेल"
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
@@ -1201,11 +1249,11 @@ msgstr "अगिला तस्वीर"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "कौनो पहुँच नियम सेट नइखे। ए संसाधन पर के पहुँच कर सकेला, ओकरा खातिर नियम जोड़ीं।"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:219
 msgid "No apps could be updated."
 msgstr "कौनो app अपडेट ना हो सकल।"
 
-#: src/features/apps/index.tsx:393
+#: src/features/apps/index.tsx:399
 msgid "No apps installed"
 msgstr "कौनो app इंस्टॉल नइखे"
 
@@ -1217,32 +1265,36 @@ msgstr "कौनो क्लास सेट नइखे।"
 msgid "No connected accounts"
 msgstr "कौनो जुड़ल खाता नइखे"
 
-#: src/features/apps/index.tsx:488
+#: src/features/apps/index.tsx:494
 msgid "No description"
 msgstr "कौनो विवरण नइखे"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:432
 msgid "No development apps match \"{searchQuery}\""
 msgstr "कौनो विकास app \"{searchQuery}\" से मेल ना खाइल"
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "अबहीं तक कौनो खेल नइखे"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "कौनो ग्रुप उपलब्ध नइखे"
 
-#: src/features/apps/index.tsx:519
+#: src/features/apps/index.tsx:525
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "डायरेक्टरी में कौनो इंस्टॉल करे लायक app \"{searchQuery}\" से मेल ना खाइल"
 
-#: src/features/apps/index.tsx:400
+#: src/features/apps/index.tsx:406
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "कौनो इंस्टॉल कइल app \"{searchQuery}\" से मेल ना खाइल"
 
-#: src/features/apps/index.tsx:518
+#: src/features/apps/index.tsx:524
 msgid "No matches in directory"
 msgstr "डायरेक्टरी में कौनो मेल नइखे"
 
-#: src/features/apps/index.tsx:399
-#: src/features/apps/index.tsx:425
+#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:431
 msgid "No matching apps"
 msgstr "कौनो मेल खाए वाला app नइखे"
 
@@ -1254,6 +1306,7 @@ msgstr "अबले कवनो सूचना नइखे"
 msgid "No paths configured."
 msgstr "कौनो पथ सेट नइखे।"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "कौनो लोग ना मिलल"
@@ -1274,7 +1327,7 @@ msgstr "कौनो जगह ना मिलल"
 msgid "No profile"
 msgstr "कौनो प्रोफाइल नइखे"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:477
 msgid "No recommendations available"
 msgstr "कौनो सिफारिश उपलब्ध नइखे"
 
@@ -1300,7 +1353,7 @@ msgstr "कौनो टाइम जोन ना मिलल।"
 msgid "No topic record yet — try again after the next notification."
 msgstr "अबहीं तक कौनो विषय रिकॉर्ड नइखे — अगिला सूचना के बाद फेर कोशिश करीं।"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:242
 msgid "No unused versions to clean up"
 msgstr "साफ करे खातिर कौनो अनप्रयुक्त संस्करण नइखे"
 
@@ -1340,7 +1393,7 @@ msgid "Notifications"
 msgstr "सूचना"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "सूचना: {0}"
 
@@ -1402,11 +1455,11 @@ msgstr "पासकी"
 msgid "Passkey verification failed. Please try again."
 msgstr "पासकी सत्यापन विफल हो गइल। कृपया फिर से कोशिश करीं।"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Passkey"
 
-#: src/features/apps/index.tsx:599
+#: src/features/apps/index.tsx:605
 msgid "Paste the install link:"
 msgstr "इंस्टॉल लिंक पेस्ट करीं:"
 
@@ -1446,7 +1499,7 @@ msgstr "तारीख चुनीं"
 msgid "Please check your internet connection and try again."
 msgstr "कृपया आपन इंटरनेट कनेक्शन जाँचीं आ फेर से कोसिस करीं।"
 
-#: src/features/apps/index.tsx:151
+#: src/features/apps/index.tsx:154
 msgid "Please enter an app ID"
 msgstr "app ID डालीं"
 
@@ -1505,17 +1558,17 @@ msgstr "पुश सूचना"
 msgid "Raised"
 msgstr "उठल"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "एह सर्वर पर आपन खाता फिर से जोड़ीं"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "एह सर्वर पर आपन पासकी फिर से रजिस्टर करीं"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:217
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:447
+#: src/features/apps/index.tsx:453
 msgid "Recommended"
 msgstr "सिफारिश कइल"
 
@@ -1570,6 +1623,10 @@ msgstr "पहुँच हटाईं?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "रुचि हटाईं"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "आइटम हटाईं"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1640,11 +1697,11 @@ msgstr "सहेज रहल बा..."
 msgid "Search"
 msgstr "खोजीं"
 
-#: src/features/apps/index.tsx:366
+#: src/features/apps/index.tsx:372
 msgid "Search apps"
 msgstr "app खोजीं"
 
-#: src/features/apps/index.tsx:365
+#: src/features/apps/index.tsx:371
 msgid "Search apps..."
 msgstr "app खोजीं..."
 
@@ -1697,6 +1754,10 @@ msgstr "{0} चुनीं"
 msgid "Select a capability to grant to {appName}."
 msgstr "{appName} के देवे खातिर क्षमता चुनीं।"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "खेल चुनीं"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "पहुँच देवे खातिर यूजर, ग्रुप, भा दोसर नियम चुनीं।"
@@ -1741,6 +1802,11 @@ msgstr "साइट दिशा चुनीं"
 msgid "Select theme preference"
 msgstr "थीम वरीयता चुनीं"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "चुनीं..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "चुनल गइल"
@@ -1757,6 +1823,11 @@ msgstr "फेरु भेजीं"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "ईमेल भेजीं"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "संदेश भेजीं"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1904,7 +1975,7 @@ msgstr "नियम आ शर्त"
 msgid "That code is incorrect or has expired."
 msgstr "ऊ कोड गलत बा भा ओकर मियाद खतम हो गइल बा।"
 
-#: src/features/apps/index.tsx:132
+#: src/features/apps/index.tsx:135
 msgid "The app has been installed successfully."
 msgstr "ऐप सफलतापूर्वक स्थापित भइल बा।"
 
@@ -1992,7 +2063,7 @@ msgstr "बहुते जादा अनुरोध"
 msgid "Top"
 msgstr "ऊपर"
 
-#: src/features/apps/index.tsx:736
+#: src/features/apps/index.tsx:743
 #: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "ट्रैक"
@@ -2020,6 +2091,10 @@ msgstr "मंगल"
 msgid "Type a command or search..."
 msgstr "एगो आदेश टाइप करीं या खोजीं..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "एगो संदेश टाइप करीं…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "उपयोगकर्ता खोजे खातिर टाइप करीं"
@@ -2032,7 +2107,7 @@ msgstr "खोजे खातिर टाइप करीं..."
 msgid "Unable to connect to remote server"
 msgstr "रिमोट सर्वर से जुड़े में असमर्थ"
 
-#: src/features/apps/index.tsx:466
+#: src/features/apps/index.tsx:472
 msgid "Unable to connect to the recommendations service"
 msgstr "सिफारिश सेवा से जुड़ ना सकल"
 
@@ -2057,7 +2132,7 @@ msgstr "अनसौंपल"
 msgid "Unauthorized Access"
 msgstr "अनधिकृत पहुँच"
 
-#: src/features/apps/index.tsx:465
+#: src/features/apps/index.tsx:471
 msgid "Unavailable"
 msgstr "अनुपलब्ध"
 
@@ -2078,23 +2153,23 @@ msgstr "अनजान"
 msgid "Unverified"
 msgstr "असत्यापित"
 
-#: src/features/apps/index.tsx:732
+#: src/features/apps/index.tsx:739
 msgid "Update"
 msgstr "अपडेट करीं"
 
-#: src/features/apps/index.tsx:322
+#: src/features/apps/index.tsx:328
 msgid "Update all"
 msgstr "सब अपडेट करीं"
 
-#: src/features/apps/index.tsx:215
+#: src/features/apps/index.tsx:218
 msgid "Update failed"
 msgstr "अपडेट विफल भइल"
 
-#: src/features/apps/index.tsx:205
+#: src/features/apps/index.tsx:208
 msgid "Updating apps..."
 msgstr "ऐप अपडेट कइल जा रहल बा..."
 
-#: src/features/apps/index.tsx:322
+#: src/features/apps/index.tsx:328
 msgid "Updating..."
 msgstr "अपडेट हो रहल बा..."
 
@@ -2175,8 +2250,8 @@ msgstr "देखीं"
 msgid "View all"
 msgstr "सब देखीं"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "सब सूचना देखीं"
 
@@ -2221,7 +2296,7 @@ msgstr "रउआ ई मान भेजनी:"
 msgid "You're all caught up!"
 msgstr "रउआ सब देख लेनी!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "आपन खाता {source} से इहाँ हिलावल गइल। जब तक उहाँ से ना मेटाईं, संदेश आ सूचना दुनो सर्वर पर पहुँच सकेला, कुछ सामग्री पुरान सर्वर से आवत रही, आ फॉलोअर्स के इहाँ ढूंढे में कुछ मिनट लाग सकेला।"
 

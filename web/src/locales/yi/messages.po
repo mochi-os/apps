@@ -24,7 +24,7 @@ msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# אויסגעקליבן} other {# אויסגעקליבן}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:245
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# אומגענוצטע ווערסיע אַוועקגענומען} other {# אומגענוצטע ווערסיעס אַוועקגענומען}}"
 
@@ -39,15 +39,15 @@ msgid "{0} option preview"
 msgstr "פֿאָרױסבליק פֿון {0} אָפּציע"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:220
+#: src/features/apps/index.tsx:223
 msgid "{0} updated, {failed} failed"
 msgstr "{0} באַנײַט, {failed} דורכגעפֿאַלן"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:161
-#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} איז אינסטאַלירט געוואָרן."
 
@@ -58,6 +58,10 @@ msgstr "{entityLabel} נאָמען"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:99
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel}־נאָמען איז נײטיק"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} האָט פֿאָרגעלייגט אַ תּיקו"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
@@ -91,6 +95,11 @@ msgstr "{track} (ווערסיע {version})"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {עפֿנט מעניו (# אומגעלײענטע מעלדונג)} other {עפֿנט מעניו (# אומגעלײענטע מעלדונגען)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} אײַנגענעסטלט"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 שעה"
@@ -102,6 +111,10 @@ msgstr "24 שעה"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "אַבסאָלוט (דאַטע און צײַט)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "אָננעמען"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -131,6 +144,7 @@ msgstr "קאָנטע סאָרט"
 msgid "Account verified"
 msgstr "קאָנטע באַשטעטיקט"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -153,6 +167,14 @@ msgstr "צולייגן קאָנטע"
 msgid "Add an account to receive notifications and use services."
 msgstr "צולייגן אַ קאָנטע צו באַקומען נאָטיפֿיקאַציעס און נוצן סערוויסעס."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "צולייגן טשעקליסטע פּונקט"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "צולייגן פּונקט..."
+
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
 msgstr "צולייגן נײַע קאָנטע"
@@ -166,7 +188,7 @@ msgstr "צולייגן טאַג..."
 msgid "Add team/app"
 msgstr "צולייגן מאַנשאַפֿט/אַפּ"
 
-#: src/features/apps/index.tsx:648
+#: src/features/apps/index.tsx:654
 msgid "Add to directory"
 msgstr "צולייגן צו פֿירערשאַפֿט"
 
@@ -195,7 +217,7 @@ msgstr "AI"
 msgid "All"
 msgstr "אַלע"
 
-#: src/features/apps/index.tsx:213
+#: src/features/apps/index.tsx:216
 msgid "All apps updated"
 msgstr "אַלע אַפּן באַנײַט"
 
@@ -225,13 +247,13 @@ msgstr "עמעצער"
 msgid "Anyone who is logged in"
 msgstr "װער עס איז אײַנגעלאָגט"
 
-#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:164
 #: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "אַפּ"
 
-#: src/features/apps/index.tsx:301
-#: src/features/apps/index.tsx:311
+#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "אַפּ אַקציעס"
 
@@ -239,11 +261,11 @@ msgstr "אַפּ אַקציעס"
 msgid "App information"
 msgstr "אַפּ אינפֿאָרמאַציע"
 
-#: src/features/apps/index.tsx:130
+#: src/features/apps/index.tsx:133
 msgid "App installed"
 msgstr "אַפּ אינסטאַלירט"
 
-#: src/features/apps/index.tsx:271
+#: src/features/apps/index.tsx:277
 msgid "App installed successfully"
 msgstr "אַפּ אינסטאַלירט מיט הצלחה"
 
@@ -258,8 +280,8 @@ msgstr "אַפּליקאַציע ID"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:64
-#: src/features/apps/index.tsx:352
+#: src/features/apps/index.tsx:66
+#: src/features/apps/index.tsx:358
 msgid "Apps"
 msgstr "אַפּן"
 
@@ -293,7 +315,7 @@ msgstr "פֿאַראַנענע ווערסיע:"
 msgid "Available versions:"
 msgstr "פֿאַראַנענע ווערסיעס:"
 
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:452
 msgid "Available, but not installed"
 msgstr "פֿאַראַנען, אָבער נישט אינסטאַלירט"
 
@@ -325,6 +347,11 @@ msgstr "צוריק צום הויז"
 msgid "Banner"
 msgstr "באַנער"
 
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "געבלאָקירט נאַוויגאַציע צו אומגעטרויטן לינק"
+
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
 msgid "Boost interest"
@@ -345,9 +372,9 @@ msgstr "בראָוזער נאָטיפֿיקאַציעס"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:570
-#: src/features/apps/index.tsx:611
-#: src/features/apps/index.tsx:660
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 #: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "אָפּזאָגן"
@@ -364,6 +391,10 @@ msgstr "ענדערן נאָטיפֿיקאַציע קאַטעגאָריע"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:198
 msgid "Check \"All\" to see your past notifications."
 msgstr "קלײַבט אױס \"אַלץ\" צו זען אײַערע פֿריִערדיקע מעלדונגען."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "קלײַבט אַ שפּיל פֿון דער סײַדבאַר אָדער הייבט אָן אַ נײַע."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -399,12 +430,12 @@ msgstr "קלאַס וועגן"
 msgid "Classes"
 msgstr "קלאַסן"
 
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:347
 msgid "Clean up unused versions"
 msgstr "רייניקן אומגענוצטע ווערסיעס"
 
-#: src/features/apps/index.tsx:234
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:237
+#: src/features/apps/index.tsx:347
 msgid "Cleaning up..."
 msgstr "רייניקן..."
 
@@ -549,10 +580,10 @@ msgstr "קאָפּירט צו קליפּברעט"
 msgid "Copy"
 msgstr "קאָפּירן"
 
-#: src/features/apps/index.tsx:134
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:272
+#: src/features/apps/index.tsx:137
+#: src/features/apps/index.tsx:165
+#: src/features/apps/index.tsx:185
+#: src/features/apps/index.tsx:278
 msgid "Could not install app."
 msgstr "האָט נישט געקענט אינסטאַלירן די אַפּ."
 
@@ -615,6 +646,10 @@ msgstr "דאַטן־קאָנפֿליקט"
 msgid "Declared by"
 msgstr "דערקלערט פֿון"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "אָפּזאָגן"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 #: src/features/routing/routing-table.tsx:131
 #: src/features/routing/routing-table.tsx:155
@@ -646,7 +681,7 @@ msgstr "פֿאַרשטאַנדלעך track"
 msgid "Default track (version {0})"
 msgstr "פֿאַרשטאַנדלעך track (ווערסיע {0})"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "לעש אויס דיין קאנטע אויפן אלטן סערווער"
 
@@ -681,7 +716,7 @@ msgstr "פּרטים פּאַנעל"
 msgid "Detect from web browser"
 msgstr "אויסקלײַבן פֿון וועב בראָוזער"
 
-#: src/features/apps/index.tsx:421
+#: src/features/apps/index.tsx:427
 msgid "Development apps"
 msgstr "אַנטוויקלונג אַפּן"
 
@@ -706,8 +741,8 @@ msgstr "אַװעקװאַרפֿן דעם פּראָיעקט?"
 msgid "Disconnected"
 msgstr "אפגעשניטן"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "אַראָפּזאָגן"
 
@@ -783,7 +818,7 @@ msgstr "ניט געלונגען צוצוגעבן קאָנטע"
 msgid "Failed to add tag"
 msgstr "ניט געלונגען צוצוגעבן טאַג"
 
-#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:239
 msgid "Failed to clean up apps"
 msgstr "ניט געקענט אויסרייניקן אַפּס"
 
@@ -820,7 +855,7 @@ msgstr "ניט געלונגען צו אומקערן דערלויבעניש"
 msgid "Failed to send verification code"
 msgstr "ניט געלונגען צו שיקן פֿאַרזיכערונג־קאָד"
 
-#: src/features/apps/index.tsx:207
+#: src/features/apps/index.tsx:210
 msgid "Failed to update apps"
 msgstr "ניט געקענט דערהײַנטיקן אַפּס"
 
@@ -841,7 +876,7 @@ msgstr "ניט געלונגען צו דערהײַנטיקן פּרעפֿערענ
 msgid "Failed to update system default"
 msgstr "ניט געלונגען צו דערהײַנטיקן סיסטעם־ברירת־מחדל"
 
-#: src/features/apps/index.tsx:641
+#: src/features/apps/index.tsx:647
 msgid "File:"
 msgstr "פֿײַל:"
 
@@ -859,7 +894,7 @@ msgstr "פֿינגער־אָפּדרוק"
 msgid "Fingerprint:"
 msgstr "פֿינגער־אָפּדרוק:"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "פארטיק מאכן דעם אריבערטראג פון דיין קאנטע"
 
@@ -883,7 +918,7 @@ msgstr "חברים"
 msgid "From"
 msgstr "פֿון"
 
-#: src/features/apps/index.tsx:501
+#: src/features/apps/index.tsx:507
 msgid "From the directory"
 msgstr "פֿון פֿאָלדער"
 
@@ -1005,50 +1040,54 @@ msgstr "אַרײַנגעשטעלט"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:578
-#: src/features/apps/index.tsx:619
-#: src/features/apps/index.tsx:668
+#: src/features/apps/index.tsx:584
+#: src/features/apps/index.tsx:625
+#: src/features/apps/index.tsx:675
 msgid "Install"
 msgstr "אינסטאַלירן"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:561
+#: src/features/apps/index.tsx:567
 msgid "Install {0}?"
 msgstr "אינסטאַלירן {0}?"
 
-#: src/features/apps/index.tsx:394
+#: src/features/apps/index.tsx:400
 msgid "Install apps from the market or upload your own"
 msgstr "אינסטאַלירט אַפּן פֿונעם מאַרק אָדער לאָדט אַרויף אײַערע אייגענע"
 
-#: src/features/apps/index.tsx:333
-#: src/features/apps/index.tsx:637
+#: src/features/apps/index.tsx:339
+#: src/features/apps/index.tsx:643
 msgid "Install from file"
 msgstr "אינסטאַלירן פֿון פֿײַל"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:595
+#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:601
 msgid "Install from publisher"
 msgstr "אינסטאַלירן פֿון פֿאַרעפֿנטלעכער"
 
-#: src/features/apps/index.tsx:377
+#: src/features/apps/index.tsx:383
 msgid "Installed apps"
 msgstr "אינסטאַלירטע אַפּן"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:129
-#: src/features/apps/index.tsx:159
-#: src/features/apps/index.tsx:179
-#: src/features/apps/index.tsx:270
-#: src/features/apps/index.tsx:578
-#: src/features/apps/index.tsx:619
-#: src/features/apps/index.tsx:668
+#: src/features/apps/index.tsx:132
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:182
+#: src/features/apps/index.tsx:276
+#: src/features/apps/index.tsx:584
+#: src/features/apps/index.tsx:625
+#: src/features/apps/index.tsx:675
 msgid "Installing..."
 msgstr "אינסטאַלירט..."
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:42
 msgid "Interests"
 msgstr "אינטערעסן"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "ניט גילטיקע דאַטע"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1141,8 +1180,8 @@ msgstr "פֿירט קאַפּאַציטעטן וואָס זענען געגעבן
 msgid "Manage your connected accounts for notifications and services."
 msgstr "פֿאַרװאַלט אײַערע פֿאַרבונדענע קאָנטעס פֿאַר מעלדונגען און סערװיסן."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "צייכענען אַלץ ווי געלייענט"
@@ -1158,6 +1197,10 @@ msgstr "מיטל"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "מעניו"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "בריוו"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1192,6 +1235,11 @@ msgstr "נעץ פֿעלער"
 msgid "New"
 msgstr "נײַ"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "נײַ שפּיל"
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
@@ -1201,11 +1249,11 @@ msgstr "ווײַטערדיק בילד"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "קיין צוטריט כּללים קאָנפֿיגורירט. צולייג כּללים צו קאָנטראָלירן ווער קען האָבן צוטריט צו דעם רעסורס."
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:219
 msgid "No apps could be updated."
 msgstr "קיין אַפּס קען ניט זײַן דערפֿרישט."
 
-#: src/features/apps/index.tsx:393
+#: src/features/apps/index.tsx:399
 msgid "No apps installed"
 msgstr "קיין אַפּס אינסטאַלירט"
 
@@ -1217,32 +1265,36 @@ msgstr "קיין קלאַסן קאָנפֿיגורירט."
 msgid "No connected accounts"
 msgstr "קיין פֿאַרבונדענע קאָנטעס"
 
-#: src/features/apps/index.tsx:488
+#: src/features/apps/index.tsx:494
 msgid "No description"
 msgstr "קיין באַשרײַבונג"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:432
 msgid "No development apps match \"{searchQuery}\""
 msgstr "קיין אַנטוויקלונג אַפּס שטימען מיט \"{searchQuery}\""
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "נאָך קיין שפּילן"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "קיין גרופּעס פֿאַראַן"
 
-#: src/features/apps/index.tsx:519
+#: src/features/apps/index.tsx:525
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "קיין אינסטאַלירבאַרע אַפּס אינעם פֿאַרצייכעניש שטימען מיט \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:400
+#: src/features/apps/index.tsx:406
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "קיין אינסטאַלירטע אַפּס שטימען מיט \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:518
+#: src/features/apps/index.tsx:524
 msgid "No matches in directory"
 msgstr "קיין שטימונגען אינעם פֿאַרצייכעניש"
 
-#: src/features/apps/index.tsx:399
-#: src/features/apps/index.tsx:425
+#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:431
 msgid "No matching apps"
 msgstr "קיין שטימענדיקע אַפּס"
 
@@ -1254,6 +1306,7 @@ msgstr "נאָך קײן מעלדונגען"
 msgid "No paths configured."
 msgstr "קיין וועגן קאָנפֿיגורירט."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "קיין מענטשן ניט געפֿונען"
@@ -1274,7 +1327,7 @@ msgstr "קיין ערטער ניט געפֿונען"
 msgid "No profile"
 msgstr "קיין פּראָפֿיל"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:477
 msgid "No recommendations available"
 msgstr "קיין רעקאָמענדאַציעס פֿאַראַן"
 
@@ -1300,7 +1353,7 @@ msgstr "קיין צײַט זאָנע ניט געפֿונען."
 msgid "No topic record yet — try again after the next notification."
 msgstr "נאָך קיין טעמע רעקאָרד — פּרוּוו ווידער נאָך דער ווײַטערדיקער מעלדונג."
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:242
 msgid "No unused versions to clean up"
 msgstr "קיין אומגענוצטע ווערסיעס צו רייניקן"
 
@@ -1340,7 +1393,7 @@ msgid "Notifications"
 msgstr "מעלדונגען"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "מעלדונגען: {0}"
 
@@ -1402,11 +1455,11 @@ msgstr "פּאַסקיי"
 msgid "Passkey verification failed. Please try again."
 msgstr "די passkey פֿאַריפֿיצירונג איז דורכגעפֿאַלן. ביטע פּרוביר ווידער."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "פּאַסקייס"
 
-#: src/features/apps/index.tsx:599
+#: src/features/apps/index.tsx:605
 msgid "Paste the install link:"
 msgstr "קלעפּ די אינסטאַלירן לינק:"
 
@@ -1446,7 +1499,7 @@ msgstr "קלײַבט אױס אַ דאַטע"
 msgid "Please check your internet connection and try again."
 msgstr "זײַט אַזוי גוט קאָנטראָלירט אײַער אינטערנעץ פֿאַרבינדונג און פּרוּווט נאָך אַ מאָל."
 
-#: src/features/apps/index.tsx:151
+#: src/features/apps/index.tsx:154
 msgid "Please enter an app ID"
 msgstr "זײַ אַזוי גוט און אַרײַן אַן אַפּ ID"
 
@@ -1505,17 +1558,17 @@ msgstr "פּוש־מעלדונג"
 msgid "Raised"
 msgstr "אויפֿגעהויבן"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "פארבינד ווידער דיינע קאנטעס אויף דעם סערווער"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "רעגיסטרירט איבער אייערע צוטריט שליסלען אויף דעם סערווער"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:217
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:447
+#: src/features/apps/index.tsx:453
 msgid "Recommended"
 msgstr "רעקאָמענדירט"
 
@@ -1570,6 +1623,10 @@ msgstr "אַראָפּנעמען צוטריט?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "אַראָפּנעמען אינטערעס"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "אַראָפּנעמען עלעמענט"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1640,11 +1697,11 @@ msgstr "היטן..."
 msgid "Search"
 msgstr "זוך"
 
-#: src/features/apps/index.tsx:366
+#: src/features/apps/index.tsx:372
 msgid "Search apps"
 msgstr "זוך אַפּס"
 
-#: src/features/apps/index.tsx:365
+#: src/features/apps/index.tsx:371
 msgid "Search apps..."
 msgstr "זוך אַפּס..."
 
@@ -1697,6 +1754,10 @@ msgstr "קלײַבט אױס {0}"
 msgid "Select a capability to grant to {appName}."
 msgstr "קלײַב אַ פֿעיִקייט צו געבן צו {appName}."
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "קלײַב אַ שפּיל"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "קלײַב אַ באַניצער, גרופּע, אָדער אַנדער כּלל צו געבן צוטריט."
@@ -1741,6 +1802,11 @@ msgstr "קלײַב זײַטל־ריכטונג"
 msgid "Select theme preference"
 msgstr "קלײַב טעמע־פּרעפֿערענץ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "קלײַב..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "אויסגעקליבן"
@@ -1757,6 +1823,11 @@ msgstr "שיקן ווידער"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "שיק בליצפּאָסט"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "שיק אַ מעלדונג"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1904,7 +1975,7 @@ msgstr "תּנאָים"
 msgid "That code is incorrect or has expired."
 msgstr "יענער קאָד איז אומריכטיק אָדער איז אויסגעגאַנגען."
 
-#: src/features/apps/index.tsx:132
+#: src/features/apps/index.tsx:135
 msgid "The app has been installed successfully."
 msgstr "די אַפּ איז געראָטן אינסטאַלירט."
 
@@ -1992,7 +2063,7 @@ msgstr "צו פֿיל בקשות"
 msgid "Top"
 msgstr "אויבן"
 
-#: src/features/apps/index.tsx:736
+#: src/features/apps/index.tsx:743
 #: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "Track"
@@ -2020,6 +2091,10 @@ msgstr "דינסטיק"
 msgid "Type a command or search..."
 msgstr "טיפּט אַ באַפֿעל אָדער זוכט..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "טיפּט אַ מעלדונג…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "טיפּט צו זוכן באַניצערס"
@@ -2032,7 +2107,7 @@ msgstr "טיפּט צו זוכן..."
 msgid "Unable to connect to remote server"
 msgstr "ניט געקענט פֿאַרבינדן צום ווײַטן סערווער"
 
-#: src/features/apps/index.tsx:466
+#: src/features/apps/index.tsx:472
 msgid "Unable to connect to the recommendations service"
 msgstr "קאָן זיך נישט פֿאַרבינדן צום רעקאָמענדאַציעס־סערוויס"
 
@@ -2057,7 +2132,7 @@ msgstr "אומצוגעטיילט"
 msgid "Unauthorized Access"
 msgstr "נישט אויטאָריזירטער צוטריט"
 
-#: src/features/apps/index.tsx:465
+#: src/features/apps/index.tsx:471
 msgid "Unavailable"
 msgstr "נישט פֿאַראַן"
 
@@ -2078,23 +2153,23 @@ msgstr "אומבאַקאַנט"
 msgid "Unverified"
 msgstr "אומפֿאַריפֿיצירט"
 
-#: src/features/apps/index.tsx:732
+#: src/features/apps/index.tsx:739
 msgid "Update"
 msgstr "באַנײַ"
 
-#: src/features/apps/index.tsx:322
+#: src/features/apps/index.tsx:328
 msgid "Update all"
 msgstr "באַנײַ אַלץ"
 
-#: src/features/apps/index.tsx:215
+#: src/features/apps/index.tsx:218
 msgid "Update failed"
 msgstr "באַנײַונג דורכגעפֿאַלן"
 
-#: src/features/apps/index.tsx:205
+#: src/features/apps/index.tsx:208
 msgid "Updating apps..."
 msgstr "דערהײַנטיקן אַפּס..."
 
-#: src/features/apps/index.tsx:322
+#: src/features/apps/index.tsx:328
 msgid "Updating..."
 msgstr "באַנײַן..."
 
@@ -2175,8 +2250,8 @@ msgstr "בליק"
 msgid "View all"
 msgstr "זע אַלץ"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "זע אַלע נאָטיפֿיקאַציעס"
 
@@ -2221,7 +2296,7 @@ msgstr "איר האָט אײַנגעגעבן די פֿאָלגנדיקע װער�
 msgid "You're all caught up!"
 msgstr "איר האָט אַלץ געזען!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "דיין קאנטע איז אהערגעברענגט ווארן פון {source}. ביז דו לעשסט עס דארט, קענען מעסאזשן און הודעות דערגרייכן ביידע סערווערס, עטלעכע פון דיין אינהאלט ווערט ווייטאר פארזאמלט פונם אלטן סערווער, און פאלגערס קענען נעמען עטלעכע מינוטן צו דיך דא געפינען."
 

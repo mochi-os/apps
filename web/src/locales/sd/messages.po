@@ -24,7 +24,7 @@ msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# چونڊيل} other {# چونڊيل}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:245
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# اڻ استعمال ٿيل نسخو هٽايو ويو} other {# اڻ استعمال ٿيل نسخا هٽايا ويا}}"
 
@@ -39,15 +39,15 @@ msgid "{0} option preview"
 msgstr "{0} اختيار جو اڳواٽ نظارو"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:220
+#: src/features/apps/index.tsx:223
 msgid "{0} updated, {failed} failed"
 msgstr "{0} اپڊيٽ ٿيا، {failed} ناڪام ٿيا"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:161
-#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} نصب ڪيو ويو آھي."
 
@@ -58,6 +58,10 @@ msgstr "{entityLabel} جو نالو"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:99
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel} جو نالو گھربل آهي"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} ڊرا جي پيشڪش ڪئي"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
@@ -91,6 +95,11 @@ msgstr "{track} (ورزن {version})"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {مينيو کوليو (# اڻ پڙهيل اطلاع)} other {مينيو کوليو (# اڻ پڙهيل اطلاعون)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} اندروني"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 ڪلاڪ"
@@ -102,6 +111,10 @@ msgstr "24 ڪلاڪ"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "مطلق (تاريخ ۽ وقت)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "قبول ڪريو"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -131,6 +144,7 @@ msgstr "اڪائونٽ جو قسم"
 msgid "Account verified"
 msgstr "اڪائونٽ تصديق ٿيل"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -153,6 +167,14 @@ msgstr "اڪائونٽ شامل ڪريو"
 msgid "Add an account to receive notifications and use services."
 msgstr "اطلاع وصول ڪرڻ ۽ خدمتون استعمال ڪرڻ لاءِ اڪائونٽ شامل ڪريو."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "چيڪ لسٽ شيءِ شامل ڪريو"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "شيءِ شامل ڪريو..."
+
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
 msgstr "نئون اڪائونٽ شامل ڪريو"
@@ -166,7 +188,7 @@ msgstr "ٽيگ شامل ڪريو..."
 msgid "Add team/app"
 msgstr "ٽيم/ايپ شامل ڪريو"
 
-#: src/features/apps/index.tsx:648
+#: src/features/apps/index.tsx:654
 msgid "Add to directory"
 msgstr "ڊائريڪٽري ۾ شامل ڪريو"
 
@@ -195,7 +217,7 @@ msgstr "AI"
 msgid "All"
 msgstr "سڀ"
 
-#: src/features/apps/index.tsx:213
+#: src/features/apps/index.tsx:216
 msgid "All apps updated"
 msgstr "سڀ ايپس اپڊيٽ ٿيون"
 
@@ -225,13 +247,13 @@ msgstr "ڪوبه"
 msgid "Anyone who is logged in"
 msgstr "ڪو به جيڪو لاگ ان آهي"
 
-#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:164
 #: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "ايپ"
 
-#: src/features/apps/index.tsx:301
-#: src/features/apps/index.tsx:311
+#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "ايپ جا عمل"
 
@@ -239,11 +261,11 @@ msgstr "ايپ جا عمل"
 msgid "App information"
 msgstr "ايپ جي معلومات"
 
-#: src/features/apps/index.tsx:130
+#: src/features/apps/index.tsx:133
 msgid "App installed"
 msgstr "ايپ انسٽال ٿي وئي"
 
-#: src/features/apps/index.tsx:271
+#: src/features/apps/index.tsx:277
 msgid "App installed successfully"
 msgstr "ايپ ڪاميابيءَ سان انسٽال ٿي وئي"
 
@@ -258,8 +280,8 @@ msgstr "ايپليڪيشن ID"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:64
-#: src/features/apps/index.tsx:352
+#: src/features/apps/index.tsx:66
+#: src/features/apps/index.tsx:358
 msgid "Apps"
 msgstr "ايپس"
 
@@ -293,7 +315,7 @@ msgstr "موجود ورزن:"
 msgid "Available versions:"
 msgstr "موجود ورزن:"
 
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:452
 msgid "Available, but not installed"
 msgstr "موجود، پر انسٽال نه آهي"
 
@@ -325,6 +347,11 @@ msgstr "گهر ڏانهن واپس"
 msgid "Banner"
 msgstr "بينر"
 
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "غير قابل اعتماد لنڪ ڏانهن ناقابل اعتماد ناقابل تشريح روڪي"
+
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
 msgid "Boost interest"
@@ -345,9 +372,9 @@ msgstr "براؤزر اطلاع"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:570
-#: src/features/apps/index.tsx:611
-#: src/features/apps/index.tsx:660
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 #: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "منسوخ ڪريو"
@@ -364,6 +391,10 @@ msgstr "اطلاع جو زمرو تبديل ڪريو"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:198
 msgid "Check \"All\" to see your past notifications."
 msgstr "پنھنجون اڳوڻيون اطلاعون ڏسڻ لاءِ \"سڀ\" چونڊيو."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "سائڊبار مان راند چونڊيو يا نئين شروع ڪريو."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -399,12 +430,12 @@ msgstr "ڪلاس روٽنگ"
 msgid "Classes"
 msgstr "ڪلاس"
 
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:347
 msgid "Clean up unused versions"
 msgstr "غير استعمال شده ورزن صاف ڪريو"
 
-#: src/features/apps/index.tsx:234
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:237
+#: src/features/apps/index.tsx:347
 msgid "Cleaning up..."
 msgstr "صاف ڪري رهيو آهي..."
 
@@ -549,10 +580,10 @@ msgstr "ڪلپ بورڊ تي ڪاپي ٿيو"
 msgid "Copy"
 msgstr "ڪاپي ڪريو"
 
-#: src/features/apps/index.tsx:134
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:272
+#: src/features/apps/index.tsx:137
+#: src/features/apps/index.tsx:165
+#: src/features/apps/index.tsx:185
+#: src/features/apps/index.tsx:278
 msgid "Could not install app."
 msgstr "ايپ انسٽال نه ٿي سگهي."
 
@@ -615,6 +646,10 @@ msgstr "ڊيٽا جو ٽڪراءُ"
 msgid "Declared by"
 msgstr "اعلان ڪندڙ"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "رد ڪريو"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 #: src/features/routing/routing-table.tsx:131
 #: src/features/routing/routing-table.tsx:155
@@ -646,7 +681,7 @@ msgstr "ڊفالٽ ٽريڪ"
 msgid "Default track (version {0})"
 msgstr "ڊفالٽ ٽريڪ (ورزن {0})"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "پراڻي سرور تي پنهنجو اڪائونٽ ختم ڪريو"
 
@@ -681,7 +716,7 @@ msgstr "تفصيل پينل"
 msgid "Detect from web browser"
 msgstr "ويب براؤزر کان معلوم ڪريو"
 
-#: src/features/apps/index.tsx:421
+#: src/features/apps/index.tsx:427
 msgid "Development apps"
 msgstr "ڊيولپمنٽ ايپس"
 
@@ -706,8 +741,8 @@ msgstr "مسودو رد ڪجي؟"
 msgid "Disconnected"
 msgstr "ڳنڍيل ناهي"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "رد ڪريو"
 
@@ -783,7 +818,7 @@ msgstr "اڪائونٽ شامل ڪرڻ ۾ ناڪام"
 msgid "Failed to add tag"
 msgstr "ٽيگ شامل ڪرڻ ۾ ناڪام"
 
-#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:239
 msgid "Failed to clean up apps"
 msgstr "ايپس صاف ڪرڻ ۾ ناڪامي"
 
@@ -820,7 +855,7 @@ msgstr "اجازت رد ڪرڻ ۾ ناڪام"
 msgid "Failed to send verification code"
 msgstr "تصديق ڪوڊ موڪلڻ ۾ ناڪام"
 
-#: src/features/apps/index.tsx:207
+#: src/features/apps/index.tsx:210
 msgid "Failed to update apps"
 msgstr "ايپس اپڊيٽ ڪرڻ ۾ ناڪامي"
 
@@ -841,7 +876,7 @@ msgstr "ترجيح اپڊيٽ ڪرڻ ۾ ناڪام"
 msgid "Failed to update system default"
 msgstr "سسٽم ڊفالٽ اپڊيٽ ڪرڻ ۾ ناڪام"
 
-#: src/features/apps/index.tsx:641
+#: src/features/apps/index.tsx:647
 msgid "File:"
 msgstr "فائل:"
 
@@ -859,7 +894,7 @@ msgstr "فنگر پرنٽ"
 msgid "Fingerprint:"
 msgstr "فنگر پرنٽ:"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "پنهنجو اڪائونٽ منتقل ڪرڻ پورو ڪريو"
 
@@ -883,7 +918,7 @@ msgstr "دوست"
 msgid "From"
 msgstr "کان"
 
-#: src/features/apps/index.tsx:501
+#: src/features/apps/index.tsx:507
 msgid "From the directory"
 msgstr "ڊاريڪٽري مان"
 
@@ -1005,50 +1040,54 @@ msgstr "اندر"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:578
-#: src/features/apps/index.tsx:619
-#: src/features/apps/index.tsx:668
+#: src/features/apps/index.tsx:584
+#: src/features/apps/index.tsx:625
+#: src/features/apps/index.tsx:675
 msgid "Install"
 msgstr "انسٽال ڪريو"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:561
+#: src/features/apps/index.tsx:567
 msgid "Install {0}?"
 msgstr "{0} انسٽال ڪجي؟"
 
-#: src/features/apps/index.tsx:394
+#: src/features/apps/index.tsx:400
 msgid "Install apps from the market or upload your own"
 msgstr "مارڪيٽ مان ايپس انسٽال ڪريو يا پنهنجون اپ لوڊ ڪريو"
 
-#: src/features/apps/index.tsx:333
-#: src/features/apps/index.tsx:637
+#: src/features/apps/index.tsx:339
+#: src/features/apps/index.tsx:643
 msgid "Install from file"
 msgstr "فائل مان انسٽال ڪريو"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:595
+#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:601
 msgid "Install from publisher"
 msgstr "پبلشر کان انسٽال ڪريو"
 
-#: src/features/apps/index.tsx:377
+#: src/features/apps/index.tsx:383
 msgid "Installed apps"
 msgstr "انسٽال ٿيل ايپس"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:129
-#: src/features/apps/index.tsx:159
-#: src/features/apps/index.tsx:179
-#: src/features/apps/index.tsx:270
-#: src/features/apps/index.tsx:578
-#: src/features/apps/index.tsx:619
-#: src/features/apps/index.tsx:668
+#: src/features/apps/index.tsx:132
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:182
+#: src/features/apps/index.tsx:276
+#: src/features/apps/index.tsx:584
+#: src/features/apps/index.tsx:625
+#: src/features/apps/index.tsx:675
 msgid "Installing..."
 msgstr "انسٽال ٿي رهيو آهي..."
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:42
 msgid "Interests"
 msgstr "دلچسپيون"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "غلط تاريخ"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1141,8 +1180,8 @@ msgstr "هن ايپليڪيشن کي ڏنل صلاحيتون منظم ڪريو"
 msgid "Manage your connected accounts for notifications and services."
 msgstr "اطلاعن ۽ خدمتن لاءِ پنھنجا ڳنڍيل اڪائونٽ منظم ڪريو."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "سڀ پڙهيل طور نشانبر ڪريو"
@@ -1158,6 +1197,10 @@ msgstr "وچولو"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "مينيو"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "پيغام"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1192,6 +1235,11 @@ msgstr "نيٽ ورڪ جي خرابي"
 msgid "New"
 msgstr "نئون"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "نئين گيم"
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
@@ -1201,11 +1249,11 @@ msgstr "اڳيون تصوير"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "ڪي به رسائي قاعدا ترتيب نه ڏنا ويا. هن وسيلي تائين رسائي ڪنٽرول ڪرڻ لاءِ قاعدا شامل ڪريو."
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:219
 msgid "No apps could be updated."
 msgstr "ڪا به ايپ اپڊيٽ نه ڪري سگهي."
 
-#: src/features/apps/index.tsx:393
+#: src/features/apps/index.tsx:399
 msgid "No apps installed"
 msgstr "ڪا ايپ انسٽال ناهي"
 
@@ -1217,32 +1265,36 @@ msgstr "ڪي به ڪلاس ترتيب نه ڏنا ويا."
 msgid "No connected accounts"
 msgstr "ڪو ڳنڍيل اڪائونٽ نه آهي"
 
-#: src/features/apps/index.tsx:488
+#: src/features/apps/index.tsx:494
 msgid "No description"
 msgstr "ڪو تفصيل نه آهي"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:432
 msgid "No development apps match \"{searchQuery}\""
 msgstr "ڪا به ڊولپمينٽ ايپ \"{searchQuery}\" سان نه ٿي ملي"
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "اڃا ڪا گيم نه آهي"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "ڪو گروپ دستياب ناهي"
 
-#: src/features/apps/index.tsx:519
+#: src/features/apps/index.tsx:525
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "ڊائريڪٽري ۾ ڪا انسٽال جوڳي ايپ \"{searchQuery}\" سان نه ٿي ملي"
 
-#: src/features/apps/index.tsx:400
+#: src/features/apps/index.tsx:406
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "ڪا انسٽال ٿيل ايپ \"{searchQuery}\" سان نه ٿي ملي"
 
-#: src/features/apps/index.tsx:518
+#: src/features/apps/index.tsx:524
 msgid "No matches in directory"
 msgstr "ڊائريڪٽري ۾ ڪو ميلاپ نه آهي"
 
-#: src/features/apps/index.tsx:399
-#: src/features/apps/index.tsx:425
+#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:431
 msgid "No matching apps"
 msgstr "ڪا ملندڙ ايپ نه آهي"
 
@@ -1254,6 +1306,7 @@ msgstr "اڃا ڪا اطلاع ناهي"
 msgid "No paths configured."
 msgstr "ڪي رستا ترتيب نه ڏنا ويا."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "ڪو ماڻهو نه مليو"
@@ -1274,7 +1327,7 @@ msgstr "ڪا جاءِ نه ملي"
 msgid "No profile"
 msgstr "ڪو پروفائيل نه آهي"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:477
 msgid "No recommendations available"
 msgstr "ڪي سفارشون موجود ناهن"
 
@@ -1300,7 +1353,7 @@ msgstr "ڪو ٽائيم زون نه مليو."
 msgid "No topic record yet — try again after the next notification."
 msgstr "اڃا ڪو ٽاپڪ رڪارڊ نه آهي — اڳيون اطلاع کان پوءِ ٻيهر ڪوشش ڪريو."
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:242
 msgid "No unused versions to clean up"
 msgstr "صاف ڪرڻ لاءِ ڪي اڻ استعمال ٿيل ورزن نه آهن"
 
@@ -1340,7 +1393,7 @@ msgid "Notifications"
 msgstr "اطلاعون"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "اطلاعون: {0}"
 
@@ -1402,11 +1455,11 @@ msgstr "پاس ڪيئي"
 msgid "Passkey verification failed. Please try again."
 msgstr "پاس ڪي جي تصديق ناڪام ٿي. مهرباني ڪري ٻيهر ڪوشش ڪريو."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "پاسي ڪيز"
 
-#: src/features/apps/index.tsx:599
+#: src/features/apps/index.tsx:605
 msgid "Paste the install link:"
 msgstr "انسٽاليشن لنڪ پيسٽ ڪريو:"
 
@@ -1446,7 +1499,7 @@ msgstr "تاريخ چونڊيو"
 msgid "Please check your internet connection and try again."
 msgstr "مهرباني ڪري پنهنجو انٽرنيٽ ڪنيڪشن چيڪ ڪريو ۽ ٻيهر ڪوشش ڪريو."
 
-#: src/features/apps/index.tsx:151
+#: src/features/apps/index.tsx:154
 msgid "Please enter an app ID"
 msgstr "مهرباني ڪري هڪ ايپ ID داخل ڪريو"
 
@@ -1505,17 +1558,17 @@ msgstr "پش اطلاع"
 msgid "Raised"
 msgstr "مٿي ٿيل"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "هن سرور تي پنهنجا اڪائونٽ ٻيهر ڳنڍيو"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "هن سرور تي پنهنجون پاسي ڪيز ٻيهر رجسٽر ڪريو"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:217
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:447
+#: src/features/apps/index.tsx:453
 msgid "Recommended"
 msgstr "تجويز ڪيل"
 
@@ -1570,6 +1623,10 @@ msgstr "رسائي هٽائجي؟"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "دلچسپي هٽايو"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "شيءِ هٽايو"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1640,11 +1697,11 @@ msgstr "محفوظ ٿي رهيو آهي..."
 msgid "Search"
 msgstr "ڳوليو"
 
-#: src/features/apps/index.tsx:366
+#: src/features/apps/index.tsx:372
 msgid "Search apps"
 msgstr "ايپون ڳوليو"
 
-#: src/features/apps/index.tsx:365
+#: src/features/apps/index.tsx:371
 msgid "Search apps..."
 msgstr "ايپون ڳوليو..."
 
@@ -1697,6 +1754,10 @@ msgstr "{0} چونڊيو"
 msgid "Select a capability to grant to {appName}."
 msgstr "{appName} کي ڏيڻ لاءِ هڪ صلاحيت چونڊيو."
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "هڪ گيم چونڊيو"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "رسائي ڏيڻ لاءِ هڪ يوزر، گروپ، يا ٻيو قاعدو چونڊيو."
@@ -1741,6 +1802,11 @@ msgstr "سائيٽ جي طرف چونڊيو"
 msgid "Select theme preference"
 msgstr "ٿيم جي ترجيح چونڊيو"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "چونڊيو..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "چونڊيل"
@@ -1757,6 +1823,11 @@ msgstr "ٻيهر موڪليو"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "اي ميل موڪليو"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "پيغام موڪليو"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1904,7 +1975,7 @@ msgstr "شرطون ۽ ضابطا"
 msgid "That code is incorrect or has expired."
 msgstr "اهو ڪوڊ غلط آهي يا ختم ٿي ويو آهي."
 
-#: src/features/apps/index.tsx:132
+#: src/features/apps/index.tsx:135
 msgid "The app has been installed successfully."
 msgstr "ايپ ڪاميابي سان نصب ٿي وئي."
 
@@ -1992,7 +2063,7 @@ msgstr "تمام گهڻيون درخواستون"
 msgid "Top"
 msgstr "مٿي"
 
-#: src/features/apps/index.tsx:736
+#: src/features/apps/index.tsx:743
 #: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "ٽريڪ"
@@ -2020,6 +2091,10 @@ msgstr "اڱارو"
 msgid "Type a command or search..."
 msgstr "ھدايت ٽائپ ڪريو يا ڳوليو..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "پيغام ٽائپ ڪريو…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "صارفن کي ڳولڻ لاءِ ٽائپ ڪريو"
@@ -2032,7 +2107,7 @@ msgstr "ڳولڻ لاءِ ٽائپ ڪريو..."
 msgid "Unable to connect to remote server"
 msgstr "ريموٽ سرور سان ڳنڍڻ ناممڪن"
 
-#: src/features/apps/index.tsx:466
+#: src/features/apps/index.tsx:472
 msgid "Unable to connect to the recommendations service"
 msgstr "سفارشن جي سروس سان ڳنڍي نه سگھيا"
 
@@ -2057,7 +2132,7 @@ msgstr "غير تفويض ٿيل"
 msgid "Unauthorized Access"
 msgstr "غير مجاز رسائي"
 
-#: src/features/apps/index.tsx:465
+#: src/features/apps/index.tsx:471
 msgid "Unavailable"
 msgstr "دستياب نه آھي"
 
@@ -2078,23 +2153,23 @@ msgstr "اڻڄاتل"
 msgid "Unverified"
 msgstr "غير تصديق ٿيل"
 
-#: src/features/apps/index.tsx:732
+#: src/features/apps/index.tsx:739
 msgid "Update"
 msgstr "اپڊيٽ ڪريو"
 
-#: src/features/apps/index.tsx:322
+#: src/features/apps/index.tsx:328
 msgid "Update all"
 msgstr "سڀ اپڊيٽ ڪريو"
 
-#: src/features/apps/index.tsx:215
+#: src/features/apps/index.tsx:218
 msgid "Update failed"
 msgstr "اپڊيٽ ناڪام ٿيو"
 
-#: src/features/apps/index.tsx:205
+#: src/features/apps/index.tsx:208
 msgid "Updating apps..."
 msgstr "ايپس اپڊيٽ ڪري رهيو آهي..."
 
-#: src/features/apps/index.tsx:322
+#: src/features/apps/index.tsx:328
 msgid "Updating..."
 msgstr "اپڊيٽ ٿي رهيو آھي..."
 
@@ -2175,8 +2250,8 @@ msgstr "ڏسو"
 msgid "View all"
 msgstr "سڀ ڏسو"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "سڀ اطلاع ڏسو"
 
@@ -2221,7 +2296,7 @@ msgstr "توھان ھيٺيان قدر موڪليا:"
 msgid "You're all caught up!"
 msgstr "توھان سڀ ڏسي ورتو!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "توهان جو اڪائونٽ {source} کان هتي منتقل ڪيو ويو. جيستائين توهان اتي ان کي نه ختم ڪيو، پيغام ۽ اطلاع ٻنهي سرورن تي پهچي سگهن ٿا، توهان جو ڪجهه مواد اڃا به پراڻي سرور کان فراهم ٿئي ٿو، ۽ پيروڪارن کي هتي توهان کي ڳولڻ ۾ ڪجهه منٽ لڳي سگهن ٿا."
 

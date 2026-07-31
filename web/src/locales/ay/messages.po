@@ -24,7 +24,7 @@ msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# tila qhipart'i} other {# tila qhipart'i}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:245
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# jan apnaqata versión apsuta} other {# jan apnaqata versionanaka apsuta}}"
 
@@ -39,15 +39,15 @@ msgid "{0} option preview"
 msgstr "{0} ajlliwi nayrraqata uñjaña"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:220
+#: src/features/apps/index.tsx:223
 msgid "{0} updated, {failed} failed"
 msgstr "{0} machaqachatawa, {failed} pantjatawa"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:161
-#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} uskutawa."
 
@@ -58,6 +58,10 @@ msgstr "{entityLabel} suti"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:99
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel} suti wakisi"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} resignasta — gantata!"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
@@ -91,6 +95,11 @@ msgstr "{track} (versión {version})"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Menu jist'araña (# jan ullt'ata yatiyawi)} other {Menu jist'araña (# jan ullt'ata yatiyawinaka)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} manqhankiri"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 hora"
@@ -102,6 +111,10 @@ msgstr "24 hora"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Absoluto (uru ukat hora)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "Iyawsaña"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -131,6 +144,7 @@ msgstr "Cuenta kasta"
 msgid "Account verified"
 msgstr "Cuenta uñakipata"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -153,6 +167,14 @@ msgstr "Cuenta yapxataña"
 msgid "Add an account to receive notifications and use services."
 msgstr "Mä cuenta yapxataña yatiyawinaka katuqañataki ukat servicionaka apnaqañataki."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "Checklist itim yapxataña"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "Itim yapxataña..."
+
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
 msgstr "Machaq cuenta yapxataña"
@@ -166,7 +188,7 @@ msgstr "Tag yapxataña..."
 msgid "Add team/app"
 msgstr "Equipo/app yapxataña"
 
-#: src/features/apps/index.tsx:648
+#: src/features/apps/index.tsx:654
 msgid "Add to directory"
 msgstr "Directorior yapxataña"
 
@@ -195,7 +217,7 @@ msgstr "AI"
 msgid "All"
 msgstr "Taqpach"
 
-#: src/features/apps/index.tsx:213
+#: src/features/apps/index.tsx:216
 msgid "All apps updated"
 msgstr "Taqpach app machaqachata"
 
@@ -225,13 +247,13 @@ msgstr "Khitisa"
 msgid "Anyone who is logged in"
 msgstr "Khitis mantki ukanaka"
 
-#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:164
 #: src/routes/_authenticated/app/$appId.tsx:98
 msgid "App"
 msgstr "App"
 
-#: src/features/apps/index.tsx:301
-#: src/features/apps/index.tsx:311
+#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "App lurawinaka"
 
@@ -239,11 +261,11 @@ msgstr "App lurawinaka"
 msgid "App information"
 msgstr "App yatiyäwi"
 
-#: src/features/apps/index.tsx:130
+#: src/features/apps/index.tsx:133
 msgid "App installed"
 msgstr "App instalata"
 
-#: src/features/apps/index.tsx:271
+#: src/features/apps/index.tsx:277
 msgid "App installed successfully"
 msgstr "App sumawa uchata"
 
@@ -258,8 +280,8 @@ msgstr "Application ID"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
-#: src/features/apps/index.tsx:64
-#: src/features/apps/index.tsx:352
+#: src/features/apps/index.tsx:66
+#: src/features/apps/index.tsx:358
 msgid "Apps"
 msgstr "Apps"
 
@@ -293,7 +315,7 @@ msgstr "Utjir versión:"
 msgid "Available versions:"
 msgstr "Utjir versionanaka:"
 
-#: src/features/apps/index.tsx:446
+#: src/features/apps/index.tsx:452
 msgid "Available, but not installed"
 msgstr "Utji, ukampis jan instalata"
 
@@ -325,6 +347,11 @@ msgstr "Utar kutiña"
 msgid "Banner"
 msgstr "Banner"
 
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "Jan iyawsir linkar mantañ jark'ata"
+
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
 msgid "Boost interest"
@@ -345,9 +372,9 @@ msgstr "Browser yatiyäwinaka"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:570
-#: src/features/apps/index.tsx:611
-#: src/features/apps/index.tsx:660
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 #: src/routes/_authenticated/app/$appId.tsx:566
 msgid "Cancel"
 msgstr "Jaytaña"
@@ -364,6 +391,10 @@ msgstr "Yatiyäw kasta mayjt'ayaña"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:198
 msgid "Check \"All\" to see your past notifications."
 msgstr "\"Taqi\" ukar uñjañataki nayra yatiyawinaka."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "Mä anatawi ajllxaña sidebar taypita jan ukax mä machaq qalltaña."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -399,12 +430,12 @@ msgstr "Class thakhi"
 msgid "Classes"
 msgstr "Classes"
 
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:347
 msgid "Clean up unused versions"
 msgstr "Jan apnaqir versionanak chhaqtayaña"
 
-#: src/features/apps/index.tsx:234
-#: src/features/apps/index.tsx:341
+#: src/features/apps/index.tsx:237
+#: src/features/apps/index.tsx:347
 msgid "Cleaning up..."
 msgstr "Q'umachasa..."
 
@@ -549,10 +580,10 @@ msgstr "Clipboard-ru copiata"
 msgid "Copy"
 msgstr "Copiaña"
 
-#: src/features/apps/index.tsx:134
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:272
+#: src/features/apps/index.tsx:137
+#: src/features/apps/index.tsx:165
+#: src/features/apps/index.tsx:185
+#: src/features/apps/index.tsx:278
 msgid "Could not install app."
 msgstr "Janiw aplicación instalañ atkiti."
 
@@ -615,6 +646,10 @@ msgstr "Datanakan ch'axwawipa"
 msgid "Declared by"
 msgstr "Sutintatpan"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "Jark'aña"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 #: src/features/routing/routing-table.tsx:131
 #: src/features/routing/routing-table.tsx:155
@@ -646,7 +681,7 @@ msgstr "Default track"
 msgid "Default track (version {0})"
 msgstr "Default track (versión {0})"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Jilata servidor jach'a ukana cuenta juchut'aña"
 
@@ -681,7 +716,7 @@ msgstr "Detalle Panel"
 msgid "Detect from web browser"
 msgstr "Web browser taypit jikxataña"
 
-#: src/features/apps/index.tsx:421
+#: src/features/apps/index.tsx:427
 msgid "Development apps"
 msgstr "Desarrollo apps"
 
@@ -706,8 +741,8 @@ msgstr "¿Qillqäwi jaqsuñati?"
 msgid "Disconnected"
 msgstr "Jan chinjata"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Apaqaña"
 
@@ -783,7 +818,7 @@ msgstr "Janiw cuenta yapxataña atinkti"
 msgid "Failed to add tag"
 msgstr "Janiw tag yapxataña atinkti"
 
-#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:239
 msgid "Failed to clean up apps"
 msgstr "Appanaka pichañax janiw walkiti"
 
@@ -820,7 +855,7 @@ msgstr "Janiw permiso apsuña atinkti"
 msgid "Failed to send verification code"
 msgstr "Janiw verificación código apayaña atinkti"
 
-#: src/features/apps/index.tsx:207
+#: src/features/apps/index.tsx:210
 msgid "Failed to update apps"
 msgstr "Appanaka machaqachañax janiw walkiti"
 
@@ -841,7 +876,7 @@ msgstr "Janiw preferencia machaqachaña atinkti"
 msgid "Failed to update system default"
 msgstr "Janiw sistema default machaqachaña atinkti"
 
-#: src/features/apps/index.tsx:641
+#: src/features/apps/index.tsx:647
 msgid "File:"
 msgstr "Archivo:"
 
@@ -859,7 +894,7 @@ msgstr "Fingerprint"
 msgid "Fingerprint:"
 msgstr "Fingerprint:"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Cuenta apsuña tukuyaña"
 
@@ -883,7 +918,7 @@ msgstr "Masinaka"
 msgid "From"
 msgstr "Ukatx"
 
-#: src/features/apps/index.tsx:501
+#: src/features/apps/index.tsx:507
 msgid "From the directory"
 msgstr "Directorio ukatx"
 
@@ -1005,50 +1040,54 @@ msgstr "Manqaru"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:578
-#: src/features/apps/index.tsx:619
-#: src/features/apps/index.tsx:668
+#: src/features/apps/index.tsx:584
+#: src/features/apps/index.tsx:625
+#: src/features/apps/index.tsx:675
 msgid "Install"
 msgstr "Instalaña"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:561
+#: src/features/apps/index.tsx:567
 msgid "Install {0}?"
 msgstr "¿{0} instalaña?"
 
-#: src/features/apps/index.tsx:394
+#: src/features/apps/index.tsx:400
 msgid "Install apps from the market or upload your own"
 msgstr "Mercado ukat appnak instalaña jan ukax kikpamañ apsuma"
 
-#: src/features/apps/index.tsx:333
-#: src/features/apps/index.tsx:637
+#: src/features/apps/index.tsx:339
+#: src/features/apps/index.tsx:643
 msgid "Install from file"
 msgstr "Archivo ukat instalaña"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:595
+#: src/features/apps/index.tsx:335
+#: src/features/apps/index.tsx:601
 msgid "Install from publisher"
 msgstr "Publisher ukat instalaña"
 
-#: src/features/apps/index.tsx:377
+#: src/features/apps/index.tsx:383
 msgid "Installed apps"
 msgstr "Instalat appnaka"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:129
-#: src/features/apps/index.tsx:159
-#: src/features/apps/index.tsx:179
-#: src/features/apps/index.tsx:270
-#: src/features/apps/index.tsx:578
-#: src/features/apps/index.tsx:619
-#: src/features/apps/index.tsx:668
+#: src/features/apps/index.tsx:132
+#: src/features/apps/index.tsx:162
+#: src/features/apps/index.tsx:182
+#: src/features/apps/index.tsx:276
+#: src/features/apps/index.tsx:584
+#: src/features/apps/index.tsx:625
+#: src/features/apps/index.tsx:675
 msgid "Installing..."
 msgstr "Instalaskiwa..."
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:42
 msgid "Interests"
 msgstr "Interesanaka"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "Jan wakisir fecha"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1141,8 +1180,8 @@ msgstr "Aka aplicaciónan capacidadanak churatap apnaqaña"
 msgid "Manage your connected accounts for notifications and services."
 msgstr "Yatiyawinakataki ukat serviciunakataki mayacht'ata cuentanakama apnaqaña."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Taqpach ullt'ata uñacht'ayaña"
@@ -1158,6 +1197,10 @@ msgstr "Taypi"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "Menú"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "Mensaje"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1192,6 +1235,11 @@ msgstr "Red juch'a"
 msgid "New"
 msgstr "Machaqa"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "Machaqa anatawi"
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
@@ -1201,11 +1249,11 @@ msgstr "Arkiri imagen"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Jan mantañ kamachi configuratati. Kamachi yapxatma khiti aka recurso mantki uka uñjañataki."
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:219
 msgid "No apps could be updated."
 msgstr "Jan apps machaqachañ atititi."
 
-#: src/features/apps/index.tsx:393
+#: src/features/apps/index.tsx:399
 msgid "No apps installed"
 msgstr "Jan apps installatati"
 
@@ -1217,32 +1265,36 @@ msgstr "Jan classes configuratati."
 msgid "No connected accounts"
 msgstr "Jan cuenta connectatati"
 
-#: src/features/apps/index.tsx:488
+#: src/features/apps/index.tsx:494
 msgid "No description"
 msgstr "Jan descripción"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:432
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Jan development apps \"{searchQuery}\" taypi"
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "Janira anatawinaka"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Jan tamanak utjki"
 
-#: src/features/apps/index.tsx:519
+#: src/features/apps/index.tsx:525
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Jan installable apps directorio uksana \"{searchQuery}\" taypi"
 
-#: src/features/apps/index.tsx:400
+#: src/features/apps/index.tsx:406
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Jan installatat apps \"{searchQuery}\" taypi"
 
-#: src/features/apps/index.tsx:518
+#: src/features/apps/index.tsx:524
 msgid "No matches in directory"
 msgstr "Jan jikxatawinaka directorio uksana"
 
-#: src/features/apps/index.tsx:399
-#: src/features/apps/index.tsx:425
+#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:431
 msgid "No matching apps"
 msgstr "Jan jikxatat apps"
 
@@ -1254,6 +1306,7 @@ msgstr "Janïraw yatiyawinakax utjkiti"
 msgid "No paths configured."
 msgstr "Jan thakhinak configuratati."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Jaqinak jan jikxatasiti"
@@ -1274,7 +1327,7 @@ msgstr "Cheqanak jan jikxatasiti"
 msgid "No profile"
 msgstr "Jan perfil"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:477
 msgid "No recommendations available"
 msgstr "Jan recomendacionanak utjki"
 
@@ -1300,7 +1353,7 @@ msgstr "Tiempo zona jan jikxatasiti."
 msgid "No topic record yet — try again after the next notification."
 msgstr "Janira topic registro — arkiri yatiyawi qhipxaru sumat'asma."
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:242
 msgid "No unused versions to clean up"
 msgstr "Jan jan apnaqat versionanak phichthapiñataki"
 
@@ -1340,7 +1393,7 @@ msgid "Notifications"
 msgstr "Yatiyawinaka"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "Yatiyawinaka: {0}"
 
@@ -1402,11 +1455,11 @@ msgstr "Mantañ llawi"
 msgid "Passkey verification failed. Please try again."
 msgstr "Passkey yatiyañax jan walikiti. Mira wasitat yant'asma."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Passkeyanaka"
 
-#: src/features/apps/index.tsx:599
+#: src/features/apps/index.tsx:605
 msgid "Paste the install link:"
 msgstr "Instalañataki link uchma:"
 
@@ -1446,7 +1499,7 @@ msgstr "Mä uru ajlliña"
 msgid "Please check your internet connection and try again."
 msgstr "Mira internet conexion ukat wasitat yant'asim."
 
-#: src/features/apps/index.tsx:151
+#: src/features/apps/index.tsx:154
 msgid "Please enter an app ID"
 msgstr "App ID mantayama"
 
@@ -1505,17 +1558,17 @@ msgstr "Push yatiyawi"
 msgid "Raised"
 msgstr "Aptata"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Aka servdorankiw cuentasnaka nayraqatapachani uñakipaña"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Aka servidoran passkeysniykita wasitata qillqantañani"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:217
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:447
+#: src/features/apps/index.tsx:453
 msgid "Recommended"
 msgstr "Recomendata"
 
@@ -1570,6 +1623,10 @@ msgstr "¿Mantañ aparma?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "Interés aparma"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "Item aparma"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1640,11 +1697,11 @@ msgstr "Imaski..."
 msgid "Search"
 msgstr "Thaqhama"
 
-#: src/features/apps/index.tsx:366
+#: src/features/apps/index.tsx:372
 msgid "Search apps"
 msgstr "Apps thaqhama"
 
-#: src/features/apps/index.tsx:365
+#: src/features/apps/index.tsx:371
 msgid "Search apps..."
 msgstr "Apps thaqhama..."
 
@@ -1697,6 +1754,10 @@ msgstr "{0} ajlliña"
 msgid "Select a capability to grant to {appName}."
 msgstr "{appName} grantañataki capacidad ajllima."
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "Mä anatawi ajllima"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Mantañ grantañataki usuario, tama, jan ukax yaqha kamachi ajllima."
@@ -1741,6 +1802,11 @@ msgstr "Sitio dirección ajlliña"
 msgid "Select theme preference"
 msgstr "Tema preferencia ajlliña"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "Ajlliña..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "ajllita"
@@ -1757,6 +1823,11 @@ msgstr "Wasitata apayaña"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "Email apayaña"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "Mensaje apayaña"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1904,7 +1975,7 @@ msgstr "Términos ukat condicionanaka"
 msgid "That code is incorrect or has expired."
 msgstr "Uka codigox jan walikiti jan ukax tukutawa."
 
-#: src/features/apps/index.tsx:132
+#: src/features/apps/index.tsx:135
 msgid "The app has been installed successfully."
 msgstr "App walikiwa instalata."
 
@@ -1992,7 +2063,7 @@ msgstr "Walja mayiwinaka"
 msgid "Top"
 msgstr "Patxa nivel"
 
-#: src/features/apps/index.tsx:736
+#: src/features/apps/index.tsx:743
 #: src/routes/_authenticated/app/$appId.tsx:381
 msgid "Track"
 msgstr "Thakhi"
@@ -2020,6 +2091,10 @@ msgstr "Tipo"
 msgid "Type a command or search..."
 msgstr "Mä mensaje qillqam..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "Mä mensaje qillqam…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "Thaqhañatak qillqam..."
@@ -2032,7 +2107,7 @@ msgstr "Mensajemam qillqam…"
 msgid "Unable to connect to remote server"
 msgstr "Jan jaya servidorar mayachasiñjamäkiti"
 
-#: src/features/apps/index.tsx:466
+#: src/features/apps/index.tsx:472
 msgid "Unable to connect to the recommendations service"
 msgstr "App información cargañ janiw atkiti. Inas appax janiw utjkpan jan ukax publisher offline kankaspa."
 
@@ -2057,7 +2132,7 @@ msgstr "Janiw permitidakit"
 msgid "Unauthorized Access"
 msgstr "Janiw utjkiti"
 
-#: src/features/apps/index.tsx:465
+#: src/features/apps/index.tsx:471
 msgid "Unavailable"
 msgstr "Banx apaqaña"
 
@@ -2078,23 +2153,23 @@ msgstr "Janiw yatxatat browser"
 msgid "Unverified"
 msgstr "Machaqachaña"
 
-#: src/features/apps/index.tsx:732
+#: src/features/apps/index.tsx:739
 msgid "Update"
 msgstr "Tracksnak machaqachaña"
 
-#: src/features/apps/index.tsx:322
+#: src/features/apps/index.tsx:328
 msgid "Update all"
 msgstr "Machaqachañax jan walt'awi"
 
-#: src/features/apps/index.tsx:215
+#: src/features/apps/index.tsx:218
 msgid "Update failed"
 msgstr "Machaqachañax jan walikiti"
 
-#: src/features/apps/index.tsx:205
+#: src/features/apps/index.tsx:208
 msgid "Updating apps..."
 msgstr "Appanaka machaqachaskiwa..."
 
-#: src/features/apps/index.tsx:322
+#: src/features/apps/index.tsx:328
 msgid "Updating..."
 msgstr "Apayaña"
 
@@ -2175,8 +2250,8 @@ msgstr "Taqi uñjaña"
 msgid "View all"
 msgstr "Taqi yatiyawinaka uñjaña"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "Taqi posts uñjaña"
 
@@ -2221,7 +2296,7 @@ msgstr "Aka chaninaka apayanta:"
 msgid "You're all caught up!"
 msgstr "Taqiw uñjxtawa!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Juman cuenta {source} ukamanta achakata. Ukankiwa juchut'ayapkchama, ikirinakampi willt'awinakampi pä servdorankama chikañ atikaniwa, walja lurawinakasataki jach'a servdorpa ukatpachani uñakiparakiwa, ukhamaraki suyirinakaxa aka jichhxa jupast'aña pätpachani saräniwa."
 
