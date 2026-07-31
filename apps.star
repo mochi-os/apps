@@ -36,8 +36,12 @@ def database_upgrade(version):
 def database_create():
 	mochi.db.execute("create table updates_cache ( app text not null primary key, data text not null, checked integer not null )")
 
+# Shape test for a raw input id: could this be a publisher entity id
+# (49-51 base58 characters), so publisher P2P calls make sense? Only for
+# ids that may not be locally installed - classification of loaded apps
+# uses the "development" flag the app APIs return.
 def is_entity_id(id):
-	return len(id) >= 50 and len(id) <= 51
+	return len(id) >= 49 and len(id) <= 51
 
 # Format an entity id as its grouped 9-character fingerprint (aaa-bbb-ccc).
 def format_fingerprint(id):
@@ -71,12 +75,12 @@ def action_list(a):
 			# If user has a version preference, show that instead of latest
 			if user_preference.get("version"):
 				app["latest"] = user_preference["version"]
-		if is_entity_id(app["id"]):
-			app["fingerprint"] = format_fingerprint(app["id"])
-			installed.append(app)
-		else:
+		if app.get("development"):
 			app["fingerprint"] = ""
 			development.append(app)
+		else:
+			app["fingerprint"] = format_fingerprint(app["id"])
+			installed.append(app)
 
 	# Check if user can install apps
 	can_install = a.user.role == "administrator" or mochi.setting.get("apps_install_user") == "true"
@@ -94,10 +98,10 @@ def action_view(a):
 		a.error.label(404, "errors.app_not_found")
 		return
 
-	if is_entity_id(app["id"]):
-		app["fingerprint"] = format_fingerprint(app["id"])
-	else:
+	if app.get("development"):
 		app["fingerprint"] = ""
+	else:
+		app["fingerprint"] = format_fingerprint(app["id"])
 	return {"data": {"app": app}}
 
 # Read the user's BCP 47 language tag, or "en" if unset / anonymous
@@ -444,7 +448,7 @@ def action_updates(a):
 	for app in all_apps:
 		if app.get("engine") != "starlark":
 			continue
-		if not is_entity_id(app["id"]):
+		if app.get("development"):
 			continue  # Skip development apps
 
 		# Get user's track preference
