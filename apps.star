@@ -149,10 +149,20 @@ def action_information(a):
 		a.error.label(400, "errors.invalid_app_id")
 		return
 
-	# If URL is provided, resolve it to a peer ID
+	# If URL is provided, resolve it to a peer ID.
+	#
+	# The override is gated on the same permission as installing, because it
+	# is the same capability pointed at a different question: mochi.remote.peer
+	# makes this server fetch <url>/_/p2p/info, http:// included. The body is
+	# never relayed, but "connected" and "failed to connect" are distinguishable
+	# and that alone maps a private network from any authenticated session.
+	# Anyone allowed to install from a URL can already reach it.
 	url = a.input("url")
 	peer = ""
 	if url:
+		if a.user.role != "administrator" and mochi.setting.get("apps_install_user") != "true":
+			a.error.label(403, "errors.app_installation_restricted_to_administrators")
+			return
 		peer = mochi.remote.peer(url)
 		if not peer:
 			a.error.label(500, "errors.failed_to_connect_to_server", url=url)
