@@ -359,11 +359,36 @@ def action_install_id(a):
 		a.error.label(400, "errors.invalid_publisher_id")
 		return
 
+	# A caller-supplied publisher may not redirect an app the directory knows.
+	#
+	# The override's only guard was the publisher's own answer, and the answer
+	# is the attacker's to write: serve a package under the requested id and
+	# the id check below passes. The publisher is then PERSISTED (see the
+	# install call at the end, and action_updates, which reads
+	# app["publisher"]["entity"]), so every future update comes from the
+	# attacker too - one pasted link and the app is theirs for good.
+	#
+	# There is nothing to verify an override against for a listed app: the
+	# directory publishes ENTITY rows, so it can say entity X lives at peer P
+	# but never "X's publisher is Y". What it can do is settle whether the app
+	# is reachable on its own authority - and for a listed app the no-override
+	# path already assumes the publisher IS the app entity. So use that, and
+	# ignore the override rather than trusting it.
+	#
+	# The override survives for the case it exists for: an app the directory
+	# does not list (a restricted or unpublished one), reachable only through
+	# the link its publisher gave you. There the link is the only authority
+	# there is, and the user supplying it is the trust decision.
+	entry = mochi.directory.get(id)
+	if entry:
+		if publisher and publisher != id:
+			mochi.log.debug("install: ignoring publisher override %s for directory-listed app %s", publisher, id)
+		publisher = ""
+
 	# Get app information - route to publisher if known, otherwise use directory
 	if publisher:
 		s = mochi.remote.stream(publisher, "publisher", "information", {"app": id})
 	else:
-		entry = mochi.directory.get(id)
 		if not entry:
 			a.error.label(404, "errors.app_not_found_in_directory")
 			return
