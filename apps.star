@@ -48,12 +48,13 @@ def format_fingerprint(id):
 	fp = mochi.entity.fingerprint(id)
 	return fp[:3] + "-" + fp[3:6] + "-" + fp[6:]
 
-# Delete leftover archives in packages/ from install or upgrade actions that
-# aborted partway: a failed mochi.app.package.install or package.get ends the
-# action, so the delete that follows it never runs. Swept at the start of each
-# install/upgrade action. No file timestamps are available to age-gate, so a
-# concurrent install's archive can be swept too - that install fails cleanly
-# and a retry works.
+# Delete leftover archives in packages/ from a file install that aborted
+# partway: a failed mochi.app.package.install or package.get ends the action,
+# so the delete that follows it never runs. Swept at the start of the file
+# install, now the only path that stages an archive here - publisher installs
+# and upgrades hand the fetch to core and never hold the bytes. No file
+# timestamps are available to age-gate, so a concurrent install's archive can
+# be swept too - that install fails cleanly and a retry works.
 def sweep_packages():
 	if not mochi.file.exists("packages"):
 		return
@@ -178,11 +179,9 @@ def action_information(a):
 		return
 
 	app = s.read()
-	# A caller can point us at an arbitrary publisher (peer/url override), and
-	# core verifies no package signature, so the publisher's response is
-	# untrusted. Fingerprint the requested id, not the response's id, and
-	# reject a publisher that answers for a different app - otherwise it could
-	# show a trusted app's fingerprint while later serving its own bytes.
+	# The stream handshake already established that the far side holds `id`,
+	# so this answer is that app's own. Fingerprint the requested id and keep
+	# the mismatch check as a cheap guard against a confused publisher.
 	if type(app) != "dict" or app.get("id") != id:
 		a.error.label(502, "errors.publisher_returned_wrong_app")
 		return
@@ -239,27 +238,16 @@ def action_install_publisher(a):
 	if not mochi.text.valid(version, "version"):
 		a.error.label(400, "errors.invalid_version_format")
 		return
-	if peer and len(peer) > 51:
+	if peer and not mochi.text.valid(peer, "peer") and not mochi.text.valid(peer, "entity"):
 		a.error.label(400, "errors.invalid_peer_id")
 		return
 
-	sweep_packages()
-	file = "packages/install_" + mochi.random.alphanumeric(8) + ".zip"
-	s = mochi.remote.stream(id, "publisher", "get", {"version": version}, peer)
-	if not s:
-		a.error.label(500, "errors.failed_to_connect_to_publisher")
+	# One path, listed or not. A peer selects where to ask; it cannot decide
+	# what may be served, because the stream handshake makes the answering
+	# host prove it holds this app's entity key before core writes a byte.
+	if not mochi.app.version.download(id, version, peer):
+		a.error.label(502, "errors.failed_to_download_app")
 		return
-	r = s.read()
-	if r.get("status") != "200":
-		a.error.label(500, "errors.failed_to_download_app")
-		return
-
-	s.read.file(file)
-	# Pass the version we asked for: core rejects a package declaring a
-	# different one, so a publisher cannot answer a request for this version
-	# with another version's bytes.
-	mochi.app.package.install(id, file, False, peer, version)
-	mochi.file.delete(file)
 
 	return {"data": {"installed": True, "id": id, "version": version}}
 
@@ -359,40 +347,15 @@ def action_install_id(a):
 		a.error.label(400, "errors.invalid_publisher_id")
 		return
 
-	# A caller-supplied publisher may not redirect an app the directory knows.
-	#
-	# The override's only guard was the publisher's own answer, and the answer
-	# is the attacker's to write: serve a package under the requested id and
-	# the id check below passes. The publisher is then PERSISTED (see the
-	# install call at the end, and action_updates, which reads
-	# app["publisher"]["entity"]), so every future update comes from the
-	# attacker too - one pasted link and the app is theirs for good.
-	#
-	# There is nothing to verify an override against for a listed app: the
-	# directory publishes ENTITY rows, so it can say entity X lives at peer P
-	# but never "X's publisher is Y". What it can do is settle whether the app
-	# is reachable on its own authority - and for a listed app the no-override
-	# path already assumes the publisher IS the app entity. So use that, and
-	# ignore the override rather than trusting it.
-	#
-	# The override survives for the case it exists for: an app the directory
-	# does not list (a restricted or unpublished one), reachable only through
-	# the link its publisher gave you. There the link is the only authority
-	# there is, and the user supplying it is the trust decision.
-	entry = mochi.directory.get(id)
-	if entry:
-		if publisher and publisher != id:
-			mochi.log.debug("install: ignoring publisher override %s for directory-listed app %s", publisher, id)
-		publisher = ""
+	# A link may name the publisher to ask; the app entity is what answers.
+	# The stream handshake requires whoever answers to prove it holds `id`,
+	# so an override selects a location and can never substitute an app.
+	# Without a publisher the app must be in the directory to be locatable.
+	if not publisher and not mochi.directory.get(id):
+		a.error.label(404, "errors.app_not_found_in_directory")
+		return
 
-	# Get app information - route to publisher if known, otherwise use directory
-	if publisher:
-		s = mochi.remote.stream(publisher, "publisher", "information", {"app": id})
-	else:
-		if not entry:
-			a.error.label(404, "errors.app_not_found_in_directory")
-			return
-		s = mochi.remote.stream(id, "publisher", "information", {"app": id})
+	s = mochi.remote.stream(id, "publisher", "information", {"app": id}, publisher)
 	if not s:
 		a.error.label(500, "errors.failed_to_connect_to_publisher")
 		return
@@ -426,26 +389,9 @@ def action_install_id(a):
 		a.error.label(404, "errors.no_version_available_for_track", track=default_track)
 		return
 
-	# Download and install
-	sweep_packages()
-	file = "packages/install_" + mochi.random.alphanumeric(8) + ".zip"
-	if publisher:
-		s = mochi.remote.stream(publisher, "publisher", "get", {"app": id, "version": version})
-	else:
-		s = mochi.remote.stream(id, "publisher", "get", {"app": id, "version": version})
-	if not s:
-		a.error.label(500, "errors.failed_to_connect_to_publisher")
+	if not mochi.app.version.download(id, version, publisher):
+		a.error.label(502, "errors.failed_to_download_app")
 		return
-	r = s.read()
-	if r.get("status") != "200":
-		a.error.label(500, "errors.failed_to_download_app")
-		return
-
-	s.read.file(file)
-	# See action_install_publisher: require the package to declare the version
-	# the publisher told us this track points at.
-	mochi.app.package.install(id, file, False, publisher, version)
-	mochi.file.delete(file)
 
 	return {"data": {"installed": True, "id": id, "version": version, "name": app.get("name", "")}}
 
@@ -498,8 +444,8 @@ def action_updates(a):
 		# Resolve publisher (used both to query and to attribute updates)
 		publisher = ""
 		publisher_config = app.get("publisher")
-		if publisher_config and publisher_config.get("entity"):
-			publisher = publisher_config["entity"]
+		if publisher_config:
+			publisher = publisher_config.get("peer", "")
 
 		# Try cache before talking to the publisher
 		remote = None
@@ -581,37 +527,20 @@ def action_upgrade(a):
 		a.error.label(404, "errors.app_not_installed")
 		return
 
-	# Determine publisher
+	# An app installed by link records the publisher to ask; otherwise the
+	# directory locates it. Either way the answering host must prove it holds
+	# this app's entity before core installs anything.
 	publisher = ""
 	publisher_config = app.get("publisher")
-	if publisher_config and publisher_config.get("entity"):
-		publisher = publisher_config["entity"]
-	else:
-		entry = mochi.directory.get(id)
-		if not entry:
-			a.error.label(400, "errors.cannot_upgrade_publisher_unknown")
-			return
-
-	# Download and install - route to publisher, pass app ID in content
-	sweep_packages()
-	file = "packages/upgrade_" + mochi.random.alphanumeric(8) + ".zip"
-	if publisher:
-		s = mochi.remote.stream(publisher, "publisher", "get", {"app": id, "version": version})
-	else:
-		s = mochi.remote.stream(id, "publisher", "get", {"app": id, "version": version})
-	if not s:
-		a.error.label(500, "errors.failed_to_connect_to_publisher")
-		return
-	r = s.read()
-	if r.get("status") != "200":
-		a.error.label(500, "errors.failed_to_download_app")
+	if publisher_config:
+		publisher = publisher_config.get("peer", "")
+	if not publisher and not mochi.directory.get(id):
+		a.error.label(400, "errors.cannot_upgrade_publisher_unknown")
 		return
 
-	s.read.file(file)
-	# See action_install_publisher: the upgrade asked for a specific version,
-	# so require the package to declare it.
-	mochi.app.package.install(id, file, False, publisher, version)
-	mochi.file.delete(file)
+	if not mochi.app.version.download(id, version, publisher):
+		a.error.label(502, "errors.failed_to_download_app")
+		return
 
 	return {"data": {"upgraded": True, "id": id, "version": version}}
 
