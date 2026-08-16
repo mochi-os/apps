@@ -172,7 +172,7 @@ function AppPage() {
           {activeTab === 'details' && <DetailsTab app={app} />}
           {activeTab === 'versions' && <VersionsTab appId={appId} />}
           {activeTab === 'permissions' && (
-            // This app manages permissions, so revoking permissions/manage from
+            // This app manages permissions, so revoking permissions/write from
             // whichever app serves this page would lock the user out of the UI
             // that undoes it. Identify "self" by the path we are served under
             // rather than a hardcoded id, so it holds for the published copy
@@ -579,7 +579,7 @@ function PermissionsTab({ appId, appName, isSelf }: { appId: string; appName: st
               onRevoke={handleRevoke}
               isRevoking={revokingPermission === permission.permission}
               appName={appName}
-              canRevoke={!(isSelf && permission.permission === 'permissions/manage')}
+              canRevoke={!(isSelf && permission.permission === 'permissions/write')}
             />
           ))
         ) : (
