@@ -108,7 +108,7 @@ fi
 if [ -n "$CLASS_NAME" ] && [ -n "$APP_ID" ]; then
     # Test: Set user class routing preference
     RESPONSE=$("$CURL" -a user -X POST -d "type=class&name=$CLASS_NAME&app=$APP_ID" /apps/-/user/preferences/routing/set)
-    if echo "$RESPONSE" | python3 -c "import sys, json; d=json.load(sys.stdin); assert d.get('ok') == True" 2>/dev/null; then
+    if echo "$RESPONSE" | python3 -c "import sys, json; d=json.load(sys.stdin); assert d['data']['ok'] == True" 2>/dev/null; then
         pass "Set user class routing preference"
     else
         fail "Set user class routing preference" "$RESPONSE"
@@ -129,7 +129,7 @@ print(d.get('classes', {}).get('$CLASS_NAME', {}).get('user', ''))
 
     # Test: Clear user class routing preference
     RESPONSE=$("$CURL" -a user -X POST -d "type=class&name=$CLASS_NAME&app=" /apps/-/user/preferences/routing/set)
-    if echo "$RESPONSE" | python3 -c "import sys, json; d=json.load(sys.stdin); assert d.get('ok') == True" 2>/dev/null; then
+    if echo "$RESPONSE" | python3 -c "import sys, json; d=json.load(sys.stdin); assert d['data']['ok'] == True" 2>/dev/null; then
         pass "Clear user class routing preference"
     else
         fail "Clear user class routing preference" "$RESPONSE"
@@ -162,7 +162,7 @@ echo "--- System Routing (Admin) ---"
 if [ -n "$CLASS_NAME" ] && [ -n "$APP_ID" ]; then
     # Test: Set system class routing
     RESPONSE=$("$CURL" -X POST -d "type=class&name=$CLASS_NAME&app=$APP_ID" /apps/-/system/routing/set)
-    if echo "$RESPONSE" | python3 -c "import sys, json; d=json.load(sys.stdin); assert d.get('ok') == True" 2>/dev/null; then
+    if echo "$RESPONSE" | python3 -c "import sys, json; d=json.load(sys.stdin); assert d['data']['ok'] == True" 2>/dev/null; then
         pass "Set system class routing"
     else
         fail "Set system class routing" "$RESPONSE"
@@ -183,7 +183,7 @@ print(d.get('classes', {}).get('$CLASS_NAME', {}).get('system', ''))
 
     # Test: Clear system class routing
     RESPONSE=$("$CURL" -X POST -d "type=class&name=$CLASS_NAME&app=" /apps/-/system/routing/set)
-    if echo "$RESPONSE" | python3 -c "import sys, json; d=json.load(sys.stdin); assert d.get('ok') == True" 2>/dev/null; then
+    if echo "$RESPONSE" | python3 -c "import sys, json; d=json.load(sys.stdin); assert d['data']['ok'] == True" 2>/dev/null; then
         pass "Clear system class routing"
     else
         fail "Clear system class routing" "$RESPONSE"
