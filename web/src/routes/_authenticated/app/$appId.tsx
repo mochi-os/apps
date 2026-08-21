@@ -172,11 +172,10 @@ function AppPage() {
           {activeTab === 'details' && <DetailsTab app={app} />}
           {activeTab === 'versions' && <VersionsTab appId={appId} />}
           {activeTab === 'permissions' && (
-            // This app manages permissions, so revoking permissions/write from
-            // whichever app serves this page would lock the user out of the UI
-            // that undoes it. Identify "self" by the path we are served under
-            // rather than a hardcoded id, so it holds for the published copy
-            // (an entity id) as well as the development app.
+            // Revoking permissions/write from the app serving this page would
+            // lock the user out of the UI that undoes it. Identify "self" by
+            // the served path, so it holds for the published copy (an entity
+            // id) as well as the development app.
             <PermissionsTab
               appId={appId}
               appName={app.name}

@@ -3,23 +3,12 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-// Paths are RELATIVE so they compose with the basepath api-client computes
-// from the current location. An absolute path (a leading slash) deliberately
-// bypasses that basepath - see api-client.ts - so a hardcoded "/apps/-/..."
-// addressed a fixed location and broke under alternate path routing or
-// domain-entity routing.
-//
-// They also keep the "-/" separator, and BOTH halves matter. Dropping the
-// leading slash without keeping "-/" is what broke every call in 4.89:
-// getApiBasepath() returns `/${app}/` for a class-level app (lib/web
-// app-path.ts) and does NOT supply the separator, so "list" resolves to
-// /apps/list - which is not an action, falls through to the SPA catch-all, and
-// answers 200 with HTML. request() does not throw on a non-object body, so the
-// UI showed empty lists and no error at all. /apps/-/list is the action.
-// publisher and settings write theirs the same way.
-//
-// The /_/ entries below are the exception and stay absolute: those are core
-// cross-cutting routes, not this app's.
+// Paths are RELATIVE and keep the "-/" separator, and both halves matter.
+// api-client composes them onto the basepath it computes from the location,
+// which a leading slash bypasses; getApiBasepath() returns `/<app>/` without
+// the separator, so "list" resolves to /apps/list - not an action, and the SPA
+// catch-all answers 200 with HTML. The /_/ entries below stay absolute: those
+// are core routes, not this app's.
 const endpoints = {
   auth: {
     code: '/_/code',

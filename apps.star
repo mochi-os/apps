@@ -27,9 +27,8 @@ RECOMMENDATIONS_ENTITY = "1JYmMpQU7fxvTrwHpNpiwKCgUg3odWqX7s9t1cLswSMAro5M2P"
 
 def database_upgrade(version):
 	if version == 2:
-		# Drop the pre-2026-07 broadcast tables left in the app data DB when
-		# broadcast state moved to the per-app system DB - inert, but stale
-		# sequence/log copies mislead diagnosis.
+		# Drop the broadcast tables left in the app data DB when broadcast state moved
+		# to the per-app system DB - stale copies mislead diagnosis.
 		for table in ["sequence", "log", "acknowledged", "received"]:
 			mochi.db.execute("drop table if exists " + table)
 
@@ -49,12 +48,9 @@ def format_fingerprint(id):
 	return fp[:3] + "-" + fp[3:6] + "-" + fp[6:]
 
 # Delete leftover archives in packages/ from a file install that aborted
-# partway: a failed mochi.app.package.install or package.get ends the action,
-# so the delete that follows it never runs. Swept at the start of the file
-# install, now the only path that stages an archive here - publisher installs
-# and upgrades hand the fetch to core and never hold the bytes. No file
-# timestamps are available to age-gate, so a concurrent install's archive can
-# be swept too - that install fails cleanly and a retry works.
+# partway: a failed install or package.get ends the action before its own delete
+# runs. File install is the only path that stages an archive here; a concurrent
+# install's archive can be swept too, which fails that install cleanly.
 def sweep_packages():
 	if not mochi.file.exists("packages"):
 		return
@@ -150,14 +146,10 @@ def action_information(a):
 		a.error.label(400, "errors.invalid_app_id")
 		return
 
-	# If URL is provided, resolve it to a peer ID.
-	#
-	# The override is gated on the same permission as installing, because it
-	# is the same capability pointed at a different question: mochi.remote.peer
-	# makes this server fetch <url>/_/p2p/info, http:// included. The body is
-	# never relayed, but "connected" and "failed to connect" are distinguishable
-	# and that alone maps a private network from any authenticated session.
-	# Anyone allowed to install from a URL can already reach it.
+	# If URL is provided, resolve it to a peer ID. The override is gated on the
+	# same permission as installing: mochi.remote.peer makes this server fetch
+	# <url>/_/p2p/info, and "connected" versus "failed to connect" alone maps a
+	# private network.
 	url = a.input("url")
 	peer = ""
 	if url:
@@ -416,11 +408,9 @@ def is_newer_version(a, b):
 			return False
 	return False
 
-# Check for updates for all installed apps.
-# Per-publisher version queries are cached in updates_cache for UPDATES_CACHE_TTL
-# seconds — without it this action does ~25 sequential P2P round-trips and routinely
-# takes over a minute. The cache makes steady-state badge loads near-instant; a
-# freshly-deployed app shows up after at most TTL seconds.
+# Check for updates for all installed apps. Per-publisher version queries are
+# cached in updates_cache for UPDATES_CACHE_TTL seconds; without it this does
+# ~25 sequential P2P round-trips.
 def action_updates(a):
 	all_apps = mochi.app.list()
 	updates = []

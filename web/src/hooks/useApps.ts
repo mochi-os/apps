@@ -103,11 +103,9 @@ export const useUpgradeMutation = () => {
     mutationFn: ({ id, version }: { id: string; version: string }) =>
       appsApi.upgrade(id, version),
     onSuccess: (_data, variables) => {
-      // /apps/-/updates is slow (sequential P2P round-trips per installed app).
-      // A naive invalidate races a 1+ minute background fetch whose snapshot
-      // pre-dates the upgrade. Optimistically drop the upgraded app from the
-      // cached updates list so the badge clears immediately and a stale
-      // refetch can't undo it.
+      // /apps/-/updates is slow (sequential P2P round-trips per app), so a
+      // naive invalidate races a minute-long fetch whose snapshot pre-dates the
+      // upgrade. Drop the upgraded app from the cached list instead.
       queryClient.setQueryData<{
         updates: { id: string; name: string; current: string; available: string; publisher: string }[]
       }>(appKeys.updates(), (old) => {
