@@ -441,7 +441,12 @@ def action_updates(a):
 		remote = None
 		cached = mochi.db.row("select data, checked from updates_cache where app=?", app["id"])
 		if cached and cached["checked"] >= cutoff:
-			remote = json.decode(cached["data"])
+			remote = json.decode(cached["data"], None)
+
+		# A corrupt row, or one written before the shape guards below existed,
+		# falls through to the network path rather than aborting the whole check.
+		if type(remote) != "dict":
+			remote = None
 
 		if remote == None:
 			if not publisher:
@@ -457,14 +462,25 @@ def action_updates(a):
 			if not s:
 				continue
 			r = s.read()
-			if r.get("status") != "200":
+			# The header frame comes from the publisher's own handler, not from
+			# core, so it is exactly as untrusted as the body below.
+			if type(r) != "dict" or r.get("status") != "200":
 				continue
 
 			remote = s.read()
-			# Cache the full response so the version-field fallback below works on hits too
+			# This loop runs over every installed app, so one publisher
+			# answering with the wrong shape must cost its own row rather than
+			# raise and 500 the whole update check.
+			if type(remote) != "dict":
+				continue
+
+			# Cache only a well-formed response. Caching first would persist the
+			# bad shape for UPDATES_CACHE_TTL and break every later check too.
 			mochi.db.execute("replace into updates_cache ( app, data, checked ) values ( ?, ?, ? )", app["id"], json.encode(remote), mochi.time.now())
 
 		tracks = remote.get("tracks", [])
+		if type(tracks) not in ["list", "tuple"]:
+			tracks = []
 		default_track = remote.get("default_track", "Production")
 
 		# Determine which track to check for updates
@@ -473,6 +489,8 @@ def action_updates(a):
 		# Find version for the track we're checking
 		remote_version = ""
 		for t in tracks:
+			if type(t) != "dict":
+				continue
 			if t.get("track") == check_track:
 				remote_version = t.get("version", "")
 				break
@@ -480,6 +498,9 @@ def action_updates(a):
 		# Fall back to default version field if track not found in array
 		if not remote_version:
 			remote_version = remote.get("version", "")
+		# is_newer_version splits this; a non-string version would raise.
+		if type(remote_version) != "string":
+			continue
 
 		# Compare with user's active version - only report strictly newer versions
 		current = app.get("active", app.get("latest"))
