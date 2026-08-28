@@ -117,7 +117,10 @@ def action_market(a):
 		a.error.label(500, "errors.failed_to_connect_to_recommendations")
 		return
 	r = s.read()
-	if r.get("status") != "200":
+	# The header frame is written by the responding app's own handler, not by
+	# core, so it is exactly as untrusted as the body after it: .get on a
+	# list or a string raises, and Starlark has no try/except.
+	if type(r) != "dict" or r.get("status") != "200":
 		a.error.label(500, "errors.failed_to_connect_to_recommendations")
 		return
 
@@ -166,7 +169,10 @@ def action_information(a):
 		a.error.label(500, "errors.failed_to_connect_to_publisher")
 		return
 	r = s.read()
-	if r.get("status") != "200":
+	# The header frame is written by the responding app's own handler, not by
+	# core, so it is exactly as untrusted as the body after it: .get on a
+	# list or a string raises, and Starlark has no try/except.
+	if type(r) != "dict" or r.get("status") != "200":
 		a.error.label(500, "errors.failed_to_get_app_information")
 		return
 
@@ -201,7 +207,10 @@ def action_version(a):
 		a.error.label(500, "errors.failed_to_connect_to_publisher")
 		return
 	r = s.read()
-	if r.get("status") != "200":
+	# The header frame is written by the responding app's own handler, not by
+	# core, so it is exactly as untrusted as the body after it: .get on a
+	# list or a string raises, and Starlark has no try/except.
+	if type(r) != "dict" or r.get("status") != "200":
 		a.error.label(500, "errors.failed_to_get_version")
 		return
 
@@ -352,7 +361,10 @@ def action_install_id(a):
 		a.error.label(500, "errors.failed_to_connect_to_publisher")
 		return
 	r = s.read()
-	if r.get("status") != "200":
+	# The header frame is written by the responding app's own handler, not by
+	# core, so it is exactly as untrusted as the body after it: .get on a
+	# list or a string raises, and Starlark has no try/except.
+	if type(r) != "dict" or r.get("status") != "200":
 		a.error.label(500, "errors.failed_to_get_app_information")
 		return
 
@@ -694,7 +706,9 @@ def action_user_apps_app(a):
 		s = mochi.remote.stream(app_id, "publisher", "information", {})
 		if s:
 			r = s.read()
-			if r.get("status", "") == "200":
+			# Type-checked like the app_info and publisher_tracks frames below:
+			# the header comes from the same untrusted handler they do.
+			if type(r) == "dict" and r.get("status", "") == "200":
 				app_info = s.read()
 				if type(app_info) == "dict":
 					default_track = app_info.get("default_track", "")
