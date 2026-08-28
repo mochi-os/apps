@@ -145,7 +145,10 @@ def action_information(a):
 	if not id:
 		a.error.label(400, "errors.app_id_required")
 		return
-	if len(id) > 51:
+	# Not a length check: this streams to the id as a publisher entity and
+	# fingerprints it below, and mochi.remote.stream raises rather than
+	# returning falsy on anything that is not one.
+	if not mochi.text.valid(id, "entity"):
 		a.error.label(400, "errors.invalid_app_id")
 		return
 
@@ -194,7 +197,8 @@ def action_version(a):
 	if not id:
 		a.error.label(400, "errors.app_id_required")
 		return
-	if len(id) > 51:
+	# mochi.remote.stream below raises on anything that is not an entity id.
+	if not mochi.text.valid(id, "entity"):
 		a.error.label(400, "errors.invalid_app_id")
 		return
 	track = a.input("track", "")
@@ -341,7 +345,8 @@ def action_install_id(a):
 
 	id, publisher = parse_install_input(input.strip())
 
-	if len(id) > 51:
+	# mochi.directory.get below raises on anything that is not an entity id.
+	if not mochi.text.valid(id, "entity"):
 		a.error.label(400, "errors.invalid_app_id")
 		return
 	if publisher and len(publisher) > 51:
@@ -648,7 +653,11 @@ def action_routing(a):
 
 	return {"data": {"classes": classes, "services": services, "paths": paths, "is_admin": is_admin}}
 
-# Require administrator role
+# Require administrator role. Only the system-wide actions use this: the
+# registry writes below change what every account on the server sees. Reading
+# the registry and setting one's own per-user version, track or routing
+# override are ordinary user acts - core gates those on apps/read and
+# user/apps/* respectively, none of which is administrator-only.
 def require_admin(a):
 	if a.user.role != "administrator":
 		a.error.label(403, "errors.administrator_access_required")
@@ -784,7 +793,9 @@ def action_version_download(a):
 	if not app_id:
 		a.error.label(400, "errors.missing_app_parameter")
 		return
-	if len(app_id) > 51:
+	# mochi.app.version.download below raises on anything that is not an
+	# entity id - a development app has no published version to fetch.
+	if not mochi.text.valid(app_id, "entity"):
 		a.error.label(400, "errors.invalid_app_id")
 		return
 	if not version:
