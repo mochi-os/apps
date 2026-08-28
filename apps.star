@@ -22,6 +22,14 @@ def decimal(value):
 # of ~25 sequential P2P round-trips.
 UPDATES_CACHE_TTL = 300
 
+# Longest this one request will spend talking to publishers. A cache miss is a
+# live P2P round trip, and a fresh account misses on every installed app, so an
+# unbounded sweep took 12-38 seconds - measured across a single afternoon, with
+# 21 installed apps. That is a page load, not a background job: the request
+# returns what it managed to resolve and leaves the rest to the next call,
+# which starts with the apps checked longest ago.
+UPDATES_BUDGET = 5
+
 # The Recommendations service entity queried by action_market.
 RECOMMENDATIONS_ENTITY = "1JYmMpQU7fxvTrwHpNpiwKCgUg3odWqX7s9t1cLswSMAro5M2P"
 
@@ -426,12 +434,28 @@ def is_newer_version(a, b):
 	return False
 
 # Check for updates for all installed apps. Per-publisher version queries are
-# cached in updates_cache for UPDATES_CACHE_TTL seconds; without it this does
-# ~25 sequential P2P round-trips.
+# cached in updates_cache for UPDATES_CACHE_TTL seconds, and what the cache does
+# not cover is bounded by UPDATES_BUDGET: the answer is whatever resolved in
+# time, and successive calls work through the rest oldest-first. Without either,
+# this is one sequential P2P round trip per installed app.
 def action_updates(a):
-	all_apps = mochi.app.list()
 	updates = []
-	cutoff = mochi.time.now() - UPDATES_CACHE_TTL
+	started = mochi.time.now()
+	cutoff = started - UPDATES_CACHE_TTL
+
+	# One read rather than one per app, and it also gives the order below.
+	cache = {}
+	for row in mochi.db.rows("select app, data, checked from updates_cache") or []:
+		cache[row["app"]] = row
+
+	# Least-recently-checked first, so the budget always goes to the apps that
+	# need it. Ordering by the app list instead would spend every request on the
+	# same first few and never reach the tail.
+	def staleness(app):
+		row = cache.get(app.get("id", ""))
+		return row["checked"] if row else 0
+
+	all_apps = sorted(mochi.app.list(), key=staleness)
 
 	for app in all_apps:
 		if app.get("engine") != "starlark":
@@ -456,7 +480,7 @@ def action_updates(a):
 
 		# Try cache before talking to the publisher
 		remote = None
-		cached = mochi.db.row("select data, checked from updates_cache where app=?", app["id"])
+		cached = cache.get(app["id"])
 		if cached and cached["checked"] >= cutoff:
 			remote = json.decode(cached["data"], None)
 
@@ -466,6 +490,12 @@ def action_updates(a):
 			remote = None
 
 		if remote == None:
+			# Past the budget this app keeps its stale answer (or none) and is
+			# simply not reported this time. Cached apps are still evaluated
+			# below - only the round trip is skipped.
+			if mochi.time.now() - started >= UPDATES_BUDGET:
+				continue
+
 			if not publisher:
 				entry = mochi.directory.get(app["id"])
 				if not entry:
