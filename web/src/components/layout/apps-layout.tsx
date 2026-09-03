@@ -39,7 +39,6 @@ export function AppsLayout() {
   return (
     <AuthenticatedLayout
       sidebarData={sidebarData}
-      usePageHeaderForMobileNav
     />
   )
 }

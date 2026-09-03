@@ -357,7 +357,6 @@ export function Apps() {
             <PageHeader
               title={t`Apps`}
               icon={<Package className='size-4 md:size-5' />}
-              showSidebarTrigger
               menuAction={
                 (appsData?.can_install ||
                   (availableUpdates && availableUpdates.length > 0))
