@@ -46,7 +46,7 @@ msgid "{0, plural, one {Removed # unused version} other {Removed # unused versio
 msgstr "{0, plural, one {Tneħħiet # verżjoni mhux użata} few {Tneħħew # verżjonijiet mhux użati} many {Tneħħew # verżjonijiet mhux użati} other {Tneħħew # verżjonijiet mhux użati}}"
 
 #. placeholder {0}: app.name
-#: src/features/routing/routing-table.tsx:23
+#: src/features/routing/routing-table.tsx:18
 msgid "{0} (development)"
 msgstr "{0} (żvilupp)"
 
@@ -100,11 +100,11 @@ msgstr "{totalCount, plural, one {# oġġett} few {# oġġetti} many {# oġġett
 msgid "{totalDescendants, plural, one {# reply} other {+# more replies}}"
 msgstr "{totalDescendants, plural, one {# tweġiba} few {+# tweġibiet aktar} many {+# tweġibiet aktar} other {+# tweġibiet aktar}}"
 
-#: src/routes/_authenticated/app/$appId.tsx:385
+#: src/routes/_authenticated/app/$appId.tsx:374
 msgid "{track} (default, version {version})"
 msgstr "{track} (default, verżjoni {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:386
+#: src/routes/_authenticated/app/$appId.tsx:375
 msgid "{track} (version {version})"
 msgstr "{track} (verżjoni {version})"
 
@@ -208,7 +208,7 @@ msgstr "Żid għażla"
 msgid "Add tag..."
 msgstr "Żid tag..."
 
-#: src/features/apps/index.tsx:653
+#: src/features/apps/index.tsx:646
 msgid "Add to directory"
 msgstr "Żid mad-direttorju"
 
@@ -270,12 +270,12 @@ msgid "Anything subscribed to this feed will stop receiving it. You can copy a n
 msgstr "Kull ma huwa abbonat għal din il-feed se jieqaf jirċeviha. Wara tista' tikkopja URL ġdid."
 
 #: src/features/apps/index.tsx:164
-#: src/routes/_authenticated/app/$appId.tsx:98
+#: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "App"
 
+#: src/features/apps/index.tsx:297
 #: src/features/apps/index.tsx:307
-#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "Azzjonijiet tal-app"
 
@@ -291,19 +291,19 @@ msgstr "App installata"
 msgid "App installed successfully"
 msgstr "L-app ġiet installata b'suċċess"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:131
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:130
 msgid "App not found"
 msgstr "App ma nstabitx"
 
-#: src/routes/_authenticated/app/$appId.tsx:208
+#: src/routes/_authenticated/app/$appId.tsx:197
 msgid "Application ID"
 msgstr "ID tal-applikazzjoni"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:355
 msgid "Apps"
 msgstr "Apps"
 
@@ -370,7 +370,7 @@ msgstr "Verżjoni disponibbli:"
 msgid "Available versions:"
 msgstr "Verżjonijiet disponibbli:"
 
-#: src/features/apps/index.tsx:451
+#: src/features/apps/index.tsx:444
 msgid "Available, but not installed"
 msgstr "Disponibbli, imma mhux installata"
 
@@ -386,9 +386,9 @@ msgstr "Avatar għal {name}"
 msgid "Back"
 msgstr "Lura"
 
-#: src/routes/_authenticated/app/$appId.tsx:106
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:144
+#: src/routes/_authenticated/app/$appId.tsx:105
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:143
 msgid "Back to apps"
 msgstr "Lura għall-apps"
 
@@ -397,16 +397,16 @@ msgstr "Lura għall-apps"
 msgid "Back to home"
 msgstr "Lura għall-paġna ewlenija"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Banner"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "Banner imneħħi"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "Banner aġġornat"
 
@@ -465,10 +465,10 @@ msgstr "Il-kamera mhix disponibbli"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:575
-#: src/features/apps/index.tsx:616
-#: src/features/apps/index.tsx:666
-#: src/routes/_authenticated/app/$appId.tsx:565
+#: src/features/apps/index.tsx:568
+#: src/features/apps/index.tsx:609
+#: src/features/apps/index.tsx:659
+#: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Ikkanċella"
 
@@ -525,7 +525,7 @@ msgstr "Agħżel logħba mill-barra tal-ġenb jew ibda waħda ġdida."
 msgid "Choose language"
 msgstr "Agħżel lingwa"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Class"
 msgstr "Klassi"
 
@@ -538,16 +538,16 @@ msgstr "Routing tal-klassi"
 msgid "Classes"
 msgstr "Klassijiet"
 
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Clean up unused versions"
 msgstr "Naddaf verżjonijiet mhux użati"
 
 #: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Cleaning up..."
 msgstr "Qed inaddaf..."
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -658,18 +658,6 @@ msgstr "Ikkonfigura s-settings tal-għażla"
 msgid "Configure view settings"
 msgstr "Ikkonfigura s-settings tal-view"
 
-#: src/features/routing/paths.tsx:25
-msgid "Configure which app handles each URL path."
-msgstr "Ikkonfigura liema app tindirizza kull URL path."
-
-#: src/features/routing/classes.tsx:25
-msgid "Configure which app handles entities of each type."
-msgstr "Ikkonfigura liema app tindirizza l-entitajiet ta' kull tip."
-
-#: src/features/routing/services.tsx:25
-msgid "Configure which app handles inter-app service calls."
-msgstr "Ikkonfigura liema app tindirizza l-applikazzjonijiet ta' servizz bejn l-apps."
-
 #: ../../../lib/web/src/components/place-picker.tsx:146
 #: ../../../lib/web/src/components/travelling-picker.tsx:296
 msgid "Confirm"
@@ -777,7 +765,7 @@ msgstr "Qed joħloq..."
 msgid "Current location"
 msgstr "Post attwali"
 
-#: src/routes/_authenticated/app/$appId.tsx:218
+#: src/routes/_authenticated/app/$appId.tsx:207
 msgid "Current version"
 msgstr "Verżjoni attwali"
 
@@ -798,7 +786,7 @@ msgstr "Kunflitt fid-dejta"
 msgid "Date"
 msgstr "Data"
 
-#: src/features/routing/routing-table.tsx:77
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "Iddikjarat minn"
 
@@ -807,8 +795,8 @@ msgid "Decline"
 msgstr "Irrifjuta"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
-#: src/features/routing/routing-table.tsx:131
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:126
+#: src/features/routing/routing-table.tsx:150
 msgid "Default"
 msgstr "Default"
 
@@ -816,15 +804,15 @@ msgstr "Default"
 msgid "Default AI account"
 msgstr "Kont AI default"
 
-#: src/routes/_authenticated/app/$appId.tsx:441
+#: src/routes/_authenticated/app/$appId.tsx:430
 msgid "Default for all users"
 msgstr "Default għall-utenti kollha"
 
-#: src/routes/_authenticated/app/$appId.tsx:440
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Default għall-utenti kollha (verżjoni {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:339
+#: src/routes/_authenticated/app/$appId.tsx:328
 msgid "Default for all users updated"
 msgstr "Default għall-utenti kollha aġġornat"
 
@@ -832,12 +820,12 @@ msgstr "Default għall-utenti kollha aġġornat"
 msgid "Default sort"
 msgstr "Ssortjar default"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:414
 msgid "Default track"
 msgstr "Track default"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:413
 msgid "Default track (version {0})"
 msgstr "Track default (verżjoni {0})"
 
@@ -919,7 +907,7 @@ msgstr "Dixxendenti"
 msgid "Description"
 msgstr "Deskrizzjoni"
 
-#: src/routes/_authenticated/app/$appId.tsx:150
+#: src/routes/_authenticated/app/$appId.tsx:149
 msgid "Details"
 msgstr "Dettalji"
 
@@ -938,7 +926,7 @@ msgstr "Pannell tad-Dettalji"
 msgid "Detect from web browser"
 msgstr "Iskopri mill-browser"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:419
 msgid "Development apps"
 msgstr "Apps ta' żvilupp"
 
@@ -1044,11 +1032,11 @@ msgstr "Email"
 msgid "Email code"
 msgstr "Kodiċi tal-email"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:224
 msgid "Enabled services"
 msgstr "Servizzi Attivati"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "Daħħal it-test tal-banner (markdown sapportit)..."
 
@@ -1125,7 +1113,7 @@ msgstr "Ma rnexxiex jitħassar il-link"
 msgid "Failed to get RSS token"
 msgstr "Ma rnexxiex jinkiseb it-token tar-RSS"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:476
 msgid "Failed to grant permission"
 msgstr "Ma rnexxiex tingħata l-permess"
 
@@ -1133,7 +1121,11 @@ msgstr "Ma rnexxiex tingħata l-permess"
 msgid "Failed to load"
 msgstr "Ma rnexxiex jitgħabba"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "Ma rnexxielux jitgħabba l-banner"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "Ma rnexxiex titgħabba l-istorja"
 
@@ -1166,7 +1158,7 @@ msgstr "Ma rnexxiex jiġi postjat il-kumment"
 msgid "Failed to reset prompt"
 msgstr "Ma rnexxiex jiġi reset il-prompt"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Failed to revoke permission"
 msgstr "Ma rnexxiex jiġi rrevokat il-permess"
 
@@ -1186,7 +1178,7 @@ msgstr "Ma rnexxiex jiġi ssejvjat il-prompt"
 msgid "Failed to update apps"
 msgstr "Ma rnexxiex li jiġu aġġornati l-apps"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "Ma rnexxiex jiġi aġġornat il-banner"
 
@@ -1194,12 +1186,12 @@ msgstr "Ma rnexxiex jiġi aġġornat il-banner"
 msgid "Failed to update comment"
 msgstr "Ma rnexxiex jiġi aġġornat il-kumment"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:329
 msgid "Failed to update default"
 msgstr "Ma rnexxiex jiġi aġġornat id-default"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:318
+#: src/routes/_authenticated/app/$appId.tsx:307
 msgid "Failed to update preference"
 msgstr "Ma rnexxiex tiġi aġġornata l-preferenza"
 
@@ -1215,7 +1207,7 @@ msgstr "Ma rnexxiex jiġi aġġornat is-segwitu"
 msgid "Failed to upload attachment"
 msgstr "Ma rnexxiex jittella' l-attachment"
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:639
 msgid "File:"
 msgstr "Fajl:"
 
@@ -1225,7 +1217,7 @@ msgstr "Fajl:"
 msgid "Files"
 msgstr "Fajls"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:202
 msgid "Fingerprint"
 msgstr "Fingerprint"
 
@@ -1259,7 +1251,7 @@ msgstr "Ħbieb"
 msgid "From"
 msgstr "Minn"
 
-#: src/features/apps/index.tsx:506
+#: src/features/apps/index.tsx:499
 msgid "From the directory"
 msgstr "Mid-direttorju"
 
@@ -1276,15 +1268,15 @@ msgstr "Mit-tema"
 msgid "Go back"
 msgstr "Lura"
 
-#: src/routes/_authenticated/app/$appId.tsx:529
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Agħti"
 
-#: src/routes/_authenticated/app/$appId.tsx:534
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Agħti permess"
 
-#: src/routes/_authenticated/app/$appId.tsx:485
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Granting permission..."
 msgstr "Qed nagħti permess..."
 
@@ -1301,11 +1293,11 @@ msgstr "Iggrupp skont"
 msgid "Group: {0}"
 msgstr "Grupp: {0}"
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Handler"
 msgstr "Handler"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "Storja"
 
@@ -1320,7 +1312,7 @@ msgstr "Home"
 msgid "Hot"
 msgstr "Sħun"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "HTTP paths"
 msgstr "Paths HTTP"
 
@@ -1328,7 +1320,7 @@ msgstr "Paths HTTP"
 msgid "ID"
 msgstr "ID"
 
-#: src/routes/_authenticated/app/$appId.tsx:205
+#: src/routes/_authenticated/app/$appId.tsx:194
 msgid "Identity"
 msgstr "Identità"
 
@@ -1355,32 +1347,28 @@ msgstr "Avatar bl-inizjali għal {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Install"
 msgstr "Installa"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:566
+#: src/features/apps/index.tsx:559
 msgid "Install {0}?"
 msgstr "Installa {0}?"
 
-#: src/features/apps/index.tsx:399
-msgid "Install apps from the market or upload your own"
-msgstr "Installa apps mis-suq jew tella' tiegħek"
-
-#: src/features/apps/index.tsx:339
-#: src/features/apps/index.tsx:642
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:635
 msgid "Install from file"
 msgstr "Installa minn fajl"
 
-#: src/features/apps/index.tsx:335
-#: src/features/apps/index.tsx:600
+#: src/features/apps/index.tsx:325
+#: src/features/apps/index.tsx:593
 msgid "Install from publisher"
 msgstr "Installa minn publisher"
 
-#: src/features/apps/index.tsx:382
+#: src/features/apps/index.tsx:376
 msgid "Installed apps"
 msgstr "Apps installati"
 
@@ -1390,9 +1378,9 @@ msgstr "Apps installati"
 #: src/features/apps/index.tsx:162
 #: src/features/apps/index.tsx:182
 #: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Installing..."
 msgstr "Qed jiġi installat..."
 
@@ -1495,10 +1483,6 @@ msgstr "Ħareġ b'suċċess"
 msgid "Logging out…"
 msgstr "Qed joħroġ…"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
-msgid "Manage capabilities granted to this application"
-msgstr "Immaniġġja l-kapaċitajiet mogħtija lil din l-applikazzjoni"
-
 #: ../../../lib/web/src/components/notification-category-button.tsx:127
 msgid "Manage categories"
 msgstr "Immaniġġja l-kategoriji"
@@ -1573,7 +1557,7 @@ msgstr "Ġie mċaqlaq"
 msgid "Moved {field}"
 msgstr "Ġie mċaqlaq {field}"
 
-#: src/features/routing/routing-table.tsx:107
+#: src/features/routing/routing-table.tsx:102
 msgid "Multiple apps declare this resource"
 msgstr "Diversi apps jiddikjaraw din ir-riżorsa"
 
@@ -1633,11 +1617,11 @@ msgstr "L-ebda attività s'issa"
 msgid "No apps could be updated."
 msgstr "L-ebda apps ma setgħu jiġu aġġornati."
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:392
 msgid "No apps installed"
 msgstr "L-ebda apps installati"
 
-#: src/features/routing/routing-table.tsx:59
+#: src/features/routing/routing-table.tsx:54
 msgid "No classes configured."
 msgstr "L-ebda klassijiet ikkonfigurati."
 
@@ -1645,11 +1629,11 @@ msgstr "L-ebda klassijiet ikkonfigurati."
 msgid "No comments yet"
 msgstr "L-ebda kummenti s'issa"
 
-#: src/features/apps/index.tsx:493
+#: src/features/apps/index.tsx:486
 msgid "No description"
 msgstr "L-ebda deskrizzjoni"
 
-#: src/features/apps/index.tsx:431
+#: src/features/apps/index.tsx:424
 msgid "No development apps match \"{searchQuery}\""
 msgstr "L-ebda apps ta' żvilupp ma jaqblu ma' \"{searchQuery}\""
 
@@ -1661,11 +1645,11 @@ msgstr "L-ebda logħob s'issa"
 msgid "No groups available"
 msgstr "L-ebda gruppi disponibbli"
 
-#: src/features/apps/index.tsx:524
+#: src/features/apps/index.tsx:517
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "L-ebda apps installabbli fid-direttorju ma jaqblu ma' \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:398
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "L-ebda apps installati ma jaqblu ma' \"{searchQuery}\""
 
@@ -1673,12 +1657,12 @@ msgstr "L-ebda apps installati ma jaqblu ma' \"{searchQuery}\""
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "L-ebda tipi ta' oġġetti jistgħu jinħolqu għadhom. Oħloq l-oġġetti tal-ġenitur meħtieġa l-ewwel."
 
-#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:516
 msgid "No matches in directory"
 msgstr "L-ebda matches fid-direttorju"
 
-#: src/features/apps/index.tsx:404
-#: src/features/apps/index.tsx:430
+#: src/features/apps/index.tsx:397
+#: src/features/apps/index.tsx:423
 msgid "No matching apps"
 msgstr "L-ebda apps li jaqblu"
 
@@ -1686,7 +1670,7 @@ msgstr "L-ebda apps li jaqblu"
 msgid "No matching objects"
 msgstr "L-ebda oġġetti li jaqblu"
 
-#: src/features/routing/routing-table.tsx:63
+#: src/features/routing/routing-table.tsx:58
 msgid "No paths configured."
 msgstr "L-ebda paths ikkonfigurati."
 
@@ -1695,11 +1679,11 @@ msgstr "L-ebda paths ikkonfigurati."
 msgid "No people found"
 msgstr "Ma nstabu l-ebda nies"
 
-#: src/routes/_authenticated/app/$appId.tsx:588
+#: src/routes/_authenticated/app/$appId.tsx:573
 msgid "No permissions granted"
 msgstr "L-ebda permessi mogħtija"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "L-ebda permessi mogħtija lil din l-app"
 
@@ -1707,7 +1691,7 @@ msgstr "L-ebda permessi mogħtija lil din l-app"
 msgid "No places found"
 msgstr "Ma nstabu l-ebda postijiet"
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:469
 msgid "No recommendations available"
 msgstr "L-ebda rakkomandazzjonijiet disponibbli"
 
@@ -1720,7 +1704,7 @@ msgstr "Ma nstab l-ebda riżultat"
 msgid "No results found."
 msgstr "Ma nstabu l-ebda riżultati."
 
-#: src/features/routing/routing-table.tsx:61
+#: src/features/routing/routing-table.tsx:56
 msgid "No services configured."
 msgstr "L-ebda servizzi ikkonfigurati."
 
@@ -1787,7 +1771,7 @@ msgstr "Ma nstabx"
 msgid "Not set"
 msgstr "Mhux issettjat"
 
-#: src/routes/_authenticated/app/$appId.tsx:360
+#: src/routes/_authenticated/app/$appId.tsx:349
 msgid "Not versioned"
 msgstr "Mhux verżjonat"
 
@@ -1888,11 +1872,11 @@ msgstr "Ċwievet tal-aċċess"
 msgid "Passkeys are not available in this browser"
 msgstr "Il-passkeys mhumiex disponibbli f'dan il-browser"
 
-#: src/features/apps/index.tsx:604
+#: src/features/apps/index.tsx:597
 msgid "Paste the install link:"
 msgstr "Waħħal il-link tal-installazzjoni:"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Path"
 msgstr "Path"
 
@@ -1913,16 +1897,16 @@ msgstr "Mudell (regex)"
 msgid "People"
 msgstr "Nies"
 
-#: src/routes/_authenticated/app/$appId.tsx:486
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Permission granted"
 msgstr "Permess mogħti"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:456
 msgid "Permission revoked"
 msgstr "Permess revokat"
 
-#: src/routes/_authenticated/app/$appId.tsx:152
-#: src/routes/_authenticated/app/$appId.tsx:521
+#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:510
 msgid "Permissions"
 msgstr "Permessi"
 
@@ -1956,7 +1940,7 @@ msgstr "Posts u kummenti"
 msgid "Preference updated"
 msgstr "Preferenza aġġornata"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Preferred version"
 msgstr "Verżjoni Preferuta"
 
@@ -1982,7 +1966,7 @@ msgstr "Prompt issejvjat"
 msgid "Properties"
 msgstr "Proprjetajiet"
 
-#: src/routes/_authenticated/app/$appId.tsx:227
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Provided classes"
 msgstr "Klassijiet Provduti"
 
@@ -2003,7 +1987,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Erġa' rreġistra ċ-ċwievet tal-aċċess tiegħek fuq dan is-server"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:452
+#: src/features/apps/index.tsx:445
 msgid "Recommended"
 msgstr "Rakkomandat"
 
@@ -2137,8 +2121,8 @@ msgid "Retry"
 msgstr "Erġa' pprova"
 
 #: ../../../lib/web/src/components/options-menu.tsx:247
-#: src/routes/_authenticated/app/$appId.tsx:641
-#: src/routes/_authenticated/app/$appId.tsx:644
+#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:629
 msgid "Revoke"
 msgstr "Irrevoka"
 
@@ -2146,11 +2130,11 @@ msgstr "Irrevoka"
 msgid "Revoke access"
 msgstr "Irrevoka l-aċċess"
 
-#: src/routes/_authenticated/app/$appId.tsx:651
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission"
 msgstr "Irrevoka permess"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:634
 msgid "Revoke permission?"
 msgstr "Tirrevoka l-permess?"
 
@@ -2158,7 +2142,7 @@ msgstr "Tirrevoka l-permess?"
 msgid "Revoke RSS access?"
 msgstr "Tirrevoka l-aċċess RSS?"
 
-#: src/routes/_authenticated/app/$appId.tsx:466
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Revoking permission..."
 msgstr "Qed nirrevoka l-permess..."
 
@@ -2189,7 +2173,7 @@ msgstr "Is-Sibt"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2200,8 +2184,8 @@ msgstr "Issejvja"
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:316
-#: src/routes/_authenticated/app/$appId.tsx:338
+#: src/routes/_authenticated/app/$appId.tsx:305
+#: src/routes/_authenticated/app/$appId.tsx:327
 msgid "Saving..."
 msgstr "Qed jiġi ssejvjat..."
 
@@ -2212,11 +2196,11 @@ msgstr "Qed jiġi ssejvjat..."
 msgid "Search"
 msgstr "Fittex"
 
-#: src/features/apps/index.tsx:371
+#: src/features/apps/index.tsx:368
 msgid "Search apps"
 msgstr "Fittex apps"
 
-#: src/features/apps/index.tsx:370
+#: src/features/apps/index.tsx:367
 msgid "Search apps..."
 msgstr "Fittex apps..."
 
@@ -2272,10 +2256,6 @@ msgstr "Qed ifittex..."
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts:16
 msgid "Select"
 msgstr "Agħżel"
-
-#: src/routes/_authenticated/app/$appId.tsx:536
-msgid "Select a capability to grant to {appName}."
-msgstr "Agħżel kapaċità biex tagħti lil {appName}."
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 msgid "Select a field"
@@ -2354,7 +2334,7 @@ msgstr "Żball tas-server"
 msgid "Server rules"
 msgstr "Regoli tas-server"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "Servizz"
 
@@ -2471,14 +2451,14 @@ msgstr "Il-Ħadd"
 msgid "Switch to view 1-9"
 msgstr "Aqleb għal vista 1-9"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "Sistema"
 
-#: src/features/routing/routing-table.tsx:79
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/features/routing/routing-table.tsx:74
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "System default"
 msgstr "Default tas-sistema"
 
@@ -2499,7 +2479,7 @@ msgstr "It-tikketta trid tkun sa 50 karattru"
 msgid "Tags"
 msgstr "Tags"
 
-#: src/routes/_authenticated/app/$appId.tsx:224
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "Technical capabilities"
 msgstr "Kapaċitajiet Tekniċi"
 
@@ -2545,7 +2525,7 @@ msgstr "It-talba għall-mikrofonu ma twiġbitx"
 msgid "The passkey request was not answered"
 msgstr "It-talba għall-passkey ma twiġbitx"
 
-#: src/routes/_authenticated/app/$appId.tsx:132
+#: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "L-app mitluba ma nstabitx."
 
@@ -2557,7 +2537,7 @@ msgstr "Il-kontenut mitlub ma setax jinstab."
 msgid "The server returned a web page instead of data."
 msgstr "Is-server irritorna paġna web minflok data."
 
-#: src/routes/_authenticated/app/$appId.tsx:361
+#: src/routes/_authenticated/app/$appId.tsx:350
 msgid "This app does not have version management"
 msgstr "Din l-app m'għandhiex ġestjoni tal-verżjonijiet"
 
@@ -2574,7 +2554,7 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Dan għad iħassar il-logħba u ċ-chat tagħha b'mod permanenti. Din l-azzjoni ma tistax titħassar."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:650
+#: src/routes/_authenticated/app/$appId.tsx:635
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Dan se jirrevoka l-permess \"{0}\" minn {appName}. L-app jista' jieqaf jaħdem korrettement."
 
@@ -2617,8 +2597,8 @@ msgstr "Wisq talbiet"
 msgid "Top"
 msgstr "Quċċata"
 
-#: src/features/apps/index.tsx:742
-#: src/routes/_authenticated/app/$appId.tsx:380
+#: src/features/apps/index.tsx:735
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
 
@@ -2664,7 +2644,7 @@ msgstr "Ittajpja biex tfittex..."
 msgid "Unable to connect to remote server"
 msgstr "Ma jistax jaqbad mas-server remot"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:464
 msgid "Unable to connect to the recommendations service"
 msgstr "Ma rnexxiex jikkonnetja mas-servizz tar-rakkomandazzjonijiet"
 
@@ -2686,7 +2666,7 @@ msgid "Unassigned"
 msgstr "Mhux assenjat"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:463
 msgid "Unavailable"
 msgstr "Mhux disponibbli"
 
@@ -2699,7 +2679,7 @@ msgstr "Żball API mhux mistenni"
 msgid "United States"
 msgstr "Stati Uniti"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2717,11 +2697,11 @@ msgstr "Iddiżabbona"
 msgid "Untitled"
 msgstr "Bla titlu"
 
-#: src/features/apps/index.tsx:738
+#: src/features/apps/index.tsx:731
 msgid "Update"
 msgstr "Aġġorna"
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Update all"
 msgstr "Aġġorna kollox"
 
@@ -2743,7 +2723,7 @@ msgstr "Ġie aġġornat {field}"
 msgid "Updating apps..."
 msgstr "Qed naġġorna l-apps..."
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Updating..."
 msgstr "Qed jaġġorna..."
 
@@ -2756,7 +2736,7 @@ msgstr "Tella'"
 msgid "Upload progress"
 msgstr "Il-progress tat-tlugħ"
 
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:150
 msgid "Use system default"
 msgstr "Uża d-default tas-sistema"
 
@@ -2787,7 +2767,7 @@ msgstr "Ivverifika"
 msgid "Verify email address"
 msgstr "Ivverifika l-indirizz tal-email"
 
-#: src/routes/_authenticated/app/$appId.tsx:394
+#: src/routes/_authenticated/app/$appId.tsx:383
 msgid "Version"
 msgstr "Verżjoni"
 
@@ -2796,15 +2776,15 @@ msgstr "Verżjoni"
 msgid "Version {0}"
 msgstr "Verżjoni {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#: src/routes/_authenticated/app/$appId.tsx:306
 msgid "Version changed"
 msgstr "Verżjoni mibdula"
 
-#: src/routes/_authenticated/app/$appId.tsx:413
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "Version management"
 msgstr "Ġestjoni tal-Verżjoni"
 
-#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:150
 msgid "Versions"
 msgstr "Verżjonijiet"
 
@@ -2869,7 +2849,7 @@ msgstr "Il-kont tiegħek ġie miċċaqqlaq hawn minn {source}. Sakemm tħassru h
 msgid "Your attachments will be lost."
 msgstr "L-annessi tiegħek se jintilfu."
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Your preference"
 msgstr "Il-preferenza tiegħek"
 
@@ -2881,6 +2861,6 @@ msgstr "It-test u l-annessi tiegħek se jintilfu."
 msgid "Your text will be lost."
 msgstr "It-test tiegħek se jintilef."
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Your version"
 msgstr "Verżjoni Tiegħek"

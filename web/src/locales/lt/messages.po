@@ -46,7 +46,7 @@ msgid "{0, plural, one {Removed # unused version} other {Removed # unused versio
 msgstr "{0, plural, one {Pašalinta # nenaudojama versija} few {Pašalintos # nenaudojamos versijos} many {Pašalinta # nenaudojamos versijos} other {Pašalinta # nenaudojamų versijų}}"
 
 #. placeholder {0}: app.name
-#: src/features/routing/routing-table.tsx:23
+#: src/features/routing/routing-table.tsx:18
 msgid "{0} (development)"
 msgstr "{0} (kūrimas)"
 
@@ -100,11 +100,11 @@ msgstr "{totalCount, plural, one {# elementas} few {# elementai} many {# element
 msgid "{totalDescendants, plural, one {# reply} other {+# more replies}}"
 msgstr "{totalDescendants, plural, one {# atsakymas} few {+# daugiau atsakymų} many {+# daugiau atsakymų} other {+# daugiau atsakymų}}"
 
-#: src/routes/_authenticated/app/$appId.tsx:385
+#: src/routes/_authenticated/app/$appId.tsx:374
 msgid "{track} (default, version {version})"
 msgstr "{track} (numatytoji, versija {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:386
+#: src/routes/_authenticated/app/$appId.tsx:375
 msgid "{track} (version {version})"
 msgstr "{track} (versija {version})"
 
@@ -208,7 +208,7 @@ msgstr "Pridėti parinktį"
 msgid "Add tag..."
 msgstr "Pridėti žymą..."
 
-#: src/features/apps/index.tsx:653
+#: src/features/apps/index.tsx:646
 msgid "Add to directory"
 msgstr "Pridėti į katalogą"
 
@@ -270,12 +270,12 @@ msgid "Anything subscribed to this feed will stop receiving it. You can copy a n
 msgstr "Viskas, kas prenumeruoja šį srautą, nustos jį gauti. Vėliau galėsite nukopijuoti naują URL."
 
 #: src/features/apps/index.tsx:164
-#: src/routes/_authenticated/app/$appId.tsx:98
+#: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Programėlė"
 
+#: src/features/apps/index.tsx:297
 #: src/features/apps/index.tsx:307
-#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "Programėlės veiksmai"
 
@@ -291,19 +291,19 @@ msgstr "Programėlė įdiegta"
 msgid "App installed successfully"
 msgstr "Programa sėkmingai įdiegta"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:131
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:130
 msgid "App not found"
 msgstr "Programėlė nerasta"
 
-#: src/routes/_authenticated/app/$appId.tsx:208
+#: src/routes/_authenticated/app/$appId.tsx:197
 msgid "Application ID"
 msgstr "Programos ID"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:355
 msgid "Apps"
 msgstr "Programėlės"
 
@@ -370,7 +370,7 @@ msgstr "Prieinama versija:"
 msgid "Available versions:"
 msgstr "Prieinamos versijos:"
 
-#: src/features/apps/index.tsx:451
+#: src/features/apps/index.tsx:444
 msgid "Available, but not installed"
 msgstr "Prieinama, bet neįdiegta"
 
@@ -386,9 +386,9 @@ msgstr "{name} avataras"
 msgid "Back"
 msgstr "Atgal"
 
-#: src/routes/_authenticated/app/$appId.tsx:106
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:144
+#: src/routes/_authenticated/app/$appId.tsx:105
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:143
 msgid "Back to apps"
 msgstr "Atgal į programėles"
 
@@ -397,16 +397,16 @@ msgstr "Atgal į programėles"
 msgid "Back to home"
 msgstr "Atgal į pradžią"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Reklamjuostė"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "Reklamjuostė pašalinta"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "Reklamjuostė atnaujinta"
 
@@ -465,10 +465,10 @@ msgstr "Kamera nepasiekiama"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:575
-#: src/features/apps/index.tsx:616
-#: src/features/apps/index.tsx:666
-#: src/routes/_authenticated/app/$appId.tsx:565
+#: src/features/apps/index.tsx:568
+#: src/features/apps/index.tsx:609
+#: src/features/apps/index.tsx:659
+#: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Atšaukti"
 
@@ -525,7 +525,7 @@ msgstr "Pasirinkite žaidimą iš šoninės juostos arba pradėkite naują."
 msgid "Choose language"
 msgstr "Pasirinkite kalbą"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Class"
 msgstr "Klasė"
 
@@ -538,16 +538,16 @@ msgstr "Klasės maršrutizavimas"
 msgid "Classes"
 msgstr "Klasės"
 
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Clean up unused versions"
 msgstr "Išvalyti nenaudojamas versijas"
 
 #: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Cleaning up..."
 msgstr "Valoma..."
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -658,18 +658,6 @@ msgstr "Konfigūruoti parinkties nustatymus"
 msgid "Configure view settings"
 msgstr "Konfigūruoti rodinio nustatymus"
 
-#: src/features/routing/paths.tsx:25
-msgid "Configure which app handles each URL path."
-msgstr "Konfigūruokite, kuri programėlė tvarko kiekvieną URL kelią."
-
-#: src/features/routing/classes.tsx:25
-msgid "Configure which app handles entities of each type."
-msgstr "Konfigūruokite, kuri programėlė tvarko kiekvieno tipo subjektus."
-
-#: src/features/routing/services.tsx:25
-msgid "Configure which app handles inter-app service calls."
-msgstr "Konfigūruokite, kuri programėlė tvarko tarp programėlių vykstančias paslaugų užklausas."
-
 #: ../../../lib/web/src/components/place-picker.tsx:146
 #: ../../../lib/web/src/components/travelling-picker.tsx:296
 msgid "Confirm"
@@ -777,7 +765,7 @@ msgstr "Kuriama..."
 msgid "Current location"
 msgstr "Dabartinė vieta"
 
-#: src/routes/_authenticated/app/$appId.tsx:218
+#: src/routes/_authenticated/app/$appId.tsx:207
 msgid "Current version"
 msgstr "Dabartinė versija"
 
@@ -798,7 +786,7 @@ msgstr "Duomenų konfliktas"
 msgid "Date"
 msgstr "Data"
 
-#: src/features/routing/routing-table.tsx:77
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "Deklaravo"
 
@@ -807,8 +795,8 @@ msgid "Decline"
 msgstr "Atmesti"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
-#: src/features/routing/routing-table.tsx:131
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:126
+#: src/features/routing/routing-table.tsx:150
 msgid "Default"
 msgstr "Numatytasis"
 
@@ -816,15 +804,15 @@ msgstr "Numatytasis"
 msgid "Default AI account"
 msgstr "Numatytoji DI paskyra"
 
-#: src/routes/_authenticated/app/$appId.tsx:441
+#: src/routes/_authenticated/app/$appId.tsx:430
 msgid "Default for all users"
 msgstr "Numatytasis visiems vartotojams"
 
-#: src/routes/_authenticated/app/$appId.tsx:440
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Numatytasis visiems vartotojams (versija {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:339
+#: src/routes/_authenticated/app/$appId.tsx:328
 msgid "Default for all users updated"
 msgstr "Numatytasis visiems vartotojams atnaujintas"
 
@@ -832,12 +820,12 @@ msgstr "Numatytasis visiems vartotojams atnaujintas"
 msgid "Default sort"
 msgstr "Numatytasis rūšiavimas"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:414
 msgid "Default track"
 msgstr "Numatytasis track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:413
 msgid "Default track (version {0})"
 msgstr "Numatytasis track (versija {0})"
 
@@ -919,7 +907,7 @@ msgstr "Mažėjančiai"
 msgid "Description"
 msgstr "Aprašymas"
 
-#: src/routes/_authenticated/app/$appId.tsx:150
+#: src/routes/_authenticated/app/$appId.tsx:149
 msgid "Details"
 msgstr "Detalės"
 
@@ -938,7 +926,7 @@ msgstr "Detalių skydelis"
 msgid "Detect from web browser"
 msgstr "Aptikti iš naršyklės"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:419
 msgid "Development apps"
 msgstr "Kūrimo programėlės"
 
@@ -1044,11 +1032,11 @@ msgstr "El. paštas"
 msgid "Email code"
 msgstr "El. pašto kodas"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:224
 msgid "Enabled services"
 msgstr "Įjungtos paslaugos"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "Įveskite reklamjuostės tekstą (palaikomas markdown)…"
 
@@ -1125,7 +1113,7 @@ msgstr "Nepavyko ištrinti nuorodos"
 msgid "Failed to get RSS token"
 msgstr "Nepavyko gauti RSS raktelio"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:476
 msgid "Failed to grant permission"
 msgstr "Nepavyko suteikti leidimo"
 
@@ -1133,7 +1121,11 @@ msgstr "Nepavyko suteikti leidimo"
 msgid "Failed to load"
 msgstr "Nepavyko įkelti"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "Nepavyko įkelti reklamjuostės"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "Nepavyko įkelti istorijos"
 
@@ -1166,7 +1158,7 @@ msgstr "Nepavyko paskelbti komentaro"
 msgid "Failed to reset prompt"
 msgstr "Nepavyko atstatyti raginimo"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Failed to revoke permission"
 msgstr "Nepavyko atšaukti leidimo"
 
@@ -1186,7 +1178,7 @@ msgstr "Nepavyko išsaugoti raginimo"
 msgid "Failed to update apps"
 msgstr "Nepavyko atnaujinti programų"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "Nepavyko atnaujinti reklamjuostės"
 
@@ -1194,12 +1186,12 @@ msgstr "Nepavyko atnaujinti reklamjuostės"
 msgid "Failed to update comment"
 msgstr "Nepavyko atnaujinti komentaro"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:329
 msgid "Failed to update default"
 msgstr "Nepavyko atnaujinti numatytojo"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:318
+#: src/routes/_authenticated/app/$appId.tsx:307
 msgid "Failed to update preference"
 msgstr "Nepavyko atnaujinti nuostatos"
 
@@ -1215,7 +1207,7 @@ msgstr "Nepavyko atnaujinti stebėjimo"
 msgid "Failed to upload attachment"
 msgstr "Nepavyko įkelti priedo"
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:639
 msgid "File:"
 msgstr "Failas:"
 
@@ -1225,7 +1217,7 @@ msgstr "Failas:"
 msgid "Files"
 msgstr "Failai"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:202
 msgid "Fingerprint"
 msgstr "Pirštų atspaudas"
 
@@ -1259,7 +1251,7 @@ msgstr "Draugai"
 msgid "From"
 msgstr "Nuo"
 
-#: src/features/apps/index.tsx:506
+#: src/features/apps/index.tsx:499
 msgid "From the directory"
 msgstr "Iš katalogo"
 
@@ -1276,15 +1268,15 @@ msgstr "Iš temos"
 msgid "Go back"
 msgstr "Atgal"
 
-#: src/routes/_authenticated/app/$appId.tsx:529
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Suteikti"
 
-#: src/routes/_authenticated/app/$appId.tsx:534
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Suteikti leidimą"
 
-#: src/routes/_authenticated/app/$appId.tsx:485
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Granting permission..."
 msgstr "Suteikiamas leidimas..."
 
@@ -1301,11 +1293,11 @@ msgstr "Grupuoti pagal"
 msgid "Group: {0}"
 msgstr "Grupė: {0}"
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Handler"
 msgstr "Tvarkytojas"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "Istorija"
 
@@ -1320,7 +1312,7 @@ msgstr "Pradžia"
 msgid "Hot"
 msgstr "Karšta"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "HTTP paths"
 msgstr "HTTP keliai"
 
@@ -1328,7 +1320,7 @@ msgstr "HTTP keliai"
 msgid "ID"
 msgstr "ID"
 
-#: src/routes/_authenticated/app/$appId.tsx:205
+#: src/routes/_authenticated/app/$appId.tsx:194
 msgid "Identity"
 msgstr "Tapatybė"
 
@@ -1355,32 +1347,28 @@ msgstr "{name} inicialų avataras"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Install"
 msgstr "Įdiegti"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:566
+#: src/features/apps/index.tsx:559
 msgid "Install {0}?"
 msgstr "Įdiegti {0}?"
 
-#: src/features/apps/index.tsx:399
-msgid "Install apps from the market or upload your own"
-msgstr "Įdiekite programėles iš parduotuvės arba įkelkite savas"
-
-#: src/features/apps/index.tsx:339
-#: src/features/apps/index.tsx:642
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:635
 msgid "Install from file"
 msgstr "Įdiegti iš failo"
 
-#: src/features/apps/index.tsx:335
-#: src/features/apps/index.tsx:600
+#: src/features/apps/index.tsx:325
+#: src/features/apps/index.tsx:593
 msgid "Install from publisher"
 msgstr "Įdiegti iš leidėjo"
 
-#: src/features/apps/index.tsx:382
+#: src/features/apps/index.tsx:376
 msgid "Installed apps"
 msgstr "Įdiegtos programėlės"
 
@@ -1390,9 +1378,9 @@ msgstr "Įdiegtos programėlės"
 #: src/features/apps/index.tsx:162
 #: src/features/apps/index.tsx:182
 #: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Installing..."
 msgstr "Diegiama…"
 
@@ -1495,10 +1483,6 @@ msgstr "Sėkmingai atsijungta"
 msgid "Logging out…"
 msgstr "Atsijungiama…"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
-msgid "Manage capabilities granted to this application"
-msgstr "Tvarkykite šiai programai suteiktas galimybes"
-
 #: ../../../lib/web/src/components/notification-category-button.tsx:127
 msgid "Manage categories"
 msgstr "Tvarkyti kategorijas"
@@ -1573,7 +1557,7 @@ msgstr "Perkelta"
 msgid "Moved {field}"
 msgstr "{field} perkelta"
 
-#: src/features/routing/routing-table.tsx:107
+#: src/features/routing/routing-table.tsx:102
 msgid "Multiple apps declare this resource"
 msgstr "Kelios programėlės deklaruoja šį išteklių"
 
@@ -1633,11 +1617,11 @@ msgstr "Dar nėra veiklos"
 msgid "No apps could be updated."
 msgstr "Nepavyko atnaujinti nė vieno programos."
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:392
 msgid "No apps installed"
 msgstr "Programų neįdiegta"
 
-#: src/features/routing/routing-table.tsx:59
+#: src/features/routing/routing-table.tsx:54
 msgid "No classes configured."
 msgstr "Klasių nesukonfigūruota."
 
@@ -1645,11 +1629,11 @@ msgstr "Klasių nesukonfigūruota."
 msgid "No comments yet"
 msgstr "Dar nėra komentarų"
 
-#: src/features/apps/index.tsx:493
+#: src/features/apps/index.tsx:486
 msgid "No description"
 msgstr "Be aprašymo"
 
-#: src/features/apps/index.tsx:431
+#: src/features/apps/index.tsx:424
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Pagal „{searchQuery}“ kuriamų programų nerasta"
 
@@ -1661,11 +1645,11 @@ msgstr "Dar nėra games"
 msgid "No groups available"
 msgstr "Grupių nėra"
 
-#: src/features/apps/index.tsx:524
+#: src/features/apps/index.tsx:517
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Pagal „{searchQuery}“ kataloge įdiegiamų programų nerasta"
 
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:398
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Pagal „{searchQuery}“ įdiegtų programų nerasta"
 
@@ -1673,12 +1657,12 @@ msgstr "Pagal „{searchQuery}“ įdiegtų programų nerasta"
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Kol kas negalima sukurti jokių elementų tipų. Pirma sukurkite reikalingus tėvinius elementus."
 
-#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:516
 msgid "No matches in directory"
 msgstr "Kataloge atitikmenų nerasta"
 
-#: src/features/apps/index.tsx:404
-#: src/features/apps/index.tsx:430
+#: src/features/apps/index.tsx:397
+#: src/features/apps/index.tsx:423
 msgid "No matching apps"
 msgstr "Atitinkančių programų nėra"
 
@@ -1686,7 +1670,7 @@ msgstr "Atitinkančių programų nėra"
 msgid "No matching objects"
 msgstr "Atitinkančių objektų nėra"
 
-#: src/features/routing/routing-table.tsx:63
+#: src/features/routing/routing-table.tsx:58
 msgid "No paths configured."
 msgstr "Kelių nesukonfigūruota."
 
@@ -1695,11 +1679,11 @@ msgstr "Kelių nesukonfigūruota."
 msgid "No people found"
 msgstr "Žmonių nerasta"
 
-#: src/routes/_authenticated/app/$appId.tsx:588
+#: src/routes/_authenticated/app/$appId.tsx:573
 msgid "No permissions granted"
 msgstr "Leidimų nesuteikta"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Šiai programai leidimų nesuteikta"
 
@@ -1707,7 +1691,7 @@ msgstr "Šiai programai leidimų nesuteikta"
 msgid "No places found"
 msgstr "Vietų nerasta"
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:469
 msgid "No recommendations available"
 msgstr "Rekomendacijų nėra"
 
@@ -1720,7 +1704,7 @@ msgstr "Rezultatų nerasta"
 msgid "No results found."
 msgstr "Rezultatų nerasta."
 
-#: src/features/routing/routing-table.tsx:61
+#: src/features/routing/routing-table.tsx:56
 msgid "No services configured."
 msgstr "Paslaugų nesukonfigūruota."
 
@@ -1787,7 +1771,7 @@ msgstr "Nerasta"
 msgid "Not set"
 msgstr "Nenustatyta"
 
-#: src/routes/_authenticated/app/$appId.tsx:360
+#: src/routes/_authenticated/app/$appId.tsx:349
 msgid "Not versioned"
 msgstr "Be versijos"
 
@@ -1888,11 +1872,11 @@ msgstr "Slaptarakčiai"
 msgid "Passkeys are not available in this browser"
 msgstr "Slaptaraktai šioje naršyklėje nepasiekiami"
 
-#: src/features/apps/index.tsx:604
+#: src/features/apps/index.tsx:597
 msgid "Paste the install link:"
 msgstr "Įklijuokite diegimo nuorodą:"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Path"
 msgstr "Kelias"
 
@@ -1913,16 +1897,16 @@ msgstr "Šablonas (regex)"
 msgid "People"
 msgstr "Žmonės"
 
-#: src/routes/_authenticated/app/$appId.tsx:486
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Permission granted"
 msgstr "Leidimas suteiktas"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:456
 msgid "Permission revoked"
 msgstr "Leidimas atšauktas"
 
-#: src/routes/_authenticated/app/$appId.tsx:152
-#: src/routes/_authenticated/app/$appId.tsx:521
+#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:510
 msgid "Permissions"
 msgstr "Leidimai"
 
@@ -1956,7 +1940,7 @@ msgstr "Įrašai ir komentarai"
 msgid "Preference updated"
 msgstr "Nuostata atnaujinta"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Preferred version"
 msgstr "Pageidaujama versija"
 
@@ -1982,7 +1966,7 @@ msgstr "Užklausa išsaugota"
 msgid "Properties"
 msgstr "Savybės"
 
-#: src/routes/_authenticated/app/$appId.tsx:227
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Provided classes"
 msgstr "Pateiktos klasės"
 
@@ -2003,7 +1987,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Iš naujo užregistruokite prieigos raktus šiame serveryje"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:452
+#: src/features/apps/index.tsx:445
 msgid "Recommended"
 msgstr "Rekomenduojama"
 
@@ -2137,8 +2121,8 @@ msgid "Retry"
 msgstr "Bandyti dar kartą"
 
 #: ../../../lib/web/src/components/options-menu.tsx:247
-#: src/routes/_authenticated/app/$appId.tsx:641
-#: src/routes/_authenticated/app/$appId.tsx:644
+#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:629
 msgid "Revoke"
 msgstr "Atšaukti"
 
@@ -2146,11 +2130,11 @@ msgstr "Atšaukti"
 msgid "Revoke access"
 msgstr "Atšaukti prieigą"
 
-#: src/routes/_authenticated/app/$appId.tsx:651
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission"
 msgstr "Atšaukti leidimą"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:634
 msgid "Revoke permission?"
 msgstr "Atšaukti leidimą?"
 
@@ -2158,7 +2142,7 @@ msgstr "Atšaukti leidimą?"
 msgid "Revoke RSS access?"
 msgstr "Atšaukti RSS prieigą?"
 
-#: src/routes/_authenticated/app/$appId.tsx:466
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Revoking permission..."
 msgstr "Atšaukiamas leidimas..."
 
@@ -2189,7 +2173,7 @@ msgstr "Šeštadienis"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2200,8 +2184,8 @@ msgstr "Išsaugoti"
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:316
-#: src/routes/_authenticated/app/$appId.tsx:338
+#: src/routes/_authenticated/app/$appId.tsx:305
+#: src/routes/_authenticated/app/$appId.tsx:327
 msgid "Saving..."
 msgstr "Išsaugoma..."
 
@@ -2212,11 +2196,11 @@ msgstr "Išsaugoma..."
 msgid "Search"
 msgstr "Ieškoti"
 
-#: src/features/apps/index.tsx:371
+#: src/features/apps/index.tsx:368
 msgid "Search apps"
 msgstr "Ieškoti programų"
 
-#: src/features/apps/index.tsx:370
+#: src/features/apps/index.tsx:367
 msgid "Search apps..."
 msgstr "Ieškoti programų..."
 
@@ -2272,10 +2256,6 @@ msgstr "Ieškoma..."
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts:16
 msgid "Select"
 msgstr "Pasirinkti"
-
-#: src/routes/_authenticated/app/$appId.tsx:536
-msgid "Select a capability to grant to {appName}."
-msgstr "Pasirinkite galimybę, kurią suteikti {appName}."
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 msgid "Select a field"
@@ -2354,7 +2334,7 @@ msgstr "Serverio klaida"
 msgid "Server rules"
 msgstr "Serverio taisyklės"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "Paslauga"
 
@@ -2471,14 +2451,14 @@ msgstr "Sekmadienis"
 msgid "Switch to view 1-9"
 msgstr "Perjungti į rodinį 1-9"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "Sistema"
 
-#: src/features/routing/routing-table.tsx:79
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/features/routing/routing-table.tsx:74
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "System default"
 msgstr "Sistemos numatytoji"
 
@@ -2499,7 +2479,7 @@ msgstr "Žymė turi būti ne ilgesnė kaip 50 simbolių"
 msgid "Tags"
 msgstr "Žymos"
 
-#: src/routes/_authenticated/app/$appId.tsx:224
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "Technical capabilities"
 msgstr "Techninės galimybės"
 
@@ -2545,7 +2525,7 @@ msgstr "Į mikrofono užklausą neatsakyta"
 msgid "The passkey request was not answered"
 msgstr "Į slaptarakčio užklausą neatsakyta"
 
-#: src/routes/_authenticated/app/$appId.tsx:132
+#: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "Reikiamos programėlės nepavyko rasti."
 
@@ -2557,7 +2537,7 @@ msgstr "Prašomo turinio rasti nepavyko."
 msgid "The server returned a web page instead of data."
 msgstr "Serveris grąžino tinklalapį vietoj duomenų."
 
-#: src/routes/_authenticated/app/$appId.tsx:361
+#: src/routes/_authenticated/app/$appId.tsx:350
 msgid "This app does not have version management"
 msgstr "Ši programėlė neturi versijų valdymo"
 
@@ -2574,7 +2554,7 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Tai visam laikui ištrins žaidimą ir jo pokalbį. Šio veiksmo negalima anuliuoti."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:650
+#: src/routes/_authenticated/app/$appId.tsx:635
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Tai atšauks „{0}“ leidimą iš {appName}. Programėlė gali nustoti tinkamai veikti."
 
@@ -2617,8 +2597,8 @@ msgstr "Per daug užklausų"
 msgid "Top"
 msgstr "Viršus"
 
-#: src/features/apps/index.tsx:742
-#: src/routes/_authenticated/app/$appId.tsx:380
+#: src/features/apps/index.tsx:735
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
 
@@ -2664,7 +2644,7 @@ msgstr "Įveskite, kad ieškotumėte..."
 msgid "Unable to connect to remote server"
 msgstr "Nepavyko prisijungti prie nuotolinio serverio"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:464
 msgid "Unable to connect to the recommendations service"
 msgstr "Nepavyko prisijungti prie rekomendacijų paslaugos"
 
@@ -2686,7 +2666,7 @@ msgid "Unassigned"
 msgstr "Nepriskirta"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:463
 msgid "Unavailable"
 msgstr "Neprieinama"
 
@@ -2699,7 +2679,7 @@ msgstr "Netikėta API klaida"
 msgid "United States"
 msgstr "Jungtinės Valstijos"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2717,11 +2697,11 @@ msgstr "Atšaukti prenumeratą"
 msgid "Untitled"
 msgstr "Be pavadinimo"
 
-#: src/features/apps/index.tsx:738
+#: src/features/apps/index.tsx:731
 msgid "Update"
 msgstr "Atnaujinti"
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Update all"
 msgstr "Atnaujinti viską"
 
@@ -2743,7 +2723,7 @@ msgstr "{field} atnaujinta"
 msgid "Updating apps..."
 msgstr "Atnaujinamos programos..."
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Updating..."
 msgstr "Atnaujinama..."
 
@@ -2756,7 +2736,7 @@ msgstr "Įkelti"
 msgid "Upload progress"
 msgstr "Įkėlimo eiga"
 
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:150
 msgid "Use system default"
 msgstr "Naudoti sistemos numatytąjį"
 
@@ -2787,7 +2767,7 @@ msgstr "Patvirtinti"
 msgid "Verify email address"
 msgstr "Patvirtinti el. pašto adresą"
 
-#: src/routes/_authenticated/app/$appId.tsx:394
+#: src/routes/_authenticated/app/$appId.tsx:383
 msgid "Version"
 msgstr "Versija"
 
@@ -2796,15 +2776,15 @@ msgstr "Versija"
 msgid "Version {0}"
 msgstr "Versija {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#: src/routes/_authenticated/app/$appId.tsx:306
 msgid "Version changed"
 msgstr "Versija pakeista"
 
-#: src/routes/_authenticated/app/$appId.tsx:413
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "Version management"
 msgstr "Versijų valdymas"
 
-#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:150
 msgid "Versions"
 msgstr "Versijos"
 
@@ -2869,7 +2849,7 @@ msgstr "Jūsų paskyra buvo perkelta čia iš {source}. Kol jos ten neištrinate
 msgid "Your attachments will be lost."
 msgstr "Jūsų priedai bus prarasti."
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Your preference"
 msgstr "Jūsų pasirinkimas"
 
@@ -2881,6 +2861,6 @@ msgstr "Jūsų tekstas ir priedai bus prarasti."
 msgid "Your text will be lost."
 msgstr "Tavo tekstas bus prarastas."
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Your version"
 msgstr "Jūsų versija"

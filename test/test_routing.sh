@@ -92,7 +92,7 @@ echo ""
 echo "--- User Routing Preferences ---"
 
 # Check if user account exists
-USER_TOKEN=$("$SCRIPT_DIR/../../../test/claude/get-token.sh" user 1 2>/dev/null || echo "")
+USER_TOKEN=$("$SCRIPT_DIR/../../../claude/scripts/get-token.sh" user 1 2>/dev/null || echo "")
 if [ -z "$USER_TOKEN" ]; then
     echo -e "${YELLOW}○ Skipping user tests (no user account available)${NC}"
 else

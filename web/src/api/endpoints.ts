@@ -7,18 +7,10 @@
 // api-client composes them onto the basepath it computes from the location,
 // which a leading slash bypasses; getApiBasepath() returns `/<app>/` without
 // the separator, so "list" resolves to /apps/list - not an action, and the SPA
-// catch-all answers 200 with HTML. The /_/ entries below stay absolute: those
-// are core routes, not this app's.
+// catch-all answers 200 with HTML.
 const endpoints = {
-  auth: {
-    code: '/_/code',
-    verify: '/_/verify',
-    identity: '/_/identity',
-    logout: '/_/logout',
-  },
   apps: {
     list: '-/list',
-    get: (id: string) => `-/${id}`,
     market: '-/market',
     information: '-/information',
     installPublisher: '-/install/publisher',
@@ -41,7 +33,6 @@ const endpoints = {
   permissions: {
     list: '-/permissions/list',
     catalog: '-/permissions/catalog',
-    revoke: '-/permissions/revoke',
     set: '-/permissions/set',
   },
 } as const

@@ -46,7 +46,7 @@ msgid "{0, plural, one {Removed # unused version} other {Removed # unused versio
 msgstr "{0, plural, one {Odstranjena # neuporabljena različica} two {Odstranjeni # neuporabljeni različici} few {Odstranjene # neuporabljene različice} other {Odstranjenih # neuporabljenih različic}}"
 
 #. placeholder {0}: app.name
-#: src/features/routing/routing-table.tsx:23
+#: src/features/routing/routing-table.tsx:18
 msgid "{0} (development)"
 msgstr "{0} (razvoj)"
 
@@ -100,11 +100,11 @@ msgstr "{totalCount, plural, one {# element} two {# elementa} few {# elementi} o
 msgid "{totalDescendants, plural, one {# reply} other {+# more replies}}"
 msgstr "{totalDescendants, plural, one {# odgovor} two {+# več odgovorov} few {+# več odgovorov} other {+# več odgovorov}}"
 
-#: src/routes/_authenticated/app/$appId.tsx:385
+#: src/routes/_authenticated/app/$appId.tsx:374
 msgid "{track} (default, version {version})"
 msgstr "{track} (privzeto, različica {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:386
+#: src/routes/_authenticated/app/$appId.tsx:375
 msgid "{track} (version {version})"
 msgstr "{track} (različica {version})"
 
@@ -208,7 +208,7 @@ msgstr "Dodaj možnost"
 msgid "Add tag..."
 msgstr "Dodaj oznako ..."
 
-#: src/features/apps/index.tsx:653
+#: src/features/apps/index.tsx:646
 msgid "Add to directory"
 msgstr "Dodaj v imenik"
 
@@ -270,12 +270,12 @@ msgid "Anything subscribed to this feed will stop receiving it. You can copy a n
 msgstr "Vse, kar je naročeno na ta vir, ga ne bo več prejemalo. Nato lahko kopirate nov URL."
 
 #: src/features/apps/index.tsx:164
-#: src/routes/_authenticated/app/$appId.tsx:98
+#: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Aplikacija"
 
+#: src/features/apps/index.tsx:297
 #: src/features/apps/index.tsx:307
-#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "Dejanja aplikacije"
 
@@ -291,19 +291,19 @@ msgstr "Aplikacija nameščena"
 msgid "App installed successfully"
 msgstr "Aplikacija je uspešno nameščena"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:131
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:130
 msgid "App not found"
 msgstr "Aplikacija ni najdena"
 
-#: src/routes/_authenticated/app/$appId.tsx:208
+#: src/routes/_authenticated/app/$appId.tsx:197
 msgid "Application ID"
 msgstr "ID aplikacije"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:355
 msgid "Apps"
 msgstr "Aplikacije"
 
@@ -370,7 +370,7 @@ msgstr "Razpoložljiva različica:"
 msgid "Available versions:"
 msgstr "Razpoložljive različice:"
 
-#: src/features/apps/index.tsx:451
+#: src/features/apps/index.tsx:444
 msgid "Available, but not installed"
 msgstr "Razpoložljivo, vendar ni nameščeno"
 
@@ -386,9 +386,9 @@ msgstr "Avatar za {name}"
 msgid "Back"
 msgstr "Nazaj"
 
-#: src/routes/_authenticated/app/$appId.tsx:106
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:144
+#: src/routes/_authenticated/app/$appId.tsx:105
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:143
 msgid "Back to apps"
 msgstr "Nazaj na aplikacije"
 
@@ -397,16 +397,16 @@ msgstr "Nazaj na aplikacije"
 msgid "Back to home"
 msgstr "Nazaj na začetek"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Pasica"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "Pasica odstranjena"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "Pasica posodobljena"
 
@@ -465,10 +465,10 @@ msgstr "Kamera ni na voljo"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:575
-#: src/features/apps/index.tsx:616
-#: src/features/apps/index.tsx:666
-#: src/routes/_authenticated/app/$appId.tsx:565
+#: src/features/apps/index.tsx:568
+#: src/features/apps/index.tsx:609
+#: src/features/apps/index.tsx:659
+#: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Prekliči"
 
@@ -525,7 +525,7 @@ msgstr "Izberite igro iz stranske vrstice ali začnite novo."
 msgid "Choose language"
 msgstr "Izberite jezik"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Class"
 msgstr "Razred"
 
@@ -538,16 +538,16 @@ msgstr "Usmerjanje razredov"
 msgid "Classes"
 msgstr "Razredi"
 
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Clean up unused versions"
 msgstr "Počisti neuporabljene različice"
 
 #: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Cleaning up..."
 msgstr "Čiščenje ..."
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -658,18 +658,6 @@ msgstr "Konfigurirajte nastavitve možnosti"
 msgid "Configure view settings"
 msgstr "Konfigurirajte nastavitve pogleda"
 
-#: src/features/routing/paths.tsx:25
-msgid "Configure which app handles each URL path."
-msgstr "Konfigurirajte, katera aplikacija obravnava posamezno URL pot."
-
-#: src/features/routing/classes.tsx:25
-msgid "Configure which app handles entities of each type."
-msgstr "Konfigurirajte, katera aplikacija obravnava entitete posamezne vrste."
-
-#: src/features/routing/services.tsx:25
-msgid "Configure which app handles inter-app service calls."
-msgstr "Konfigurirajte, katera aplikacija obravnava klice storitev med aplikacijami."
-
 #: ../../../lib/web/src/components/place-picker.tsx:146
 #: ../../../lib/web/src/components/travelling-picker.tsx:296
 msgid "Confirm"
@@ -777,7 +765,7 @@ msgstr "Ustvarjanje ..."
 msgid "Current location"
 msgstr "Trenutna lokacija"
 
-#: src/routes/_authenticated/app/$appId.tsx:218
+#: src/routes/_authenticated/app/$appId.tsx:207
 msgid "Current version"
 msgstr "Trenutna različica"
 
@@ -798,7 +786,7 @@ msgstr "Konflikt podatkov"
 msgid "Date"
 msgstr "Datum"
 
-#: src/features/routing/routing-table.tsx:77
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "Prijavil"
 
@@ -807,8 +795,8 @@ msgid "Decline"
 msgstr "Zavrni"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
-#: src/features/routing/routing-table.tsx:131
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:126
+#: src/features/routing/routing-table.tsx:150
 msgid "Default"
 msgstr "Privzeto"
 
@@ -816,15 +804,15 @@ msgstr "Privzeto"
 msgid "Default AI account"
 msgstr "Privzeti AI račun"
 
-#: src/routes/_authenticated/app/$appId.tsx:441
+#: src/routes/_authenticated/app/$appId.tsx:430
 msgid "Default for all users"
 msgstr "Privzeto za vse uporabnike"
 
-#: src/routes/_authenticated/app/$appId.tsx:440
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Privzeto za vse uporabnike (različica {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:339
+#: src/routes/_authenticated/app/$appId.tsx:328
 msgid "Default for all users updated"
 msgstr "Privzeto za vse uporabnike posodobljeno"
 
@@ -832,12 +820,12 @@ msgstr "Privzeto za vse uporabnike posodobljeno"
 msgid "Default sort"
 msgstr "Privzeto razvrščanje"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:414
 msgid "Default track"
 msgstr "Privzeti Track"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:413
 msgid "Default track (version {0})"
 msgstr "Privzeti Track (različica {0})"
 
@@ -919,7 +907,7 @@ msgstr "Padajoče"
 msgid "Description"
 msgstr "Opis"
 
-#: src/routes/_authenticated/app/$appId.tsx:150
+#: src/routes/_authenticated/app/$appId.tsx:149
 msgid "Details"
 msgstr "Podrobnosti"
 
@@ -938,7 +926,7 @@ msgstr "Plošča s podrobnostmi"
 msgid "Detect from web browser"
 msgstr "Zaznaj iz spletnega brskalnika"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:419
 msgid "Development apps"
 msgstr "Razvojne aplikacije"
 
@@ -1044,11 +1032,11 @@ msgstr "E-pošta"
 msgid "Email code"
 msgstr "E-poštna koda"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:224
 msgid "Enabled services"
 msgstr "Omogočene storitve"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "Vnesite besedilo pasice (markdown podprt)..."
 
@@ -1125,7 +1113,7 @@ msgstr "Neuspešno brisanje povezave"
 msgid "Failed to get RSS token"
 msgstr "Neuspešno pridobivanje RSS žetona"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:476
 msgid "Failed to grant permission"
 msgstr "Neuspešna dodelitev dovoljenja"
 
@@ -1133,7 +1121,11 @@ msgstr "Neuspešna dodelitev dovoljenja"
 msgid "Failed to load"
 msgstr "Nalaganje ni uspelo"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "Pasice ni bilo mogoče naložiti"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "Neuspešno nalaganje zgodovine"
 
@@ -1166,7 +1158,7 @@ msgstr "Neuspešna objava komentarja"
 msgid "Failed to reset prompt"
 msgstr "Neuspešna ponastavitev poziva"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Failed to revoke permission"
 msgstr "Neuspešen preklic dovoljenja"
 
@@ -1186,7 +1178,7 @@ msgstr "Neuspešno shranjevanje poziva"
 msgid "Failed to update apps"
 msgstr "Posodabljanje aplikacij ni uspelo"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "Neuspešna posodobitev pasice"
 
@@ -1194,12 +1186,12 @@ msgstr "Neuspešna posodobitev pasice"
 msgid "Failed to update comment"
 msgstr "Neuspešna posodobitev komentarja"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:329
 msgid "Failed to update default"
 msgstr "Neuspešna posodobitev privzete vrednosti"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:318
+#: src/routes/_authenticated/app/$appId.tsx:307
 msgid "Failed to update preference"
 msgstr "Neuspešna posodobitev nastavitve"
 
@@ -1215,7 +1207,7 @@ msgstr "Posodobitev spremljanja ni uspela"
 msgid "Failed to upload attachment"
 msgstr "Neuspešno nalaganje priponke"
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:639
 msgid "File:"
 msgstr "Datoteka:"
 
@@ -1225,7 +1217,7 @@ msgstr "Datoteka:"
 msgid "Files"
 msgstr "Datoteke"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:202
 msgid "Fingerprint"
 msgstr "Prstni odtis"
 
@@ -1259,7 +1251,7 @@ msgstr "Prijatelji"
 msgid "From"
 msgstr "Od"
 
-#: src/features/apps/index.tsx:506
+#: src/features/apps/index.tsx:499
 msgid "From the directory"
 msgstr "Iz imenika"
 
@@ -1276,15 +1268,15 @@ msgstr "Iz teme"
 msgid "Go back"
 msgstr "Nazaj"
 
-#: src/routes/_authenticated/app/$appId.tsx:529
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Dodeli"
 
-#: src/routes/_authenticated/app/$appId.tsx:534
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Dodeli dovoljenje"
 
-#: src/routes/_authenticated/app/$appId.tsx:485
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Granting permission..."
 msgstr "Dodeljevanje dovoljenja..."
 
@@ -1301,11 +1293,11 @@ msgstr "Združi po"
 msgid "Group: {0}"
 msgstr "Skupina: {0}"
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Handler"
 msgstr "Upravljavec"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "Zgodovina"
 
@@ -1320,7 +1312,7 @@ msgstr "Domov"
 msgid "Hot"
 msgstr "Vroče"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "HTTP paths"
 msgstr "Poti HTTP"
 
@@ -1328,7 +1320,7 @@ msgstr "Poti HTTP"
 msgid "ID"
 msgstr "ID"
 
-#: src/routes/_authenticated/app/$appId.tsx:205
+#: src/routes/_authenticated/app/$appId.tsx:194
 msgid "Identity"
 msgstr "Identiteta"
 
@@ -1355,32 +1347,28 @@ msgstr "Avatar z začetnicami za {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Install"
 msgstr "Namesti"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:566
+#: src/features/apps/index.tsx:559
 msgid "Install {0}?"
 msgstr "Namesti {0}?"
 
-#: src/features/apps/index.tsx:399
-msgid "Install apps from the market or upload your own"
-msgstr "Namestite aplikacije s tržnice ali naložite svoje"
-
-#: src/features/apps/index.tsx:339
-#: src/features/apps/index.tsx:642
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:635
 msgid "Install from file"
 msgstr "Namesti iz datoteke"
 
-#: src/features/apps/index.tsx:335
-#: src/features/apps/index.tsx:600
+#: src/features/apps/index.tsx:325
+#: src/features/apps/index.tsx:593
 msgid "Install from publisher"
 msgstr "Namesti od izdajatelja"
 
-#: src/features/apps/index.tsx:382
+#: src/features/apps/index.tsx:376
 msgid "Installed apps"
 msgstr "Nameščene aplikacije"
 
@@ -1390,9 +1378,9 @@ msgstr "Nameščene aplikacije"
 #: src/features/apps/index.tsx:162
 #: src/features/apps/index.tsx:182
 #: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Installing..."
 msgstr "Nameščanje..."
 
@@ -1495,10 +1483,6 @@ msgstr "Uspešna odjava"
 msgid "Logging out…"
 msgstr "Odjavljanje…"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
-msgid "Manage capabilities granted to this application"
-msgstr "Upravljajte zmožnosti, dodeljene tej aplikaciji"
-
 #: ../../../lib/web/src/components/notification-category-button.tsx:127
 msgid "Manage categories"
 msgstr "Upravljanje kategorij"
@@ -1573,7 +1557,7 @@ msgstr "Premaknjeno"
 msgid "Moved {field}"
 msgstr "Premaknjeno {field}"
 
-#: src/features/routing/routing-table.tsx:107
+#: src/features/routing/routing-table.tsx:102
 msgid "Multiple apps declare this resource"
 msgstr "Več aplikacij prijavi ta vir"
 
@@ -1633,11 +1617,11 @@ msgstr "Še ni dejavnosti"
 msgid "No apps could be updated."
 msgstr "Nobene aplikacije ni bilo mogoče posodobiti."
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:392
 msgid "No apps installed"
 msgstr "Nameščenih aplikacij ni"
 
-#: src/features/routing/routing-table.tsx:59
+#: src/features/routing/routing-table.tsx:54
 msgid "No classes configured."
 msgstr "Razredi niso nastavljeni."
 
@@ -1645,11 +1629,11 @@ msgstr "Razredi niso nastavljeni."
 msgid "No comments yet"
 msgstr "Še ni komentarjev"
 
-#: src/features/apps/index.tsx:493
+#: src/features/apps/index.tsx:486
 msgid "No description"
 msgstr "Brez opisa"
 
-#: src/features/apps/index.tsx:431
+#: src/features/apps/index.tsx:424
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Nobena razvojna aplikacija ne ustreza nizu \"{searchQuery}\""
 
@@ -1661,11 +1645,11 @@ msgstr "Še ni iger"
 msgid "No groups available"
 msgstr "Ni razpoložljivih skupin"
 
-#: src/features/apps/index.tsx:524
+#: src/features/apps/index.tsx:517
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "V imeniku ni nameščivih aplikacij, ki ustrezajo nizu \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:398
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Nobena nameščena aplikacija ne ustreza nizu \"{searchQuery}\""
 
@@ -1673,12 +1657,12 @@ msgstr "Nobena nameščena aplikacija ne ustreza nizu \"{searchQuery}\""
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Trenutno ni mogoče ustvariti nobenih vrst elementov. Najprej ustvarite zahtevane nadrejene elemente."
 
-#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:516
 msgid "No matches in directory"
 msgstr "V imeniku ni zadetkov"
 
-#: src/features/apps/index.tsx:404
-#: src/features/apps/index.tsx:430
+#: src/features/apps/index.tsx:397
+#: src/features/apps/index.tsx:423
 msgid "No matching apps"
 msgstr "Ni ujemajočih aplikacij"
 
@@ -1686,7 +1670,7 @@ msgstr "Ni ujemajočih aplikacij"
 msgid "No matching objects"
 msgstr "Ni ujemajočih objektov"
 
-#: src/features/routing/routing-table.tsx:63
+#: src/features/routing/routing-table.tsx:58
 msgid "No paths configured."
 msgstr "Poti niso nastavljene."
 
@@ -1695,11 +1679,11 @@ msgstr "Poti niso nastavljene."
 msgid "No people found"
 msgstr "Oseb ni mogoče najti"
 
-#: src/routes/_authenticated/app/$appId.tsx:588
+#: src/routes/_authenticated/app/$appId.tsx:573
 msgid "No permissions granted"
 msgstr "Nobenih dovoljenj ni dodeljenih"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Tej aplikaciji ni dodeljenih dovoljenj"
 
@@ -1707,7 +1691,7 @@ msgstr "Tej aplikaciji ni dodeljenih dovoljenj"
 msgid "No places found"
 msgstr "Krajev ni mogoče najti"
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:469
 msgid "No recommendations available"
 msgstr "Priporočila niso na voljo"
 
@@ -1720,7 +1704,7 @@ msgstr "Ni najdenih rezultatov"
 msgid "No results found."
 msgstr "Ni najdenih rezultatov."
 
-#: src/features/routing/routing-table.tsx:61
+#: src/features/routing/routing-table.tsx:56
 msgid "No services configured."
 msgstr "Storitve niso nastavljene."
 
@@ -1787,7 +1771,7 @@ msgstr "Ni najdeno"
 msgid "Not set"
 msgstr "Ni nastavljeno"
 
-#: src/routes/_authenticated/app/$appId.tsx:360
+#: src/routes/_authenticated/app/$appId.tsx:349
 msgid "Not versioned"
 msgstr "Brez različic"
 
@@ -1888,11 +1872,11 @@ msgstr "Geslo-ključi"
 msgid "Passkeys are not available in this browser"
 msgstr "Geslo-ključi v tem brskalniku niso na voljo"
 
-#: src/features/apps/index.tsx:604
+#: src/features/apps/index.tsx:597
 msgid "Paste the install link:"
 msgstr "Prilepite povezavo za namestitev:"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Path"
 msgstr "Pot"
 
@@ -1913,16 +1897,16 @@ msgstr "Vzorec (regex)"
 msgid "People"
 msgstr "Ljudje"
 
-#: src/routes/_authenticated/app/$appId.tsx:486
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Permission granted"
 msgstr "Dovoljenje dodeljeno"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:456
 msgid "Permission revoked"
 msgstr "Dovoljenje preklicano"
 
-#: src/routes/_authenticated/app/$appId.tsx:152
-#: src/routes/_authenticated/app/$appId.tsx:521
+#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:510
 msgid "Permissions"
 msgstr "Dovoljenja"
 
@@ -1956,7 +1940,7 @@ msgstr "Objave in komentarji"
 msgid "Preference updated"
 msgstr "Nastavitev posodobljena"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Preferred version"
 msgstr "Prednostna različica"
 
@@ -1982,7 +1966,7 @@ msgstr "Poziv shranjen"
 msgid "Properties"
 msgstr "Lastnosti"
 
-#: src/routes/_authenticated/app/$appId.tsx:227
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Provided classes"
 msgstr "Ponujeni razredi"
 
@@ -2003,7 +1987,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Znova registrirajte svoje ključe za dostop na tem strežniku"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:452
+#: src/features/apps/index.tsx:445
 msgid "Recommended"
 msgstr "Priporočeno"
 
@@ -2137,8 +2121,8 @@ msgid "Retry"
 msgstr "Poskusi znova"
 
 #: ../../../lib/web/src/components/options-menu.tsx:247
-#: src/routes/_authenticated/app/$appId.tsx:641
-#: src/routes/_authenticated/app/$appId.tsx:644
+#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:629
 msgid "Revoke"
 msgstr "Prekliči"
 
@@ -2146,11 +2130,11 @@ msgstr "Prekliči"
 msgid "Revoke access"
 msgstr "Prekliči dostop"
 
-#: src/routes/_authenticated/app/$appId.tsx:651
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission"
 msgstr "Prekliči dovoljenje"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:634
 msgid "Revoke permission?"
 msgstr "Prekliči dovoljenje?"
 
@@ -2158,7 +2142,7 @@ msgstr "Prekliči dovoljenje?"
 msgid "Revoke RSS access?"
 msgstr "Ali želite preklicati dostop RSS?"
 
-#: src/routes/_authenticated/app/$appId.tsx:466
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Revoking permission..."
 msgstr "Preklic dovoljenja..."
 
@@ -2189,7 +2173,7 @@ msgstr "Sobota"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2200,8 +2184,8 @@ msgstr "Shrani"
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:316
-#: src/routes/_authenticated/app/$appId.tsx:338
+#: src/routes/_authenticated/app/$appId.tsx:305
+#: src/routes/_authenticated/app/$appId.tsx:327
 msgid "Saving..."
 msgstr "Shranjevanje..."
 
@@ -2212,11 +2196,11 @@ msgstr "Shranjevanje..."
 msgid "Search"
 msgstr "Iskanje"
 
-#: src/features/apps/index.tsx:371
+#: src/features/apps/index.tsx:368
 msgid "Search apps"
 msgstr "Išči aplikacije"
 
-#: src/features/apps/index.tsx:370
+#: src/features/apps/index.tsx:367
 msgid "Search apps..."
 msgstr "Iskanje aplikacij..."
 
@@ -2272,10 +2256,6 @@ msgstr "Iskanje..."
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts:16
 msgid "Select"
 msgstr "Izberi"
-
-#: src/routes/_authenticated/app/$appId.tsx:536
-msgid "Select a capability to grant to {appName}."
-msgstr "Izberite zmožnost za dodelitev aplikaciji {appName}."
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 msgid "Select a field"
@@ -2354,7 +2334,7 @@ msgstr "Napaka strežnika"
 msgid "Server rules"
 msgstr "Pravila strežnika"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "Storitev"
 
@@ -2471,14 +2451,14 @@ msgstr "Nedelja"
 msgid "Switch to view 1-9"
 msgstr "Preklopi na pogled 1-9"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "Sistem"
 
-#: src/features/routing/routing-table.tsx:79
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/features/routing/routing-table.tsx:74
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "System default"
 msgstr "Sistemska privzeta vrednost"
 
@@ -2499,7 +2479,7 @@ msgstr "Oznaka sme imeti največ 50 znakov"
 msgid "Tags"
 msgstr "Oznake"
 
-#: src/routes/_authenticated/app/$appId.tsx:224
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "Technical capabilities"
 msgstr "Tehnične zmogljivosti"
 
@@ -2545,7 +2525,7 @@ msgstr "Zahteva za mikrofon ni dobila odgovora"
 msgid "The passkey request was not answered"
 msgstr "Zahteva za geslo-ključ ni dobila odgovora"
 
-#: src/routes/_authenticated/app/$appId.tsx:132
+#: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "Zahtevane aplikacije ni bilo mogoče najti."
 
@@ -2557,7 +2537,7 @@ msgstr "Zahtevane vsebine ni bilo mogoče najti."
 msgid "The server returned a web page instead of data."
 msgstr "Strežnik je vrnil spletno stran namesto podatkov."
 
-#: src/routes/_authenticated/app/$appId.tsx:361
+#: src/routes/_authenticated/app/$appId.tsx:350
 msgid "This app does not have version management"
 msgstr "Ta aplikacija nima upravljanja različic"
 
@@ -2574,7 +2554,7 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "To bo trajno izbrisalo igro in njen klepet. Tega dejanja ni mogoče razveljaviti."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:650
+#: src/routes/_authenticated/app/$appId.tsx:635
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "S tem boste {appName} odvzeli dovoljenje »{0}«. Aplikacija morda ne bo več delovala pravilno."
 
@@ -2617,8 +2597,8 @@ msgstr "Preveč zahtev"
 msgid "Top"
 msgstr "Vrh"
 
-#: src/features/apps/index.tsx:742
-#: src/routes/_authenticated/app/$appId.tsx:380
+#: src/features/apps/index.tsx:735
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Steza"
 
@@ -2664,7 +2644,7 @@ msgstr "Vnesi za iskanje..."
 msgid "Unable to connect to remote server"
 msgstr "Povezava z oddaljenim strežnikom ni mogoča"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:464
 msgid "Unable to connect to the recommendations service"
 msgstr "Ni mogoče vzpostaviti povezave s storitvijo priporočil"
 
@@ -2686,7 +2666,7 @@ msgid "Unassigned"
 msgstr "Nedodeljeno"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:463
 msgid "Unavailable"
 msgstr "Ni na voljo"
 
@@ -2699,7 +2679,7 @@ msgstr "Nepričakovana napaka API"
 msgid "United States"
 msgstr "Združene države"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2717,11 +2697,11 @@ msgstr "Odjavi se"
 msgid "Untitled"
 msgstr "Brez naslova"
 
-#: src/features/apps/index.tsx:738
+#: src/features/apps/index.tsx:731
 msgid "Update"
 msgstr "Posodobi"
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Update all"
 msgstr "Posodobi vse"
 
@@ -2743,7 +2723,7 @@ msgstr "Posodobljeno {field}"
 msgid "Updating apps..."
 msgstr "Posodabljanje aplikacij..."
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Updating..."
 msgstr "Posodabljanje..."
 
@@ -2756,7 +2736,7 @@ msgstr "Naloži"
 msgid "Upload progress"
 msgstr "Potek nalaganja"
 
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:150
 msgid "Use system default"
 msgstr "Uporabi sistemsko privzeto"
 
@@ -2787,7 +2767,7 @@ msgstr "Preveri"
 msgid "Verify email address"
 msgstr "Preveri e-poštni naslov"
 
-#: src/routes/_authenticated/app/$appId.tsx:394
+#: src/routes/_authenticated/app/$appId.tsx:383
 msgid "Version"
 msgstr "Različica"
 
@@ -2796,15 +2776,15 @@ msgstr "Različica"
 msgid "Version {0}"
 msgstr "Različica {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#: src/routes/_authenticated/app/$appId.tsx:306
 msgid "Version changed"
 msgstr "Različica spremenjena"
 
-#: src/routes/_authenticated/app/$appId.tsx:413
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "Version management"
 msgstr "Upravljanje različic"
 
-#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:150
 msgid "Versions"
 msgstr "Različice"
 
@@ -2869,7 +2849,7 @@ msgstr "Vaš račun je bil preseljen sem iz {source}. Dokler ga tam ne izbrišet
 msgid "Your attachments will be lost."
 msgstr "Vaše priloge bodo izgubljene."
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Your preference"
 msgstr "Tvoja izbira"
 
@@ -2881,6 +2861,6 @@ msgstr "Vaše besedilo in priloge bodo izgubljeni."
 msgid "Your text will be lost."
 msgstr "Vaše besedilo bo izgubljeno."
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Your version"
 msgstr "Tvoja različica"

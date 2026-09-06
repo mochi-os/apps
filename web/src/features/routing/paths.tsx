@@ -15,14 +15,13 @@ export function RoutingPaths() {
   const { data, isLoading, error, refetch, handleUserChange, handleSystemChange } = useRoutingData()
 
   const paths = data?.paths ?? {}
-  const isAdmin = data?.is_admin ?? false
+  const isAdmin = data?.administrator ?? false
 
   return (
     <>
       <PageHeader
         title={t`Paths`}
         icon={<FolderTree className='size-4 md:size-5' />}
-        description={t`Configure which app handles each URL path.`}
       />
       <Main>
         {isLoading ? (

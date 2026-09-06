@@ -6,28 +6,21 @@
 import { requestHelpers } from '@mochi/web'
 import type { AxiosProgressEvent } from 'axios'
 import endpoints from '@/api/endpoints'
-import type { InstalledApp, MarketApp, AppInfo, Track } from '@/api/types/apps'
+import type { InstalledApp, MarketApp, AppInfo, Track, Update } from '@/api/types/apps'
 
 const NO_TOAST = { mochi: { showGlobalErrorToast: false } } as const
 
 const listInstalledApps = async (): Promise<{
   installed: InstalledApp[]
   development: InstalledApp[]
-  can_install: boolean
+  install: { allowed: boolean }
 }> => {
   const response = await requestHelpers.get<{
     installed: InstalledApp[]
     development: InstalledApp[]
-    can_install: boolean
+    install: { allowed: boolean }
   }>(endpoints.apps.list)
   return response
-}
-
-const getApp = async (id: string): Promise<InstalledApp> => {
-  const response = await requestHelpers.get<{ app: InstalledApp }>(
-    endpoints.apps.get(id)
-  )
-  return response.app
 }
 
 const getMarketApps = async (): Promise<MarketApp[]> => {
@@ -38,33 +31,29 @@ const getMarketApps = async (): Promise<MarketApp[]> => {
 }
 
 const getAppInfo = async (
-  id: string,
-  url?: string
+  id: string
 ): Promise<{
   app: AppInfo
   fingerprint: string
   tracks: Track[]
-  peer?: string
 }> => {
   const response = await requestHelpers.get<{
     app: AppInfo
     fingerprint: string
     tracks: Track[]
-    peer?: string
-  }>(endpoints.apps.information, { params: { id, url } })
+  }>(endpoints.apps.information, { params: { id } })
   return response
 }
 
 const installFromPublisher = async (
   id: string,
-  version: string,
-  peer?: string
+  version: string
 ): Promise<{ installed: boolean; id: string; version: string }> => {
-  const response = await requestHelpers.get<{
+  const response = await requestHelpers.post<{
     installed: boolean
     id: string
     version: string
-  }>(endpoints.apps.installPublisher, { params: { id, version, peer } })
+  }>(endpoints.apps.installPublisher, { id, version })
   return response
 }
 
@@ -95,12 +84,12 @@ const installById = async (
   version: string
   name: string
 }> => {
-  const response = await requestHelpers.get<{
+  const response = await requestHelpers.post<{
     installed: boolean
     id: string
     version: string
     name: string
-  }>(endpoints.apps.installId, { params: { id } })
+  }>(endpoints.apps.installId, { id })
   return response
 }
 
@@ -120,24 +109,8 @@ const searchDirectory = async (
   return response.apps
 }
 
-const getUpdates = async (): Promise<{
-  updates: {
-    id: string
-    name: string
-    current: string
-    available: string
-    publisher: string
-  }[]
-}> => {
-  const response = await requestHelpers.get<{
-    updates: {
-      id: string
-      name: string
-      current: string
-      available: string
-      publisher: string
-    }[]
-  }>(endpoints.apps.updates)
+const getUpdates = async (): Promise<{ updates: Update[] }> => {
+  const response = await requestHelpers.get<{ updates: Update[] }>(endpoints.apps.updates)
   return response
 }
 
@@ -145,11 +118,11 @@ const upgrade = async (
   id: string,
   version: string
 ): Promise<{ upgraded: boolean; id: string; version: string }> => {
-  const response = await requestHelpers.get<{
+  const response = await requestHelpers.post<{
     upgraded: boolean
     id: string
     version: string
-  }>(endpoints.apps.upgrade, { params: { id, version } })
+  }>(endpoints.apps.upgrade, { id, version })
   return response
 }
 
@@ -166,6 +139,7 @@ const cleanup = async (): Promise<{ removed: number }> => {
 export interface RoutingApp {
   id: string
   name: string
+  development: boolean
 }
 
 export interface RoutingResource {
@@ -178,7 +152,7 @@ export interface RoutingData {
   classes: Record<string, RoutingResource>
   services: Record<string, RoutingResource>
   paths: Record<string, RoutingResource>
-  is_admin: boolean
+  administrator: boolean
 }
 
 const getRouting = async (): Promise<RoutingData> => {
@@ -214,7 +188,6 @@ const setSystemRouting = async (
 
 const appsApi = {
   listInstalled: listInstalledApps,
-  get: getApp,
   getMarket: getMarketApps,
   getInfo: getAppInfo,
   installFromPublisher,

@@ -46,7 +46,7 @@ msgid "{0, plural, one {Removed # unused version} other {Removed # unused versio
 msgstr "{0, plural, one {# பயன்படுத்தப்படாத பதிப்பு அகற்றப்பட்டது} other {# பயன்படுத்தப்படாத பதிப்புகள் அகற்றப்பட்டன}}"
 
 #. placeholder {0}: app.name
-#: src/features/routing/routing-table.tsx:23
+#: src/features/routing/routing-table.tsx:18
 msgid "{0} (development)"
 msgstr "{0} (வளர்ச்சி)"
 
@@ -100,11 +100,11 @@ msgstr "{totalCount, plural, one {# உருப்படி} other {# உரு
 msgid "{totalDescendants, plural, one {# reply} other {+# more replies}}"
 msgstr "{totalDescendants, plural, one {# பதில்} other {+# கூடுதல் பதில்கள்}}"
 
-#: src/routes/_authenticated/app/$appId.tsx:385
+#: src/routes/_authenticated/app/$appId.tsx:374
 msgid "{track} (default, version {version})"
 msgstr "{track} (இயல்புநிலை, பதிப்பு {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:386
+#: src/routes/_authenticated/app/$appId.tsx:375
 msgid "{track} (version {version})"
 msgstr "{track} (பதிப்பு {version})"
 
@@ -208,7 +208,7 @@ msgstr "விருப்பம் சேர்"
 msgid "Add tag..."
 msgstr "டேக் சேர்..."
 
-#: src/features/apps/index.tsx:653
+#: src/features/apps/index.tsx:646
 msgid "Add to directory"
 msgstr "கோப்பகத்திற்குச் சேர்"
 
@@ -270,12 +270,12 @@ msgid "Anything subscribed to this feed will stop receiving it. You can copy a n
 msgstr "இந்த ஊட்டத்திற்கு குழுசேர்ந்த அனைத்தும் அதைப் பெறுவதை நிறுத்தும். பிறகு நீங்கள் புதிய URL ஐ நகலெடுக்கலாம்."
 
 #: src/features/apps/index.tsx:164
-#: src/routes/_authenticated/app/$appId.tsx:98
+#: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "பயன்பாடு"
 
+#: src/features/apps/index.tsx:297
 #: src/features/apps/index.tsx:307
-#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "பயன்பாட்டு செயல்கள்"
 
@@ -291,19 +291,19 @@ msgstr "பயன்பாடு நிறுவப்பட்டது"
 msgid "App installed successfully"
 msgstr "ஆப் வெற்றிகரமாக நிறுவப்பட்டது"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:131
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:130
 msgid "App not found"
 msgstr "பயன்பாடு கிடைக்கவில்லை"
 
-#: src/routes/_authenticated/app/$appId.tsx:208
+#: src/routes/_authenticated/app/$appId.tsx:197
 msgid "Application ID"
 msgstr "பயன்பாட்டு ID"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:355
 msgid "Apps"
 msgstr "பயன்பாடுகள்"
 
@@ -370,7 +370,7 @@ msgstr "கிடைக்கும் பதிப்பு:"
 msgid "Available versions:"
 msgstr "கிடைக்கும் பதிப்புகள்:"
 
-#: src/features/apps/index.tsx:451
+#: src/features/apps/index.tsx:444
 msgid "Available, but not installed"
 msgstr "கிடைக்கிறது, ஆனால் நிறுவப்படவில்லை"
 
@@ -386,9 +386,9 @@ msgstr "{name} இன் அவதாரம்"
 msgid "Back"
 msgstr "பின்"
 
-#: src/routes/_authenticated/app/$appId.tsx:106
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:144
+#: src/routes/_authenticated/app/$appId.tsx:105
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:143
 msgid "Back to apps"
 msgstr "பயன்பாடுகளுக்கு திரும்பு"
 
@@ -397,16 +397,16 @@ msgstr "பயன்பாடுகளுக்கு திரும்பு"
 msgid "Back to home"
 msgstr "முகப்புக்குத் திரும்பு"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "பேனர்"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "பேனர் அகற்றப்பட்டது"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "பேனர் புதுப்பிக்கப்பட்டது"
 
@@ -465,10 +465,10 @@ msgstr "கேமரா கிடைக்கவில்லை"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:575
-#: src/features/apps/index.tsx:616
-#: src/features/apps/index.tsx:666
-#: src/routes/_authenticated/app/$appId.tsx:565
+#: src/features/apps/index.tsx:568
+#: src/features/apps/index.tsx:609
+#: src/features/apps/index.tsx:659
+#: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "ரத்துசெய்"
 
@@ -525,7 +525,7 @@ msgstr "பக்கப்பட்டியில் இருந்து ஒ�
 msgid "Choose language"
 msgstr "மொழியைத் தேர்ந்தெடுக்கவும்"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Class"
 msgstr "வகுப்பு"
 
@@ -538,16 +538,16 @@ msgstr "வகுப்பு வழிசெலுத்தல்"
 msgid "Classes"
 msgstr "வகுப்புகள்"
 
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Clean up unused versions"
 msgstr "பயன்படுத்தப்படாத பதிப்புகளை சுத்தம் செய்"
 
 #: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Cleaning up..."
 msgstr "சுத்தம் செய்கிறது..."
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -658,18 +658,6 @@ msgstr "விருப்ப அமைப்புகளை உள்ளமை�
 msgid "Configure view settings"
 msgstr "காட்சி அமைப்புகளை உள்ளமைக்கவும்"
 
-#: src/features/routing/paths.tsx:25
-msgid "Configure which app handles each URL path."
-msgstr "ஒவ்வொரு URL பாதையையும் எந்த பயன்பாடு கையாளுகிறது என்பதை உள்ளமைக்கவும்."
-
-#: src/features/routing/classes.tsx:25
-msgid "Configure which app handles entities of each type."
-msgstr "ஒவ்வொரு வகை பிரிவுகளையும் எந்த பயன்பாடு கையாளுகிறது என்பதை உள்ளமைக்கவும்."
-
-#: src/features/routing/services.tsx:25
-msgid "Configure which app handles inter-app service calls."
-msgstr "பயன்பாடுகளுக்கு இடையேயான சேவை அழைப்புகளை எந்த பயன்பாடு கையாளுகிறது என்பதை உள்ளமைக்கவும்."
-
 #: ../../../lib/web/src/components/place-picker.tsx:146
 #: ../../../lib/web/src/components/travelling-picker.tsx:296
 msgid "Confirm"
@@ -777,7 +765,7 @@ msgstr "உருவாக்குகிறது..."
 msgid "Current location"
 msgstr "தற்போதைய இடம்"
 
-#: src/routes/_authenticated/app/$appId.tsx:218
+#: src/routes/_authenticated/app/$appId.tsx:207
 msgid "Current version"
 msgstr "தற்போதைய பதிப்பு"
 
@@ -798,7 +786,7 @@ msgstr "தரவு முரண்பாடு"
 msgid "Date"
 msgstr "தேதி"
 
-#: src/features/routing/routing-table.tsx:77
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "அறிவித்தவர்"
 
@@ -807,8 +795,8 @@ msgid "Decline"
 msgstr "மறு"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
-#: src/features/routing/routing-table.tsx:131
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:126
+#: src/features/routing/routing-table.tsx:150
 msgid "Default"
 msgstr "இயல்புநிலை"
 
@@ -816,15 +804,15 @@ msgstr "இயல்புநிலை"
 msgid "Default AI account"
 msgstr "இயல்புநிலை AI கணக்கு"
 
-#: src/routes/_authenticated/app/$appId.tsx:441
+#: src/routes/_authenticated/app/$appId.tsx:430
 msgid "Default for all users"
 msgstr "எல்லா பயனர்களுக்கும் இயல்புநிலை"
 
-#: src/routes/_authenticated/app/$appId.tsx:440
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "எல்லா பயனர்களுக்கும் இயல்புநிலை (பதிப்பு {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:339
+#: src/routes/_authenticated/app/$appId.tsx:328
 msgid "Default for all users updated"
 msgstr "அனைத்து பயனர்களுக்கான இயல்புநிலை புதுப்பிக்கப்பட்டது"
 
@@ -832,12 +820,12 @@ msgstr "அனைத்து பயனர்களுக்கான இயல�
 msgid "Default sort"
 msgstr "இயல்புநிலை வரிசை"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:414
 msgid "Default track"
 msgstr "இயல்புநிலை பாதை"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:413
 msgid "Default track (version {0})"
 msgstr "இயல்புநிலை பாதை (பதிப்பு {0})"
 
@@ -919,7 +907,7 @@ msgstr "இறங்குவரிசை"
 msgid "Description"
 msgstr "விளக்கம்"
 
-#: src/routes/_authenticated/app/$appId.tsx:150
+#: src/routes/_authenticated/app/$appId.tsx:149
 msgid "Details"
 msgstr "விவரங்கள்"
 
@@ -938,7 +926,7 @@ msgstr "விவரங்கள் பலகம்"
 msgid "Detect from web browser"
 msgstr "வலை உலாவியிலிருந்து கண்டறி"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:419
 msgid "Development apps"
 msgstr "மேம்பாட்டு பயன்பாடுகள்"
 
@@ -1044,11 +1032,11 @@ msgstr "மின்னஞ்சல்"
 msgid "Email code"
 msgstr "மின்னஞ்சல் குறியீடு"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:224
 msgid "Enabled services"
 msgstr "இயக்கப்பட்ட சேவைகள்"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "பேனர் உரையை உள்ளிடவும் (மார்க்டவுன் ஆதரிக்கப்படுகிறது)..."
 
@@ -1125,7 +1113,7 @@ msgstr "இணைப்பை நீக்க முடியவில்லை"
 msgid "Failed to get RSS token"
 msgstr "RSS டோக்கனைப் பெற முடியவில்லை"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:476
 msgid "Failed to grant permission"
 msgstr "அனுமதியை வழங்க முடியவில்லை"
 
@@ -1133,7 +1121,11 @@ msgstr "அனுமதியை வழங்க முடியவில்ல�
 msgid "Failed to load"
 msgstr "ஏற்ற முடியவில்லை"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "பேனரை ஏற்ற முடியவில்லை"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "வரலாற்றை ஏற்ற முடியவில்லை"
 
@@ -1166,7 +1158,7 @@ msgstr "கருத்தைப் பதிவிட முடியவில�
 msgid "Failed to reset prompt"
 msgstr "ப்ராம்ப்டை மீட்டமைக்க முடியவில்லை"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Failed to revoke permission"
 msgstr "அனுமதியை திரும்பப் பெற முடியவில்லை"
 
@@ -1186,7 +1178,7 @@ msgstr "ப்ராம்ப்டை சேமிக்க முடியவ�
 msgid "Failed to update apps"
 msgstr "ஆப்களைப் புதுப்பிக்க முடியவில்லை"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "பேனரைப் புதுப்பிக்க முடியவில்லை"
 
@@ -1194,12 +1186,12 @@ msgstr "பேனரைப் புதுப்பிக்க முடிய�
 msgid "Failed to update comment"
 msgstr "கருத்தைப் புதுப்பிக்க முடியவில்லை"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:329
 msgid "Failed to update default"
 msgstr "இயல்புநிலையைப் புதுப்பிக்க முடியவில்லை"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:318
+#: src/routes/_authenticated/app/$appId.tsx:307
 msgid "Failed to update preference"
 msgstr "விருப்பத்தைப் புதுப்பிக்க முடியவில்லை"
 
@@ -1215,7 +1207,7 @@ msgstr "கண்காணிப்பைப் புதுப்பிக்�
 msgid "Failed to upload attachment"
 msgstr "இணைப்பைப் பதிவேற்ற முடியவில்லை"
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:639
 msgid "File:"
 msgstr "கோப்பு:"
 
@@ -1225,7 +1217,7 @@ msgstr "கோப்பு:"
 msgid "Files"
 msgstr "கோப்புகள்"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:202
 msgid "Fingerprint"
 msgstr "கைரேகை"
 
@@ -1259,7 +1251,7 @@ msgstr "நண்பர்கள்"
 msgid "From"
 msgstr "இருந்து"
 
-#: src/features/apps/index.tsx:506
+#: src/features/apps/index.tsx:499
 msgid "From the directory"
 msgstr "கோப்பகத்திலிருந்து"
 
@@ -1276,15 +1268,15 @@ msgstr "தீமிலிருந்து"
 msgid "Go back"
 msgstr "திரும்பு"
 
-#: src/routes/_authenticated/app/$appId.tsx:529
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "வழங்கு"
 
-#: src/routes/_authenticated/app/$appId.tsx:534
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "அனுமதி வழங்கு"
 
-#: src/routes/_authenticated/app/$appId.tsx:485
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Granting permission..."
 msgstr "அனுமதியை வழங்குகிறது..."
 
@@ -1301,11 +1293,11 @@ msgstr "இதன்படி தொகுக்கவும்"
 msgid "Group: {0}"
 msgstr "குழு: {0}"
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Handler"
 msgstr "கையாளுபவர்"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "வரலாறு"
 
@@ -1320,7 +1312,7 @@ msgstr "முகப்பு"
 msgid "Hot"
 msgstr "பிரபலமான"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "HTTP paths"
 msgstr "HTTP பாதைகள்"
 
@@ -1328,7 +1320,7 @@ msgstr "HTTP பாதைகள்"
 msgid "ID"
 msgstr "ஐடி"
 
-#: src/routes/_authenticated/app/$appId.tsx:205
+#: src/routes/_authenticated/app/$appId.tsx:194
 msgid "Identity"
 msgstr "அடையாளம்"
 
@@ -1355,32 +1347,28 @@ msgstr "{name} இன் முதலெழுத்து அவதாரம்
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Install"
 msgstr "நிறுவு"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:566
+#: src/features/apps/index.tsx:559
 msgid "Install {0}?"
 msgstr "{0} ஐ நிறுவவா?"
 
-#: src/features/apps/index.tsx:399
-msgid "Install apps from the market or upload your own"
-msgstr "மார்க்கெட்டிலிருந்து ஆப்களை நிறுவவும் அல்லது உங்களுடையதைப் பதிவேற்றவும்"
-
-#: src/features/apps/index.tsx:339
-#: src/features/apps/index.tsx:642
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:635
 msgid "Install from file"
 msgstr "கோப்பிலிருந்து நிறுவு"
 
-#: src/features/apps/index.tsx:335
-#: src/features/apps/index.tsx:600
+#: src/features/apps/index.tsx:325
+#: src/features/apps/index.tsx:593
 msgid "Install from publisher"
 msgstr "வெளியீட்டாளரிடமிருந்து நிறுவு"
 
-#: src/features/apps/index.tsx:382
+#: src/features/apps/index.tsx:376
 msgid "Installed apps"
 msgstr "நிறுவப்பட்ட ஆப்கள்"
 
@@ -1390,9 +1378,9 @@ msgstr "நிறுவப்பட்ட ஆப்கள்"
 #: src/features/apps/index.tsx:162
 #: src/features/apps/index.tsx:182
 #: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Installing..."
 msgstr "நிறுவுகிறது..."
 
@@ -1495,10 +1483,6 @@ msgstr "வெற்றிகரமாக வெளியேறியது"
 msgid "Logging out…"
 msgstr "வெளியேறுகிறது…"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
-msgid "Manage capabilities granted to this application"
-msgstr "இந்த பயன்பாட்டுக்கு வழங்கப்பட்ட திறன்களை நிர்வகிக்கவும்"
-
 #: ../../../lib/web/src/components/notification-category-button.tsx:127
 msgid "Manage categories"
 msgstr "வகைகளை நிர்வகி"
@@ -1573,7 +1557,7 @@ msgstr "நகர்த்தப்பட்டது"
 msgid "Moved {field}"
 msgstr "{field} நகர்த்தப்பட்டது"
 
-#: src/features/routing/routing-table.tsx:107
+#: src/features/routing/routing-table.tsx:102
 msgid "Multiple apps declare this resource"
 msgstr "பல ஆப்கள் இந்த ஆதாரத்தை அறிவிக்கின்றன"
 
@@ -1633,11 +1617,11 @@ msgstr "செயல்பாடு இன்னும் இல்லை"
 msgid "No apps could be updated."
 msgstr "எந்த ஆப்களையும் புதுப்பிக்க முடியவில்லை."
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:392
 msgid "No apps installed"
 msgstr "ஆப்கள் எதுவும் நிறுவப்படவில்லை"
 
-#: src/features/routing/routing-table.tsx:59
+#: src/features/routing/routing-table.tsx:54
 msgid "No classes configured."
 msgstr "எந்த வகுப்புகளும் கட்டமைக்கப்படவில்லை."
 
@@ -1645,11 +1629,11 @@ msgstr "எந்த வகுப்புகளும் கட்டமைக�
 msgid "No comments yet"
 msgstr "கருத்துகள் இன்னும் இல்லை"
 
-#: src/features/apps/index.tsx:493
+#: src/features/apps/index.tsx:486
 msgid "No description"
 msgstr "விளக்கம் இல்லை"
 
-#: src/features/apps/index.tsx:431
+#: src/features/apps/index.tsx:424
 msgid "No development apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" உடன் பொருந்தும் வளர்ச்சி பயன்பாடுகள் எதுவும் இல்லை"
 
@@ -1661,11 +1645,11 @@ msgstr "விளையாட்டுகள் இன்னும் இல்�
 msgid "No groups available"
 msgstr "குழுக்கள் கிடைக்கவில்லை"
 
-#: src/features/apps/index.tsx:524
+#: src/features/apps/index.tsx:517
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "அடைவில் \"{searchQuery}\" உடன் பொருந்தும் நிறுவக்கூடிய பயன்பாடுகள் எதுவும் இல்லை"
 
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:398
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" உடன் பொருந்தும் நிறுவப்பட்ட பயன்பாடுகள் எதுவும் இல்லை"
 
@@ -1673,12 +1657,12 @@ msgstr "\"{searchQuery}\" உடன் பொருந்தும் நிற�
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "உருப்படி வகைகள் எதையும் இன்னும் உருவாக்க முடியாது. முதலில் தேவையான பெற்றோர் உருப்படிகளை உருவாக்கவும்."
 
-#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:516
 msgid "No matches in directory"
 msgstr "டைரக்டரியில் பொருத்தங்கள் இல்லை"
 
-#: src/features/apps/index.tsx:404
-#: src/features/apps/index.tsx:430
+#: src/features/apps/index.tsx:397
+#: src/features/apps/index.tsx:423
 msgid "No matching apps"
 msgstr "பொருந்தும் ஆப்கள் இல்லை"
 
@@ -1686,7 +1670,7 @@ msgstr "பொருந்தும் ஆப்கள் இல்லை"
 msgid "No matching objects"
 msgstr "பொருந்தும் ஆப்ஜெக்ட்கள் இல்லை"
 
-#: src/features/routing/routing-table.tsx:63
+#: src/features/routing/routing-table.tsx:58
 msgid "No paths configured."
 msgstr "எந்த பாதைகளும் கட்டமைக்கப்படவில்லை."
 
@@ -1695,11 +1679,11 @@ msgstr "எந்த பாதைகளும் கட்டமைக்கப�
 msgid "No people found"
 msgstr "நபர்கள் எதுவும் கிடைக்கவில்லை"
 
-#: src/routes/_authenticated/app/$appId.tsx:588
+#: src/routes/_authenticated/app/$appId.tsx:573
 msgid "No permissions granted"
 msgstr "அனுமதிகள் எதுவும் வழங்கப்படவில்லை"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "இந்த பயன்பாட்டுக்கு எந்த அனுமதியும் வழங்கப்படவில்லை"
 
@@ -1707,7 +1691,7 @@ msgstr "இந்த பயன்பாட்டுக்கு எந்த அ
 msgid "No places found"
 msgstr "இடங்கள் எதுவும் கிடைக்கவில்லை"
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:469
 msgid "No recommendations available"
 msgstr "பரிந்துரைகள் எதுவும் கிடைக்கவில்லை"
 
@@ -1720,7 +1704,7 @@ msgstr "முடிவுகள் எதுவும் இல்லை"
 msgid "No results found."
 msgstr "முடிவுகள் எதுவும் கிடைக்கவில்லை."
 
-#: src/features/routing/routing-table.tsx:61
+#: src/features/routing/routing-table.tsx:56
 msgid "No services configured."
 msgstr "எந்த சேவைகளும் கட்டமைக்கப்படவில்லை."
 
@@ -1787,7 +1771,7 @@ msgstr "கிடைக்கவில்லை"
 msgid "Not set"
 msgstr "அமைக்கப்படவில்லை"
 
-#: src/routes/_authenticated/app/$appId.tsx:360
+#: src/routes/_authenticated/app/$appId.tsx:349
 msgid "Not versioned"
 msgstr "பதிப்பிடப்படவில்லை"
 
@@ -1888,11 +1872,11 @@ msgstr "Passkeyக்கள்"
 msgid "Passkeys are not available in this browser"
 msgstr "இந்த உலாவியில் passkeyக்கள் கிடைக்கவில்லை"
 
-#: src/features/apps/index.tsx:604
+#: src/features/apps/index.tsx:597
 msgid "Paste the install link:"
 msgstr "நிறுவல் இணைப்பை ஒட்டவும்:"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Path"
 msgstr "Path"
 
@@ -1913,16 +1897,16 @@ msgstr "வடிவம் (regex)"
 msgid "People"
 msgstr "மக்கள்"
 
-#: src/routes/_authenticated/app/$appId.tsx:486
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Permission granted"
 msgstr "அனுமதி வழங்கப்பட்டது"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:456
 msgid "Permission revoked"
 msgstr "அனுமதி திரும்பப் பெறப்பட்டது"
 
-#: src/routes/_authenticated/app/$appId.tsx:152
-#: src/routes/_authenticated/app/$appId.tsx:521
+#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:510
 msgid "Permissions"
 msgstr "அனுமதிகள்"
 
@@ -1956,7 +1940,7 @@ msgstr "பதிவுகள் மற்றும் கருத்துக�
 msgid "Preference updated"
 msgstr "விருப்பத்தேர்வு புதுப்பிக்கப்பட்டது"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Preferred version"
 msgstr "விருப்பமான பதிப்பு"
 
@@ -1982,7 +1966,7 @@ msgstr "Prompt சேமிக்கப்பட்டது"
 msgid "Properties"
 msgstr "பண்புகள்"
 
-#: src/routes/_authenticated/app/$appId.tsx:227
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Provided classes"
 msgstr "வழங்கப்பட்ட கிளாஸ்கள்"
 
@@ -2003,7 +1987,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "இந்த சேவையகத்தில் உங்கள் கடவுச்சாவிகளை மீண்டும் பதிவு செய்யவும்"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:452
+#: src/features/apps/index.tsx:445
 msgid "Recommended"
 msgstr "பரிந்துரைக்கப்பட்டது"
 
@@ -2137,8 +2121,8 @@ msgid "Retry"
 msgstr "மீண்டும் முயற்சிக்கவும்"
 
 #: ../../../lib/web/src/components/options-menu.tsx:247
-#: src/routes/_authenticated/app/$appId.tsx:641
-#: src/routes/_authenticated/app/$appId.tsx:644
+#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:629
 msgid "Revoke"
 msgstr "திரும்பப் பெறு"
 
@@ -2146,11 +2130,11 @@ msgstr "திரும்பப் பெறு"
 msgid "Revoke access"
 msgstr "அணுகலை நீக்கு"
 
-#: src/routes/_authenticated/app/$appId.tsx:651
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission"
 msgstr "அனுமதியை திரும்பப் பெறவும்"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:634
 msgid "Revoke permission?"
 msgstr "அனுமதியை திரும்பப் பெற வேண்டுமா?"
 
@@ -2158,7 +2142,7 @@ msgstr "அனுமதியை திரும்பப் பெற வேண
 msgid "Revoke RSS access?"
 msgstr "RSS அணுகலை ரத்துசெய்யவா?"
 
-#: src/routes/_authenticated/app/$appId.tsx:466
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Revoking permission..."
 msgstr "அனுமதியை நீக்குகிறது..."
 
@@ -2189,7 +2173,7 @@ msgstr "சனிக்கிழமை"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2200,8 +2184,8 @@ msgstr "சேமி"
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:316
-#: src/routes/_authenticated/app/$appId.tsx:338
+#: src/routes/_authenticated/app/$appId.tsx:305
+#: src/routes/_authenticated/app/$appId.tsx:327
 msgid "Saving..."
 msgstr "சேமிக்கிறது..."
 
@@ -2212,11 +2196,11 @@ msgstr "சேமிக்கிறது..."
 msgid "Search"
 msgstr "தேடு"
 
-#: src/features/apps/index.tsx:371
+#: src/features/apps/index.tsx:368
 msgid "Search apps"
 msgstr "ஆப்களைத் தேடு"
 
-#: src/features/apps/index.tsx:370
+#: src/features/apps/index.tsx:367
 msgid "Search apps..."
 msgstr "ஆப்களைத் தேடு..."
 
@@ -2272,10 +2256,6 @@ msgstr "தேடுகிறது..."
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts:16
 msgid "Select"
 msgstr "தேர்ந்தெடு"
-
-#: src/routes/_authenticated/app/$appId.tsx:536
-msgid "Select a capability to grant to {appName}."
-msgstr "{appName} க்கு வழங்க ஒரு திறனைத் தேர்ந்தெடுக்கவும்."
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 msgid "Select a field"
@@ -2354,7 +2334,7 @@ msgstr "சேவையகப் பிழை"
 msgid "Server rules"
 msgstr "சேவையக விதிகள்"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "சேவை"
 
@@ -2471,14 +2451,14 @@ msgstr "ஞாயிற்றுக்கிழமை"
 msgid "Switch to view 1-9"
 msgstr "காட்சி 1-9 க்கு மாறு"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "சிஸ்டம்"
 
-#: src/features/routing/routing-table.tsx:79
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/features/routing/routing-table.tsx:74
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "System default"
 msgstr "சிஸ்டம் இயல்பு"
 
@@ -2499,7 +2479,7 @@ msgstr "குறிச்சொல் 50 எழுத்துகள் அல�
 msgid "Tags"
 msgstr "டேக்குகள்"
 
-#: src/routes/_authenticated/app/$appId.tsx:224
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "Technical capabilities"
 msgstr "தொழில்நுட்ப திறன்கள்"
 
@@ -2545,7 +2525,7 @@ msgstr "மைக்ரோஃபோன் கோரிக்கைக்கு �
 msgid "The passkey request was not answered"
 msgstr "Passkey கோரிக்கைக்கு பதில் இல்லை"
 
-#: src/routes/_authenticated/app/$appId.tsx:132
+#: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "கோரிய ஆப்பை கண்டுபிடிக்க முடியவில்லை."
 
@@ -2557,7 +2537,7 @@ msgstr "கோரப்பட்ட உள்ளடக்கத்தைக் �
 msgid "The server returned a web page instead of data."
 msgstr "சேவையகம் தரவுக்குப் பதிலாக ஒரு வலைப் பக்கத்தை வழங்கியது."
 
-#: src/routes/_authenticated/app/$appId.tsx:361
+#: src/routes/_authenticated/app/$appId.tsx:350
 msgid "This app does not have version management"
 msgstr "இந்த ஆப்பிற்கு பதிப்பு மேலாண்மை இல்லை"
 
@@ -2574,7 +2554,7 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "இது விளையாட்டையும் அதன் அரட்டையையும் நிரந்தரமாக நீக்கும். இந்தச் செயலை மாற்ற முடியாது."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:650
+#: src/routes/_authenticated/app/$appId.tsx:635
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "இது {appName} இலிருந்து \"{0}\" அனுமதியை திரும்பப் பெறும். பயன்பாடு சரியாக வேலை செய்வதை நிறுத்தலாம்."
 
@@ -2617,8 +2597,8 @@ msgstr "மிக அதிகமான கோரிக்கைகள்"
 msgid "Top"
 msgstr "மேல்"
 
-#: src/features/apps/index.tsx:742
-#: src/routes/_authenticated/app/$appId.tsx:380
+#: src/features/apps/index.tsx:735
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "டிராக்"
 
@@ -2664,7 +2644,7 @@ msgstr "தேட தட்டச்சு செய்..."
 msgid "Unable to connect to remote server"
 msgstr "தொலை சேவையகத்துடன் இணைக்க முடியவில்லை"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:464
 msgid "Unable to connect to the recommendations service"
 msgstr "பரிந்துரை சேவையுடன் இணைக்க முடியவில்லை"
 
@@ -2686,7 +2666,7 @@ msgid "Unassigned"
 msgstr "ஒதுக்கப்படாதது"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:463
 msgid "Unavailable"
 msgstr "கிடைக்கவில்லை"
 
@@ -2699,7 +2679,7 @@ msgstr "எதிர்பாராத API பிழை"
 msgid "United States"
 msgstr "ஐக்கிய அமெரிக்கா"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2717,11 +2697,11 @@ msgstr "சந்தா நீக்கு"
 msgid "Untitled"
 msgstr "தலைப்பிடாதது"
 
-#: src/features/apps/index.tsx:738
+#: src/features/apps/index.tsx:731
 msgid "Update"
 msgstr "புதுப்பி"
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Update all"
 msgstr "அனைத்தையும் புதுப்பி"
 
@@ -2743,7 +2723,7 @@ msgstr "{field} புதுப்பிக்கப்பட்டது"
 msgid "Updating apps..."
 msgstr "ஆப்களைப் புதுப்பிக்கிறது..."
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Updating..."
 msgstr "புதுப்பிக்கிறது..."
 
@@ -2756,7 +2736,7 @@ msgstr "பதிவேற்று"
 msgid "Upload progress"
 msgstr "பதிவேற்ற முன்னேற்றம்"
 
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:150
 msgid "Use system default"
 msgstr "கணினி இயல்புநிலையைப் பயன்படுத்தவும்"
 
@@ -2787,7 +2767,7 @@ msgstr "சரிபார்"
 msgid "Verify email address"
 msgstr "மின்னஞ்சல் முகவரியை சரிபார்"
 
-#: src/routes/_authenticated/app/$appId.tsx:394
+#: src/routes/_authenticated/app/$appId.tsx:383
 msgid "Version"
 msgstr "பதிப்பு"
 
@@ -2796,15 +2776,15 @@ msgstr "பதிப்பு"
 msgid "Version {0}"
 msgstr "பதிப்பு {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#: src/routes/_authenticated/app/$appId.tsx:306
 msgid "Version changed"
 msgstr "பதிப்பு மாற்றப்பட்டது"
 
-#: src/routes/_authenticated/app/$appId.tsx:413
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "Version management"
 msgstr "பதிப்பு மேலாண்மை"
 
-#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:150
 msgid "Versions"
 msgstr "பதிப்புகள்"
 
@@ -2869,7 +2849,7 @@ msgstr "உங்கள் கணக்கு {source} இலிருந்த�
 msgid "Your attachments will be lost."
 msgstr "உங்கள் இணைப்புகள் இழக்கப்படும்."
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Your preference"
 msgstr "உங்கள் விருப்பம்"
 
@@ -2881,6 +2861,6 @@ msgstr "உங்கள் உரையும் இணைப்புகளு�
 msgid "Your text will be lost."
 msgstr "உங்கள் உரை இழக்கப்படும்."
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Your version"
 msgstr "உங்கள் பதிப்பு"

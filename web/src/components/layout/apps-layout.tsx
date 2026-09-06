@@ -34,7 +34,7 @@ export function AppsLayout() {
         },
       ],
     }
-  }, [updateCount])
+  }, [updateCount, t])
 
   return (
     <AuthenticatedLayout

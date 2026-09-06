@@ -15,14 +15,13 @@ export function RoutingServices() {
   const { data, isLoading, error, refetch, handleUserChange, handleSystemChange } = useRoutingData()
 
   const services = data?.services ?? {}
-  const isAdmin = data?.is_admin ?? false
+  const isAdmin = data?.administrator ?? false
 
   return (
     <>
       <PageHeader
         title={t`Services`}
         icon={<Plug className='size-4 md:size-5' />}
-        description={t`Configure which app handles inter-app service calls.`}
       />
       <Main>
         {isLoading ? (

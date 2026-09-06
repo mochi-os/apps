@@ -96,7 +96,7 @@ export function Apps() {
   const { data: updatesData, refetch: refetchUpdates } = useUpdatesQuery()
   const { data: directoryApps, isLoading: isLoadingDirectory } =
     useDirectorySearchQuery(
-      appsData?.can_install ? debouncedSearch : ''
+      appsData?.install.allowed ? debouncedSearch : ''
     )
   const installFromPublisherMutation = useInstallFromPublisherMutation()
   const installFromFileMutation = useInstallFromFileMutation()
@@ -126,7 +126,6 @@ export function Apps() {
         installFromPublisherMutation.mutateAsync({
           id: selectedAppId,
           version,
-          peer: appInfo?.peer,
         }),
         {
           loading: t`Installing...`,
@@ -286,6 +285,62 @@ export function Apps() {
     }
   }
 
+  const actionMenu = (
+    <DropdownMenu>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant='ghost'
+              size='icon'
+              aria-label={t`App actions`}
+            >
+              {upgradeMutation.isPending ? (
+                <RefreshCw className='h-4 w-4 animate-spin' />
+              ) : (
+                <MoreHorizontal className='h-4 w-4' />
+              )}
+            </Button>
+          </DropdownMenuTrigger>
+        </TooltipTrigger>
+        <TooltipContent>{t`App actions`}</TooltipContent>
+      </Tooltip>
+      <DropdownMenuContent align='end'>
+        {availableUpdates && availableUpdates.length > 0 && (
+          <DropdownMenuItem
+            onClick={handleUpdateAll}
+            disabled={upgradeMutation.isPending}
+          >
+            <RefreshCw
+              className={`me-2 h-4 w-4 ${upgradeMutation.isPending ? 'animate-spin' : ''}`}
+            />
+            {upgradeMutation.isPending ? t`Updating...` : t`Update all`}
+          </DropdownMenuItem>
+        )}
+        {appsData?.install.allowed && (
+          <>
+            <DropdownMenuItem onClick={() => setInstallFromPublisher(true)}>
+              <ExternalLink className='me-2 h-4 w-4' />
+              <Trans>Install from publisher</Trans>
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => fileInputRef.current?.click()}>
+              <Download className='me-2 h-4 w-4' />
+              <Trans>Install from file</Trans>
+            </DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={handleCleanup}
+              disabled={cleanupMutation.isPending}
+            >
+              <Trash2 className='me-2 h-4 w-4' />
+              {cleanupMutation.isPending
+                ? t`Cleaning up...` : t`Clean up unused versions`}
+            </DropdownMenuItem>
+          </>
+        )}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  )
+
   return (
     <>
       <input
@@ -295,86 +350,24 @@ export function Apps() {
         accept='.zip'
         className='hidden'
       />
-      {(() => {
-        const actionMenu = (
-          <DropdownMenu>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <DropdownMenuTrigger asChild>
-                  <Button
-                    variant='ghost'
-                    size='icon'
-                    aria-label={t`App actions`}
-                  >
-                    {upgradeMutation.isPending ? (
-                      <RefreshCw className='h-4 w-4 animate-spin' />
-                    ) : (
-                      <MoreHorizontal className='h-4 w-4' />
-                    )}
-                  </Button>
-                </DropdownMenuTrigger>
-              </TooltipTrigger>
-              <TooltipContent>{t`App actions`}</TooltipContent>
-            </Tooltip>
-            <DropdownMenuContent align='end'>
-              {availableUpdates && availableUpdates.length > 0 && (
-                <DropdownMenuItem
-                  onClick={handleUpdateAll}
-                  disabled={upgradeMutation.isPending}
-                >
-                  <RefreshCw
-                    className={`me-2 h-4 w-4 ${upgradeMutation.isPending ? 'animate-spin' : ''}`}
-                  />
-                  {upgradeMutation.isPending ? t`Updating...` : t`Update all`}
-                </DropdownMenuItem>
-              )}
-              {appsData?.can_install && (
-                <>
-                  <DropdownMenuItem onClick={() => setInstallFromPublisher(true)}>
-                    <ExternalLink className='me-2 h-4 w-4' />
-                    <Trans>Install from publisher</Trans>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => fileInputRef.current?.click()}>
-                    <Download className='me-2 h-4 w-4' />
-                    <Trans>Install from file</Trans>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem
-                    onClick={handleCleanup}
-                    disabled={cleanupMutation.isPending}
-                  >
-                    <Trash2 className='me-2 h-4 w-4' />
-                    {cleanupMutation.isPending
-                      ? t`Cleaning up...` : t`Clean up unused versions`}
-                  </DropdownMenuItem>
-                </>
-              )}
-            </DropdownMenuContent>
-          </DropdownMenu>
-        )
-
-        return (
-          <>
-            <PageHeader
-              title={t`Apps`}
-              icon={<Package className='size-4 md:size-5' />}
-              menuAction={
-                (appsData?.can_install ||
-                  (availableUpdates && availableUpdates.length > 0))
-                  ? actionMenu
-                  : undefined
-              }
-              primaryAction={
-                <HeaderSearch
-                  value={searchQuery}
-                  onValueChange={setSearchQuery}
-                  placeholder={t`Search apps...`}
-                  label={t`Search apps`}
-                />
-              }
-            />
-          </>
-        )
-      })()}
+      <PageHeader
+        title={t`Apps`}
+        icon={<Package className='size-4 md:size-5' />}
+        menuAction={
+          (appsData?.install.allowed ||
+            (availableUpdates && availableUpdates.length > 0))
+            ? actionMenu
+            : undefined
+        }
+        primaryAction={
+          <HeaderSearch
+            value={searchQuery}
+            onValueChange={setSearchQuery}
+            placeholder={t`Search apps...`}
+            label={t`Search apps`}
+          />
+        }
+      />
       <Main>
         {/* Installed Apps Section */}
         <section className='mb-8'>
@@ -396,7 +389,6 @@ export function Apps() {
             <EmptyState
               icon={Package}
               title={t`No apps installed`}
-              description={t`Install apps from the market or upload your own`}
             />
           ) : filteredInstalledApps?.length === 0 ? (
             <EmptyState
@@ -446,7 +438,7 @@ export function Apps() {
         )}
 
         {/* Market Apps Section - only show if user can install AND not searching */}
-        {appsData?.can_install && !isSearching && (
+        {appsData?.install.allowed && !isSearching && (
           <section>
             <h2 className='text-xl font-semibold'><Trans>Available, but not installed</Trans></h2>
             <p className='mb-4 ms-3 text-xs font-medium tracking-wide text-muted-foreground uppercase'><Trans>Recommended</Trans></p>
@@ -501,7 +493,7 @@ export function Apps() {
         )}
 
         {/* Directory Search Section - show only while searching */}
-        {appsData?.can_install && isSearching && (
+        {appsData?.install.allowed && isSearching && (
           <section>
             <h2 className='mb-4 text-xl font-semibold'><Trans>From the directory</Trans></h2>
             {isLoadingDirectory ? (
@@ -620,7 +612,7 @@ export function Apps() {
                 onClick={handlePublisherInstall}
                 disabled={installByIdMutation.isPending}
               >
-                <Download className='me-2 h-4 w-4' />
+                {installByIdMutation.isPending ? <Loader2 className='size-4 animate-spin' /> : <Download className='size-4' />}
                 {installByIdMutation.isPending ? t`Installing...` : t`Install`}
               </Button>
             </ResponsiveDialogFooter>
@@ -718,7 +710,7 @@ function InstalledAppCard({
 }) {
   const { t } = useLingui()
   // Show track if user is following a non-Production track
-  const showTrack = app.user_track && app.user_track !== 'Production'
+  const showTrack = app.user?.track && app.user.track !== 'Production'
 
   return (
     <Card
@@ -731,15 +723,15 @@ function InstalledAppCard({
       <CardHeader>
         <CardTitle className='truncate text-lg'>{app.name}</CardTitle>
         <div className='flex flex-wrap items-center gap-2 mt-1.5'>
-          {app.latest && <DataChip value={app.latest} />}
-          {availableVersion && availableVersion !== app.latest && (
+          {app.active && <DataChip value={app.active} />}
+          {availableVersion && availableVersion !== app.active && (
             <DataChip
               value={availableVersion}
               label={t`Update`}
             />
           )}
-          {showTrack && app.user_track && (
-            <DataChip value={app.user_track} label={t`Track`} />
+          {showTrack && app.user?.track && (
+            <DataChip value={app.user.track} label={t`Track`} />
           )}
           {showId && (
             <span className='text-xs text-muted-foreground truncate font-mono opacity-80'>

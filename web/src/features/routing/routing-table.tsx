@@ -14,13 +14,8 @@ import { Trans } from '@lingui/react/macro'
 import type { RoutingResource, RoutingApp } from '@/api/apps'
 import { t } from '@lingui/core/macro'
 
-// Development apps have short IDs, installed apps have entity IDs (50-51 chars)
-function isDevelopmentApp(id: string): boolean {
-  return !/^[1-9A-HJ-NP-Za-km-z]{50,51}$/.test(id)
-}
-
 function formatAppName(app: RoutingApp): string {
-  return isDevelopmentApp(app.id) ? t`${app.name} (development)` : app.name
+  return app.development ? t`${app.name} (development)` : app.name
 }
 
 // Sort apps alphabetically, with development version immediately after published version of same app
@@ -31,8 +26,8 @@ function sortApps(apps: RoutingApp[]): RoutingApp[] {
       return nameCompare
     }
     // Same name: published first, then development
-    const aIsDev = isDevelopmentApp(a.id)
-    const bIsDev = isDevelopmentApp(b.id)
+    const aIsDev = a.development
+    const bIsDev = b.development
     return aIsDev === bIsDev ? 0 : aIsDev ? 1 : -1
   })
 }

@@ -20,8 +20,8 @@ interface AppVersionsResponse {
   default_track: string
   user: VersionPref | null
   system: VersionPref | null
-  is_admin: boolean
-  track_warning: string
+  administrator: boolean
+  track: { warning: string }
 }
 
 export function useAppVersions(appId: string | null) {

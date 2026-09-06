@@ -5,7 +5,7 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
 {
-	"version": "4.98",
+	"version": "4.99",
 	"label": "app.name",
 	"classes": ["app"],
 	"shared": ["app"],
@@ -52,23 +52,16 @@
 
 		"-/permissions/list": {"function": "action_permissions_list"},
 		"-/permissions/catalog": {"function": "action_permissions_catalog"},
-		"-/permissions/revoke": {"function": "action_permissions_revoke"},
 		"-/permissions/set": {"function": "action_permissions_set"},
 
 		"-/user/preferences": {"function": "action_user_apps"},
 		"-/user/preferences/app": {"function": "action_user_apps_app"},
 		"-/user/preferences/version/set": {"function": "action_user_apps_version_set"},
 		"-/user/preferences/routing/set": {"function": "action_user_apps_routing_set"},
-		"-/user/preferences/reset": {"function": "action_user_apps_reset"},
 
 		"-/system/list": {"function": "action_system_apps_list"},
-		"-/system/get": {"function": "action_system_apps_get"},
 		"-/system/version/set": {"function": "action_system_apps_version_set"},
-		"-/system/track/set": {"function": "action_system_apps_track_set"},
 		"-/system/cleanup": {"function": "action_system_apps_cleanup"},
-		"-/system/routing": {"function": "action_system_apps_routing"},
-		"-/system/routing/set": {"function": "action_system_apps_routing_set"},
-
-		"-/:id": {"function": "action_view"}
+		"-/system/routing/set": {"function": "action_system_apps_routing_set"}
 	}
 }

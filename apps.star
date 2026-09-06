@@ -55,15 +55,22 @@ def format_fingerprint(id):
 	fp = mochi.entity.fingerprint(id)
 	return fp[:3] + "-" + fp[3:6] + "-" + fp[6:]
 
+# Staged archives younger than this are left alone: one may be in flight for a
+# concurrent install, and sweeping it made that install raise between its
+# entity being created and its package being loaded. Anything older is an
+# orphan from an aborted attempt.
+PACKAGES_GRACE = 3600
+
 # Delete leftover archives in packages/ from a file install that aborted
 # partway: a failed install or package.get ends the action before its own delete
-# runs. File install is the only path that stages an archive here; a concurrent
-# install's archive can be swept too, which fails that install cleanly.
+# runs. File install is the only path that stages an archive here.
 def sweep_packages():
 	if not mochi.file.exists("packages"):
 		return
 	for file in mochi.file.list("packages"):
-		mochi.file.delete("packages/" + file)
+		age = mochi.file.age("packages/" + file)
+		if age != None and age > PACKAGES_GRACE:
+			mochi.file.delete("packages/" + file)
 
 # List installed apps (only Starlark apps)
 def action_list(a):
@@ -73,13 +80,13 @@ def action_list(a):
 	for app in all_apps:
 		if app.get("engine") != "starlark":
 			continue
-		# Add user's track/version preference (for display on cards)
+		# The card shows `active`, the version core resolved for this user
+		# through their own or the system preference. `latest` stays the newest
+		# version on disk, so an update is judged against what the user runs
+		# rather than whatever happens to be installed.
 		user_preference = a.user.app.version.get(app["id"])
 		if user_preference:
-			app["user_track"] = user_preference.get("track", "")
-			# If user has a version preference, show that instead of latest
-			if user_preference.get("version"):
-				app["latest"] = user_preference["version"]
+			app["user"] = {"track": user_preference.get("track", "")}
 		if app.get("development"):
 			app["fingerprint"] = ""
 			development.append(app)
@@ -88,26 +95,9 @@ def action_list(a):
 			installed.append(app)
 
 	# Check if user can install apps
-	can_install = a.user.role == "administrator" or mochi.setting.get("apps_install_user") == "true"
+	allowed = a.user.role == "administrator" or mochi.setting.get("apps_install_user") == "true"
 
-	return {"data": {"installed": installed, "development": development, "can_install": can_install}}
-
-# View a single installed app
-def action_view(a):
-	id = a.input("id")
-	if not id or len(id) > 51:
-		a.error.label(400, "errors.invalid_app_id")
-		return
-	app = mochi.app.get(id)
-	if not app:
-		a.error.label(404, "errors.app_not_found")
-		return
-
-	if app.get("development"):
-		app["fingerprint"] = ""
-	else:
-		app["fingerprint"] = format_fingerprint(app["id"])
-	return {"data": {"app": app}}
+	return {"data": {"installed": installed, "development": development, "install": {"allowed": allowed}}}
 
 # Read the user's BCP 47 language tag, or "en" if unset / anonymous
 def user_language(a):
@@ -141,7 +131,7 @@ def action_market(a):
 		if type(item) != "dict":
 			continue
 		entity = item.get("entity")
-		if not entity or mochi.app.get(entity):
+		if type(entity) != "string" or not entity or mochi.app.get(entity):
 			continue
 		market.append({"id": entity, "name": item.get("name", ""), "blurb": item.get("blurb", "")})
 
@@ -160,22 +150,7 @@ def action_information(a):
 		a.error.label(400, "errors.invalid_app_id")
 		return
 
-	# If URL is provided, resolve it to a peer ID. The override is gated on the
-	# same permission as installing: mochi.remote.peer makes this server fetch
-	# <url>/_/p2p/info, and "connected" versus "failed to connect" alone maps a
-	# private network.
-	url = a.input("url")
-	peer = ""
-	if url:
-		if a.user.role != "administrator" and mochi.setting.get("apps_install_user") != "true":
-			a.error.label(403, "errors.app_installation_restricted_to_administrators")
-			return
-		peer = mochi.remote.peer(url)
-		if not peer:
-			a.error.label(500, "errors.failed_to_connect_to_server", url=url)
-			return
-
-	s = mochi.remote.stream(id, "publisher", "information", {"app": id}, peer)
+	s = mochi.remote.stream(id, "publisher", "information", {"app": id})
 	if not s:
 		a.error.label(500, "errors.failed_to_connect_to_publisher")
 		return
@@ -197,7 +172,7 @@ def action_information(a):
 	fingerprint = format_fingerprint(id)
 	tracks = s.read()
 
-	return {"data": {"app": app, "fingerprint": fingerprint, "tracks": tracks, "peer": peer}}
+	return {"data": {"app": app, "fingerprint": fingerprint, "tracks": tracks}}
 
 # Get version information for an app from its publisher
 def action_version(a):
@@ -242,7 +217,8 @@ def action_install_publisher(a):
 	if not id:
 		a.error.label(400, "errors.app_id_required")
 		return
-	if len(id) > 51:
+	# mochi.app.version.download raises on anything that is not an entity id.
+	if not mochi.text.valid(id, "entity"):
 		a.error.label(400, "errors.invalid_app_id")
 		return
 	if not version:
@@ -576,7 +552,10 @@ def action_upgrade(a):
 	id = a.input("id")
 	version = a.input("version")
 
-	if not id or len(id) > 51:
+	# mochi.directory.get and mochi.app.version.download raise on anything
+	# that is not an entity id, and a development app has no publisher to
+	# upgrade from.
+	if not id or not mochi.text.valid(id, "entity"):
 		a.error.label(400, "errors.invalid_app_id")
 		return
 	if not version or not mochi.text.valid(version, "version"):
@@ -649,7 +628,7 @@ def action_routing(a):
 	paths = {}
 
 	for app in apps:
-		app_info = {"id": app["id"], "name": app["name"]}
+		app_info = {"id": app["id"], "name": app["name"], "development": bool(app.get("development"))}
 		for c in app.get("classes", []):
 			if c not in classes:
 				classes[c] = {"apps": [], "system": "", "user": ""}
@@ -685,7 +664,7 @@ def action_routing(a):
 	for p in paths:
 		paths[p]["user"] = user_paths.get(p, "")
 
-	return {"data": {"classes": classes, "services": services, "paths": paths, "is_admin": is_admin}}
+	return {"data": {"classes": classes, "services": services, "paths": paths, "administrator": is_admin}}
 
 # Require administrator role. Only the system-wide actions use this: the
 # registry writes below change what every account on the server sees. Reading
@@ -743,23 +722,41 @@ def action_user_apps_app(a):
 	versions = mochi.app.version.list(app_id)
 	tracks = mochi.app.track.list(app_id)
 
-	# If no local tracks and app is from publisher, fetch from publisher via P2P
+	# Core records tracks only through the administrator-only track setter, so
+	# a published app has none locally and its tracks come from the publisher.
+	# The update check caches that same answer in updates_cache; read it first
+	# and stream only on a miss, so opening the page does not cost a P2P round
+	# trip every time.
 	default_track = ""
 	if not tracks and is_entity_id(app_id):
-		s = mochi.remote.stream(app_id, "publisher", "information", {})
-		if s:
-			r = s.read()
-			# Type-checked like the app_info and publisher_tracks frames below:
-			# the header comes from the same untrusted handler they do.
-			if type(r) == "dict" and r.get("status", "") == "200":
-				app_info = s.read()
-				if type(app_info) == "dict":
-					default_track = app_info.get("default_track", "")
-				publisher_tracks = s.read()
-				if type(publisher_tracks) in ["list", "tuple"]:
-					for t in publisher_tracks:
-						if type(t) == "dict" and t.get("track"):
-							tracks[t["track"]] = t.get("version", "")
+		remote = None
+		row = mochi.db.row("select data, checked from updates_cache where app=?", app_id)
+		if row and mochi.time.now() - row["checked"] < UPDATES_CACHE_TTL:
+			remote = json.decode(row["data"], None)
+		if type(remote) != "dict":
+			remote = None
+			s = mochi.remote.stream(app_id, "publisher", "information", {})
+			if s:
+				r = s.read()
+				# Type-checked like the frames below: the header comes from the
+				# same untrusted handler they do.
+				if type(r) == "dict" and r.get("status", "") == "200":
+					app_info = s.read()
+					publisher_tracks = s.read()
+					if type(app_info) == "dict" and type(publisher_tracks) in ["list", "tuple"]:
+						remote = {"default_track": app_info.get("default_track", ""), "tracks": list(publisher_tracks)}
+						mochi.db.execute("replace into updates_cache ( app, data, checked ) values ( ?, ?, ? )", app_id, json.encode(remote), mochi.time.now())
+		if remote:
+			default_track = remote.get("default_track", "")
+			if type(default_track) != "string":
+				default_track = ""
+			publisher_tracks = remote.get("tracks", [])
+			if type(publisher_tracks) in ["list", "tuple"]:
+				for t in publisher_tracks:
+					if type(t) != "dict" or type(t.get("track")) != "string" or not t.get("track"):
+						continue
+					version = t.get("version", "")
+					tracks[t["track"]] = version if type(version) == "string" else ""
 
 	user_preference = a.user.app.version.get(app_id)
 
@@ -776,8 +773,8 @@ def action_user_apps_app(a):
 		"default_track": default_track,
 		"user": user_preference,
 		"system": mochi.app.version.get(app_id),
-		"is_admin": a.user.role == "administrator",
-		"track_warning": track_warning,
+		"administrator": a.user.role == "administrator",
+		"track": {"warning": track_warning},
 	}
 
 	return {"data": result}
@@ -802,7 +799,7 @@ def action_user_apps_version_set(a):
 		return
 
 	# If a version is specified (either directly or via track), download it if needed
-	if version and is_entity_id(app_id):
+	if version and mochi.text.valid(app_id, "entity"):
 		installed_versions = mochi.app.version.list(app_id)
 		if version not in installed_versions:
 			# Core enforces the same rule inside version.download; checking
@@ -884,23 +881,6 @@ def action_user_apps_routing_set(a):
 
 	return {"data": {"ok": True}}
 
-def action_user_apps_reset(a):
-	"""Reset all user app preferences to system defaults"""
-	# Clear all version preferences
-	apps = mochi.app.list()
-	for app in apps:
-		a.user.app.version.delete(app["id"])
-
-	# Clear all routing overrides
-	for cls in getattr(a.user.app, "class").list():
-		getattr(a.user.app, "class").delete(cls)
-	for svc in a.user.app.service.list():
-		a.user.app.service.delete(svc)
-	for path in a.user.app.path.list():
-		a.user.app.path.delete(path)
-
-	return {"data": {"ok": True}}
-
 # System app management (admin only)
 
 def action_system_apps_list(a):
@@ -914,27 +894,6 @@ def action_system_apps_list(a):
 		app["tracks"] = mochi.app.track.list(app["id"])
 
 	return {"data": {"apps": apps}}
-
-def action_system_apps_get(a):
-	"""Get details for a specific app"""
-	if not require_admin(a):
-		return
-
-	app_id = a.input("app")
-	if not app_id:
-		a.error.label(400, "errors.missing_app_parameter")
-		return
-
-	versions = mochi.app.version.list(app_id)
-	tracks = mochi.app.track.list(app_id)
-	default = mochi.app.version.get(app_id)
-
-	return {"data": {
-		"app": app_id,
-		"versions": versions,
-		"tracks": tracks,
-		"default": default,
-	}}
 
 def action_system_apps_version_set(a):
 	"""Set default version or track for an app"""
@@ -958,8 +917,13 @@ def action_system_apps_version_set(a):
 		a.error.label(400, "errors.invalid_track")
 		return
 
+	# mochi.app.version.set raises "app not found" rather than answering.
+	if not mochi.app.get(app_id):
+		a.error.label(404, "errors.app_not_found")
+		return
+
 	# If a version is specified (either directly or via track), download it if needed
-	if version and is_entity_id(app_id):
+	if version and mochi.text.valid(app_id, "entity"):
 		installed_versions = mochi.app.version.list(app_id)
 		if version not in installed_versions:
 			# Don't pin the system default to a version the publisher couldn't
@@ -971,31 +935,6 @@ def action_system_apps_version_set(a):
 	mochi.app.version.set(app_id, version, track)
 	return {"data": {"ok": True}}
 
-def action_system_apps_track_set(a):
-	"""Set a track to point to a specific version"""
-	if not require_admin(a):
-		return
-
-	app_id = a.input("app")
-	track = a.input("track")
-	version = a.input("version")
-
-	if not app_id or not track or not version:
-		a.error.label(400, "errors.missing_param")
-		return
-	if len(app_id) > 51:
-		a.error.label(400, "errors.invalid_app_id")
-		return
-	if len(track) > 50:
-		a.error.label(400, "errors.invalid_track")
-		return
-	if not mochi.text.valid(version, "version"):
-		a.error.label(400, "errors.invalid_version_format")
-		return
-
-	mochi.app.track.set(app_id, track, version)
-	return {"data": {"ok": True}}
-
 def action_system_apps_cleanup(a):
 	"""Remove unused app versions"""
 	if not require_admin(a):
@@ -1003,17 +942,6 @@ def action_system_apps_cleanup(a):
 
 	removed = mochi.app.cleanup()
 	return {"data": {"removed": removed}}
-
-def action_system_apps_routing(a):
-	"""Get all system routing (class, service, path)"""
-	if not require_admin(a):
-		return
-
-	return {"data": {
-		"classes": getattr(mochi.app, "class").list(),
-		"services": mochi.app.service.list(),
-		"paths": mochi.app.path.list(),
-	}}
 
 def action_system_apps_routing_set(a):
 	"""Set system routing for a class, service, or path"""
@@ -1073,33 +1001,6 @@ def action_permissions_list(a):
 def action_permissions_catalog(a):
 	"""List all defined permissions with their translated names and security levels"""
 	return {"data": {"permissions": mochi.permission.catalog()}}
-
-def action_permissions_revoke(a):
-	"""Revoke a permission from an app"""
-	app_id = a.input("app")
-	permission = a.input("permission")
-
-	if not app_id:
-		a.error.label(400, "errors.missing_app_parameter")
-		return
-	if len(app_id) > 51:
-		a.error.label(400, "errors.invalid_app_id")
-		return
-	if not permission:
-		a.error.label(400, "errors.missing_permission_parameter")
-		return
-	if len(permission) > 100:
-		a.error.label(400, "errors.invalid_permission")
-		return
-
-	# Match action_permissions_set: don't write a revoked row for an app that
-	# doesn't exist.
-	if not mochi.app.get(app_id):
-		a.error.label(404, "errors.app_not_found")
-		return
-
-	mochi.permission.revoke(app_id, permission)
-	return {"data": {"status": "revoked", "permission": permission}}
 
 def action_permissions_set(a):
 	"""Set a permission for an app (for settings page, allows restricted permissions)"""

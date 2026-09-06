@@ -46,7 +46,7 @@ msgid "{0, plural, one {Removed # unused version} other {Removed # unused versio
 msgstr "{0, plural, zero {Tynnwyd # fersiwn heb ei defnyddio} one {Tynnwyd # fersiwn heb ei defnyddio} two {Tynnwyd # fersiwn heb eu defnyddio} few {Tynnwyd # fersiwn heb eu defnyddio} many {Tynnwyd # fersiwn heb eu defnyddio} other {Tynnwyd # fersiwn heb eu defnyddio}}"
 
 #. placeholder {0}: app.name
-#: src/features/routing/routing-table.tsx:23
+#: src/features/routing/routing-table.tsx:18
 msgid "{0} (development)"
 msgstr "{0} (datblygu)"
 
@@ -100,11 +100,11 @@ msgstr "{totalCount, plural, zero {# eitem} one {# eitem} two {# eitem} few {# e
 msgid "{totalDescendants, plural, one {# reply} other {+# more replies}}"
 msgstr "{totalDescendants, plural, zero {# ateb} one {# ateb} two {+# ateb arall} few {+# ateb arall} many {+# ateb arall} other {+# ateb arall}}"
 
-#: src/routes/_authenticated/app/$appId.tsx:385
+#: src/routes/_authenticated/app/$appId.tsx:374
 msgid "{track} (default, version {version})"
 msgstr "{track} (diofyn, fersiwn {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:386
+#: src/routes/_authenticated/app/$appId.tsx:375
 msgid "{track} (version {version})"
 msgstr "{track} (fersiwn {version})"
 
@@ -208,7 +208,7 @@ msgstr "Ychwanegu opsiwn"
 msgid "Add tag..."
 msgstr "Ychwanegu tag..."
 
-#: src/features/apps/index.tsx:653
+#: src/features/apps/index.tsx:646
 msgid "Add to directory"
 msgstr "Ychwanegu i'r cyfeiriadur"
 
@@ -270,12 +270,12 @@ msgid "Anything subscribed to this feed will stop receiving it. You can copy a n
 msgstr "Bydd unrhyw beth sydd wedi tanysgrifio i'r porthiant hwn yn peidio â'i dderbyn. Gallwch gopïo URL newydd wedyn."
 
 #: src/features/apps/index.tsx:164
-#: src/routes/_authenticated/app/$appId.tsx:98
+#: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "App"
 
+#: src/features/apps/index.tsx:297
 #: src/features/apps/index.tsx:307
-#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "Gweithredoedd app"
 
@@ -291,19 +291,19 @@ msgstr "App wedi'i osod"
 msgid "App installed successfully"
 msgstr "Gosodwyd yr ap yn llwyddiannus"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:131
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:130
 msgid "App not found"
 msgstr "App heb ei ganfod"
 
-#: src/routes/_authenticated/app/$appId.tsx:208
+#: src/routes/_authenticated/app/$appId.tsx:197
 msgid "Application ID"
 msgstr "ID rhaglen"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:355
 msgid "Apps"
 msgstr "Apiau"
 
@@ -370,7 +370,7 @@ msgstr "Fersiwn ar gael:"
 msgid "Available versions:"
 msgstr "Fersiynau ar gael:"
 
-#: src/features/apps/index.tsx:451
+#: src/features/apps/index.tsx:444
 msgid "Available, but not installed"
 msgstr "Ar gael, ond heb ei osod"
 
@@ -386,9 +386,9 @@ msgstr "Afatar ar gyfer {name}"
 msgid "Back"
 msgstr "Yn ôl"
 
-#: src/routes/_authenticated/app/$appId.tsx:106
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:144
+#: src/routes/_authenticated/app/$appId.tsx:105
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:143
 msgid "Back to apps"
 msgstr "Yn ôl i'r apiau"
 
@@ -397,16 +397,16 @@ msgstr "Yn ôl i'r apiau"
 msgid "Back to home"
 msgstr "Yn ôl i’r cartref"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Baner"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "Baner wedi'i thynnu"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "Baner wedi'i diweddaru"
 
@@ -465,10 +465,10 @@ msgstr "Camera ddim ar gael"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:575
-#: src/features/apps/index.tsx:616
-#: src/features/apps/index.tsx:666
-#: src/routes/_authenticated/app/$appId.tsx:565
+#: src/features/apps/index.tsx:568
+#: src/features/apps/index.tsx:609
+#: src/features/apps/index.tsx:659
+#: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Canslo"
 
@@ -525,7 +525,7 @@ msgstr "Dewiswch gêm o'r bar ochr neu dechreuwch un newydd."
 msgid "Choose language"
 msgstr "Dewiswch iaith"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Class"
 msgstr "Dosbarth"
 
@@ -538,16 +538,16 @@ msgstr "Llwybro dosbarth"
 msgid "Classes"
 msgstr "Dosbarthiadau"
 
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Clean up unused versions"
 msgstr "Tacluso fersiynau heb eu defnyddio"
 
 #: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Cleaning up..."
 msgstr "Yn tacluso..."
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -658,18 +658,6 @@ msgstr "Ffurfweddu gosodiadau opsiwn"
 msgid "Configure view settings"
 msgstr "Ffurfweddu gosodiadau golwg"
 
-#: src/features/routing/paths.tsx:25
-msgid "Configure which app handles each URL path."
-msgstr "Ffurfweddwch pa app sy'n trafod pob llwybr URL."
-
-#: src/features/routing/classes.tsx:25
-msgid "Configure which app handles entities of each type."
-msgstr "Ffurfweddwch pa app sy'n trafod endidau o bob math."
-
-#: src/features/routing/services.tsx:25
-msgid "Configure which app handles inter-app service calls."
-msgstr "Ffurfweddwch pa app sy'n trafod galwadau gwasanaeth rhwng apiau."
-
 #: ../../../lib/web/src/components/place-picker.tsx:146
 #: ../../../lib/web/src/components/travelling-picker.tsx:296
 msgid "Confirm"
@@ -777,7 +765,7 @@ msgstr "Yn creu..."
 msgid "Current location"
 msgstr "Lleoliad presennol"
 
-#: src/routes/_authenticated/app/$appId.tsx:218
+#: src/routes/_authenticated/app/$appId.tsx:207
 msgid "Current version"
 msgstr "Fersiwn cyfredol"
 
@@ -798,7 +786,7 @@ msgstr "Gwrthdaro data"
 msgid "Date"
 msgstr "Dyddiad"
 
-#: src/features/routing/routing-table.tsx:77
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "Datganwyd gan"
 
@@ -807,8 +795,8 @@ msgid "Decline"
 msgstr "Gwrthod"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
-#: src/features/routing/routing-table.tsx:131
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:126
+#: src/features/routing/routing-table.tsx:150
 msgid "Default"
 msgstr "Diofyn"
 
@@ -816,15 +804,15 @@ msgstr "Diofyn"
 msgid "Default AI account"
 msgstr "Cyfrif AI diofyn"
 
-#: src/routes/_authenticated/app/$appId.tsx:441
+#: src/routes/_authenticated/app/$appId.tsx:430
 msgid "Default for all users"
 msgstr "Diofyn ar gyfer pob defnyddiwr"
 
-#: src/routes/_authenticated/app/$appId.tsx:440
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "Diofyn ar gyfer pob defnyddiwr (fersiwn {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:339
+#: src/routes/_authenticated/app/$appId.tsx:328
 msgid "Default for all users updated"
 msgstr "Diofyn ar gyfer pob defnyddiwr wedi'i ddiweddaru"
 
@@ -832,12 +820,12 @@ msgstr "Diofyn ar gyfer pob defnyddiwr wedi'i ddiweddaru"
 msgid "Default sort"
 msgstr "Trefnu diofyn"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:414
 msgid "Default track"
 msgstr "Trac diofyn"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:413
 msgid "Default track (version {0})"
 msgstr "Trac diofyn (fersiwn {0})"
 
@@ -919,7 +907,7 @@ msgstr "Disgynnol"
 msgid "Description"
 msgstr "Disgrifiad"
 
-#: src/routes/_authenticated/app/$appId.tsx:150
+#: src/routes/_authenticated/app/$appId.tsx:149
 msgid "Details"
 msgstr "Manylion"
 
@@ -938,7 +926,7 @@ msgstr "Panel manylion"
 msgid "Detect from web browser"
 msgstr "Adnabod o'r porwr gwe"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:419
 msgid "Development apps"
 msgstr "Apiau datblygiad"
 
@@ -1044,11 +1032,11 @@ msgstr "E-bost"
 msgid "Email code"
 msgstr "Cod e-bost"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:224
 msgid "Enabled services"
 msgstr "Gwasanaethau wedi'u galluogi"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "Rhowch destun y faner (cefnogir markdown)..."
 
@@ -1125,7 +1113,7 @@ msgstr "Methwyd dileu'r ddolen"
 msgid "Failed to get RSS token"
 msgstr "Methwyd cael tocyn RSS"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:476
 msgid "Failed to grant permission"
 msgstr "Methwyd rhoi caniatâd"
 
@@ -1133,7 +1121,11 @@ msgstr "Methwyd rhoi caniatâd"
 msgid "Failed to load"
 msgstr "Methwyd llwytho"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "Methwyd llwytho'r faner"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "Methwyd llwytho hanes"
 
@@ -1166,7 +1158,7 @@ msgstr "Methwyd postio sylw"
 msgid "Failed to reset prompt"
 msgstr "Methwyd ailosod yr anogiad"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Failed to revoke permission"
 msgstr "Methwyd dirymu'r caniatâd"
 
@@ -1186,7 +1178,7 @@ msgstr "Methwyd cadw'r anogiad"
 msgid "Failed to update apps"
 msgstr "Methwyd â diweddaru apiau"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "Methwyd diweddaru'r faner"
 
@@ -1194,12 +1186,12 @@ msgstr "Methwyd diweddaru'r faner"
 msgid "Failed to update comment"
 msgstr "Methwyd diweddaru'r sylw"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:329
 msgid "Failed to update default"
 msgstr "Methwyd diweddaru'r diofyn"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:318
+#: src/routes/_authenticated/app/$appId.tsx:307
 msgid "Failed to update preference"
 msgstr "Methwyd diweddaru'r dewis"
 
@@ -1215,7 +1207,7 @@ msgstr "Methwyd diweddaru gwylio"
 msgid "Failed to upload attachment"
 msgstr "Methwyd llwytho'r atodiad"
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:639
 msgid "File:"
 msgstr "Ffeil:"
 
@@ -1225,7 +1217,7 @@ msgstr "Ffeil:"
 msgid "Files"
 msgstr "Ffeiliau"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:202
 msgid "Fingerprint"
 msgstr "Olion bysedd"
 
@@ -1259,7 +1251,7 @@ msgstr "Ffrindiau"
 msgid "From"
 msgstr "O"
 
-#: src/features/apps/index.tsx:506
+#: src/features/apps/index.tsx:499
 msgid "From the directory"
 msgstr "O'r cyfeiriadur"
 
@@ -1276,15 +1268,15 @@ msgstr "O'r thema"
 msgid "Go back"
 msgstr "Yn ôl"
 
-#: src/routes/_authenticated/app/$appId.tsx:529
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "Caniatáu"
 
-#: src/routes/_authenticated/app/$appId.tsx:534
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "Caniatáu"
 
-#: src/routes/_authenticated/app/$appId.tsx:485
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Granting permission..."
 msgstr "Yn rhoi caniatâd..."
 
@@ -1301,11 +1293,11 @@ msgstr "Grwpio yn ôl"
 msgid "Group: {0}"
 msgstr "Grŵp: {0}"
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Handler"
 msgstr "Triniwr"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "Hanes"
 
@@ -1320,7 +1312,7 @@ msgstr "Cartref"
 msgid "Hot"
 msgstr "Poeth"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "HTTP paths"
 msgstr "Llwybrau HTTP"
 
@@ -1328,7 +1320,7 @@ msgstr "Llwybrau HTTP"
 msgid "ID"
 msgstr "ID"
 
-#: src/routes/_authenticated/app/$appId.tsx:205
+#: src/routes/_authenticated/app/$appId.tsx:194
 msgid "Identity"
 msgstr "Hunaniaeth"
 
@@ -1355,32 +1347,28 @@ msgstr "Afatar llythrennau blaen ar gyfer {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Install"
 msgstr "Gosod"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:566
+#: src/features/apps/index.tsx:559
 msgid "Install {0}?"
 msgstr "Gosod {0}?"
 
-#: src/features/apps/index.tsx:399
-msgid "Install apps from the market or upload your own"
-msgstr "Gosodwch apiau o'r farchnad neu llwythwch eich rhai eich hun"
-
-#: src/features/apps/index.tsx:339
-#: src/features/apps/index.tsx:642
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:635
 msgid "Install from file"
 msgstr "Gosod o ffeil"
 
-#: src/features/apps/index.tsx:335
-#: src/features/apps/index.tsx:600
+#: src/features/apps/index.tsx:325
+#: src/features/apps/index.tsx:593
 msgid "Install from publisher"
 msgstr "Gosod o'r cyhoeddwr"
 
-#: src/features/apps/index.tsx:382
+#: src/features/apps/index.tsx:376
 msgid "Installed apps"
 msgstr "Apiau wedi'u gosod"
 
@@ -1390,9 +1378,9 @@ msgstr "Apiau wedi'u gosod"
 #: src/features/apps/index.tsx:162
 #: src/features/apps/index.tsx:182
 #: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Installing..."
 msgstr "Yn gosod..."
 
@@ -1495,10 +1483,6 @@ msgstr "Allgofnodwyd yn llwyddiannus"
 msgid "Logging out…"
 msgstr "Yn allgofnodi…"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
-msgid "Manage capabilities granted to this application"
-msgstr "Rheoli galluoedd a roddwyd i'r cymhwysiad hwn"
-
 #: ../../../lib/web/src/components/notification-category-button.tsx:127
 msgid "Manage categories"
 msgstr "Rheoli categorïau"
@@ -1573,7 +1557,7 @@ msgstr "Symudwyd"
 msgid "Moved {field}"
 msgstr "Symudwyd {field}"
 
-#: src/features/routing/routing-table.tsx:107
+#: src/features/routing/routing-table.tsx:102
 msgid "Multiple apps declare this resource"
 msgstr "Mae sawl ap yn datgan yr adnodd hwn"
 
@@ -1633,11 +1617,11 @@ msgstr "Dim gweithgaredd eto"
 msgid "No apps could be updated."
 msgstr "Ni ellid diweddaru unrhyw apiau."
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:392
 msgid "No apps installed"
 msgstr "Dim apiau wedi'u gosod"
 
-#: src/features/routing/routing-table.tsx:59
+#: src/features/routing/routing-table.tsx:54
 msgid "No classes configured."
 msgstr "Dim dosbarthiadau wedi'u ffurfweddu."
 
@@ -1645,11 +1629,11 @@ msgstr "Dim dosbarthiadau wedi'u ffurfweddu."
 msgid "No comments yet"
 msgstr "Dim sylwadau eto"
 
-#: src/features/apps/index.tsx:493
+#: src/features/apps/index.tsx:486
 msgid "No description"
 msgstr "Dim disgrifiad"
 
-#: src/features/apps/index.tsx:431
+#: src/features/apps/index.tsx:424
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Nid oes apiau datblygu yn cyfateb i \"{searchQuery}\""
 
@@ -1661,11 +1645,11 @@ msgstr "Dim gemau eto"
 msgid "No groups available"
 msgstr "Dim grwpiau ar gael"
 
-#: src/features/apps/index.tsx:524
+#: src/features/apps/index.tsx:517
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Nid oes apiau gosodadwy yn y cyfeiriadur sy'n cyfateb i \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:398
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Nid oes apiau wedi'u gosod yn cyfateb i \"{searchQuery}\""
 
@@ -1673,12 +1657,12 @@ msgstr "Nid oes apiau wedi'u gosod yn cyfateb i \"{searchQuery}\""
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Ni ellir creu unrhyw fathau o eitemau eto. Crëwch yr eitemau rhiant gofynnol yn gyntaf."
 
-#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:516
 msgid "No matches in directory"
 msgstr "Dim canlyniadau yn y cyfeiriadur"
 
-#: src/features/apps/index.tsx:404
-#: src/features/apps/index.tsx:430
+#: src/features/apps/index.tsx:397
+#: src/features/apps/index.tsx:423
 msgid "No matching apps"
 msgstr "Dim apiau cyfatebol"
 
@@ -1686,7 +1670,7 @@ msgstr "Dim apiau cyfatebol"
 msgid "No matching objects"
 msgstr "Dim gwrthrychau cyfatebol"
 
-#: src/features/routing/routing-table.tsx:63
+#: src/features/routing/routing-table.tsx:58
 msgid "No paths configured."
 msgstr "Dim llwybrau wedi'u ffurfweddu."
 
@@ -1695,11 +1679,11 @@ msgstr "Dim llwybrau wedi'u ffurfweddu."
 msgid "No people found"
 msgstr "Heb ddod o hyd i bobl"
 
-#: src/routes/_authenticated/app/$appId.tsx:588
+#: src/routes/_authenticated/app/$appId.tsx:573
 msgid "No permissions granted"
 msgstr "Dim caniatadau wedi'u rhoi"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "Dim caniatadau wedi'u rhoi i'r ap hwn"
 
@@ -1707,7 +1691,7 @@ msgstr "Dim caniatadau wedi'u rhoi i'r ap hwn"
 msgid "No places found"
 msgstr "Heb ddod o hyd i leoedd"
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:469
 msgid "No recommendations available"
 msgstr "Dim argymhellion ar gael"
 
@@ -1720,7 +1704,7 @@ msgstr "Ni chanfuwyd canlyniadau"
 msgid "No results found."
 msgstr "Heb ddod o hyd i ganlyniadau."
 
-#: src/features/routing/routing-table.tsx:61
+#: src/features/routing/routing-table.tsx:56
 msgid "No services configured."
 msgstr "Dim gwasanaethau wedi'u ffurfweddu."
 
@@ -1787,7 +1771,7 @@ msgstr "Heb ei ganfod"
 msgid "Not set"
 msgstr "Heb ei osod"
 
-#: src/routes/_authenticated/app/$appId.tsx:360
+#: src/routes/_authenticated/app/$appId.tsx:349
 msgid "Not versioned"
 msgstr "Heb ei fersiynu"
 
@@ -1888,11 +1872,11 @@ msgstr "Pasallweddi"
 msgid "Passkeys are not available in this browser"
 msgstr "Nid yw pasallweddi ar gael yn y porwr hwn"
 
-#: src/features/apps/index.tsx:604
+#: src/features/apps/index.tsx:597
 msgid "Paste the install link:"
 msgstr "Gludwch y ddolen gosod:"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Path"
 msgstr "Llwybr"
 
@@ -1913,16 +1897,16 @@ msgstr "Patrwm (regex)"
 msgid "People"
 msgstr "Pobl"
 
-#: src/routes/_authenticated/app/$appId.tsx:486
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Permission granted"
 msgstr "Caniatâd wedi'i roi"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:456
 msgid "Permission revoked"
 msgstr "Caniatâd wedi'i ddirymu"
 
-#: src/routes/_authenticated/app/$appId.tsx:152
-#: src/routes/_authenticated/app/$appId.tsx:521
+#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:510
 msgid "Permissions"
 msgstr "Caniatadau"
 
@@ -1956,7 +1940,7 @@ msgstr "Postiadau a sylwadau"
 msgid "Preference updated"
 msgstr "Dewis wedi'i ddiweddaru"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Preferred version"
 msgstr "Fersiwn Dewisol"
 
@@ -1982,7 +1966,7 @@ msgstr "Anogiad wedi'i gadw"
 msgid "Properties"
 msgstr "Priodweddau"
 
-#: src/routes/_authenticated/app/$appId.tsx:227
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Provided classes"
 msgstr "Dosbarthiadau a Ddarperir"
 
@@ -2003,7 +1987,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Ailgofrestrwch eich allweddi mynediad ar y gweinydd hwn"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:452
+#: src/features/apps/index.tsx:445
 msgid "Recommended"
 msgstr "Argymhellir"
 
@@ -2137,8 +2121,8 @@ msgid "Retry"
 msgstr "Ail-geisio"
 
 #: ../../../lib/web/src/components/options-menu.tsx:247
-#: src/routes/_authenticated/app/$appId.tsx:641
-#: src/routes/_authenticated/app/$appId.tsx:644
+#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:629
 msgid "Revoke"
 msgstr "Dirymu"
 
@@ -2146,11 +2130,11 @@ msgstr "Dirymu"
 msgid "Revoke access"
 msgstr "Dirymu mynediad"
 
-#: src/routes/_authenticated/app/$appId.tsx:651
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission"
 msgstr "Dirymu caniatâd"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:634
 msgid "Revoke permission?"
 msgstr "Dirymu caniatâd?"
 
@@ -2158,7 +2142,7 @@ msgstr "Dirymu caniatâd?"
 msgid "Revoke RSS access?"
 msgstr "Dirymu mynediad RSS?"
 
-#: src/routes/_authenticated/app/$appId.tsx:466
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Revoking permission..."
 msgstr "Yn dirymu caniatâd..."
 
@@ -2189,7 +2173,7 @@ msgstr "Dydd Sadwrn"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2200,8 +2184,8 @@ msgstr "Cadw"
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:316
-#: src/routes/_authenticated/app/$appId.tsx:338
+#: src/routes/_authenticated/app/$appId.tsx:305
+#: src/routes/_authenticated/app/$appId.tsx:327
 msgid "Saving..."
 msgstr "Yn cadw..."
 
@@ -2212,11 +2196,11 @@ msgstr "Yn cadw..."
 msgid "Search"
 msgstr "Chwilio"
 
-#: src/features/apps/index.tsx:371
+#: src/features/apps/index.tsx:368
 msgid "Search apps"
 msgstr "Chwilio apiau"
 
-#: src/features/apps/index.tsx:370
+#: src/features/apps/index.tsx:367
 msgid "Search apps..."
 msgstr "Chwilio apiau..."
 
@@ -2272,10 +2256,6 @@ msgstr "Yn chwilio..."
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts:16
 msgid "Select"
 msgstr "Dewis"
-
-#: src/routes/_authenticated/app/$appId.tsx:536
-msgid "Select a capability to grant to {appName}."
-msgstr "Dewiswch alluedd i'w roi i {appName}."
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 msgid "Select a field"
@@ -2354,7 +2334,7 @@ msgstr "Gwall gweinydd"
 msgid "Server rules"
 msgstr "Rheolau'r gweinydd"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "Gwasanaeth"
 
@@ -2471,14 +2451,14 @@ msgstr "Dydd Sul"
 msgid "Switch to view 1-9"
 msgstr "Newid i olwg 1-9"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "System"
 
-#: src/features/routing/routing-table.tsx:79
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/features/routing/routing-table.tsx:74
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "System default"
 msgstr "Diofyn y system"
 
@@ -2499,7 +2479,7 @@ msgstr "Rhaid i'r tag fod yn 50 nod neu lai"
 msgid "Tags"
 msgstr "Tagiau"
 
-#: src/routes/_authenticated/app/$appId.tsx:224
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "Technical capabilities"
 msgstr "Galluoedd Technegol"
 
@@ -2545,7 +2525,7 @@ msgstr "Ni chafodd y cais meicroffon ei ateb"
 msgid "The passkey request was not answered"
 msgstr "Ni chafodd y cais pasallwedd ei ateb"
 
-#: src/routes/_authenticated/app/$appId.tsx:132
+#: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "Ni ellid canfod yr ap a ofynnwyd amdano."
 
@@ -2557,7 +2537,7 @@ msgstr "Nid oedd modd dod o hyd i'r cynnwys y gofynnwyd amdano."
 msgid "The server returned a web page instead of data."
 msgstr "Dychwelodd y gweinydd dudalen we yn lle data."
 
-#: src/routes/_authenticated/app/$appId.tsx:361
+#: src/routes/_authenticated/app/$appId.tsx:350
 msgid "This app does not have version management"
 msgstr "Nid oes gan yr ap hwn reolaeth fersiwn"
 
@@ -2574,7 +2554,7 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Bydd hyn yn dileu'r gêm a'i sgwrs yn barhaol. Ni ellir dadwneud hyn."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:650
+#: src/routes/_authenticated/app/$appId.tsx:635
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "Bydd hyn yn diddymu'r caniatâd \"{0}\" o {appName}. Gall yr ap stopio gweithio'n iawn."
 
@@ -2617,8 +2597,8 @@ msgstr "Gormod o geisiadau"
 msgid "Top"
 msgstr "Brig"
 
-#: src/features/apps/index.tsx:742
-#: src/routes/_authenticated/app/$appId.tsx:380
+#: src/features/apps/index.tsx:735
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Trac"
 
@@ -2664,7 +2644,7 @@ msgstr "Teipiwch i chwilio..."
 msgid "Unable to connect to remote server"
 msgstr "Methu cysylltu â'r gweinydd pell"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:464
 msgid "Unable to connect to the recommendations service"
 msgstr "Methu cysylltu â'r gwasanaeth argymhellion"
 
@@ -2686,7 +2666,7 @@ msgid "Unassigned"
 msgstr "Heb ei neilltuo"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:463
 msgid "Unavailable"
 msgstr "Ddim ar gael"
 
@@ -2699,7 +2679,7 @@ msgstr "Gwall API annisgwyl"
 msgid "United States"
 msgstr "Yr Unol Daleithiau"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2717,11 +2697,11 @@ msgstr "Dad-danysgrifio"
 msgid "Untitled"
 msgstr "Heb deitl"
 
-#: src/features/apps/index.tsx:738
+#: src/features/apps/index.tsx:731
 msgid "Update"
 msgstr "Diweddaru"
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Update all"
 msgstr "Diweddaru pob un"
 
@@ -2743,7 +2723,7 @@ msgstr "Diweddarwyd {field}"
 msgid "Updating apps..."
 msgstr "Yn diweddaru apiau..."
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Updating..."
 msgstr "Yn diweddaru..."
 
@@ -2756,7 +2736,7 @@ msgstr "Llwytho i fyny"
 msgid "Upload progress"
 msgstr "Cynnydd llwytho i fyny"
 
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:150
 msgid "Use system default"
 msgstr "Defnyddio diofyn y system"
 
@@ -2787,7 +2767,7 @@ msgstr "Dilysu"
 msgid "Verify email address"
 msgstr "Dilysu cyfeiriad e-bost"
 
-#: src/routes/_authenticated/app/$appId.tsx:394
+#: src/routes/_authenticated/app/$appId.tsx:383
 msgid "Version"
 msgstr "Fersiwn"
 
@@ -2796,15 +2776,15 @@ msgstr "Fersiwn"
 msgid "Version {0}"
 msgstr "Fersiwn {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#: src/routes/_authenticated/app/$appId.tsx:306
 msgid "Version changed"
 msgstr "Fersiwn wedi newid"
 
-#: src/routes/_authenticated/app/$appId.tsx:413
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "Version management"
 msgstr "Rheoli Fersiynau"
 
-#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:150
 msgid "Versions"
 msgstr "Fersiynau"
 
@@ -2869,7 +2849,7 @@ msgstr "Symudwyd eich cyfrif yma o {source}. Hyd nes y byddwch yn ei ddileu yno,
 msgid "Your attachments will be lost."
 msgstr "Bydd eich atodiadau'n cael eu colli."
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Your preference"
 msgstr "Eich dewis"
 
@@ -2881,6 +2861,6 @@ msgstr "Bydd eich testun a'ch atodiadau'n cael eu colli."
 msgid "Your text will be lost."
 msgstr "Bydd eich testun yn cael ei golli."
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Your version"
 msgstr "Eich Fersiwn"

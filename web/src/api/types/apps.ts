@@ -6,12 +6,22 @@
 export interface InstalledApp {
   id: string
   name: string
+  // The version this user runs, resolved through their own or the system
+  // preference; `latest` is the newest version on disk.
+  active: string
   latest: string
   fingerprint: string
-  user_track?: string
+  user?: { track: string }
   classes?: string[]
   services?: string[]
   paths?: string[]
+}
+
+export interface Update {
+  id: string
+  name: string
+  current: string
+  available: string
 }
 
 export interface MarketApp {

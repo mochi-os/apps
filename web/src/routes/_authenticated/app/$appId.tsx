@@ -31,7 +31,6 @@ import {
   ResponsiveDialog,
   ResponsiveDialogClose,
   ResponsiveDialogContent,
-  ResponsiveDialogDescription,
   ResponsiveDialogFooter,
   ResponsiveDialogHeader,
   ResponsiveDialogTitle,
@@ -53,7 +52,7 @@ import {
   usePermissionCatalog,
   useSetPermission,
 } from '@/hooks/usePermissions'
-import type { Permission } from '@/api/types/apps'
+import type { Permission, InstalledApp } from '@/api/types/apps'
 
 type TabType = 'details' | 'versions' | 'permissions'
 
@@ -188,17 +187,7 @@ function AppPage() {
   )
 }
 
-interface AppInfo {
-  id: string
-  name: string
-  fingerprint: string
-  latest: string
-  classes?: string[]
-  services?: string[]
-  paths?: string[]
-}
-
-function DetailsTab({ app }: { app: AppInfo }) {
+function DetailsTab({ app }: { app: InstalledApp }) {
   const { t } = useLingui()
   return (
     <Section
@@ -216,10 +205,10 @@ function DetailsTab({ app }: { app: AppInfo }) {
         )}
 
         <FieldRow label={t`Current version`}>
-          <DataChip value={app.latest} />
+          <DataChip value={app.active} />
         </FieldRow>
 
-        {(app.classes?.length || app.services?.length || app.paths?.length) && (
+        {(!!app.classes?.length || !!app.services?.length || !!app.paths?.length) && (
           <div className='mt-6 border-t pt-6 space-y-4'>
             <h4 className='text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4'><Trans>Technical capabilities</Trans></h4>
             
@@ -261,7 +250,7 @@ function VersionsTab({ appId }: { appId: string }) {
 
   const hasMultipleVersions = (versionData?.versions?.length ?? 0) > 1
   const hasTracks = Object.keys(versionData?.tracks ?? {}).length > 0
-  const isAdmin = versionData?.is_admin ?? false
+  const isAdmin = versionData?.administrator ?? false
   const defaultTrack = versionData?.default_track ?? ''
 
   // Resolve a version preference to a dropdown value, ensuring it matches an available option
@@ -519,8 +508,7 @@ function PermissionsTab({ appId, appName, isSelf }: { appId: string; appName: st
   return (
     <Section
       title={t`Permissions`}
-      description={grantedPermissions.length === 0
-        ? t`No permissions granted to this app` : t`Manage capabilities granted to this application`}
+      description={grantedPermissions.length === 0 ? t`No permissions granted to this app` : undefined}
       action={availablePermissions.length > 0 && (
         <ResponsiveDialog open={grantDialogOpen} onOpenChange={setGrantDialogOpen}>
           <ResponsiveDialogTrigger asChild>
@@ -532,9 +520,6 @@ function PermissionsTab({ appId, appName, isSelf }: { appId: string; appName: st
           <ResponsiveDialogContent className='flex flex-col overflow-hidden sm:max-w-lg data-[vaul-drawer-direction=bottom]:mt-4 data-[vaul-drawer-direction=bottom]:max-h-[calc(100dvh-1rem)]'>
             <ResponsiveDialogHeader>
               <ResponsiveDialogTitle><Trans>Grant permission</Trans></ResponsiveDialogTitle>
-              <ResponsiveDialogDescription>
-                <Trans>Select a capability to grant to {appName}.</Trans>
-              </ResponsiveDialogDescription>
             </ResponsiveDialogHeader>
             <div className='min-h-0 flex-1 space-y-2 overflow-y-auto py-1'>
               {availablePermissions.map((p) => (

@@ -46,7 +46,7 @@ msgid "{0, plural, one {Removed # unused version} other {Removed # unused versio
 msgstr "{0, plural, one {# બિનઉપયોગી સંસ્કરણ દૂર કરાયું} other {# બિનઉપયોગી સંસ્કરણો દૂર કરાયાં}}"
 
 #. placeholder {0}: app.name
-#: src/features/routing/routing-table.tsx:23
+#: src/features/routing/routing-table.tsx:18
 msgid "{0} (development)"
 msgstr "{0} (ડેવલપમેન્ટ)"
 
@@ -100,11 +100,11 @@ msgstr "{totalCount, plural, one {# વસ્તુ} other {# વસ્તુઓ
 msgid "{totalDescendants, plural, one {# reply} other {+# more replies}}"
 msgstr "{totalDescendants, plural, one {# જવાબ} other {+# વધુ જવાબો}}"
 
-#: src/routes/_authenticated/app/$appId.tsx:385
+#: src/routes/_authenticated/app/$appId.tsx:374
 msgid "{track} (default, version {version})"
 msgstr "{track} (ડિફોલ્ટ, આવૃત્તિ {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:386
+#: src/routes/_authenticated/app/$appId.tsx:375
 msgid "{track} (version {version})"
 msgstr "{track} (આવૃત્તિ {version})"
 
@@ -208,7 +208,7 @@ msgstr "વિકલ્પ ઉમેરો"
 msgid "Add tag..."
 msgstr "ટૅગ ઉમેરો..."
 
-#: src/features/apps/index.tsx:653
+#: src/features/apps/index.tsx:646
 msgid "Add to directory"
 msgstr "ડિરેક્ટરીમાં ઉમેરો"
 
@@ -270,12 +270,12 @@ msgid "Anything subscribed to this feed will stop receiving it. You can copy a n
 msgstr "આ ફીડ પર સબ્સ્ક્રાઇબ થયેલું બધું તે મળવાનું બંધ કરશે. પછી તમે નવું URL કૉપિ કરી શકો છો."
 
 #: src/features/apps/index.tsx:164
-#: src/routes/_authenticated/app/$appId.tsx:98
+#: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "એપ્લિકેશન"
 
+#: src/features/apps/index.tsx:297
 #: src/features/apps/index.tsx:307
-#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "એપ્લિકેશન ક્રિયાઓ"
 
@@ -291,19 +291,19 @@ msgstr "એપ્લિકેશન ઇન્સ્ટૉલ થઈ"
 msgid "App installed successfully"
 msgstr "ઍપ સફળતાપૂર્વક ઇન્સ્ટોલ થઈ"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:131
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:130
 msgid "App not found"
 msgstr "એપ્લિકેશન મળી નહીં"
 
-#: src/routes/_authenticated/app/$appId.tsx:208
+#: src/routes/_authenticated/app/$appId.tsx:197
 msgid "Application ID"
 msgstr "Application ID"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:355
 msgid "Apps"
 msgstr "એપ્લિકેશનો"
 
@@ -370,7 +370,7 @@ msgstr "ઉપલબ્ધ આવૃત્તિ:"
 msgid "Available versions:"
 msgstr "ઉપલબ્ધ આવૃત્તિઓ:"
 
-#: src/features/apps/index.tsx:451
+#: src/features/apps/index.tsx:444
 msgid "Available, but not installed"
 msgstr "ઉપલબ્ધ, પરંતુ ઇન્સ્ટૉલ નથી"
 
@@ -386,9 +386,9 @@ msgstr "{name} માટે અવતાર"
 msgid "Back"
 msgstr "પાછળ"
 
-#: src/routes/_authenticated/app/$appId.tsx:106
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:144
+#: src/routes/_authenticated/app/$appId.tsx:105
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:143
 msgid "Back to apps"
 msgstr "એપ્લિકેશનો પર પાછા"
 
@@ -397,16 +397,16 @@ msgstr "એપ્લિકેશનો પર પાછા"
 msgid "Back to home"
 msgstr "મુખ્ય પૃષ્ઠ પર પાછા જાઓ"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "બૅનર"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "બેનર દૂર કર્યું"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "બેનર અપડેટ કર્યું"
 
@@ -465,10 +465,10 @@ msgstr "કૅમેરો ઉપલબ્ધ નથી"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:575
-#: src/features/apps/index.tsx:616
-#: src/features/apps/index.tsx:666
-#: src/routes/_authenticated/app/$appId.tsx:565
+#: src/features/apps/index.tsx:568
+#: src/features/apps/index.tsx:609
+#: src/features/apps/index.tsx:659
+#: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "રદ કરો"
 
@@ -525,7 +525,7 @@ msgstr "સાઇડબારમાંથી રમત પસંદ કરો �
 msgid "Choose language"
 msgstr "ભાષા પસંદ કરો"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Class"
 msgstr "વર્ગ"
 
@@ -538,16 +538,16 @@ msgstr "ક્લાસ રૂટિંગ"
 msgid "Classes"
 msgstr "ક્લાસ"
 
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Clean up unused versions"
 msgstr "ઉપયોગમાં ન હોય તેવી આવૃત્તિઓ સાફ કરો"
 
 #: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Cleaning up..."
 msgstr "સાફ કરી રહ્યું છે..."
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -658,18 +658,6 @@ msgstr "વિકલ્પ સેટિંગ્સ કૉન્ફિગર ક
 msgid "Configure view settings"
 msgstr "દૃશ્ય સેટિંગ્સ કૉન્ફિગર કરો"
 
-#: src/features/routing/paths.tsx:25
-msgid "Configure which app handles each URL path."
-msgstr "દરેક URL પાથ કઈ એપ્લિકેશન સંભાળે છે તે કૉન્ફિગર કરો."
-
-#: src/features/routing/classes.tsx:25
-msgid "Configure which app handles entities of each type."
-msgstr "દરેક પ્રકારના ઘટકોને કઈ એપ્લિકેશન સંભાળે છે તે કૉન્ફિગર કરો."
-
-#: src/features/routing/services.tsx:25
-msgid "Configure which app handles inter-app service calls."
-msgstr "આંતર-એપ્લિકેશન સેવા કૉલ્સ કઈ એપ્લિકેશન સંભાળે છે તે કૉન્ફિગર કરો."
-
 #: ../../../lib/web/src/components/place-picker.tsx:146
 #: ../../../lib/web/src/components/travelling-picker.tsx:296
 msgid "Confirm"
@@ -777,7 +765,7 @@ msgstr "બનાવી રહ્યું છે..."
 msgid "Current location"
 msgstr "વર્તમાન સ્થાન"
 
-#: src/routes/_authenticated/app/$appId.tsx:218
+#: src/routes/_authenticated/app/$appId.tsx:207
 msgid "Current version"
 msgstr "વર્તમાન આવૃત્તિ"
 
@@ -798,7 +786,7 @@ msgstr "ડેટા સંઘર્ષ"
 msgid "Date"
 msgstr "તારીખ"
 
-#: src/features/routing/routing-table.tsx:77
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "દ્વારા ઘોષિત"
 
@@ -807,8 +795,8 @@ msgid "Decline"
 msgstr "નકારો"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
-#: src/features/routing/routing-table.tsx:131
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:126
+#: src/features/routing/routing-table.tsx:150
 msgid "Default"
 msgstr "ડિફૉલ્ટ"
 
@@ -816,15 +804,15 @@ msgstr "ડિફૉલ્ટ"
 msgid "Default AI account"
 msgstr "ડિફૉલ્ટ AI ખાતું"
 
-#: src/routes/_authenticated/app/$appId.tsx:441
+#: src/routes/_authenticated/app/$appId.tsx:430
 msgid "Default for all users"
 msgstr "બધા વપરાશકર્તાઓ માટે ડિફોલ્ટ"
 
-#: src/routes/_authenticated/app/$appId.tsx:440
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "બધા વપરાશકર્તાઓ માટે ડિફોલ્ટ (આવૃત્તિ {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:339
+#: src/routes/_authenticated/app/$appId.tsx:328
 msgid "Default for all users updated"
 msgstr "બધા વપરાશકર્તાઓ માટે ડિફૉલ્ટ અપડેટ થયું"
 
@@ -832,12 +820,12 @@ msgstr "બધા વપરાશકર્તાઓ માટે ડિફૉલ
 msgid "Default sort"
 msgstr "ડિફૉલ્ટ સૉર્ટ"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:414
 msgid "Default track"
 msgstr "ડિફોલ્ટ ટ્રેક"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:413
 msgid "Default track (version {0})"
 msgstr "ડિફોલ્ટ ટ્રેક (આવૃત્તિ {0})"
 
@@ -919,7 +907,7 @@ msgstr "ઊતરતો ક્રમ"
 msgid "Description"
 msgstr "વર્ણન"
 
-#: src/routes/_authenticated/app/$appId.tsx:150
+#: src/routes/_authenticated/app/$appId.tsx:149
 msgid "Details"
 msgstr "વિગતો"
 
@@ -938,7 +926,7 @@ msgstr "વિગતો પૅનલ"
 msgid "Detect from web browser"
 msgstr "વેબ બ્રાઉઝરમાંથી શોધો"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:419
 msgid "Development apps"
 msgstr "Development એપ્લિકેશનો"
 
@@ -1044,11 +1032,11 @@ msgstr "ઇમેઇલ"
 msgid "Email code"
 msgstr "ઇમેઇલ કોડ"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:224
 msgid "Enabled services"
 msgstr "સક્ષમ સેવાઓ"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "બેનર ટેક્સ્ટ દાખલ કરો (માર્કડાઉન સપોર્ટેડ)..."
 
@@ -1125,7 +1113,7 @@ msgstr "લિંક કાઢી નાખવામાં નિષ્ફળ"
 msgid "Failed to get RSS token"
 msgstr "RSS ટોકન મેળવવામાં નિષ્ફળ"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:476
 msgid "Failed to grant permission"
 msgstr "પરવાનગી આપવામાં નિષ્ફળ"
 
@@ -1133,7 +1121,11 @@ msgstr "પરવાનગી આપવામાં નિષ્ફળ"
 msgid "Failed to load"
 msgstr "લોડ કરવામાં નિષ્ફળ"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "બેનર લોડ કરવામાં નિષ્ફળ"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "ઇતિહાસ લોડ કરવામાં નિષ્ફળ"
 
@@ -1166,7 +1158,7 @@ msgstr "કમેન્ટ પોસ્ટ કરવામાં નિષ્ફ
 msgid "Failed to reset prompt"
 msgstr "પ્રોમ્પ્ટ રીસેટ કરવામાં નિષ્ફળ"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Failed to revoke permission"
 msgstr "પરવાનગી રદ કરવામાં નિષ્ફળ"
 
@@ -1186,7 +1178,7 @@ msgstr "પ્રોમ્પ્ટ સેવ કરવામાં નિષ્
 msgid "Failed to update apps"
 msgstr "ઍપ અપડેટ કરવામાં નિષ્ફળ"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "બેનર અપડેટ કરવામાં નિષ્ફળ"
 
@@ -1194,12 +1186,12 @@ msgstr "બેનર અપડેટ કરવામાં નિષ્ફળ"
 msgid "Failed to update comment"
 msgstr "કમેન્ટ અપડેટ કરવામાં નિષ્ફળ"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:329
 msgid "Failed to update default"
 msgstr "ડિફૉલ્ટ અપડેટ કરવામાં નિષ્ફળ"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:318
+#: src/routes/_authenticated/app/$appId.tsx:307
 msgid "Failed to update preference"
 msgstr "પ્રેફરન્સ અપડેટ કરવામાં નિષ્ફળ"
 
@@ -1215,7 +1207,7 @@ msgstr "નિરીક્ષણ અપડેટ કરવામાં નિષ
 msgid "Failed to upload attachment"
 msgstr "એટેચમેન્ટ અપલોડ કરવામાં નિષ્ફળ"
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:639
 msgid "File:"
 msgstr "ફાઇલ:"
 
@@ -1225,7 +1217,7 @@ msgstr "ફાઇલ:"
 msgid "Files"
 msgstr "ફાઇલ્સ"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:202
 msgid "Fingerprint"
 msgstr "આંગળાની છાપ"
 
@@ -1259,7 +1251,7 @@ msgstr "મિત્રો"
 msgid "From"
 msgstr "તરફથી"
 
-#: src/features/apps/index.tsx:506
+#: src/features/apps/index.tsx:499
 msgid "From the directory"
 msgstr "ડિરેક્ટરીમાંથી"
 
@@ -1276,15 +1268,15 @@ msgstr "થીમમાંથી"
 msgid "Go back"
 msgstr "પાછા જાઓ"
 
-#: src/routes/_authenticated/app/$appId.tsx:529
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "આપો"
 
-#: src/routes/_authenticated/app/$appId.tsx:534
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "પરવાનગી આપો"
 
-#: src/routes/_authenticated/app/$appId.tsx:485
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Granting permission..."
 msgstr "પરવાનગી આપી રહ્યાં છીએ..."
 
@@ -1301,11 +1293,11 @@ msgstr "આના આધારે જૂથ કરો"
 msgid "Group: {0}"
 msgstr "જૂથ: {0}"
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Handler"
 msgstr "હેન્ડલર"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "ઇતિહાસ"
 
@@ -1320,7 +1312,7 @@ msgstr "હોમ"
 msgid "Hot"
 msgstr "હૉટ"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "HTTP paths"
 msgstr "HTTP પાથ્સ"
 
@@ -1328,7 +1320,7 @@ msgstr "HTTP પાથ્સ"
 msgid "ID"
 msgstr "આઈડી"
 
-#: src/routes/_authenticated/app/$appId.tsx:205
+#: src/routes/_authenticated/app/$appId.tsx:194
 msgid "Identity"
 msgstr "ઓળખ"
 
@@ -1355,32 +1347,28 @@ msgstr "{name} માટે આદ્યાક્ષર અવતાર"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Install"
 msgstr "ઇન્સ્ટૉલ કરો"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:566
+#: src/features/apps/index.tsx:559
 msgid "Install {0}?"
 msgstr "{0} ઇન્સ્ટોલ કરવું?"
 
-#: src/features/apps/index.tsx:399
-msgid "Install apps from the market or upload your own"
-msgstr "માર્કેટમાંથી ઍપ્સ ઇન્સ્ટૉલ કરો અથવા તમારી પોતાની અપલોડ કરો"
-
-#: src/features/apps/index.tsx:339
-#: src/features/apps/index.tsx:642
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:635
 msgid "Install from file"
 msgstr "ફાઇલમાંથી ઇન્સ્ટૉલ કરો"
 
-#: src/features/apps/index.tsx:335
-#: src/features/apps/index.tsx:600
+#: src/features/apps/index.tsx:325
+#: src/features/apps/index.tsx:593
 msgid "Install from publisher"
 msgstr "પબ્લિશરમાંથી ઇન્સ્ટૉલ કરો"
 
-#: src/features/apps/index.tsx:382
+#: src/features/apps/index.tsx:376
 msgid "Installed apps"
 msgstr "ઇન્સ્ટૉલ થયેલી ઍપ્સ"
 
@@ -1390,9 +1378,9 @@ msgstr "ઇન્સ્ટૉલ થયેલી ઍપ્સ"
 #: src/features/apps/index.tsx:162
 #: src/features/apps/index.tsx:182
 #: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Installing..."
 msgstr "ઇન્સ્ટૉલ થઈ રહ્યું છે..."
 
@@ -1495,10 +1483,6 @@ msgstr "સફળતાપૂર્વક લૉગ આઉટ થયા"
 msgid "Logging out…"
 msgstr "લૉગ આઉટ થઈ રહ્યું છે…"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
-msgid "Manage capabilities granted to this application"
-msgstr "આ એપ્લિકેશનને આપવામાં આવેલી ક્ષમતાઓનું સંચાલન કરો"
-
 #: ../../../lib/web/src/components/notification-category-button.tsx:127
 msgid "Manage categories"
 msgstr "શ્રેણીઓ મેનેજ કરો"
@@ -1573,7 +1557,7 @@ msgstr "ખસેડ્યું"
 msgid "Moved {field}"
 msgstr "{field} ખસેડ્યું"
 
-#: src/features/routing/routing-table.tsx:107
+#: src/features/routing/routing-table.tsx:102
 msgid "Multiple apps declare this resource"
 msgstr "એકથી વધુ એપ્સ આ રિસોર્સ ઘોષિત કરે છે"
 
@@ -1633,11 +1617,11 @@ msgstr "હજુ સુધી કોઈ પ્રવૃત્તિ નથી"
 msgid "No apps could be updated."
 msgstr "કોઈ એપ્સ અપડેટ કરી શકાઈ નહીં."
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:392
 msgid "No apps installed"
 msgstr "કોઈ એપ્સ ઇન્સ્ટોલ કરેલી નથી"
 
-#: src/features/routing/routing-table.tsx:59
+#: src/features/routing/routing-table.tsx:54
 msgid "No classes configured."
 msgstr "કોઈ વર્ગો ગોઠવાયેલા નથી."
 
@@ -1645,11 +1629,11 @@ msgstr "કોઈ વર્ગો ગોઠવાયેલા નથી."
 msgid "No comments yet"
 msgstr "હજુ સુધી કોઈ કૉમેન્ટ્સ નથી"
 
-#: src/features/apps/index.tsx:493
+#: src/features/apps/index.tsx:486
 msgid "No description"
 msgstr "કોઈ વર્ણન નથી"
 
-#: src/features/apps/index.tsx:431
+#: src/features/apps/index.tsx:424
 msgid "No development apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" સાથે મેળ ખાતી કોઈ ડેવલપમેન્ટ એપ્સ નથી"
 
@@ -1661,11 +1645,11 @@ msgstr "હજુ સુધી કોઈ ગેમ્સ નથી"
 msgid "No groups available"
 msgstr "કોઈ ગ્રૂપ્સ ઉપલબ્ધ નથી"
 
-#: src/features/apps/index.tsx:524
+#: src/features/apps/index.tsx:517
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "ડિરેક્ટરીમાં \"{searchQuery}\" સાથે મેળ ખાતી કોઈ ઇન્સ્ટોલ કરી શકાય તેવી એપ્સ નથી"
 
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:398
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" સાથે મેળ ખાતી કોઈ ઇન્સ્ટોલ થયેલી એપ્સ નથી"
 
@@ -1673,12 +1657,12 @@ msgstr "\"{searchQuery}\" સાથે મેળ ખાતી કોઈ ઇન�
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "હજુ સુધી કોઈ આઇટમ પ્રકારો બનાવી શકાતા નથી. પહેલા જરૂરી પેરન્ટ આઇટમ્સ બનાવો."
 
-#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:516
 msgid "No matches in directory"
 msgstr "ડિરેક્ટરીમાં કોઈ મેળ નથી"
 
-#: src/features/apps/index.tsx:404
-#: src/features/apps/index.tsx:430
+#: src/features/apps/index.tsx:397
+#: src/features/apps/index.tsx:423
 msgid "No matching apps"
 msgstr "કોઈ મેળ ખાતી એપ્સ નથી"
 
@@ -1686,7 +1670,7 @@ msgstr "કોઈ મેળ ખાતી એપ્સ નથી"
 msgid "No matching objects"
 msgstr "કોઈ મેળ ખાતી ઑબ્જેક્ટ્સ નથી"
 
-#: src/features/routing/routing-table.tsx:63
+#: src/features/routing/routing-table.tsx:58
 msgid "No paths configured."
 msgstr "કોઈ પાથ ગોઠવાયેલા નથી."
 
@@ -1695,11 +1679,11 @@ msgstr "કોઈ પાથ ગોઠવાયેલા નથી."
 msgid "No people found"
 msgstr "કોઈ લોકો મળ્યા નથી"
 
-#: src/routes/_authenticated/app/$appId.tsx:588
+#: src/routes/_authenticated/app/$appId.tsx:573
 msgid "No permissions granted"
 msgstr "કોઈ પરવાનગીઓ આપેલી નથી"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "આ એપને કોઈ પરવાનગી આપવામાં આવી નથી"
 
@@ -1707,7 +1691,7 @@ msgstr "આ એપને કોઈ પરવાનગી આપવામાં �
 msgid "No places found"
 msgstr "કોઈ સ્થળો મળ્યા નથી"
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:469
 msgid "No recommendations available"
 msgstr "કોઈ ભલામણો ઉપલબ્ધ નથી"
 
@@ -1720,7 +1704,7 @@ msgstr "કોઈ પરિણામ મળ્યું નથી"
 msgid "No results found."
 msgstr "કોઈ પરિણામો મળ્યા નથી."
 
-#: src/features/routing/routing-table.tsx:61
+#: src/features/routing/routing-table.tsx:56
 msgid "No services configured."
 msgstr "કોઈ સેવાઓ ગોઠવાયેલી નથી."
 
@@ -1787,7 +1771,7 @@ msgstr "મળ્યું નથી"
 msgid "Not set"
 msgstr "સેટ કર્યું નથી"
 
-#: src/routes/_authenticated/app/$appId.tsx:360
+#: src/routes/_authenticated/app/$appId.tsx:349
 msgid "Not versioned"
 msgstr "વર્ઝન કરેલું નથી"
 
@@ -1888,11 +1872,11 @@ msgstr "પાસકીઝ"
 msgid "Passkeys are not available in this browser"
 msgstr "આ બ્રાઉઝરમાં પાસકીઝ ઉપલબ્ધ નથી"
 
-#: src/features/apps/index.tsx:604
+#: src/features/apps/index.tsx:597
 msgid "Paste the install link:"
 msgstr "ઇન્સ્ટોલ લિંક પેસ્ટ કરો:"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Path"
 msgstr "પાથ"
 
@@ -1913,16 +1897,16 @@ msgstr "પૅટર્ન (regex)"
 msgid "People"
 msgstr "લોકો"
 
-#: src/routes/_authenticated/app/$appId.tsx:486
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Permission granted"
 msgstr "પરવાનગી આપી"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:456
 msgid "Permission revoked"
 msgstr "પરવાનગી રદ કરી"
 
-#: src/routes/_authenticated/app/$appId.tsx:152
-#: src/routes/_authenticated/app/$appId.tsx:521
+#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:510
 msgid "Permissions"
 msgstr "પરવાનગીઓ"
 
@@ -1956,7 +1940,7 @@ msgstr "પોસ્ટ્સ અને કૉમેન્ટ્સ"
 msgid "Preference updated"
 msgstr "પ્રેફરન્સ અપડેટ થયું"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Preferred version"
 msgstr "પસંદગીની આવૃત્તિ"
 
@@ -1982,7 +1966,7 @@ msgstr "પ્રોમ્પ્ટ સાચવ્યું"
 msgid "Properties"
 msgstr "ગુણધર્મો"
 
-#: src/routes/_authenticated/app/$appId.tsx:227
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Provided classes"
 msgstr "પ્રદાન કરેલા ક્લાસ"
 
@@ -2003,7 +1987,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "આ સર્વર પર તમારી પાસકી ફરીથી નોંધણી કરો"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:452
+#: src/features/apps/index.tsx:445
 msgid "Recommended"
 msgstr "ભલામણ કરેલ"
 
@@ -2137,8 +2121,8 @@ msgid "Retry"
 msgstr "ફરી પ્રયાસ કરો"
 
 #: ../../../lib/web/src/components/options-menu.tsx:247
-#: src/routes/_authenticated/app/$appId.tsx:641
-#: src/routes/_authenticated/app/$appId.tsx:644
+#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:629
 msgid "Revoke"
 msgstr "રદ કરો"
 
@@ -2146,11 +2130,11 @@ msgstr "રદ કરો"
 msgid "Revoke access"
 msgstr "ઍક્સેસ રદ કરો"
 
-#: src/routes/_authenticated/app/$appId.tsx:651
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission"
 msgstr "પરવાનગી રદ કરો"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:634
 msgid "Revoke permission?"
 msgstr "પરવાનગી રદ કરવી છે?"
 
@@ -2158,7 +2142,7 @@ msgstr "પરવાનગી રદ કરવી છે?"
 msgid "Revoke RSS access?"
 msgstr "RSS ઍક્સેસ રદ કરવો છે?"
 
-#: src/routes/_authenticated/app/$appId.tsx:466
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Revoking permission..."
 msgstr "પરવાનગી રદ કરી રહ્યાં છીએ..."
 
@@ -2189,7 +2173,7 @@ msgstr "શનિવાર"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2200,8 +2184,8 @@ msgstr "સાચવો"
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:316
-#: src/routes/_authenticated/app/$appId.tsx:338
+#: src/routes/_authenticated/app/$appId.tsx:305
+#: src/routes/_authenticated/app/$appId.tsx:327
 msgid "Saving..."
 msgstr "સાચવી રહ્યું છે..."
 
@@ -2212,11 +2196,11 @@ msgstr "સાચવી રહ્યું છે..."
 msgid "Search"
 msgstr "શોધો"
 
-#: src/features/apps/index.tsx:371
+#: src/features/apps/index.tsx:368
 msgid "Search apps"
 msgstr "એપ્સ શોધો"
 
-#: src/features/apps/index.tsx:370
+#: src/features/apps/index.tsx:367
 msgid "Search apps..."
 msgstr "એપ્સ શોધો..."
 
@@ -2272,10 +2256,6 @@ msgstr "શોધી રહ્યું છે..."
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts:16
 msgid "Select"
 msgstr "પસંદ કરો"
-
-#: src/routes/_authenticated/app/$appId.tsx:536
-msgid "Select a capability to grant to {appName}."
-msgstr "{appName} ને આપવા માટેની ક્ષમતા પસંદ કરો."
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 msgid "Select a field"
@@ -2354,7 +2334,7 @@ msgstr "સર્વર ભૂલ"
 msgid "Server rules"
 msgstr "સર્વર નિયમો"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "સેવા"
 
@@ -2471,14 +2451,14 @@ msgstr "રવિવાર"
 msgid "Switch to view 1-9"
 msgstr "દૃશ્ય 1-9 પર સ્વિચ કરો"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "સિસ્ટમ"
 
-#: src/features/routing/routing-table.tsx:79
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/features/routing/routing-table.tsx:74
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "System default"
 msgstr "સિસ્ટમ ડિફોલ્ટ"
 
@@ -2499,7 +2479,7 @@ msgstr "ટૅગ 50 અક્ષરો કે તેથી ઓછા હોવ�
 msgid "Tags"
 msgstr "ટૅગ્સ"
 
-#: src/routes/_authenticated/app/$appId.tsx:224
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "Technical capabilities"
 msgstr "ટેકનિકલ ક્ષમતાઓ"
 
@@ -2545,7 +2525,7 @@ msgstr "માઇક્રોફોન વિનંતીનો જવાબ મ
 msgid "The passkey request was not answered"
 msgstr "પાસકી વિનંતીનો જવાબ મળ્યો નથી"
 
-#: src/routes/_authenticated/app/$appId.tsx:132
+#: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "વિનંતી કરેલી એપ મળી નથી."
 
@@ -2557,7 +2537,7 @@ msgstr "વિનંતી કરેલી સામગ્રી મળી શ�
 msgid "The server returned a web page instead of data."
 msgstr "સર્વરે ડેટાને બદલે વેબ પેજ પરત કર્યું."
 
-#: src/routes/_authenticated/app/$appId.tsx:361
+#: src/routes/_authenticated/app/$appId.tsx:350
 msgid "This app does not have version management"
 msgstr "આ એપમાં સંસ્કરણ વ્યવસ્થાપન નથી"
 
@@ -2574,7 +2554,7 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "આ ગેમ અને તેની ચેટને કાયમ માટે કાઢી નાખશે. આ ક્રિયા પાછી લઈ શકાશે નહીં."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:650
+#: src/routes/_authenticated/app/$appId.tsx:635
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "આ {appName} માંથી \"{0}\" પરવાનગી રદ કરશે. એપ યોગ્ય રીતે કામ કરવાનું બંધ કરી શકે છે."
 
@@ -2617,8 +2597,8 @@ msgstr "ઘણી બધી વિનંતીઓ"
 msgid "Top"
 msgstr "ટોચ"
 
-#: src/features/apps/index.tsx:742
-#: src/routes/_authenticated/app/$appId.tsx:380
+#: src/features/apps/index.tsx:735
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "ટ્રૅક"
 
@@ -2664,7 +2644,7 @@ msgstr "શોધવા માટે ટાઇપ કરો..."
 msgid "Unable to connect to remote server"
 msgstr "રિમોટ સર્વર સાથે કનેક્ટ કરી શકાયું નથી"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:464
 msgid "Unable to connect to the recommendations service"
 msgstr "ભલામણ સેવા સાથે કનેક્ટ થઈ શકતું નથી"
 
@@ -2686,7 +2666,7 @@ msgid "Unassigned"
 msgstr "અસોંપાયેલ"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:463
 msgid "Unavailable"
 msgstr "અનુપલબ્ધ"
 
@@ -2699,7 +2679,7 @@ msgstr "અનપેક્ષિત API ભૂલ"
 msgid "United States"
 msgstr "યુનાઇટેડ સ્ટેટ્સ"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2717,11 +2697,11 @@ msgstr "અનસબ્સ્ક્રાઇબ કરો"
 msgid "Untitled"
 msgstr "શીર્ષક વગરનું"
 
-#: src/features/apps/index.tsx:738
+#: src/features/apps/index.tsx:731
 msgid "Update"
 msgstr "અપડેટ કરો"
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Update all"
 msgstr "બધું અપડેટ કરો"
 
@@ -2743,7 +2723,7 @@ msgstr "{field} અપડેટ કર્યું"
 msgid "Updating apps..."
 msgstr "ઍપ અપડેટ કરી રહ્યાં છીએ..."
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Updating..."
 msgstr "અપડેટ કરી રહ્યું છે..."
 
@@ -2756,7 +2736,7 @@ msgstr "અપલોડ કરો"
 msgid "Upload progress"
 msgstr "અપલોડ પ્રગતિ"
 
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:150
 msgid "Use system default"
 msgstr "સિસ્ટમ ડિફોલ્ટ વાપરો"
 
@@ -2787,7 +2767,7 @@ msgstr "ચકાસો"
 msgid "Verify email address"
 msgstr "ઈમેઇલ સરનામું ચકાસો"
 
-#: src/routes/_authenticated/app/$appId.tsx:394
+#: src/routes/_authenticated/app/$appId.tsx:383
 msgid "Version"
 msgstr "સંસ્કરણ"
 
@@ -2796,15 +2776,15 @@ msgstr "સંસ્કરણ"
 msgid "Version {0}"
 msgstr "આવૃત્તિ {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#: src/routes/_authenticated/app/$appId.tsx:306
 msgid "Version changed"
 msgstr "સંસ્કરણ બદલાયું"
 
-#: src/routes/_authenticated/app/$appId.tsx:413
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "Version management"
 msgstr "સંસ્કરણ વ્યવસ્થાપન"
 
-#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:150
 msgid "Versions"
 msgstr "વર્ઝન"
 
@@ -2869,7 +2849,7 @@ msgstr "તમારું ખાતું {source} પરથી અહીં �
 msgid "Your attachments will be lost."
 msgstr "તમારા જોડાણો ખોવાઈ જશે."
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Your preference"
 msgstr "તમારી પસંદગી"
 
@@ -2881,6 +2861,6 @@ msgstr "તમારું લખાણ અને જોડાણો ખોવ�
 msgid "Your text will be lost."
 msgstr "તમારું લખાણ ખોવાઈ જશે."
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Your version"
 msgstr "તમારી આવૃત્તિ"

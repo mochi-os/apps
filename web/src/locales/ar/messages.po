@@ -46,7 +46,7 @@ msgid "{0, plural, one {Removed # unused version} other {Removed # unused versio
 msgstr "{0, plural, zero {لم تتم إزالة أي إصدارات غير مستخدمة} one {تمت إزالة إصدار واحد غير مستخدم} two {تمت إزالة إصدارين غير مستخدمين} few {تمت إزالة # إصدارات غير مستخدمة} many {تمت إزالة # إصدارًا غير مستخدم} other {تمت إزالة # إصدار غير مستخدم}}"
 
 #. placeholder {0}: app.name
-#: src/features/routing/routing-table.tsx:23
+#: src/features/routing/routing-table.tsx:18
 msgid "{0} (development)"
 msgstr "{0} (تطوير)"
 
@@ -100,11 +100,11 @@ msgstr "{totalCount, plural, zero {لا عناصر} one {عنصر واحد} two 
 msgid "{totalDescendants, plural, one {# reply} other {+# more replies}}"
 msgstr "{totalDescendants, plural, zero {+# ردود إضافية} one {رد واحد} two {+# ردود إضافية} few {+# ردود إضافية} many {+# ردود إضافية} other {+# ردود إضافية}}"
 
-#: src/routes/_authenticated/app/$appId.tsx:385
+#: src/routes/_authenticated/app/$appId.tsx:374
 msgid "{track} (default, version {version})"
 msgstr "{track} (افتراضي، الإصدار {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:386
+#: src/routes/_authenticated/app/$appId.tsx:375
 msgid "{track} (version {version})"
 msgstr "{track} (الإصدار {version})"
 
@@ -208,7 +208,7 @@ msgstr "إضافة خيار"
 msgid "Add tag..."
 msgstr "إضافة وسم..."
 
-#: src/features/apps/index.tsx:653
+#: src/features/apps/index.tsx:646
 msgid "Add to directory"
 msgstr "إضافة إلى الدليل"
 
@@ -270,12 +270,12 @@ msgid "Anything subscribed to this feed will stop receiving it. You can copy a n
 msgstr "سيتوقف أي شيء مشترك في هذه التغذية عن تلقيها. يمكنك نسخ عنوان URL جديد بعد ذلك."
 
 #: src/features/apps/index.tsx:164
-#: src/routes/_authenticated/app/$appId.tsx:98
+#: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "التطبيق"
 
+#: src/features/apps/index.tsx:297
 #: src/features/apps/index.tsx:307
-#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "إجراءات التطبيق"
 
@@ -291,19 +291,19 @@ msgstr "تم تثبيت التطبيق"
 msgid "App installed successfully"
 msgstr "تم تثبيت التطبيق بنجاح"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:131
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:130
 msgid "App not found"
 msgstr "التطبيق غير موجود"
 
-#: src/routes/_authenticated/app/$appId.tsx:208
+#: src/routes/_authenticated/app/$appId.tsx:197
 msgid "Application ID"
 msgstr "معرّف التطبيق"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:355
 msgid "Apps"
 msgstr "التطبيقات"
 
@@ -370,7 +370,7 @@ msgstr "الإصدار المتاح:"
 msgid "Available versions:"
 msgstr "الإصدارات المتاحة:"
 
-#: src/features/apps/index.tsx:451
+#: src/features/apps/index.tsx:444
 msgid "Available, but not installed"
 msgstr "متاح، لكنه غير مثبت"
 
@@ -386,9 +386,9 @@ msgstr "صورة {name} الرمزية"
 msgid "Back"
 msgstr "رجوع"
 
-#: src/routes/_authenticated/app/$appId.tsx:106
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:144
+#: src/routes/_authenticated/app/$appId.tsx:105
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:143
 msgid "Back to apps"
 msgstr "العودة إلى التطبيقات"
 
@@ -397,16 +397,16 @@ msgstr "العودة إلى التطبيقات"
 msgid "Back to home"
 msgstr "العودة إلى الرئيسية"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "اللافتة"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "تمت إزالة البانر"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "تم تحديث البانر"
 
@@ -465,10 +465,10 @@ msgstr "الكاميرا غير متاحة"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:575
-#: src/features/apps/index.tsx:616
-#: src/features/apps/index.tsx:666
-#: src/routes/_authenticated/app/$appId.tsx:565
+#: src/features/apps/index.tsx:568
+#: src/features/apps/index.tsx:609
+#: src/features/apps/index.tsx:659
+#: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "إلغاء"
 
@@ -525,7 +525,7 @@ msgstr "اختر لعبة من الشريط الجانبي أو ابدأ لعب�
 msgid "Choose language"
 msgstr "اختر اللغة"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Class"
 msgstr "فئة"
 
@@ -538,16 +538,16 @@ msgstr "توجيه الفئة"
 msgid "Classes"
 msgstr "الفئات"
 
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Clean up unused versions"
 msgstr "تنظيف الإصدارات غير المستخدمة"
 
 #: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Cleaning up..."
 msgstr "جارٍ التنظيف..."
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -658,18 +658,6 @@ msgstr "تكوين إعدادات الخيار"
 msgid "Configure view settings"
 msgstr "تكوين إعدادات العرض"
 
-#: src/features/routing/paths.tsx:25
-msgid "Configure which app handles each URL path."
-msgstr "حدّد التطبيق الذي يعالج كل مسار URL."
-
-#: src/features/routing/classes.tsx:25
-msgid "Configure which app handles entities of each type."
-msgstr "حدّد التطبيق الذي يعالج كيانات كل نوع."
-
-#: src/features/routing/services.tsx:25
-msgid "Configure which app handles inter-app service calls."
-msgstr "حدّد التطبيق الذي يعالج استدعاءات الخدمة بين التطبيقات."
-
 #: ../../../lib/web/src/components/place-picker.tsx:146
 #: ../../../lib/web/src/components/travelling-picker.tsx:296
 msgid "Confirm"
@@ -777,7 +765,7 @@ msgstr "جارٍ الإنشاء..."
 msgid "Current location"
 msgstr "الموقع الحالي"
 
-#: src/routes/_authenticated/app/$appId.tsx:218
+#: src/routes/_authenticated/app/$appId.tsx:207
 msgid "Current version"
 msgstr "الإصدار الحالي"
 
@@ -798,7 +786,7 @@ msgstr "تعارض في البيانات"
 msgid "Date"
 msgstr "التاريخ"
 
-#: src/features/routing/routing-table.tsx:77
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "تم الإعلان بواسطة"
 
@@ -807,8 +795,8 @@ msgid "Decline"
 msgstr "رفض"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
-#: src/features/routing/routing-table.tsx:131
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:126
+#: src/features/routing/routing-table.tsx:150
 msgid "Default"
 msgstr "افتراضي"
 
@@ -816,15 +804,15 @@ msgstr "افتراضي"
 msgid "Default AI account"
 msgstr "حساب الذكاء الاصطناعي الافتراضي"
 
-#: src/routes/_authenticated/app/$appId.tsx:441
+#: src/routes/_authenticated/app/$appId.tsx:430
 msgid "Default for all users"
 msgstr "الافتراضي لجميع المستخدمين"
 
-#: src/routes/_authenticated/app/$appId.tsx:440
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "الافتراضي لجميع المستخدمين (الإصدار {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:339
+#: src/routes/_authenticated/app/$appId.tsx:328
 msgid "Default for all users updated"
 msgstr "تم تحديث الافتراضي لجميع المستخدمين"
 
@@ -832,12 +820,12 @@ msgstr "تم تحديث الافتراضي لجميع المستخدمين"
 msgid "Default sort"
 msgstr "الترتيب الافتراضي"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:414
 msgid "Default track"
 msgstr "المسار الافتراضي"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:413
 msgid "Default track (version {0})"
 msgstr "المسار الافتراضي (الإصدار {0})"
 
@@ -919,7 +907,7 @@ msgstr "تنازلي"
 msgid "Description"
 msgstr "الوصف"
 
-#: src/routes/_authenticated/app/$appId.tsx:150
+#: src/routes/_authenticated/app/$appId.tsx:149
 msgid "Details"
 msgstr "التفاصيل"
 
@@ -938,7 +926,7 @@ msgstr "لوحة التفاصيل"
 msgid "Detect from web browser"
 msgstr "اكتشاف من متصفح الويب"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:419
 msgid "Development apps"
 msgstr "تطبيقات التطوير"
 
@@ -1044,11 +1032,11 @@ msgstr "بريد إلكتروني"
 msgid "Email code"
 msgstr "رمز البريد الإلكتروني"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:224
 msgid "Enabled services"
 msgstr "الخدمات المفعّلة"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "أدخل نص الشعار (Markdown مدعوم)..."
 
@@ -1125,7 +1113,7 @@ msgstr "فشل حذف الرابط"
 msgid "Failed to get RSS token"
 msgstr "فشل الحصول على رمز RSS"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:476
 msgid "Failed to grant permission"
 msgstr "فشل منح الإذن"
 
@@ -1133,7 +1121,11 @@ msgstr "فشل منح الإذن"
 msgid "Failed to load"
 msgstr "فشل التحميل"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "تعذّر تحميل اللافتة"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "فشل تحميل السجل"
 
@@ -1166,7 +1158,7 @@ msgstr "فشل نشر التعليق"
 msgid "Failed to reset prompt"
 msgstr "فشل إعادة تعيين المطالبة"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Failed to revoke permission"
 msgstr "فشل إلغاء الإذن"
 
@@ -1186,7 +1178,7 @@ msgstr "فشل حفظ المطالبة"
 msgid "Failed to update apps"
 msgstr "فشل تحديث التطبيقات"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "فشل تحديث الشعار"
 
@@ -1194,12 +1186,12 @@ msgstr "فشل تحديث الشعار"
 msgid "Failed to update comment"
 msgstr "فشل تحديث التعليق"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:329
 msgid "Failed to update default"
 msgstr "فشل تحديث الافتراضي"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:318
+#: src/routes/_authenticated/app/$appId.tsx:307
 msgid "Failed to update preference"
 msgstr "فشل تحديث التفضيل"
 
@@ -1215,7 +1207,7 @@ msgstr "فشل تحديث المتابعة"
 msgid "Failed to upload attachment"
 msgstr "فشل رفع المرفق"
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:639
 msgid "File:"
 msgstr "الملف:"
 
@@ -1225,7 +1217,7 @@ msgstr "الملف:"
 msgid "Files"
 msgstr "الملفات"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:202
 msgid "Fingerprint"
 msgstr "البصمة"
 
@@ -1259,7 +1251,7 @@ msgstr "الأصدقاء"
 msgid "From"
 msgstr "من"
 
-#: src/features/apps/index.tsx:506
+#: src/features/apps/index.tsx:499
 msgid "From the directory"
 msgstr "من الدليل"
 
@@ -1276,15 +1268,15 @@ msgstr "من السمة"
 msgid "Go back"
 msgstr "رجوع"
 
-#: src/routes/_authenticated/app/$appId.tsx:529
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "منح"
 
-#: src/routes/_authenticated/app/$appId.tsx:534
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "منح الإذن"
 
-#: src/routes/_authenticated/app/$appId.tsx:485
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Granting permission..."
 msgstr "جارٍ منح الإذن..."
 
@@ -1301,11 +1293,11 @@ msgstr "تجميع حسب"
 msgid "Group: {0}"
 msgstr "المجموعة: {0}"
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Handler"
 msgstr "المعالج"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "السجل"
 
@@ -1320,7 +1312,7 @@ msgstr "الرئيسية"
 msgid "Hot"
 msgstr "رائج"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "HTTP paths"
 msgstr "مسارات HTTP"
 
@@ -1328,7 +1320,7 @@ msgstr "مسارات HTTP"
 msgid "ID"
 msgstr "المعرّف"
 
-#: src/routes/_authenticated/app/$appId.tsx:205
+#: src/routes/_authenticated/app/$appId.tsx:194
 msgid "Identity"
 msgstr "الهوية"
 
@@ -1355,32 +1347,28 @@ msgstr "صورة {name} الرمزية بالأحرف الأولى"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Install"
 msgstr "تثبيت"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:566
+#: src/features/apps/index.tsx:559
 msgid "Install {0}?"
 msgstr "تثبيت {0}؟"
 
-#: src/features/apps/index.tsx:399
-msgid "Install apps from the market or upload your own"
-msgstr "ثبّت التطبيقات من السوق أو ارفع تطبيقاتك الخاصة"
-
-#: src/features/apps/index.tsx:339
-#: src/features/apps/index.tsx:642
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:635
 msgid "Install from file"
 msgstr "التثبيت من ملف"
 
-#: src/features/apps/index.tsx:335
-#: src/features/apps/index.tsx:600
+#: src/features/apps/index.tsx:325
+#: src/features/apps/index.tsx:593
 msgid "Install from publisher"
 msgstr "التثبيت من الناشر"
 
-#: src/features/apps/index.tsx:382
+#: src/features/apps/index.tsx:376
 msgid "Installed apps"
 msgstr "التطبيقات المثبّتة"
 
@@ -1390,9 +1378,9 @@ msgstr "التطبيقات المثبّتة"
 #: src/features/apps/index.tsx:162
 #: src/features/apps/index.tsx:182
 #: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Installing..."
 msgstr "جارٍ التثبيت..."
 
@@ -1495,10 +1483,6 @@ msgstr "تم تسجيل الخروج بنجاح"
 msgid "Logging out…"
 msgstr "جاري تسجيل الخروج…"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
-msgid "Manage capabilities granted to this application"
-msgstr "إدارة الإمكانيات الممنوحة لهذا التطبيق"
-
 #: ../../../lib/web/src/components/notification-category-button.tsx:127
 msgid "Manage categories"
 msgstr "إدارة الفئات"
@@ -1573,7 +1557,7 @@ msgstr "تم النقل"
 msgid "Moved {field}"
 msgstr "تم نقل {field}"
 
-#: src/features/routing/routing-table.tsx:107
+#: src/features/routing/routing-table.tsx:102
 msgid "Multiple apps declare this resource"
 msgstr "تطبيقات متعددة تعلن عن هذا المورد"
 
@@ -1633,11 +1617,11 @@ msgstr "لا يوجد نشاط بعد"
 msgid "No apps could be updated."
 msgstr "لا يمكن تحديث أي تطبيقات."
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:392
 msgid "No apps installed"
 msgstr "لا توجد تطبيقات مثبتة"
 
-#: src/features/routing/routing-table.tsx:59
+#: src/features/routing/routing-table.tsx:54
 msgid "No classes configured."
 msgstr "لم يتم تكوين أي فئات."
 
@@ -1645,11 +1629,11 @@ msgstr "لم يتم تكوين أي فئات."
 msgid "No comments yet"
 msgstr "لا توجد تعليقات بعد"
 
-#: src/features/apps/index.tsx:493
+#: src/features/apps/index.tsx:486
 msgid "No description"
 msgstr "لا يوجد وصف"
 
-#: src/features/apps/index.tsx:431
+#: src/features/apps/index.tsx:424
 msgid "No development apps match \"{searchQuery}\""
 msgstr "لا توجد تطبيقات تطوير تطابق \"{searchQuery}\""
 
@@ -1661,11 +1645,11 @@ msgstr "لا توجد ألعاب بعد"
 msgid "No groups available"
 msgstr "لا توجد مجموعات متاحة"
 
-#: src/features/apps/index.tsx:524
+#: src/features/apps/index.tsx:517
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "لا توجد تطبيقات قابلة للتثبيت في الدليل تطابق \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:398
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "لا توجد تطبيقات مثبتة تطابق \"{searchQuery}\""
 
@@ -1673,12 +1657,12 @@ msgstr "لا توجد تطبيقات مثبتة تطابق \"{searchQuery}\""
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "لا يمكن إنشاء أنواع عناصر بعد. أنشئ العناصر الأصلية المطلوبة أولاً."
 
-#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:516
 msgid "No matches in directory"
 msgstr "لا توجد تطابقات في الدليل"
 
-#: src/features/apps/index.tsx:404
-#: src/features/apps/index.tsx:430
+#: src/features/apps/index.tsx:397
+#: src/features/apps/index.tsx:423
 msgid "No matching apps"
 msgstr "لا توجد تطبيقات مطابقة"
 
@@ -1686,7 +1670,7 @@ msgstr "لا توجد تطبيقات مطابقة"
 msgid "No matching objects"
 msgstr "لا توجد كائنات مطابقة"
 
-#: src/features/routing/routing-table.tsx:63
+#: src/features/routing/routing-table.tsx:58
 msgid "No paths configured."
 msgstr "لم يتم تكوين أي مسارات."
 
@@ -1695,11 +1679,11 @@ msgstr "لم يتم تكوين أي مسارات."
 msgid "No people found"
 msgstr "لم يتم العثور على أشخاص"
 
-#: src/routes/_authenticated/app/$appId.tsx:588
+#: src/routes/_authenticated/app/$appId.tsx:573
 msgid "No permissions granted"
 msgstr "لم يتم منح صلاحيات"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "لم تُمنح أي أذونات لهذا التطبيق"
 
@@ -1707,7 +1691,7 @@ msgstr "لم تُمنح أي أذونات لهذا التطبيق"
 msgid "No places found"
 msgstr "لم يتم العثور على أماكن"
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:469
 msgid "No recommendations available"
 msgstr "لا توجد توصيات متاحة"
 
@@ -1720,7 +1704,7 @@ msgstr "لم يتم العثور على نتائج"
 msgid "No results found."
 msgstr "لم يتم العثور على نتائج."
 
-#: src/features/routing/routing-table.tsx:61
+#: src/features/routing/routing-table.tsx:56
 msgid "No services configured."
 msgstr "لم يتم تكوين أي خدمات."
 
@@ -1787,7 +1771,7 @@ msgstr "غير موجود"
 msgid "Not set"
 msgstr "غير محدد"
 
-#: src/routes/_authenticated/app/$appId.tsx:360
+#: src/routes/_authenticated/app/$appId.tsx:349
 msgid "Not versioned"
 msgstr "غير مُصدر"
 
@@ -1888,11 +1872,11 @@ msgstr "مفاتيح المرور"
 msgid "Passkeys are not available in this browser"
 msgstr "مفاتيح المرور غير متاحة في هذا المتصفح"
 
-#: src/features/apps/index.tsx:604
+#: src/features/apps/index.tsx:597
 msgid "Paste the install link:"
 msgstr "الصق رابط التثبيت:"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Path"
 msgstr "المسار"
 
@@ -1913,16 +1897,16 @@ msgstr "النمط (تعبير منتظم)"
 msgid "People"
 msgstr "الأشخاص"
 
-#: src/routes/_authenticated/app/$appId.tsx:486
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Permission granted"
 msgstr "تم منح الإذن"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:456
 msgid "Permission revoked"
 msgstr "تم إلغاء الإذن"
 
-#: src/routes/_authenticated/app/$appId.tsx:152
-#: src/routes/_authenticated/app/$appId.tsx:521
+#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:510
 msgid "Permissions"
 msgstr "الأذونات"
 
@@ -1956,7 +1940,7 @@ msgstr "المنشورات والتعليقات"
 msgid "Preference updated"
 msgstr "تم تحديث التفضيل"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Preferred version"
 msgstr "الإصدار المفضل"
 
@@ -1982,7 +1966,7 @@ msgstr "تم حفظ الموجه"
 msgid "Properties"
 msgstr "الخصائص"
 
-#: src/routes/_authenticated/app/$appId.tsx:227
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Provided classes"
 msgstr "الفئات المقدمة"
 
@@ -2003,7 +1987,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "أعد تسجيل مفاتيح المرور على هذا الخادم"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:452
+#: src/features/apps/index.tsx:445
 msgid "Recommended"
 msgstr "موصى به"
 
@@ -2137,8 +2121,8 @@ msgid "Retry"
 msgstr "إعادة المحاولة"
 
 #: ../../../lib/web/src/components/options-menu.tsx:247
-#: src/routes/_authenticated/app/$appId.tsx:641
-#: src/routes/_authenticated/app/$appId.tsx:644
+#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:629
 msgid "Revoke"
 msgstr "إلغاء"
 
@@ -2146,11 +2130,11 @@ msgstr "إلغاء"
 msgid "Revoke access"
 msgstr "إلغاء الوصول"
 
-#: src/routes/_authenticated/app/$appId.tsx:651
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission"
 msgstr "إلغاء الإذن"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:634
 msgid "Revoke permission?"
 msgstr "إلغاء الإذن؟"
 
@@ -2158,7 +2142,7 @@ msgstr "إلغاء الإذن؟"
 msgid "Revoke RSS access?"
 msgstr "إلغاء وصول RSS؟"
 
-#: src/routes/_authenticated/app/$appId.tsx:466
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Revoking permission..."
 msgstr "جارٍ إلغاء الإذن..."
 
@@ -2189,7 +2173,7 @@ msgstr "السبت"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2200,8 +2184,8 @@ msgstr "حفظ"
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:316
-#: src/routes/_authenticated/app/$appId.tsx:338
+#: src/routes/_authenticated/app/$appId.tsx:305
+#: src/routes/_authenticated/app/$appId.tsx:327
 msgid "Saving..."
 msgstr "جاري الحفظ..."
 
@@ -2212,11 +2196,11 @@ msgstr "جاري الحفظ..."
 msgid "Search"
 msgstr "بحث"
 
-#: src/features/apps/index.tsx:371
+#: src/features/apps/index.tsx:368
 msgid "Search apps"
 msgstr "البحث عن تطبيقات"
 
-#: src/features/apps/index.tsx:370
+#: src/features/apps/index.tsx:367
 msgid "Search apps..."
 msgstr "البحث عن تطبيقات..."
 
@@ -2272,10 +2256,6 @@ msgstr "جاري البحث..."
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts:16
 msgid "Select"
 msgstr "تحديد"
-
-#: src/routes/_authenticated/app/$appId.tsx:536
-msgid "Select a capability to grant to {appName}."
-msgstr "حدد إمكانية لمنحها لـ {appName}."
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 msgid "Select a field"
@@ -2354,7 +2334,7 @@ msgstr "خطأ في الخادم"
 msgid "Server rules"
 msgstr "قواعد الخادم"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "خدمة"
 
@@ -2471,14 +2451,14 @@ msgstr "الأحد"
 msgid "Switch to view 1-9"
 msgstr "التبديل إلى العرض 1-9"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "النظام"
 
-#: src/features/routing/routing-table.tsx:79
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/features/routing/routing-table.tsx:74
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "System default"
 msgstr "افتراضي النظام"
 
@@ -2499,7 +2479,7 @@ msgstr "يجب ألا يزيد الوسم عن 50 حرفًا"
 msgid "Tags"
 msgstr "الوسوم"
 
-#: src/routes/_authenticated/app/$appId.tsx:224
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "Technical capabilities"
 msgstr "القدرات التقنية"
 
@@ -2545,7 +2525,7 @@ msgstr "لم تتم الإجابة على طلب الميكروفون"
 msgid "The passkey request was not answered"
 msgstr "لم تتم الإجابة على طلب مفتاح المرور"
 
-#: src/routes/_authenticated/app/$appId.tsx:132
+#: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "تعذر العثور على التطبيق المطلوب."
 
@@ -2557,7 +2537,7 @@ msgstr "تعذر العثور على المحتوى المطلوب."
 msgid "The server returned a web page instead of data."
 msgstr "أعاد الخادم صفحة ويب بدلاً من البيانات."
 
-#: src/routes/_authenticated/app/$appId.tsx:361
+#: src/routes/_authenticated/app/$appId.tsx:350
 msgid "This app does not have version management"
 msgstr "هذا التطبيق لا يحتوي على إدارة إصدارات"
 
@@ -2574,7 +2554,7 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "سيؤدي هذا إلى حذف اللعبة ومحادثتها نهائيًا. لا يمكن التراجع عن هذا الإجراء."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:650
+#: src/routes/_authenticated/app/$appId.tsx:635
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "سيؤدي هذا إلى إلغاء إذن \"{0}\" من {appName}. قد يتوقف التطبيق عن العمل بشكل صحيح."
 
@@ -2617,8 +2597,8 @@ msgstr "طلبات كثيرة جدًا"
 msgid "Top"
 msgstr "الأعلى"
 
-#: src/features/apps/index.tsx:742
-#: src/routes/_authenticated/app/$appId.tsx:380
+#: src/features/apps/index.tsx:735
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "المسار"
 
@@ -2664,7 +2644,7 @@ msgstr "اكتب للبحث..."
 msgid "Unable to connect to remote server"
 msgstr "تعذّر الاتصال بالخادم البعيد"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:464
 msgid "Unable to connect to the recommendations service"
 msgstr "تعذر الاتصال بخدمة التوصيات"
 
@@ -2686,7 +2666,7 @@ msgid "Unassigned"
 msgstr "غير معين"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:463
 msgid "Unavailable"
 msgstr "غير متاح"
 
@@ -2699,7 +2679,7 @@ msgstr "خطأ غير متوقع في واجهة البرمجة"
 msgid "United States"
 msgstr "الولايات المتحدة"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2717,11 +2697,11 @@ msgstr "إلغاء الاشتراك"
 msgid "Untitled"
 msgstr "بدون عنوان"
 
-#: src/features/apps/index.tsx:738
+#: src/features/apps/index.tsx:731
 msgid "Update"
 msgstr "تحديث"
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Update all"
 msgstr "تحديث الكل"
 
@@ -2743,7 +2723,7 @@ msgstr "تم تحديث {field}"
 msgid "Updating apps..."
 msgstr "جارٍ تحديث التطبيقات..."
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Updating..."
 msgstr "جاري التحديث..."
 
@@ -2756,7 +2736,7 @@ msgstr "رفع"
 msgid "Upload progress"
 msgstr "تقدّم الرفع"
 
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:150
 msgid "Use system default"
 msgstr "استخدم الافتراضي للنظام"
 
@@ -2787,7 +2767,7 @@ msgstr "تحقق"
 msgid "Verify email address"
 msgstr "التحقق من عنوان البريد الإلكتروني"
 
-#: src/routes/_authenticated/app/$appId.tsx:394
+#: src/routes/_authenticated/app/$appId.tsx:383
 msgid "Version"
 msgstr "الإصدار"
 
@@ -2796,15 +2776,15 @@ msgstr "الإصدار"
 msgid "Version {0}"
 msgstr "الإصدار {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#: src/routes/_authenticated/app/$appId.tsx:306
 msgid "Version changed"
 msgstr "تم تغيير الإصدار"
 
-#: src/routes/_authenticated/app/$appId.tsx:413
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "Version management"
 msgstr "إدارة الإصدارات"
 
-#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:150
 msgid "Versions"
 msgstr "الإصدارات"
 
@@ -2869,7 +2849,7 @@ msgstr "تم نقل حسابك إلى هنا من {source}. حتى تحذفه م
 msgid "Your attachments will be lost."
 msgstr "سيتم فقدان مرفقاتك."
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Your preference"
 msgstr "تفضيلاتك"
 
@@ -2881,6 +2861,6 @@ msgstr "سيتم فقدان نصك ومرفقاتك."
 msgid "Your text will be lost."
 msgstr "سيُفقد النص."
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Your version"
 msgstr "إصدارك"

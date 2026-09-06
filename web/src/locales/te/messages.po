@@ -46,7 +46,7 @@ msgid "{0, plural, one {Removed # unused version} other {Removed # unused versio
 msgstr "{0, plural, one {# ఉపయోగించని వెర్షన్ తీసివేయబడింది} other {# ఉపయోగించని వెర్షన్‌లు తీసివేయబడ్డాయి}}"
 
 #. placeholder {0}: app.name
-#: src/features/routing/routing-table.tsx:23
+#: src/features/routing/routing-table.tsx:18
 msgid "{0} (development)"
 msgstr "{0} (అభివృద్ధి)"
 
@@ -100,11 +100,11 @@ msgstr "{totalCount, plural, one {# అంశం} other {# అంశాలు}}"
 msgid "{totalDescendants, plural, one {# reply} other {+# more replies}}"
 msgstr "{totalDescendants, plural, one {# జవాబు} other {+# అదనపు జవాబులు}}"
 
-#: src/routes/_authenticated/app/$appId.tsx:385
+#: src/routes/_authenticated/app/$appId.tsx:374
 msgid "{track} (default, version {version})"
 msgstr "{track} (డిఫాల్ట్, వెర్షన్ {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:386
+#: src/routes/_authenticated/app/$appId.tsx:375
 msgid "{track} (version {version})"
 msgstr "{track} (వెర్షన్ {version})"
 
@@ -208,7 +208,7 @@ msgstr "ఎంపికను జోడించండి"
 msgid "Add tag..."
 msgstr "ట్యాగ్‌ను జోడించండి..."
 
-#: src/features/apps/index.tsx:653
+#: src/features/apps/index.tsx:646
 msgid "Add to directory"
 msgstr "డైరెక్టరీకి జోడించండి"
 
@@ -270,12 +270,12 @@ msgid "Anything subscribed to this feed will stop receiving it. You can copy a n
 msgstr "ఈ ఫీడ్‌కు సభ్యత్వం పొందిన ప్రతిదీ దాన్ని స్వీకరించడం ఆపేస్తుంది. ఆ తర్వాత మీరు కొత్త URLని కాపీ చేయవచ్చు."
 
 #: src/features/apps/index.tsx:164
-#: src/routes/_authenticated/app/$appId.tsx:98
+#: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "యాప్"
 
+#: src/features/apps/index.tsx:297
 #: src/features/apps/index.tsx:307
-#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "యాప్ చర్యలు"
 
@@ -291,19 +291,19 @@ msgstr "యాప్ ఇన్‌స్టాల్ చేయబడింది"
 msgid "App installed successfully"
 msgstr "యాప్ విజయవంతంగా ఇన్‌స్టాల్ చేయబడింది"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:131
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:130
 msgid "App not found"
 msgstr "యాప్ కనుగొనబడలేదు"
 
-#: src/routes/_authenticated/app/$appId.tsx:208
+#: src/routes/_authenticated/app/$appId.tsx:197
 msgid "Application ID"
 msgstr "అప్లికేషన్ ID"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:355
 msgid "Apps"
 msgstr "యాప్‌లు"
 
@@ -370,7 +370,7 @@ msgstr "అందుబాటులో ఉన్న వెర్షన్:"
 msgid "Available versions:"
 msgstr "అందుబాటులో ఉన్న వెర్షన్‌లు:"
 
-#: src/features/apps/index.tsx:451
+#: src/features/apps/index.tsx:444
 msgid "Available, but not installed"
 msgstr "అందుబాటులో ఉంది, కానీ ఇన్‌స్టాల్ చేయబడలేదు"
 
@@ -386,9 +386,9 @@ msgstr "{name} కోసం అవతార్"
 msgid "Back"
 msgstr "వెనుకకు"
 
-#: src/routes/_authenticated/app/$appId.tsx:106
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:144
+#: src/routes/_authenticated/app/$appId.tsx:105
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:143
 msgid "Back to apps"
 msgstr "యాప్‌లకు తిరిగి"
 
@@ -397,16 +397,16 @@ msgstr "యాప్‌లకు తిరిగి"
 msgid "Back to home"
 msgstr "హోమ్‌కు తిరిగి వెళ్ళండి"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "బ్యానర్"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "బ్యానర్ తీసివేయబడింది"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "బ్యానర్ నవీకరించబడింది"
 
@@ -465,10 +465,10 @@ msgstr "కెమెరా అందుబాటులో లేదు"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:575
-#: src/features/apps/index.tsx:616
-#: src/features/apps/index.tsx:666
-#: src/routes/_authenticated/app/$appId.tsx:565
+#: src/features/apps/index.tsx:568
+#: src/features/apps/index.tsx:609
+#: src/features/apps/index.tsx:659
+#: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "రద్దు చేయండి"
 
@@ -525,7 +525,7 @@ msgstr "సైడ్‌బార్ నుండి ఆటను ఎంచుక
 msgid "Choose language"
 msgstr "భాషను ఎంచుకోండి"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Class"
 msgstr "తరగతి"
 
@@ -538,16 +538,16 @@ msgstr "క్లాస్ రూటింగ్"
 msgid "Classes"
 msgstr "క్లాసులు"
 
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Clean up unused versions"
 msgstr "ఉపయోగించని వెర్షన్‌లను శుభ్రం చేయండి"
 
 #: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Cleaning up..."
 msgstr "శుభ్రం చేస్తోంది..."
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -658,18 +658,6 @@ msgstr "ఎంపిక సెట్టింగ్‌లను కాన్ఫ�
 msgid "Configure view settings"
 msgstr "వీక్షణ సెట్టింగ్‌లను కాన్ఫిగర్ చేయండి"
 
-#: src/features/routing/paths.tsx:25
-msgid "Configure which app handles each URL path."
-msgstr "ప్రతి URL మార్గాన్ని ఏ యాప్ నిర్వహిస్తుందో కాన్ఫిగర్ చేయండి."
-
-#: src/features/routing/classes.tsx:25
-msgid "Configure which app handles entities of each type."
-msgstr "ప్రతి రకం విభాగాలను ఏ యాప్ నిర్వహిస్తుందో కాన్ఫిగర్ చేయండి."
-
-#: src/features/routing/services.tsx:25
-msgid "Configure which app handles inter-app service calls."
-msgstr "యాప్‌ల మధ్య సేవా కాల్‌లను ఏ యాప్ నిర్వహిస్తుందో కాన్ఫిగర్ చేయండి."
-
 #: ../../../lib/web/src/components/place-picker.tsx:146
 #: ../../../lib/web/src/components/travelling-picker.tsx:296
 msgid "Confirm"
@@ -777,7 +765,7 @@ msgstr "సృష్టిస్తోంది..."
 msgid "Current location"
 msgstr "ప్రస్తుత స్థానం"
 
-#: src/routes/_authenticated/app/$appId.tsx:218
+#: src/routes/_authenticated/app/$appId.tsx:207
 msgid "Current version"
 msgstr "ప్రస్తుత వెర్షన్"
 
@@ -798,7 +786,7 @@ msgstr "డేటా వైరుధ్యం"
 msgid "Date"
 msgstr "తేదీ"
 
-#: src/features/routing/routing-table.tsx:77
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "ప్రకటించినవారు"
 
@@ -807,8 +795,8 @@ msgid "Decline"
 msgstr "తిరస్కరించండి"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
-#: src/features/routing/routing-table.tsx:131
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:126
+#: src/features/routing/routing-table.tsx:150
 msgid "Default"
 msgstr "డిఫాల్ట్"
 
@@ -816,15 +804,15 @@ msgstr "డిఫాల్ట్"
 msgid "Default AI account"
 msgstr "డిఫాల్ట్ AI ఖాతా"
 
-#: src/routes/_authenticated/app/$appId.tsx:441
+#: src/routes/_authenticated/app/$appId.tsx:430
 msgid "Default for all users"
 msgstr "అందరు వినియోగదారుల కోసం డిఫాల్ట్"
 
-#: src/routes/_authenticated/app/$appId.tsx:440
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "అందరు వినియోగదారుల కోసం డిఫాల్ట్ (వెర్షన్ {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:339
+#: src/routes/_authenticated/app/$appId.tsx:328
 msgid "Default for all users updated"
 msgstr "అన్ని వినియోగదారుల కోసం డిఫాల్ట్ నవీకరించబడింది"
 
@@ -832,12 +820,12 @@ msgstr "అన్ని వినియోగదారుల కోసం డి
 msgid "Default sort"
 msgstr "డిఫాల్ట్ క్రమబద్ధీకరణ"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:414
 msgid "Default track"
 msgstr "డిఫాల్ట్ ట్రాక్"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:413
 msgid "Default track (version {0})"
 msgstr "డిఫాల్ట్ ట్రాక్ (వెర్షన్ {0})"
 
@@ -919,7 +907,7 @@ msgstr "అవరోహణ"
 msgid "Description"
 msgstr "వివరణ"
 
-#: src/routes/_authenticated/app/$appId.tsx:150
+#: src/routes/_authenticated/app/$appId.tsx:149
 msgid "Details"
 msgstr "వివరాలు"
 
@@ -938,7 +926,7 @@ msgstr "వివరాల ప్యానెల్"
 msgid "Detect from web browser"
 msgstr "వెబ్ బ్రౌజర్ నుండి గుర్తించండి"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:419
 msgid "Development apps"
 msgstr "డెవలప్‌మెంట్ యాప్‌లు"
 
@@ -1044,11 +1032,11 @@ msgstr "ఇమెయిల్"
 msgid "Email code"
 msgstr "ఇమెయిల్ కోడ్"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:224
 msgid "Enabled services"
 msgstr "ప్రారంభించబడిన సేవలు"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "బ్యానర్ టెక్స్ట్ నమోదు చేయండి (మార్క్‌డౌన్ మద్దతు ఉంది)..."
 
@@ -1125,7 +1113,7 @@ msgstr "లింక్‌ను తొలగించడంలో విఫల�
 msgid "Failed to get RSS token"
 msgstr "RSS టోకెన్‌ను పొందడంలో విఫలమైంది"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:476
 msgid "Failed to grant permission"
 msgstr "అనుమతిని మంజూరు చేయడంలో విఫలమైంది"
 
@@ -1133,7 +1121,11 @@ msgstr "అనుమతిని మంజూరు చేయడంలో వి
 msgid "Failed to load"
 msgstr "లోడ్ చేయడంలో విఫలమైంది"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "బ్యానర్‌ను లోడ్ చేయడంలో విఫలమైంది"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "చరిత్రను లోడ్ చేయడంలో విఫలమైంది"
 
@@ -1166,7 +1158,7 @@ msgstr "వ్యాఖ్యను పోస్ట్ చేయడంలో వ
 msgid "Failed to reset prompt"
 msgstr "ప్రాంప్ట్‌ను రీసెట్ చేయడంలో విఫలమైంది"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Failed to revoke permission"
 msgstr "అనుమతిని ఉపసంహరించడంలో విఫలమైంది"
 
@@ -1186,7 +1178,7 @@ msgstr "ప్రాంప్ట్‌ను సేవ్ చేయడంలో 
 msgid "Failed to update apps"
 msgstr "యాప్‌లను నవీకరించడం విఫలమైంది"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "బ్యానర్‌ను నవీకరించడంలో విఫలమైంది"
 
@@ -1194,12 +1186,12 @@ msgstr "బ్యానర్‌ను నవీకరించడంలో వ�
 msgid "Failed to update comment"
 msgstr "వ్యాఖ్యను నవీకరించడంలో విఫలమైంది"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:329
 msgid "Failed to update default"
 msgstr "డిఫాల్ట్‌ను నవీకరించడంలో విఫలమైంది"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:318
+#: src/routes/_authenticated/app/$appId.tsx:307
 msgid "Failed to update preference"
 msgstr "ప్రాధాన్యతను నవీకరించడంలో విఫలమైంది"
 
@@ -1215,7 +1207,7 @@ msgstr "పర్యవేక్షణ నవీకరించడంలో వ�
 msgid "Failed to upload attachment"
 msgstr "జోడింపును అప్‌లోడ్ చేయడంలో విఫలమైంది"
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:639
 msgid "File:"
 msgstr "ఫైల్:"
 
@@ -1225,7 +1217,7 @@ msgstr "ఫైల్:"
 msgid "Files"
 msgstr "ఫైళ్లు"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:202
 msgid "Fingerprint"
 msgstr "వేలిముద్ర"
 
@@ -1259,7 +1251,7 @@ msgstr "స్నేహితులు"
 msgid "From"
 msgstr "నుండి"
 
-#: src/features/apps/index.tsx:506
+#: src/features/apps/index.tsx:499
 msgid "From the directory"
 msgstr "డైరెక్టరీ నుండి"
 
@@ -1276,15 +1268,15 @@ msgstr "థీమ్ నుండి"
 msgid "Go back"
 msgstr "వెనక్కి వెళ్ళండి"
 
-#: src/routes/_authenticated/app/$appId.tsx:529
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "మంజూరు"
 
-#: src/routes/_authenticated/app/$appId.tsx:534
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "అనుమతిని మంజూరు చేయండి"
 
-#: src/routes/_authenticated/app/$appId.tsx:485
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Granting permission..."
 msgstr "అనుమతిని మంజూరు చేస్తోంది..."
 
@@ -1301,11 +1293,11 @@ msgstr "దీని ద్వారా సమూహపరచు"
 msgid "Group: {0}"
 msgstr "సమూహం: {0}"
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Handler"
 msgstr "హ్యాండ్లర్"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "చరిత్ర"
 
@@ -1320,7 +1312,7 @@ msgstr "హోమ్"
 msgid "Hot"
 msgstr "హాట్"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "HTTP paths"
 msgstr "HTTP పాత్‌లు"
 
@@ -1328,7 +1320,7 @@ msgstr "HTTP పాత్‌లు"
 msgid "ID"
 msgstr "ఐడీ"
 
-#: src/routes/_authenticated/app/$appId.tsx:205
+#: src/routes/_authenticated/app/$appId.tsx:194
 msgid "Identity"
 msgstr "గుర్తింపు"
 
@@ -1355,32 +1347,28 @@ msgstr "{name} కోసం మొదటి అక్షరాల అవతా�
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Install"
 msgstr "ఇన్‌స్టాల్"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:566
+#: src/features/apps/index.tsx:559
 msgid "Install {0}?"
 msgstr "{0} ను ఇన్‌స్టాల్ చేయాలా?"
 
-#: src/features/apps/index.tsx:399
-msgid "Install apps from the market or upload your own"
-msgstr "మార్కెట్ నుండి యాప్‌లను ఇన్‌స్టాల్ చేయండి లేదా మీ స్వంతదాన్ని అప్‌లోడ్ చేయండి"
-
-#: src/features/apps/index.tsx:339
-#: src/features/apps/index.tsx:642
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:635
 msgid "Install from file"
 msgstr "ఫైల్ నుండి ఇన్‌స్టాల్ చేయండి"
 
-#: src/features/apps/index.tsx:335
-#: src/features/apps/index.tsx:600
+#: src/features/apps/index.tsx:325
+#: src/features/apps/index.tsx:593
 msgid "Install from publisher"
 msgstr "పబ్లిషర్ నుండి ఇన్‌స్టాల్ చేయండి"
 
-#: src/features/apps/index.tsx:382
+#: src/features/apps/index.tsx:376
 msgid "Installed apps"
 msgstr "ఇన్‌స్టాల్ చేయబడిన యాప్‌లు"
 
@@ -1390,9 +1378,9 @@ msgstr "ఇన్‌స్టాల్ చేయబడిన యాప్‌ల�
 #: src/features/apps/index.tsx:162
 #: src/features/apps/index.tsx:182
 #: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Installing..."
 msgstr "ఇన్‌స్టాల్ చేస్తోంది..."
 
@@ -1495,10 +1483,6 @@ msgstr "విజయవంతంగా లాగ్ అవుట్ అయ్య
 msgid "Logging out…"
 msgstr "లాగ్ అవుట్ చేస్తోంది…"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
-msgid "Manage capabilities granted to this application"
-msgstr "ఈ అప్లికేషన్‌కు ఇచ్చిన సామర్థ్యాలను నిర్వహించండి"
-
 #: ../../../lib/web/src/components/notification-category-button.tsx:127
 msgid "Manage categories"
 msgstr "వర్గాలను నిర్వహించండి"
@@ -1573,7 +1557,7 @@ msgstr "తరలించబడింది"
 msgid "Moved {field}"
 msgstr "{field} తరలించబడింది"
 
-#: src/features/routing/routing-table.tsx:107
+#: src/features/routing/routing-table.tsx:102
 msgid "Multiple apps declare this resource"
 msgstr "ఈ రిసోర్స్‌ను పలు యాప్‌లు డిక్లేర్ చేస్తున్నాయి"
 
@@ -1633,11 +1617,11 @@ msgstr "ఇంకా యాక్టివిటీ లేదు"
 msgid "No apps could be updated."
 msgstr "ఏ యాప్‌లనూ అప్‌డేట్ చేయలేకపోయాము."
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:392
 msgid "No apps installed"
 msgstr "ఏ యాప్‌లూ ఇన్‌స్టాల్ చేయబడలేదు"
 
-#: src/features/routing/routing-table.tsx:59
+#: src/features/routing/routing-table.tsx:54
 msgid "No classes configured."
 msgstr "ఏ తరగతులు కాన్ఫిగర్ చేయబడలేదు."
 
@@ -1645,11 +1629,11 @@ msgstr "ఏ తరగతులు కాన్ఫిగర్ చేయబడల
 msgid "No comments yet"
 msgstr "ఇంకా కామెంట్‌లు లేవు"
 
-#: src/features/apps/index.tsx:493
+#: src/features/apps/index.tsx:486
 msgid "No description"
 msgstr "వివరణ లేదు"
 
-#: src/features/apps/index.tsx:431
+#: src/features/apps/index.tsx:424
 msgid "No development apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" తో సరిపోలే అభివృద్ధి యాప్‌లు లేవు"
 
@@ -1661,11 +1645,11 @@ msgstr "ఇంకా గేమ్‌లు లేవు"
 msgid "No groups available"
 msgstr "గ్రూపులు అందుబాటులో లేవు"
 
-#: src/features/apps/index.tsx:524
+#: src/features/apps/index.tsx:517
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "డైరెక్టరీలో \"{searchQuery}\" తో సరిపోలే ఇన్‌స్టాల్ చేయదగిన యాప్‌లు లేవు"
 
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:398
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" తో సరిపోలే ఇన్‌స్టాల్ చేయబడిన యాప్‌లు లేవు"
 
@@ -1673,12 +1657,12 @@ msgstr "\"{searchQuery}\" తో సరిపోలే ఇన్‌స్టా�
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "ఇంకా ఏ ఐటెం రకాలను సృష్టించలేము. మొదట అవసరమైన పేరెంట్ ఐటెంలను సృష్టించండి."
 
-#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:516
 msgid "No matches in directory"
 msgstr "డైరెక్టరీలో మ్యాచ్‌లు లేవు"
 
-#: src/features/apps/index.tsx:404
-#: src/features/apps/index.tsx:430
+#: src/features/apps/index.tsx:397
+#: src/features/apps/index.tsx:423
 msgid "No matching apps"
 msgstr "మ్యాచింగ్ యాప్‌లు లేవు"
 
@@ -1686,7 +1670,7 @@ msgstr "మ్యాచింగ్ యాప్‌లు లేవు"
 msgid "No matching objects"
 msgstr "మ్యాచింగ్ ఆబ్జెక్ట్‌లు లేవు"
 
-#: src/features/routing/routing-table.tsx:63
+#: src/features/routing/routing-table.tsx:58
 msgid "No paths configured."
 msgstr "ఏ మార్గాలు కాన్ఫిగర్ చేయబడలేదు."
 
@@ -1695,11 +1679,11 @@ msgstr "ఏ మార్గాలు కాన్ఫిగర్ చేయబడ
 msgid "No people found"
 msgstr "ఎవరూ కనుగొనబడలేదు"
 
-#: src/routes/_authenticated/app/$appId.tsx:588
+#: src/routes/_authenticated/app/$appId.tsx:573
 msgid "No permissions granted"
 msgstr "ఏ పర్మిషన్‌లూ ఇవ్వబడలేదు"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "ఈ యాప్‌కు ఎటువంటి అనుమతులు ఇవ్వబడలేదు"
 
@@ -1707,7 +1691,7 @@ msgstr "ఈ యాప్‌కు ఎటువంటి అనుమతులు
 msgid "No places found"
 msgstr "ప్రాంతాలు ఏవీ కనుగొనబడలేదు"
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:469
 msgid "No recommendations available"
 msgstr "రికమెండేషన్‌లు అందుబాటులో లేవు"
 
@@ -1720,7 +1704,7 @@ msgstr "ఫలితాలు కనుగొనబడలేదు"
 msgid "No results found."
 msgstr "ఫలితాలు ఏవీ కనుగొనబడలేదు."
 
-#: src/features/routing/routing-table.tsx:61
+#: src/features/routing/routing-table.tsx:56
 msgid "No services configured."
 msgstr "ఏ సేవలు కాన్ఫిగర్ చేయబడలేదు."
 
@@ -1787,7 +1771,7 @@ msgstr "కనుగొనబడలేదు"
 msgid "Not set"
 msgstr "సెట్ చేయబడలేదు"
 
-#: src/routes/_authenticated/app/$appId.tsx:360
+#: src/routes/_authenticated/app/$appId.tsx:349
 msgid "Not versioned"
 msgstr "వెర్షన్ చేయబడలేదు"
 
@@ -1888,11 +1872,11 @@ msgstr "పాస్‌కీలు"
 msgid "Passkeys are not available in this browser"
 msgstr "ఈ బ్రౌజర్‌లో పాస్‌కీలు అందుబాటులో లేవు"
 
-#: src/features/apps/index.tsx:604
+#: src/features/apps/index.tsx:597
 msgid "Paste the install link:"
 msgstr "ఇన్‌స్టాల్ లింక్‌ను పేస్ట్ చేయండి:"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Path"
 msgstr "పాత్"
 
@@ -1913,16 +1897,16 @@ msgstr "నమూనా (regex)"
 msgid "People"
 msgstr "పీపుల్"
 
-#: src/routes/_authenticated/app/$appId.tsx:486
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Permission granted"
 msgstr "పర్మిషన్ ఇవ్వబడింది"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:456
 msgid "Permission revoked"
 msgstr "పర్మిషన్ రద్దు చేయబడింది"
 
-#: src/routes/_authenticated/app/$appId.tsx:152
-#: src/routes/_authenticated/app/$appId.tsx:521
+#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:510
 msgid "Permissions"
 msgstr "పర్మిషన్‌లు"
 
@@ -1956,7 +1940,7 @@ msgstr "పోస్ట్‌లు మరియు కామెంట్‌ల�
 msgid "Preference updated"
 msgstr "ప్రాధాన్యత అప్‌డేట్ చేయబడింది"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Preferred version"
 msgstr "ఇష్టమైన వెర్షన్"
 
@@ -1982,7 +1966,7 @@ msgstr "ప్రాంప్ట్ సేవ్ చేయబడింది"
 msgid "Properties"
 msgstr "లక్షణాలు"
 
-#: src/routes/_authenticated/app/$appId.tsx:227
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Provided classes"
 msgstr "అందించిన క్లాస్‌లు"
 
@@ -2003,7 +1987,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "ఈ సర్వర్‌లో మీ పాస్‌కీలను మళ్లీ నమోదు చేయండి"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:452
+#: src/features/apps/index.tsx:445
 msgid "Recommended"
 msgstr "రికమెండ్ చేయబడింది"
 
@@ -2137,8 +2121,8 @@ msgid "Retry"
 msgstr "మళ్లీ ప్రయత్నించండి"
 
 #: ../../../lib/web/src/components/options-menu.tsx:247
-#: src/routes/_authenticated/app/$appId.tsx:641
-#: src/routes/_authenticated/app/$appId.tsx:644
+#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:629
 msgid "Revoke"
 msgstr "రద్దు చేయండి"
 
@@ -2146,11 +2130,11 @@ msgstr "రద్దు చేయండి"
 msgid "Revoke access"
 msgstr "యాక్సెస్ ఉపసంహరించు"
 
-#: src/routes/_authenticated/app/$appId.tsx:651
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission"
 msgstr "అనుమతిని రద్దు చేయండి"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:634
 msgid "Revoke permission?"
 msgstr "అనుమతిని రద్దు చేయాలా?"
 
@@ -2158,7 +2142,7 @@ msgstr "అనుమతిని రద్దు చేయాలా?"
 msgid "Revoke RSS access?"
 msgstr "RSS యాక్సెస్‌ను ఉపసంహరించాలా?"
 
-#: src/routes/_authenticated/app/$appId.tsx:466
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Revoking permission..."
 msgstr "అనుమతిని ఉపసంహరిస్తోంది..."
 
@@ -2189,7 +2173,7 @@ msgstr "శనివారం"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2200,8 +2184,8 @@ msgstr "సేవ్ చేయండి"
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:316
-#: src/routes/_authenticated/app/$appId.tsx:338
+#: src/routes/_authenticated/app/$appId.tsx:305
+#: src/routes/_authenticated/app/$appId.tsx:327
 msgid "Saving..."
 msgstr "సేవ్ చేస్తోంది..."
 
@@ -2212,11 +2196,11 @@ msgstr "సేవ్ చేస్తోంది..."
 msgid "Search"
 msgstr "శోధన"
 
-#: src/features/apps/index.tsx:371
+#: src/features/apps/index.tsx:368
 msgid "Search apps"
 msgstr "యాప్‌లను శోధించండి"
 
-#: src/features/apps/index.tsx:370
+#: src/features/apps/index.tsx:367
 msgid "Search apps..."
 msgstr "యాప్‌లను శోధించండి..."
 
@@ -2272,10 +2256,6 @@ msgstr "శోధిస్తోంది..."
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts:16
 msgid "Select"
 msgstr "ఎంచుకోండి"
-
-#: src/routes/_authenticated/app/$appId.tsx:536
-msgid "Select a capability to grant to {appName}."
-msgstr "{appName} కు ఇవ్వడానికి సామర్థ్యాన్ని ఎంచుకోండి."
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 msgid "Select a field"
@@ -2354,7 +2334,7 @@ msgstr "సర్వర్ లోపం"
 msgid "Server rules"
 msgstr "సర్వర్ నియమాలు"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "సేవ"
 
@@ -2471,14 +2451,14 @@ msgstr "ఆదివారం"
 msgid "Switch to view 1-9"
 msgstr "వీక్షణ 1-9 కి మారండి"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "సిస్టమ్"
 
-#: src/features/routing/routing-table.tsx:79
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/features/routing/routing-table.tsx:74
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "System default"
 msgstr "సిస్టమ్ డిఫాల్ట్"
 
@@ -2499,7 +2479,7 @@ msgstr "ట్యాగ్ 50 అక్షరాలు లేదా తక్క
 msgid "Tags"
 msgstr "ట్యాగ్‌లు"
 
-#: src/routes/_authenticated/app/$appId.tsx:224
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "Technical capabilities"
 msgstr "సాంకేతిక సామర్థ్యాలు"
 
@@ -2545,7 +2525,7 @@ msgstr "మైక్రోఫోన్ అభ్యర్థనకు స్ప�
 msgid "The passkey request was not answered"
 msgstr "పాస్‌కీ అభ్యర్థనకు స్పందన లేదు"
 
-#: src/routes/_authenticated/app/$appId.tsx:132
+#: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "అభ్యర్థించిన యాప్ కనుగొనబడలేదు."
 
@@ -2557,7 +2537,7 @@ msgstr "అభ్యర్థించిన కంటెంట్ కనుగ�
 msgid "The server returned a web page instead of data."
 msgstr "సర్వర్ డేటాకు బదులుగా వెబ్ పేజీని అందించింది."
 
-#: src/routes/_authenticated/app/$appId.tsx:361
+#: src/routes/_authenticated/app/$appId.tsx:350
 msgid "This app does not have version management"
 msgstr "ఈ యాప్‌కు వెర్షన్ మేనేజ్‌మెంట్ లేదు"
 
@@ -2574,7 +2554,7 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ఇది గేమ్‌ను మరియు దాని చాట్‌ను శాశ్వతంగా తొలగిస్తుంది. ఈ చర్యను తిరిగి మార్చలేరు."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:650
+#: src/routes/_authenticated/app/$appId.tsx:635
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "ఇది {appName} నుండి \"{0}\" అనుమతిని రద్దు చేస్తుంది. యాప్ సరిగ్గా పని చేయడం ఆపివేయవచ్చు."
 
@@ -2617,8 +2597,8 @@ msgstr "చాలా ఎక్కువ అభ్యర్థనలు"
 msgid "Top"
 msgstr "ఎగువ"
 
-#: src/features/apps/index.tsx:742
-#: src/routes/_authenticated/app/$appId.tsx:380
+#: src/features/apps/index.tsx:735
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "ట్రాక్"
 
@@ -2664,7 +2644,7 @@ msgstr "శోధించడానికి టైప్ చేయండి..."
 msgid "Unable to connect to remote server"
 msgstr "రిమోట్ సర్వర్‌కు కనెక్ట్ చేయడం సాధ్యం కాలేదు"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:464
 msgid "Unable to connect to the recommendations service"
 msgstr "రికమెండేషన్‌ల సర్వీసుకు కనెక్ట్ చేయలేకపోయింది"
 
@@ -2686,7 +2666,7 @@ msgid "Unassigned"
 msgstr "కేటాయించబడలేదు"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:463
 msgid "Unavailable"
 msgstr "అందుబాటులో లేదు"
 
@@ -2699,7 +2679,7 @@ msgstr "ఊహించని API లోపం"
 msgid "United States"
 msgstr "యునైటెడ్ స్టేట్స్"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2717,11 +2697,11 @@ msgstr "చందా మానివేయండి"
 msgid "Untitled"
 msgstr "శీర్షికలేని"
 
-#: src/features/apps/index.tsx:738
+#: src/features/apps/index.tsx:731
 msgid "Update"
 msgstr "నవీకరించండి"
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Update all"
 msgstr "అన్నీ నవీకరించండి"
 
@@ -2743,7 +2723,7 @@ msgstr "{field} నవీకరించబడింది"
 msgid "Updating apps..."
 msgstr "యాప్‌లను నవీకరిస్తోంది..."
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Updating..."
 msgstr "నవీకరిస్తోంది..."
 
@@ -2756,7 +2736,7 @@ msgstr "అప్‌లోడ్ చేయండి"
 msgid "Upload progress"
 msgstr "అప్‌లోడ్ పురోగతి"
 
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:150
 msgid "Use system default"
 msgstr "సిస్టమ్ డిఫాల్ట్‌ను ఉపయోగించండి"
 
@@ -2787,7 +2767,7 @@ msgstr "ధృవీకరించండి"
 msgid "Verify email address"
 msgstr "ఇమెయిల్ చిరునామాను ధృవీకరించండి"
 
-#: src/routes/_authenticated/app/$appId.tsx:394
+#: src/routes/_authenticated/app/$appId.tsx:383
 msgid "Version"
 msgstr "వెర్షన్"
 
@@ -2796,15 +2776,15 @@ msgstr "వెర్షన్"
 msgid "Version {0}"
 msgstr "వెర్షన్ {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#: src/routes/_authenticated/app/$appId.tsx:306
 msgid "Version changed"
 msgstr "వెర్షన్ మార్చబడింది"
 
-#: src/routes/_authenticated/app/$appId.tsx:413
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "Version management"
 msgstr "వెర్షన్ మేనేజ్‌మెంట్"
 
-#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:150
 msgid "Versions"
 msgstr "వెర్షన్‌లు"
 
@@ -2869,7 +2849,7 @@ msgstr "మీ ఖాతా {source} నుండి ఇక్కడికి �
 msgid "Your attachments will be lost."
 msgstr "మీ జోడింపులు పోతాయి."
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Your preference"
 msgstr "మీ ప్రాధాన్యత"
 
@@ -2881,6 +2861,6 @@ msgstr "మీ వచనం మరియు జోడింపులు పో�
 msgid "Your text will be lost."
 msgstr "మీ వచనం పోతుంది."
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Your version"
 msgstr "మీ వెర్షన్"

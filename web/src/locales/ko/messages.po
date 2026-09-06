@@ -46,7 +46,7 @@ msgid "{0, plural, one {Removed # unused version} other {Removed # unused versio
 msgstr "{0, plural, one {미사용 버전 # 개를 삭제했어요} other {미사용 버전 # 개를 삭제했어요}}"
 
 #. placeholder {0}: app.name
-#: src/features/routing/routing-table.tsx:23
+#: src/features/routing/routing-table.tsx:18
 msgid "{0} (development)"
 msgstr "{0} (개발)"
 
@@ -100,11 +100,11 @@ msgstr "{totalCount, plural, one {# 개} other {# 개}}"
 msgid "{totalDescendants, plural, one {# reply} other {+# more replies}}"
 msgstr "{totalDescendants, plural, one {답글 #개} other {답글 +#개 더}}"
 
-#: src/routes/_authenticated/app/$appId.tsx:385
+#: src/routes/_authenticated/app/$appId.tsx:374
 msgid "{track} (default, version {version})"
 msgstr "{track} (기본값, 버전 {version})"
 
-#: src/routes/_authenticated/app/$appId.tsx:386
+#: src/routes/_authenticated/app/$appId.tsx:375
 msgid "{track} (version {version})"
 msgstr "{track} (버전 {version})"
 
@@ -208,7 +208,7 @@ msgstr "옵션 추가"
 msgid "Add tag..."
 msgstr "태그 추가..."
 
-#: src/features/apps/index.tsx:653
+#: src/features/apps/index.tsx:646
 msgid "Add to directory"
 msgstr "디렉터리에 추가"
 
@@ -270,12 +270,12 @@ msgid "Anything subscribed to this feed will stop receiving it. You can copy a n
 msgstr "이 피드를 구독 중인 모든 것이 수신을 중단합니다. 이후에 새 URL을 복사할 수 있습니다."
 
 #: src/features/apps/index.tsx:164
-#: src/routes/_authenticated/app/$appId.tsx:98
+#: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "앱"
 
+#: src/features/apps/index.tsx:297
 #: src/features/apps/index.tsx:307
-#: src/features/apps/index.tsx:317
 msgid "App actions"
 msgstr "앱 작업"
 
@@ -291,19 +291,19 @@ msgstr "앱이 설치되었어요"
 msgid "App installed successfully"
 msgstr "앱이 설치되었습니다"
 
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:131
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:130
 msgid "App not found"
 msgstr "앱을 찾을 수 없어요"
 
-#: src/routes/_authenticated/app/$appId.tsx:208
+#: src/routes/_authenticated/app/$appId.tsx:197
 msgid "Application ID"
 msgstr "애플리케이션 ID"
 
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:358
+#: src/features/apps/index.tsx:355
 msgid "Apps"
 msgstr "앱"
 
@@ -370,7 +370,7 @@ msgstr "사용 가능한 버전:"
 msgid "Available versions:"
 msgstr "사용 가능한 버전:"
 
-#: src/features/apps/index.tsx:451
+#: src/features/apps/index.tsx:444
 msgid "Available, but not installed"
 msgstr "사용 가능하지만 설치되지 않음"
 
@@ -386,9 +386,9 @@ msgstr "{name}의 아바타"
 msgid "Back"
 msgstr "뒤로"
 
-#: src/routes/_authenticated/app/$appId.tsx:106
-#: src/routes/_authenticated/app/$appId.tsx:127
-#: src/routes/_authenticated/app/$appId.tsx:144
+#: src/routes/_authenticated/app/$appId.tsx:105
+#: src/routes/_authenticated/app/$appId.tsx:126
+#: src/routes/_authenticated/app/$appId.tsx:143
 msgid "Back to apps"
 msgstr "앱 목록으로 돌아가기"
 
@@ -397,16 +397,16 @@ msgstr "앱 목록으로 돌아가기"
 msgid "Back to home"
 msgstr "홈으로 돌아가기"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "배너"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "배너 제거됨"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "배너 업데이트됨"
 
@@ -465,10 +465,10 @@ msgstr "카메라를 사용할 수 없음"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:575
-#: src/features/apps/index.tsx:616
-#: src/features/apps/index.tsx:666
-#: src/routes/_authenticated/app/$appId.tsx:565
+#: src/features/apps/index.tsx:568
+#: src/features/apps/index.tsx:609
+#: src/features/apps/index.tsx:659
+#: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "취소"
 
@@ -525,7 +525,7 @@ msgstr "사이드바에서 게임을 선택하거나 새로 시작하세요."
 msgid "Choose language"
 msgstr "언어 선택"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Class"
 msgstr "클래스"
 
@@ -538,16 +538,16 @@ msgstr "클래스 라우팅"
 msgid "Classes"
 msgstr "클래스"
 
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Clean up unused versions"
 msgstr "사용하지 않는 버전 정리"
 
 #: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:347
+#: src/features/apps/index.tsx:337
 msgid "Cleaning up..."
 msgstr "정리 중..."
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -658,18 +658,6 @@ msgstr "옵션 설정 구성"
 msgid "Configure view settings"
 msgstr "뷰 설정 구성"
 
-#: src/features/routing/paths.tsx:25
-msgid "Configure which app handles each URL path."
-msgstr "각 URL 경로를 처리할 앱을 구성하세요."
-
-#: src/features/routing/classes.tsx:25
-msgid "Configure which app handles entities of each type."
-msgstr "각 유형의 엔티티를 처리할 앱을 구성하세요."
-
-#: src/features/routing/services.tsx:25
-msgid "Configure which app handles inter-app service calls."
-msgstr "앱 간 서비스 호출을 처리할 앱을 구성하세요."
-
 #: ../../../lib/web/src/components/place-picker.tsx:146
 #: ../../../lib/web/src/components/travelling-picker.tsx:296
 msgid "Confirm"
@@ -777,7 +765,7 @@ msgstr "생성 중..."
 msgid "Current location"
 msgstr "현재 위치"
 
-#: src/routes/_authenticated/app/$appId.tsx:218
+#: src/routes/_authenticated/app/$appId.tsx:207
 msgid "Current version"
 msgstr "현재 버전"
 
@@ -798,7 +786,7 @@ msgstr "데이터 충돌"
 msgid "Date"
 msgstr "날짜"
 
-#: src/features/routing/routing-table.tsx:77
+#: src/features/routing/routing-table.tsx:72
 msgid "Declared by"
 msgstr "선언한 사람"
 
@@ -807,8 +795,8 @@ msgid "Decline"
 msgstr "거절"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
-#: src/features/routing/routing-table.tsx:131
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:126
+#: src/features/routing/routing-table.tsx:150
 msgid "Default"
 msgstr "기본값"
 
@@ -816,15 +804,15 @@ msgstr "기본값"
 msgid "Default AI account"
 msgstr "기본 AI 계정"
 
-#: src/routes/_authenticated/app/$appId.tsx:441
+#: src/routes/_authenticated/app/$appId.tsx:430
 msgid "Default for all users"
 msgstr "모든 사용자의 기본값"
 
-#: src/routes/_authenticated/app/$appId.tsx:440
+#: src/routes/_authenticated/app/$appId.tsx:429
 msgid "Default for all users (version {effectiveDefaultVersion})"
 msgstr "모든 사용자의 기본값 (버전 {effectiveDefaultVersion})"
 
-#: src/routes/_authenticated/app/$appId.tsx:339
+#: src/routes/_authenticated/app/$appId.tsx:328
 msgid "Default for all users updated"
 msgstr "모든 사용자의 기본값이 업데이트되었어요"
 
@@ -832,12 +820,12 @@ msgstr "모든 사용자의 기본값이 업데이트되었어요"
 msgid "Default sort"
 msgstr "기본 정렬"
 
-#: src/routes/_authenticated/app/$appId.tsx:425
+#: src/routes/_authenticated/app/$appId.tsx:414
 msgid "Default track"
 msgstr "기본 트랙"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
-#: src/routes/_authenticated/app/$appId.tsx:424
+#: src/routes/_authenticated/app/$appId.tsx:413
 msgid "Default track (version {0})"
 msgstr "기본 트랙 (버전 {0})"
 
@@ -919,7 +907,7 @@ msgstr "내림차순"
 msgid "Description"
 msgstr "설명"
 
-#: src/routes/_authenticated/app/$appId.tsx:150
+#: src/routes/_authenticated/app/$appId.tsx:149
 msgid "Details"
 msgstr "세부 정보"
 
@@ -938,7 +926,7 @@ msgstr "세부 정보 패널"
 msgid "Detect from web browser"
 msgstr "웹 브라우저에서 감지"
 
-#: src/features/apps/index.tsx:426
+#: src/features/apps/index.tsx:419
 msgid "Development apps"
 msgstr "개발 앱"
 
@@ -1044,11 +1032,11 @@ msgstr "이메일"
 msgid "Email code"
 msgstr "이메일 코드"
 
-#: src/routes/_authenticated/app/$appId.tsx:235
+#: src/routes/_authenticated/app/$appId.tsx:224
 msgid "Enabled services"
 msgstr "활성화된 서비스"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "배너 텍스트를 입력하세요 (마크다운 지원)..."
 
@@ -1125,7 +1113,7 @@ msgstr "링크 삭제에 실패했어요"
 msgid "Failed to get RSS token"
 msgstr "RSS 토큰을 가져오지 못했어요"
 
-#: src/routes/_authenticated/app/$appId.tsx:487
+#: src/routes/_authenticated/app/$appId.tsx:476
 msgid "Failed to grant permission"
 msgstr "권한 부여에 실패했어요"
 
@@ -1133,7 +1121,11 @@ msgstr "권한 부여에 실패했어요"
 msgid "Failed to load"
 msgstr "불러오기에 실패했어요"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "배너를 불러오지 못했어요"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "기록 불러오기에 실패했어요"
 
@@ -1166,7 +1158,7 @@ msgstr "댓글 게시에 실패했어요"
 msgid "Failed to reset prompt"
 msgstr "프롬프트 재설정에 실패했어요"
 
-#: src/routes/_authenticated/app/$appId.tsx:469
+#: src/routes/_authenticated/app/$appId.tsx:458
 msgid "Failed to revoke permission"
 msgstr "권한 취소에 실패했어요"
 
@@ -1186,7 +1178,7 @@ msgstr "프롬프트 저장에 실패했어요"
 msgid "Failed to update apps"
 msgstr "앱을 업데이트하지 못했습니다"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "배너 업데이트에 실패했어요"
 
@@ -1194,12 +1186,12 @@ msgstr "배너 업데이트에 실패했어요"
 msgid "Failed to update comment"
 msgstr "댓글 업데이트에 실패했어요"
 
-#: src/routes/_authenticated/app/$appId.tsx:340
+#: src/routes/_authenticated/app/$appId.tsx:329
 msgid "Failed to update default"
 msgstr "기본값 업데이트에 실패했어요"
 
 #: src/features/routing/use-routing-data.ts:33
-#: src/routes/_authenticated/app/$appId.tsx:318
+#: src/routes/_authenticated/app/$appId.tsx:307
 msgid "Failed to update preference"
 msgstr "환경설정 업데이트에 실패했어요"
 
@@ -1215,7 +1207,7 @@ msgstr "알림 설정 업데이트 실패"
 msgid "Failed to upload attachment"
 msgstr "첨부 파일 업로드에 실패했어요"
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:639
 msgid "File:"
 msgstr "파일:"
 
@@ -1225,7 +1217,7 @@ msgstr "파일:"
 msgid "Files"
 msgstr "파일"
 
-#: src/routes/_authenticated/app/$appId.tsx:213
+#: src/routes/_authenticated/app/$appId.tsx:202
 msgid "Fingerprint"
 msgstr "지문"
 
@@ -1259,7 +1251,7 @@ msgstr "친구"
 msgid "From"
 msgstr "보낸이"
 
-#: src/features/apps/index.tsx:506
+#: src/features/apps/index.tsx:499
 msgid "From the directory"
 msgstr "디렉터리에서"
 
@@ -1276,15 +1268,15 @@ msgstr "테마에서"
 msgid "Go back"
 msgstr "뒤로"
 
-#: src/routes/_authenticated/app/$appId.tsx:529
+#: src/routes/_authenticated/app/$appId.tsx:517
 msgid "Grant"
 msgstr "부여"
 
-#: src/routes/_authenticated/app/$appId.tsx:534
+#: src/routes/_authenticated/app/$appId.tsx:522
 msgid "Grant permission"
 msgstr "권한 부여"
 
-#: src/routes/_authenticated/app/$appId.tsx:485
+#: src/routes/_authenticated/app/$appId.tsx:474
 msgid "Granting permission..."
 msgstr "권한 부여 중..."
 
@@ -1301,11 +1293,11 @@ msgstr "그룹화 기준"
 msgid "Group: {0}"
 msgstr "그룹: {0}"
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Handler"
 msgstr "핸들러"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "기록"
 
@@ -1320,7 +1312,7 @@ msgstr "홈"
 msgid "Hot"
 msgstr "인기"
 
-#: src/routes/_authenticated/app/$appId.tsx:243
+#: src/routes/_authenticated/app/$appId.tsx:232
 msgid "HTTP paths"
 msgstr "HTTP 경로"
 
@@ -1328,7 +1320,7 @@ msgstr "HTTP 경로"
 msgid "ID"
 msgstr "ID"
 
-#: src/routes/_authenticated/app/$appId.tsx:205
+#: src/routes/_authenticated/app/$appId.tsx:194
 msgid "Identity"
 msgstr "신원"
 
@@ -1355,32 +1347,28 @@ msgstr "{name}의 이니셜 아바타"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Install"
 msgstr "설치"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:566
+#: src/features/apps/index.tsx:559
 msgid "Install {0}?"
 msgstr "{0}을(를) 설치하시겠습니까?"
 
-#: src/features/apps/index.tsx:399
-msgid "Install apps from the market or upload your own"
-msgstr "마켓에서 앱을 설치하거나 직접 업로드하세요"
-
-#: src/features/apps/index.tsx:339
-#: src/features/apps/index.tsx:642
+#: src/features/apps/index.tsx:329
+#: src/features/apps/index.tsx:635
 msgid "Install from file"
 msgstr "파일에서 설치"
 
-#: src/features/apps/index.tsx:335
-#: src/features/apps/index.tsx:600
+#: src/features/apps/index.tsx:325
+#: src/features/apps/index.tsx:593
 msgid "Install from publisher"
 msgstr "퍼블리셔에서 설치"
 
-#: src/features/apps/index.tsx:382
+#: src/features/apps/index.tsx:376
 msgid "Installed apps"
 msgstr "설치된 앱"
 
@@ -1390,9 +1378,9 @@ msgstr "설치된 앱"
 #: src/features/apps/index.tsx:162
 #: src/features/apps/index.tsx:182
 #: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:583
-#: src/features/apps/index.tsx:624
-#: src/features/apps/index.tsx:674
+#: src/features/apps/index.tsx:576
+#: src/features/apps/index.tsx:617
+#: src/features/apps/index.tsx:667
 msgid "Installing..."
 msgstr "설치 중..."
 
@@ -1495,10 +1483,6 @@ msgstr "성공적으로 로그아웃되었어요"
 msgid "Logging out…"
 msgstr "로그아웃 중…"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
-msgid "Manage capabilities granted to this application"
-msgstr "이 애플리케이션에 부여된 기능 관리"
-
 #: ../../../lib/web/src/components/notification-category-button.tsx:127
 msgid "Manage categories"
 msgstr "카테고리 관리"
@@ -1573,7 +1557,7 @@ msgstr "이동됨"
 msgid "Moved {field}"
 msgstr "{field} 이동됨"
 
-#: src/features/routing/routing-table.tsx:107
+#: src/features/routing/routing-table.tsx:102
 msgid "Multiple apps declare this resource"
 msgstr "여러 앱이 이 리소스를 선언하고 있어요"
 
@@ -1633,11 +1617,11 @@ msgstr "아직 활동이 없어요"
 msgid "No apps could be updated."
 msgstr "업데이트할 수 있는 앱이 없어요."
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:392
 msgid "No apps installed"
 msgstr "설치된 앱이 없어요"
 
-#: src/features/routing/routing-table.tsx:59
+#: src/features/routing/routing-table.tsx:54
 msgid "No classes configured."
 msgstr "구성된 클래스가 없습니다."
 
@@ -1645,11 +1629,11 @@ msgstr "구성된 클래스가 없습니다."
 msgid "No comments yet"
 msgstr "아직 댓글이 없어요"
 
-#: src/features/apps/index.tsx:493
+#: src/features/apps/index.tsx:486
 msgid "No description"
 msgstr "설명 없음"
 
-#: src/features/apps/index.tsx:431
+#: src/features/apps/index.tsx:424
 msgid "No development apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\"와 일치하는 개발 앱이 없습니다"
 
@@ -1661,11 +1645,11 @@ msgstr "아직 게임이 없어요"
 msgid "No groups available"
 msgstr "이용 가능한 그룹이 없어요"
 
-#: src/features/apps/index.tsx:524
+#: src/features/apps/index.tsx:517
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "디렉토리에 \"{searchQuery}\"와 일치하는 설치 가능한 앱이 없습니다"
 
-#: src/features/apps/index.tsx:405
+#: src/features/apps/index.tsx:398
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\"와 일치하는 설치된 앱이 없습니다"
 
@@ -1673,12 +1657,12 @@ msgstr "\"{searchQuery}\"와 일치하는 설치된 앱이 없습니다"
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "아직 항목 유형을 만들 수 없어요. 먼저 필요한 상위 항목을 만들어 주세요."
 
-#: src/features/apps/index.tsx:523
+#: src/features/apps/index.tsx:516
 msgid "No matches in directory"
 msgstr "디렉터리에 일치하는 항목이 없어요"
 
-#: src/features/apps/index.tsx:404
-#: src/features/apps/index.tsx:430
+#: src/features/apps/index.tsx:397
+#: src/features/apps/index.tsx:423
 msgid "No matching apps"
 msgstr "일치하는 앱이 없어요"
 
@@ -1686,7 +1670,7 @@ msgstr "일치하는 앱이 없어요"
 msgid "No matching objects"
 msgstr "일치하는 객체가 없어요"
 
-#: src/features/routing/routing-table.tsx:63
+#: src/features/routing/routing-table.tsx:58
 msgid "No paths configured."
 msgstr "구성된 경로가 없습니다."
 
@@ -1695,11 +1679,11 @@ msgstr "구성된 경로가 없습니다."
 msgid "No people found"
 msgstr "사람을 찾을 수 없어요"
 
-#: src/routes/_authenticated/app/$appId.tsx:588
+#: src/routes/_authenticated/app/$appId.tsx:573
 msgid "No permissions granted"
 msgstr "부여된 권한이 없어요"
 
-#: src/routes/_authenticated/app/$appId.tsx:523
+#: src/routes/_authenticated/app/$appId.tsx:511
 msgid "No permissions granted to this app"
 msgstr "이 앱에 부여된 권한이 없습니다"
 
@@ -1707,7 +1691,7 @@ msgstr "이 앱에 부여된 권한이 없습니다"
 msgid "No places found"
 msgstr "장소를 찾을 수 없어요"
 
-#: src/features/apps/index.tsx:476
+#: src/features/apps/index.tsx:469
 msgid "No recommendations available"
 msgstr "이용 가능한 추천이 없어요"
 
@@ -1720,7 +1704,7 @@ msgstr "결과가 없어요"
 msgid "No results found."
 msgstr "결과를 찾을 수 없어요."
 
-#: src/features/routing/routing-table.tsx:61
+#: src/features/routing/routing-table.tsx:56
 msgid "No services configured."
 msgstr "구성된 서비스가 없습니다."
 
@@ -1787,7 +1771,7 @@ msgstr "찾을 수 없음"
 msgid "Not set"
 msgstr "설정되지 않음"
 
-#: src/routes/_authenticated/app/$appId.tsx:360
+#: src/routes/_authenticated/app/$appId.tsx:349
 msgid "Not versioned"
 msgstr "버전 관리되지 않음"
 
@@ -1888,11 +1872,11 @@ msgstr "패스키"
 msgid "Passkeys are not available in this browser"
 msgstr "이 브라우저에서는 패스키를 사용할 수 없습니다"
 
-#: src/features/apps/index.tsx:604
+#: src/features/apps/index.tsx:597
 msgid "Paste the install link:"
 msgstr "설치 링크를 붙여넣으세요:"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Path"
 msgstr "경로"
 
@@ -1913,16 +1897,16 @@ msgstr "패턴 (정규식)"
 msgid "People"
 msgstr "사람"
 
-#: src/routes/_authenticated/app/$appId.tsx:486
+#: src/routes/_authenticated/app/$appId.tsx:475
 msgid "Permission granted"
 msgstr "권한이 부여되었어요"
 
-#: src/routes/_authenticated/app/$appId.tsx:467
+#: src/routes/_authenticated/app/$appId.tsx:456
 msgid "Permission revoked"
 msgstr "권한이 취소되었어요"
 
-#: src/routes/_authenticated/app/$appId.tsx:152
-#: src/routes/_authenticated/app/$appId.tsx:521
+#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:510
 msgid "Permissions"
 msgstr "권한"
 
@@ -1956,7 +1940,7 @@ msgstr "게시물 및 댓글"
 msgid "Preference updated"
 msgstr "환경설정이 업데이트되었어요"
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Preferred version"
 msgstr "선호하는 버전"
 
@@ -1982,7 +1966,7 @@ msgstr "프롬프트가 저장되었어요"
 msgid "Properties"
 msgstr "속성"
 
-#: src/routes/_authenticated/app/$appId.tsx:227
+#: src/routes/_authenticated/app/$appId.tsx:216
 msgid "Provided classes"
 msgstr "제공된 클래스"
 
@@ -2003,7 +1987,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "이 서버에서 패스키를 다시 등록하세요"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:452
+#: src/features/apps/index.tsx:445
 msgid "Recommended"
 msgstr "추천됨"
 
@@ -2137,8 +2121,8 @@ msgid "Retry"
 msgstr "다시 시도"
 
 #: ../../../lib/web/src/components/options-menu.tsx:247
-#: src/routes/_authenticated/app/$appId.tsx:641
-#: src/routes/_authenticated/app/$appId.tsx:644
+#: src/routes/_authenticated/app/$appId.tsx:626
+#: src/routes/_authenticated/app/$appId.tsx:629
 msgid "Revoke"
 msgstr "취소"
 
@@ -2146,11 +2130,11 @@ msgstr "취소"
 msgid "Revoke access"
 msgstr "액세스 취소"
 
-#: src/routes/_authenticated/app/$appId.tsx:651
+#: src/routes/_authenticated/app/$appId.tsx:636
 msgid "Revoke permission"
 msgstr "권한 취소"
 
-#: src/routes/_authenticated/app/$appId.tsx:649
+#: src/routes/_authenticated/app/$appId.tsx:634
 msgid "Revoke permission?"
 msgstr "권한을 취소할까요?"
 
@@ -2158,7 +2142,7 @@ msgstr "권한을 취소할까요?"
 msgid "Revoke RSS access?"
 msgstr "RSS 액세스를 해지할까요?"
 
-#: src/routes/_authenticated/app/$appId.tsx:466
+#: src/routes/_authenticated/app/$appId.tsx:455
 msgid "Revoking permission..."
 msgstr "권한 취소 중..."
 
@@ -2189,7 +2173,7 @@ msgstr "토요일"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2200,8 +2184,8 @@ msgstr "저장"
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: src/features/routing/use-routing-data.ts:31
 #: src/features/routing/use-routing-data.ts:50
-#: src/routes/_authenticated/app/$appId.tsx:316
-#: src/routes/_authenticated/app/$appId.tsx:338
+#: src/routes/_authenticated/app/$appId.tsx:305
+#: src/routes/_authenticated/app/$appId.tsx:327
 msgid "Saving..."
 msgstr "저장 중..."
 
@@ -2212,11 +2196,11 @@ msgstr "저장 중..."
 msgid "Search"
 msgstr "검색"
 
-#: src/features/apps/index.tsx:371
+#: src/features/apps/index.tsx:368
 msgid "Search apps"
 msgstr "앱 검색"
 
-#: src/features/apps/index.tsx:370
+#: src/features/apps/index.tsx:367
 msgid "Search apps..."
 msgstr "앱 검색..."
 
@@ -2272,10 +2256,6 @@ msgstr "검색 중..."
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts:16
 msgid "Select"
 msgstr "선택"
-
-#: src/routes/_authenticated/app/$appId.tsx:536
-msgid "Select a capability to grant to {appName}."
-msgstr "{appName}에 부여할 기능을 선택하세요."
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 msgid "Select a field"
@@ -2354,7 +2334,7 @@ msgstr "서버 오류"
 msgid "Server rules"
 msgstr "서버 규칙"
 
-#: src/features/routing/routing-table.tsx:75
+#: src/features/routing/routing-table.tsx:70
 msgid "Service"
 msgstr "서비스"
 
@@ -2471,14 +2451,14 @@ msgstr "일요일"
 msgid "Switch to view 1-9"
 msgstr "보기 1-9로 전환"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "시스템"
 
-#: src/features/routing/routing-table.tsx:79
-#: src/routes/_authenticated/app/$appId.tsx:417
+#: src/features/routing/routing-table.tsx:74
+#: src/routes/_authenticated/app/$appId.tsx:406
 msgid "System default"
 msgstr "시스템 기본값"
 
@@ -2499,7 +2479,7 @@ msgstr "태그는 50자 이하여야 해요"
 msgid "Tags"
 msgstr "태그"
 
-#: src/routes/_authenticated/app/$appId.tsx:224
+#: src/routes/_authenticated/app/$appId.tsx:213
 msgid "Technical capabilities"
 msgstr "기술 역량"
 
@@ -2545,7 +2525,7 @@ msgstr "마이크 요청에 응답이 없었습니다"
 msgid "The passkey request was not answered"
 msgstr "패스키 요청에 응답이 없었습니다"
 
-#: src/routes/_authenticated/app/$appId.tsx:132
+#: src/routes/_authenticated/app/$appId.tsx:131
 msgid "The requested app could not be found."
 msgstr "요청한 앱을 찾을 수 없어요."
 
@@ -2557,7 +2537,7 @@ msgstr "요청한 콘텐츠를 찾을 수 없습니다."
 msgid "The server returned a web page instead of data."
 msgstr "서버가 데이터 대신 웹 페이지를 반환했습니다."
 
-#: src/routes/_authenticated/app/$appId.tsx:361
+#: src/routes/_authenticated/app/$appId.tsx:350
 msgid "This app does not have version management"
 msgstr "이 앱은 버전 관리를 지원하지 않아요"
 
@@ -2574,7 +2554,7 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "이 작업은 게임과 채팅을 영구적으로 삭제합니다. 이 작업은 되돌릴 수 없습니다."
 
 #. placeholder {0}: permission.name
-#: src/routes/_authenticated/app/$appId.tsx:650
+#: src/routes/_authenticated/app/$appId.tsx:635
 msgid "This will revoke the \"{0}\" permission from {appName}. The app may stop working correctly."
 msgstr "이렇게 하면 {appName}에서 \"{0}\" 권한이 취소됩니다. 앱이 올바르게 작동하지 않을 수 있습니다."
 
@@ -2617,8 +2597,8 @@ msgstr "요청이 너무 많음"
 msgid "Top"
 msgstr "위"
 
-#: src/features/apps/index.tsx:742
-#: src/routes/_authenticated/app/$appId.tsx:380
+#: src/features/apps/index.tsx:735
+#: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "트랙"
 
@@ -2664,7 +2644,7 @@ msgstr "입력하여 검색..."
 msgid "Unable to connect to remote server"
 msgstr "원격 서버에 연결할 수 없습니다"
 
-#: src/features/apps/index.tsx:471
+#: src/features/apps/index.tsx:464
 msgid "Unable to connect to the recommendations service"
 msgstr "추천 서비스에 연결할 수 없어요"
 
@@ -2686,7 +2666,7 @@ msgid "Unassigned"
 msgstr "할당되지 않음"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:470
+#: src/features/apps/index.tsx:463
 msgid "Unavailable"
 msgstr "사용할 수 없음"
 
@@ -2699,7 +2679,7 @@ msgstr "예기치 않은 API 오류"
 msgid "United States"
 msgstr "미국"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2717,11 +2697,11 @@ msgstr "구독 취소"
 msgid "Untitled"
 msgstr "제목 없음"
 
-#: src/features/apps/index.tsx:738
+#: src/features/apps/index.tsx:731
 msgid "Update"
 msgstr "업데이트"
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Update all"
 msgstr "모두 업데이트"
 
@@ -2743,7 +2723,7 @@ msgstr "{field} 업데이트됨"
 msgid "Updating apps..."
 msgstr "앱 업데이트 중..."
 
-#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:318
 msgid "Updating..."
 msgstr "업데이트 중..."
 
@@ -2756,7 +2736,7 @@ msgstr "업로드"
 msgid "Upload progress"
 msgstr "업로드 진행률"
 
-#: src/features/routing/routing-table.tsx:155
+#: src/features/routing/routing-table.tsx:150
 msgid "Use system default"
 msgstr "시스템 기본값 사용"
 
@@ -2787,7 +2767,7 @@ msgstr "확인"
 msgid "Verify email address"
 msgstr "이메일 주소 확인"
 
-#: src/routes/_authenticated/app/$appId.tsx:394
+#: src/routes/_authenticated/app/$appId.tsx:383
 msgid "Version"
 msgstr "버전"
 
@@ -2796,15 +2776,15 @@ msgstr "버전"
 msgid "Version {0}"
 msgstr "버전 {0}"
 
-#: src/routes/_authenticated/app/$appId.tsx:317
+#: src/routes/_authenticated/app/$appId.tsx:306
 msgid "Version changed"
 msgstr "버전이 변경되었어요"
 
-#: src/routes/_authenticated/app/$appId.tsx:413
+#: src/routes/_authenticated/app/$appId.tsx:402
 msgid "Version management"
 msgstr "버전 관리"
 
-#: src/routes/_authenticated/app/$appId.tsx:151
+#: src/routes/_authenticated/app/$appId.tsx:150
 msgid "Versions"
 msgstr "버전"
 
@@ -2869,7 +2849,7 @@ msgstr "계정이 {source}에서 이곳으로 이전되었습니다. 거기서 �
 msgid "Your attachments will be lost."
 msgstr "첨부 파일이 사라집니다."
 
-#: src/features/routing/routing-table.tsx:82
+#: src/features/routing/routing-table.tsx:77
 msgid "Your preference"
 msgstr "내 환경설정"
 
@@ -2881,6 +2861,6 @@ msgstr "텍스트와 첨부 파일이 사라집니다."
 msgid "Your text will be lost."
 msgstr "작성한 내용이 사라져요."
 
-#: src/routes/_authenticated/app/$appId.tsx:432
+#: src/routes/_authenticated/app/$appId.tsx:421
 msgid "Your version"
 msgstr "내 버전"

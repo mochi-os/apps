@@ -6,12 +6,13 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import type { AxiosProgressEvent } from 'axios'
 import appsApi from '@/api/apps'
+import type { Update } from '@/api/types/apps'
 
 const appKeys = {
   all: () => ['apps'] as const,
   installed: () => ['apps', 'installed'] as const,
   market: () => ['apps', 'market'] as const,
-  info: (id: string, url?: string) => ['apps', 'info', id, url ?? ''] as const,
+  info: (id: string) => ['apps', 'info', id] as const,
   updates: () => ['apps', 'updates'] as const,
   routing: () => ['apps', 'routing'] as const,
   directory: (q: string) => ['apps', 'directory', q] as const,
@@ -30,10 +31,10 @@ export const useMarketAppsQuery = () =>
     retry: false,
   })
 
-export const useAppInfoQuery = (id: string | null, url?: string) =>
+export const useAppInfoQuery = (id: string | null) =>
   useQuery({
-    queryKey: appKeys.info(id ?? '', url),
-    queryFn: () => appsApi.getInfo(id!, url),
+    queryKey: appKeys.info(id ?? ''),
+    queryFn: () => appsApi.getInfo(id!),
     enabled: !!id,
   })
 
@@ -47,15 +48,8 @@ export const useUpdatesQuery = () =>
 export const useInstallFromPublisherMutation = () => {
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: ({
-      id,
-      version,
-      peer,
-    }: {
-      id: string
-      version: string
-      peer?: string
-    }) => appsApi.installFromPublisher(id, version, peer),
+    mutationFn: ({ id, version }: { id: string; version: string }) =>
+      appsApi.installFromPublisher(id, version),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: appKeys.all() })
     },
@@ -106,9 +100,7 @@ export const useUpgradeMutation = () => {
       // /apps/-/updates is slow (sequential P2P round-trips per app), so a
       // naive invalidate races a minute-long fetch whose snapshot pre-dates the
       // upgrade. Drop the upgraded app from the cached list instead.
-      queryClient.setQueryData<{
-        updates: { id: string; name: string; current: string; available: string; publisher: string }[]
-      }>(appKeys.updates(), (old) => {
+      queryClient.setQueryData<{ updates: Update[] }>(appKeys.updates(), (old) => {
         if (!old?.updates) return old
         return { ...old, updates: old.updates.filter((u) => u.id !== variables.id) }
       })
