@@ -357,7 +357,11 @@ def action_install_id(a):
 	if not mochi.text.valid(id, "entity"):
 		a.error.label(400, "errors.invalid_app_id")
 		return
-	if publisher and len(publisher) > 51:
+	# A publisher is a place to ask: a server peer id (52 characters, what the
+	# publisher's share page hands out for a private app) or an entity id
+	# whose host the directory can name. The same two forms install/publisher
+	# accepts below.
+	if publisher and not mochi.text.valid(publisher, "peer") and not mochi.text.valid(publisher, "entity"):
 		a.error.label(400, "errors.invalid_publisher_id")
 		return
 
