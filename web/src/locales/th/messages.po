@@ -30,6 +30,11 @@ msgstr "(ขยาย)"
 msgid "[not set]"
 msgstr "[ไม่ได้ตั้ง]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# ผลลัพธ์} other {# ผลลัพธ์}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, other {+# ที่ซ้อนอยู่}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {นำเวอร์ชันที่ไม่ได้ใช้ # รายการออกแล้ว} other {นำเวอร์ชันที่ไม่ได้ใช้ # รายการออกแล้ว}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (การพัฒนา)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} อัปเดตแล้ว, {failed} ล้มเหลว"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ได้รับการติดตั้งแล้ว"
 
@@ -145,7 +150,7 @@ msgstr "ระดับการเข้าถึง"
 msgid "Account type"
 msgstr "ประเภทบัญชี"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "กิจกรรม"
 
@@ -208,7 +213,7 @@ msgstr "เพิ่มตัวเลือก"
 msgid "Add tag..."
 msgstr "เพิ่มแท็ก..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "เพิ่มไปยังไดเรกทอรี"
 
@@ -231,7 +236,7 @@ msgstr "กำลังเพิ่ม..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "อัปเดตแอปทั้งหมดแล้ว"
 
@@ -269,13 +274,13 @@ msgstr "ใครก็ตามที่เข้าสู่ระบบ"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "ทุกอย่างที่สมัครรับฟีดนี้จะหยุดรับ คุณสามารถคัดลอก URL ใหม่ได้ภายหลัง"
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "แอป"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "การกระทำของแอป"
 
@@ -283,11 +288,11 @@ msgstr "การกระทำของแอป"
 msgid "App information"
 msgstr "ข้อมูลแอป"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "ติดตั้งแอปแล้ว"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "ติดตั้งแอปสำเร็จแล้ว"
 
@@ -303,7 +308,7 @@ msgstr "ID แอปพลิเคชัน"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "แอป"
 
@@ -312,7 +317,7 @@ msgstr "แอป"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบ\"{0}\"?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบ\"{title}\"? การกระทำนี้ไม่สามารถยกเลิกได้"
 
@@ -340,11 +345,11 @@ msgstr "คุณแน่ใจหรือไม่ว่าต้องกา
 msgid "Ascending"
 msgstr "จากน้อยไปมาก"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "แนบไฟล์ความคิดเห็น"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "แนบไฟล์ตอบกลับ"
 
@@ -370,7 +375,7 @@ msgstr "เวอร์ชันที่มี:"
 msgid "Available versions:"
 msgstr "เวอร์ชันที่มีให้:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "ใช้ได้ แต่ยังไม่ได้ติดตั้ง"
 
@@ -465,18 +470,18 @@ msgstr "กล้องไม่พร้อมใช้งาน"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "ยกเลิก"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "ยกเลิกความคิดเห็น"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "ยกเลิกการตอบกลับ"
 
@@ -538,12 +543,12 @@ msgstr "การกำหนดเส้นทางคลาส"
 msgid "Classes"
 msgstr "คลาส"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "ล้างเวอร์ชันที่ไม่ใช้งาน"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "กำลังล้าง..."
 
@@ -641,8 +646,8 @@ msgstr "การดำเนินการความคิดเห็น"
 msgid "Comments"
 msgstr "ความคิดเห็น"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "ความคิดเห็น ({0})"
 
@@ -703,10 +708,10 @@ msgstr "คัดลอกไปยังคลิปบอร์ดแล้ว
 msgid "Copy"
 msgstr "คัดลอก"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "ไม่สามารถติดตั้งแอปได้"
 
@@ -838,7 +843,7 @@ msgstr "แทร็กเริ่มต้น (เวอร์ชัน {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "ลบ"
@@ -863,9 +868,9 @@ msgstr "ลบฟิลด์"
 msgid "Delete game?"
 msgstr "ลบเกม?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "ลบรายการ"
 
@@ -926,7 +931,7 @@ msgstr "แผงรายละเอียด"
 msgid "Detect from web browser"
 msgstr "ตรวจจับจากเว็บเบราว์เซอร์"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "แอปพัฒนา"
 
@@ -934,11 +939,11 @@ msgstr "แอปพัฒนา"
 msgid "Directory"
 msgstr "ไดเรกทอรี"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "ยกเลิก"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "ยกเลิกฉบับร่างใช่ไหม?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "ไม่ตรงกับรูปแบบที่กำหนด"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "เสร็จสิ้น"
@@ -1052,7 +1057,7 @@ msgstr "ป้อนรหัสจากแอปยืนยันตัวต
 msgid "Entity:"
 msgstr "เอนทิตี:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "ข้อผิดพลาด"
 
@@ -1079,7 +1084,7 @@ msgstr "ใหญ่พิเศษ"
 msgid "Failed to add account"
 msgstr "ไม่สามารถเพิ่มบัญชีได้"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "ล้างแอปไม่สำเร็จ"
 
@@ -1133,8 +1138,8 @@ msgstr "ไม่สามารถโหลดประวัติได้"
 msgid "Failed to load image"
 msgstr "โหลดรูปภาพไม่สำเร็จ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "ไม่สามารถโหลดรายการได้"
 
@@ -1174,7 +1179,7 @@ msgstr "ไม่สามารถบันทึกได้"
 msgid "Failed to save prompt"
 msgstr "ไม่สามารถบันทึก prompt ได้"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "อัปเดตแอปไม่สำเร็จ"
 
@@ -1207,7 +1212,7 @@ msgstr "อัปเดตการติดตามไม่สำเร็จ
 msgid "Failed to upload attachment"
 msgstr "ไม่สามารถอัปโหลดไฟล์แนบได้"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "ไฟล์:"
 
@@ -1251,7 +1256,7 @@ msgstr "เพื่อน"
 msgid "From"
 msgstr "จาก"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "จากไดเรกทอรี"
 
@@ -1347,40 +1352,40 @@ msgstr "อวาตาร์ตัวย่อของ {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "ติดตั้ง"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "ติดตั้ง {0}?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "ติดตั้งจากไฟล์"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "ติดตั้งจาก Publisher"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "แอปที่ติดตั้งแล้ว"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "กำลังติดตั้ง..."
 
@@ -1400,7 +1405,7 @@ msgstr "วันที่ไม่ถูกต้อง"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "ดูเหมือนว่าหน้าที่คุณกำลังมองหา <0/>ไม่มีอยู่หรืออาจถูกลบไปแล้ว"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "รายละเอียดรายการ"
 
@@ -1449,11 +1454,11 @@ msgstr "โหลดเพิ่ม"
 msgid "Loading content…"
 msgstr "กำลังโหลดเนื้อหา…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "กำลังโหลดรายการ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "กำลังโหลดรายละเอียดรายการ"
 
@@ -1613,11 +1618,11 @@ msgstr "ยังไม่ได้ตั้งกฎการเข้าถึ
 msgid "No activity yet"
 msgstr "ยังไม่มีกิจกรรม"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "ไม่สามารถอัปเดตแอปใดได้"
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "ยังไม่ได้ติดตั้งแอป"
 
@@ -1629,11 +1634,11 @@ msgstr "ไม่ได้กำหนดค่าคลาส"
 msgid "No comments yet"
 msgstr "ยังไม่มีความคิดเห็น"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "ไม่มีคำอธิบาย"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "ไม่มีแอปการพัฒนาที่ตรงกับ \"{searchQuery}\""
 
@@ -1645,11 +1650,11 @@ msgstr "ยังไม่มีเกม"
 msgid "No groups available"
 msgstr "ไม่มีกลุ่มที่ใช้งานได้"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "ไม่มีแอปที่ติดตั้งได้ในไดเรกทอรีที่ตรงกับ \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "ไม่มีแอปที่ติดตั้งที่ตรงกับ \"{searchQuery}\""
 
@@ -1657,12 +1662,12 @@ msgstr "ไม่มีแอปที่ติดตั้งที่ตรง
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "ยังไม่สามารถสร้างประเภทรายการได้ กรุณาสร้างรายการแม่ที่จำเป็นก่อน"
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "ไม่พบรายการที่ตรงกันในไดเรกทอรี"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "ไม่มีแอปที่ตรงกัน"
 
@@ -1691,7 +1696,7 @@ msgstr "ไม่มีสิทธิ์ที่มอบให้แอปน
 msgid "No places found"
 msgstr "ไม่พบสถานที่"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "ไม่มีคำแนะนำให้แสดง"
 
@@ -1726,7 +1731,7 @@ msgstr "ยังไม่มีบันทึกหัวข้อ — ลอ�
 msgid "No unread notifications"
 msgstr "ไม่มีการแจ้งเตือนที่ยังไม่ได้อ่าน"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "ไม่มีเวอร์ชันที่ไม่ได้ใช้ให้ลบ"
 
@@ -1742,10 +1747,10 @@ msgstr "ไม่มีการเข้าชม"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "เจ้าของ"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "แม่"
 
@@ -1872,7 +1877,7 @@ msgstr "พาสคีย์"
 msgid "Passkeys are not available in this browser"
 msgstr "Passkeys ไม่พร้อมใช้งานในเบราว์เซอร์นี้"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "วางลิงก์ติดตั้ง:"
 
@@ -1916,7 +1921,7 @@ msgstr "สิทธิ์"
 msgid "Please check your internet connection and try again."
 msgstr "โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณแล้วลองอีกครั้ง"
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "กรุณาป้อน ID ของแอป"
 
@@ -1962,7 +1967,7 @@ msgstr "กำลังประมวลผล…"
 msgid "Prompt saved"
 msgstr "บันทึก prompt แล้ว"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "คุณสมบัติ"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "ลงทะเบียนพาสคีย์ของคุณใหม่บนเซิร์ฟเวอร์นี้"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "แนะนำ"
 
@@ -2196,11 +2201,11 @@ msgstr "กำลังบันทึก..."
 msgid "Search"
 msgstr "ค้นหา"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "ค้นหาแอป"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "ค้นหาแอป..."
 
@@ -2420,8 +2425,8 @@ msgstr "กว้างขวาง"
 msgid "Start the discussion by adding the first comment."
 msgstr "เริ่มการสนทนาโดยเพิ่มความคิดเห็นแรก"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "หยุดติดตาม"
 
@@ -2429,11 +2434,11 @@ msgstr "หยุดติดตาม"
 msgid "Subject"
 msgstr "หัวเรื่อง"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "ส่งความคิดเห็น"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "ส่งการตอบกลับ"
 
@@ -2505,7 +2510,7 @@ msgstr "ส่งไม่ได้ ไฟล์อาจใหญ่เกิ�
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "ใหญ่เกินกว่าจะอัปโหลดได้ ลบหรือย่อไฟล์แล้วลองอีกครั้ง"
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "ติดตั้งแอปสำเร็จแล้ว"
 
@@ -2597,7 +2602,7 @@ msgstr "คำขอมากเกินไป"
 msgid "Top"
 msgstr "บนสุด"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "แทร็ก"
@@ -2644,7 +2649,7 @@ msgstr "พิมพ์เพื่อค้นหา..."
 msgid "Unable to connect to remote server"
 msgstr "ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ระยะไกลได้"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "ไม่สามารถเชื่อมต่อบริการคำแนะนำได้"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "ยังไม่กำหนด"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "ไม่พร้อมใช้งาน"
 
@@ -2697,15 +2702,15 @@ msgstr "ยกเลิกการติดตาม"
 msgid "Untitled"
 msgstr "ไม่มีชื่อ"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "อัปเดต"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "อัปเดตทั้งหมด"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "อัปเดตไม่สำเร็จ"
 
@@ -2719,11 +2724,11 @@ msgstr "อัปเดตแล้ว"
 msgid "Updated {field}"
 msgstr "อัปเดต {field}"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "กำลังอัปเดตแอป..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "กำลังอัปเดต..."
 
@@ -2802,7 +2807,7 @@ msgstr "โปรแกรมดูวิดีโอ: {0}"
 msgid "View all notifications"
 msgstr "ดูการแจ้งเตือนทั้งหมด"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "ดูและแก้ไขรายละเอียดรายการ"
 
@@ -2814,8 +2819,8 @@ msgstr "ตัวควบคุมมุมมอง"
 msgid "Voice recording is not supported in this browser"
 msgstr "เบราว์เซอร์นี้ไม่รองรับการบันทึกเสียง"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "ติดตาม"
 
@@ -2845,7 +2850,7 @@ msgstr "คุณไม่มีสิทธิ์เข้าถึงส่ว
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "บัญชีของคุณถูกย้ายมาที่นี่จาก {source} จนกว่าคุณจะลบออกที่นั่น ข้อความและการแจ้งเตือนอาจไปถึงทั้งสองเซิร์ฟเวอร์ เนื้อหาบางส่วนของคุณยังคงให้บริการจากเซิร์ฟเวอร์เดิม และผู้ติดตามอาจต้องใช้เวลาสักครู่เพื่อพบคุณที่นี่"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "ไฟล์แนบของคุณจะหายไป"
 
@@ -2853,11 +2858,11 @@ msgstr "ไฟล์แนบของคุณจะหายไป"
 msgid "Your preference"
 msgstr "การตั้งค่าของคุณ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "ข้อความและไฟล์แนบของคุณจะหายไป"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "ข้อความของคุณจะหายไป"
 

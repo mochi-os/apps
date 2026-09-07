@@ -30,6 +30,11 @@ msgstr "(ពង្រីក)"
 msgid "[not set]"
 msgstr "[មិនបានកំណត់]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, other {# លទ្ធផល}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, other {+# ជាន់ក្នុង}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, other {បានលុប # កំណែដែលមិនប្រើ}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (development)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "បានធ្វើបច្ចុប្បន្នភាព {0}, បរាជ័យ {failed}"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ត្រូវបានដំឡើង។"
 
@@ -145,7 +150,7 @@ msgstr "កម្រិតការចូលប្រើ"
 msgid "Account type"
 msgstr "ប្រភេទគណនី"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "សកម្មភាព"
 
@@ -208,7 +213,7 @@ msgstr "បន្ថែមជម្រើស"
 msgid "Add tag..."
 msgstr "បន្ថែមស្លាក..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "បន្ថែមទៅថត"
 
@@ -231,7 +236,7 @@ msgstr "កំពុងបន្ថែម..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "បានធ្វើបច្ចុប្បន្នភាពកម្មវិធីទាំងអស់"
 
@@ -269,13 +274,13 @@ msgstr "នរណាម្នាក់ដែលបានចូល"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "អ្វីៗដែលបានជាវព័ត៌មាននេះនឹងឈប់ទទួលបាន។ បន្ទាប់មកអ្នកអាចចម្លង URL ថ្មី។"
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "កម្មវិធី"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "សកម្មភាពកម្មវិធី"
 
@@ -283,11 +288,11 @@ msgstr "សកម្មភាពកម្មវិធី"
 msgid "App information"
 msgstr "ព័ត៌មានកម្មវិធី"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "បានដំឡើងកម្មវិធី"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "បានដំឡើងកម្មវិធីដោយជោគជ័យ"
 
@@ -303,7 +308,7 @@ msgstr "លេខសម្គាល់កម្មវិធី"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "កម្មវិធី"
 
@@ -312,7 +317,7 @@ msgstr "កម្មវិធី"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "តើអ្នកប្រាកដថាចង់លុប \"{0}\" មែនទេ?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "តើអ្នកប្រាកដថាចង់លុប \"{title}\" មែនទេ? សកម្មភាពនេះមិនអាចបញ្ច្រាសបានទេ។"
 
@@ -340,11 +345,11 @@ msgstr "តើអ្នកប្រាកដថាចង់លាលែងពី
 msgid "Ascending"
 msgstr "តាមលំដាប់កើន"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "ភ្ជាប់ឯកសារមតិយោបល់"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "ភ្ជាប់ឯកសារឆ្លើយតប"
 
@@ -370,7 +375,7 @@ msgstr "កំណែដែលមាន៖"
 msgid "Available versions:"
 msgstr "កំណែដែលមាន៖"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "មាន ប៉ុន្តែមិនបានដំឡើង"
 
@@ -465,18 +470,18 @@ msgstr "កាមេរ៉ាមិនអាចប្រើបាន"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "បោះបង់"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "បោះបង់មតិយោបល់"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "បោះបង់ការឆ្លើយតប"
 
@@ -538,12 +543,12 @@ msgstr "ការនាំផ្លូវថ្នាក់"
 msgid "Classes"
 msgstr "ថ្នាក់"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "សម្អាតកំណែដែលមិនបានប្រើ"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "កំពុងសម្អាត..."
 
@@ -641,8 +646,8 @@ msgstr "សកម្មភាពមតិយោបល់"
 msgid "Comments"
 msgstr "មតិយោបល់"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "មតិយោបល់ ({0})"
 
@@ -703,10 +708,10 @@ msgstr "បានចម្លងទៅក្ដារតម្បៀតខ្ទ
 msgid "Copy"
 msgstr "ចម្លង"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "មិនអាចដំឡើងកម្មវិធីបានទេ។"
 
@@ -838,7 +843,7 @@ msgstr "ផ្លូវលំនាំដើម (កំណែ {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "លុប"
@@ -863,9 +868,9 @@ msgstr "លុបប្រអប់"
 msgid "Delete game?"
 msgstr "លុបហ្គេម?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "លុបធាតុ"
 
@@ -926,7 +931,7 @@ msgstr "ផ្ទាំងព័ត៌មានលម្អិត"
 msgid "Detect from web browser"
 msgstr "រកឃើញពីកម្មវិធីរុករកគេហទំព័រ"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "កម្មវិធីអភិវឌ្ឍ"
 
@@ -934,11 +939,11 @@ msgstr "កម្មវិធីអភិវឌ្ឍ"
 msgid "Directory"
 msgstr "ថត"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "បោះបង់"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "បោះបង់សេចក្ដីព្រាងឬ?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "មិនត្រូវនឹងលំនាំដែលទាមទារ"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "រួចរាល់"
@@ -1052,7 +1057,7 @@ msgstr "បញ្ចូលកូដ authenticator របស់អ្នក"
 msgid "Entity:"
 msgstr "អង្គភាព៖"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "កំហុស"
 
@@ -1079,7 +1084,7 @@ msgstr "ធំពិសេស"
 msgid "Failed to add account"
 msgstr "បរាជ័យក្នុងការបន្ថែមគណនី"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "មិនអាចសម្អាតកម្មវិធីបានទេ"
 
@@ -1133,8 +1138,8 @@ msgstr "បរាជ័យក្នុងការផ្ទុកប្រវត
 msgid "Failed to load image"
 msgstr "បរាជ័យក្នុងការផ្ទុករូបភាព"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "បរាជ័យក្នុងការផ្ទុកធាតុ"
 
@@ -1174,7 +1179,7 @@ msgstr "បរាជ័យក្នុងការរក្សាទុក"
 msgid "Failed to save prompt"
 msgstr "បរាជ័យក្នុងការរក្សាទុកប្រអប់បញ្ចូល"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "មិនអាចធ្វើបច្ចុប្បន្នភាពកម្មវិធីបានទេ"
 
@@ -1207,7 +1212,7 @@ msgstr "ការធ្វើបច្ចុប្បន្នភាពការ
 msgid "Failed to upload attachment"
 msgstr "បរាជ័យក្នុងការផ្ទុកឡើងឯកសារភ្ជាប់"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "ឯកសារ៖"
 
@@ -1251,7 +1256,7 @@ msgstr "មិត្ត"
 msgid "From"
 msgstr "ពី"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "ពីថត"
 
@@ -1347,40 +1352,40 @@ msgstr "រូបតំណាងអក្សរកាត់សម្រាប់
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "ដំឡើង"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "ដំឡើង {0}?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "ដំឡើងពីឯកសារ"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "ដំឡើងពីអ្នកបោះពុម្ពផ្សាយ"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "កម្មវិធីដែលបានដំឡើង"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "កំពុងដំឡើង..."
 
@@ -1400,7 +1405,7 @@ msgstr "កាលបរិច្ឆេទមិនត្រឹមត្រូវ
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "ហាក់ដូចជាទំព័រដែលអ្នកកំពុងស្វែងរក <0/>មិនមាន ឬត្រូវបានលុបចេញ។"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "ព័ត៌មានលម្អិតធាតុ"
 
@@ -1449,11 +1454,11 @@ msgstr "ផ្ទុកបន្ថែម"
 msgid "Loading content…"
 msgstr "កំពុងផ្ទុកមាតិកា…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "កំពុងផ្ទុកធាតុ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "កំពុងផ្ទុកព័ត៌មានលម្អិតធាតុ"
 
@@ -1613,11 +1618,11 @@ msgstr "មិនមានច្បាប់ចូលប្រើបានកំ
 msgid "No activity yet"
 msgstr "មិនទាន់មានសកម្មភាព"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "មិនមានកម្មវិធីណាមួយដែលអាចធ្វើបច្ចុប្បន្នភាពបាន។"
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "មិនមានកម្មវិធីដែលបានដំឡើង"
 
@@ -1629,11 +1634,11 @@ msgstr "មិនមានថ្នាក់ដែលបានកំណត់រ
 msgid "No comments yet"
 msgstr "មិនទាន់មានមតិយោបល់"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "គ្មានការពិពណ៌នា"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "មិនមានកម្មវិធីអភិវឌ្ឍន៍ត្រូវនឹង \"{searchQuery}\""
 
@@ -1645,11 +1650,11 @@ msgstr "មិនទាន់មានហ្គេម"
 msgid "No groups available"
 msgstr "មិនមានក្រុម"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "មិនមានកម្មវិធីដែលអាចដំឡើងបាននៅក្នុងថតត្រូវនឹង \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "មិនមានកម្មវិធីដែលបានដំឡើងត្រូវនឹង \"{searchQuery}\""
 
@@ -1657,12 +1662,12 @@ msgstr "មិនមានកម្មវិធីដែលបានដំឡើ
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "មិនអាចបង្កើតប្រភេទធាតុបានទេ។ បង្កើតធាតុមេដែលត្រូវការជាមុនសិន។"
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "មិនមានលទ្ធផលត្រូវនឹងនៅក្នុងថត"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "មិនមានកម្មវិធីដែលត្រូវនឹង"
 
@@ -1691,7 +1696,7 @@ msgstr "មិនមានសិទ្ធិត្រូវបានផ្តល
 msgid "No places found"
 msgstr "រកមិនឃើញកន្លែង"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "មិនមានការណែនាំ"
 
@@ -1726,7 +1731,7 @@ msgstr "មិនទាន់មានកំណត់ត្រាប្រធា
 msgid "No unread notifications"
 msgstr "មិនមានការជូនដំណឹងដែលមិនទាន់អាន"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "មិនមានកំណែដែលមិនបានប្រើដើម្បីសម្អាត"
 
@@ -1742,10 +1747,10 @@ msgstr "មិនមានការមើល"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "ម្ចាស់"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "មេ"
 
@@ -1872,7 +1877,7 @@ msgstr "កូនសោចូល"
 msgid "Passkeys are not available in this browser"
 msgstr "Passkeys មិនមាននៅក្នុងកម្មវិធីរុករកនេះទេ"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "បិទភ្ជាប់តំណដំឡើង:"
 
@@ -1916,7 +1921,7 @@ msgstr "សិទ្ធិ"
 msgid "Please check your internet connection and try again."
 msgstr "សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក រួចព្យាយាមម្តងទៀត។"
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "សូមបញ្ចូល app ID"
 
@@ -1962,7 +1967,7 @@ msgstr "កំពុងដំណើរការ…"
 msgid "Prompt saved"
 msgstr "បានរក្សាទុក prompt"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "លក្ខណៈសម្បត្តិ"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "ចុះឈ្មោះកូនសោចូលរបស់អ្នកឡើងវិញនៅលើម៉ាស៊ីនមេនេះ"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "បានណែនាំ"
 
@@ -2196,11 +2201,11 @@ msgstr "កំពុងរក្សាទុក..."
 msgid "Search"
 msgstr "ស្វែងរក"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "ស្វែងរកកម្មវិធី"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "ស្វែងរកកម្មវិធី..."
 
@@ -2420,8 +2425,8 @@ msgstr "ធំទូលាយ"
 msgid "Start the discussion by adding the first comment."
 msgstr "ចាប់ផ្តើមការពិភាក្សាដោយបន្ថែមមតិយោបល់ដំបូង។"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "បញ្ឈប់ការតាមដាន"
 
@@ -2429,11 +2434,11 @@ msgstr "បញ្ឈប់ការតាមដាន"
 msgid "Subject"
 msgstr "ប្រធានបទ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "ដាក់ស្នើមតិយោបល់"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "ដាក់ស្នើការឆ្លើយតប"
 
@@ -2505,7 +2510,7 @@ msgstr "មិនអាចផ្ញើបានទេ។ ឯកសារប្�
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "ធំពេកមិនអាចផ្ទុកឡើងបានទេ។ លុប ឬបង្រួមឯកសារ ហើយព្យាយាមម្ដងទៀត។"
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "កម្មវិធីត្រូវបានដំឡើងដោយជោគជ័យ។"
 
@@ -2597,7 +2602,7 @@ msgstr "សំណើច្រើនពេក"
 msgid "Top"
 msgstr "កំពូល"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
@@ -2644,7 +2649,7 @@ msgstr "វាយដើម្បីស្វែងរក..."
 msgid "Unable to connect to remote server"
 msgstr "មិនអាចតភ្ជាប់ទៅម៉ាស៊ីនមេពីចម្ងាយបានទេ"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "មិនអាចភ្ជាប់ទៅសេវាកម្មការផ្តល់យោបល់"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "មិនបានកំណត់"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "មិនអាចប្រើបាន"
 
@@ -2697,15 +2702,15 @@ msgstr "ឈប់ជាវ"
 msgid "Untitled"
 msgstr "គ្មានចំណងជើង"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "ធ្វើបច្ចុប្បន្នភាព"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "ធ្វើបច្ចុប្បន្នភាពទាំងអស់"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "ការធ្វើបច្ចុប្បន្នភាពបរាជ័យ"
 
@@ -2719,11 +2724,11 @@ msgstr "បានធ្វើបច្ចុប្បន្នភាព"
 msgid "Updated {field}"
 msgstr "បានធ្វើបច្ចុប្បន្នភាព {field}"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "កំពុងធ្វើបច្ចុប្បន្នភាពកម្មវិធី..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "កំពុងធ្វើបច្ចុប្បន្នភាព..."
 
@@ -2802,7 +2807,7 @@ msgstr "កម្មវិធីមើលវីដេអូ៖ {0}"
 msgid "View all notifications"
 msgstr "មើលការជូនដំណឹងទាំងអស់"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "មើល និងកែសម្រួលព័ត៌មានលម្អិតធាតុ"
 
@@ -2814,8 +2819,8 @@ msgstr "ការគ្រប់គ្រងទិដ្ឋភាព"
 msgid "Voice recording is not supported in this browser"
 msgstr "កម្មវិធីរុករកនេះមិនគាំទ្រការថតសំឡេងទេ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "មើល"
 
@@ -2845,7 +2850,7 @@ msgstr "អ្នកមិនមានសិទ្ធិចូលប្រើផ
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "គណនីរបស់អ្នកត្រូវបានផ្លាស់ប្តូរមកទីនេះពី {source}។ រហូតដល់អ្នកលុបវានៅទីនោះ សារ និងការជូនដំណឹងអាចទៅដល់ម៉ាស៊ីនមេទាំងពីរ មាតិកាមួយចំនួនរបស់អ្នកនៅតែត្រូវបានបម្រើពីម៉ាស៊ីនមេចាស់ ហើយអ្នកតាមដានអាចចំណាយពេលប៉ុន្មាននាទីដើម្បីរកអ្នកនៅទីនេះ។"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "ឯកសារភ្ជាប់របស់អ្នកនឹងបាត់បង់។"
 
@@ -2853,11 +2858,11 @@ msgstr "ឯកសារភ្ជាប់របស់អ្នកនឹងបា
 msgid "Your preference"
 msgstr "ចំណូលចិត្តរបស់អ្នក"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "អត្ថបទ និងឯកសារភ្ជាប់របស់អ្នកនឹងបាត់បង់។"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "អត្ថបទរបស់អ្នកនឹងបាត់បង់។"
 

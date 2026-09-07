@@ -30,6 +30,11 @@ msgstr "(elaji)"
 msgid "[not set]"
 msgstr "[pa mete]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, other {# rezilta}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# anndan} other {+# anndan}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, other {# vèsyon ki pa itilize retire}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (devlopman)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} mete ajou, {failed} echwe"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} enstale."
 
@@ -145,7 +150,7 @@ msgstr "Nivo aksè"
 msgid "Account type"
 msgstr "Tip kont"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Aktivite"
 
@@ -208,7 +213,7 @@ msgstr "Ajoute opsyon"
 msgid "Add tag..."
 msgstr "Ajoute etikèt..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Ajoute nan anyè"
 
@@ -231,7 +236,7 @@ msgstr "Ap ajoute..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "Tout app yo mete ajou"
 
@@ -269,13 +274,13 @@ msgstr "Nenpòt moun ki konekte"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Tout sa ki abòne nan fil sa a ap sispann resevwa l. Ou ka kopye yon nouvo URL apre."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "App"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "Aksyon app"
 
@@ -283,11 +288,11 @@ msgstr "Aksyon app"
 msgid "App information"
 msgstr "Enfòmasyon app"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "App enstale"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "Aplikasyon an enstale avèk siksè"
 
@@ -303,7 +308,7 @@ msgstr "ID Aplikasyon"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "App yo"
 
@@ -312,7 +317,7 @@ msgstr "App yo"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Èske ou sèten ou vle efase \"{0}\"?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Èske ou sèten ou vle efase \"{title}\"? Aksyon sa a pa ka anile."
 
@@ -340,11 +345,11 @@ msgstr "Èske ou sèten ou vle bay vag? {opponentName} pral genyen jwèt la."
 msgid "Ascending"
 msgstr "Monte"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Tache fichye kòmantè"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Tache fichye repons"
 
@@ -370,7 +375,7 @@ msgstr "Vèsyon disponib:"
 msgid "Available versions:"
 msgstr "Vèsyon disponib:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Disponib, men pa enstale"
 
@@ -465,18 +470,18 @@ msgstr "Kamera pa disponib"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Anile"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Anile kòmantè"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Anile repons"
 
@@ -538,12 +543,12 @@ msgstr "Routing klas"
 msgid "Classes"
 msgstr "Klas yo"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Netwaye vèsyon ki pa itilize"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Ap netwaye..."
 
@@ -641,8 +646,8 @@ msgstr "Aksyon kòmantè"
 msgid "Comments"
 msgstr "Kòmantè"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Kòmantè ({0})"
 
@@ -703,10 +708,10 @@ msgstr "Kopye nan clipboard"
 msgid "Copy"
 msgstr "Kopye"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "Pa t' kapab enstale aplikasyon an."
 
@@ -838,7 +843,7 @@ msgstr "Track defo (vèsyon {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Efase"
@@ -863,9 +868,9 @@ msgstr "Efase chan"
 msgid "Delete game?"
 msgstr "Efase jwèt la?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Efase eleman"
 
@@ -926,7 +931,7 @@ msgstr "Panèl Detay"
 msgid "Detect from web browser"
 msgstr "Detekte nan navigatè web"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "App devlopman"
 
@@ -934,11 +939,11 @@ msgstr "App devlopman"
 msgid "Directory"
 msgstr "Anyè"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Jete"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Jete bouyon an?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Li pa koresponn ak modèl ki mande a"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Fini"
@@ -1052,7 +1057,7 @@ msgstr "Antre kòd otantifikatè ou"
 msgid "Entity:"
 msgstr "Antite:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Erè"
 
@@ -1079,7 +1084,7 @@ msgstr "Trè gwo"
 msgid "Failed to add account"
 msgstr "Echwe pou ajoute kont"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "Echèk pou netwaye aplikasyon yo"
 
@@ -1133,8 +1138,8 @@ msgstr "Echwe pou chaje istwa"
 msgid "Failed to load image"
 msgstr "Echèk chajman imaj la"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Echwe pou chaje atik"
 
@@ -1174,7 +1179,7 @@ msgstr "Echwe pou sove"
 msgid "Failed to save prompt"
 msgstr "Echwe pou sove prompt"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "Echèk pou mete aplikasyon yo ajou"
 
@@ -1207,7 +1212,7 @@ msgstr "Echèk mizajou siveyans"
 msgid "Failed to upload attachment"
 msgstr "Echwe pou telechaje atachman"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Fichye:"
 
@@ -1251,7 +1256,7 @@ msgstr "Zanmi"
 msgid "From"
 msgstr "Soti nan"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "Soti nan anyè a"
 
@@ -1347,40 +1352,40 @@ msgstr "Avata ak inisyal pou {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Enstale"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "Enstale {0}?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Enstale soti nan fichye"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Enstale soti nan editè"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "App enstale"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "Ap enstale..."
 
@@ -1400,7 +1405,7 @@ msgstr "Dat envalid"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Sanble paj w ap chèche a <0/>pa egziste oswa yo retire l."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Detay atik"
 
@@ -1449,11 +1454,11 @@ msgstr "Chaje plis"
 msgid "Loading content…"
 msgstr "Y ap chaje kontni…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Ap chaje atik"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Ap chaje detay atik"
 
@@ -1613,11 +1618,11 @@ msgstr "Pa gen règ aksè konfigire. Ajoute règ pou kontwole kiyès ki ka jwenn
 msgid "No activity yet"
 msgstr "Poko gen aktivite"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "Okenn aplikasyon pa t kapab mete ajou."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Pa gen aplikasyon enstale"
 
@@ -1629,11 +1634,11 @@ msgstr "Pa gen klas konfigire."
 msgid "No comments yet"
 msgstr "Poko gen kòmantè"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Pa gen deskripsyon"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Pa gen aplikasyon devlopman ki koresponn ak \"{searchQuery}\""
 
@@ -1645,11 +1650,11 @@ msgstr "Poko gen jwèt"
 msgid "No groups available"
 msgstr "Pa gen gwoup disponib"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Pa gen aplikasyon enstalab nan repèrtwa a ki koresponn ak \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Pa gen aplikasyon enstale ki koresponn ak \"{searchQuery}\""
 
@@ -1657,12 +1662,12 @@ msgstr "Pa gen aplikasyon enstale ki koresponn ak \"{searchQuery}\""
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Okenn kalite atik pa ka kreye ankò. Kreye atik paran ki nesesè yo dabò."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Pa gen korespondans nan repèrtwa"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Pa gen aplikasyon ki koresponn"
 
@@ -1691,7 +1696,7 @@ msgstr "Pa gen pèmisyon ki bay aplikasyon sa a"
 msgid "No places found"
 msgstr "Pa gen kote ki jwenn"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Pa gen rekòmandasyon disponib"
 
@@ -1726,7 +1731,7 @@ msgstr "Poko gen anrejistreman sijè — eseye ankò apre pwochèn notifikasyon 
 msgid "No unread notifications"
 msgstr "Pa gen notifikasyon ki pa li"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Pa gen vèsyon ki pa itilize pou netwaye"
 
@@ -1742,10 +1747,10 @@ msgstr "Pa gen vi"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Pwopriyetè"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Paran"
 
@@ -1872,7 +1877,7 @@ msgstr "Paskey"
 msgid "Passkeys are not available in this browser"
 msgstr "Passkeys pa disponib nan navigatè sa a"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Kole lyen enstalasyon an :"
 
@@ -1916,7 +1921,7 @@ msgstr "Pèmisyon"
 msgid "Please check your internet connection and try again."
 msgstr "Tanpri tcheke koneksyon entènèt ou epi eseye ankò."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Tanpri antre yon ID aplikasyon"
 
@@ -1962,7 +1967,7 @@ msgstr "Ap trete…"
 msgid "Prompt saved"
 msgstr "Prompt sove"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Pwopriyete"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Re-enskri paskey ou yo sou sèvè sa a"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "Rekòmande"
 
@@ -2196,11 +2201,11 @@ msgstr "Ap sove..."
 msgid "Search"
 msgstr "Chèche"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Chèche aplikasyon"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Chèche aplikasyon..."
 
@@ -2420,8 +2425,8 @@ msgstr "Espasye"
 msgid "Start the discussion by adding the first comment."
 msgstr "Kòmanse diskisyon an pa ajoute premye kòmantè a."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Sispann gade"
 
@@ -2429,11 +2434,11 @@ msgstr "Sispann gade"
 msgid "Subject"
 msgstr "Sijè"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Soumèt kòmantè"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Soumèt repons"
 
@@ -2505,7 +2510,7 @@ msgstr "Li pa t ka voye. Fichye yo ka twò gwo, oswa koneksyon ou an echwe. Esey
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Li te twò gwo pou telechaje. Retire oswa redui fichye yo epi eseye ankò."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "App la enstale avèk siksè."
 
@@ -2597,7 +2602,7 @@ msgstr "Twòp demann"
 msgid "Top"
 msgstr "Anwo"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
@@ -2644,7 +2649,7 @@ msgstr "Tape pou chèche..."
 msgid "Unable to connect to remote server"
 msgstr "Pa kapab konekte ak sèvè aleka a"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "Pa ka konekte ak sèvis rekòmandasyon yo"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Pa asiyen"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "Pa disponib"
 
@@ -2697,15 +2702,15 @@ msgstr "Dezabòne"
 msgid "Untitled"
 msgstr "San tit"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Mete ajou"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Mete ajou tout"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Mizajou echwe"
 
@@ -2719,11 +2724,11 @@ msgstr "Mete ajou"
 msgid "Updated {field}"
 msgstr "{field} mete ajou"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Ap mete aplikasyon yo ajou..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Ap mete ajou..."
 
@@ -2802,7 +2807,7 @@ msgstr "Vizyonè videyo: {0}"
 msgid "View all notifications"
 msgstr "Wè tout notifikasyon"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Wè epi modifye detay atik"
 
@@ -2814,8 +2819,8 @@ msgstr "Kontwòl vi"
 msgid "Voice recording is not supported in this browser"
 msgstr "Navigatè sa a pa sipòte anrejistreman vwa"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Gade"
 
@@ -2845,7 +2850,7 @@ msgstr "Ou pa gen aksè nan seksyon sa a."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Kont ou te deplase isit la depi {source}. Jiskaske ou efase li la, mesaj ak notifikasyon yo ka rive sou de sèvè yo, yon pati nan kontni ou ap kontinye sèvi depi ansyen sèvè a, epi moun k ap swiv ou yo ka pran kèk minit pou jwenn ou isit la."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Fichye ou tache yo ap pèdi."
 
@@ -2853,11 +2858,11 @@ msgstr "Fichye ou tache yo ap pèdi."
 msgid "Your preference"
 msgstr "Preferans ou"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Tèks ou ak fichye ou tache yo ap pèdi."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Tèks ou a pral pèdi."
 

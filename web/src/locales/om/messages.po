@@ -30,6 +30,11 @@ msgstr "(babal'isi)"
 msgid "[not set]"
 msgstr "[hin qindoofne]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {bu'aa #} other {bu'aalee #}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# keessa} other {+# keessa}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# gosa hin fayyadamne haqame} other {# gosoota hin fayyadamne haqaman}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (qophii)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} haaromfameera, {failed} hin milkoofne"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} fe'ameera."
 
@@ -145,7 +150,7 @@ msgstr "Sadarkaa seensaa"
 msgid "Account type"
 msgstr "Gosa akkaawuntii"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Sochii"
 
@@ -208,7 +213,7 @@ msgstr "Filannoo dabali"
 msgid "Add tag..."
 msgstr "Tag dabali..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Galmee gara hawaasaa dabali"
 
@@ -231,7 +236,7 @@ msgstr "Dabalaa jira..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "Appiilee hundi haaromfaman"
 
@@ -269,13 +274,13 @@ msgstr "Namni seene kamiyyuu"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Wanti kamiyyuu nyaata kana ajaje fudhachuu ni dhaaba. Booda URL haaraa garagalchuu dandeessa."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Appii"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "Tarkaanfilee appii"
 
@@ -283,11 +288,11 @@ msgstr "Tarkaanfilee appii"
 msgid "App information"
 msgstr "Odeeffannoo appii"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "Appiin galfame"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "Appiin milkaa'inaan fe'ame"
 
@@ -303,7 +308,7 @@ msgstr "ID Appilikeeshinii"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Appiilee"
 
@@ -312,7 +317,7 @@ msgstr "Appiilee"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "\"{0}\" haquu mirkanaa'oo dha?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "\"{title}\" haquu mirkanaa'oo dha? Tarkaanfiin kun deebi'uu hin danda'u."
 
@@ -340,11 +345,11 @@ msgstr "Of harkatti kennuu mirkanaa'oo dha? {opponentName} taphicha mo'ata."
 msgid "Ascending"
 msgstr "Ol kaʼaa"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Faayiloota yaadaa hidhi"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Faayiloota deebii hidhi"
 
@@ -370,7 +375,7 @@ msgstr "Vershiniin jiru:"
 msgid "Available versions:"
 msgstr "Vershinoonni jiran:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Jira, garuu hin galfamne"
 
@@ -465,18 +470,18 @@ msgstr "Kaameraan hin argamu"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Haquu"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Yaada haquu"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Deebii haquu"
 
@@ -538,12 +543,12 @@ msgstr "Geejjiba daree"
 msgid "Classes"
 msgstr "Dareen"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Vershinoota hin fayyadamamne haqi"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Haqaa jira..."
 
@@ -641,8 +646,8 @@ msgstr "Gocha yaadaa"
 msgid "Comments"
 msgstr "Yaadawwan"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Yaadawwan ({0})"
 
@@ -703,10 +708,10 @@ msgstr "Garagalfamee gara saanduqa garagalchaa"
 msgid "Copy"
 msgstr "Garagalchi"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "Appii hidhuu hin dandeenye."
 
@@ -838,7 +843,7 @@ msgstr "Track idilee (vershinii {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Haqi"
@@ -863,9 +868,9 @@ msgstr "Dirree haqi"
 msgid "Delete game?"
 msgstr "Taphicha haqi?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Wanta haqi"
 
@@ -926,7 +931,7 @@ msgstr "Paanelii Bal'inaan"
 msgid "Detect from web browser"
 msgstr "Weeb biraawsarii irraa argi"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Appiilee misoomaa"
 
@@ -934,11 +939,11 @@ msgstr "Appiilee misoomaa"
 msgid "Directory"
 msgstr "Galmee"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Gati"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Wixinee gatuu?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Boca barbaachisu wajjin wal hin simu"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Xumurame"
@@ -1052,7 +1057,7 @@ msgstr "Koodii mirkaneessaa kee galchi"
 msgid "Entity:"
 msgstr "Iddoo:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Dogoggora"
 
@@ -1079,7 +1084,7 @@ msgstr "Guddaa Akkaan"
 msgid "Failed to add account"
 msgstr "Akkaawuntii dabaluu hin dandeenye"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "Appiiwwan qulqulleessuun hin milkoofne"
 
@@ -1133,8 +1138,8 @@ msgstr "Seenaa fe'achuu hin dandeenye"
 msgid "Failed to load image"
 msgstr "Fakkii fe'uu hin dandeenye"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Iddoo fe'achuu hin dandeenye"
 
@@ -1174,7 +1179,7 @@ msgstr "Olkaa'uu hin dandeenye"
 msgid "Failed to save prompt"
 msgstr "Boorsa olkaa'uu hin dandeenye"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "Appiiwwan haaromsuun hin milkoofne"
 
@@ -1207,7 +1212,7 @@ msgstr "Hordoffii haaromsuun hin milkoofne"
 msgid "Failed to upload attachment"
 msgstr "Mallattoo olkaa'uu hin dandeenye"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Faayilii:"
 
@@ -1251,7 +1256,7 @@ msgstr "Hiriyoota"
 msgid "From"
 msgstr "Irraa"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "Galmee irraa"
 
@@ -1347,40 +1352,40 @@ msgstr "Fakkii qubee jalqabaa {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Hidhi"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "{0} hidha?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Faayilii irraa hidhi"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Maxxansaa irraa hidhi"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Appii hidhamoo"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "Hidhaa jiraa..."
 
@@ -1400,7 +1405,7 @@ msgstr "Guyyaa sirrii hin taane"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Fuulli ati barbaadaa jirtu <0/>hin jiru yookaan haqameera fakkaata."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Bal'ina iddoo"
 
@@ -1449,11 +1454,11 @@ msgstr "Caalaa fe'i"
 msgid "Loading content…"
 msgstr "Qabiyyee fe’aa jira…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Iddoo fe'aa jiraa"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Bal'ina iddoo fe'aa jiraa"
 
@@ -1613,11 +1618,11 @@ msgstr "Seerri itti seenumsaa hin qindaa'amne. Eenyu qabeenya kana itti seenuu d
 msgid "No activity yet"
 msgstr "Hanga ammaatti sochiin hin jiru"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "Aappiin haaromfamuu danda'u tokko illee hin jiru."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Aappiin sirreeffame hin jiru"
 
@@ -1629,11 +1634,11 @@ msgstr "Ramaddiin qindaa'e hin jiru."
 msgid "No comments yet"
 msgstr "Hanga ammaatti yaadni hin jiru"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Ibsi hin jiru"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Aappiiwwan misooma \"{searchQuery}\" wajjin walsiman hin jiran"
 
@@ -1645,11 +1650,11 @@ msgstr "Hanga ammaatti taphaaleen hin jiran"
 msgid "No groups available"
 msgstr "Garreen hin jiran"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Daayirektoorii keessa aappiiwwan sirreessuun danda'aman \"{searchQuery}\" wajjin walsiman hin jiran"
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Aappiiwwan sirreeffaman \"{searchQuery}\" wajjin walsiman hin jiran"
 
@@ -1657,12 +1662,12 @@ msgstr "Aappiiwwan sirreeffaman \"{searchQuery}\" wajjin walsiman hin jiran"
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Hanga ammaatti gosti meeshaalee uumamuu hin danda'u. Jalqaba meeshaalee maatii barbaachisaa uumi."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Daayirektoorii keessa walsiman hin jiru"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Aappiiwwan walsiman hin jiran"
 
@@ -1691,7 +1696,7 @@ msgstr "Aappii kanaaf hayyamoonni kennaman hin jiran"
 msgid "No places found"
 msgstr "Bakkeewwan hin argamne"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Yaadachiisni jiru hin jiru"
 
@@ -1726,7 +1731,7 @@ msgstr "Hanga ammaatti galmeen mata duree hin jiru — beeksisa itti aanu booda 
 msgid "No unread notifications"
 msgstr "Beeksisoonni hin dubbifamne hin jiran"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Versiiwwan hin fayyadamne qulqulleessuuf hin jiran"
 
@@ -1742,10 +1747,10 @@ msgstr "Mul'annoon hin jiru"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Abbaa qabeenyaa"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Maatii"
 
@@ -1872,7 +1877,7 @@ msgstr "Passkey-wwan"
 msgid "Passkeys are not available in this browser"
 msgstr "Passkey-wwan browsara kana keessatti hin argaman"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Hidhaa hidhamuu maxxansi:"
 
@@ -1916,7 +1921,7 @@ msgstr "Hayyamoonni"
 msgid "Please check your internet connection and try again."
 msgstr "Maaloo walqunnamtii intarneetii kee mirkaneeffadhuutii irra deebi'ii yaali."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Maaloo ID aappii galchi"
 
@@ -1962,7 +1967,7 @@ msgstr "Adeemsifamaa jira…"
 msgid "Prompt saved"
 msgstr "Gaaffii olkaa'ame"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Qabeenyaalee"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Furtuuwwan seensaa kee sajoo kana irratti irra deebi'ii galmeessi"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "Yaadachifame"
 
@@ -2196,11 +2201,11 @@ msgstr "Olkaa'aa jira..."
 msgid "Search"
 msgstr "Barbaadi"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Aappiiwwan barbaadi"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Aappiiwwan barbaadi..."
 
@@ -2420,8 +2425,8 @@ msgstr "Bal'aa"
 msgid "Start the discussion by adding the first comment."
 msgstr "Yaada jalqabaa dabaluudhaan marii jalqabi."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Daawwannaa dhaabsisi"
 
@@ -2429,11 +2434,11 @@ msgstr "Daawwannaa dhaabsisi"
 msgid "Subject"
 msgstr "Mata duree"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Yaada galchaa"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Deebii galchaa"
 
@@ -2505,7 +2510,7 @@ msgstr "Erguun hin danda'amne. Faayilonni baay'ee guddaa ta'uu danda'u, yookiin 
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Ol kaa'uuf baay'ee guddaa ture. Faayilota balleessi yookiin xiqqeessi, ergasii irra deebi'ii yaali."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "App milkaa'inaan fe'ameera."
 
@@ -2597,7 +2602,7 @@ msgstr "Gaaffiiwwan baay'ee garmalee"
 msgid "Top"
 msgstr "Ol"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Trakii"
@@ -2644,7 +2649,7 @@ msgstr "Barbaaduuf barreessi..."
 msgid "Unable to connect to remote server"
 msgstr "Sarvara fagoo waliin walqunnamuu hin dandeenye"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "Tajaajila yaadannoo waliin walitti hidhachuu hin dandeenye"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Hin ramadamne"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "Hin argamu"
 
@@ -2697,15 +2702,15 @@ msgstr "Galaa'uu kaasi"
 msgid "Untitled"
 msgstr "Mata dureen hin qabne"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Haaromsi"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Hunda haaromsi"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Haaromsi hin milkoofne"
 
@@ -2719,11 +2724,11 @@ msgstr "Haaromfameera"
 msgid "Updated {field}"
 msgstr "{field} haaromfameera"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Appiiwwan haaromsaa jira..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Haaromsaa jira..."
 
@@ -2802,7 +2807,7 @@ msgstr "Ilaaltuu viidiyoo: {0}"
 msgid "View all notifications"
 msgstr "Beeksisa hunda daawwadhu"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Bal'ina wantichaa daawwadhu fi sirreessi"
 
@@ -2814,8 +2819,8 @@ msgstr "Toofta daawwannaa"
 msgid "Voice recording is not supported in this browser"
 msgstr "Biraawzarii kana keessatti sagalee waraabuun hin deeggaramu"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Daawwadhu"
 
@@ -2845,7 +2850,7 @@ msgstr "Kutaa kanaaf dhaqqabummaa hin qabdu."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Akkaawuntiin kee {source} irraa as fidame. Achitti haqtee hanga fixtutti, ergaawwan fi beeksisawwan sarvara lamaaniyyuu ga'uu danda'u, qabeenyi kee tokko tokko sarvaraa durii irraa tajaajilamu itti fufa, fi hordoftonni si argachuu dhaaf daqiiqaawwan muraasa fudhachuu danda'u."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Miiltoowwan kee ni badu."
 
@@ -2853,11 +2858,11 @@ msgstr "Miiltoowwan kee ni badu."
 msgid "Your preference"
 msgstr "Filannoo kee"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Barreeffamnii fi miiltoowwan kee ni badu."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Barreeffamni kee ni bada."
 

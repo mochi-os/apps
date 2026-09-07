@@ -30,6 +30,11 @@ msgstr "(விரிவாக்கு)"
 msgid "[not set]"
 msgstr "[அமைக்கப்படவில்லை]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# முடிவு} other {# முடிவுகள்}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# உள்ளமை} other {+# உள்ளமை}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# பயன்படுத்தப்படாத பதிப்பு அகற்றப்பட்டது} other {# பயன்படுத்தப்படாத பதிப்புகள் அகற்றப்பட்டன}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (வளர்ச்சி)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} புதுப்பிக்கப்பட்டது, {failed} தோல்வியடைந்தது"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} நிறுவப்பட்டது."
 
@@ -145,7 +150,7 @@ msgstr "அணுகல் நிலை"
 msgid "Account type"
 msgstr "கணக்கு வகை"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "செயல்பாடு"
 
@@ -208,7 +213,7 @@ msgstr "விருப்பம் சேர்"
 msgid "Add tag..."
 msgstr "டேக் சேர்..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "கோப்பகத்திற்குச் சேர்"
 
@@ -231,7 +236,7 @@ msgstr "சேர்க்கிறது..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "அனைத்து பயன்பாடுகளும் புதுப்பிக்கப்பட்டன"
 
@@ -269,13 +274,13 @@ msgstr "உள்நுழைந்த யாரும்"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "இந்த ஊட்டத்திற்கு குழுசேர்ந்த அனைத்தும் அதைப் பெறுவதை நிறுத்தும். பிறகு நீங்கள் புதிய URL ஐ நகலெடுக்கலாம்."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "பயன்பாடு"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "பயன்பாட்டு செயல்கள்"
 
@@ -283,11 +288,11 @@ msgstr "பயன்பாட்டு செயல்கள்"
 msgid "App information"
 msgstr "பயன்பாட்டுத் தகவல்"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "பயன்பாடு நிறுவப்பட்டது"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "ஆப் வெற்றிகரமாக நிறுவப்பட்டது"
 
@@ -303,7 +308,7 @@ msgstr "பயன்பாட்டு ID"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "பயன்பாடுகள்"
 
@@ -312,7 +317,7 @@ msgstr "பயன்பாடுகள்"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "\"{0}\"-ஐ நீக்க விரும்புகிறீர்களா?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "\"{title}\"-ஐ நீக்க விரும்புகிறீர்களா? இந்த செயலை மாற்ற முடியாது."
 
@@ -340,11 +345,11 @@ msgstr "நீங்கள் சரணடைய விரும்புகி�
 msgid "Ascending"
 msgstr "ஏறுவரிசை"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "கருத்து கோப்புகளை இணை"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "பதிலளிப்பு கோப்புகளை இணை"
 
@@ -370,7 +375,7 @@ msgstr "கிடைக்கும் பதிப்பு:"
 msgid "Available versions:"
 msgstr "கிடைக்கும் பதிப்புகள்:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "கிடைக்கிறது, ஆனால் நிறுவப்படவில்லை"
 
@@ -465,18 +470,18 @@ msgstr "கேமரா கிடைக்கவில்லை"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "ரத்துசெய்"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "கருத்தை ரத்துசெய்"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "பதிலளிப்பை ரத்துசெய்"
 
@@ -538,12 +543,12 @@ msgstr "வகுப்பு வழிசெலுத்தல்"
 msgid "Classes"
 msgstr "வகுப்புகள்"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "பயன்படுத்தப்படாத பதிப்புகளை சுத்தம் செய்"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "சுத்தம் செய்கிறது..."
 
@@ -641,8 +646,8 @@ msgstr "கருத்து செயல்கள்"
 msgid "Comments"
 msgstr "கருத்துகள்"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "கருத்துகள் ({0})"
 
@@ -703,10 +708,10 @@ msgstr "கிளிப்போர்டுக்கு நகலெடுக�
 msgid "Copy"
 msgstr "நகலெடு"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "பயன்பாட்டை நிறுவ முடியவில்லை."
 
@@ -838,7 +843,7 @@ msgstr "இயல்புநிலை பாதை (பதிப்பு {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "நீக்கு"
@@ -863,9 +868,9 @@ msgstr "புலத்தை நீக்கு"
 msgid "Delete game?"
 msgstr "விளையாட்டை நீக்கவா?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "உருப்படியை நீக்கு"
 
@@ -926,7 +931,7 @@ msgstr "விவரங்கள் பலகம்"
 msgid "Detect from web browser"
 msgstr "வலை உலாவியிலிருந்து கண்டறி"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "மேம்பாட்டு பயன்பாடுகள்"
 
@@ -934,11 +939,11 @@ msgstr "மேம்பாட்டு பயன்பாடுகள்"
 msgid "Directory"
 msgstr "கோப்பகம்"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "நிராகரி"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "வரைவை நிராகரிக்கவா?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "தேவையான வடிவத்துடன் பொருந்தவில்லை"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "முடிந்தது"
@@ -1052,7 +1057,7 @@ msgstr "உங்கள் அங்கீகரிப்பான் குற�
 msgid "Entity:"
 msgstr "எண்ட்டிட்டி:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "பிழை"
 
@@ -1079,7 +1084,7 @@ msgstr "மிகப் பெரியது"
 msgid "Failed to add account"
 msgstr "கணக்கைச் சேர்க்க முடியவில்லை"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "ஆப்களைச் சுத்தம் செய்ய முடியவில்லை"
 
@@ -1133,8 +1138,8 @@ msgstr "வரலாற்றை ஏற்ற முடியவில்லை"
 msgid "Failed to load image"
 msgstr "படத்தை ஏற்ற முடியவில்லை"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "உருப்படியை ஏற்ற முடியவில்லை"
 
@@ -1174,7 +1179,7 @@ msgstr "சேமிக்க முடியவில்லை"
 msgid "Failed to save prompt"
 msgstr "ப்ராம்ப்டை சேமிக்க முடியவில்லை"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "ஆப்களைப் புதுப்பிக்க முடியவில்லை"
 
@@ -1207,7 +1212,7 @@ msgstr "கண்காணிப்பைப் புதுப்பிக்�
 msgid "Failed to upload attachment"
 msgstr "இணைப்பைப் பதிவேற்ற முடியவில்லை"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "கோப்பு:"
 
@@ -1251,7 +1256,7 @@ msgstr "நண்பர்கள்"
 msgid "From"
 msgstr "இருந்து"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "கோப்பகத்திலிருந்து"
 
@@ -1347,40 +1352,40 @@ msgstr "{name} இன் முதலெழுத்து அவதாரம்
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "நிறுவு"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "{0} ஐ நிறுவவா?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "கோப்பிலிருந்து நிறுவு"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "வெளியீட்டாளரிடமிருந்து நிறுவு"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "நிறுவப்பட்ட ஆப்கள்"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "நிறுவுகிறது..."
 
@@ -1400,7 +1405,7 @@ msgstr "தவறான தேதி"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "நீங்கள் தேடும் பக்கம் <0/>இல்லை அல்லது அகற்றப்பட்டிருக்கலாம்."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "உருப்படி விவரங்கள்"
 
@@ -1449,11 +1454,11 @@ msgstr "மேலும் ஏற்று"
 msgid "Loading content…"
 msgstr "உள்ளடக்கம் ஏற்றப்படுகிறது…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "உருப்படியை ஏற்றுகிறது"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "உருப்படி விவரங்களை ஏற்றுகிறது"
 
@@ -1613,11 +1618,11 @@ msgstr "அணுகல் விதிகள் எதுவும் கட்
 msgid "No activity yet"
 msgstr "செயல்பாடு இன்னும் இல்லை"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "எந்த ஆப்களையும் புதுப்பிக்க முடியவில்லை."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "ஆப்கள் எதுவும் நிறுவப்படவில்லை"
 
@@ -1629,11 +1634,11 @@ msgstr "எந்த வகுப்புகளும் கட்டமைக�
 msgid "No comments yet"
 msgstr "கருத்துகள் இன்னும் இல்லை"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "விளக்கம் இல்லை"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" உடன் பொருந்தும் வளர்ச்சி பயன்பாடுகள் எதுவும் இல்லை"
 
@@ -1645,11 +1650,11 @@ msgstr "விளையாட்டுகள் இன்னும் இல்�
 msgid "No groups available"
 msgstr "குழுக்கள் கிடைக்கவில்லை"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "அடைவில் \"{searchQuery}\" உடன் பொருந்தும் நிறுவக்கூடிய பயன்பாடுகள் எதுவும் இல்லை"
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" உடன் பொருந்தும் நிறுவப்பட்ட பயன்பாடுகள் எதுவும் இல்லை"
 
@@ -1657,12 +1662,12 @@ msgstr "\"{searchQuery}\" உடன் பொருந்தும் நிற�
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "உருப்படி வகைகள் எதையும் இன்னும் உருவாக்க முடியாது. முதலில் தேவையான பெற்றோர் உருப்படிகளை உருவாக்கவும்."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "டைரக்டரியில் பொருத்தங்கள் இல்லை"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "பொருந்தும் ஆப்கள் இல்லை"
 
@@ -1691,7 +1696,7 @@ msgstr "இந்த பயன்பாட்டுக்கு எந்த அ
 msgid "No places found"
 msgstr "இடங்கள் எதுவும் கிடைக்கவில்லை"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "பரிந்துரைகள் எதுவும் கிடைக்கவில்லை"
 
@@ -1726,7 +1731,7 @@ msgstr "தலைப்புப் பதிவு இன்னும் இல
 msgid "No unread notifications"
 msgstr "படிக்காத அறிவிப்புகள் இல்லை"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "சுத்தம் செய்ய பயன்படுத்தப்படாத பதிப்புகள் இல்லை"
 
@@ -1742,10 +1747,10 @@ msgstr "காட்சிகள் இல்லை"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "உரிமையாளர்"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "பெற்றோர்"
 
@@ -1872,7 +1877,7 @@ msgstr "Passkeyக்கள்"
 msgid "Passkeys are not available in this browser"
 msgstr "இந்த உலாவியில் passkeyக்கள் கிடைக்கவில்லை"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "நிறுவல் இணைப்பை ஒட்டவும்:"
 
@@ -1916,7 +1921,7 @@ msgstr "அனுமதிகள்"
 msgid "Please check your internet connection and try again."
 msgstr "உங்கள் இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும்."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "ஆப் ID-ஐ உள்ளிடவும்"
 
@@ -1962,7 +1967,7 @@ msgstr "செயலாக்கப்படுகிறது…"
 msgid "Prompt saved"
 msgstr "Prompt சேமிக்கப்பட்டது"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "பண்புகள்"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "இந்த சேவையகத்தில் உங்கள் கடவுச்சாவிகளை மீண்டும் பதிவு செய்யவும்"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "பரிந்துரைக்கப்பட்டது"
 
@@ -2196,11 +2201,11 @@ msgstr "சேமிக்கிறது..."
 msgid "Search"
 msgstr "தேடு"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "ஆப்களைத் தேடு"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "ஆப்களைத் தேடு..."
 
@@ -2420,8 +2425,8 @@ msgstr "விரிவான"
 msgid "Start the discussion by adding the first comment."
 msgstr "முதல் கருத்தை சேர்த்து விவாதத்தை தொடங்குங்கள்."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "பார்ப்பதை நிறுத்து"
 
@@ -2429,11 +2434,11 @@ msgstr "பார்ப்பதை நிறுத்து"
 msgid "Subject"
 msgstr "பொருள்"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "கருத்தை சமர்ப்பி"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "பதிலை சமர்ப்பி"
 
@@ -2505,7 +2510,7 @@ msgstr "அனுப்ப முடியவில்லை. கோப்பு
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "பதிவேற்ற முடியாத அளவு பெரியது. கோப்புகளை நீக்கவும் அல்லது சிறிதாக்கி மீண்டும் முயற்சிக்கவும்."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "ஆப் வெற்றிகரமாக நிறுவப்பட்டது."
 
@@ -2597,7 +2602,7 @@ msgstr "மிக அதிகமான கோரிக்கைகள்"
 msgid "Top"
 msgstr "மேல்"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "டிராக்"
@@ -2644,7 +2649,7 @@ msgstr "தேட தட்டச்சு செய்..."
 msgid "Unable to connect to remote server"
 msgstr "தொலை சேவையகத்துடன் இணைக்க முடியவில்லை"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "பரிந்துரை சேவையுடன் இணைக்க முடியவில்லை"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "ஒதுக்கப்படாதது"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "கிடைக்கவில்லை"
 
@@ -2697,15 +2702,15 @@ msgstr "சந்தா நீக்கு"
 msgid "Untitled"
 msgstr "தலைப்பிடாதது"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "புதுப்பி"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "அனைத்தையும் புதுப்பி"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "புதுப்பிப்பு தோல்வியடைந்தது"
 
@@ -2719,11 +2724,11 @@ msgstr "புதுப்பிக்கப்பட்டது"
 msgid "Updated {field}"
 msgstr "{field} புதுப்பிக்கப்பட்டது"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "ஆப்களைப் புதுப்பிக்கிறது..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "புதுப்பிக்கிறது..."
 
@@ -2802,7 +2807,7 @@ msgstr "வீடியோ காட்சி: {0}"
 msgid "View all notifications"
 msgstr "அனைத்து அறிவிப்புகளையும் காட்டு"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "உருப்படி விவரங்களை பார்த்து திருத்து"
 
@@ -2814,8 +2819,8 @@ msgstr "காட்சி கட்டுப்பாடுகள்"
 msgid "Voice recording is not supported in this browser"
 msgstr "இந்த உலாவியில் குரல் பதிவு ஆதரிக்கப்படவில்லை"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "பார்"
 
@@ -2845,7 +2850,7 @@ msgstr "இந்தப் பிரிவுக்கான அணுகல் 
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "உங்கள் கணக்கு {source} இலிருந்து இங்கே நகர்த்தப்பட்டது. நீங்கள் அதை அங்கே நீக்கும் வரை, செய்திகளும் அறிவிப்புகளும் இரண்டு சேவையகங்களையும் அடையலாம், உங்கள் சில உள்ளடக்கம் பழைய சேவையகத்தில் இருந்து தொடர்ந்து வழங்கப்படும், மேலும் உங்கள் பின்தொடர்பவர்கள் இங்கே உங்களை கண்டுபிடிக்க சில நிமிடங்கள் ஆகலாம்."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "உங்கள் இணைப்புகள் இழக்கப்படும்."
 
@@ -2853,11 +2858,11 @@ msgstr "உங்கள் இணைப்புகள் இழக்கப்�
 msgid "Your preference"
 msgstr "உங்கள் விருப்பம்"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "உங்கள் உரையும் இணைப்புகளும் இழக்கப்படும்."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "உங்கள் உரை இழக்கப்படும்."
 

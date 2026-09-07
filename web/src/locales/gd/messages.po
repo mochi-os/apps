@@ -30,6 +30,11 @@ msgstr "(leudaich)"
 msgid "[not set]"
 msgstr "[gun shuidheachadh]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# toradh} two {# thoradh} few {# toraidhean} other {# toraidhean}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# neadaichte} two {+# neadaichte} few {+# neadaichte} other {+# neadaichte}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {Chaidh # tionndadh gun chleachdadh a thoirt air falbh} two {Chaidh # thionndadh gun chleachdadh a thoirt air falbh} few {Chaidh # tionndaidhean gun chleachdadh a thoirt air falbh} other {Chaidh # tionndadh gun chleachdadh a thoirt air falbh}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (leasachadh)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} ùraichte, dh'fhàillig {failed}"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "Chaidh {0} v{1} a stàladh."
 
@@ -145,7 +150,7 @@ msgstr "Ìre inntrigidh"
 msgid "Account type"
 msgstr "Seòrsa cunntais"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Gnìomhachd"
 
@@ -208,7 +213,7 @@ msgstr "Cuir roghainn ris"
 msgid "Add tag..."
 msgstr "Cuir taga ris..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Cuir ris an eòlaire"
 
@@ -231,7 +236,7 @@ msgstr "A' cur ris..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "Chaidh gach aplacaid ùrachadh"
 
@@ -269,13 +274,13 @@ msgstr "Neach sam bith a tha air clàradh a-steach"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Sguiridh rud sam bith a tha air fo-sgrìobhadh ris an inbhir seo ga fhaighinn. 'S urrainn dhut URL ùr a chopaigeadh às a dhèidh."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Aplacaid"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "Gnìomhan aplacaid"
 
@@ -283,11 +288,11 @@ msgstr "Gnìomhan aplacaid"
 msgid "App information"
 msgstr "Fiosrachadh na h-aplacaid"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "Aplacaid air a stàladh"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "Chaidh an aplacaid a stàladh gu soirbheachail"
 
@@ -303,7 +308,7 @@ msgstr "ID aplacaid"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Aplacaidean"
 
@@ -312,7 +317,7 @@ msgstr "Aplacaidean"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "A bheil thu cinnteach gu bheil thu airson \"{0}\" a sguabadh às?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "A bheil thu cinnteach gu bheil thu airson \"{title}\" a sguabadh às? Cha ghabh an gnìomh seo a thilleadh."
 
@@ -340,11 +345,11 @@ msgstr "A bheil thu cinnteach gu bheil thu airson dreuchd a leigeil dhìot? Buan
 msgid "Ascending"
 msgstr "A' dìreadh"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Ceangail faidhlichean beachd"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Ceangail faidhlichean freagairt"
 
@@ -370,7 +375,7 @@ msgstr "Tionndadh ri làimh:"
 msgid "Available versions:"
 msgstr "Tionndaidhean ri làimh:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Ri làimh, ach gun stàladh"
 
@@ -465,18 +470,18 @@ msgstr "Chan eil an camara ri fhaighinn"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Sguir dheth"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Sguir den bheachd"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Sguir den fhreagairt"
 
@@ -538,12 +543,12 @@ msgstr "Slighe-stiùireadh clas"
 msgid "Classes"
 msgstr "Clasaichean"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Glan tionndaidhean nach eilear a' cleachdadh"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "A' glanadh..."
 
@@ -641,8 +646,8 @@ msgstr "Gnìomhan beachd"
 msgid "Comments"
 msgstr "Beachdan"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Beachdan ({0})"
 
@@ -703,10 +708,10 @@ msgstr "Air a chopaigeadh chun a' chliopaboird"
 msgid "Copy"
 msgstr "Dèan lethbhreac"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "Cha b' urrainn dhuinn an aplacaid a stàladh."
 
@@ -838,7 +843,7 @@ msgstr "Slighe bhunaiteach (tionndadh {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Sguab às"
@@ -863,9 +868,9 @@ msgstr "Sguab às raon"
 msgid "Delete game?"
 msgstr "A bheil thu airson an geama a sguabadh às?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Sguab às nì"
 
@@ -926,7 +931,7 @@ msgstr "Pannal mion-fhiosrachaidh"
 msgid "Detect from web browser"
 msgstr "Lorg bhon bhrabhsair-lìn"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Aplacaidean leasachaidh"
 
@@ -934,11 +939,11 @@ msgstr "Aplacaidean leasachaidh"
 msgid "Directory"
 msgstr "Eòlaire"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Tilg air falbh"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "A bheil thu airson an dreachd a thilgeil air falbh?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Chan eil e a' freagairt ris a' phàtran riatanach"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Deiseil"
@@ -1052,7 +1057,7 @@ msgstr "Cuir a-steach còd na h-aplacaid dearbhaidh agad"
 msgid "Entity:"
 msgstr "Aonad:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Mearachd"
 
@@ -1079,7 +1084,7 @@ msgstr "A bharrachd mòr"
 msgid "Failed to add account"
 msgstr "Cha b' urrainn an cunntas a chur ris"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "Cha b’ urrainn na h-aplacaidean a ghlanadh"
 
@@ -1133,8 +1138,8 @@ msgstr "Cha b' urrainn an eachdraidh a luchdadh"
 msgid "Failed to load image"
 msgstr "Dh'fhàillig luchdachadh an deilbh"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Cha b' urrainn an nì a luchdadh"
 
@@ -1174,7 +1179,7 @@ msgstr "Cha b' urrainn sàbhaladh"
 msgid "Failed to save prompt"
 msgstr "Cha b' urrainn am brodadh a shàbhaladh"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "Cha b’ urrainn na h-aplacaidean ùrachadh"
 
@@ -1207,7 +1212,7 @@ msgstr "Dh'fhàillig ùrachadh a' chumail-sùil"
 msgid "Failed to upload attachment"
 msgstr "Cha b' urrainn an ceangaltas a luchdadh suas"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Faidhle:"
 
@@ -1251,7 +1256,7 @@ msgstr "Caraidean"
 msgid "From"
 msgstr "O"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "On eòlaire"
 
@@ -1347,40 +1352,40 @@ msgstr "Avatar litrichean-toisich airson {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Stàlaich"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "Stàlaich {0}?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Stàlaich o fhaidhle"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Stàlaich on fhoillsichear"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Aplacaidean stàlaichte"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "A' stàladh..."
 
@@ -1400,7 +1405,7 @@ msgstr "Ceann-latha mì-dhligheach"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Tha coltas nach eil an duilleag a tha thu a' sireadh <0/>ann no gun deach a toirt air falbh."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Mion-fhiosrachadh an nì"
 
@@ -1449,11 +1454,11 @@ msgstr "Luchdaich barrachd"
 msgid "Loading content…"
 msgstr "A’ luchdadh susbaint…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "A' luchdadh an nì"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "A' luchdadh mion-fhiosrachadh an nì"
 
@@ -1613,11 +1618,11 @@ msgstr "Cha deach riaghailtean cothraim a chur air dòigh. Cuir riaghailtean ris
 msgid "No activity yet"
 msgstr "Chan eil gnìomhachd ann fhathast"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "Cha b' urrainnear gin de na h-aplacaidean ùrachadh."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Chan eil aplacaidean stàlaichte"
 
@@ -1629,11 +1634,11 @@ msgstr "Cha deach clasaichean a chur air dòigh."
 msgid "No comments yet"
 msgstr "Chan eil beachdan ann fhathast"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Gun tuairisgeul"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Chan eil aplacaidean leasachaidh ann a fhreagras air \"{searchQuery}\""
 
@@ -1645,11 +1650,11 @@ msgstr "Chan eil geamannan ann fhathast"
 msgid "No groups available"
 msgstr "Chan eil buidhnean rim faotainn"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Chan eil aplacaidean stàlachail san eòlaire a fhreagras air \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Chan eil aplacaidean stàlaichte ann a fhreagras air \"{searchQuery}\""
 
@@ -1657,12 +1662,12 @@ msgstr "Chan eil aplacaidean stàlaichte ann a fhreagras air \"{searchQuery}\""
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Chan urrainnear seòrsa nì sam bith a chruthachadh fhathast. Cruthaich na nithean pàrant riatanach an toiseach."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Cha deach maids a lorg san eòlaire"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Chan eil aplacaidean a' freagairt"
 
@@ -1691,7 +1696,7 @@ msgstr "Cha deach cead sam bith a thoirt dhan aplacaid seo"
 msgid "No places found"
 msgstr "Cha deach àitichean a lorg"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Chan eil molaidhean rim faotainn"
 
@@ -1726,7 +1731,7 @@ msgstr "Chan eil clàradh cuspair ann fhathast — feuch a-rithist às dèidh an
 msgid "No unread notifications"
 msgstr "Chan eil brathan gun leughadh"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Chan eil tionndaidhean gun chleachdadh ri ghlanadh"
 
@@ -1742,10 +1747,10 @@ msgstr "Gun shealladh"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Sealbhadair"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Pàrant"
 
@@ -1872,7 +1877,7 @@ msgstr "Pasgairean"
 msgid "Passkeys are not available in this browser"
 msgstr "Chan eil pasgairean ri fhaighinn sa bhrabhsair seo"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Cuir a-steach an ceangal stàlaidh:"
 
@@ -1916,7 +1921,7 @@ msgstr "Ceadan"
 msgid "Please check your internet connection and try again."
 msgstr "Thoir sùil air a' cheangal eadar-lìn agad agus feuch ris a-rithist."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Cuir a-steach ID aplacaid"
 
@@ -1962,7 +1967,7 @@ msgstr "'Ga phròiseasadh…"
 msgid "Prompt saved"
 msgstr "Chaidh an t-iarrtas a shàbhaladh"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Feartan"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Ath-chlàraich na h-iuchraichean inntrigidh agad air an fhrithealaiche seo"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "Air a mholadh"
 
@@ -2196,11 +2201,11 @@ msgstr "A' sàbhaladh..."
 msgid "Search"
 msgstr "Lorg"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Lorg aplacaidean"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Lorg aplacaidean..."
 
@@ -2420,8 +2425,8 @@ msgstr "Farsaing"
 msgid "Start the discussion by adding the first comment."
 msgstr "Tòisich an deasbad le bhith a' cur a' chiad bheachd ris."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Sguir a' coimhead"
 
@@ -2429,11 +2434,11 @@ msgstr "Sguir a' coimhead"
 msgid "Subject"
 msgstr "Cuspair"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Cuir a-steach beachd"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Cuir a-steach freagairt"
 
@@ -2505,7 +2510,7 @@ msgstr "Cha b' urrainn a chur. Dh'fhaodadh gu bheil na faidhlichean ro mhòr, no
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Bha e ro mhòr airson luchdadh suas. Thoir air falbh no lùghdaich faidhlichean is feuch ris a-rithist."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "Chaidh an aplacaid a stàladh gu soirbheachail."
 
@@ -2597,7 +2602,7 @@ msgstr "Cus iarrtasan"
 msgid "Top"
 msgstr "Mullach"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Slighe"
@@ -2644,7 +2649,7 @@ msgstr "Sgrìobh airson lorg..."
 msgid "Unable to connect to remote server"
 msgstr "Cha ghabh ceangal ris an fhrithealaiche chèin"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "Cha b' urrainnear ceangal ris an t-seirbheis molaidhean"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Gun shònrachadh"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "Cha eil ri làimh"
 
@@ -2697,15 +2702,15 @@ msgstr "Dì-fho-sgrìobh"
 msgid "Untitled"
 msgstr "Gun tiotal"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Ùraich"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Ùraich uile"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Dh'fhàillig an t-ùrachadh"
 
@@ -2719,11 +2724,11 @@ msgstr "Ùraichte"
 msgid "Updated {field}"
 msgstr "Chaidh {field} ùrachadh"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Ag ùrachadh nan aplacaidean..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Ag ùrachadh..."
 
@@ -2802,7 +2807,7 @@ msgstr "Sealladair video: {0}"
 msgid "View all notifications"
 msgstr "Seall a h-uile brath"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Seall is deasaich mion-fhiosrachadh an rud"
 
@@ -2814,8 +2819,8 @@ msgstr "Smachdan seallaidh"
 msgid "Voice recording is not supported in this browser"
 msgstr "Chan eil taic ri clàradh gutha sa bhrabhsair seo"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Cum sùil"
 
@@ -2845,7 +2850,7 @@ msgstr "Chan eil cead-inntrigidh agad dhan earrann seo."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Chaidh do chunntas a ghluasad an seo à {source}. Gus an sguab thu às e an sin, faodaidh teachdaireachdan agus brathan ruighinn air an dà fhrithealaiche, bidh cuid den susbaint agad ga frithealadh bhon t-seann fhrithealaiche, agus faodaidh luchd-leantainn beagan mhionaidean a ghabhail gus do lorg an seo."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Thèid na ceanglachain agad air chall."
 
@@ -2853,11 +2858,11 @@ msgstr "Thèid na ceanglachain agad air chall."
 msgid "Your preference"
 msgstr "Do roghainn"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Thèid an teacsa 's na ceanglachain agad air chall."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Thèid an teacsa agad air chall."
 

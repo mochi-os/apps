@@ -30,6 +30,11 @@ msgstr "(展開)"
 msgid "[not set]"
 msgstr "[未設定]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {#件の結果} other {#件の結果}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, other {+# ネスト}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {未使用のバージョンを # 件削除しました} other {未使用のバージョンを # 件削除しました}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (開発)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0}個更新、{failed}個失敗"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1}がインストールされました。"
 
@@ -145,7 +150,7 @@ msgstr "アクセスレベル"
 msgid "Account type"
 msgstr "アカウントタイプ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "アクティビティ"
 
@@ -208,7 +213,7 @@ msgstr "オプションを追加"
 msgid "Add tag..."
 msgstr "タグを追加…"
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "ディレクトリに追加"
 
@@ -231,7 +236,7 @@ msgstr "追加中..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "すべてのアプリを更新しました"
 
@@ -269,13 +274,13 @@ msgstr "ログインしている全員"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "このフィードを購読しているものはすべて受信しなくなります。あとで新しい URL をコピーできます。"
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "外観"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "アプリ操作"
 
@@ -283,11 +288,11 @@ msgstr "アプリ操作"
 msgid "App information"
 msgstr "アプリ情報"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "アプリをインストールしました"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "アプリをインストールしました"
 
@@ -303,7 +308,7 @@ msgstr "アプリケーション ID"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "アプリ"
 
@@ -312,7 +317,7 @@ msgstr "アプリ"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "「{0}」を削除しますか？"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "「{title}」を削除しますか？この操作は取り消せません。"
 
@@ -340,11 +345,11 @@ msgstr "本当に投了しますか?{opponentName}の勝ちになります。"
 msgid "Ascending"
 msgstr "昇順"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "コメントにファイルを添付"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "返信にファイルを添付"
 
@@ -370,7 +375,7 @@ msgstr "利用可能なバージョン:"
 msgid "Available versions:"
 msgstr "利用可能なバージョン:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "利用可能ですがインストールされていません"
 
@@ -465,18 +470,18 @@ msgstr "カメラを利用できません"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "コメントをキャンセル"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "返信をキャンセル"
 
@@ -538,12 +543,12 @@ msgstr "クラスルーティング"
 msgid "Classes"
 msgstr "クラス"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "未使用のバージョンをクリーンアップ"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "クリーンアップ中..."
 
@@ -641,8 +646,8 @@ msgstr "コメントの操作"
 msgid "Comments"
 msgstr "コメント"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "コメント ({0})"
 
@@ -703,10 +708,10 @@ msgstr "クリップボードにコピーしました"
 msgid "Copy"
 msgstr "コピー"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "アプリをインストールできませんでした。"
 
@@ -838,7 +843,7 @@ msgstr "デフォルトトラック(バージョン {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "削除"
@@ -863,9 +868,9 @@ msgstr "フィールドを削除"
 msgid "Delete game?"
 msgstr "ゲームを削除しますか?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "項目を削除"
 
@@ -926,7 +931,7 @@ msgstr "詳細パネル"
 msgid "Detect from web browser"
 msgstr "ウェブブラウザから検出"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "開発アプリ"
 
@@ -934,11 +939,11 @@ msgstr "開発アプリ"
 msgid "Directory"
 msgstr "ディレクトリ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "破棄"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "下書きを破棄しますか？"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "必要なパターンと一致しません"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "完了"
@@ -1052,7 +1057,7 @@ msgstr "認証アプリのコードを入力"
 msgid "Entity:"
 msgstr "エンティティ："
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "エラー"
 
@@ -1079,7 +1084,7 @@ msgstr "特大"
 msgid "Failed to add account"
 msgstr "アカウントの追加に失敗しました"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "アプリを整理できませんでした"
 
@@ -1133,8 +1138,8 @@ msgstr "履歴の読み込みに失敗しました"
 msgid "Failed to load image"
 msgstr "画像を読み込めませんでした"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "項目の読み込みに失敗しました"
 
@@ -1174,7 +1179,7 @@ msgstr "保存に失敗しました"
 msgid "Failed to save prompt"
 msgstr "プロンプトの保存に失敗しました"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "アプリを更新できませんでした"
 
@@ -1207,7 +1212,7 @@ msgstr "追跡の更新に失敗しました"
 msgid "Failed to upload attachment"
 msgstr "添付ファイルのアップロードに失敗しました"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "ファイル:"
 
@@ -1251,7 +1256,7 @@ msgstr "友だち"
 msgid "From"
 msgstr "差出元"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "ディレクトリから"
 
@@ -1347,40 +1352,40 @@ msgstr "{name} のイニシャルのアバター"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "インストール"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "{0}をインストールしますか?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "ファイルからインストール"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "パブリッシャーからインストール"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "インストール済みアプリ"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "インストール中..."
 
@@ -1400,7 +1405,7 @@ msgstr "無効な日付"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "お探しのページは <0/>存在しないか、削除された可能性があります。"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "項目の詳細"
 
@@ -1449,11 +1454,11 @@ msgstr "もっと読み込む"
 msgid "Loading content…"
 msgstr "コンテンツを読み込んでいます…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "項目を読み込み中"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "項目の詳細を読み込み中"
 
@@ -1613,11 +1618,11 @@ msgstr "アクセスルールが設定されていません。このリソース
 msgid "No activity yet"
 msgstr "まだアクティビティがありません"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "更新可能なアプリがありませんでした。"
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "インストールされたアプリがありません"
 
@@ -1629,11 +1634,11 @@ msgstr "設定されたクラスはありません。"
 msgid "No comments yet"
 msgstr "まだコメントがありません"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "説明なし"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\"に一致する開発アプリはありません"
 
@@ -1645,11 +1650,11 @@ msgstr "まだゲームがありません"
 msgid "No groups available"
 msgstr "利用可能なグループがありません"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "ディレクトリ内に\"{searchQuery}\"に一致するインストール可能なアプリはありません"
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\"に一致するインストール済みアプリはありません"
 
@@ -1657,12 +1662,12 @@ msgstr "\"{searchQuery}\"に一致するインストール済みアプリはあ�
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "まだ作成可能な項目タイプがありません。必要な親項目を先に作成してください。"
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "ディレクトリに一致するものがありません"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "一致するアプリがありません"
 
@@ -1691,7 +1696,7 @@ msgstr "このアプリに付与された権限はありません"
 msgid "No places found"
 msgstr "場所が見つかりません"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "利用可能なおすすめがありません"
 
@@ -1726,7 +1731,7 @@ msgstr "まだトピック記録がありません — 次の通知後にもう�
 msgid "No unread notifications"
 msgstr "未読の通知はありません"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "クリーンアップする未使用のバージョンはありません"
 
@@ -1742,10 +1747,10 @@ msgstr "ビューがありません"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "オーナー"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "親"
 
@@ -1872,7 +1877,7 @@ msgstr "パスキー"
 msgid "Passkeys are not available in this browser"
 msgstr "このブラウザではパスキーを利用できません"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "インストールリンクを貼り付け："
 
@@ -1916,7 +1921,7 @@ msgstr "権限"
 msgid "Please check your internet connection and try again."
 msgstr "インターネット接続を確認して、もう一度お試しください。"
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "アプリ ID を入力してください"
 
@@ -1962,7 +1967,7 @@ msgstr "処理中…"
 msgid "Prompt saved"
 msgstr "プロンプトを保存しました"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "プロパティ"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "このサーバーでパスキーを再登録してください"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "おすすめ"
 
@@ -2196,11 +2201,11 @@ msgstr "保存中..."
 msgid "Search"
 msgstr "検索"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "アプリを検索"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "アプリを検索..."
 
@@ -2420,8 +2425,8 @@ msgstr "ゆったり"
 msgid "Start the discussion by adding the first comment."
 msgstr "最初のコメントを追加してディスカッションを始めましょう。"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "ウォッチを停止"
 
@@ -2429,11 +2434,11 @@ msgstr "ウォッチを停止"
 msgid "Subject"
 msgstr "件名"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "コメントを送信"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "返信を送信"
 
@@ -2505,7 +2510,7 @@ msgstr "送信できませんでした。ファイルが大きすぎるか、接
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "サイズが大きすぎてアップロードできませんでした。ファイルを削除するか縮小して、もう一度お試しください。"
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "アプリのインストールに成功しました。"
 
@@ -2597,7 +2602,7 @@ msgstr "リクエストが多すぎます"
 msgid "Top"
 msgstr "トップ"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "トラック"
@@ -2644,7 +2649,7 @@ msgstr "入力して検索…"
 msgid "Unable to connect to remote server"
 msgstr "リモートサーバーに接続できません"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "おすすめサービスに接続できません"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "未割り当て"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "利用不可"
 
@@ -2697,15 +2702,15 @@ msgstr "購読解除"
 msgid "Untitled"
 msgstr "無題"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "更新"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "すべて更新"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "更新に失敗しました"
 
@@ -2719,11 +2724,11 @@ msgstr "更新日"
 msgid "Updated {field}"
 msgstr "{field}を更新しました"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "アプリを更新しています..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "更新中..."
 
@@ -2802,7 +2807,7 @@ msgstr "動画ビューアー: {0}"
 msgid "View all notifications"
 msgstr "すべての通知を表示"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "項目の詳細を表示・編集"
 
@@ -2814,8 +2819,8 @@ msgstr "ビューコントロール"
 msgid "Voice recording is not supported in this browser"
 msgstr "このブラウザでは音声録音がサポートされていません"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "ウォッチ"
 
@@ -2845,7 +2850,7 @@ msgstr "このセクションへのアクセス権がありません。"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "アカウントが{source}からここに移行されました。そちらで削除するまで、メッセージや通知が両方のサーバーに届く場合があり、一部のコンテンツは旧サーバーから引き続き提供され、フォロワーがここであなたを見つけるまで数分かかる場合があります。"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "添付ファイルは失われます。"
 
@@ -2853,11 +2858,11 @@ msgstr "添付ファイルは失われます。"
 msgid "Your preference"
 msgstr "あなたの設定"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "入力したテキストと添付ファイルは失われます。"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "入力したテキストは失われます。"
 

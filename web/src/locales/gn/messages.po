@@ -30,6 +30,11 @@ msgstr "(emyenyhẽ)"
 msgid "[not set]"
 msgstr "[noñemoĩva]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# ojejuhu} other {# ojejuhu}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# ipypegua} other {+# ipypegua}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {Oñemboguéma # versión ojeporu'ỹva} other {Oñemboguéma # versión ojeporu'ỹva}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (desarrollo)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} oñembohekopyahu, {failed} ndoiporãi"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} oñehupi."
 
@@ -145,7 +150,7 @@ msgstr "Jeike rupa"
 msgid "Account type"
 msgstr "Tetãygua peteĩchagua"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Tembiaporã"
 
@@ -208,7 +213,7 @@ msgstr "Embojuaju opción"
 msgid "Add tag..."
 msgstr "Embojuaju tag..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Embojuaju directorio-pe"
 
@@ -231,7 +236,7 @@ msgstr "Embojuajuhína..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "Opaite app oñembojeguáma"
 
@@ -269,13 +274,13 @@ msgstr "Oimeraẽva oikéva"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Opa mba'e osuscribíva ko feed-pe ndohupytyvéima. Upéi ikatu embokopia peteĩ URL pyahu."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "App"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "App tembiapokuéra"
 
@@ -283,11 +288,11 @@ msgstr "App tembiapokuéra"
 msgid "App information"
 msgstr "App marandu"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "App oñeinstalama"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "App oñemoĩporãma"
 
@@ -303,7 +308,7 @@ msgstr "Application ID"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Apps"
 
@@ -312,7 +317,7 @@ msgstr "Apps"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Añetehápe ehundise \"{0}\"?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Añetehápe ehundise \"{title}\"? Ko tembiapo ndojeapojeýiva."
 
@@ -340,11 +345,11 @@ msgstr "Añetehápe eikese? {opponentName} ogana ñembosarái."
 msgid "Ascending"
 msgstr "Ojupíva"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Embojuaju comentario archivokuéra"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Embojuaju mbohovái archivokuéra"
 
@@ -370,7 +375,7 @@ msgstr "Versión oĩva:"
 msgid "Available versions:"
 msgstr "Versiónkuéra oĩva:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Oĩma, ha katu ndojeinstaláiri"
 
@@ -465,18 +470,18 @@ msgstr "Cámara ndaipóri"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Heja"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Heja comentario"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Heja mbohovái"
 
@@ -538,12 +543,12 @@ msgstr "Class routing"
 msgid "Classes"
 msgstr "Classes"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Embopotĩ versión ndoipuruivape"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Embopotĩhína..."
 
@@ -641,8 +646,8 @@ msgstr "Jehai'aty rembiapo"
 msgid "Comments"
 msgstr "Comentariokuéra"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Comentariokuéra ({0})"
 
@@ -703,10 +708,10 @@ msgstr "Oñekopiáma clipboard-pe"
 msgid "Copy"
 msgstr "Kopia"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "Ndaikatúi ojembojuaju tembiporu."
 
@@ -838,7 +843,7 @@ msgstr "Default track (versión {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Hundi"
@@ -863,9 +868,9 @@ msgstr "Hundi campo"
 msgid "Delete game?"
 msgstr "Ehundi ñembosarái?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Hundi mba'e"
 
@@ -926,7 +931,7 @@ msgstr "Detalle Panel"
 msgid "Detect from web browser"
 msgstr "Heka web browser-gui"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Hekombo'e apps"
 
@@ -934,11 +939,11 @@ msgstr "Hekombo'e apps"
 msgid "Directory"
 msgstr "Ñongatuha"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Mboyke"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "¿Reipotapa rembyai pe haipyre?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Ndojojái pe ta'ãnga ojejeruréva ndive"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Apopyre"
@@ -1052,7 +1057,7 @@ msgstr "Emoinge nde código autenticador rehegua"
 msgid "Entity:"
 msgstr "Entidad:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Jejavy"
 
@@ -1079,7 +1084,7 @@ msgstr "Tuichavéva"
 msgid "Failed to add account"
 msgstr "Ndaikatúi oñembojuaju cuenta"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "Ndaikatúi oñemopotĩ umi app"
 
@@ -1133,8 +1138,8 @@ msgstr "Ndaikatúi oñembogue tembiasakue"
 msgid "Failed to load image"
 msgstr "Ndaikatúi omyanyhẽ ta'anga"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Ndaikatúi oñembogue artículo"
 
@@ -1174,7 +1179,7 @@ msgstr "Ndaikatúi oñongatu"
 msgid "Failed to save prompt"
 msgstr "Ndaikatúi oñongatu prompt"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "Ndaikatúi oñembohekopyahu umi app"
 
@@ -1207,7 +1212,7 @@ msgstr "Ndaikatúi omoĩmbaite ñemaña"
 msgid "Failed to upload attachment"
 msgstr "Ndaikatúi oñemondo archivo"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Archivo:"
 
@@ -1251,7 +1256,7 @@ msgstr "Iru"
 msgid "From"
 msgstr "Oguõva"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "Directorio-gui"
 
@@ -1347,40 +1352,40 @@ msgstr "{name} avatar tai ñepyrũrãva"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Embojuaju"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "¿Embojuaju {0}?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Embojuaju archivo-gui"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Embojuaju publisher-gui"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Apps embojuajupy"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "Ojembojuaju..."
 
@@ -1400,7 +1405,7 @@ msgstr "Arange ndoikóiva"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Ojehecha pe kuatiarogue rehekáva <0/>ndaipóri térã oñemboguéma."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Artículo detalles"
 
@@ -1449,11 +1454,11 @@ msgstr "Embojuaju hetave"
 msgid "Loading content…"
 msgstr "Contenido henyhẽhína…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Ojembogue artículo"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Ojembogue artículo detalles"
 
@@ -1613,11 +1618,11 @@ msgstr "Ndaiporivéi reglas oñembosako'íva. Embojuaju reglas remohenondévo m�
 msgid "No activity yet"
 msgstr "Ndaipóri tembiapo gueteri"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "Ndaikatúi oñembohekopyahu mba'eve apps."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Ndaipóri apps oñemoĩva'ekue"
 
@@ -1629,11 +1634,11 @@ msgstr "Ndaipóri clases oñembosako'íva."
 msgid "No comments yet"
 msgstr "Ndaipóri comentario gueteri"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Ndaipóri ñemyesakã"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Ndaipóri development apps ojuajúva \"{searchQuery}\" ndive"
 
@@ -1645,11 +1650,11 @@ msgstr "Ndaipóri ñembosarái gueteri"
 msgid "No groups available"
 msgstr "Ndaipóri grupos oĩva"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Directorio-pe ndaipóri apps oñemoĩ kuaáva ojuajúva \"{searchQuery}\" ndive"
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Ndaipóri apps oñemoĩva'ekue ojuajúva \"{searchQuery}\" ndive"
 
@@ -1657,12 +1662,12 @@ msgstr "Ndaipóri apps oñemoĩva'ekue ojuajúva \"{searchQuery}\" ndive"
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Ndaikatúi oñemoheñói item peteĩchagua. Emoheñói raẽ peteĩchagua oñeikotevẽva."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Ndaipóri ojuajúva directorio-pe"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Ndaipóri apps ojuajúva"
 
@@ -1691,7 +1696,7 @@ msgstr "Ndaipóri permisos ome'ẽva'ekue ko app-pe"
 msgid "No places found"
 msgstr "Ndojejuhúi tenda"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Ndaipóri ñemoñe'ẽ oĩva"
 
@@ -1726,7 +1731,7 @@ msgstr "Ndaipóri tópico marandu gueteri — eha'ã jey notificación pyahu rir
 msgid "No unread notifications"
 msgstr "Ndaipóri marandu omoñe'ẽ'ỹva"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Ndaipóri versiones ojeporu'ỹva omopotĩ haguã"
 
@@ -1742,10 +1747,10 @@ msgstr "Ndaipóri jehecha"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Mburuvicha"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Sy/ru"
 
@@ -1872,7 +1877,7 @@ msgstr "Passkeys"
 msgid "Passkeys are not available in this browser"
 msgstr "Passkeys ndaipóri ko navegador-pe"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Embojuaju instalación rendape:"
 
@@ -1916,7 +1921,7 @@ msgstr "Permisos"
 msgid "Please check your internet connection and try again."
 msgstr "Ehechami nde internet conexión ha eha'ã jey."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Emoinge app ID"
 
@@ -1962,7 +1967,7 @@ msgstr "Oñemba'apo hína…"
 msgid "Prompt saved"
 msgstr "Prompt oñeñongatu"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Mba'éichagua"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Emoinge jey nde passkeys ko servidor-pe"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "Ojeporavóva"
 
@@ -2196,11 +2201,11 @@ msgstr "Oñeñongatuhína..."
 msgid "Search"
 msgstr "Eheka"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Eheka apps"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Eheka apps..."
 
@@ -2420,8 +2425,8 @@ msgstr "Ipa'ũva"
 msgid "Start the discussion by adding the first comment."
 msgstr "Eñepyrũ ñomongeta embojuaju peteĩha ñe'ẽmbyre."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Ñehapykuere'ỹ"
 
@@ -2429,11 +2434,11 @@ msgstr "Ñehapykuere'ỹ"
 msgid "Subject"
 msgstr "Mba'erã"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Emondo ñe'ẽmbyre"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Emondo ñembohovái"
 
@@ -2505,7 +2510,7 @@ msgstr "Ndaikatúi oñemondo. Umi archivo ikatu tuichaiterei, térã ne conexió
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Tuichaiterei ojehupi hag̃ua. Eipe'a térã emomichĩ archivo ha eha'ã jey."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "Tembiporu oñehupi porãma."
 
@@ -2597,7 +2602,7 @@ msgstr "Hetaiterei mba'ejerure"
 msgid "Top"
 msgstr "Yvate"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
@@ -2644,7 +2649,7 @@ msgstr "Ehai eheka..."
 msgid "Unable to connect to remote server"
 msgstr "Ndaikatúi ojeike servidor mombyrýpe"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "Ndaikatúi oñembojuaju recomendación tembiapo rehe"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Mavevenoĩva"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "Ndaipóri"
 
@@ -2697,15 +2702,15 @@ msgstr "Eñemboaty'ỹ"
 msgid "Untitled"
 msgstr "Téra'ỹva"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Embohekopyahu"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Embohekopyahu opa"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Ñembohekopyahu ndoiporãi"
 
@@ -2719,11 +2724,11 @@ msgstr "Hekopyahúpyre"
 msgid "Updated {field}"
 msgstr "{field} oñembohekopyahu"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Oñembohekopyahúhína umi app..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Oñembohekopyahu hína..."
 
@@ -2802,7 +2807,7 @@ msgstr "Video jehecha: {0}"
 msgid "View all notifications"
 msgstr "Ehecha opa marandu"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Ehecha ha embogua mba'e marandu"
 
@@ -2814,8 +2819,8 @@ msgstr "Ehecha control"
 msgid "Voice recording is not supported in this browser"
 msgstr "Ko navegador ndoipytyvõi ñe'ẽ grabación"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Ehecha"
 
@@ -2845,7 +2850,7 @@ msgstr "Ndereguerekói jeike ko vorépe."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Nde cuenta oiko ko'ápe {source} guive. Peve reipe'a upépe, marandu ha mba'emimi ikatu ogueru servidor mokõive-pe, nde mba'e mba'eapo ambuéva ohasave ypykue servidor guive, ha erekopy'araka'e minutopi peve reko'ata ko'ápe."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Ne archivo mbojoapypyre okañýta."
 
@@ -2853,11 +2858,11 @@ msgstr "Ne archivo mbojoapypyre okañýta."
 msgid "Your preference"
 msgstr "Ne jeporavo"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Ne ñe'ẽ ha ne archivo mbojoapypyre okañýta."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Ne moñe'ẽrã okañyta."
 

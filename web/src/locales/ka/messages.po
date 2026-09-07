@@ -30,6 +30,11 @@ msgstr "(გაშლა)"
 msgid "[not set]"
 msgstr "[არ არის მითითებული]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, other {# პოსტი}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# ჩადგმული} other {+# ჩადგმული}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, other {წაიშალა # გამოუყენებელი ვერსია}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (დამუშავება)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} განახლდა, {failed} ვერ მოხერხდა"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} დაინსტალირდა."
 
@@ -145,7 +150,7 @@ msgstr "წვდომის დონე"
 msgid "Account type"
 msgstr "ანგარიშის ტიპი"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "აქტივობა"
 
@@ -208,7 +213,7 @@ msgstr "ვარიანტის დამატება"
 msgid "Add tag..."
 msgstr "ტეგის დამატება..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "კატალოგში დამატება"
 
@@ -231,7 +236,7 @@ msgstr "დამატება..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "ყველა აპი განახლდა"
 
@@ -269,13 +274,13 @@ msgstr "ნებისმიერი, ვინც შესულია"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "ყველაფერი, რაც ამ არხზეა გამოწერილი, შეწყვეტს მის მიღებას. შემდეგ შეგიძლიათ დააკოპიროთ ახალი URL."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "აპი"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "აპის მოქმედებები"
 
@@ -283,11 +288,11 @@ msgstr "აპის მოქმედებები"
 msgid "App information"
 msgstr "აპის ინფორმაცია"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "აპი დაყენებულია"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "აპი წარმატებით დაინსტალდა"
 
@@ -303,7 +308,7 @@ msgstr "აპლიკაციის ID"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "აპები"
 
@@ -312,7 +317,7 @@ msgstr "აპები"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "დარწმუნებული ხართ, რომ გსურთ „{0}“-ის წაშლა?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "დარწმუნებული ხართ, რომ გსურთ „{title}“-ის წაშლა? მოქმედება შეუქცევადია."
 
@@ -340,11 +345,11 @@ msgstr "დარწმუნებული ხართ, რომ გსუ�
 msgid "Ascending"
 msgstr "ზრდადობით"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "კომენტარის ფაილების მიმაგრება"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "პასუხის ფაილების მიმაგრება"
 
@@ -370,7 +375,7 @@ msgstr "ხელმისაწვდომი ვერსია:"
 msgid "Available versions:"
 msgstr "ხელმისაწვდომი ვერსიები:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "ხელმისაწვდომი, მაგრამ არ არის დაყენებული"
 
@@ -465,18 +470,18 @@ msgstr "კამერა მიუწვდომელია"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "გაუქმება"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "კომენტარის გაუქმება"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "პასუხის გაუქმება"
 
@@ -538,12 +543,12 @@ msgstr "კლასის მარშრუტიზაცია"
 msgid "Classes"
 msgstr "კლასები"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "გამოუყენებელი ვერსიების გასუფთავება"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "სუფთავდება..."
 
@@ -641,8 +646,8 @@ msgstr "კომენტარის მოქმედებები"
 msgid "Comments"
 msgstr "კომენტარები"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "კომენტარები ({0})"
 
@@ -703,10 +708,10 @@ msgstr "ბუფერში დაკოპირდა"
 msgid "Copy"
 msgstr "კოპირება"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "აპლიკაციის დაყენება ვერ მოხერხდა."
 
@@ -838,7 +843,7 @@ msgstr "ნაგულისხმევი Track (ვერსია {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "წაშლა"
@@ -863,9 +868,9 @@ msgstr "ველის წაშლა"
 msgid "Delete game?"
 msgstr "თამაშის წაშლა?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "ერთეულის წაშლა"
 
@@ -926,7 +931,7 @@ msgstr "დეტალების პანელი"
 msgid "Detect from web browser"
 msgstr "ვებ ბრაუზერიდან აღმოჩენა"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "შემუშავების აპები"
 
@@ -934,11 +939,11 @@ msgstr "შემუშავების აპები"
 msgid "Directory"
 msgstr "კატალოგი"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "გაუქმება"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "გავაუქმოთ მონახაზი?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "არ შეესაბამება საჭირო შაბლონს"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "მზადაა"
@@ -1052,7 +1057,7 @@ msgstr "შეიყვანეთ თქვენი authenticator-ის კ�
 msgid "Entity:"
 msgstr "ერთეული:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "შეცდომა"
 
@@ -1079,7 +1084,7 @@ msgstr "ძალიან დიდი"
 msgid "Failed to add account"
 msgstr "ანგარიშის დამატება ვერ მოხერხდა"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "აპების გასუფთავება ვერ მოხერხდა"
 
@@ -1133,8 +1138,8 @@ msgstr "ისტორიის ჩატვირთვა ვერ მოხ
 msgid "Failed to load image"
 msgstr "სურათის ჩატვირთვა ვერ მოხერხდა"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "ელემენტის ჩატვირთვა ვერ მოხერხდა"
 
@@ -1174,7 +1179,7 @@ msgstr "შენახვა ვერ მოხერხდა"
 msgid "Failed to save prompt"
 msgstr "მოთხოვნის შენახვა ვერ მოხერხდა"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "აპების განახლება ვერ მოხერხდა"
 
@@ -1207,7 +1212,7 @@ msgstr "თვალყურის დევნების განახლ�
 msgid "Failed to upload attachment"
 msgstr "დანართის ატვირთვა ვერ მოხერხდა"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "ფაილი:"
 
@@ -1251,7 +1256,7 @@ msgstr "მეგობრები"
 msgid "From"
 msgstr "ვისგან"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "დირექტორიიდან"
 
@@ -1347,40 +1352,40 @@ msgstr "{name}-ის ინიციალების ავატარი"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "დაყენება"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "დააყენოთ {0}?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "ფაილიდან დაყენება"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "გამომცემლისგან დაყენება"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "დაყენებული აპლიკაციები"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "დაყენება..."
 
@@ -1400,7 +1405,7 @@ msgstr "არასწორი თარიღი"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "როგორც ჩანს, გვერდი, რომელსაც ეძებთ, <0/>არ არსებობს ან წაშლილია."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "ელემენტის დეტალები"
 
@@ -1449,11 +1454,11 @@ msgstr "მეტის ჩატვირთვა"
 msgid "Loading content…"
 msgstr "შიგთავსის ჩატვირთვა…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "ელემენტის ჩატვირთვა"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "ელემენტის დეტალების ჩატვირთვა"
 
@@ -1613,11 +1618,11 @@ msgstr "წვდომის წესები არ არის კონ�
 msgid "No activity yet"
 msgstr "აქტივობა ჯერ არ არის"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "ვერცერთი აპის განახლება ვერ მოხერხდა."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "აპები არ არის დაყენებული"
 
@@ -1629,11 +1634,11 @@ msgstr "კლასები არ არის კონფიგურირ
 msgid "No comments yet"
 msgstr "კომენტარები ჯერ არ არის"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "აღწერა არ არის"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "ვერცერთი დეველოპერული აპი ვერ ემთხვევა \"{searchQuery}\""
 
@@ -1645,11 +1650,11 @@ msgstr "თამაშები ჯერ არ არის"
 msgid "No groups available"
 msgstr "ხელმისაწვდომი ჯგუფები არ არის"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "კატალოგში დასაყენებელი აპი ვერ ემთხვევა \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "დაყენებული აპები ვერ ემთხვევა \"{searchQuery}\""
 
@@ -1657,12 +1662,12 @@ msgstr "დაყენებული აპები ვერ ემთხვ
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "ნივთის ტიპების შექმნა ჯერ შეუძლებელია. ჯერ შექმენით საჭირო მშობელი ნივთები."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "კატალოგში დამთხვევები არ არის"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "შესაბამისი აპები არ არის"
 
@@ -1691,7 +1696,7 @@ msgstr "ამ აპისთვის ნებართვები არ �
 msgid "No places found"
 msgstr "ადგილები ვერ მოიძებნა"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "რეკომენდაციები მიუწვდომელია"
 
@@ -1726,7 +1731,7 @@ msgstr "თემის ჩანაწერი ჯერ არ არის �
 msgid "No unread notifications"
 msgstr "წაუკითხავი შეტყობინებები არ არის"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "გასასუფთავებელი გამოუყენებელი ვერსიები არ არის"
 
@@ -1742,10 +1747,10 @@ msgstr "ნახვები არ არის"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "მფლობელი"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "მშობელი"
 
@@ -1872,7 +1877,7 @@ msgstr "Passkey-ები"
 msgid "Passkeys are not available in this browser"
 msgstr "Passkey-ები ამ ბრაუზერში მიუწვდომელია"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "ჩასვით დაყენების ბმული:"
 
@@ -1916,7 +1921,7 @@ msgstr "ნებართვები"
 msgid "Please check your internet connection and try again."
 msgstr "გთხოვთ, შეამოწმოთ ინტერნეტთან კავშირი და სცადოთ ხელახლა."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "გთხოვთ, შეიყვანოთ აპის ID"
 
@@ -1962,7 +1967,7 @@ msgstr "მუშავდება…"
 msgid "Prompt saved"
 msgstr "მოთხოვნა შენახულია"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "თვისებები"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "ხელახლა დაარეგისტრირეთ თქვენი წვდომის გასაღებები ამ სერვერზე"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "რეკომენდებული"
 
@@ -2196,11 +2201,11 @@ msgstr "შენახვა..."
 msgid "Search"
 msgstr "ძიება"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "აპების ძიება"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "აპების ძიება..."
 
@@ -2420,8 +2425,8 @@ msgstr "ფართო"
 msgid "Start the discussion by adding the first comment."
 msgstr "დაიწყეთ დისკუსია პირველი კომენტარის დამატებით."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "ყურების შეწყვეტა"
 
@@ -2429,11 +2434,11 @@ msgstr "ყურების შეწყვეტა"
 msgid "Subject"
 msgstr "თემა"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "კომენტარის გაგზავნა"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "პასუხის გაგზავნა"
 
@@ -2505,7 +2510,7 @@ msgstr "გაგზავნა ვერ მოხერხდა. ფაი�
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "ატვირთვისთვის ზედმეტად დიდი იყო. წაშალეთ ან შეამცირეთ ფაილები და ხელახლა სცადეთ."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "აპლიკაცია წარმატებით დაინსტალირდა."
 
@@ -2597,7 +2602,7 @@ msgstr "ზედმეტად ბევრი მოთხოვნა"
 msgid "Top"
 msgstr "ძალიან დიდი"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "სულ შეკვეთები"
@@ -2644,7 +2649,7 @@ msgstr "მომხმარებლების მოსაძებნა�
 msgid "Unable to connect to remote server"
 msgstr "დისტანციურ სერვერთან დაკავშირება ვერ მოხერხდა"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "რეკომენდაციების სერვისთან დაკავშირება ვერ მოხერხდა"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "მიუნიჭებელი"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "არაავტორიზებული წვდომა"
 
@@ -2697,15 +2702,15 @@ msgstr "ამოუცნობი ანგარიში"
 msgid "Untitled"
 msgstr "შეჩერება მოხსნილია"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "გადაუმოწმებელი"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "ტრეკების განახლება"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "ყველას განახლება"
 
@@ -2719,11 +2724,11 @@ msgstr "განახლებულია"
 msgid "Updated {field}"
 msgstr "განახლდა {field}"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "აპების განახლება..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "განახლება..."
 
@@ -2802,7 +2807,7 @@ msgstr "ვიდეოს მნახველი: {0}"
 msgid "View all notifications"
 msgstr "ყველას ნახვა"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "ყველა პოსტის ნახვა"
 
@@ -2814,8 +2819,8 @@ msgstr "ხედის მართვა"
 msgid "Voice recording is not supported in this browser"
 msgstr "ხმის ჩაწერა ამ ბრაუზერში მხარდაჭერილი არ არის"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "გაფრთხილება გამოიცა"
 
@@ -2845,7 +2850,7 @@ msgstr "ამ განყოფილებაზე წვდომა არ
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "თქვენი ანგარიში გადმოტანილია {source}-დან. სანამ იქ წაშლით, შეტყობინებები და ნოტიფიკაციები შეიძლება ორივე სერვერს მიაღწიოს, თქვენი კონტენტის ნაწილი კვლავ ძველი სერვერიდან ხელმისაწვდომია, ხოლო მიმდევრებს შეიძლება რამდენიმე წუთი დასჭირდეთ თქვენი პოვნისთვის."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "თქვენი დანართები დაიკარგება."
 
@@ -2853,11 +2858,11 @@ msgstr "თქვენი დანართები დაიკარგე�
 msgid "Your preference"
 msgstr "თქვენი პირადი ვერსიის გადასახედი"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "თქვენი ტექსტი და დანართები დაიკარგება."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "შენი ტექსტი დაიკარგება."
 

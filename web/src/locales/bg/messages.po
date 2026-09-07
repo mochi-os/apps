@@ -30,6 +30,11 @@ msgstr "(разгъване)"
 msgid "[not set]"
 msgstr "[не е зададено]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# резултат} other {# резултата}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# вложен} other {+# вложени}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {Премахната е # неизползвана версия} other {Премахнати са # неизползвани версии}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (разработка)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} обновени, {failed} неуспешни"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} е инсталирано."
 
@@ -145,7 +150,7 @@ msgstr "Ниво на достъп"
 msgid "Account type"
 msgstr "Тип акаунт"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Активност"
 
@@ -208,7 +213,7 @@ msgstr "Добави опция"
 msgid "Add tag..."
 msgstr "Добави етикет..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Добави в директорията"
 
@@ -231,7 +236,7 @@ msgstr "Добавяне..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "Всички приложения са обновени"
 
@@ -269,13 +274,13 @@ msgstr "Всеки, който е влязъл"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Всичко, абонирано за този канал, ще спре да го получава. След това можете да копирате нов URL адрес."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Приложение"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "Действия на приложението"
 
@@ -283,11 +288,11 @@ msgstr "Действия на приложението"
 msgid "App information"
 msgstr "Информация за приложението"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "Приложението е инсталирано"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "Приложението е инсталирано успешно"
 
@@ -303,7 +308,7 @@ msgstr "ID на приложението"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Приложения"
 
@@ -312,7 +317,7 @@ msgstr "Приложения"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Сигурни ли сте, че искате да изтриете \"{0}\"?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Сигурни ли сте, че искате да изтриете \"{title}\"? Това действие не може да бъде отменено."
 
@@ -340,11 +345,11 @@ msgstr "Сигурни ли сте, че искате да се откажете
 msgid "Ascending"
 msgstr "Възходящ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Прикачи файлове към коментара"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Прикачи файлове към отговора"
 
@@ -370,7 +375,7 @@ msgstr "Налична версия:"
 msgid "Available versions:"
 msgstr "Налични версии:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Налично, но не е инсталирано"
 
@@ -465,18 +470,18 @@ msgstr "Камерата не е достъпна"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Отказ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Отказ от коментара"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Отказ от отговора"
 
@@ -538,12 +543,12 @@ msgstr "Маршрутизиране на клас"
 msgid "Classes"
 msgstr "Класове"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Изчисти неизползваните версии"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Изчистване..."
 
@@ -641,8 +646,8 @@ msgstr "Действия за коментара"
 msgid "Comments"
 msgstr "Коментари"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Коментари ({0})"
 
@@ -703,10 +708,10 @@ msgstr "Копирано в клипборда"
 msgid "Copy"
 msgstr "Копирай"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "Приложението не може да бъде инсталирано."
 
@@ -838,7 +843,7 @@ msgstr "Track по подразбиране (версия {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Изтрий"
@@ -863,9 +868,9 @@ msgstr "Изтрий полето"
 msgid "Delete game?"
 msgstr "Да се изтрие ли играта?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Изтрий елемента"
 
@@ -926,7 +931,7 @@ msgstr "Панел с детайли"
 msgid "Detect from web browser"
 msgstr "Засечи от уеб браузъра"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Приложения за разработка"
 
@@ -934,11 +939,11 @@ msgstr "Приложения за разработка"
 msgid "Directory"
 msgstr "Указател"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Отхвърли"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Да се отхвърли ли черновата?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Не съответства на изисквания шаблон"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Готово"
@@ -1052,7 +1057,7 @@ msgstr "Въведете кода от приложението за удост�
 msgid "Entity:"
 msgstr "Обект:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Грешка"
 
@@ -1079,7 +1084,7 @@ msgstr "Много голям"
 msgid "Failed to add account"
 msgstr "Неуспешно добавяне на акаунт"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "Неуспешно почистване на приложенията"
 
@@ -1133,8 +1138,8 @@ msgstr "Неуспешно зареждане на история"
 msgid "Failed to load image"
 msgstr "Изображението не можа да се зареди"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Неуспешно зареждане на елемент"
 
@@ -1174,7 +1179,7 @@ msgstr "Неуспешно записване"
 msgid "Failed to save prompt"
 msgstr "Неуспешно записване на подсказка"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "Неуспешно актуализиране на приложенията"
 
@@ -1207,7 +1212,7 @@ msgstr "Неуспешно обновяване на следенето"
 msgid "Failed to upload attachment"
 msgstr "Неуспешно качване на прикачен файл"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Файл:"
 
@@ -1251,7 +1256,7 @@ msgstr "Приятели"
 msgid "From"
 msgstr "От"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "От директорията"
 
@@ -1347,40 +1352,40 @@ msgstr "Аватар с инициали за {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Инсталиране"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "Инсталиране на {0}?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Инсталиране от файл"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Инсталиране от издател"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Инсталирани приложения"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "Инсталиране..."
 
@@ -1400,7 +1405,7 @@ msgstr "Невалидна дата"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Изглежда, че страницата, която търсите, <0/>не съществува или е премахната."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Подробности за елемента"
 
@@ -1449,11 +1454,11 @@ msgstr "Зареди още"
 msgid "Loading content…"
 msgstr "Зареждане на съдържанието…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Зареждане на елемент"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Зареждане на детайли за елемент"
 
@@ -1613,11 +1618,11 @@ msgstr "Няма конфигурирани правила за достъп. Д
 msgid "No activity yet"
 msgstr "Все още няма активност"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "Никое приложение не може да бъде обновено."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Няма инсталирани приложения"
 
@@ -1629,11 +1634,11 @@ msgstr "Няма конфигурирани класове."
 msgid "No comments yet"
 msgstr "Все още няма коментари"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Няма описание"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Няма приложения за разработка, отговарящи на „{searchQuery}“"
 
@@ -1645,11 +1650,11 @@ msgstr "Все още няма игри"
 msgid "No groups available"
 msgstr "Няма налични групи"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "В директорията няма приложения за инсталиране, отговарящи на „{searchQuery}“"
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Няма инсталирани приложения, отговарящи на „{searchQuery}“"
 
@@ -1657,12 +1662,12 @@ msgstr "Няма инсталирани приложения, отговарящ
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Все още не може да се създават типове елементи. Първо създайте необходимите родителски елементи."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Няма съвпадения в директорията"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Няма съвпадащи приложения"
 
@@ -1691,7 +1696,7 @@ msgstr "На това приложение не са дадени разреше
 msgid "No places found"
 msgstr "Не са намерени места"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Няма налични препоръки"
 
@@ -1726,7 +1731,7 @@ msgstr "Все още няма запис за темата — опитайте
 msgid "No unread notifications"
 msgstr "Няма непрочетени известия"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Няма неизползвани версии за изчистване"
 
@@ -1742,10 +1747,10 @@ msgstr "Няма прегледи"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Собственик"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Родител"
 
@@ -1872,7 +1877,7 @@ msgstr "Ключове за достъп"
 msgid "Passkeys are not available in this browser"
 msgstr "Passkeys не са налични в този браузър"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Поставете връзката за инсталиране:"
 
@@ -1916,7 +1921,7 @@ msgstr "Разрешения"
 msgid "Please check your internet connection and try again."
 msgstr "Проверете интернет връзката си и опитайте отново."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Моля, въведете ID на приложението"
 
@@ -1962,7 +1967,7 @@ msgstr "Обработва се…"
 msgid "Prompt saved"
 msgstr "Промптът е запазен"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Свойства"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Регистрирайте отново ключовете си за достъп на този сървър"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "Препоръчано"
 
@@ -2196,11 +2201,11 @@ msgstr "Запазва се..."
 msgid "Search"
 msgstr "Търсене"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Търси приложения"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Търси приложения..."
 
@@ -2420,8 +2425,8 @@ msgstr "Просторно"
 msgid "Start the discussion by adding the first comment."
 msgstr "Започнете дискусията, като добавите първия коментар."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Спри да следиш"
 
@@ -2429,11 +2434,11 @@ msgstr "Спри да следиш"
 msgid "Subject"
 msgstr "Тема"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Изпрати коментар"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Изпрати отговор"
 
@@ -2505,7 +2510,7 @@ msgstr "Изпращането не успя. Файловете може да �
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Твърде голямо за качване. Премахнете или намалете файлове и опитайте отново."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "Приложението е инсталирано успешно."
 
@@ -2597,7 +2602,7 @@ msgstr "Твърде много заявки"
 msgid "Top"
 msgstr "Най-горе"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
@@ -2644,7 +2649,7 @@ msgstr "Пишете, за да търсите..."
 msgid "Unable to connect to remote server"
 msgstr "Неуспешно свързване с отдалечения сървър"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "Не може да се установи връзка с услугата за препоръки"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Неприсвоено"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "Недостъпно"
 
@@ -2697,15 +2702,15 @@ msgstr "Отпиши се"
 msgid "Untitled"
 msgstr "Без заглавие"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Обнови"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Обнови всички"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Обновяването не успя"
 
@@ -2719,11 +2724,11 @@ msgstr "Обновено"
 msgid "Updated {field}"
 msgstr "Обновено {field}"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Актуализиране на приложенията..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Обновяване..."
 
@@ -2802,7 +2807,7 @@ msgstr "Преглед на видео: {0}"
 msgid "View all notifications"
 msgstr "Виж всички известия"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Преглед и редакция на детайлите за елемента"
 
@@ -2814,8 +2819,8 @@ msgstr "Контроли за изглед"
 msgid "Voice recording is not supported in this browser"
 msgstr "Гласовият запис не се поддържа в този браузър"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Наблюдавай"
 
@@ -2845,7 +2850,7 @@ msgstr "Нямате достъп до този раздел."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Профилът ви беше преместен тук от {source}. Докато не го изтриете там, съобщенията и известията може да достигат до двата сървъра, част от съдържанието ви продължава да се обслужва от стария сървър и последователите може да отнеме няколко минути, за да ви намерят тук."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Прикачените файлове ще бъдат изгубени."
 
@@ -2853,11 +2858,11 @@ msgstr "Прикачените файлове ще бъдат изгубени."
 msgid "Your preference"
 msgstr "Вашето предпочитание"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Текстът и прикачените файлове ще бъдат изгубени."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Текстът ви ще бъде загубен."
 

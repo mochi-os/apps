@@ -30,6 +30,11 @@ msgstr "(ընդարձակել)"
 msgid "[not set]"
 msgstr "[չի սահմանվել]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# արդյունք} other {# արդյունք}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# ներդրված} other {+# ներդրված}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {Հեռացվել է # չօգտագործված տարբերակ} other {Հեռացվել է # չօգտագործված տարբերակ}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (մշակում)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} թարմացվեց, {failed} ձախողվեց"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1}-ը տեղադրվեց:"
 
@@ -145,7 +150,7 @@ msgstr "Մուտքի մակարդակ"
 msgid "Account type"
 msgstr "Հաշվի տեսակ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Ակտիվություն"
 
@@ -208,7 +213,7 @@ msgstr "Ավելացնել տարբերակ"
 msgid "Add tag..."
 msgstr "Ավելացնել պիտակ..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Ավելացնել գրացուցակին"
 
@@ -231,7 +236,7 @@ msgstr "Ավելացվում է..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "Բոլոր հավելվածները թարմացվեցին"
 
@@ -269,13 +274,13 @@ msgstr "Ցանկացած մուտք գործած անձ"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Այս հոսքին բաժանորդագրված ամեն ինչ կդադարի ստանալ այն։ Դրանից հետո կարող եք պատճենել նոր URL։"
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Հավելված"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "Հավելվածի գործողություններ"
 
@@ -283,11 +288,11 @@ msgstr "Հավելվածի գործողություններ"
 msgid "App information"
 msgstr "Հավելվածի տեղեկություններ"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "Հավելվածը տեղադրվեց"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "Հավելվածը հաջողությամբ տեղադրվեց"
 
@@ -303,7 +308,7 @@ msgstr "Հավելվածի ID"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Հավելվածներ"
 
@@ -312,7 +317,7 @@ msgstr "Հավելվածներ"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Վստա՞հ եք, որ ուզում եք ջնջել «{0}»-ը։"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Վստա՞հ եք, որ ուզում եք ջնջել «{title}»-ը։ Այս գործողությունը հնարավոր չէ հետարկել։"
 
@@ -340,11 +345,11 @@ msgstr "Վստա՞հ եք, որ ուզում եք հանձնվել։ {opponentNa
 msgid "Ascending"
 msgstr "Աճման կարգով"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Կցել մեկնաբանության ֆայլեր"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Կցել պատասխանի ֆայլեր"
 
@@ -370,7 +375,7 @@ msgstr "Հասանելի տարբերակ՝"
 msgid "Available versions:"
 msgstr "Հասանելի տարբերակներ՝"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Հասանելի է, բայց տեղադրված չէ"
 
@@ -465,18 +470,18 @@ msgstr "Տեսախցիկը հասանելի չէ"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Չեղարկել"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Չեղարկել մեկնաբանությունը"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Չեղարկել պատասխանը"
 
@@ -538,12 +543,12 @@ msgstr "Դասի երթուղավորում"
 msgid "Classes"
 msgstr "Դասեր"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Մաքրել չօգտագործված տարբերակները"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Մաքրվում է..."
 
@@ -641,8 +646,8 @@ msgstr "Մեկնաբանության գործողություններ"
 msgid "Comments"
 msgstr "Մեկնաբանություններ"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Մեկնաբանություններ ({0})"
 
@@ -703,10 +708,10 @@ msgstr "Պատճենվեց սեղմատախտակին"
 msgid "Copy"
 msgstr "Պատճենել"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "Չհաջողվեց տեղադրել հավելվածը։"
 
@@ -838,7 +843,7 @@ msgstr "Լռելյայն track (տարբերակ {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Ջնջել"
@@ -863,9 +868,9 @@ msgstr "Ջնջել դաշտը"
 msgid "Delete game?"
 msgstr "Ջնջե՞լ խաղը։"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Ջնջել կետը"
 
@@ -926,7 +931,7 @@ msgstr "Մանրամասների վահանակ"
 msgid "Detect from web browser"
 msgstr "Հայտնաբերել վեբ բրաուզերից"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Մշակման հավելվածներ"
 
@@ -934,11 +939,11 @@ msgstr "Մշակման հավելվածներ"
 msgid "Directory"
 msgstr "Տեղեկագիրք"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Հրաժարվել"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Հրաժարվե՞լ սևագրից։"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Չի համապատասխանում պահանջվող ձևանմուշին"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Կատարված է"
@@ -1052,7 +1057,7 @@ msgstr "Մուտքագրեք ձեր նույնականացուցիչի կոդը"
 msgid "Entity:"
 msgstr "Էնտիտետ՝"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Սխալ"
 
@@ -1079,7 +1084,7 @@ msgstr "Շատ մեծ"
 msgid "Failed to add account"
 msgstr "Չհաջողվեց ավելացնել հաշիվը"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "Չհաջողվեց մաքրել հավելվածները"
 
@@ -1133,8 +1138,8 @@ msgstr "Չհաջողվեց բեռնել պատմությունը"
 msgid "Failed to load image"
 msgstr "Չհաջողվեց բեռնել պատկերը"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Չհաջողվեց բեռնել տարրը"
 
@@ -1174,7 +1179,7 @@ msgstr "Չհաջողվեց պահպանել"
 msgid "Failed to save prompt"
 msgstr "Չհաջողվեց պահպանել հուշումը"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "Չհաջողվեց թարմացնել հավելվածները"
 
@@ -1207,7 +1212,7 @@ msgstr "Չհաջողվեց թարմացնել հետևումը"
 msgid "Failed to upload attachment"
 msgstr "Չհաջողվեց վերբեռնել կցորդը"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Ֆայլ՝"
 
@@ -1251,7 +1256,7 @@ msgstr "Ընկերներ"
 msgid "From"
 msgstr "Ումից"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "Գրացուցակից"
 
@@ -1347,40 +1352,40 @@ msgstr "{name}-ի սկզբնատառերի ավատար"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Տեղադրել"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "Տեղադրե՞լ {0}-ը"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Տեղադրել ֆայլից"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Տեղադրել հրատարակչից"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Տեղադրված հավելվածներ"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "Տեղադրվում է..."
 
@@ -1400,7 +1405,7 @@ msgstr "Անվավեր ամսաթիվ"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Կարծես թե ձեր փնտրած էջը <0/>գոյություն չունի կամ հեռացվել է։"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Տարրի մանրամասներ"
 
@@ -1449,11 +1454,11 @@ msgstr "Բեռնել ավելին"
 msgid "Loading content…"
 msgstr "Բովանդակությունը բեռնվում է…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Տարրը բեռնվում է"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Տարրի մանրամասները բեռնվում են"
 
@@ -1613,11 +1618,11 @@ msgstr "Մուտքի կանոններ կարգավորված չեն։ Ավելա
 msgid "No activity yet"
 msgstr "Դեռ ակտիվություն չկա"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "Ոչ մի հավելված չհաջողվեց թարմացնել։"
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Տեղադրված հավելվածներ չկան"
 
@@ -1629,11 +1634,11 @@ msgstr "Կարգավորված դասեր չկան։"
 msgid "No comments yet"
 msgstr "Դեռ մեկնաբանություններ չկան"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Նկարագրություն չկա"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\"-ին համապատասխան մշակման հավելվածներ չկան"
 
@@ -1645,11 +1650,11 @@ msgstr "Դեռ խաղեր չկան"
 msgid "No groups available"
 msgstr "Հասանելի խմբեր չկան"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Կատալոգում \"{searchQuery}\"-ին համապատասխան տեղադրման ենթակա հավելվածներ չկան"
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\"-ին համապատասխան տեղադրված հավելվածներ չկան"
 
@@ -1657,12 +1662,12 @@ msgstr "\"{searchQuery}\"-ին համապատասխան տեղադրված հա�
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Տարրերի տեսակներ դեռ հնարավոր չէ ստեղծել։ Նախ ստեղծեք պահանջվող ծնող տարրերը։"
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Կատալոգում համընկնումներ չկան"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Համապատասխան հավելվածներ չկան"
 
@@ -1691,7 +1696,7 @@ msgstr "Այս հավելվածին թույլտվություններ չեն տ
 msgid "No places found"
 msgstr "Վայրեր չեն գտնվել"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Հասանելի առաջարկություններ չկան"
 
@@ -1726,7 +1731,7 @@ msgstr "Դեռ թեմայի գրառում չկա — փորձեք նորից հ
 msgid "No unread notifications"
 msgstr "Չկարդացված ծանուցումներ չկան"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Չօգտագործված տարբերակներ մաքրելու համար չկան"
 
@@ -1742,10 +1747,10 @@ msgstr "Դիտումներ չկան"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Սեփականատեր"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Ծնող"
 
@@ -1872,7 +1877,7 @@ msgstr "Անցաբանալիներ"
 msgid "Passkeys are not available in this browser"
 msgstr "Անցաբանալիները հասանելի չեն այս դիտարկիչում"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Տեղադրեք տեղադրման հղումը:"
 
@@ -1916,7 +1921,7 @@ msgstr "Թույլտվություններ"
 msgid "Please check your internet connection and try again."
 msgstr "Ստուգեք ձեր ինտերնետ կապը և կրկին փորձեք։"
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Խնդրում ենք մուտքագրել հավելվածի ID-ն"
 
@@ -1962,7 +1967,7 @@ msgstr "Մշակվում է…"
 msgid "Prompt saved"
 msgstr "Հուշումը պահպանվեց"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Հատկություններ"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Կրկին գրանցեք ձեր անցաբառերը այս սերվերում"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "Առաջարկվող"
 
@@ -2196,11 +2201,11 @@ msgstr "Պահպանում..."
 msgid "Search"
 msgstr "Որոնել"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Որոնել հավելվածներ"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Որոնել հավելվածներ..."
 
@@ -2420,8 +2425,8 @@ msgstr "Ընդարձակ"
 msgid "Start the discussion by adding the first comment."
 msgstr "Սկսեք քննարկումը՝ ավելացնելով առաջին մեկնաբանությունը:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Դադարեցնել դիտումը"
 
@@ -2429,11 +2434,11 @@ msgstr "Դադարեցնել դիտումը"
 msgid "Subject"
 msgstr "Թեմա"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Ներկայացնել մեկնաբանությունը"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Ներկայացնել պատասխանը"
 
@@ -2505,7 +2510,7 @@ msgstr "Չհաջողվեց ուղարկել։ Ֆայլերը կարող են չ�
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Չափազանց մեծ էր վերբեռնելու համար։ Հեռացրեք կամ փոքրացրեք ֆայլերը և կրկին փորձեք։"
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "Հավելվածը հաջողությամբ տեղադրվեց:"
 
@@ -2597,7 +2602,7 @@ msgstr "Չափազանց շատ հարցումներ"
 msgid "Top"
 msgstr "Վերև"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
@@ -2644,7 +2649,7 @@ msgstr "Մուտքագրեք որոնելու համար..."
 msgid "Unable to connect to remote server"
 msgstr "Հնարավոր չէ միանալ հեռավոր սերվերին"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "Հնարավոր չէ միանալ առաջարկությունների ծառայությանը"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Չվերագրված"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "Անհասանելի"
 
@@ -2697,15 +2702,15 @@ msgstr "Բաժանորդագրությունից հրաժարվել"
 msgid "Untitled"
 msgstr "Անվերնագիր"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Թարմացնել"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Թարմացնել բոլորը"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Թարմացումը ձախողվեց"
 
@@ -2719,11 +2724,11 @@ msgstr "Թարմացված"
 msgid "Updated {field}"
 msgstr "Թարմացվել է {field}"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Հավելվածները թարմացվում են..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Թարմացվում է..."
 
@@ -2802,7 +2807,7 @@ msgstr "Տեսանյութի դիտիչ՝ {0}"
 msgid "View all notifications"
 msgstr "Դիտել բոլոր ծանուցումները"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Դիտել և խմբագրել տարրի մանրամասները"
 
@@ -2814,8 +2819,8 @@ msgstr "Դիտել կառավարակետերը"
 msgid "Voice recording is not supported in this browser"
 msgstr "Ձայնագրումն այս դիտարկիչում չի աջակցվում"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Հետևել"
 
@@ -2845,7 +2850,7 @@ msgstr "Այս բաժինը ձեզ հասանելի չէ։"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ձեր հաշիվը տեղափոխվել է այստեղ {source}-ից: Մինչ այն ջնջեք այնտեղ, հաղորդագրություններն ու ծանուցումները կարող են հասնել երկու սերվերներին, ձեր որոշ բովանդակություն դեռ մատուցվում է հին սերվերից, և հետևորդները կարող են մի քանի րոպե պահանջել ձեզ գտնելու համար:"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Ձեր կցորդները կկորչեն։"
 
@@ -2853,11 +2858,11 @@ msgstr "Ձեր կցորդները կկորչեն։"
 msgid "Your preference"
 msgstr "Ձեր նախընտրությունը"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Ձեր տեքստը և կցորդները կկորչեն։"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Քո տեքստը կկորչի։"
 

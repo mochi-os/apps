@@ -30,6 +30,11 @@ msgstr "(zgjero)"
 msgid "[not set]"
 msgstr "[i pavendosur]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# rezultat} other {# rezultate}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# i ndërfutur} other {+# të ndërfutur}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {U hoq # version i papërdorur} other {U hoqën # versione të papërdorura}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (zhvillim)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} u përditësuan, {failed} dështuan"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} u instalua."
 
@@ -145,7 +150,7 @@ msgstr "Niveli i qasjes"
 msgid "Account type"
 msgstr "Lloji i llogarisë"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Aktiviteti"
 
@@ -208,7 +213,7 @@ msgstr "Shto opsion"
 msgid "Add tag..."
 msgstr "Shto etiketë..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Shto në direktori"
 
@@ -231,7 +236,7 @@ msgstr "Po shtohet..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "Të gjithë aplikacionet u përditësuan"
 
@@ -269,13 +274,13 @@ msgstr "Kushdo që ka hyrë"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Gjithçka e abonuar në këtë prurje do të ndalojë ta marrë. Më pas mund të kopjoni një URL të ri."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Aplikacioni"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "Veprime të aplikacionit"
 
@@ -283,11 +288,11 @@ msgstr "Veprime të aplikacionit"
 msgid "App information"
 msgstr "Informacioni i aplikacionit"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "Aplikacioni u instalua"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "Aplikacioni u instalua me sukses"
 
@@ -303,7 +308,7 @@ msgstr "ID e aplikacionit"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Aplikacionet"
 
@@ -312,7 +317,7 @@ msgstr "Aplikacionet"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Je i sigurt që do të fshish \"{0}\"?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Je i sigurt që do të fshish \"{title}\"? Ky veprim nuk mund të zhbëhet."
 
@@ -340,11 +345,11 @@ msgstr "Je i sigurt që do të dorëzohesh? {opponentName} do të fitojë lojën
 msgid "Ascending"
 msgstr "Në rritje"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Bashkëngjit skedarë komenti"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Bashkëngjit skedarë përgjigjeje"
 
@@ -370,7 +375,7 @@ msgstr "Versioni i disponueshëm:"
 msgid "Available versions:"
 msgstr "Versionet e disponueshme:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "I disponueshëm, por i painstaluar"
 
@@ -465,18 +470,18 @@ msgstr "Kamera nuk është e disponueshme"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Anulo"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Anulo komentin"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Anulo përgjigjen"
 
@@ -538,12 +543,12 @@ msgstr "Drejtimi i klasës"
 msgid "Classes"
 msgstr "Klasat"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Pastro versionet e papërdorura"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Po pastron..."
 
@@ -641,8 +646,8 @@ msgstr "Veprimet e komentit"
 msgid "Comments"
 msgstr "Komentet"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Komentet ({0})"
 
@@ -703,10 +708,10 @@ msgstr "U kopjua në kujtesën e fragmenteve"
 msgid "Copy"
 msgstr "Kopjo"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "Aplikacioni nuk mund të instalohej."
 
@@ -838,7 +843,7 @@ msgstr "Track-u i parazgjedhur (versioni {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Fshi"
@@ -863,9 +868,9 @@ msgstr "Fshi fushën"
 msgid "Delete game?"
 msgstr "Të fshihet loja?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Fshi elementin"
 
@@ -926,7 +931,7 @@ msgstr "Paneli i detajeve"
 msgid "Detect from web browser"
 msgstr "Zbulo nga shfletuesi i web-it"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Aplikacione zhvillimi"
 
@@ -934,11 +939,11 @@ msgstr "Aplikacione zhvillimi"
 msgid "Directory"
 msgstr "Drejtoria"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Hidh"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Ta hedhësh draftin?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Nuk përputhet me modelin e kërkuar"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Përfunduar"
@@ -1052,7 +1057,7 @@ msgstr "Vendosni kodin e aplikacionit të vërtetimit"
 msgid "Entity:"
 msgstr "Entiteti:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Gabim"
 
@@ -1079,7 +1084,7 @@ msgstr "Shumë i madh"
 msgid "Failed to add account"
 msgstr "Shtimi i llogarisë dështoi"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "Pastrimi i aplikacioneve dështoi"
 
@@ -1133,8 +1138,8 @@ msgstr "Ngarkimi i historisë dështoi"
 msgid "Failed to load image"
 msgstr "Ngarkimi i figurës dështoi"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Ngarkimi i artikullit dështoi"
 
@@ -1174,7 +1179,7 @@ msgstr "Ruajtja dështoi"
 msgid "Failed to save prompt"
 msgstr "Ruajtja e udhëzimit dështoi"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "Përditësimi i aplikacioneve dështoi"
 
@@ -1207,7 +1212,7 @@ msgstr "Përditësimi i ndjekjes dështoi"
 msgid "Failed to upload attachment"
 msgstr "Ngarkimi i bashkëngjitjes dështoi"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Skedari:"
 
@@ -1251,7 +1256,7 @@ msgstr "Miqtë"
 msgid "From"
 msgstr "Nga"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "Nga drejtoria"
 
@@ -1347,40 +1352,40 @@ msgstr "Avatar me inicialet për {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Instalo"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "Të instalohet {0}?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Instalo nga skedari"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Instalo nga publisher"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Aplikacionet e instaluara"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "Duke instaluar..."
 
@@ -1400,7 +1405,7 @@ msgstr "Datë e pavlefshme"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Duket se faqja që po kërkoni <0/>nuk ekziston ose është hequr."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Detajet e artikullit"
 
@@ -1449,11 +1454,11 @@ msgstr "Ngarko më shumë"
 msgid "Loading content…"
 msgstr "Po ngarkohet përmbajtja…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Duke ngarkuar artikullin"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Duke ngarkuar detajet e artikullit"
 
@@ -1613,11 +1618,11 @@ msgstr "Asnjë rregull qasjeje i konfiguruar. Shto rregulla për të kontrolluar
 msgid "No activity yet"
 msgstr "Ende pa aktivitet"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "Asnjë aplikacion nuk mund të përditësohet."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Asnjë aplikacion i instaluar"
 
@@ -1629,11 +1634,11 @@ msgstr "Asnjë klasë e konfiguruar."
 msgid "No comments yet"
 msgstr "Ende pa komente"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Pa përshkrim"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Asnjë aplikacion zhvillimi nuk përputhet me \"{searchQuery}\""
 
@@ -1645,11 +1650,11 @@ msgstr "Ende pa lojëra"
 msgid "No groups available"
 msgstr "Asnjë grup i disponueshëm"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Asnjë aplikacion i instalueshëm në direktori nuk përputhet me \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Asnjë aplikacion i instaluar nuk përputhet me \"{searchQuery}\""
 
@@ -1657,12 +1662,12 @@ msgstr "Asnjë aplikacion i instaluar nuk përputhet me \"{searchQuery}\""
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Asnjë lloj artikulli nuk mund të krijohet ende. Krijoni fillimisht artikujt prind të kërkuar."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Asnjë përputhje në direktori"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Asnjë aplikacion përputhës"
 
@@ -1691,7 +1696,7 @@ msgstr "Asnjë leje e dhënë për këtë aplikacion"
 msgid "No places found"
 msgstr "S'u gjet asnjë vend"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Asnjë rekomandim i disponueshëm"
 
@@ -1726,7 +1731,7 @@ msgstr "Ende asnjë regjistrim teme — provoni përsëri pas njoftimit tjetër.
 msgid "No unread notifications"
 msgstr "Asnjë njoftim i palexuar"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Asnjë version i papërdorur për t'u pastruar"
 
@@ -1742,10 +1747,10 @@ msgstr "Asnjë shikim"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Pronari"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Prindi"
 
@@ -1872,7 +1877,7 @@ msgstr "Kyçet"
 msgid "Passkeys are not available in this browser"
 msgstr "Kyçet nuk janë të disponueshëm në këtë shfletues"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Ngjit lidhjen e instalimit:"
 
@@ -1916,7 +1921,7 @@ msgstr "Lejet"
 msgid "Please check your internet connection and try again."
 msgstr "Kontrolloni lidhjen tuaj me internetin dhe provoni përsëri."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Ju lutemi futni një ID aplikacioni"
 
@@ -1962,7 +1967,7 @@ msgstr "Po përpunohet…"
 msgid "Prompt saved"
 msgstr "Prompti u ruajt"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Vetitë"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Riregjistroni çelësat tuaj të hyrjes në këtë server"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "I rekomanduar"
 
@@ -2196,11 +2201,11 @@ msgstr "Duke ruajtur..."
 msgid "Search"
 msgstr "Kërko"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Kërko aplikacione"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Kërko aplikacione..."
 
@@ -2420,8 +2425,8 @@ msgstr "I hapësirshëm"
 msgid "Start the discussion by adding the first comment."
 msgstr "Fillo diskutimin duke shtuar komentin e parë."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Ndalo shikimin"
 
@@ -2429,11 +2434,11 @@ msgstr "Ndalo shikimin"
 msgid "Subject"
 msgstr "Subjekti"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Dërgo komentin"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Dërgo përgjigjen"
 
@@ -2505,7 +2510,7 @@ msgstr "Nuk mund të dërgohej. Skedarët mund të jenë tepër të mëdhenj, os
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Ishte tepër i madh për t'u ngarkuar. Hiq ose zvogëlo skedarë dhe provo përsëri."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "Aplikacioni u instalua me sukses."
 
@@ -2597,7 +2602,7 @@ msgstr "Shumë kërkesa"
 msgid "Top"
 msgstr "Lart"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
@@ -2644,7 +2649,7 @@ msgstr "Shkruaj për të kërkuar..."
 msgid "Unable to connect to remote server"
 msgstr "Nuk u lidh dot me serverin në distancë"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "Nuk mund të lidhet me shërbimin e rekomandimeve"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "I pacaktuar"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "I padisponueshëm"
 
@@ -2697,15 +2702,15 @@ msgstr "Çabonohu"
 msgid "Untitled"
 msgstr "Pa titull"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Përditëso"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Përditëso të gjitha"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Përditësimi dështoi"
 
@@ -2719,11 +2724,11 @@ msgstr "U përditësua"
 msgid "Updated {field}"
 msgstr "U përditësua {field}"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Po përditësohen aplikacionet..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Duke përditësuar..."
 
@@ -2802,7 +2807,7 @@ msgstr "Shikuesi i videove: {0}"
 msgid "View all notifications"
 msgstr "Shiko të gjitha njoftimet"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Shiko dhe redakto detajet e artikullit"
 
@@ -2814,8 +2819,8 @@ msgstr "Kontrollet e pamjes"
 msgid "Voice recording is not supported in this browser"
 msgstr "Regjistrimi zanor nuk mbështetet në këtë shfletues"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Shiko"
 
@@ -2845,7 +2850,7 @@ msgstr "Nuk keni qasje në këtë seksion."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Llogaria juaj u zhvendos këtu nga {source}. Derisa ta fshini atje, mesazhet dhe njoftimet mund të arrijnë në të dy serverët, një pjesë e përmbajtjes suaj vazhdon të shërbejë nga serveri i vjetër dhe ndjekësit mund të kenë nevojë për disa minuta që t'ju gjejnë këtu."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Bashkëngjitjet tuaja do të humbasin."
 
@@ -2853,11 +2858,11 @@ msgstr "Bashkëngjitjet tuaja do të humbasin."
 msgid "Your preference"
 msgstr "Preferenca jote"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Teksti dhe bashkëngjitjet tuaja do të humbasin."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Teksti yt do të humbasë."
 

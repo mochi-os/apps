@@ -30,6 +30,11 @@ msgstr "(expandeix)"
 msgid "[not set]"
 msgstr "[no definit]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# resultat} other {# resultats}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# imbricat} other {+# imbricats}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {S'ha eliminat # versió no utilitzada} other {S'han eliminat # versions no utilitzades}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (desenvolupament)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} actualitzat, {failed} ha fallat"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} s'ha instal·lat."
 
@@ -145,7 +150,7 @@ msgstr "Nivell d'accés"
 msgid "Account type"
 msgstr "Tipus de compte"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Activitat"
 
@@ -208,7 +213,7 @@ msgstr "Afegeix una opció"
 msgid "Add tag..."
 msgstr "Afegeix una etiqueta..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Afegeix al directori"
 
@@ -231,7 +236,7 @@ msgstr "S'està afegint..."
 msgid "AI"
 msgstr "IA"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "Totes les aplicacions actualitzades"
 
@@ -269,13 +274,13 @@ msgstr "Qualsevol persona que hagi iniciat sessió"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Tot allò subscrit a aquest canal deixarà de rebre'l. Després en podreu copiar un URL nou."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Aplicació"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "Accions de l'aplicació"
 
@@ -283,11 +288,11 @@ msgstr "Accions de l'aplicació"
 msgid "App information"
 msgstr "Informació de l'aplicació"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "Aplicació instal·lada"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "Aplicació instal·lada correctament"
 
@@ -303,7 +308,7 @@ msgstr "ID de l'aplicació"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Aplicacions"
 
@@ -312,7 +317,7 @@ msgstr "Aplicacions"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Segur que vols suprimir «{0}»?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Segur que vols suprimir «{title}»? Aquesta acció no es pot desfer."
 
@@ -340,11 +345,11 @@ msgstr "Segur que vols rendir-te? {opponentName} guanyarà la partida."
 msgid "Ascending"
 msgstr "Ascendent"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Adjunta fitxers de comentari"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Adjunta fitxers de resposta"
 
@@ -370,7 +375,7 @@ msgstr "Versió disponible:"
 msgid "Available versions:"
 msgstr "Versions disponibles:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Disponible, però no instal·lada"
 
@@ -465,18 +470,18 @@ msgstr "Càmera no disponible"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Cancel·la el comentari"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Cancel·la la resposta"
 
@@ -538,12 +543,12 @@ msgstr "Encaminament de la classe"
 msgid "Classes"
 msgstr "Classes"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Neteja les versions sense usar"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Netejant..."
 
@@ -641,8 +646,8 @@ msgstr "Accions del comentari"
 msgid "Comments"
 msgstr "Comentaris"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Comentaris ({0})"
 
@@ -703,10 +708,10 @@ msgstr "Copiat al porta-retalls"
 msgid "Copy"
 msgstr "Copia"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "No s'ha pogut instal·lar l'aplicació."
 
@@ -838,7 +843,7 @@ msgstr "Track per defecte (versió {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Suprimeix"
@@ -863,9 +868,9 @@ msgstr "Suprimeix el camp"
 msgid "Delete game?"
 msgstr "Vols suprimir la partida?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Suprimeix l'element"
 
@@ -926,7 +931,7 @@ msgstr "Panell de detalls"
 msgid "Detect from web browser"
 msgstr "Detecta des del navegador"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Aplicacions de desenvolupament"
 
@@ -934,11 +939,11 @@ msgstr "Aplicacions de desenvolupament"
 msgid "Directory"
 msgstr "Directori"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Descarta"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Vols descartar l'esborrany?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "No coincideix amb el patró requerit"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Fet"
@@ -1052,7 +1057,7 @@ msgstr "Introduïu el codi de l'autenticador"
 msgid "Entity:"
 msgstr "Entitat:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Error"
 
@@ -1079,7 +1084,7 @@ msgstr "Extra gran"
 msgid "Failed to add account"
 msgstr "No s'ha pogut afegir el compte"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "No s'han pogut netejar les aplicacions"
 
@@ -1133,8 +1138,8 @@ msgstr "No s'ha pogut carregar l'historial"
 msgid "Failed to load image"
 msgstr "No s'ha pogut carregar la imatge"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "No s'ha pogut carregar l'element"
 
@@ -1174,7 +1179,7 @@ msgstr "No s'ha pogut desar"
 msgid "Failed to save prompt"
 msgstr "No s'ha pogut desar l'indicador"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "No s'han pogut actualitzar les aplicacions"
 
@@ -1207,7 +1212,7 @@ msgstr "No s'ha pogut actualitzar el seguiment"
 msgid "Failed to upload attachment"
 msgstr "No s'ha pogut pujar l'adjunt"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Fitxer:"
 
@@ -1251,7 +1256,7 @@ msgstr "Amics"
 msgid "From"
 msgstr "De"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "Des del directori"
 
@@ -1347,40 +1352,40 @@ msgstr "Avatar amb inicials de {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Instal·la"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "Instal·lar {0}?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Instal·la des d'un fitxer"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Instal·la des de l'editor"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Aplicacions instal·lades"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "S'està instal·lant..."
 
@@ -1400,7 +1405,7 @@ msgstr "Data no vàlida"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Sembla que la pàgina que cerqueu <0/>no existeix o s'ha eliminat."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Detalls de l'element"
 
@@ -1449,11 +1454,11 @@ msgstr "Carrega'n més"
 msgid "Loading content…"
 msgstr "S'està carregant el contingut…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "S'està carregant l'element"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "S'estan carregant els detalls de l'element"
 
@@ -1613,11 +1618,11 @@ msgstr "No s'han configurat regles d'accés. Afegeix regles per controlar qui po
 msgid "No activity yet"
 msgstr "Encara no hi ha activitat"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "No s'ha pogut actualitzar cap aplicació."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Cap aplicació instal·lada"
 
@@ -1629,11 +1634,11 @@ msgstr "Cap classe configurada."
 msgid "No comments yet"
 msgstr "Encara no hi ha comentaris"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Sense descripció"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Cap aplicació en desenvolupament coincideix amb «{searchQuery}»"
 
@@ -1645,11 +1650,11 @@ msgstr "Encara no hi ha jocs"
 msgid "No groups available"
 msgstr "No hi ha cap grup disponible"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Cap aplicació instal·lable del directori coincideix amb «{searchQuery}»"
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Cap aplicació instal·lada coincideix amb «{searchQuery}»"
 
@@ -1657,12 +1662,12 @@ msgstr "Cap aplicació instal·lada coincideix amb «{searchQuery}»"
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Encara no es pot crear cap tipus d'element. Crea primer els elements pare necessaris."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Cap coincidència al directori"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "No hi ha aplicacions coincidents"
 
@@ -1691,7 +1696,7 @@ msgstr "No s'ha concedit cap permís a aquesta aplicació"
 msgid "No places found"
 msgstr "No s'ha trobat cap lloc"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "No hi ha recomanacions disponibles"
 
@@ -1726,7 +1731,7 @@ msgstr "Encara no hi ha cap registre de tema; torna-ho a provar després de la p
 msgid "No unread notifications"
 msgstr "Sense notificacions no llegides"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "No hi ha versions sense ús per netejar"
 
@@ -1742,10 +1747,10 @@ msgstr "Sense visualitzacions"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Propietari"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Pare"
 
@@ -1872,7 +1877,7 @@ msgstr "Claus d'accés"
 msgid "Passkeys are not available in this browser"
 msgstr "Les claus d'accés no estan disponibles en aquest navegador"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Enganxa l'enllaç d'instal·lació:"
 
@@ -1916,7 +1921,7 @@ msgstr "Permisos"
 msgid "Please check your internet connection and try again."
 msgstr "Comproveu la connexió a Internet i torneu-ho a provar."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Introdueix un ID d'aplicació"
 
@@ -1962,7 +1967,7 @@ msgstr "S'està processant…"
 msgid "Prompt saved"
 msgstr "Sol·licitud desada"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Propietats"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Torna a registrar les teves claus d'accés en aquest servidor"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "Recomanat"
 
@@ -2196,11 +2201,11 @@ msgstr "Desant..."
 msgid "Search"
 msgstr "Cerca"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Cerca aplicacions"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Cerca aplicacions..."
 
@@ -2420,8 +2425,8 @@ msgstr "Espaiós"
 msgid "Start the discussion by adding the first comment."
 msgstr "Inicia la discussió afegint el primer comentari."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Deixa de seguir"
 
@@ -2429,11 +2434,11 @@ msgstr "Deixa de seguir"
 msgid "Subject"
 msgstr "Assumpte"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Envia comentari"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Envia resposta"
 
@@ -2505,7 +2510,7 @@ msgstr "No s'ha pogut enviar. Els fitxers poden ser massa grans o la connexió h
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Era massa gran per pujar. Elimineu o reduïu fitxers i torneu-ho a provar."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "L'aplicació s'ha instal·lat correctament."
 
@@ -2597,7 +2602,7 @@ msgstr "Massa sol·licituds"
 msgid "Top"
 msgstr "Amunt"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Pista"
@@ -2644,7 +2649,7 @@ msgstr "Escriu per cercar..."
 msgid "Unable to connect to remote server"
 msgstr "No s'ha pogut connectar amb el servidor remot"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "No s'ha pogut connectar amb el servei de recomanacions"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Sense assignar"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "No disponible"
 
@@ -2697,15 +2702,15 @@ msgstr "Cancel·la la subscripció"
 msgid "Untitled"
 msgstr "Sense títol"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Actualitza"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Actualitza-ho tot"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "L'actualització ha fallat"
 
@@ -2719,11 +2724,11 @@ msgstr "Actualitzat"
 msgid "Updated {field}"
 msgstr "S'ha actualitzat {field}"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "S'estan actualitzant les aplicacions..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Actualitzant..."
 
@@ -2802,7 +2807,7 @@ msgstr "Visor de vídeos: {0}"
 msgid "View all notifications"
 msgstr "Mostra totes les notificacions"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Visualitza i edita els detalls de l'element"
 
@@ -2814,8 +2819,8 @@ msgstr "Controls de visualització"
 msgid "Voice recording is not supported in this browser"
 msgstr "L'enregistrament de veu no és compatible amb aquest navegador"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Segueix"
 
@@ -2845,7 +2850,7 @@ msgstr "No teniu accés a aquesta secció."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "El vostre compte s'ha mogut aquí des de {source}. Fins que no l'elimineu d'allà, els missatges i les notificacions poden arribar als dos servidors, part del vostre contingut es continuarà servint des de l'antic servidor i els seguidors poden trigar uns minuts a trobar-vos aquí."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Es perdran els fitxers adjunts."
 
@@ -2853,11 +2858,11 @@ msgstr "Es perdran els fitxers adjunts."
 msgid "Your preference"
 msgstr "La teva preferència"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Es perdran el text i els fitxers adjunts."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "El text es perdrà."
 

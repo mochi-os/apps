@@ -30,6 +30,11 @@ msgstr "(разгарнуць)"
 msgid "[not set]"
 msgstr "[не зададзена]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# вынік} few {# вынікі} many {# вынікаў} other {# выніку}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# укладзены} few {+# укладзеныя} many {+# укладзеных} other {+# укладзенага}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {Выдалена # невыкарыстаная версія} few {Выдалены # невыкарыстаныя версіі} many {Выдалена # невыкарыстаных версій} other {Выдалена # невыкарыстанай версіі}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (распрацоўка)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} абноўлена, {failed} не атрымалася"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} усталявана."
 
@@ -145,7 +150,7 @@ msgstr "Узровень доступу"
 msgid "Account type"
 msgstr "Тып уліковага запісу"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Актыўнасць"
 
@@ -208,7 +213,7 @@ msgstr "Дадаць опцыю"
 msgid "Add tag..."
 msgstr "Дадаць тэг..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Дадаць у каталог"
 
@@ -231,7 +236,7 @@ msgstr "Даданне..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "Усе дадаткі абноўлены"
 
@@ -269,13 +274,13 @@ msgstr "Кожны, хто ўвайшоў"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Усё, што падпісана на гэтую стужку, перастане яе атрымліваць. Пасля вы можаце скапіяваць новы URL."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Дадатак"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "Дзеянні дадатку"
 
@@ -283,11 +288,11 @@ msgstr "Дзеянні дадатку"
 msgid "App information"
 msgstr "Інфармацыя пра дадатак"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "Дадатак усталяваны"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "Праграма паспяхова ўсталявана"
 
@@ -303,7 +308,7 @@ msgstr "ID прыкладання"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Дадаткі"
 
@@ -312,7 +317,7 @@ msgstr "Дадаткі"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Вы ўпэўнены, што хочаце выдаліць \"{0}\"?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Вы ўпэўнены, што хочаце выдаліць \"{title}\"? Гэтае дзеянне нельга адмяніць."
 
@@ -340,11 +345,11 @@ msgstr "Вы ўпэўнены, што хочаце здацца? {opponentName} 
 msgid "Ascending"
 msgstr "Па ўзрастанні"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Прымацаваць файлы каментарыя"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Прымацаваць файлы адказу"
 
@@ -370,7 +375,7 @@ msgstr "Даступная версія:"
 msgid "Available versions:"
 msgstr "Даступныя версіі:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Даступны, але не ўсталяваны"
 
@@ -465,18 +470,18 @@ msgstr "Камера недаступная"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Адмена"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Адмяніць каментарый"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Адмяніць адказ"
 
@@ -538,12 +543,12 @@ msgstr "Маршрутызацыя класа"
 msgid "Classes"
 msgstr "Класы"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Ачысціць невыкарыстаныя версіі"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Ачыстка..."
 
@@ -641,8 +646,8 @@ msgstr "Дзеянні з каментарыем"
 msgid "Comments"
 msgstr "Каментарыі"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Каментарыі ({0})"
 
@@ -703,10 +708,10 @@ msgstr "Скапіравана ў буфер абмену"
 msgid "Copy"
 msgstr "Капіраваць"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "Не ўдалося ўсталяваць праграму."
 
@@ -838,7 +843,7 @@ msgstr "Трэк па змаўчанні (версія {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Выдаліць"
@@ -863,9 +868,9 @@ msgstr "Выдаліць поле"
 msgid "Delete game?"
 msgstr "Выдаліць гульню?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Выдаліць элемент"
 
@@ -926,7 +931,7 @@ msgstr "Панэль дэталяў"
 msgid "Detect from web browser"
 msgstr "Вызначыць з вэб-браўзера"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Дадаткі распрацоўкі"
 
@@ -934,11 +939,11 @@ msgstr "Дадаткі распрацоўкі"
 msgid "Directory"
 msgstr "Каталог"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Адхіліць"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Адхіліць чарнавік?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Не адпавядае патрэбнаму шаблону"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Гатова"
@@ -1052,7 +1057,7 @@ msgstr "Увядзіце код з праграмы-аўтэнтыфікатар
 msgid "Entity:"
 msgstr "Сутнасць:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Памылка"
 
@@ -1079,7 +1084,7 @@ msgstr "Вельмі вялікі"
 msgid "Failed to add account"
 msgstr "Не ўдалося дадаць акаўнт"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "Не ўдалося ачысціць праграмы"
 
@@ -1133,8 +1138,8 @@ msgstr "Не ўдалося загрузіць гісторыю"
 msgid "Failed to load image"
 msgstr "Не ўдалося загрузіць відарыс"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Не ўдалося загрузіць элемент"
 
@@ -1174,7 +1179,7 @@ msgstr "Не ўдалося захаваць"
 msgid "Failed to save prompt"
 msgstr "Не ўдалося захаваць запыт"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "Не ўдалося абнавіць праграмы"
 
@@ -1207,7 +1212,7 @@ msgstr "Не ўдалося абнавіць адсочванне"
 msgid "Failed to upload attachment"
 msgstr "Не ўдалося загрузіць укладанне"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Файл:"
 
@@ -1251,7 +1256,7 @@ msgstr "Сябры"
 msgid "From"
 msgstr "Ад"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "З каталога"
 
@@ -1347,40 +1352,40 @@ msgstr "Аватар з ініцыялаў для {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Усталяваць"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "Усталяваць {0}?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Усталяваць з файла"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Усталяваць ад выдаўца"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Усталяваныя прыкладанні"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "Усталёўка..."
 
@@ -1400,7 +1405,7 @@ msgstr "Няправільная дата"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Здаецца, старонка, якую вы шукаеце, <0/>не існуе або была выдалена."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Дэталі элемента"
 
@@ -1449,11 +1454,11 @@ msgstr "Загрузіць больш"
 msgid "Loading content…"
 msgstr "Загрузка змесціва…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Загрузка элемента"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Загрузка дэталяў элемента"
 
@@ -1613,11 +1618,11 @@ msgstr "Правілы доступу не настроены. Дадайце п
 msgid "No activity yet"
 msgstr "Пакуль няма актыўнасці"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "Не ўдалося абнавіць ніводнага прыкладання."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Прыкладанні не ўсталяваны"
 
@@ -1629,11 +1634,11 @@ msgstr "Класы не настроены."
 msgid "No comments yet"
 msgstr "Пакуль няма каментароў"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Без апісання"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Прыкладанні ў распрацоўцы, што адпавядаюць \"{searchQuery}\", не знойдзены"
 
@@ -1645,11 +1650,11 @@ msgstr "Пакуль няма гульняў"
 msgid "No groups available"
 msgstr "Групы недаступны"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Прыкладанні з каталога, што адпавядаюць \"{searchQuery}\", не знойдзены"
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Усталяваныя прыкладанні, што адпавядаюць \"{searchQuery}\", не знойдзены"
 
@@ -1657,12 +1662,12 @@ msgstr "Усталяваныя прыкладанні, што адпавядаю
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Пакуль нельга стварыць тыпы элементаў. Спачатку стварыце патрэбныя бацькоўскія элементы."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "У каталозе нічога не знойдзена"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Адпаведных прыкладанняў няма"
 
@@ -1691,7 +1696,7 @@ msgstr "Гэтаму прыкладанню дазволы не нададзен
 msgid "No places found"
 msgstr "Месцы не знойдзены"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Рэкамендацыі недаступны"
 
@@ -1726,7 +1731,7 @@ msgstr "Запісу тэмы яшчэ няма — паспрабуйце па�
 msgid "No unread notifications"
 msgstr "Непрачытаных апавяшчэнняў няма"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Няма невыкарыстаных версій для ачысткі"
 
@@ -1742,10 +1747,10 @@ msgstr "Праглядаў няма"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Уладальнік"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Бацькоўскі"
 
@@ -1872,7 +1877,7 @@ msgstr "Ключы доступу"
 msgid "Passkeys are not available in this browser"
 msgstr "Passkeys недаступныя ў гэтым браўзеры"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Устаўце спасылку для ўсталявання:"
 
@@ -1916,7 +1921,7 @@ msgstr "Дазволы"
 msgid "Please check your internet connection and try again."
 msgstr "Праверце падключэнне да інтэрнэту і паспрабуйце зноў."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Увядзіце ID прыкладання"
 
@@ -1962,7 +1967,7 @@ msgstr "Апрацоўка…"
 msgid "Prompt saved"
 msgstr "Падказка захавана"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Уласцівасці"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Зарэгіструйце ключы доступу на гэтым серверы зноў"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "Рэкамендуецца"
 
@@ -2196,11 +2201,11 @@ msgstr "Захаванне..."
 msgid "Search"
 msgstr "Пошук"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Пошук прыкладанняў"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Пошук прыкладанняў..."
 
@@ -2420,8 +2425,8 @@ msgstr "Прасторны"
 msgid "Start the discussion by adding the first comment."
 msgstr "Пачніце абмеркаванне, дадаўшы першы каментарый."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Спыніць сачэнне"
 
@@ -2429,11 +2434,11 @@ msgstr "Спыніць сачэнне"
 msgid "Subject"
 msgstr "Тэма"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Адправіць каментарый"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Адправіць адказ"
 
@@ -2505,7 +2510,7 @@ msgstr "Не ўдалося адправіць. Магчыма, файлы за�
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Занадта вялікі памер для запампоўкі. Выдаліце або паменшыце файлы і паўтарыце спробу."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "Праграма паспяхова ўсталявана."
 
@@ -2597,7 +2602,7 @@ msgstr "Занадта шмат запытаў"
 msgid "Top"
 msgstr "Верх"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
@@ -2644,7 +2649,7 @@ msgstr "Увядзіце для пошуку..."
 msgid "Unable to connect to remote server"
 msgstr "Не ўдалося падключыцца да выдаленага сервера"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "Не ўдалося падключыцца да сэрвісу рэкамендацый"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Не прызначана"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "Недаступна"
 
@@ -2697,15 +2702,15 @@ msgstr "Адпісацца"
 msgid "Untitled"
 msgstr "Без назвы"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Абнавіць"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Абнавіць усё"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Абнаўленне не атрымалася"
 
@@ -2719,11 +2724,11 @@ msgstr "Абноўлена"
 msgid "Updated {field}"
 msgstr "Абноўлена {field}"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Абнаўленне праграм..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Абнаўленне..."
 
@@ -2802,7 +2807,7 @@ msgstr "Прагляд відэа: {0}"
 msgid "View all notifications"
 msgstr "Паглядзець усе апавяшчэнні"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Паглядзіце і адрэдагуйце дэталі элемента"
 
@@ -2814,8 +2819,8 @@ msgstr "Элементы кіравання выглядам"
 msgid "Voice recording is not supported in this browser"
 msgstr "Запіс голасу не падтрымліваецца ў гэтым браўзеры"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Сачыць"
 
@@ -2845,7 +2850,7 @@ msgstr "У вас няма доступу да гэтага раздзела."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ваш акаўнт быў перанесены сюды з {source}. Пакуль вы не выдаліце яго там, паведамленні і апавяшчэнні могуць паступаць на абодва серверы, частка вашага кантэнту па-ранейшаму будзе аддавацца са старога сервера, а падпісчыкам можа спатрэбіцца некалькі хвілін, каб знайсці вас тут."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Вашы ўкладанні будуць страчаны."
 
@@ -2853,11 +2858,11 @@ msgstr "Вашы ўкладанні будуць страчаны."
 msgid "Your preference"
 msgstr "Ваша перавага"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Ваш тэкст і ўкладанні будуць страчаны."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Ваш тэкст будзе страчаны."
 

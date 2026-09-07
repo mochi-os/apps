@@ -30,6 +30,11 @@ msgstr "(विस्तार करा)"
 msgid "[not set]"
 msgstr "[सेट नाही]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# निकाल} other {# निकाल}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# अंतर्भूत} other {+# अंतर्भूत}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# न वापरलेली आवृत्ती काढली} other {# न वापरलेल्या आवृत्त्या काढल्या}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (विकास)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} अद्यतनित, {failed} अयशस्वी"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} स्थापित केले आहे."
 
@@ -145,7 +150,7 @@ msgstr "प्रवेश स्तर"
 msgid "Account type"
 msgstr "खाते प्रकार"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "क्रियाकलाप"
 
@@ -208,7 +213,7 @@ msgstr "पर्याय जोडा"
 msgid "Add tag..."
 msgstr "टॅग जोडा..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "निर्देशिकेत जोडा"
 
@@ -231,7 +236,7 @@ msgstr "जोडत आहे..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "सर्व अॅप्स अद्ययावत केले"
 
@@ -269,13 +274,13 @@ msgstr "लॉग इन असलेले कोणीही"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "या फीडची सदस्यता घेतलेले सर्व काही ते मिळणे थांबवेल. नंतर तुम्ही नवीन URL कॉपी करू शकता."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "अॅप"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "अॅप क्रिया"
 
@@ -283,11 +288,11 @@ msgstr "अॅप क्रिया"
 msgid "App information"
 msgstr "अॅप माहिती"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "अॅप इंस्टॉल केले"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "ॲप यशस्वीरीत्या इंस्टॉल झाले"
 
@@ -303,7 +308,7 @@ msgstr "अॅप्लिकेशन ID"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "अॅप्स"
 
@@ -312,7 +317,7 @@ msgstr "अॅप्स"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "तुम्हाला खरोखरच \"{0}\" हटवायचे आहे का?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "तुम्हाला खरोखरच \"{title}\" हटवायचे आहे का? ही क्रिया परत करता येणार नाही."
 
@@ -340,11 +345,11 @@ msgstr "तुम्हाला खरंच राजीनामा द्य
 msgid "Ascending"
 msgstr "चढत्या क्रमाने"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "टिप्पणी फाइल्स संलग्न करा"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "उत्तर फाइल्स संलग्न करा"
 
@@ -370,7 +375,7 @@ msgstr "उपलब्ध आवृत्ती:"
 msgid "Available versions:"
 msgstr "उपलब्ध आवृत्त्या:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "उपलब्ध आहे, पण इंस्टॉल केले नाही"
 
@@ -465,18 +470,18 @@ msgstr "कॅमेरा उपलब्ध नाही"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "रद्द करा"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "टिप्पणी रद्द करा"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "उत्तर रद्द करा"
 
@@ -538,12 +543,12 @@ msgstr "वर्ग राउटिंग"
 msgid "Classes"
 msgstr "वर्ग"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "न वापरलेल्या आवृत्त्या साफ करा"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "साफ करत आहे..."
 
@@ -641,8 +646,8 @@ msgstr "टिप्पणी क्रिया"
 msgid "Comments"
 msgstr "टिप्पण्या"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "टिप्पण्या ({0})"
 
@@ -703,10 +708,10 @@ msgstr "क्लिपबोर्डवर कॉपी केले"
 msgid "Copy"
 msgstr "कॉपी करा"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "अॅप इन्स्टॉल करता आला नाही."
 
@@ -838,7 +843,7 @@ msgstr "डीफॉल्ट ट्रॅक (आवृत्ती {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "हटवा"
@@ -863,9 +868,9 @@ msgstr "फील्ड हटवा"
 msgid "Delete game?"
 msgstr "गेम हटवायचा?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "आयटम हटवा"
 
@@ -926,7 +931,7 @@ msgstr "तपशील पॅनेल"
 msgid "Detect from web browser"
 msgstr "वेब ब्राउझरमधून शोधा"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "डेव्हलपमेंट अॅप्स"
 
@@ -934,11 +939,11 @@ msgstr "डेव्हलपमेंट अॅप्स"
 msgid "Directory"
 msgstr "निर्देशिका"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "टाकून द्या"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "मसुदा टाकून द्यायचा?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "आवश्यक नमुन्याशी जुळत नाही"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "पूर्ण"
@@ -1052,7 +1057,7 @@ msgstr "तुमचा ऑथेंटिकेटर कोड टाका"
 msgid "Entity:"
 msgstr "एंटिटी:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "त्रुटी"
 
@@ -1079,7 +1084,7 @@ msgstr "अतिरिक्त मोठे"
 msgid "Failed to add account"
 msgstr "खाते जोडण्यात अयशस्वी"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "ॲप्स साफ करण्यात अयशस्वी"
 
@@ -1133,8 +1138,8 @@ msgstr "इतिहास लोड करण्यात अयशस्वी
 msgid "Failed to load image"
 msgstr "प्रतिमा लोड करण्यात अयशस्वी"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "आयटम लोड करण्यात अयशस्वी"
 
@@ -1174,7 +1179,7 @@ msgstr "सेव्ह करण्यात अयशस्वी"
 msgid "Failed to save prompt"
 msgstr "प्रॉम्प्ट सेव्ह करण्यात अयशस्वी"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "ॲप्स अपडेट करण्यात अयशस्वी"
 
@@ -1207,7 +1212,7 @@ msgstr "निरीक्षण अद्ययावत करण्यात 
 msgid "Failed to upload attachment"
 msgstr "अटॅचमेंट अपलोड करण्यात अयशस्वी"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "फाइल:"
 
@@ -1251,7 +1256,7 @@ msgstr "मित्र"
 msgid "From"
 msgstr "पासून"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "डिरेक्टरीमधून"
 
@@ -1347,40 +1352,40 @@ msgstr "{name} साठी आद्याक्षर अवतार"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "इन्स्टॉल करा"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "{0} स्थापित करायचे?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "फाइलमधून इन्स्टॉल करा"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "प्रकाशकाकडून इन्स्टॉल करा"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "इन्स्टॉल केलेले अ‍ॅप्स"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "इन्स्टॉल करत आहे..."
 
@@ -1400,7 +1405,7 @@ msgstr "अवैध तारीख"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "असे दिसते की तुम्ही शोधत असलेले पृष्ठ <0/>अस्तित्वात नाही किंवा काढून टाकले गेले आहे."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "आयटम तपशील"
 
@@ -1449,11 +1454,11 @@ msgstr "अधिक लोड करा"
 msgid "Loading content…"
 msgstr "सामग्री लोड होत आहे…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "आयटम लोड करत आहे"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "आयटम तपशील लोड करत आहे"
 
@@ -1613,11 +1618,11 @@ msgstr "कोणतेही प्रवेश नियम कॉन्फि
 msgid "No activity yet"
 msgstr "अद्याप कोणतीही अॅक्टिव्हिटी नाही"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "कोणतेही अॅप्स अद्यतनित करता आले नाहीत."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "कोणतेही अॅप्स इन्स्टॉल केलेले नाहीत"
 
@@ -1629,11 +1634,11 @@ msgstr "कोणतेही वर्ग कॉन्फिगर केले
 msgid "No comments yet"
 msgstr "अद्याप कमेंट्स नाहीत"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "वर्णन नाही"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" शी जुळणारे विकास अॅप्स नाहीत"
 
@@ -1645,11 +1650,11 @@ msgstr "अद्याप गेम्स नाहीत"
 msgid "No groups available"
 msgstr "गट उपलब्ध नाहीत"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "निर्देशिकेत \"{searchQuery}\" शी जुळणारे स्थापित करण्यायोग्य अॅप्स नाहीत"
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" शी जुळणारे स्थापित अॅप्स नाहीत"
 
@@ -1657,12 +1662,12 @@ msgstr "\"{searchQuery}\" शी जुळणारे स्थापित अ
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "अद्याप कोणतेही आयटम प्रकार तयार करता येणार नाहीत. आधी आवश्यक पॅरेंट आयटम्स तयार करा."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "डिरेक्टरीमध्ये जुळणारे काही नाही"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "जुळणारे अॅप्स नाहीत"
 
@@ -1691,7 +1696,7 @@ msgstr "या अॅपला कोणत्याही परवानग्
 msgid "No places found"
 msgstr "ठिकाणे सापडली नाहीत"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "शिफारशी उपलब्ध नाहीत"
 
@@ -1726,7 +1731,7 @@ msgstr "अद्याप टॉपिक रेकॉर्ड नाही �
 msgid "No unread notifications"
 msgstr "न वाचलेले नोटिफिकेशन्स नाहीत"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "क्लीन अप करण्यासाठी न वापरलेल्या आवृत्त्या नाहीत"
 
@@ -1742,10 +1747,10 @@ msgstr "व्ह्यूज नाहीत"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "मालक"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "पॅरेंट"
 
@@ -1872,7 +1877,7 @@ msgstr "पासकीज"
 msgid "Passkeys are not available in this browser"
 msgstr "या ब्राउझरमध्ये पासकीज उपलब्ध नाहीत"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "इंस्टॉल लिंक पेस्ट करा:"
 
@@ -1916,7 +1921,7 @@ msgstr "परवानग्या"
 msgid "Please check your internet connection and try again."
 msgstr "कृपया तुमचे इंटरनेट कनेक्शन तपासा आणि पुन्हा प्रयत्न करा."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "कृपया अॅप ID प्रविष्ट करा"
 
@@ -1962,7 +1967,7 @@ msgstr "प्रक्रिया करत आहे…"
 msgid "Prompt saved"
 msgstr "प्रॉम्प्ट जतन केला"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "गुणधर्म"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "या सर्व्हरवर तुमच्या पासकी पुन्हा नोंदवा"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "शिफारस केलेले"
 
@@ -2196,11 +2201,11 @@ msgstr "जतन करत आहे..."
 msgid "Search"
 msgstr "शोधा"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "अॅप्स शोधा"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "अॅप्स शोधा..."
 
@@ -2420,8 +2425,8 @@ msgstr "विस्तृत"
 msgid "Start the discussion by adding the first comment."
 msgstr "पहिली टिप्पणी जोडून चर्चा सुरू करा."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "पाहणे थांबवा"
 
@@ -2429,11 +2434,11 @@ msgstr "पाहणे थांबवा"
 msgid "Subject"
 msgstr "विषय"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "टिप्पणी सादर करा"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "उत्तर सादर करा"
 
@@ -2505,7 +2510,7 @@ msgstr "पाठवता आले नाही. फाइली खूप म
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "अपलोड करण्यासाठी खूप मोठे होते. फाइली काढा किंवा लहान करा आणि पुन्हा प्रयत्न करा."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "अॅप यशस्वीरित्या इन्स्टॉल झाले आहे."
 
@@ -2597,7 +2602,7 @@ msgstr "खूप जास्त विनंत्या"
 msgid "Top"
 msgstr "वर"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "ट्रॅक"
@@ -2644,7 +2649,7 @@ msgstr "शोधण्यासाठी टाइप करा..."
 msgid "Unable to connect to remote server"
 msgstr "दूरस्थ सर्व्हरशी कनेक्ट होऊ शकले नाही"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "शिफारशी सेवेशी कनेक्ट करण्यात अक्षम"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "नियुक्त न केलेले"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "अनुपलब्ध"
 
@@ -2697,15 +2702,15 @@ msgstr "अनसबस्क्राइब करा"
 msgid "Untitled"
 msgstr "शीर्षकविरहित"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "अपडेट"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "सर्व अपडेट करा"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "अपडेट अयशस्वी"
 
@@ -2719,11 +2724,11 @@ msgstr "अपडेट केले"
 msgid "Updated {field}"
 msgstr "{field} अद्ययावत केले"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "ॲप्स अपडेट करत आहे..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "अपडेट करत आहे..."
 
@@ -2802,7 +2807,7 @@ msgstr "व्हिडिओ दर्शक: {0}"
 msgid "View all notifications"
 msgstr "सर्व सूचना पहा"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "आयटम तपशील पहा आणि संपादित करा"
 
@@ -2814,8 +2819,8 @@ msgstr "नियंत्रणे पहा"
 msgid "Voice recording is not supported in this browser"
 msgstr "या ब्राउझरमध्ये व्हॉइस रेकॉर्डिंग समर्थित नाही"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "पहा"
 
@@ -2845,7 +2850,7 @@ msgstr "तुम्हाला या विभागात प्रवेश
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "तुमचे खाते {source} वरून येथे हलवले गेले. जोपर्यंत तुम्ही ते तेथे हटवत नाही, तोपर्यंत संदेश आणि सूचना दोन्ही सर्व्हरपर्यंत पोहोचू शकतात, तुमचा काही मजकूर जुन्या सर्व्हरवरून सर्व्ह होत राहतो आणि अनुयायांना येथे तुम्हाला शोधण्यास काही मिनिटे लागू शकतात."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "तुमची संलग्नके गमावली जातील."
 
@@ -2853,11 +2858,11 @@ msgstr "तुमची संलग्नके गमावली जाती
 msgid "Your preference"
 msgstr "तुमची पसंती"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "तुमचा मजकूर आणि संलग्नके गमावली जातील."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "तुमचा मजकूर हरवेल."
 

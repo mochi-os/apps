@@ -30,6 +30,11 @@ msgstr "(útvíkka)"
 msgid "[not set]"
 msgstr "[ekki stillt]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# niðurstaða} other {# niðurstöður}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# undirliður} other {+# undirliðir}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# ónotuð útgáfa fjarlægð} other {# ónotaðar útgáfur fjarlægðar}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (þróun)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} uppfærðar, {failed} mistókust"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} hefur verið sett upp."
 
@@ -145,7 +150,7 @@ msgstr "Aðgangsstig"
 msgid "Account type"
 msgstr "Tegund reiknings"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Virkni"
 
@@ -208,7 +213,7 @@ msgstr "Bæta við valkosti"
 msgid "Add tag..."
 msgstr "Bæta við merki..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Bæta í skrá"
 
@@ -231,7 +236,7 @@ msgstr "Bæti við..."
 msgid "AI"
 msgstr "Gervigreind"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "Öll forrit uppfærð"
 
@@ -269,13 +274,13 @@ msgstr "Allir sem eru skráðir inn"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Allt sem er áskrifandi að þessari veitu hættir að fá hana. Þú getur afritað nýja vefslóð á eftir."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Forrit"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "Forritsaðgerðir"
 
@@ -283,11 +288,11 @@ msgstr "Forritsaðgerðir"
 msgid "App information"
 msgstr "Forritsupplýsingar"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "Forrit uppsett"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "Forrit sett upp"
 
@@ -303,7 +308,7 @@ msgstr "Forritaauðkenni"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Forrit"
 
@@ -312,7 +317,7 @@ msgstr "Forrit"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Ertu viss um að þú viljir eyða „{0}“?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Ertu viss um að þú viljir eyða „{title}“? Þessari aðgerð er ekki hægt að afturkalla."
 
@@ -340,11 +345,11 @@ msgstr "Ertu viss um að þú viljir gefast upp? {opponentName} mun vinna leikin
 msgid "Ascending"
 msgstr "Hækkandi"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Hengja við skrár í athugasemd"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Hengja við skrár í svari"
 
@@ -370,7 +375,7 @@ msgstr "Tiltæk útgáfa:"
 msgid "Available versions:"
 msgstr "Tiltækar útgáfur:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Tiltækt, en ekki uppsett"
 
@@ -465,18 +470,18 @@ msgstr "Myndavél ekki tiltæk"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Hætta við"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Hætta við athugasemd"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Hætta við svar"
 
@@ -538,12 +543,12 @@ msgstr "Flokkaleiðing"
 msgid "Classes"
 msgstr "Flokkar"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Hreinsa upp ónotaðar útgáfur"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Hreinsa..."
 
@@ -641,8 +646,8 @@ msgstr "Aðgerðir athugasemdar"
 msgid "Comments"
 msgstr "Athugasemdir"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Athugasemdir ({0})"
 
@@ -703,10 +708,10 @@ msgstr "Afritað á klippiborðið"
 msgid "Copy"
 msgstr "Afrita"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "Ekki tókst að setja forritið upp."
 
@@ -838,7 +843,7 @@ msgstr "Sjálfgefin rás (útgáfa {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Eyða"
@@ -863,9 +868,9 @@ msgstr "Eyða sviði"
 msgid "Delete game?"
 msgstr "Eyða leiknum?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Eyða atriði"
 
@@ -926,7 +931,7 @@ msgstr "Smáatriðaspjald"
 msgid "Detect from web browser"
 msgstr "Greina út frá vafra"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Þróunarforrit"
 
@@ -934,11 +939,11 @@ msgstr "Þróunarforrit"
 msgid "Directory"
 msgstr "Skrá"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Henda"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Henda drögum?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Samsvarar ekki tilskildu mynstri"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Lokið"
@@ -1052,7 +1057,7 @@ msgstr "Sláðu inn auðkenniskóðann þinn"
 msgid "Entity:"
 msgstr "Eining:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Villa"
 
@@ -1079,7 +1084,7 @@ msgstr "Mjög stórt"
 msgid "Failed to add account"
 msgstr "Tókst ekki að bæta við reikningi"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "Tókst ekki að hreinsa forrit"
 
@@ -1133,8 +1138,8 @@ msgstr "Tókst ekki að hlaða sögu"
 msgid "Failed to load image"
 msgstr "Ekki tókst að hlaða mynd"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Tókst ekki að hlaða atriði"
 
@@ -1174,7 +1179,7 @@ msgstr "Tókst ekki að vista"
 msgid "Failed to save prompt"
 msgstr "Tókst ekki að vista kvaðningu"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "Tókst ekki að uppfæra forrit"
 
@@ -1207,7 +1212,7 @@ msgstr "Ekki tókst að uppfæra vöktun"
 msgid "Failed to upload attachment"
 msgstr "Tókst ekki að hlaða upp viðhengi"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Skrá:"
 
@@ -1251,7 +1256,7 @@ msgstr "Vinir"
 msgid "From"
 msgstr "Frá"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "Úr möppunni"
 
@@ -1347,40 +1352,40 @@ msgstr "Upphafsstafaauðkenni fyrir {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Setja upp"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "Setja upp {0}?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Setja upp úr skrá"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Setja upp frá útgefanda"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Uppsett forrit"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "Set upp..."
 
@@ -1400,7 +1405,7 @@ msgstr "Ógild dagsetning"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Svo virðist sem síðan sem þú leitar að <0/>sé ekki til eða hafi verið fjarlægð."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Upplýsingar um atriði"
 
@@ -1449,11 +1454,11 @@ msgstr "Hlaða meiru"
 msgid "Loading content…"
 msgstr "Hleð inn efni…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Hleð atriði"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Hleð upplýsingum um atriði"
 
@@ -1613,11 +1618,11 @@ msgstr "Engar aðgangsreglur stilltar. Bættu við reglum til að stjórna því
 msgid "No activity yet"
 msgstr "Engin virkni ennþá"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "Ekki var hægt að uppfæra nein forrit."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Engin forrit uppsett"
 
@@ -1629,11 +1634,11 @@ msgstr "Engir flokkar stilltir."
 msgid "No comments yet"
 msgstr "Engar athugasemdir ennþá"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Engin lýsing"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Engin þróunarforrit passa við \"{searchQuery}\""
 
@@ -1645,11 +1650,11 @@ msgstr "Engir leikir ennþá"
 msgid "No groups available"
 msgstr "Engir hópar tiltækir"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Engin uppsetjanleg forrit í möppunni passa við \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Engin uppsett forrit passa við \"{searchQuery}\""
 
@@ -1657,12 +1662,12 @@ msgstr "Engin uppsett forrit passa við \"{searchQuery}\""
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Ekki er enn hægt að búa til neinar tegundir atriða. Búðu fyrst til nauðsynleg foreldraatriði."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Engar samsvaranir í skrá"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Engin samsvarandi forrit"
 
@@ -1691,7 +1696,7 @@ msgstr "Engar heimildir veittar þessu forriti"
 msgid "No places found"
 msgstr "Engir staðir fundust"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Engar tillögur tiltækar"
 
@@ -1726,7 +1731,7 @@ msgstr "Engin færsla um efni ennþá — reyndu aftur eftir næstu tilkynningu.
 msgid "No unread notifications"
 msgstr "Engar ólesnar tilkynningar"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Engar ónotaðar útgáfur til að hreinsa"
 
@@ -1742,10 +1747,10 @@ msgstr "Engar skoðanir"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Eigandi"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Foreldri"
 
@@ -1872,7 +1877,7 @@ msgstr "Aðgangslyklar"
 msgid "Passkeys are not available in this browser"
 msgstr "Aðgangslyklar eru ekki tiltækir í þessum vafra"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Límdu uppsetningartengilinn:"
 
@@ -1916,7 +1921,7 @@ msgstr "Leyfi"
 msgid "Please check your internet connection and try again."
 msgstr "Athugaðu nettenginguna og reyndu aftur."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Sláðu inn auðkenni forrits"
 
@@ -1962,7 +1967,7 @@ msgstr "Í vinnslu…"
 msgid "Prompt saved"
 msgstr "Hvati vistaður"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Eiginleikar"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Skráðu aðgangslyklana þína aftur á þessum netþjóni"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "Mælt með"
 
@@ -2196,11 +2201,11 @@ msgstr "Vista..."
 msgid "Search"
 msgstr "Leita"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Leita að forritum"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Leita að forritum..."
 
@@ -2420,8 +2425,8 @@ msgstr "Rúmgott"
 msgid "Start the discussion by adding the first comment."
 msgstr "Hefjaðu umræðuna með því að bæta við fyrstu athugasemdinni."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Hætta að fylgjast með"
 
@@ -2429,11 +2434,11 @@ msgstr "Hætta að fylgjast með"
 msgid "Subject"
 msgstr "Efni"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Senda athugasemd"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Senda svar"
 
@@ -2505,7 +2510,7 @@ msgstr "Ekki tókst að senda. Skrárnar gætu verið of stórar eða tengingin 
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Það var of stórt til að hlaða upp. Fjarlægðu eða minnkaðu skrár og reyndu aftur."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "Forritið hefur verið uppsett með góðum árangri."
 
@@ -2597,7 +2602,7 @@ msgstr "Of margar beiðnir"
 msgid "Top"
 msgstr "Efst"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Rás"
@@ -2644,7 +2649,7 @@ msgstr "Skrifaðu til að leita..."
 msgid "Unable to connect to remote server"
 msgstr "Ekki tókst að tengjast fjarþjóni"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "Ekki tókst að tengjast við ráðleggingaþjónustuna"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Ekki úthlutað"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "Ekki tiltækt"
 
@@ -2697,15 +2702,15 @@ msgstr "Afskrá áskrift"
 msgid "Untitled"
 msgstr "Án titils"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Uppfæra"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Uppfæra allt"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Uppfærsla mistókst"
 
@@ -2719,11 +2724,11 @@ msgstr "Uppfært"
 msgid "Updated {field}"
 msgstr "Uppfærði {field}"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Uppfæri forrit..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Uppfæri..."
 
@@ -2802,7 +2807,7 @@ msgstr "Myndskeiðaskoðari: {0}"
 msgid "View all notifications"
 msgstr "Skoða allar tilkynningar"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Skoða og breyta upplýsingum hlutarins"
 
@@ -2814,8 +2819,8 @@ msgstr "Skoða stjórntæki"
 msgid "Voice recording is not supported in this browser"
 msgstr "Talupptaka er ekki studd í þessum vafra"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Fylgjast með"
 
@@ -2845,7 +2850,7 @@ msgstr "Þú hefur ekki aðgang að þessum hluta."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Reikningurinn þinn var fluttur hingað frá {source}. Þar til þú eyðir honum þar, geta skilaboð og tilkynningar náð til beggja þjóna, hluti af efni þínu heldur áfram að vera þjónað af gamla þjóninum og fylgjendur gætu þurft nokkrar mínútur að finna þig hér."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Viðhengin þín glatast."
 
@@ -2853,11 +2858,11 @@ msgstr "Viðhengin þín glatast."
 msgid "Your preference"
 msgstr "Stilling þín"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Textinn þinn og viðhengin glatast."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Textinn þinn tapast."
 

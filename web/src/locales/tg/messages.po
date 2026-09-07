@@ -30,6 +30,11 @@ msgstr "(васеъ кардан)"
 msgid "[not set]"
 msgstr "[таъин нашудааст]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# натиҷа} other {# натиҷа}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# дохилӣ} other {+# дохилӣ}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# нусхаи истифоданашуда нест карда шуд} other {# нусхаи истифоданашуда нест карда шуд}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (рушд)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} навсозӣ шуд, {failed} ноком шуд"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} насб карда шуд."
 
@@ -145,7 +150,7 @@ msgstr "Сатҳи дастрасӣ"
 msgid "Account type"
 msgstr "Намуди ҳисоб"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Фаъолият"
 
@@ -208,7 +213,7 @@ msgstr "Иловаи имкон"
 msgid "Add tag..."
 msgstr "Иловаи барчасп..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Иловаи ба директория"
 
@@ -231,7 +236,7 @@ msgstr "Илова шуда истодааст..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "Ҳама барномаҳо навсозӣ карда шуданд"
 
@@ -269,13 +274,13 @@ msgstr "Ҳар касе ки ворид шудааст"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Ҳама чизе, ки ба ин ҷараён обуна шудааст, гирифтани онро қатъ мекунад. Пас аз он шумо метавонед URL-и навро нусха бардоред."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Барнома"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "Амалҳои барнома"
 
@@ -283,11 +288,11 @@ msgstr "Амалҳои барнома"
 msgid "App information"
 msgstr "Маълумоти барнома"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "Барнома насб шуд"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "Барнома бомуваффақият насб шуд"
 
@@ -303,7 +308,7 @@ msgstr "ID-и Application"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Барномаҳо"
 
@@ -312,7 +317,7 @@ msgstr "Барномаҳо"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Шумо мутмаин ҳастед, ки мехоҳед \"{0}\"-ро нест кунед?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Шумо мутмаин ҳастед, ки мехоҳед \"{title}\"-ро нест кунед? Ин амалро бекор кардан мумкин нест."
 
@@ -340,11 +345,11 @@ msgstr "Шумо мутмаин ҳастед, ки мехоҳед таслим �
 msgid "Ascending"
 msgstr "Афзоишёбанда"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Замимаи файлҳои шарҳ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Замимаи файлҳои ҷавоб"
 
@@ -370,7 +375,7 @@ msgstr "Версияи дастрас:"
 msgid "Available versions:"
 msgstr "Версияҳои дастрас:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Дастрас, аммо насб нашуда"
 
@@ -465,18 +470,18 @@ msgstr "Камера дастрас нест"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Бекор кардан"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Бекор кардани шарҳ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Бекор кардани ҷавоб"
 
@@ -538,12 +543,12 @@ msgstr "Роҳнамоии синф"
 msgid "Classes"
 msgstr "Синфҳо"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Тоза кардани версияҳои истифоданашуда"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Тоза карда истодааст..."
 
@@ -641,8 +646,8 @@ msgstr "Амалҳои шарҳ"
 msgid "Comments"
 msgstr "Шарҳҳо"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Шарҳҳо ({0})"
 
@@ -703,10 +708,10 @@ msgstr "Ба буфер нусхабардорӣ шуд"
 msgid "Copy"
 msgstr "Нусхабардорӣ"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "Барномаро насб кардан имконнопазир аст."
 
@@ -838,7 +843,7 @@ msgstr "Track-и пешфарз (версияи {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Нест кардан"
@@ -863,9 +868,9 @@ msgstr "Нест кардани майдон"
 msgid "Delete game?"
 msgstr "Бозӣ нест карда шавад?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Нест кардани нукта"
 
@@ -926,7 +931,7 @@ msgstr "Панели тафсилот"
 msgid "Detect from web browser"
 msgstr "Аз браузери веб муайян кардан"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Барномаҳои таҳия"
 
@@ -934,11 +939,11 @@ msgstr "Барномаҳои таҳия"
 msgid "Directory"
 msgstr "Феҳрист"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Партофтан"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Сиёҳнависро партофта мешавад?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Ба намунаи талабшуда мувофиқат намекунад"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Иҷро шуд"
@@ -1052,7 +1057,7 @@ msgstr "Рамзи аутентификатори худро ворид куне
 msgid "Entity:"
 msgstr "Объект:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Хатогӣ"
 
@@ -1079,7 +1084,7 @@ msgstr "Хеле калон"
 msgid "Failed to add account"
 msgstr "Илова кардани ҳисоб ба анҷом нарасид"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "Тоза кардани барномаҳо ноком шуд"
 
@@ -1133,8 +1138,8 @@ msgstr "Боркунии таърих ба анҷом нарасид"
 msgid "Failed to load image"
 msgstr "Тасвир бор карда нашуд"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Боркунии ашё ба анҷом нарасид"
 
@@ -1174,7 +1179,7 @@ msgstr "Захира ба анҷом нарасид"
 msgid "Failed to save prompt"
 msgstr "Захира кардани дархост ба анҷом нарасид"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "Навсозии барномаҳо ноком шуд"
 
@@ -1207,7 +1212,7 @@ msgstr "Навсозии пайгирӣ ноком шуд"
 msgid "Failed to upload attachment"
 msgstr "Боркунии замима ба анҷом нарасид"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Файл:"
 
@@ -1251,7 +1256,7 @@ msgstr "Дӯстон"
 msgid "From"
 msgstr "Аз"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "Аз феҳрист"
 
@@ -1347,40 +1352,40 @@ msgstr "Аватари ҳарфҳои аввал барои {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Насб"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "{0}-ро насб кардан мехоҳед?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Насб аз файл"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Насб аз publisher"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Барномаҳои насбшуда"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "Насб карда мешавад..."
 
@@ -1400,7 +1405,7 @@ msgstr "Сана нодуруст"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Чунин ба назар мерасад, ки саҳифае, ки шумо ҷустуҷӯ мекунед, <0/>вуҷуд надорад ё нест карда шудааст."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Тафсилоти ашё"
 
@@ -1449,11 +1454,11 @@ msgstr "Бештар бор кунед"
 msgid "Loading content…"
 msgstr "Боркунии муҳтаво…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Ашё бор карда мешавад"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Тафсилоти ашё бор карда мешаванд"
 
@@ -1613,11 +1618,11 @@ msgstr "Ягон қоидаи дастрасӣ танзим нашудааст. 
 msgid "No activity yet"
 msgstr "То ҳол ягон фаъолият нест"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "Ҳеҷ як барнома навсозӣ карда нашуд."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Ягон барнома насб нашудааст"
 
@@ -1629,11 +1634,11 @@ msgstr "Ягон синф танзим нашудааст."
 msgid "No comments yet"
 msgstr "То ҳол ягон шарҳ нест"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Тавсиф нест"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Ягон барномаи таҳия ба \"{searchQuery}\" мувофиқ нест"
 
@@ -1645,11 +1650,11 @@ msgstr "То ҳол ягон бозӣ нест"
 msgid "No groups available"
 msgstr "Ягон гурӯҳ дастрас нест"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Ягон барномаи насбшаванда дар директория ба \"{searchQuery}\" мувофиқ нест"
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Ягон барномаи насбшуда ба \"{searchQuery}\" мувофиқ нест"
 
@@ -1657,12 +1662,12 @@ msgstr "Ягон барномаи насбшуда ба \"{searchQuery}\" мув
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Ҳеҷ як намуди ашё ҳоло сохта намешавад. Аввал ашёҳои волидайни заруриро эҷод кунед."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Дар директория ягон мувофиқат нест"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Ягон барномаи мувофиқ нест"
 
@@ -1691,7 +1696,7 @@ msgstr "Ба ин барнома ягон рухсат дода нашудаас
 msgid "No places found"
 msgstr "Ягон ҷой ёфт нашуд"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Ягон тавсия дастрас нест"
 
@@ -1726,7 +1731,7 @@ msgstr "Ягон сабти мавзӯъ ҳоло нест — пас аз ог�
 msgid "No unread notifications"
 msgstr "Ягон огоҳиномаи нохонда нест"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Ягон версияи истифоданашуда барои тоза кардан нест"
 
@@ -1742,10 +1747,10 @@ msgstr "Ягон намоиш нест"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Соҳиб"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Волидайн"
 
@@ -1872,7 +1877,7 @@ msgstr "Калидҳои дастрасӣ"
 msgid "Passkeys are not available in this browser"
 msgstr "Калидҳои дастрасӣ дар ин браузер дастрас нестанд"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Пайванди насбро гузоред:"
 
@@ -1916,7 +1921,7 @@ msgstr "Иҷозатҳо"
 msgid "Please check your internet connection and try again."
 msgstr "Лутфан пайвасти интернети худро санҷед ва аз нав кӯшиш кунед."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Лутфан ID-и барномаро ворид кунед"
 
@@ -1962,7 +1967,7 @@ msgstr "Коркард шуда истодааст…"
 msgid "Prompt saved"
 msgstr "Дархост захира шуд"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Хусусиятҳо"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Калидҳои дастрасии худро дар ин сервер аз нав сабт кунед"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "Тавсияшуда"
 
@@ -2196,11 +2201,11 @@ msgstr "Захира кардан..."
 msgid "Search"
 msgstr "Ҷустуҷӯ"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Ҷустуҷӯи барномаҳо"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Ҷустуҷӯи барномаҳо..."
 
@@ -2420,8 +2425,8 @@ msgstr "Васеъ"
 msgid "Start the discussion by adding the first comment."
 msgstr "Сӯҳбатро бо илова кардани шарҳи аввал оғоз кунед."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Назоратро қатъ кардан"
 
@@ -2429,11 +2434,11 @@ msgstr "Назоратро қатъ кардан"
 msgid "Subject"
 msgstr "Мавзӯъ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Шарҳ пешниҳод кардан"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Ҷавоб пешниҳод кардан"
 
@@ -2505,7 +2510,7 @@ msgstr "Фиристодан имконнопазир буд. Шояд файл�
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Барои боркунӣ хеле калон буд. Файлҳоро тоза кунед ё хурд кунед ва аз нав кӯшиш кунед."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "Барнома бомуваффақият насб карда шуд."
 
@@ -2597,7 +2602,7 @@ msgstr "Дархостҳои аз ҳад зиёд"
 msgid "Top"
 msgstr "Боло"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
@@ -2644,7 +2649,7 @@ msgstr "Барои ҷустуҷӯ чоп кунед..."
 msgid "Unable to connect to remote server"
 msgstr "Пайвастшавӣ ба сервери дурдаст имконнопазир аст"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "Ба хадамоти тавсияҳо пайваст шудан имконнопазир аст"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Таъин нашудааст"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "Дастрас нест"
 
@@ -2697,15 +2702,15 @@ msgstr "Аз обуна баромадан"
 msgid "Untitled"
 msgstr "Беном"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Навсозӣ"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Навсозии ҳама"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Навсозӣ ноком шуд"
 
@@ -2719,11 +2724,11 @@ msgstr "Навсозӣ шуд"
 msgid "Updated {field}"
 msgstr "{field} нав карда шуд"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Барномаҳо навсозӣ карда мешаванд..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Навсозӣ шуда истодааст..."
 
@@ -2802,7 +2807,7 @@ msgstr "Тамошои видео: {0}"
 msgid "View all notifications"
 msgstr "Ҳама огоҳиҳоро дидан"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Тафсилоти ҷузъро дидан ва таҳрир кардан"
 
@@ -2814,8 +2819,8 @@ msgstr "Назоратҳои намоиш"
 msgid "Voice recording is not supported in this browser"
 msgstr "Сабти овоз дар ин браузер дастгирӣ намешавад"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Назорат"
 
@@ -2845,7 +2850,7 @@ msgstr "Шумо ба ин бахш дастрасӣ надоред."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ҳисоби шумо аз {source} ба ин ҷо интиқол дода шуд. То он гоҳ, ки онро дар он ҷо нест накунед, паёмҳо ва огоҳиҳо метавонанд ба ҳарду сервер расанд, қисмати муайяни мазмуни шумо аз сервери кӯҳна хизмат медиҳад ва пайравон метавонанд чанд дақиқа вақт барои ёфтани шумо дар ин ҷо сарф кунанд."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Замимаҳои шумо гум мешаванд."
 
@@ -2853,11 +2858,11 @@ msgstr "Замимаҳои шумо гум мешаванд."
 msgid "Your preference"
 msgstr "Афзалияти шумо"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Матн ва замимаҳои шумо гум мешаванд."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Матни шумо гум мешавад."
 

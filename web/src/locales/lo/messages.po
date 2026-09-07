@@ -30,6 +30,11 @@ msgstr "(ຂະຫຍາຍ)"
 msgid "[not set]"
 msgstr "[ບໍ່ໄດ້ຕັ້ງຄ່າ]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, other {# ຜົນ}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, other {+# ຊັ້ນຍ່ອຍ}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, other {ລຶບ # ເວີຊັນທີ່ບໍ່ໄດ້ໃຊ້ແລ້ວ}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (development)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} ອັບເດດແລ້ວ, {failed} ລົ້ມເຫຼວ"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ຖືກຕິດຕັ້ງແລ້ວ."
 
@@ -145,7 +150,7 @@ msgstr "ລະດັບການເຂົ້າເຖິງ"
 msgid "Account type"
 msgstr "ປະເພດບັນຊີ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "ກິດຈະກຳ"
 
@@ -208,7 +213,7 @@ msgstr "ເພີ່ມຕົວເລືອກ"
 msgid "Add tag..."
 msgstr "ເພີ່ມແທັກ..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "ເພີ່ມໃສ່ສາລະບານ"
 
@@ -231,7 +236,7 @@ msgstr "ກຳລັງເພີ່ມ..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "ອັບເດດແອັບທັງໝົດແລ້ວ"
 
@@ -269,13 +274,13 @@ msgstr "ໃຜກໍໄດ້ທີ່ເຂົ້າສູ່ລະບົບ"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "ທຸກຢ່າງທີ່ສະໝັກຮັບຟີດນີ້ຈະຢຸດຮັບມັນ. ທ່ານສາມາດສຳເນົາ URL ໃໝ່ໄດ້ຫຼັງຈາກນັ້ນ."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "ແອັບ"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "ການກະທຳຂອງແອັບ"
 
@@ -283,11 +288,11 @@ msgstr "ການກະທຳຂອງແອັບ"
 msgid "App information"
 msgstr "ຂໍ້ມູນແອັບ"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "ຕິດຕັ້ງແອັບແລ້ວ"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "ຕິດຕັ້ງແອັບສຳເລັດແລ້ວ"
 
@@ -303,7 +308,7 @@ msgstr "ID ແອັບພລິເຄຊັນ"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "ແອັບ"
 
@@ -312,7 +317,7 @@ msgstr "ແອັບ"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບ \"{0}\"?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບ \"{title}\"? ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້."
 
@@ -340,11 +345,11 @@ msgstr "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການຍອມ
 msgid "Ascending"
 msgstr "ຈາກໜ້ອຍຫາຫຼາຍ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "ແນບໄຟລ໌ຄຳເຫັນ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "ແນບໄຟລ໌ຕອບກັບ"
 
@@ -370,7 +375,7 @@ msgstr "ເວີຊັນທີ່ມີຢູ່:"
 msgid "Available versions:"
 msgstr "ເວີຊັນທີ່ມີຢູ່:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "ມີຢູ່, ແຕ່ຍັງບໍ່ໄດ້ຕິດຕັ້ງ"
 
@@ -465,18 +470,18 @@ msgstr "ບໍ່ມີກ້ອງຖ່າຍຮູບ"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "ຍົກເລີກ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "ຍົກເລີກຄຳເຫັນ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "ຍົກເລີກການຕອບກັບ"
 
@@ -538,12 +543,12 @@ msgstr "ການກຳນົດເສັ້ນທາງຄລາສ"
 msgid "Classes"
 msgstr "ຄລາສ"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "ລ້າງເວີຊັນທີ່ບໍ່ໃຊ້"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "ກຳລັງລ້າງ..."
 
@@ -641,8 +646,8 @@ msgstr "ການກະທຳຄຳເຫັນ"
 msgid "Comments"
 msgstr "ຄຳເຫັນ"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "ຄຳເຫັນ ({0})"
 
@@ -703,10 +708,10 @@ msgstr "ສຳເນົາໄປຄລິບບອດແລ້ວ"
 msgid "Copy"
 msgstr "ສຳເນົາ"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "ບໍ່ສາມາດຕິດຕັ້ງແອັບໄດ້."
 
@@ -838,7 +843,7 @@ msgstr "ແທຣັກເລີ່ມຕົ້ນ (ເວີຊັນ {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "ລົບ"
@@ -863,9 +868,9 @@ msgstr "ລົບຊ່ອງຂໍ້ມູນ"
 msgid "Delete game?"
 msgstr "ລົບເກມ?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "ລົບລາຍການ"
 
@@ -926,7 +931,7 @@ msgstr "ແຜງລາຍລະອຽດ"
 msgid "Detect from web browser"
 msgstr "ກວດຫາຈາກຕົວທ່ອງເວັບ"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "ແອັບການພັດທະນາ"
 
@@ -934,11 +939,11 @@ msgstr "ແອັບການພັດທະນາ"
 msgid "Directory"
 msgstr "ໄດເລກທໍຣີ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "ຍົກເລີກ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "ຍົກເລີກສະບັບຮ່າງບໍ?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "ບໍ່ກົງກັບຮູບແບບທີ່ຕ້ອງການ"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "ສຳເລັດແລ້ວ"
@@ -1052,7 +1057,7 @@ msgstr "ໃສ່ລະຫັດ authenticator ຂອງທ່ານ"
 msgid "Entity:"
 msgstr "ເອັນຕິຕີ້:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "ຂໍ້ຜິດພາດ"
 
@@ -1079,7 +1084,7 @@ msgstr "ໃຫຍ່ພິເສດ"
 msgid "Failed to add account"
 msgstr "ເພີ່ມບັນຊີລົ້ມເຫຼວ"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "ລ້າງແອັບບໍ່ສຳເລັດ"
 
@@ -1133,8 +1138,8 @@ msgstr "ໂຫຼດປະຫວັດລົ້ມເຫຼວ"
 msgid "Failed to load image"
 msgstr "ໂຫຼດຮູບພາບບໍ່ສຳເລັດ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "ໂຫຼດລາຍການລົ້ມເຫຼວ"
 
@@ -1174,7 +1179,7 @@ msgstr "ບັນທຶກລົ້ມເຫຼວ"
 msgid "Failed to save prompt"
 msgstr "ບັນທຶກ prompt ລົ້ມເຫຼວ"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "ອັບເດດແອັບບໍ່ສຳເລັດ"
 
@@ -1207,7 +1212,7 @@ msgstr "ອັບເດດການຕິດຕາມບໍ່ສຳເລັດ
 msgid "Failed to upload attachment"
 msgstr "ອັບໂຫຼດໄຟລ໌ແນບລົ້ມເຫຼວ"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "ໄຟລ໌:"
 
@@ -1251,7 +1256,7 @@ msgstr "ໝູ່"
 msgid "From"
 msgstr "ຈາກ"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "ຈາກໄດເຣັກທໍຣີ"
 
@@ -1347,40 +1352,40 @@ msgstr "ອະວາຕາຕົວອັກສອນຫຍໍ້ສຳລັບ
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "ຕິດຕັ້ງ"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "ຕິດຕັ້ງ {0} ບໍ?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "ຕິດຕັ້ງຈາກໄຟລ໌"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "ຕິດຕັ້ງຈາກຜູ້ເຜີຍແຜ່"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "ແອັບທີ່ຕິດຕັ້ງແລ້ວ"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "ກຳລັງຕິດຕັ້ງ..."
 
@@ -1400,7 +1405,7 @@ msgstr "ວັນທີ່ບໍ່ຖືກຕ້ອງ"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "ເບິ່ງຄືວ່າໜ້າທີ່ທ່ານກຳລັງຊອກຫາ <0/>ບໍ່ມີ ຫຼື ອາດຖືກລຶບອອກແລ້ວ."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "ລາຍລະອຽດລາຍການ"
 
@@ -1449,11 +1454,11 @@ msgstr "ໂຫຼດເພີ່ມ"
 msgid "Loading content…"
 msgstr "ກຳລັງໂຫຼດເນື້ອຫາ…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "ກຳລັງໂຫຼດລາຍການ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "ກຳລັງໂຫຼດລາຍລະອຽດລາຍການ"
 
@@ -1613,11 +1618,11 @@ msgstr "ບໍ່ມີກົດການເຂົ້າເຖິງທີ່ຕ
 msgid "No activity yet"
 msgstr "ຍັງບໍ່ມີກິດຈະກຳ"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "ບໍ່ສາມາດອັບເດດແອັບໃດໆໄດ້."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "ບໍ່ມີແອັບທີ່ຕິດຕັ້ງ"
 
@@ -1629,11 +1634,11 @@ msgstr "ບໍ່ມີຄລາສທີ່ຕັ້ງຄ່າໄວ້."
 msgid "No comments yet"
 msgstr "ຍັງບໍ່ມີຄຳເຫັນ"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "ບໍ່ມີລາຍລະອຽດ"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "ບໍ່ມີແອັບພັດທະນາທີ່ກົງກັບ \"{searchQuery}\""
 
@@ -1645,11 +1650,11 @@ msgstr "ຍັງບໍ່ມີເກມ"
 msgid "No groups available"
 msgstr "ບໍ່ມີກຸ່ມທີ່ມີຢູ່"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "ບໍ່ມີແອັບທີ່ຕິດຕັ້ງໄດ້ໃນໄດເລັກທໍຣີທີ່ກົງກັບ \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "ບໍ່ມີແອັບທີ່ຕິດຕັ້ງທີ່ກົງກັບ \"{searchQuery}\""
 
@@ -1657,12 +1662,12 @@ msgstr "ບໍ່ມີແອັບທີ່ຕິດຕັ້ງທີ່ກົ
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "ຍັງບໍ່ສາມາດສ້າງປະເພດລາຍການໄດ້. ສ້າງລາຍການແມ່ທີ່ຕ້ອງການກ່ອນ."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "ບໍ່ມີຜົນກົງກັນໃນໄດເລັກທໍຣີ"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "ບໍ່ມີແອັບທີ່ກົງກັນ"
 
@@ -1691,7 +1696,7 @@ msgstr "ບໍ່ມີສິດທີ່ໄດ້ຮັບສຳລັບແອ
 msgid "No places found"
 msgstr "ບໍ່ພົບສະຖານທີ່"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "ບໍ່ມີຄຳແນະນຳທີ່ມີຢູ່"
 
@@ -1726,7 +1731,7 @@ msgstr "ຍັງບໍ່ມີບັນທຶກຫົວຂໍ້ — ລອ�
 msgid "No unread notifications"
 msgstr "ບໍ່ມີການແຈ້ງເຕືອນທີ່ບໍ່ໄດ້ອ່ານ"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "ບໍ່ມີເວີຊັນທີ່ບໍ່ໄດ້ໃຊ້ທີ່ຈະລ້າງ"
 
@@ -1742,10 +1747,10 @@ msgstr "ບໍ່ມີການເບິ່ງ"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "ເຈົ້າຂອງ"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "ແມ່"
 
@@ -1872,7 +1877,7 @@ msgstr "ກະແຈຜ່ານ"
 msgid "Passkeys are not available in this browser"
 msgstr "Passkeys ບໍ່ສາມາດໃຊ້ໄດ້ໃນບຣາວເຊີນີ້"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "ວາງລິ້ງຕິດຕັ້ງ:"
 
@@ -1916,7 +1921,7 @@ msgstr "ສິດ"
 msgid "Please check your internet connection and try again."
 msgstr "ກະລຸນາກວດສອບການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານ ແລະ ລອງໃໝ່ອີກຄັ້ງ."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "ກະລຸນາປ້ອນ ID ແອັບ"
 
@@ -1962,7 +1967,7 @@ msgstr "ກຳລັງປະມວນຜົນ…"
 msgid "Prompt saved"
 msgstr "ບັນທຶກ prompt ແລ້ວ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "ຄຸນສົມບັດ"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "ລົງທະບຽນກະແຈຜ່ານຂອງທ່ານຄືນໃໝ່ໃນເຄື່ອງແມ່ຂ່າຍນີ້"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "ແນະນຳ"
 
@@ -2196,11 +2201,11 @@ msgstr "ກຳລັງບັນທຶກ..."
 msgid "Search"
 msgstr "ຄົ້ນຫາ"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "ຄົ້ນຫາແອັບ"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "ຄົ້ນຫາແອັບ..."
 
@@ -2420,8 +2425,8 @@ msgstr "ກວ້າງຂວາງ"
 msgid "Start the discussion by adding the first comment."
 msgstr "ເລີ່ມການສົນທະນາໂດຍການເພີ່ມຄຳເຫັນທຳອິດ."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "ຢຸດການເບິ່ງ"
 
@@ -2429,11 +2434,11 @@ msgstr "ຢຸດການເບິ່ງ"
 msgid "Subject"
 msgstr "ຫົວຂໍ້"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "ສົ່ງຄຳເຫັນ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "ສົ່ງການຕອບກັບ"
 
@@ -2505,7 +2510,7 @@ msgstr "ສົ່ງບໍ່ໄດ້. ໄຟລ໌ອາດໃຫຍ່ເກ�
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "ໃຫຍ່ເກີນໄປທີ່ຈະອັບໂຫຼດ. ເອົາໄຟລ໌ອອກ ຫຼືຫຍໍ້ໃຫ້ນ້ອຍລົງ ແລ້ວລອງໃໝ່."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "ແອັບຖືກຕິດຕັ້ງສຳເລັດແລ້ວ."
 
@@ -2597,7 +2602,7 @@ msgstr "ມີຄຳຮ້ອງຂໍຫຼາຍເກີນໄປ"
 msgid "Top"
 msgstr "ເທິງ"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
@@ -2644,7 +2649,7 @@ msgstr "ພິມເພື່ອຄົ້ນຫາ..."
 msgid "Unable to connect to remote server"
 msgstr "ບໍ່ສາມາດເຊື່ອມຕໍ່ກັບເຊີບເວີໄລຍະໄກໄດ້"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "ບໍ່ສາມາດເຊື່ອມຕໍ່ກັບບໍລິການແນະນຳ"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "ບໍ່ໄດ້ມອບໝາຍ"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "ບໍ່ມີໃຫ້ບໍລິການ"
 
@@ -2697,15 +2702,15 @@ msgstr "ຍົກເລີກການສະໝັກສະມາຊິກ"
 msgid "Untitled"
 msgstr "ບໍ່ມີຊື່"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "ອັບເດດ"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "ອັບເດດທັງໝົດ"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "ການອັບເດດລົ້ມເຫຼວ"
 
@@ -2719,11 +2724,11 @@ msgstr "ອັບເດດແລ້ວ"
 msgid "Updated {field}"
 msgstr "ອັບເດດ {field} ແລ້ວ"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "ກຳລັງອັບເດດແອັບ..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "ກຳລັງອັບເດດ..."
 
@@ -2802,7 +2807,7 @@ msgstr "ຕົວເບິ່ງວິດີໂອ: {0}"
 msgid "View all notifications"
 msgstr "ເບິ່ງການແຈ້ງເຕືອນທັງໝົດ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "ເບິ່ງແລະແກ້ໄຂລາຍລະອຽດລາຍການ"
 
@@ -2814,8 +2819,8 @@ msgstr "ການຄວບຄຸມການເບິ່ງ"
 msgid "Voice recording is not supported in this browser"
 msgstr "ບຣາວເຊີນີ້ບໍ່ຮອງຮັບການບັນທຶກສຽງ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "ເບິ່ງ"
 
@@ -2845,7 +2850,7 @@ msgstr "ທ່ານບໍ່ມີສິດເຂົ້າເຖິງພາກ
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "ບັນຊີຂອງທ່ານໄດ້ຍ້າຍມາທີ່ນີ້ຈາກ {source}. ຈົນກວ່າທ່ານຈະລຶບມັນທີ່ນັ້ນ, ຂໍ້ຄວາມ ແລະ ການແຈ້ງເຕືອນອາດຈະໄປຮອດທັງສອງເຊີຟເວີ, ບາງເນື້ອຫາຂອງທ່ານຍັງຄົງໃຫ້ບໍລິການຈາກເຊີຟເວີເກົ່າ, ແລະ ຜູ້ຕິດຕາມອາດຈະໃຊ້ເວລາສອງສາມນາທີເພື່ອຊອກຫາທ່ານທີ່ນີ້."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "ໄຟລ໌ແນບຂອງທ່ານຈະສູນຫາຍ."
 
@@ -2853,11 +2858,11 @@ msgstr "ໄຟລ໌ແນບຂອງທ່ານຈະສູນຫາຍ."
 msgid "Your preference"
 msgstr "ຄວາມຕ້ອງການຂອງທ່ານ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "ຂໍ້ຄວາມ ແລະໄຟລ໌ແນບຂອງທ່ານຈະສູນຫາຍ."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "ຂໍ້ຄວາມຂອງເຈົ້າຈະຫາຍໄປ."
 

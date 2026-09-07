@@ -30,6 +30,11 @@ msgstr "(fẹ̀ jáde)"
 msgid "[not set]"
 msgstr "[kò sí]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {Èsì #} other {Èsì #}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, other {+# nínú}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {A yọ ẹ̀yà # tí a kò lò kúrò} other {A yọ ẹ̀yà # tí a kò lò kúrò}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (idagbasoke)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} ti ni imudojuiwọn, {failed} kuna"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ti fi sori ẹrọ."
 
@@ -145,7 +150,7 @@ msgstr "Ìpele ìwọlé"
 msgid "Account type"
 msgstr "Irú àkáǹtì"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Ìgbòkègbodò"
 
@@ -208,7 +213,7 @@ msgstr "Fi àṣàyàn kún"
 msgid "Add tag..."
 msgstr "Fi tag kún..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Fi sí ìwé-àṣẹ"
 
@@ -231,7 +236,7 @@ msgstr "Ó ń fi kún..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "A ti ṣe àtúnyẹ̀wò gbogbo app"
 
@@ -269,13 +274,13 @@ msgstr "Ẹnikẹ́ni tó ti wọlé"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Gbogbo ohun tí ó forúkọsílẹ̀ sí ìjẹun yìí yóò dáwọ́ gbígbà rẹ̀ dúró. O lè ṣe àdàkọ URL tuntun lẹ́yìn náà."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "App"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "Àwọn ìṣe app"
 
@@ -283,11 +288,11 @@ msgstr "Àwọn ìṣe app"
 msgid "App information"
 msgstr "Alaye app"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "A ti fi app sí ẹ̀rọ"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "A fi áàpù sori ẹrọ ní àṣeyọrí"
 
@@ -303,7 +308,7 @@ msgstr "ID Application"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Àwọn app"
 
@@ -312,7 +317,7 @@ msgstr "Àwọn app"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Ṣé o dájú pé o fẹ́ pa \"{0}\" rẹ́?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Ṣé o dájú pé o fẹ́ pa \"{title}\" rẹ́? A kò lè yí ìṣe yìí padà."
 
@@ -340,11 +345,11 @@ msgstr "Ǹjẹ́ ó dájú pé o fẹ́ jọ̀wọ́? {opponentName} yóò ṣ�
 msgid "Ascending"
 msgstr "Gòkè"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "So àwọn fáìlì àlàyé pọ̀"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "So àwọn fáìlì ìdáhùn pọ̀"
 
@@ -370,7 +375,7 @@ msgstr "Ẹya tó wà:"
 msgid "Available versions:"
 msgstr "Awọn ẹya tó wà:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Ó wà, ṣùgbọ́n a kò fi sípè"
 
@@ -465,18 +470,18 @@ msgstr "Kamẹra kò sí"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Fagilé"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Fagilé àlàyé"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Fagilé ìdáhùn"
 
@@ -538,12 +543,12 @@ msgstr "Ìṣíkiri kíláàsì"
 msgid "Classes"
 msgstr "Àwọn kíláàsì"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Wẹ àwọn ìtumọ̀ tí a kò lò mọ́"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Ó ń wẹ̀..."
 
@@ -641,8 +646,8 @@ msgstr "Awọn iṣe asọye"
 msgid "Comments"
 msgstr "Àwọn àlàyé"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Àwọn ọ̀rọ̀ ({0})"
 
@@ -703,10 +708,10 @@ msgstr "A ti ṣe àdàkọ sí clipboard"
 msgid "Copy"
 msgstr "Ṣe àdàkọ"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "A kò lè fi áàpù sórí."
 
@@ -838,7 +843,7 @@ msgstr "Orin aiyipada (ẹya {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Pa rẹ́"
@@ -863,9 +868,9 @@ msgstr "Pa pápá rẹ́"
 msgid "Delete game?"
 msgstr "Pa eré náà rẹ́?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Pa ohun rẹ́"
 
@@ -926,7 +931,7 @@ msgstr "Pánẹ́ẹ̀lì Àwọn Ẹ̀kúnrẹ́rẹ́"
 msgid "Detect from web browser"
 msgstr "Ṣàwárí láti web browser"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Àwọn app ìdàgbàsókè"
 
@@ -934,11 +939,11 @@ msgstr "Àwọn app ìdàgbàsókè"
 msgid "Directory"
 msgstr "Àtòjọ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Sọnu"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Sọ àkọ̀tẹ́lẹ̀ nù?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Kò bá àpẹẹrẹ tí a béèrè mu"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Ti parí"
@@ -1052,7 +1057,7 @@ msgstr "Tẹ kóòdù authenticator rẹ"
 msgid "Entity:"
 msgstr "Ẹ̀ka:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Àṣìṣe"
 
@@ -1079,7 +1084,7 @@ msgstr "Tóbi gan"
 msgid "Failed to add account"
 msgstr "Kò lè fi àkántì kún"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "Kò ṣàṣeyọrí láti nu àwọn áàpù mọ́"
 
@@ -1133,8 +1138,8 @@ msgstr "Kò lè ṣí ìtàn lọ̀"
 msgid "Failed to load image"
 msgstr "Kò ṣeé gbé àwòrán wọlé"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Kò lè ṣí ohun lọ̀"
 
@@ -1174,7 +1179,7 @@ msgstr "Kò lè fi pamọ́"
 msgid "Failed to save prompt"
 msgstr "Kò lè fi prompt pamọ́"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "Kò ṣàṣeyọrí láti ṣe ìmúdójúìwọ̀n àwọn áàpù"
 
@@ -1207,7 +1212,7 @@ msgstr "Ìkùnà láti ṣàtúnṣe ìṣọ́"
 msgid "Failed to upload attachment"
 msgstr "Kò lè gbé àfikún sókè"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Faili:"
 
@@ -1251,7 +1256,7 @@ msgstr "Àwọn ọ̀rẹ́"
 msgid "From"
 msgstr "Láti"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "Láti inú ìwé-ìtọ́ka"
 
@@ -1347,40 +1352,40 @@ msgstr "Àwòrán lẹ́tà àkọ́kọ́ fún {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Fi sórí"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "Fi {0} sori ẹrọ?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Fi sórí láti fáìlì"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Fi sórí láti publisher"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Àwọn app tí a ti fi sórí"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "Ń fi sórí..."
 
@@ -1400,7 +1405,7 @@ msgstr "Ọjọ́ aláìdára"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Ó dàbí pé ojú-ìwé tí o ń wá <0/>kò sí tàbí a ti yọ ọ́ kúrò."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Àwọn àlàyé ohun"
 
@@ -1449,11 +1454,11 @@ msgstr "Ṣí síwájú"
 msgid "Loading content…"
 msgstr "Ìkójọpọ̀ àkóónú ń lọ…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Ń ṣí ohun"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Ń ṣí àwọn àlàyé ohun"
 
@@ -1613,11 +1618,11 @@ msgstr "A kò ṣètò àwọn òfin àyè kankan. Fi àwọn òfin kún láti �
 msgid "No activity yet"
 msgstr "Kò sí iṣẹ́ síbẹ̀"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "A kò lè dojú àpù kankan ìwọ́n."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "A kò gbé àpù kankan kalẹ̀"
 
@@ -1629,11 +1634,11 @@ msgstr "Ko si awọn kilaasi ti a tunto."
 msgid "No comments yet"
 msgstr "Kò sí àlàyé síbẹ̀"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Ko si apejuwe"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Ko si awọn app idagbasoke ti o baamu \"{searchQuery}\""
 
@@ -1645,11 +1650,11 @@ msgstr "Kò sí eré síbẹ̀"
 msgid "No groups available"
 msgstr "Kò sí ẹgbẹ́ tó wà"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Ko si awọn app ti o le fi sori ẹrọ ninu itọsọna ti o baamu \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Ko si awọn app ti a fi sori ẹrọ ti o baamu \"{searchQuery}\""
 
@@ -1657,12 +1662,12 @@ msgstr "Ko si awọn app ti a fi sori ẹrọ ti o baamu \"{searchQuery}\""
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "A kò lè dá oríṣi item kankan sílẹ̀ síbẹ̀. Dá àwọn item òbí tí a nílò sílẹ̀ ní àkọ́kọ́."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Kò sí ìbámu nínú directory"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Kò sí àpù tó bámu"
 
@@ -1691,7 +1696,7 @@ msgstr "Ko si awọn igbanilaaye ti a fun app yii"
 msgid "No places found"
 msgstr "A kò rí ibikíbi"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Kò sí àbá tó wà"
 
@@ -1726,7 +1731,7 @@ msgstr "Kò sí àkọsílẹ̀ kókó síbẹ̀ — gbìyànjú lẹ́ẹ̀kan 
 msgid "No unread notifications"
 msgstr "Kò sí ìfìtọ́nisí tí a kò kà"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Kò sí ẹ̀dà àìlò láti fọ̀mọ́"
 
@@ -1742,10 +1747,10 @@ msgstr "Kò sí ìwò"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Onílé"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Òbí"
 
@@ -1872,7 +1877,7 @@ msgstr "Àwọn passkey"
 msgid "Passkeys are not available in this browser"
 msgstr "Àwọn passkey kò sí ní aṣàwákiri yìí"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Lẹ́ ọna asopọ fifi sori ẹrọ:"
 
@@ -1916,7 +1921,7 @@ msgstr "Àwọn àyè"
 msgid "Please check your internet connection and try again."
 msgstr "Jọ̀wọ́ ṣàyẹ̀wò ìsopọ̀ íntánẹ́ẹ̀tì rẹ kí o sì gbìyànjú lẹ́ẹ̀kan sí i."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Jọ̀wọ́ tẹ ID àpù sí"
 
@@ -1962,7 +1967,7 @@ msgstr "Ń ṣiṣẹ́ lé e…"
 msgid "Prompt saved"
 msgstr "A ti tọ́jú prompt"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Àwọn àmì"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Tún àwọn bọ́tìnì ìwọlé rẹ forúkọsílẹ̀ lórí olùpèsè yìí"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "Tí a dábàá"
 
@@ -2196,11 +2201,11 @@ msgstr "Ń fi pamọ́..."
 msgid "Search"
 msgstr "Wá"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Wá àwọn apps"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Wá àwọn apps..."
 
@@ -2420,8 +2425,8 @@ msgstr "Àáyè"
 msgid "Start the discussion by adding the first comment."
 msgstr "Bẹ̀rẹ̀ ìjíròrò nípa fífi àsọyé àkọ́kọ́ kún."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Dáwọ́ ìríran dúró"
 
@@ -2429,11 +2434,11 @@ msgstr "Dáwọ́ ìríran dúró"
 msgid "Subject"
 msgstr "Àkòrí"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Fi àsọyé sí ilẹ̀"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Fi ìdáhùn sí ilẹ̀"
 
@@ -2505,7 +2510,7 @@ msgstr "Kò lè ránṣẹ́. Àwọn fáìlì lè tóbi jù, tàbí àsopọ̀ 
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Ó tóbi jù láti gbé sókè. Yọ àwọn fáìlì kúrò tàbí dín wọn kù kí o sì tún gbìyànjú."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "App ti fi sípò pẹ̀lú àṣeyọrí."
 
@@ -2597,7 +2602,7 @@ msgstr "Àwọn ìbéèrè ti pọ̀ jù"
 msgid "Top"
 msgstr "Òkè"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
@@ -2644,7 +2649,7 @@ msgstr "Tẹ láti wá..."
 msgid "Unable to connect to remote server"
 msgstr "Kò lè sopọ̀ mọ́ sáfà jíjìnnà"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "A kò lè darapọ̀ mọ́ recommendations service"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Aláìyàn"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "Kò sí"
 
@@ -2697,15 +2702,15 @@ msgstr "Yọ ìforúkọsílẹ̀ kúrò"
 msgid "Untitled"
 msgstr "Aláìlórúkọ"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Ṣe imudojúìwọ̀n"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Ṣe imudojúìwọ̀n gbogbo"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Imudojúìwọ̀n kùnà"
 
@@ -2719,11 +2724,11 @@ msgstr "Ti ṣe imudojúìwọ̀n"
 msgid "Updated {field}"
 msgstr "A ṣàtúnṣe {field}"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Ń ṣe ìmúdójúìwọ̀n àwọn áàpù..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Ń ṣe imudojúìwọ̀n..."
 
@@ -2802,7 +2807,7 @@ msgstr "Ẹ̀rọ ìwo fídíò: {0}"
 msgid "View all notifications"
 msgstr "Wo gbogbo àwọn ìfitónilétí"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Wo kí o sì ṣàtúnṣe àlàyé nǹkan"
 
@@ -2814,8 +2819,8 @@ msgstr "Àwọn ìṣàkóso ìwòye"
 msgid "Voice recording is not supported in this browser"
 msgstr "Aṣàwákiri yìí kò ṣe àtìlẹ́yìn fún gbigbasilẹ ohùn"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Wo"
 
@@ -2845,7 +2850,7 @@ msgstr "O kò ní ààyè sí abala yìí."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "A gbe akonti rẹ wá ibi lati {source}. Titi iwọ o fi pa rẹ nibẹ, awọn ifiranṣẹ ati awọn iwifunni le de olupin mejeeji, diẹ ninu akoonu rẹ tẹsiwaju lati sin lati olupin atijọ, ati awọn olutẹle le gba iṣẹju diẹ lati wa ọ nibi."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Àwọn fáìlì àsomọ́ rẹ yóò sọnù."
 
@@ -2853,11 +2858,11 @@ msgstr "Àwọn fáìlì àsomọ́ rẹ yóò sọnù."
 msgid "Your preference"
 msgstr "Ayanfẹ rẹ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Ọ̀rọ̀ rẹ àti àwọn fáìlì àsomọ́ yóò sọnù."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Ọ̀rọ̀ rẹ yóò sọnù."
 

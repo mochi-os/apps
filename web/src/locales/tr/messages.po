@@ -30,6 +30,11 @@ msgstr "(genişlet)"
 msgid "[not set]"
 msgstr "[ayarlanmamış]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# sonuç} other {# sonuç}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# iç içe} other {+# iç içe}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# kullanılmayan sürüm kaldırıldı} other {# kullanılmayan sürüm kaldırıldı}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (geliştirme)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} güncellendi, {failed} başarısız"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} yüklendi."
 
@@ -145,7 +150,7 @@ msgstr "Erişim düzeyi"
 msgid "Account type"
 msgstr "Hesap türü"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Etkinlik"
 
@@ -208,7 +213,7 @@ msgstr "Seçenek ekle"
 msgid "Add tag..."
 msgstr "Etiket ekle..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Dizine ekle"
 
@@ -231,7 +236,7 @@ msgstr "Ekleniyor..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "Tüm uygulamalar güncellendi"
 
@@ -269,13 +274,13 @@ msgstr "Giriş yapmış herkes"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Bu akışa abone olan her şey almayı durduracak. Sonrasında yeni bir URL kopyalayabilirsiniz."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "Uygulama"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "Uygulama eylemleri"
 
@@ -283,11 +288,11 @@ msgstr "Uygulama eylemleri"
 msgid "App information"
 msgstr "Uygulama bilgileri"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "Uygulama yüklendi"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "Uygulama yüklendi"
 
@@ -303,7 +308,7 @@ msgstr "Uygulama kimliği"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Uygulamalar"
 
@@ -312,7 +317,7 @@ msgstr "Uygulamalar"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "\"{0}\" öğesini silmek istediğinizden emin misiniz?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "\"{title}\" öğesini silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
 
@@ -340,11 +345,11 @@ msgstr "Çekilmek istediğinizden emin misiniz? {opponentName} oyunu kazanacak."
 msgid "Ascending"
 msgstr "Artan"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Yorum dosyalarını ekle"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Yanıt dosyalarını ekle"
 
@@ -370,7 +375,7 @@ msgstr "Mevcut sürüm:"
 msgid "Available versions:"
 msgstr "Mevcut sürümler:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Mevcut, ancak yüklenmedi"
 
@@ -465,18 +470,18 @@ msgstr "Kamera kullanılamıyor"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "İptal"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Yorumu iptal et"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Yanıtı iptal et"
 
@@ -538,12 +543,12 @@ msgstr "Sınıf yönlendirmesi"
 msgid "Classes"
 msgstr "Sınıflar"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Kullanılmayan sürümleri temizle"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Temizleniyor..."
 
@@ -641,8 +646,8 @@ msgstr "Yorum işlemleri"
 msgid "Comments"
 msgstr "Yorumlar"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Yorumlar ({0})"
 
@@ -703,10 +708,10 @@ msgstr "Panoya kopyalandı"
 msgid "Copy"
 msgstr "Kopyala"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "Uygulama yüklenemedi."
 
@@ -838,7 +843,7 @@ msgstr "Varsayılan track (sürüm {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Sil"
@@ -863,9 +868,9 @@ msgstr "Alanı sil"
 msgid "Delete game?"
 msgstr "Oyun silinsin mi?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Öğeyi sil"
 
@@ -926,7 +931,7 @@ msgstr "Ayrıntılar paneli"
 msgid "Detect from web browser"
 msgstr "Web tarayıcıdan algıla"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Geliştirme uygulamaları"
 
@@ -934,11 +939,11 @@ msgstr "Geliştirme uygulamaları"
 msgid "Directory"
 msgstr "Dizin"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Vazgeç"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Taslak silinsin mi?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Gerekli kalıpla eşleşmiyor"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Tamamlandı"
@@ -1052,7 +1057,7 @@ msgstr "Kimlik doğrulayıcı kodunuzu girin"
 msgid "Entity:"
 msgstr "Varlık:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Hata"
 
@@ -1079,7 +1084,7 @@ msgstr "Çok büyük"
 msgid "Failed to add account"
 msgstr "Hesap eklenemedi"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "Uygulamalar temizlenemedi"
 
@@ -1133,8 +1138,8 @@ msgstr "Geçmiş yüklenemedi"
 msgid "Failed to load image"
 msgstr "Görsel yüklenemedi"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Öğe yüklenemedi"
 
@@ -1174,7 +1179,7 @@ msgstr "Kaydedilemedi"
 msgid "Failed to save prompt"
 msgstr "Komut kaydedilemedi"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "Uygulamalar güncellenemedi"
 
@@ -1207,7 +1212,7 @@ msgstr "İzleme güncellenemedi"
 msgid "Failed to upload attachment"
 msgstr "Ek yüklenemedi"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Dosya:"
 
@@ -1251,7 +1256,7 @@ msgstr "Arkadaşlar"
 msgid "From"
 msgstr "Kimden"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "Dizinden"
 
@@ -1347,40 +1352,40 @@ msgstr "{name} için baş harf avatarı"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Yükle"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "{0} yüklensin mi?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Dosyadan yükle"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Yayımcıdan yükle"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Yüklü uygulamalar"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "Yükleniyor..."
 
@@ -1400,7 +1405,7 @@ msgstr "Geçersiz tarih"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Aradığınız sayfa <0/>mevcut değil veya kaldırılmış görünüyor."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Öğe ayrıntıları"
 
@@ -1449,11 +1454,11 @@ msgstr "Daha fazla yükle"
 msgid "Loading content…"
 msgstr "İçerik yükleniyor…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Öğe yükleniyor"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Öğe ayrıntıları yükleniyor"
 
@@ -1613,11 +1618,11 @@ msgstr "Erişim kuralı yapılandırılmamış. Bu kaynağa kimin erişebileceğ
 msgid "No activity yet"
 msgstr "Henüz aktivite yok"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "Hiçbir uygulama güncellenemedi."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Yüklü uygulama yok"
 
@@ -1629,11 +1634,11 @@ msgstr "Sınıf yapılandırılmamış."
 msgid "No comments yet"
 msgstr "Henüz yorum yok"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Açıklama yok"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" ile eşleşen geliştirme uygulaması yok"
 
@@ -1645,11 +1650,11 @@ msgstr "Henüz oyun yok"
 msgid "No groups available"
 msgstr "Grup yok"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Dizinde \"{searchQuery}\" ile eşleşen yüklenebilir uygulama yok"
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "\"{searchQuery}\" ile eşleşen yüklü uygulama yok"
 
@@ -1657,12 +1662,12 @@ msgstr "\"{searchQuery}\" ile eşleşen yüklü uygulama yok"
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Henüz oluşturulabilecek öge türü yok. Önce gerekli üst ögeleri oluşturun."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Dizinde eşleşme yok"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Eşleşen uygulama yok"
 
@@ -1691,7 +1696,7 @@ msgstr "Bu uygulamaya izin verilmedi"
 msgid "No places found"
 msgstr "Yer bulunamadı"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Öneri yok"
 
@@ -1726,7 +1731,7 @@ msgstr "Henüz konu kaydı yok — bir sonraki bildirimden sonra tekrar deneyin.
 msgid "No unread notifications"
 msgstr "Okunmamış bildirim yok"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Temizlenecek kullanılmayan sürüm yok"
 
@@ -1742,10 +1747,10 @@ msgstr "Görüntüleme yok"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Sahip"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Üst"
 
@@ -1872,7 +1877,7 @@ msgstr "Passkey'ler"
 msgid "Passkeys are not available in this browser"
 msgstr "Passkey'ler bu tarayıcıda kullanılamıyor"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Yükleme bağlantısını yapıştırın:"
 
@@ -1916,7 +1921,7 @@ msgstr "İzinler"
 msgid "Please check your internet connection and try again."
 msgstr "Lütfen internet bağlantınızı kontrol edip tekrar deneyin."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Lütfen bir uygulama kimliği girin"
 
@@ -1962,7 +1967,7 @@ msgstr "İşleniyor…"
 msgid "Prompt saved"
 msgstr "İstem kaydedildi"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Özellikler"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Bu sunucuda parola anahtarlarınızı yeniden kaydedin"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "Önerilen"
 
@@ -2196,11 +2201,11 @@ msgstr "Kaydediliyor..."
 msgid "Search"
 msgstr "Ara"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Uygulamalarda ara"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Uygulamalarda ara..."
 
@@ -2420,8 +2425,8 @@ msgstr "Geniş"
 msgid "Start the discussion by adding the first comment."
 msgstr "İlk yorumu ekleyerek tartışmayı başlat."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "İzlemeyi bırak"
 
@@ -2429,11 +2434,11 @@ msgstr "İzlemeyi bırak"
 msgid "Subject"
 msgstr "Konu"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Yorum gönder"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Yanıt gönder"
 
@@ -2505,7 +2510,7 @@ msgstr "Gönderilemedi. Dosyalar çok büyük olabilir veya bağlantınız kesil
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Yüklemek için çok büyüktü. Dosyaları kaldırın veya küçültün ve yeniden deneyin."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "Uygulama başarıyla yüklendi."
 
@@ -2597,7 +2602,7 @@ msgstr "Çok fazla istek"
 msgid "Top"
 msgstr "Üst"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
@@ -2644,7 +2649,7 @@ msgstr "Aramak için yaz..."
 msgid "Unable to connect to remote server"
 msgstr "Uzak sunucuya bağlanılamadı"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "Öneri servisine bağlanılamadı"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Atanmamış"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "Kullanılamıyor"
 
@@ -2697,15 +2702,15 @@ msgstr "Aboneliği iptal et"
 msgid "Untitled"
 msgstr "Başlıksız"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Güncelle"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Tümünü güncelle"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Güncelleme başarısız"
 
@@ -2719,11 +2724,11 @@ msgstr "Güncellendi"
 msgid "Updated {field}"
 msgstr "{field} güncellendi"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Uygulamalar güncelleniyor..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Güncelleniyor..."
 
@@ -2802,7 +2807,7 @@ msgstr "Video görüntüleyici: {0}"
 msgid "View all notifications"
 msgstr "Tüm bildirimleri görüntüle"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Öğe detaylarını görüntüle ve düzenle"
 
@@ -2814,8 +2819,8 @@ msgstr "Kontrolleri görüntüle"
 msgid "Voice recording is not supported in this browser"
 msgstr "Ses kaydı bu tarayıcıda desteklenmiyor"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "İzle"
 
@@ -2845,7 +2850,7 @@ msgstr "Bu bölüme erişiminiz yok."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Hesabınız {source} adresinden buraya taşındı. Orada silene kadar mesajlar ve bildirimler her iki sunucuya da ulaşabilir, bazı içerikleriniz eski sunucudan sunulmaya devam eder ve takipçileriniz sizi burada bulmak için birkaç dakika bekleyebilir."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Ekleriniz kaybolacak."
 
@@ -2853,11 +2858,11 @@ msgstr "Ekleriniz kaybolacak."
 msgid "Your preference"
 msgstr "Tercihin"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Metniniz ve ekleriniz kaybolacak."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Metniniz kaybolacak."
 

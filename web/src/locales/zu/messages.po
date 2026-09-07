@@ -30,6 +30,11 @@ msgstr "(nweba)"
 msgid "[not set]"
 msgstr "[akusethiwe]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {Umphumela #} other {Imiphumela #}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# elifakiwe} other {+# afakiwe}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {Kususwe inguqulo engu-# engasetshenziswa} other {Kususwe izinguqulo ezingu-# ezingasetshenziswa}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (intuthuko)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} kubuyekeziwe, {failed} kuhlulekile"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "I-{0} v{1} ifakiwe."
 
@@ -145,7 +150,7 @@ msgstr "Izinga lokufinyelela"
 msgid "Account type"
 msgstr "Uhlobo lwe-akhawunti"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Umsebenzi"
 
@@ -208,7 +213,7 @@ msgstr "Engeza inketho"
 msgid "Add tag..."
 msgstr "Engeza ithegi..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Engeza kuhla lwemibhalo"
 
@@ -231,7 +236,7 @@ msgstr "Iyengeza..."
 msgid "AI"
 msgstr "I-AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "Wonke ama-app abuyekeziwe"
 
@@ -269,13 +274,13 @@ msgstr "Noma ubani ongenile"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Konke okubhalisele lo mfudlana kuzoyeka ukukuthola. Ungakopisha i-URL entsha ngemva kwalokho."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "I-app"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "Izenzo ze-app"
 
@@ -283,11 +288,11 @@ msgstr "Izenzo ze-app"
 msgid "App information"
 msgstr "Imininingwane ye-app"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "I-app ifakiwe"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "I-app ifakwe ngempumelelo"
 
@@ -303,7 +308,7 @@ msgstr "I-ID yesicelo"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Ama-app"
 
@@ -312,7 +317,7 @@ msgstr "Ama-app"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Uqinisekile ufuna ukususa okuthi \"{0}\"?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Uqinisekile ufuna ukususa okuthi \"{title}\"? Lesi senzo asikwazi ukuhlehliswa."
 
@@ -340,11 +345,11 @@ msgstr "Uqinisekile ukuthi ufuna ukushiya? {opponentName} uzowina umdlalo."
 msgid "Ascending"
 msgstr "Ukukhuphuka"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Namathisela amafayela ombono"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Namathisela amafayela empendulo"
 
@@ -370,7 +375,7 @@ msgstr "Inguqulo etholakalayo:"
 msgid "Available versions:"
 msgstr "Izinguqulo ezitholakalayo:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Iyatholakala, kodwa ayifakiwe"
 
@@ -465,18 +470,18 @@ msgstr "Ikhamera ayitholakali"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Khansela"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Khansela umbono"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Khansela impendulo"
 
@@ -538,12 +543,12 @@ msgstr "Ukuqondisa kweklasi"
 msgid "Classes"
 msgstr "Amaklasi"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Susa izinguqulo ezingasebenzi"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Kususwa..."
 
@@ -641,8 +646,8 @@ msgstr "Izenzo zokuphawula"
 msgid "Comments"
 msgstr "Imibono"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Amazwana ({0})"
 
@@ -703,10 +708,10 @@ msgstr "Kukopishelwe kwi-clipboard"
 msgid "Copy"
 msgstr "Kopisha"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "Ayikwazanga ukufaka i-app."
 
@@ -838,7 +843,7 @@ msgstr "Itrack ezenzakalelayo (inguqulo {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Susa"
@@ -863,9 +868,9 @@ msgstr "Susa inkambu"
 msgid "Delete game?"
 msgstr "Susa umdlalo?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Susa into"
 
@@ -926,7 +931,7 @@ msgstr "Iphaneli Yemininingwane"
 msgid "Detect from web browser"
 msgstr "Bona kusuka kubhrawuza ye-web"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Ama-app okuthuthuka"
 
@@ -934,11 +939,11 @@ msgstr "Ama-app okuthuthuka"
 msgid "Directory"
 msgstr "Uhlu"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Lahla"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Lahla uhlaka?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Ayihambisani nephethini edingekayo"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Kwenziwe"
@@ -1052,7 +1057,7 @@ msgstr "Faka ikhodi yakho yesiqinisekisi"
 msgid "Entity:"
 msgstr "Uhlaka:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Iphutha"
 
@@ -1079,7 +1084,7 @@ msgstr "Okukhulu kakhulu"
 msgid "Failed to add account"
 msgstr "Kuhlulekile ukungeza i-akhawunti"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "Yehlulekile ukuhlanza ama-app"
 
@@ -1133,8 +1138,8 @@ msgstr "Kuhlulekile ukulayisha umlando"
 msgid "Failed to load image"
 msgstr "Yehlulekile ukulayisha isithombe"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Kuhlulekile ukulayisha into"
 
@@ -1174,7 +1179,7 @@ msgstr "Kuhlulekile ukulondoloza"
 msgid "Failed to save prompt"
 msgstr "Kuhlulekile ukulondoloza umyalo"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "Yehlulekile ukubuyekeza ama-app"
 
@@ -1207,7 +1212,7 @@ msgstr "Yehlulekile ukubuyekeza ukubuka"
 msgid "Failed to upload attachment"
 msgstr "Kuhlulekile ukulayisha okunanyathiselwe"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Ifayela:"
 
@@ -1251,7 +1256,7 @@ msgstr "Abangane"
 msgid "From"
 msgstr "Kusukela"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "Kusuka kuhla"
 
@@ -1347,40 +1352,40 @@ msgstr "I-avatar yezinhlamvu zokuqala ka-{name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Faka"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "Faka i-{0}?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Faka kusuka efayeleni"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Faka kusuka kumshicileli"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Izinhlelo ezifakiwe"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "Iyafakwa..."
 
@@ -1400,7 +1405,7 @@ msgstr "Idethi engalungile"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Kubonakala sengathi ikhasi olifunayo <0/>alikho noma lisusiwe."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Imininingwane yento"
 
@@ -1449,11 +1454,11 @@ msgstr "Layisha okuningi"
 msgid "Loading content…"
 msgstr "Ilayisha okuqukethwe…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Kulayishwa into"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Kulayishwa imininingwane yento"
 
@@ -1613,11 +1618,11 @@ msgstr "Awekho amarela okufinyelela acushiwe. Engeza amarela ukulawula ukuthi ub
 msgid "No activity yet"
 msgstr "Awukho umsebenzi okwamanje"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "Awekho ama-app angabuyekezwa."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Awekho ama-app afakiwe"
 
@@ -1629,11 +1634,11 @@ msgstr "Awekho amakilasi alungiselelwe."
 msgid "No comments yet"
 msgstr "Awekho amazwana okwamanje"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Ayikho incazelo"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Awekho ama-app okuthuthukisa afana ne\"{searchQuery}\""
 
@@ -1645,11 +1650,11 @@ msgstr "Ayikho imidlalo okwamanje"
 msgid "No groups available"
 msgstr "Awekho amaqembu atholakalayo"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Awekho ama-app angafakwa kumkhombandlela afana ne\"{searchQuery}\""
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Awekho ama-app afakiwe afana ne\"{searchQuery}\""
 
@@ -1657,12 +1662,12 @@ msgstr "Awekho ama-app afakiwe afana ne\"{searchQuery}\""
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Azikho izinhlobo zezinto ezingadalwa okwamanje. Dala izinto zomzali ezidingekayo kuqala."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Akukho okufanayo kuhlu"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Awekho ama-app afanayo"
 
@@ -1691,7 +1696,7 @@ msgstr "Azikho izimvume ezinikezwe le-app"
 msgid "No places found"
 msgstr "Azikho izindawo ezitholakele"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Aziyikho iziphakamiso ezitholakalayo"
 
@@ -1726,7 +1731,7 @@ msgstr "Awukho umbiko wesihloko okwamanje — zama futhi ngemva kwesaziso esilan
 msgid "No unread notifications"
 msgstr "Azikho izaziso ezingafundiwe"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Aziyikho izinguqulo ezingasetshenzisiwe ezizohlanzwa"
 
@@ -1742,10 +1747,10 @@ msgstr "Akukho ukubukwa"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Umnikazi"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Umzali"
 
@@ -1872,7 +1877,7 @@ msgstr "Ama-passkey"
 msgid "Passkeys are not available in this browser"
 msgstr "Ama-passkey awatholakali kule siphequluli"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Namathisela isixhumanisi sokufaka:"
 
@@ -1916,7 +1921,7 @@ msgstr "Izimvume"
 msgid "Please check your internet connection and try again."
 msgstr "Sicela uhlole uxhumano lwakho lwe-inthanethi bese uzama futhi."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Sicela ufake i-ID ye-app"
 
@@ -1962,7 +1967,7 @@ msgstr "Iyacutshungulwa…"
 msgid "Prompt saved"
 msgstr "Isikhuthazi silondoloziwe"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Izici"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Phinda ubhalise okhiye bakho bokungena kule seva"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "Kunconywayo"
 
@@ -2196,11 +2201,11 @@ msgstr "Kuyalondolozwa..."
 msgid "Search"
 msgstr "Sesha"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Sesha izinhlelo zokusebenza"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Sesha izinhlelo zokusebenza..."
 
@@ -2420,8 +2425,8 @@ msgstr "Ukukhula"
 msgid "Start the discussion by adding the first comment."
 msgstr "Qala ingxoxo ngokwengeza amazwana okuqala."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Misa ukubuka"
 
@@ -2429,11 +2434,11 @@ msgstr "Misa ukubuka"
 msgid "Subject"
 msgstr "Isihloko"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Hambisa amazwana"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Hambisa impendulo"
 
@@ -2505,7 +2510,7 @@ msgstr "Akukwazanga ukuthunyelwa. Amafayela angase abe makhulu kakhulu, noma uxh
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Bekukukhulu kakhulu ukuthi kulayishwe. Susa noma unciphise amafayela bese uzama futhi."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "Uhlelo lokusebenza lufakwe ngempumelelo."
 
@@ -2597,7 +2602,7 @@ msgstr "Izicelo eziningi kakhulu"
 msgid "Top"
 msgstr "Phezulu"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "I-track"
@@ -2644,7 +2649,7 @@ msgstr "Thayipha ukuze useshe..."
 msgid "Unable to connect to remote server"
 msgstr "Ayikwazi ukuxhuma kuseva ekude"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "Ayikwazi ukuxhumana nesevisi yezincomo"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Akwabelwanga"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "Akutholakali"
 
@@ -2697,15 +2702,15 @@ msgstr "Susa ukubhalisa"
 msgid "Untitled"
 msgstr "Akunasihloko"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Buyekeza"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Buyekeza konke"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Ukubuyekeza kuhlulekile"
 
@@ -2719,11 +2724,11 @@ msgstr "Kubuyekeziwe"
 msgid "Updated {field}"
 msgstr "Kubuyekezwe {field}"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Ibuyekeza ama-app..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Kuyabuyekezwa..."
 
@@ -2802,7 +2807,7 @@ msgstr "Isibonisi sevidiyo: {0}"
 msgid "View all notifications"
 msgstr "Buka zonke izaziso"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Buka futhi uhlele imininingwane yento"
 
@@ -2814,8 +2819,8 @@ msgstr "Buka izilawuli"
 msgid "Voice recording is not supported in this browser"
 msgstr "Ukuqopha izwi akusekelwe kulesi siphequluli"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Buka"
 
@@ -2845,7 +2850,7 @@ msgstr "Awunakho ukufinyelela kule ngxenye."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "I-akhawunti yakho isuswe lapha ivela ku-{source}. Uze uyisuse lapho, imilayezo nezaziso zingafika eziservereni zombili, ingxenye yomqukathi wakho iqhubeka inikezwa eservereni endala, futhi abalandeli bangathatha imizuzu embalwa ukukuthola lapha."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Okunamathiselwe kwakho kuzolahleka."
 
@@ -2853,11 +2858,11 @@ msgstr "Okunamathiselwe kwakho kuzolahleka."
 msgid "Your preference"
 msgstr "Okuthandayo"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Umbhalo nokunamathiselwe kwakho kuzolahleka."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Umbhalo wakho uzolahleka."
 

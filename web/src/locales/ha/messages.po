@@ -30,6 +30,11 @@ msgstr "(faɗaɗa)"
 msgid "[not set]"
 msgstr "[ba a saita ba]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {Sakamako #} other {Sakamako #}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# a ciki} other {+# a ciki}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {An cire sigar # da ba a amfani da ita} other {An cire sigogi # da ba a amfani da su}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (ci gaba)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} an sabunta, {failed} sun gaza"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "An shigar da {0} v{1}."
 
@@ -145,7 +150,7 @@ msgstr "Matakin shiga"
 msgid "Account type"
 msgstr "Nau'in asusu"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Aiki"
 
@@ -208,7 +213,7 @@ msgstr "Ƙara zaɓi"
 msgid "Add tag..."
 msgstr "Ƙara tag..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Ƙara cikin directory"
 
@@ -231,7 +236,7 @@ msgstr "Ana ƙarawa..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "An sabunta duk apps"
 
@@ -269,13 +274,13 @@ msgstr "Duk wanda ya shiga"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Duk abin da ya biyan kuɗin wannan ciyarwar zai daina karɓarta. Za ka iya kwafi sabon URL bayan haka."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "App"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "Ayyukan app"
 
@@ -283,11 +288,11 @@ msgstr "Ayyukan app"
 msgid "App information"
 msgstr "Bayanin app"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "An shigar da app"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "An yi nasarar shigar da manhaja"
 
@@ -303,7 +308,7 @@ msgstr "Application ID"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Apps"
 
@@ -312,7 +317,7 @@ msgstr "Apps"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Ka tabbata kana son goge \"{0}\"?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Ka tabbata kana son goge \"{title}\"? Ba za a iya juya wannan aiki ba."
 
@@ -340,11 +345,11 @@ msgstr "Kana da tabbacin kana son mika wuya? {opponentName} zai lashe wasan."
 msgid "Ascending"
 msgstr "Hawa sama"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Haɗa fayilolin sharhi"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Haɗa fayilolin amsa"
 
@@ -370,7 +375,7 @@ msgstr "Sigar da ake da ita:"
 msgid "Available versions:"
 msgstr "Sigogi da ake da su:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Ana samu, amma ba a shigar ba"
 
@@ -465,18 +470,18 @@ msgstr "Babu kyamara"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Soke"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Soke sharhi"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Soke amsa"
 
@@ -538,12 +543,12 @@ msgstr "Class routing"
 msgid "Classes"
 msgstr "Classes"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Tsabtace sigogi da ba a amfani da su"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Ana tsabtacewa..."
 
@@ -641,8 +646,8 @@ msgstr "Ayyukan sharhi"
 msgid "Comments"
 msgstr "Sharhi"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Sharhi ({0})"
 
@@ -703,10 +708,10 @@ msgstr "An kwafi zuwa clipboard"
 msgid "Copy"
 msgstr "Kwafi"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "Ba a iya shigar da manhajar ba."
 
@@ -838,7 +843,7 @@ msgstr "Tsohon hanya (sigar {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Goge"
@@ -863,9 +868,9 @@ msgstr "Goge fili"
 msgid "Delete game?"
 msgstr "A goge wasan?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Goge abu"
 
@@ -926,7 +931,7 @@ msgstr "Panel na cikakkun bayanai"
 msgid "Detect from web browser"
 msgstr "Gano daga web browser"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Apps na ci gaba"
 
@@ -934,11 +939,11 @@ msgstr "Apps na ci gaba"
 msgid "Directory"
 msgstr "Jerin suna"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Watsar"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "A watsar da daftarin?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Bai dace da tsarin da ake buƙata ba"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "An gama"
@@ -1052,7 +1057,7 @@ msgstr "Shigar da lambar mai tantancewarka"
 msgid "Entity:"
 msgstr "Hukuma:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Kuskure"
 
@@ -1079,7 +1084,7 @@ msgstr "Babba sosai"
 msgid "Failed to add account"
 msgstr "An gaza ƙara account"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "An gaza tsabtace manhajoji"
 
@@ -1133,8 +1138,8 @@ msgstr "An gaza loading tarihi"
 msgid "Failed to load image"
 msgstr "An kasa loda hoton"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "An gaza loading abu"
 
@@ -1174,7 +1179,7 @@ msgstr "An gaza ajiyewa"
 msgid "Failed to save prompt"
 msgstr "An gaza ajiye prompt"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "An gaza sabunta manhajoji"
 
@@ -1207,7 +1212,7 @@ msgstr "An kasa sabunta sa ido"
 msgid "Failed to upload attachment"
 msgstr "An gaza upload attachment"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Fayil:"
 
@@ -1251,7 +1256,7 @@ msgstr "Abokai"
 msgid "From"
 msgstr "Daga"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "Daga directory"
 
@@ -1347,40 +1352,40 @@ msgstr "Avatar na baƙaƙen farko na {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Shigar da"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "Shigar da {0}?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Shigar daga fayil"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Shigar daga publisher"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Apps ɗin da aka shigar"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "Ana shigarwa..."
 
@@ -1400,7 +1405,7 @@ msgstr "Kwanan wata mara inganci"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Da alama shafin da kake nema <0/>babu shi ko an cire shi."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Bayanan abu"
 
@@ -1449,11 +1454,11 @@ msgstr "Saukar da ƙari"
 msgid "Loading content…"
 msgstr "Ana loda abun ciki…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Ana saukar da abu"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Ana saukar da bayanan abu"
 
@@ -1613,11 +1618,11 @@ msgstr "Ba a saita ka'idojin shiga ba. Ƙara ka'idoji don sarrafa wanda zai iya 
 msgid "No activity yet"
 msgstr "Babu aiki tukuna"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "Babu apps da za a iya sabunta."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Babu apps da aka shigar"
 
@@ -1629,11 +1634,11 @@ msgstr "Babu azuzuwan da aka tsara."
 msgid "No comments yet"
 msgstr "Babu sharhi tukuna"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Babu bayani"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Babu app na ci gaba da suka dace da \"{searchQuery}\""
 
@@ -1645,11 +1650,11 @@ msgstr "Babu wasanni tukuna"
 msgid "No groups available"
 msgstr "Babu ƙungiyoyi"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Babu app da ake iya shigarwa a cikin lissafi waɗanda suka dace da \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Babu app da aka shigar da suka dace da \"{searchQuery}\""
 
@@ -1657,12 +1662,12 @@ msgstr "Babu app da aka shigar da suka dace da \"{searchQuery}\""
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Ba a iya ƙirƙirar nau'o'in abubuwa tukuna. Fara ƙirƙirar parent items da ake buƙata."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Babu matches a directory"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Babu apps masu daidai"
 
@@ -1691,7 +1696,7 @@ msgstr "Ba a ba da izini ga wannan app ba"
 msgid "No places found"
 msgstr "Babu wurare da aka samu"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Babu shawarwari"
 
@@ -1726,7 +1731,7 @@ msgstr "Babu rikodin topic tukuna — sake gwadawa bayan sanarwa ta gaba."
 msgid "No unread notifications"
 msgstr "Babu sanarwa marasa karantawa"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Babu nau'o'in da ba a yi amfani da su ba"
 
@@ -1742,10 +1747,10 @@ msgstr "Babu views"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Mai shi"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Iyaye"
 
@@ -1872,7 +1877,7 @@ msgstr "Makullan shiga"
 msgid "Passkeys are not available in this browser"
 msgstr "Passkeys ba sa samuwa a wannan burauzar"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Liƙa link na shigarwa:"
 
@@ -1916,7 +1921,7 @@ msgstr "Izini"
 msgid "Please check your internet connection and try again."
 msgstr "Da fatan a duba haɗin intanet ɗinka sannan a sake gwadawa."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Da fatan shigar da app ID"
 
@@ -1962,7 +1967,7 @@ msgstr "Ana sarrafawa…"
 msgid "Prompt saved"
 msgstr "An adana prompt"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Halaye"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Sake yin rajistar makullan shiga naka a wannan uwar garken"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "An ba da shawara"
 
@@ -2196,11 +2201,11 @@ msgstr "Ana adanawa..."
 msgid "Search"
 msgstr "Bincika"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Bincika apps"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Bincika apps..."
 
@@ -2420,8 +2425,8 @@ msgstr "Faffaka"
 msgid "Start the discussion by adding the first comment."
 msgstr "Fara tattaunawa ta hanyar ƙara sharhi na farko."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Daina kallo"
 
@@ -2429,11 +2434,11 @@ msgstr "Daina kallo"
 msgid "Subject"
 msgstr "Batu"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Aika sharhi"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Aika amsa"
 
@@ -2505,7 +2510,7 @@ msgstr "Ba a iya aikawa ba. Wataƙila fayilolin sun yi girma, ko haɗinka ya gaz
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Ya yi girma da yawa don lodawa. Cire ko rage fayiloli ka sake gwadawa."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "An shigar da app cikin nasara."
 
@@ -2597,7 +2602,7 @@ msgstr "Buƙatu sun yi yawa"
 msgid "Top"
 msgstr "Sama"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
@@ -2644,7 +2649,7 @@ msgstr "Buga don bincika..."
 msgid "Unable to connect to remote server"
 msgstr "An kasa haɗawa da saba mai nesa"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "Ba a iya haɗa zuwa service na shawarwari"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Ba a sanya wa kowa"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "Ba ya samuwa"
 
@@ -2697,15 +2702,15 @@ msgstr "Cire subscribe"
 msgid "Untitled"
 msgstr "Ba shi da suna"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Sabunta"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Sabunta duka"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Sabuntawa ya gaza"
 
@@ -2719,11 +2724,11 @@ msgstr "An sabunta"
 msgid "Updated {field}"
 msgstr "An sabunta {field}"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Ana sabunta manhajoji..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Ana sabuntawa..."
 
@@ -2802,7 +2807,7 @@ msgstr "Mai duba bidiyo: {0}"
 msgid "View all notifications"
 msgstr "Kalli duk sanarwa"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Kalla kuma gyara cikakkun bayanan abu"
 
@@ -2814,8 +2819,8 @@ msgstr "View controls"
 msgid "Voice recording is not supported in this browser"
 msgstr "Ba a goyon bayan rikodin murya a wannan burauzar ba"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Kalle"
 
@@ -2845,7 +2850,7 @@ msgstr "Ba ka da damar shiga wannan sashe ba."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "An ƙauri asusunka zuwa nan daga {source}. Sai ka goge shi a can, saƙonni da sanarwa na iya kai ga uwar garken biyu, wasu abubuwan ka suna ci gaba da samarwa daga tsohon uwar garken, kuma mabiyanka na iya ɗaukar 'yan mintoci don su same ka nan."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Za a rasa fayilolin da ka makala."
 
@@ -2853,11 +2858,11 @@ msgstr "Za a rasa fayilolin da ka makala."
 msgid "Your preference"
 msgstr "Zaɓinka"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Za a rasa rubutunka da fayilolin da ka makala."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Rubutunka zai ɓace."
 

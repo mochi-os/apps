@@ -30,6 +30,11 @@ msgstr "(সম্প্রসারণ)"
 msgid "[not set]"
 msgstr "[সেট নয়]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# ফলাফল} other {# ফলাফল}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# নেস্টেড} other {+# নেস্টেড}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# অব্যবহৃত সংস্করণ সরানো হয়েছে} other {# অব্যবহৃত সংস্করণ সরানো হয়েছে}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (ডেভেলপমেন্ট)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} আপডেট হয়েছে, {failed} ব্যর্থ হয়েছে"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} ইনস্টল করা হয়েছে।"
 
@@ -145,7 +150,7 @@ msgstr "অ্যাক্সেস লেভেল"
 msgid "Account type"
 msgstr "অ্যাকাউন্টের ধরন"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "কার্যকলাপ"
 
@@ -208,7 +213,7 @@ msgstr "অপশন যোগ করুন"
 msgid "Add tag..."
 msgstr "ট্যাগ যোগ করুন..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "ডিরেক্টরিতে যোগ করুন"
 
@@ -231,7 +236,7 @@ msgstr "যোগ করা হচ্ছে..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "সব অ্যাপ আপডেট হয়েছে"
 
@@ -269,13 +274,13 @@ msgstr "যে কেউ লগ ইন করেছেন"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "এই ফিডে সাবস্ক্রাইব করা সবকিছু এটি পাওয়া বন্ধ করবে। পরে আপনি একটি নতুন URL কপি করতে পারেন।"
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "অ্যাপ"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "অ্যাপ অ্যাকশন"
 
@@ -283,11 +288,11 @@ msgstr "অ্যাপ অ্যাকশন"
 msgid "App information"
 msgstr "অ্যাপ তথ্য"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "অ্যাপ ইনস্টল হয়েছে"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "অ্যাপ সফলভাবে ইনস্টল হয়েছে"
 
@@ -303,7 +308,7 @@ msgstr "অ্যাপ্লিকেশন ID"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "অ্যাপস"
 
@@ -312,7 +317,7 @@ msgstr "অ্যাপস"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "আপনি কি নিশ্চিত \"{0}\" মুছতে চান?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "আপনি কি নিশ্চিত \"{title}\" মুছতে চান? এই অ্যাকশন পূর্বাবস্থায় ফেরানো যাবে না।"
 
@@ -340,11 +345,11 @@ msgstr "আপনি কি নিশ্চিত যে আপনি হার 
 msgid "Ascending"
 msgstr "ঊর্ধ্বক্রম"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "মন্তব্যের ফাইল সংযুক্ত করুন"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "উত্তরের ফাইল সংযুক্ত করুন"
 
@@ -370,7 +375,7 @@ msgstr "উপলব্ধ সংস্করণ:"
 msgid "Available versions:"
 msgstr "উপলব্ধ সংস্করণসমূহ:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "উপলব্ধ, কিন্তু ইনস্টল করা নেই"
 
@@ -465,18 +470,18 @@ msgstr "ক্যামেরা অনুপলব্ধ"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "বাতিল করুন"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "মন্তব্য বাতিল করুন"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "উত্তর বাতিল করুন"
 
@@ -538,12 +543,12 @@ msgstr "ক্লাস রাউটিং"
 msgid "Classes"
 msgstr "ক্লাস"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "অব্যবহৃত সংস্করণ পরিষ্কার করুন"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "পরিষ্কার করা হচ্ছে..."
 
@@ -641,8 +646,8 @@ msgstr "মন্তব্যের ক্রিয়া"
 msgid "Comments"
 msgstr "মন্তব্য"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "মন্তব্য ({0})"
 
@@ -703,10 +708,10 @@ msgstr "ক্লিপবোর্ডে কপি করা হয়েছে
 msgid "Copy"
 msgstr "কপি করুন"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "অ্যাপ ইনস্টল করা যায়নি।"
 
@@ -838,7 +843,7 @@ msgstr "ডিফল্ট ট্র্যাক (সংস্করণ {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "মুছুন"
@@ -863,9 +868,9 @@ msgstr "ফিল্ড মুছুন"
 msgid "Delete game?"
 msgstr "গেম মুছবেন?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "আইটেম মুছুন"
 
@@ -926,7 +931,7 @@ msgstr "বিবরণ প্যানেল"
 msgid "Detect from web browser"
 msgstr "ওয়েব ব্রাউজার থেকে শনাক্ত করুন"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "ডেভেলপমেন্ট অ্যাপ"
 
@@ -934,11 +939,11 @@ msgstr "ডেভেলপমেন্ট অ্যাপ"
 msgid "Directory"
 msgstr "ডিরেক্টরি"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "বাতিল করুন"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "খসড়া বাতিল করবেন?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "প্রয়োজনীয় প্যাটার্নের সঙ্গে মেলে না"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "সম্পন্ন"
@@ -1052,7 +1057,7 @@ msgstr "আপনার প্রমাণীকরণকারী কোড ল
 msgid "Entity:"
 msgstr "ইউনিট:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "ত্রুটি"
 
@@ -1079,7 +1084,7 @@ msgstr "অতিরিক্ত বড়"
 msgid "Failed to add account"
 msgstr "অ্যাকাউন্ট যোগ করতে ব্যর্থ"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "অ্যাপ পরিষ্কার করা যায়নি"
 
@@ -1133,8 +1138,8 @@ msgstr "ইতিহাস লোড করতে ব্যর্থ"
 msgid "Failed to load image"
 msgstr "ছবি লোড করা যায়নি"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "আইটেম লোড করতে ব্যর্থ"
 
@@ -1174,7 +1179,7 @@ msgstr "সংরক্ষণ করতে ব্যর্থ"
 msgid "Failed to save prompt"
 msgstr "প্রম্পট সংরক্ষণ করতে ব্যর্থ"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "অ্যাপ আপডেট করা যায়নি"
 
@@ -1207,7 +1212,7 @@ msgstr "পর্যবেক্ষণ আপডেট ব্যর্থ"
 msgid "Failed to upload attachment"
 msgstr "সংযুক্তি আপলোড করতে ব্যর্থ"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "ফাইল:"
 
@@ -1251,7 +1256,7 @@ msgstr "বন্ধুরা"
 msgid "From"
 msgstr "থেকে"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "ডিরেক্টরি থেকে"
 
@@ -1347,40 +1352,40 @@ msgstr "{name}-এর আদ্যক্ষর অবতার"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "ইনস্টল করুন"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "{0} ইনস্টল করবেন?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "ফাইল থেকে ইনস্টল করুন"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "পাবলিশার থেকে ইনস্টল করুন"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "ইনস্টল করা অ্যাপ"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "ইনস্টল হচ্ছে..."
 
@@ -1400,7 +1405,7 @@ msgstr "অবৈধ তারিখ"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "আপনি যে পৃষ্ঠাটি খুঁজছেন <0/>সেটি নেই বা সরিয়ে ফেলা হয়েছে।"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "আইটেমের বিবরণ"
 
@@ -1449,11 +1454,11 @@ msgstr "আরও লোড করুন"
 msgid "Loading content…"
 msgstr "কন্টেন্ট লোড হচ্ছে…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "আইটেম লোড হচ্ছে"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "আইটেমের বিবরণ লোড হচ্ছে"
 
@@ -1613,11 +1618,11 @@ msgstr "কোনো অ্যাক্সেস নিয়ম কনফিগ
 msgid "No activity yet"
 msgstr "এখনও কোনো কার্যকলাপ নেই"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "কোনো অ্যাপ আপডেট করা যায়নি।"
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "কোনো অ্যাপ ইনস্টল করা নেই"
 
@@ -1629,11 +1634,11 @@ msgstr "কোনো শ্রেণী কনফিগার করা হয�
 msgid "No comments yet"
 msgstr "এখনও কোনো মন্তব্য নেই"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "কোনো বিবরণ নেই"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "কোনো ডেভেলপমেন্ট অ্যাপ \"{searchQuery}\" এর সাথে মেলে না"
 
@@ -1645,11 +1650,11 @@ msgstr "এখনও কোনো গেম নেই"
 msgid "No groups available"
 msgstr "কোনো গ্রুপ উপলব্ধ নেই"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "ডিরেক্টরিতে \"{searchQuery}\" এর সাথে মিলে এমন কোনো ইনস্টলযোগ্য অ্যাপ নেই"
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "কোনো ইনস্টল করা অ্যাপ \"{searchQuery}\" এর সাথে মেলে না"
 
@@ -1657,12 +1662,12 @@ msgstr "কোনো ইনস্টল করা অ্যাপ \"{searchQuery
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "এখনও কোনো আইটেম টাইপ তৈরি করা যাবে না। প্রথমে প্রয়োজনীয় প্যারেন্ট আইটেম তৈরি করুন।"
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "ডিরেক্টরিতে কোনো মিল নেই"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "কোনো মিলে যাওয়া অ্যাপ নেই"
 
@@ -1691,7 +1696,7 @@ msgstr "এই অ্যাপে কোনো অনুমতি প্রদ�
 msgid "No places found"
 msgstr "কোনো স্থান পাওয়া যায়নি"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "কোনো সুপারিশ উপলব্ধ নেই"
 
@@ -1726,7 +1731,7 @@ msgstr "এখনও কোনো বিষয়ের রেকর্ড ন�
 msgid "No unread notifications"
 msgstr "কোনো অপঠিত বিজ্ঞপ্তি নেই"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "পরিষ্কার করার মতো কোনো অব্যবহৃত সংস্করণ নেই"
 
@@ -1742,10 +1747,10 @@ msgstr "কোনো ভিউ নেই"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "মালিক"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "প্যারেন্ট"
 
@@ -1872,7 +1877,7 @@ msgstr "পাসকি"
 msgid "Passkeys are not available in this browser"
 msgstr "এই ব্রাউজারে পাসকি উপলব্ধ নেই"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "ইনস্টল লিঙ্কটি পেস্ট করুন:"
 
@@ -1916,7 +1921,7 @@ msgstr "অনুমতি"
 msgid "Please check your internet connection and try again."
 msgstr "অনুগ্রহ করে আপনার ইন্টারনেট সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।"
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "অনুগ্রহ করে একটি অ্যাপ আইডি লিখুন"
 
@@ -1962,7 +1967,7 @@ msgstr "প্রক্রিয়াকরণ চলছে…"
 msgid "Prompt saved"
 msgstr "প্রম্পট সংরক্ষণ করা হয়েছে"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "বৈশিষ্ট্য"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "এই সার্ভারে আপনার পাসকি পুনরায় নিবন্ধন করুন"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "সুপারিশকৃত"
 
@@ -2196,11 +2201,11 @@ msgstr "সংরক্ষণ করা হচ্ছে..."
 msgid "Search"
 msgstr "অনুসন্ধান"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "অ্যাপ অনুসন্ধান করুন"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "অ্যাপ অনুসন্ধান করুন..."
 
@@ -2420,8 +2425,8 @@ msgstr "প্রশস্ত"
 msgid "Start the discussion by adding the first comment."
 msgstr "প্রথম মন্তব্য যোগ করে আলোচনা শুরু করুন।"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "দেখা বন্ধ করুন"
 
@@ -2429,11 +2434,11 @@ msgstr "দেখা বন্ধ করুন"
 msgid "Subject"
 msgstr "বিষয়"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "মন্তব্য জমা দিন"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "জবাব জমা দিন"
 
@@ -2505,7 +2510,7 @@ msgstr "পাঠানো যায়নি। ফাইলগুলি খু
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "আপলোডের জন্য খুব বড় ছিল। ফাইল সরান বা ছোট করুন এবং আবার চেষ্টা করুন।"
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "অ্যাপটি সফলভাবে ইনস্টল করা হয়েছে।"
 
@@ -2597,7 +2602,7 @@ msgstr "অনেক বেশি অনুরোধ"
 msgid "Top"
 msgstr "উপরে"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
@@ -2644,7 +2649,7 @@ msgstr "অনুসন্ধান করতে টাইপ করুন..."
 msgid "Unable to connect to remote server"
 msgstr "দূরবর্তী সার্ভারে সংযোগ করা যায়নি"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "সুপারিশ সার্ভিসে সংযোগ করা যাচ্ছে না"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "অ্যাসাইন করা হয়নি"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "অনুপলব্ধ"
 
@@ -2697,15 +2702,15 @@ msgstr "আনসাবস্ক্রাইব করুন"
 msgid "Untitled"
 msgstr "শিরোনামহীন"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "আপডেট"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "সব আপডেট করুন"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "আপডেট ব্যর্থ হয়েছে"
 
@@ -2719,11 +2724,11 @@ msgstr "আপডেট হয়েছে"
 msgid "Updated {field}"
 msgstr "{field} হালনাগাদ করা হয়েছে"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "অ্যাপ আপডেট করা হচ্ছে..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "আপডেট করা হচ্ছে..."
 
@@ -2802,7 +2807,7 @@ msgstr "ভিডিও দর্শক: {0}"
 msgid "View all notifications"
 msgstr "সব নোটিফিকেশন দেখুন"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "আইটেমের বিস্তারিত দেখুন এবং সম্পাদনা করুন"
 
@@ -2814,8 +2819,8 @@ msgstr "কন্ট্রোল দেখুন"
 msgid "Voice recording is not supported in this browser"
 msgstr "এই ব্রাউজারে ভয়েস রেকর্ডিং সমর্থিত নয়"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "দেখুন"
 
@@ -2845,7 +2850,7 @@ msgstr "এই বিভাগে আপনার অ্যাক্সেস �
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "আপনার অ্যাকাউন্ট {source} থেকে এখানে স্থানান্তরিত হয়েছে। আপনি সেখানে এটি মুছে না দেওয়া পর্যন্ত, বার্তা ও বিজ্ঞপ্তি উভয় সার্ভারে পৌঁছাতে পারে, আপনার কিছু বিষয়বস্তু পুরানো সার্ভার থেকে পরিবেশিত হতে পারে, এবং অনুসরণকারীদের আপনাকে এখানে খুঁজে পেতে কয়েক মিনিট লাগতে পারে।"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "আপনার সংযুক্তিগুলি হারিয়ে যাবে।"
 
@@ -2853,11 +2858,11 @@ msgstr "আপনার সংযুক্তিগুলি হারিয়�
 msgid "Your preference"
 msgstr "আপনার পছন্দ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "আপনার লেখা ও সংযুক্তিগুলি হারিয়ে যাবে।"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "আপনার লেখা হারিয়ে যাবে।"
 

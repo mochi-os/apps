@@ -30,6 +30,11 @@ msgstr "(پراخول)"
 msgid "[not set]"
 msgstr "[نه دی ټاکل شوی]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# پایله} other {# پایلې}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# فرعي} other {+# فرعي}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# ناکارول شوې نسخه لرې شوه} other {# ناکارول شوې نسخې لرې شوې}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (پرمختیا)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} نوي شول، {failed} ناکام شول"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} نصب شو."
 
@@ -145,7 +150,7 @@ msgstr "د لاسرسي کچه"
 msgid "Account type"
 msgstr "د حساب ډول"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "فعالیت"
 
@@ -208,7 +213,7 @@ msgstr "اختیار اضافه کړئ"
 msgid "Add tag..."
 msgstr "ټاګ اضافه کړئ..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "ډایرکټرۍ ته اضافه کړئ"
 
@@ -231,7 +236,7 @@ msgstr "اضافه کول..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "ټول اپلیکیشنونه نوي شول"
 
@@ -269,13 +274,13 @@ msgstr "هر څوک چې ننوتی وي"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "هر څه چې دې فیډ ته ګډون کړی، ترلاسه کول به ودروي. وروسته تاسو کولی شئ نوی URL کاپي کړئ."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "اپلیکیشن"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "د اپلیکیشن کړنې"
 
@@ -283,11 +288,11 @@ msgstr "د اپلیکیشن کړنې"
 msgid "App information"
 msgstr "د اپلیکیشن معلومات"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "اپلیکیشن نصب شو"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "اپلیکیشن په بریالیتوب سره نصب شو"
 
@@ -303,7 +308,7 @@ msgstr "د غوښتنلیک ID"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "اپلیکیشنونه"
 
@@ -312,7 +317,7 @@ msgstr "اپلیکیشنونه"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "ایا تاسو ډاډه یاست چې غواړئ \"{0}\" ړنګ کړئ؟"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "ایا تاسو ډاډه یاست چې غواړئ \"{title}\" ړنګ کړئ؟ دا کړنه نشي بیرته اخیستل کیدلی."
 
@@ -340,11 +345,11 @@ msgstr "ایا تاسو ډاډه یاست چې غواړئ استعفا ورکړ�
 msgid "Ascending"
 msgstr "د کم څخه ډېر"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "د تبصرې فایلونه ضمیمه کړئ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "د ځواب فایلونه ضمیمه کړئ"
 
@@ -370,7 +375,7 @@ msgstr "موجوده نسخه:"
 msgid "Available versions:"
 msgstr "موجودې نسخې:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "موجود، خو نه نصب"
 
@@ -465,18 +470,18 @@ msgstr "کامره شتون نلري"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "لغوه کول"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "تبصره لغوه کړه"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "ځواب لغوه کړه"
 
@@ -538,12 +543,12 @@ msgstr "د ټولګي مسیر"
 msgid "Classes"
 msgstr "ټولګي"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "نه کارول شوې نسخې پاکې کړئ"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "پاکول کیږي..."
 
@@ -641,8 +646,8 @@ msgstr "د تبصرې کړنې"
 msgid "Comments"
 msgstr "تبصرې"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "تبصرې ({0})"
 
@@ -703,10 +708,10 @@ msgstr "په کلیپ بورډ کاپي شو"
 msgid "Copy"
 msgstr "کاپي کړئ"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "اپلیکېشن ونه نصبېدلو."
 
@@ -838,7 +843,7 @@ msgstr "ډیفالټ Track (نسخه {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "ړنګ کړئ"
@@ -863,9 +868,9 @@ msgstr "ساحه ړنګه کړئ"
 msgid "Delete game?"
 msgstr "لوبه ړنګه شي؟"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "توکی ړنګ کړئ"
 
@@ -926,7 +931,7 @@ msgstr "د تفصیلاتو پینل"
 msgid "Detect from web browser"
 msgstr "د ویب براوزر څخه ومومئ"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "د پراختیا اپلیکیشنونه"
 
@@ -934,11 +939,11 @@ msgstr "د پراختیا اپلیکیشنونه"
 msgid "Directory"
 msgstr "لارښود"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "ړنګول"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "مسوده ړنګه شي؟"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "د اړین نمونې سره سمون نه خوري"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "ترسره شو"
@@ -1052,7 +1057,7 @@ msgstr "د خپل تصدیق کوونکي کوډ دننه کړئ"
 msgid "Entity:"
 msgstr "موجودیت:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "تېروتنه"
 
@@ -1079,7 +1084,7 @@ msgstr "ډېر لوی"
 msgid "Failed to add account"
 msgstr "د حساب اضافه کولو پاتې راغلل"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "اپلیکیشنونه پاک نه شول"
 
@@ -1133,8 +1138,8 @@ msgstr "د تاریخچې د بار کولو پاتې راغلل"
 msgid "Failed to load image"
 msgstr "انځور بار نه شو"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "د توکي د بار کولو پاتې راغلل"
 
@@ -1174,7 +1179,7 @@ msgstr "د خوندي کولو پاتې راغلل"
 msgid "Failed to save prompt"
 msgstr "د prompt د خوندي کولو پاتې راغلل"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "اپلیکیشنونه تازه نه شول"
 
@@ -1207,7 +1212,7 @@ msgstr "د څارنې تازه کول ناکام شول"
 msgid "Failed to upload attachment"
 msgstr "د ضمیمې اپلوډ پاتې راغلل"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "فایل:"
 
@@ -1251,7 +1256,7 @@ msgstr "ملګري"
 msgid "From"
 msgstr "له"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "له ډایرکټري"
 
@@ -1347,40 +1352,40 @@ msgstr "د {name} لپاره د لومړنیو تورو اوتار"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "نصب کړئ"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "{0} نصب کړئ؟"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "له فایل څخه نصب کړئ"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "د خپروونکي څخه نصب کړئ"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "نصب شوي اپلیکیشنونه"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "نصبیږي..."
 
@@ -1400,7 +1405,7 @@ msgstr "ناسمه نېټه"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "داسې ښکاري چې هغه مخ چې تاسو یې لټوئ <0/>شتون نلري یا لرې شوی دی."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "د توکي جزئیات"
 
@@ -1449,11 +1454,11 @@ msgstr "نور بار کړئ"
 msgid "Loading content…"
 msgstr "منځپانګه بارېږي…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "توکی بار کیږي"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "د توکي جزئیات بار کیږي"
 
@@ -1613,11 +1618,11 @@ msgstr "د لاسرسي قاعدې نه دي تنظیم شوې. د دې سرچی
 msgid "No activity yet"
 msgstr "تر اوسه هیڅ فعالیت نشته"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "هیڅ ایپ نشو تازه کیدلی."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "هیڅ ایپ نه دی نصب شوی"
 
@@ -1629,11 +1634,11 @@ msgstr "هیڅ ټولګي نه دي تنظیم شوي."
 msgid "No comments yet"
 msgstr "تر اوسه هیڅ تبصرې نشته"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "تفصیل نشته"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "هیڅ پراختیایي ایپ د \"{searchQuery}\" سره سمون نه خوري"
 
@@ -1645,11 +1650,11 @@ msgstr "تر اوسه هیڅ لوبې نشته"
 msgid "No groups available"
 msgstr "هیڅ ډلې شتون نلري"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "په لارښود کې د نصب وړ هیڅ ایپ د \"{searchQuery}\" سره سمون نه خوري"
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "هیڅ نصب شوی ایپ د \"{searchQuery}\" سره سمون نه خوري"
 
@@ -1657,12 +1662,12 @@ msgstr "هیڅ نصب شوی ایپ د \"{searchQuery}\" سره سمون نه خ
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "تر اوسه د توکو ډولونه نشي جوړیدلی. لومړی اړین مور توکي جوړ کړئ."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "په لارښود کې هیڅ سمون نشته"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "هیڅ سمونوال ایپ نشته"
 
@@ -1691,7 +1696,7 @@ msgstr "دې ایپ ته هیڅ اجازې نه دي ورکړل شوې"
 msgid "No places found"
 msgstr "هیڅ ځایونه ونه موندل شول"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "هیڅ سپارښتنې شتون نلري"
 
@@ -1726,7 +1731,7 @@ msgstr "تر اوسه د موضوع هیڅ ریکارډ نشته — د راتل
 msgid "No unread notifications"
 msgstr "هیڅ نه لوستل شوې خبرتیاوې نشته"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "د پاکولو لپاره هیڅ نه کارول شوې نسخې نشته"
 
@@ -1742,10 +1747,10 @@ msgstr "هیڅ کتنې نشته"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "مالک"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "مور"
 
@@ -1872,7 +1877,7 @@ msgstr "د لاسرسي کيلۍ"
 msgid "Passkeys are not available in this browser"
 msgstr "Passkeys په دې براوزر کې شتون نلري"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "د نصب لینک پیسټ کړئ:"
 
@@ -1916,7 +1921,7 @@ msgstr "اجازې"
 msgid "Please check your internet connection and try again."
 msgstr "مهرباني وکړئ خپل د انټرنیټ اړیکه وګورئ او بیا هڅه وکړئ."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "مهرباني وکړئ د ایپ ID دننه کړئ"
 
@@ -1962,7 +1967,7 @@ msgstr "پروسس کیږي…"
 msgid "Prompt saved"
 msgstr "پرامپټ خوندي شو"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "ځانګړتیاوې"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "خپل د لاسرسي کيلۍ پدې سرور کې بیا ثبت کړئ"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "سپارښتل شوی"
 
@@ -2196,11 +2201,11 @@ msgstr "د خوندي کولو په حال کې..."
 msgid "Search"
 msgstr "لټون"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "ایپس وپلټئ"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "ایپس وپلټئ..."
 
@@ -2420,8 +2425,8 @@ msgstr "پراخه"
 msgid "Start the discussion by adding the first comment."
 msgstr "د لومړۍ تبصرې اضافه کولو سره بحث پیل کړئ."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "کتل بند کړئ"
 
@@ -2429,11 +2434,11 @@ msgstr "کتل بند کړئ"
 msgid "Subject"
 msgstr "موضوع"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "تبصره وسپارئ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "ځواب وسپارئ"
 
@@ -2505,7 +2510,7 @@ msgstr "لېږل ونه شول. کېدای شي دوتنې ډېرې لویې و�
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "د پورته کولو لپاره ډېر لوی و. دوتنې لرې کړئ یا کوچنۍ کړئ او بیا هڅه وکړئ."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "اپ په بریالیتوب سره نصب شو."
 
@@ -2597,7 +2602,7 @@ msgstr "ډېرې زیاتې غوښتنې"
 msgid "Top"
 msgstr "بره"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "تعقیبول"
@@ -2644,7 +2649,7 @@ msgstr "د لټون لپاره ولیکئ..."
 msgid "Unable to connect to remote server"
 msgstr "له لرې پرتي سرور سره نښلېدل ونشول"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "د سپارښتنو خدمت ته نشو وصل کیدلی"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "نه ګمارل شوی"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "نه شته"
 
@@ -2697,15 +2702,15 @@ msgstr "ګډون لغوه کول"
 msgid "Untitled"
 msgstr "بې سرلیکه"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "نوی کول"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "ټول نوي کړئ"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "نوی کول ناکام شول"
 
@@ -2719,11 +2724,11 @@ msgstr "نوی شو"
 msgid "Updated {field}"
 msgstr "{field} تازه شو"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "اپلیکیشنونه تازه کیږي..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "نوی کیږي..."
 
@@ -2802,7 +2807,7 @@ msgstr "د ویډیو کتونکی: {0}"
 msgid "View all notifications"
 msgstr "ټولې خبرتیاوې وګورئ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "د توکي تفصیلات وګورئ او سم کړئ"
 
@@ -2814,8 +2819,8 @@ msgstr "د کنټرول لیدل"
 msgid "Voice recording is not supported in this browser"
 msgstr "په دې براوزر کې غږ ثبتول ملاتړ نه لري"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "وګورئ"
 
@@ -2845,7 +2850,7 @@ msgstr "تاسو دې برخې ته لاسرسی نه لرئ."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "ستاسو حساب له {source} دلته لیږدول شوی. تر هغه چې تاسو هلته یې ړنګ نه کړئ، پیغامونه او خبرتیاوې ممکن دواړه سرورونو ته ورسیږي، ستاسو د مینځپانګې یوه برخه لاهم له پخوانی سرور نه چمتو کیږي، او تعقیبونکي ممکن دلته ستاسو موندلو لپاره یو شیبه وخت ولري."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "ستاسو ضمیمې به له لاسه ولاړې شي."
 
@@ -2853,11 +2858,11 @@ msgstr "ستاسو ضمیمې به له لاسه ولاړې شي."
 msgid "Your preference"
 msgstr "ستاسو غوره توب"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "ستاسو متن او ضمیمې به له لاسه ولاړې شي."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "ستاسو متن به له لاسه ووځي."
 

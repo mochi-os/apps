@@ -30,6 +30,11 @@ msgstr "(utvid)"
 msgid "[not set]"
 msgstr "[ikkje sett]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# resultat} other {# resultat}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# nesta} other {+# nesta}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# ubrukt versjon fjerna} other {# ubrukte versjonar fjerna}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (utvikling)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} oppdatert, {failed} mislukka"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "{0} v{1} er installert."
 
@@ -145,7 +150,7 @@ msgstr "Tilgangsnivå"
 msgid "Account type"
 msgstr "Kontotype"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Aktivitet"
 
@@ -208,7 +213,7 @@ msgstr "Legg til val"
 msgid "Add tag..."
 msgstr "Legg til etikett..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Legg til i katalogen"
 
@@ -231,7 +236,7 @@ msgstr "Legg til..."
 msgid "AI"
 msgstr "KI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "Alle appar oppdaterte"
 
@@ -269,13 +274,13 @@ msgstr "Alle som er logga inn"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Alt som abonnerer på denne straumen sluttar å ta imot han. Du kan kopiere ei ny nettadresse etterpå."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "App"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "App-handlingar"
 
@@ -283,11 +288,11 @@ msgstr "App-handlingar"
 msgid "App information"
 msgstr "App-informasjon"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "App installert"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "Appen vart installert"
 
@@ -303,7 +308,7 @@ msgstr "Applikasjons-ID"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Appar"
 
@@ -312,7 +317,7 @@ msgstr "Appar"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Er du sikker på at du vil slette «{0}»?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Er du sikker på at du vil slette «{title}»? Denne handlinga kan ikkje angrast."
 
@@ -340,11 +345,11 @@ msgstr "Er du sikker på at du vil gje opp? {opponentName} vinn spelet."
 msgid "Ascending"
 msgstr "Stigande"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Legg ved kommentarfiler"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Legg ved svarfiler"
 
@@ -370,7 +375,7 @@ msgstr "Tilgjengeleg versjon:"
 msgid "Available versions:"
 msgstr "Tilgjengelege versjonar:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Tilgjengeleg, men ikkje installert"
 
@@ -465,18 +470,18 @@ msgstr "Kamera ikkje tilgjengeleg"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Avbryt kommentar"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Avbryt svar"
 
@@ -538,12 +543,12 @@ msgstr "Klasseruting"
 msgid "Classes"
 msgstr "Klasser"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Rydd opp ubrukte versjonar"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Ryddar opp..."
 
@@ -641,8 +646,8 @@ msgstr "Kommentarhandlingar"
 msgid "Comments"
 msgstr "Kommentarar"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Kommentarar ({0})"
 
@@ -703,10 +708,10 @@ msgstr "Kopiert til utklippstavla"
 msgid "Copy"
 msgstr "Kopier"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "Kunne ikkje installera appen."
 
@@ -838,7 +843,7 @@ msgstr "Standardspor (versjon {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Slett"
@@ -863,9 +868,9 @@ msgstr "Slett felt"
 msgid "Delete game?"
 msgstr "Slette spelet?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Slett element"
 
@@ -926,7 +931,7 @@ msgstr "Detaljpanel"
 msgid "Detect from web browser"
 msgstr "Oppdag frå nettlesaren"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Utviklingsappar"
 
@@ -934,11 +939,11 @@ msgstr "Utviklingsappar"
 msgid "Directory"
 msgstr "Katalog"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Forkast"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Vil du forkaste utkastet?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Samsvarar ikkje med det påkravde mønsteret"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Ferdig"
@@ -1052,7 +1057,7 @@ msgstr "Skriv inn autentiseringskoden din"
 msgid "Entity:"
 msgstr "Entitet:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Feil"
 
@@ -1079,7 +1084,7 @@ msgstr "Ekstra stor"
 msgid "Failed to add account"
 msgstr "Klarte ikkje leggja til konto"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "Klarte ikkje å rydde opp i appane"
 
@@ -1133,8 +1138,8 @@ msgstr "Klarte ikkje lasta historikk"
 msgid "Failed to load image"
 msgstr "Kunne ikkje lasta biletet"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Klarte ikkje lasta element"
 
@@ -1174,7 +1179,7 @@ msgstr "Klarte ikkje lagra"
 msgid "Failed to save prompt"
 msgstr "Klarte ikkje lagra forespurnad"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "Klarte ikkje å oppdatere appane"
 
@@ -1207,7 +1212,7 @@ msgstr "Kunne ikkje oppdatere overvaking"
 msgid "Failed to upload attachment"
 msgstr "Klarte ikkje lasta opp vedlegg"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "Fil:"
 
@@ -1251,7 +1256,7 @@ msgstr "Vener"
 msgid "From"
 msgstr "Frå"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "Frå katalogen"
 
@@ -1347,40 +1352,40 @@ msgstr "Initialavatar for {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "Installer"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "Installera {0}?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "Installer frå fil"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "Installer frå utgjevar"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Installerte appar"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "Installerer..."
 
@@ -1400,7 +1405,7 @@ msgstr "Ugyldig dato"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Det ser ut til at sida du leitar etter <0/>ikkje finst eller er fjerna."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Detaljar om element"
 
@@ -1449,11 +1454,11 @@ msgstr "Last fleire"
 msgid "Loading content…"
 msgstr "Lastar inn innhald…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Lastar element"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Lastar elementdetaljar"
 
@@ -1613,11 +1618,11 @@ msgstr "Ingen tilgangsreglar er sette opp. Legg til reglar for å styra kven som
 msgid "No activity yet"
 msgstr "Ingen aktivitet enno"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "Ingen appar kunne oppdaterast."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Ingen appar installerte"
 
@@ -1629,11 +1634,11 @@ msgstr "Ingen klassar er sette opp."
 msgid "No comments yet"
 msgstr "Ingen kommentarar enno"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Inga skildring"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Ingen utviklingsappar samsvarar med \"{searchQuery}\""
 
@@ -1645,11 +1650,11 @@ msgstr "Ingen spel enno"
 msgid "No groups available"
 msgstr "Ingen grupper tilgjengelege"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Ingen installerbare appar i katalogen samsvarar med \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Ingen installerte appar samsvarar med \"{searchQuery}\""
 
@@ -1657,12 +1662,12 @@ msgstr "Ingen installerte appar samsvarar med \"{searchQuery}\""
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Ingen elementtypar kan opprettast enno. Opprett dei påkravde overordna elementa først."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Ingen treff i katalogen"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Ingen samsvarande appar"
 
@@ -1691,7 +1696,7 @@ msgstr "Ingen løyve gjevne til denne appen"
 msgid "No places found"
 msgstr "Ingen stader funne"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Ingen tilrådingar tilgjengelege"
 
@@ -1726,7 +1731,7 @@ msgstr "Inga emneoppføring enno — prøv igjen etter neste varsel."
 msgid "No unread notifications"
 msgstr "Ingen ulesne varsel"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Ingen ubrukte versjonar å rydda opp"
 
@@ -1742,10 +1747,10 @@ msgstr "Ingen visningar"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "Eigar"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Forelder"
 
@@ -1872,7 +1877,7 @@ msgstr "Tilgangsnøklar"
 msgid "Passkeys are not available in this browser"
 msgstr "Nyklar er ikkje tilgjengelege i denne nettlesaren"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "Lim inn installasjonslenkja:"
 
@@ -1916,7 +1921,7 @@ msgstr "Løyve"
 msgid "Please check your internet connection and try again."
 msgstr "Sjekk internettsambandet ditt og prøv igjen."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Skriv ein app-ID"
 
@@ -1962,7 +1967,7 @@ msgstr "Handsamar…"
 msgid "Prompt saved"
 msgstr "Leiarmelding lagra"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Eigenskapar"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Registrer tilgangsnøklane dine på nytt på denne tenaren"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "Tilrådd"
 
@@ -2196,11 +2201,11 @@ msgstr "Lagrar..."
 msgid "Search"
 msgstr "Søk"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Søk i appar"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Søk i appar..."
 
@@ -2420,8 +2425,8 @@ msgstr "Romsleg"
 msgid "Start the discussion by adding the first comment."
 msgstr "Start diskusjonen ved å leggje til den første kommentaren."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Slutt å sjå på"
 
@@ -2429,11 +2434,11 @@ msgstr "Slutt å sjå på"
 msgid "Subject"
 msgstr "Emne"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Send inn kommentar"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Send inn svar"
 
@@ -2505,7 +2510,7 @@ msgstr "Det kunne ikkje sendast. Filene kan vere for store, eller tilkoplinga sv
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Det var for stort til å laste opp. Fjern eller forminsk filer og prøv igjen."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "Appen er installert."
 
@@ -2597,7 +2602,7 @@ msgstr "For mange førespurnader"
 msgid "Top"
 msgstr "Topp"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Spor"
@@ -2644,7 +2649,7 @@ msgstr "Skriv for å søkje..."
 msgid "Unable to connect to remote server"
 msgstr "Klarte ikkje å kople til fjerntenaren"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "Kunne ikkje kople til tilrådingstenesta"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Ikkje tildelt"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "Ikkje tilgjengeleg"
 
@@ -2697,15 +2702,15 @@ msgstr "Sei opp abonnement"
 msgid "Untitled"
 msgstr "Utan tittel"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "Oppdater"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "Oppdater alle"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Oppdatering mislukkast"
 
@@ -2719,11 +2724,11 @@ msgstr "Oppdatert"
 msgid "Updated {field}"
 msgstr "Oppdaterte {field}"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Oppdaterer appane..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Oppdaterer..."
 
@@ -2802,7 +2807,7 @@ msgstr "Videovisar: {0}"
 msgid "View all notifications"
 msgstr "Vis alle varsel"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Vis og rediger elementdetaljar"
 
@@ -2814,8 +2819,8 @@ msgstr "Vis kontrollar"
 msgid "Voice recording is not supported in this browser"
 msgstr "Taleopptak er ikkje støtta i denne nettlesaren"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Følg"
 
@@ -2845,7 +2850,7 @@ msgstr "Du har ikkje tilgang til denne bolken."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Kontoen din vart flytta hit frå {source}. Inntil du slettar han der, kan meldingar og varsel nå begge tenarane, noko av innhaldet ditt blir framleis servert frå den gamle tenaren, og følgjarar kan ta nokre minutt å finne deg her."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Vedlegga dine går tapt."
 
@@ -2853,11 +2858,11 @@ msgstr "Vedlegga dine går tapt."
 msgid "Your preference"
 msgstr "Din preferanse"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Teksten og vedlegga dine går tapt."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Teksten din går tapt."
 

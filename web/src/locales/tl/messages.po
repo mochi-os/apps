@@ -30,6 +30,11 @@ msgstr "(palawakin)"
 msgid "[not set]"
 msgstr "[hindi naitakda]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# resulta} other {# resulta}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -41,7 +46,7 @@ msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# naka-nest} other {+# naka-nest}}"
 
 #. placeholder {0}: result.removed
-#: src/features/apps/index.tsx:245
+#: src/features/apps/index.tsx:244
 msgid "{0, plural, one {Removed # unused version} other {Removed # unused versions}}"
 msgstr "{0, plural, one {# hindi nagamit na bersyon ang inalis} other {# na hindi nagamit na bersyon ang inalis}}"
 
@@ -51,15 +56,15 @@ msgid "{0} (development)"
 msgstr "{0} (pag-develop)"
 
 #. placeholder {0}: results.length - failed
-#: src/features/apps/index.tsx:223
+#: src/features/apps/index.tsx:222
 msgid "{0} updated, {failed} failed"
 msgstr "{0} na-update, {failed} ang nabigo"
 
 #. placeholder {0}: data.name || t`App`
 #. placeholder {0}: data.name || target.name
 #. placeholder {1}: data.version
-#: src/features/apps/index.tsx:164
-#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:163
+#: src/features/apps/index.tsx:183
 msgid "{0} v{1} has been installed."
 msgstr "Naka-install na ang {0} v{1}."
 
@@ -145,7 +150,7 @@ msgstr "Antas ng access"
 msgid "Account type"
 msgstr "Uri ng account"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Aktibidad"
 
@@ -208,7 +213,7 @@ msgstr "Magdagdag ng option"
 msgid "Add tag..."
 msgstr "Magdagdag ng tag..."
 
-#: src/features/apps/index.tsx:646
+#: src/features/apps/index.tsx:645
 msgid "Add to directory"
 msgstr "Idagdag sa directory"
 
@@ -231,7 +236,7 @@ msgstr "Idinadagdag..."
 msgid "AI"
 msgstr "AI"
 
-#: src/features/apps/index.tsx:216
+#: src/features/apps/index.tsx:215
 msgid "All apps updated"
 msgstr "Na-update lahat ng app"
 
@@ -269,13 +274,13 @@ msgstr "Sinumang naka-log in"
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Titigil sa pagtanggap nito ang lahat ng naka-subscribe sa feed na ito. Maaari kang kumopya ng bagong URL pagkatapos."
 
-#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:163
 #: src/routes/_authenticated/app/$appId.tsx:97
 msgid "App"
 msgstr "App"
 
-#: src/features/apps/index.tsx:297
-#: src/features/apps/index.tsx:307
+#: src/features/apps/index.tsx:296
+#: src/features/apps/index.tsx:306
 msgid "App actions"
 msgstr "Mga app action"
 
@@ -283,11 +288,11 @@ msgstr "Mga app action"
 msgid "App information"
 msgstr "Impormasyon ng app"
 
-#: src/features/apps/index.tsx:133
+#: src/features/apps/index.tsx:132
 msgid "App installed"
 msgstr "Na-install ang app"
 
-#: src/features/apps/index.tsx:277
+#: src/features/apps/index.tsx:276
 msgid "App installed successfully"
 msgstr "Matagumpay na na-install ang app"
 
@@ -303,7 +308,7 @@ msgstr "Application ID"
 #: src/components/layout/apps-layout.tsx:22
 #: src/components/layout/apps-layout.tsx:25
 #: src/features/apps/index.tsx:66
-#: src/features/apps/index.tsx:355
+#: src/features/apps/index.tsx:354
 msgid "Apps"
 msgstr "Mga app"
 
@@ -312,7 +317,7 @@ msgstr "Mga app"
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Sigurado ka bang gusto mong i-delete ang \"{0}\"?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Sigurado ka bang gusto mong i-delete ang \"{title}\"? Hindi na ito maibabalik."
 
@@ -340,11 +345,11 @@ msgstr "Sigurado ka bang gusto mong sumuko? Mananalo si {opponentName} sa laro."
 msgid "Ascending"
 msgstr "Pataas"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "I-attach ang mga file ng komento"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "I-attach ang mga file ng sagot"
 
@@ -370,7 +375,7 @@ msgstr "Available na bersyon:"
 msgid "Available versions:"
 msgstr "Mga available na bersyon:"
 
-#: src/features/apps/index.tsx:444
+#: src/features/apps/index.tsx:443
 msgid "Available, but not installed"
 msgstr "Available, ngunit hindi naka-install"
 
@@ -465,18 +470,18 @@ msgstr "Hindi available ang camera"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/apps/components/app-info-dialog.tsx:148
 #: src/features/apps/components/install-dialog.tsx:104
-#: src/features/apps/index.tsx:568
-#: src/features/apps/index.tsx:609
-#: src/features/apps/index.tsx:659
+#: src/features/apps/index.tsx:567
+#: src/features/apps/index.tsx:608
+#: src/features/apps/index.tsx:658
 #: src/routes/_authenticated/app/$appId.tsx:550
 msgid "Cancel"
 msgstr "Kanselahin"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Kanselahin ang komento"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Kanselahin ang sagot"
 
@@ -538,12 +543,12 @@ msgstr "Class routing"
 msgid "Classes"
 msgstr "Mga class"
 
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:336
 msgid "Clean up unused versions"
 msgstr "Linisin ang mga hindi nagagamit na bersyon"
 
-#: src/features/apps/index.tsx:237
-#: src/features/apps/index.tsx:337
+#: src/features/apps/index.tsx:236
+#: src/features/apps/index.tsx:336
 msgid "Cleaning up..."
 msgstr "Naglilinis..."
 
@@ -641,8 +646,8 @@ msgstr "Mga aksyon sa komento"
 msgid "Comments"
 msgstr "Mga komento"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Mga komento ({0})"
 
@@ -703,10 +708,10 @@ msgstr "Nakopya sa clipboard"
 msgid "Copy"
 msgstr "Kopyahin"
 
-#: src/features/apps/index.tsx:137
-#: src/features/apps/index.tsx:165
-#: src/features/apps/index.tsx:185
-#: src/features/apps/index.tsx:278
+#: src/features/apps/index.tsx:136
+#: src/features/apps/index.tsx:164
+#: src/features/apps/index.tsx:184
+#: src/features/apps/index.tsx:277
 msgid "Could not install app."
 msgstr "Hindi ma-install ang app."
 
@@ -838,7 +843,7 @@ msgstr "Default na track (bersyon {0})"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "I-delete"
@@ -863,9 +868,9 @@ msgstr "I-delete ang field"
 msgid "Delete game?"
 msgstr "I-delete ang laro?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "I-delete ang item"
 
@@ -926,7 +931,7 @@ msgstr "Details Panel"
 msgid "Detect from web browser"
 msgstr "Tukuyin mula sa web browser"
 
-#: src/features/apps/index.tsx:419
+#: src/features/apps/index.tsx:418
 msgid "Development apps"
 msgstr "Mga development app"
 
@@ -934,11 +939,11 @@ msgstr "Mga development app"
 msgid "Directory"
 msgstr "Direktoryo"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Itapon"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Itapon ang draft?"
 
@@ -961,7 +966,7 @@ msgid "Does not match the required pattern"
 msgstr "Hindi tumutugma sa kinakailangang pattern"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Tapos na"
@@ -1052,7 +1057,7 @@ msgstr "Ilagay ang iyong authenticator code"
 msgid "Entity:"
 msgstr "Entity:"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Error"
 
@@ -1079,7 +1084,7 @@ msgstr "Sobrang laki"
 msgid "Failed to add account"
 msgstr "Nabigong magdagdag ng account"
 
-#: src/features/apps/index.tsx:239
+#: src/features/apps/index.tsx:238
 msgid "Failed to clean up apps"
 msgstr "Nabigong linisin ang mga app"
 
@@ -1133,8 +1138,8 @@ msgstr "Nabigong i-load ang history"
 msgid "Failed to load image"
 msgstr "Nabigong i-load ang larawan"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Nabigong i-load ang item"
 
@@ -1174,7 +1179,7 @@ msgstr "Nabigong i-save"
 msgid "Failed to save prompt"
 msgstr "Nabigong i-save ang prompt"
 
-#: src/features/apps/index.tsx:210
+#: src/features/apps/index.tsx:209
 msgid "Failed to update apps"
 msgstr "Nabigong i-update ang mga app"
 
@@ -1207,7 +1212,7 @@ msgstr "Nabigong i-update ang pagsubaybay"
 msgid "Failed to upload attachment"
 msgstr "Nabigong mag-upload ng attachment"
 
-#: src/features/apps/index.tsx:639
+#: src/features/apps/index.tsx:638
 msgid "File:"
 msgstr "File:"
 
@@ -1251,7 +1256,7 @@ msgstr "Mga kaibigan"
 msgid "From"
 msgstr "Mula sa"
 
-#: src/features/apps/index.tsx:499
+#: src/features/apps/index.tsx:498
 msgid "From the directory"
 msgstr "Mula sa directory"
 
@@ -1347,40 +1352,40 @@ msgstr "Initials avatar para kay {name}"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Install"
 msgstr "I-install"
 
 #. placeholder {0}: selectedDirectoryApp?.name
-#: src/features/apps/index.tsx:559
+#: src/features/apps/index.tsx:558
 msgid "Install {0}?"
 msgstr "I-install ang {0}?"
 
-#: src/features/apps/index.tsx:329
-#: src/features/apps/index.tsx:635
+#: src/features/apps/index.tsx:328
+#: src/features/apps/index.tsx:634
 msgid "Install from file"
 msgstr "I-install mula sa file"
 
-#: src/features/apps/index.tsx:325
-#: src/features/apps/index.tsx:593
+#: src/features/apps/index.tsx:324
+#: src/features/apps/index.tsx:592
 msgid "Install from publisher"
 msgstr "I-install mula sa publisher"
 
-#: src/features/apps/index.tsx:376
+#: src/features/apps/index.tsx:375
 msgid "Installed apps"
 msgstr "Mga naka-install na app"
 
 #: src/features/apps/components/app-info-dialog.tsx:129
 #: src/features/apps/components/install-dialog.tsx:118
-#: src/features/apps/index.tsx:132
-#: src/features/apps/index.tsx:162
-#: src/features/apps/index.tsx:182
-#: src/features/apps/index.tsx:276
-#: src/features/apps/index.tsx:576
-#: src/features/apps/index.tsx:617
-#: src/features/apps/index.tsx:667
+#: src/features/apps/index.tsx:131
+#: src/features/apps/index.tsx:161
+#: src/features/apps/index.tsx:181
+#: src/features/apps/index.tsx:275
+#: src/features/apps/index.tsx:575
+#: src/features/apps/index.tsx:616
+#: src/features/apps/index.tsx:666
 msgid "Installing..."
 msgstr "Nag-i-install..."
 
@@ -1400,7 +1405,7 @@ msgstr "Invalid na petsa"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Mukhang ang pahinang hinahanap mo <0/>ay wala o maaaring inalis na."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Detalye ng item"
 
@@ -1449,11 +1454,11 @@ msgstr "Mag-load ng higit pa"
 msgid "Loading content…"
 msgstr "Nilo-load ang nilalaman…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Nilo-load ang item"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Nilo-load ang detalye ng item"
 
@@ -1613,11 +1618,11 @@ msgstr "Walang naka-configure na access rule. Magdagdag ng mga rule upang kontro
 msgid "No activity yet"
 msgstr "Wala pang aktibidad"
 
-#: src/features/apps/index.tsx:219
+#: src/features/apps/index.tsx:218
 msgid "No apps could be updated."
 msgstr "Walang app na ma-update."
 
-#: src/features/apps/index.tsx:392
+#: src/features/apps/index.tsx:391
 msgid "No apps installed"
 msgstr "Walang naka-install na app"
 
@@ -1629,11 +1634,11 @@ msgstr "Walang naka-configure na mga klase."
 msgid "No comments yet"
 msgstr "Wala pang komento"
 
-#: src/features/apps/index.tsx:486
+#: src/features/apps/index.tsx:485
 msgid "No description"
 msgstr "Walang paglalarawan"
 
-#: src/features/apps/index.tsx:424
+#: src/features/apps/index.tsx:423
 msgid "No development apps match \"{searchQuery}\""
 msgstr "Walang mga development app na tumutugma sa \"{searchQuery}\""
 
@@ -1645,11 +1650,11 @@ msgstr "Wala pang laro"
 msgid "No groups available"
 msgstr "Walang available na grupo"
 
-#: src/features/apps/index.tsx:517
+#: src/features/apps/index.tsx:516
 msgid "No installable apps in the directory match \"{searchQuery}\""
 msgstr "Walang mga maaaring i-install na app sa direktoryo na tumutugma sa \"{searchQuery}\""
 
-#: src/features/apps/index.tsx:398
+#: src/features/apps/index.tsx:397
 msgid "No installed apps match \"{searchQuery}\""
 msgstr "Walang mga naka-install na app na tumutugma sa \"{searchQuery}\""
 
@@ -1657,12 +1662,12 @@ msgstr "Walang mga naka-install na app na tumutugma sa \"{searchQuery}\""
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Wala pang uri ng item na magagawa. Gumawa muna ng kinakailangang parent item."
 
-#: src/features/apps/index.tsx:516
+#: src/features/apps/index.tsx:515
 msgid "No matches in directory"
 msgstr "Walang tugma sa direktoryo"
 
-#: src/features/apps/index.tsx:397
-#: src/features/apps/index.tsx:423
+#: src/features/apps/index.tsx:396
+#: src/features/apps/index.tsx:422
 msgid "No matching apps"
 msgstr "Walang tugmang app"
 
@@ -1691,7 +1696,7 @@ msgstr "Walang mga pahintulot na ibinigay sa app na ito"
 msgid "No places found"
 msgstr "Walang nakitang lugar"
 
-#: src/features/apps/index.tsx:469
+#: src/features/apps/index.tsx:468
 msgid "No recommendations available"
 msgstr "Walang available na rekomendasyon"
 
@@ -1726,7 +1731,7 @@ msgstr "Wala pang topic record — subukan muli pagkatapos ng susunod na notific
 msgid "No unread notifications"
 msgstr "Walang hindi pa nababasang notification"
 
-#: src/features/apps/index.tsx:242
+#: src/features/apps/index.tsx:241
 msgid "No unused versions to clean up"
 msgstr "Walang hindi nagamit na bersyon na lilinisin"
 
@@ -1742,10 +1747,10 @@ msgstr "Walang view"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1850,8 +1855,8 @@ msgid "Owner"
 msgstr "May-ari"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Magulang"
 
@@ -1872,7 +1877,7 @@ msgstr "Mga Passkey"
 msgid "Passkeys are not available in this browser"
 msgstr "Hindi available ang mga passkey sa browser na ito"
 
-#: src/features/apps/index.tsx:597
+#: src/features/apps/index.tsx:596
 msgid "Paste the install link:"
 msgstr "I-paste ang link sa pag-install:"
 
@@ -1916,7 +1921,7 @@ msgstr "Mga Permission"
 msgid "Please check your internet connection and try again."
 msgstr "Pakitingnan ang iyong koneksyon sa internet at subukang muli."
 
-#: src/features/apps/index.tsx:154
+#: src/features/apps/index.tsx:153
 msgid "Please enter an app ID"
 msgstr "Mangyaring maglagay ng app ID"
 
@@ -1962,7 +1967,7 @@ msgstr "Pinoproseso…"
 msgid "Prompt saved"
 msgstr "Na-save ang prompt"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Mga katangian"
 
@@ -1987,7 +1992,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Muling irehistro ang iyong mga passkey sa server na ito"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
-#: src/features/apps/index.tsx:445
+#: src/features/apps/index.tsx:444
 msgid "Recommended"
 msgstr "Inirerekomenda"
 
@@ -2196,11 +2201,11 @@ msgstr "Sini-save..."
 msgid "Search"
 msgstr "Maghanap"
 
-#: src/features/apps/index.tsx:368
+#: src/features/apps/index.tsx:367
 msgid "Search apps"
 msgstr "Maghanap ng app"
 
-#: src/features/apps/index.tsx:367
+#: src/features/apps/index.tsx:366
 msgid "Search apps..."
 msgstr "Maghanap ng app..."
 
@@ -2420,8 +2425,8 @@ msgstr "Maluwag"
 msgid "Start the discussion by adding the first comment."
 msgstr "Simulan ang diskusyon sa pamamagitan ng pagdagdag ng unang komento."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Itigil ang pagmamasid"
 
@@ -2429,11 +2434,11 @@ msgstr "Itigil ang pagmamasid"
 msgid "Subject"
 msgstr "Paksa"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Ipasa ang komento"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Ipasa ang sagot"
 
@@ -2505,7 +2510,7 @@ msgstr "Hindi maipadala. Maaaring masyadong malaki ang mga file, o nabigo ang iy
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Masyadong malaki para i-upload. Alisin o paliitin ang mga file at subukang muli."
 
-#: src/features/apps/index.tsx:135
+#: src/features/apps/index.tsx:134
 msgid "The app has been installed successfully."
 msgstr "Matagumpay na na-install ang app."
 
@@ -2597,7 +2602,7 @@ msgstr "Masyadong maraming request"
 msgid "Top"
 msgstr "Itaas"
 
-#: src/features/apps/index.tsx:735
+#: src/features/apps/index.tsx:734
 #: src/routes/_authenticated/app/$appId.tsx:369
 msgid "Track"
 msgstr "Track"
@@ -2644,7 +2649,7 @@ msgstr "Mag-type para maghanap..."
 msgid "Unable to connect to remote server"
 msgstr "Hindi makakonekta sa malayong server"
 
-#: src/features/apps/index.tsx:464
+#: src/features/apps/index.tsx:463
 msgid "Unable to connect to the recommendations service"
 msgstr "Hindi makakonekta sa recommendations service"
 
@@ -2666,7 +2671,7 @@ msgid "Unassigned"
 msgstr "Walang nakatalaga"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
-#: src/features/apps/index.tsx:463
+#: src/features/apps/index.tsx:462
 msgid "Unavailable"
 msgstr "Hindi available"
 
@@ -2697,15 +2702,15 @@ msgstr "Mag-unsubscribe"
 msgid "Untitled"
 msgstr "Walang pamagat"
 
-#: src/features/apps/index.tsx:731
+#: src/features/apps/index.tsx:730
 msgid "Update"
 msgstr "I-update"
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Update all"
 msgstr "I-update lahat"
 
-#: src/features/apps/index.tsx:218
+#: src/features/apps/index.tsx:217
 msgid "Update failed"
 msgstr "Nabigo ang pag-update"
 
@@ -2719,11 +2724,11 @@ msgstr "Na-update"
 msgid "Updated {field}"
 msgstr "Na-update ang {field}"
 
-#: src/features/apps/index.tsx:208
+#: src/features/apps/index.tsx:207
 msgid "Updating apps..."
 msgstr "Ina-update ang mga app..."
 
-#: src/features/apps/index.tsx:318
+#: src/features/apps/index.tsx:317
 msgid "Updating..."
 msgstr "Ina-update..."
 
@@ -2802,7 +2807,7 @@ msgstr "Video viewer: {0}"
 msgid "View all notifications"
 msgstr "Tingnan lahat ng notification"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Tingnan at i-edit ang mga detalye ng item"
 
@@ -2814,8 +2819,8 @@ msgstr "Mga view control"
 msgid "Voice recording is not supported in this browser"
 msgstr "Hindi suportado ang voice recording sa browser na ito"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Manood"
 
@@ -2845,7 +2850,7 @@ msgstr "Wala kang access sa seksyong ito."
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ang iyong account ay inilipat dito mula sa {source}. Hanggang hindi mo ito binubura doon, ang mga mensahe at abiso ay maaaring maabot ang parehong mga server, ang ilan sa iyong nilalaman ay patuloy na pinaglilingkuran mula sa lumang server, at ang mga tagasunod ay maaaring maglaan ng ilang minuto upang mahanap ka dito."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Mawawala ang iyong mga attachment."
 
@@ -2853,11 +2858,11 @@ msgstr "Mawawala ang iyong mga attachment."
 msgid "Your preference"
 msgstr "Ang iyong kagustuhan"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Mawawala ang iyong teksto at mga attachment."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Mawawala ang iyong teksto."
 
