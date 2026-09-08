@@ -47,6 +47,31 @@ def database_create():
 # (49-51 base58 characters), so publisher P2P calls make sense? Only for
 # ids that may not be locally installed - classification of loaded apps
 # uses the "development" flag the app APIs return.
+def publisher_status(a, r, fallback):
+	# Refuse on a non-200 header frame, forwarding the publisher's own status.
+	# A restricted app the publisher declines to describe is a policy refusal,
+	# not a fault here, so it must not reach the user as a 500 and the operator
+	# as an "action failed" log line. Returns True when it has answered.
+	#
+	# The header frame is written by the responding app's own handler, not by
+	# core, so it is exactly as untrusted as the body after it: .get on a
+	# list or a string raises, and Starlark has no try/except.
+	if type(r) != "dict":
+		a.error.label(500, fallback)
+		return True
+	status = r.get("status")
+	if status == "200":
+		return False
+	if status == "403":
+		a.error.label(403, "errors.publisher_refused")
+		return True
+	if status == "404":
+		a.error.label(404, "errors.app_not_found")
+		return True
+	a.error.label(500, fallback)
+	return True
+
+
 def is_entity_id(id):
 	return len(id) >= 49 and len(id) <= 51
 
@@ -155,11 +180,7 @@ def action_information(a):
 		a.error.label(500, "errors.failed_to_connect_to_publisher")
 		return
 	r = s.read()
-	# The header frame is written by the responding app's own handler, not by
-	# core, so it is exactly as untrusted as the body after it: .get on a
-	# list or a string raises, and Starlark has no try/except.
-	if type(r) != "dict" or r.get("status") != "200":
-		a.error.label(500, "errors.failed_to_get_app_information")
+	if publisher_status(a, r, "errors.failed_to_get_app_information"):
 		return
 
 	app = s.read()
@@ -194,11 +215,7 @@ def action_version(a):
 		a.error.label(500, "errors.failed_to_connect_to_publisher")
 		return
 	r = s.read()
-	# The header frame is written by the responding app's own handler, not by
-	# core, so it is exactly as untrusted as the body after it: .get on a
-	# list or a string raises, and Starlark has no try/except.
-	if type(r) != "dict" or r.get("status") != "200":
-		a.error.label(500, "errors.failed_to_get_version")
+	if publisher_status(a, r, "errors.failed_to_get_version"):
 		return
 
 	return {"data": s.read()}
@@ -354,11 +371,7 @@ def action_install_id(a):
 		a.error.label(500, "errors.failed_to_connect_to_publisher")
 		return
 	r = s.read()
-	# The header frame is written by the responding app's own handler, not by
-	# core, so it is exactly as untrusted as the body after it: .get on a
-	# list or a string raises, and Starlark has no try/except.
-	if type(r) != "dict" or r.get("status") != "200":
-		a.error.label(500, "errors.failed_to_get_app_information")
+	if publisher_status(a, r, "errors.failed_to_get_app_information"):
 		return
 
 	app = s.read()
