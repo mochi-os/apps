@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
+import { Trans, useLingui } from '@lingui/react/macro'
 import {
   Button,
   ResponsiveDialog,
@@ -13,10 +13,9 @@ import {
   ResponsiveDialogHeader,
   ResponsiveDialogTitle,
 } from '@mochi/web'
+import { Download, Loader2 } from 'lucide-react'
 import type { MarketApp, AppInfo, Track } from '@/api/types/apps'
 
-import { Download, Loader2 } from 'lucide-react'
-import { Trans, useLingui } from '@lingui/react/macro'
 interface InstallDialogProps {
   open: boolean
   onOpenChange: (open: boolean) => void
@@ -76,16 +75,23 @@ export function InstallDialog({
           ) : appInfo ? (
             <>
               <p className='text-sm'>
-                <span className='font-medium'><Trans>Available version:</Trans></span>{' '}
-                {appInfo.tracks.find((track) => track.track === appInfo.app.default_track)
-                  ?.version ?? appInfo.tracks[0]?.version}
+                <span className='font-medium'>
+                  <Trans>Available version:</Trans>
+                </span>{' '}
+                {appInfo.tracks.find(
+                  (track) => track.track === appInfo.app.default_track
+                )?.version ?? appInfo.tracks[0]?.version}
               </p>
               <p className='text-sm'>
-                <span className='font-medium'><Trans>Fingerprint:</Trans></span>{' '}
+                <span className='font-medium'>
+                  <Trans>Fingerprint:</Trans>
+                </span>{' '}
                 <span className='font-mono text-xs'>{appInfo.fingerprint}</span>
               </p>
               <p className='text-sm'>
-                <span className='font-medium'><Trans>Entity:</Trans></span>{' '}
+                <span className='font-medium'>
+                  <Trans>Entity:</Trans>
+                </span>{' '}
                 <span className='font-mono text-xs break-all'>
                   {marketApp.id}
                 </span>
@@ -108,13 +114,18 @@ export function InstallDialog({
             onClick={() => {
               if (!appInfo) return
               const version =
-                appInfo.tracks.find((track) => track.track === appInfo.app.default_track)
-                  ?.version ?? appInfo.tracks[0]?.version
+                appInfo.tracks.find(
+                  (track) => track.track === appInfo.app.default_track
+                )?.version ?? appInfo.tracks[0]?.version
               if (version) onInstall(version)
             }}
             disabled={isLoading || isInstalling || !appInfo?.tracks.length}
           >
-            {isInstalling ? <Loader2 className='size-4 animate-spin' /> : <Download className='size-4' />}
+            {isInstalling ? (
+              <Loader2 className='size-4 animate-spin' />
+            ) : (
+              <Download className='size-4' />
+            )}
             {isInstalling ? t`Installing...` : t`Install`}
           </Button>
         </ResponsiveDialogFooter>

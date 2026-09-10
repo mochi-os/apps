@@ -2,11 +2,10 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
-import { plural } from '@lingui/core/macro'
 import { useState, useRef } from 'react'
-import { Trans, useLingui } from '@lingui/react/macro'
 import { useNavigate } from '@tanstack/react-router'
+import { plural } from '@lingui/core/macro'
+import { Trans, useLingui } from '@lingui/react/macro'
 import {
   Button,
   Card,
@@ -43,9 +42,17 @@ import {
   UploadProgress,
   useUploadProgress,
 } from '@mochi/web'
-import { Package, ExternalLink, Download, RefreshCw, MoreHorizontal, Trash2, Loader2 } from 'lucide-react'
-import type { InstalledApp, MarketApp } from '@/api/types/apps'
+import {
+  Package,
+  ExternalLink,
+  Download,
+  RefreshCw,
+  MoreHorizontal,
+  Trash2,
+  Loader2,
+} from 'lucide-react'
 import type { DirectoryApp } from '@/api/apps'
+import type { InstalledApp, MarketApp } from '@/api/types/apps'
 import {
   useInstalledAppsQuery,
   useMarketAppsQuery,
@@ -95,9 +102,7 @@ export function Apps() {
     useAppInfoQuery(selectedAppId)
   const { data: updatesData, refetch: refetchUpdates } = useUpdatesQuery()
   const { data: directoryApps, isLoading: isLoadingDirectory } =
-    useDirectorySearchQuery(
-      appsData?.install.allowed ? debouncedSearch : ''
-    )
+    useDirectorySearchQuery(appsData?.install.allowed ? debouncedSearch : '')
   const installFromPublisherMutation = useInstallFromPublisherMutation()
   const installFromFileMutation = useInstallFromFileMutation()
   const { progress: installProgress, upload } = useUploadProgress()
@@ -175,15 +180,12 @@ export function Apps() {
     if (!selectedDirectoryApp) return
     const target = selectedDirectoryApp
     try {
-      await toastAction(
-        installByIdMutation.mutateAsync({ id: target.id }),
-        {
-          loading: t`Installing...`,
-          success: (data) =>
-            t`${data.name || target.name} v${data.version} has been installed.`,
-          error: (err) => getErrorMessage(err, t`Could not install app.`),
-        }
-      )
+      await toastAction(installByIdMutation.mutateAsync({ id: target.id }), {
+        loading: t`Installing...`,
+        success: (data) =>
+          t`${data.name || target.name} v${data.version} has been installed.`,
+        error: (err) => getErrorMessage(err, t`Could not install app.`),
+      })
       setSelectedDirectoryApp(null)
     } catch {
       // toastAction already showed error
@@ -218,9 +220,7 @@ export function Apps() {
           description: t`No apps could be updated.`,
         })
       } else {
-        toast.warning(
-          t`${results.length - failed} updated, ${failed} failed`
-        )
+        toast.warning(t`${results.length - failed} updated, ${failed} failed`)
       }
 
       refetchInstalled()
@@ -241,7 +241,10 @@ export function Apps() {
         toast.info(t`No unused versions to clean up`)
       } else {
         toast.success(
-          plural(result.removed, { one: 'Removed # unused version', other: 'Removed # unused versions' })
+          plural(result.removed, {
+            one: 'Removed # unused version',
+            other: 'Removed # unused versions',
+          })
         )
       }
     } catch {
@@ -290,11 +293,7 @@ export function Apps() {
       <Tooltip>
         <TooltipTrigger asChild>
           <DropdownMenuTrigger asChild>
-            <Button
-              variant='ghost'
-              size='icon'
-              aria-label={t`App actions`}
-            >
+            <Button variant='ghost' size='icon' aria-label={t`App actions`}>
               {upgradeMutation.isPending ? (
                 <RefreshCw className='h-4 w-4 animate-spin' />
               ) : (
@@ -333,7 +332,8 @@ export function Apps() {
             >
               <Trash2 className='me-2 h-4 w-4' />
               {cleanupMutation.isPending
-                ? t`Cleaning up...` : t`Clean up unused versions`}
+                ? t`Cleaning up...`
+                : t`Clean up unused versions`}
             </DropdownMenuItem>
           </>
         )}
@@ -354,8 +354,8 @@ export function Apps() {
         title={t`Apps`}
         icon={<Package className='size-4 md:size-5' />}
         menuAction={
-          (appsData?.install.allowed ||
-            (availableUpdates && availableUpdates.length > 0))
+          appsData?.install.allowed ||
+          (availableUpdates && availableUpdates.length > 0)
             ? actionMenu
             : undefined
         }
@@ -372,7 +372,9 @@ export function Apps() {
         {/* Installed Apps Section */}
         <section className='mb-8'>
           <div className='mb-4 flex items-center gap-4'>
-            <h2 className='text-xl font-semibold'><Trans>Installed apps</Trans></h2>
+            <h2 className='text-xl font-semibold'>
+              <Trans>Installed apps</Trans>
+            </h2>
           </div>
           {isLoadingInstalled ? (
             <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
@@ -386,10 +388,7 @@ export function Apps() {
               ))}
             </div>
           ) : installedApps?.length === 0 ? (
-            <EmptyState
-              icon={Package}
-              title={t`No apps installed`}
-            />
+            <EmptyState icon={Package} title={t`No apps installed`} />
           ) : filteredInstalledApps?.length === 0 ? (
             <EmptyState
               icon={Package}
@@ -402,7 +401,9 @@ export function Apps() {
                 <InstalledAppCard
                   key={app.id}
                   app={app}
-                  onClick={() => navigate({ to: '/app/$appId', params: { appId: app.id } })}
+                  onClick={() =>
+                    navigate({ to: '/app/$appId', params: { appId: app.id } })
+                  }
                   availableVersion={
                     availableUpdates?.find((u) => u.id === app.id)?.available
                   }
@@ -415,7 +416,9 @@ export function Apps() {
         {/* Development Apps Section - only show if there are any that match */}
         {developmentApps && developmentApps.length > 0 && (
           <section className='mb-8'>
-            <h2 className='mb-4 text-xl font-semibold'><Trans>Development apps</Trans></h2>
+            <h2 className='mb-4 text-xl font-semibold'>
+              <Trans>Development apps</Trans>
+            </h2>
             {filteredDevelopmentApps?.length === 0 ? (
               <EmptyState
                 icon={Package}
@@ -428,7 +431,9 @@ export function Apps() {
                   <InstalledAppCard
                     key={app.id}
                     app={app}
-                    onClick={() => navigate({ to: '/app/$appId', params: { appId: app.id } })}
+                    onClick={() =>
+                      navigate({ to: '/app/$appId', params: { appId: app.id } })
+                    }
                     showId
                   />
                 ))}
@@ -440,17 +445,21 @@ export function Apps() {
         {/* Market Apps Section - only show if user can install AND not searching */}
         {appsData?.install.allowed && !isSearching && (
           <section>
-            <h2 className='text-xl font-semibold'><Trans>Available, but not installed</Trans></h2>
-            <p className='mb-4 text-center text-xs font-medium tracking-wide text-muted-foreground uppercase'><Trans>Recommended</Trans></p>
+            <h2 className='text-xl font-semibold'>
+              <Trans>Available, but not installed</Trans>
+            </h2>
+            <p className='text-muted-foreground mb-4 text-center text-xs font-medium tracking-wide uppercase'>
+              <Trans>Recommended</Trans>
+            </p>
             {isLoadingMarket ? (
               <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
                 {Array.from({ length: 6 }).map((_, i) => (
-                  <Card key={i} className='flex flex-col h-30'>
+                  <Card key={i} className='flex h-30 flex-col'>
                     <CardHeader className='pb-3'>
                       <Skeleton className='h-6 w-3/4' />
                     </CardHeader>
                     <CardContent>
-                      <Skeleton className='h-4 w-full mb-2' />
+                      <Skeleton className='mb-2 h-4 w-full' />
                       <Skeleton className='h-4 w-2/3' />
                     </CardContent>
                   </Card>
@@ -472,7 +481,7 @@ export function Apps() {
                 {marketApps?.map((app) => (
                   <Card
                     key={app.id}
-                    className='flex cursor-pointer flex-col transition-[background-color,border-color,box-shadow] hover:bg-surface-2 hover:border-border-strong hover:shadow-md'
+                    className='hover:bg-surface-2 hover:border-border-strong flex cursor-pointer flex-col transition-[background-color,border-color,box-shadow] hover:shadow-md'
                     onClick={() => handleMarketAppClick(app)}
                   >
                     <CardHeader className='pb-3'>
@@ -495,11 +504,13 @@ export function Apps() {
         {/* Directory Search Section - show only while searching */}
         {appsData?.install.allowed && isSearching && (
           <section>
-            <h2 className='mb-4 text-xl font-semibold'><Trans>From the directory</Trans></h2>
+            <h2 className='mb-4 text-xl font-semibold'>
+              <Trans>From the directory</Trans>
+            </h2>
             {isLoadingDirectory ? (
               <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
                 {Array.from({ length: 3 }).map((_, i) => (
-                  <Card key={i} className='flex flex-col h-30'>
+                  <Card key={i} className='flex h-30 flex-col'>
                     <CardHeader className='pb-3'>
                       <Skeleton className='h-6 w-3/4' />
                     </CardHeader>
@@ -522,7 +533,7 @@ export function Apps() {
                     key={app.id}
                     role='button'
                     tabIndex={0}
-                    className='flex cursor-pointer flex-col transition-[background-color,border-color,box-shadow] hover:bg-surface-2 hover:border-border-strong hover:shadow-md'
+                    className='hover:bg-surface-2 hover:border-border-strong flex cursor-pointer flex-col transition-[background-color,border-color,box-shadow] hover:shadow-md'
                     onClick={() => setSelectedDirectoryApp(app)}
                     onKeyDown={(e) => {
                       if (e.key === 'Enter' || e.key === ' ') {
@@ -571,7 +582,11 @@ export function Apps() {
                 onClick={handleDirectoryInstall}
                 disabled={installByIdMutation.isPending}
               >
-                {installByIdMutation.isPending ? <Loader2 className='size-4 animate-spin' /> : <Download className='size-4' />}
+                {installByIdMutation.isPending ? (
+                  <Loader2 className='size-4 animate-spin' />
+                ) : (
+                  <Download className='size-4' />
+                )}
                 {installByIdMutation.isPending ? t`Installing...` : t`Install`}
               </Button>
             </ResponsiveDialogFooter>
@@ -589,10 +604,15 @@ export function Apps() {
         >
           <ResponsiveDialogContent>
             <ResponsiveDialogHeader>
-              <ResponsiveDialogTitle><Trans>Install from publisher</Trans></ResponsiveDialogTitle>
+              <ResponsiveDialogTitle>
+                <Trans>Install from publisher</Trans>
+              </ResponsiveDialogTitle>
             </ResponsiveDialogHeader>
             <div className='space-y-2 py-2'>
-              <label htmlFor='install-link-input' className='text-sm font-medium'>
+              <label
+                htmlFor='install-link-input'
+                className='text-sm font-medium'
+              >
                 {t`Paste the install link:`}
               </label>
               <Input
@@ -604,7 +624,10 @@ export function Apps() {
             </div>
             <ResponsiveDialogFooter>
               <ResponsiveDialogClose asChild>
-                <Button variant='outline' disabled={installByIdMutation.isPending}>
+                <Button
+                  variant='outline'
+                  disabled={installByIdMutation.isPending}
+                >
                   <Trans>Cancel</Trans>
                 </Button>
               </ResponsiveDialogClose>
@@ -612,7 +635,11 @@ export function Apps() {
                 onClick={handlePublisherInstall}
                 disabled={installByIdMutation.isPending}
               >
-                {installByIdMutation.isPending ? <Loader2 className='size-4 animate-spin' /> : <Download className='size-4' />}
+                {installByIdMutation.isPending ? (
+                  <Loader2 className='size-4 animate-spin' />
+                ) : (
+                  <Download className='size-4' />
+                )}
                 {installByIdMutation.isPending ? t`Installing...` : t`Install`}
               </Button>
             </ResponsiveDialogFooter>
@@ -631,11 +658,16 @@ export function Apps() {
         >
           <ResponsiveDialogContent>
             <ResponsiveDialogHeader>
-              <ResponsiveDialogTitle><Trans>Install from file</Trans></ResponsiveDialogTitle>
+              <ResponsiveDialogTitle>
+                <Trans>Install from file</Trans>
+              </ResponsiveDialogTitle>
             </ResponsiveDialogHeader>
             <div className='space-y-4 py-4'>
               <p className='text-sm'>
-                <span className='font-medium'><Trans>File:</Trans></span> {selectedFile?.name}
+                <span className='font-medium'>
+                  <Trans>File:</Trans>
+                </span>{' '}
+                {selectedFile?.name}
               </p>
               <div className='flex items-center justify-between rounded-xl border px-4 py-3'>
                 <Label
@@ -655,15 +687,22 @@ export function Apps() {
             <UploadProgress progress={installProgress} className='pt-2' />
             <ResponsiveDialogFooter>
               <ResponsiveDialogClose asChild>
-                <Button variant='outline'><Trans>Cancel</Trans></Button>
+                <Button variant='outline'>
+                  <Trans>Cancel</Trans>
+                </Button>
               </ResponsiveDialogClose>
               <Button
                 onClick={handleFileInstall}
                 disabled={installFromFileMutation.isPending}
               >
-                {installFromFileMutation.isPending ? <Loader2 className='size-4 animate-spin' /> : <Download className='size-4' />}
+                {installFromFileMutation.isPending ? (
+                  <Loader2 className='size-4 animate-spin' />
+                ) : (
+                  <Download className='size-4' />
+                )}
                 {installFromFileMutation.isPending
-                  ? t`Installing...` : t`Install`}
+                  ? t`Installing...`
+                  : t`Install`}
               </Button>
             </ResponsiveDialogFooter>
           </ResponsiveDialogContent>
@@ -716,25 +755,27 @@ function InstalledAppCard({
     <Card
       role='button'
       tabIndex={0}
-      className='flex cursor-pointer flex-col transition-[background-color,border-color,box-shadow] hover:bg-surface-2 hover:border-border-strong hover:shadow-md'
+      className='hover:bg-surface-2 hover:border-border-strong flex cursor-pointer flex-col transition-[background-color,border-color,box-shadow] hover:shadow-md'
       onClick={onClick}
-      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(); } }}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onClick()
+        }
+      }}
     >
       <CardHeader>
         <CardTitle className='truncate text-lg'>{app.name}</CardTitle>
-        <div className='flex flex-wrap items-center gap-2 mt-1.5'>
+        <div className='mt-1.5 flex flex-wrap items-center gap-2'>
           {app.active && <DataChip value={app.active} />}
           {availableVersion && availableVersion !== app.active && (
-            <DataChip
-              value={availableVersion}
-              label={t`Update`}
-            />
+            <DataChip value={availableVersion} label={t`Update`} />
           )}
           {showTrack && app.user?.track && (
             <DataChip value={app.user.track} label={t`Track`} />
           )}
           {showId && (
-            <span className='text-xs text-muted-foreground truncate font-mono opacity-80'>
+            <span className='text-muted-foreground truncate font-mono text-xs opacity-80'>
               {app.id}
             </span>
           )}

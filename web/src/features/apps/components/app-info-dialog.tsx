@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
+import { Trans, useLingui } from '@lingui/react/macro'
 import {
   Button,
   ResponsiveDialog,
@@ -14,7 +14,6 @@ import {
   Skeleton,
 } from '@mochi/web'
 import { Download, AlertTriangle, Loader2 } from 'lucide-react'
-import { Trans, useLingui } from '@lingui/react/macro'
 import type { AppInfo, Track } from '@/api/types/apps'
 
 interface AppInfoDialogProps {
@@ -47,7 +46,7 @@ export function AppInfoDialog({
         <ResponsiveDialogHeader>
           <ResponsiveDialogTitle>
             {isLoading ? (
-              <Skeleton className="h-6 w-48" />
+              <Skeleton className='h-6 w-48' />
             ) : (
               (appInfo?.app?.name ?? t`App information`)
             )}
@@ -64,8 +63,8 @@ export function AppInfoDialog({
             <AlertTriangle className='mt-0.5 h-4 w-4 shrink-0' />
             <p>
               <Trans>
-                This app is installed directly from its publisher and has not been
-                vetted. It may be malware.
+                This app is installed directly from its publisher and has not
+                been vetted. It may be malware.
               </Trans>
             </p>
           </div>
@@ -74,24 +73,28 @@ export function AppInfoDialog({
             <div className='space-y-3'>
               <Skeleton className='h-4 w-full' />
               <Skeleton className='h-4 w-5/6' />
-              
+
               <div className='pt-2'>
-                 <div className="flex gap-2 items-center mb-1">
-                    <span className='font-medium text-sm'><Trans>Fingerprint:</Trans></span>
-                    <Skeleton className='h-4 w-32' />
-                 </div>
+                <div className='mb-1 flex items-center gap-2'>
+                  <span className='text-sm font-medium'>
+                    <Trans>Fingerprint:</Trans>
+                  </span>
+                  <Skeleton className='h-4 w-32' />
+                </div>
               </div>
 
               <div>
-                <p className='mb-2 text-sm font-medium'><Trans>Available versions:</Trans></p>
+                <p className='mb-2 text-sm font-medium'>
+                  <Trans>Available versions:</Trans>
+                </p>
                 <div className='space-y-2'>
-                   <div className='flex items-center justify-between rounded-lg border p-3'>
-                      <div className='space-y-1'>
-                        <Skeleton className='h-5 w-24' />
-                        <Skeleton className='h-4 w-16' />
-                      </div>
-                      <Skeleton className='h-9 w-20' />
-                   </div>
+                  <div className='flex items-center justify-between rounded-lg border p-3'>
+                    <div className='space-y-1'>
+                      <Skeleton className='h-5 w-24' />
+                      <Skeleton className='h-4 w-16' />
+                    </div>
+                    <Skeleton className='h-9 w-20' />
+                  </div>
                 </div>
               </div>
             </div>
@@ -102,12 +105,16 @@ export function AppInfoDialog({
               )}
 
               <p className='text-sm'>
-                <span className='font-medium'><Trans>Fingerprint:</Trans></span>{' '}
+                <span className='font-medium'>
+                  <Trans>Fingerprint:</Trans>
+                </span>{' '}
                 <span className='font-mono text-xs'>{appInfo.fingerprint}</span>
               </p>
 
               <div>
-                <p className='mb-2 text-sm font-medium'><Trans>Available versions:</Trans></p>
+                <p className='mb-2 text-sm font-medium'>
+                  <Trans>Available versions:</Trans>
+                </p>
                 <div className='space-y-2'>
                   {appInfo.tracks.map((track) => (
                     <div
@@ -125,7 +132,11 @@ export function AppInfoDialog({
                         onClick={() => onInstall(track.version)}
                         disabled={isInstalling}
                       >
-                        {isInstalling ? <Loader2 className='size-4 animate-spin' /> : <Download className='size-4' />}
+                        {isInstalling ? (
+                          <Loader2 className='size-4 animate-spin' />
+                        ) : (
+                          <Download className='size-4' />
+                        )}
                         {isInstalling ? t`Installing...` : t`Install`}
                       </Button>
                     </div>

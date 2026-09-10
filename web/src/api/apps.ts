@@ -2,11 +2,16 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
-import { requestHelpers } from '@mochi/web'
 import type { AxiosProgressEvent } from 'axios'
+import { requestHelpers } from '@mochi/web'
 import endpoints from '@/api/endpoints'
-import type { InstalledApp, MarketApp, AppInfo, Track, Update } from '@/api/types/apps'
+import type {
+  InstalledApp,
+  MarketApp,
+  AppInfo,
+  Track,
+  Update,
+} from '@/api/types/apps'
 
 const NO_TOAST = { mochi: { showGlobalErrorToast: false } } as const
 
@@ -99,9 +104,7 @@ export interface DirectoryApp {
   fingerprint: string
 }
 
-const searchDirectory = async (
-  q: string
-): Promise<DirectoryApp[]> => {
+const searchDirectory = async (q: string): Promise<DirectoryApp[]> => {
   const response = await requestHelpers.get<{ apps: DirectoryApp[] }>(
     endpoints.apps.directorySearch,
     { params: { q } }
@@ -110,7 +113,9 @@ const searchDirectory = async (
 }
 
 const getUpdates = async (): Promise<{ updates: Update[] }> => {
-  const response = await requestHelpers.get<{ updates: Update[] }>(endpoints.apps.updates)
+  const response = await requestHelpers.get<{ updates: Update[] }>(
+    endpoints.apps.updates
+  )
   return response
 }
 

@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { requestHelpers } from '@mochi/web'
 import endpoints from '@/api/endpoints'
@@ -41,7 +40,9 @@ export function useSetUserVersion() {
     mutationFn: (data: { app: string; version?: string; track?: string }) =>
       requestHelpers.post(endpoints.versionSet, data, NO_TOAST),
     onSuccess: (_, variables) => {
-      queryClient.invalidateQueries({ queryKey: ['app-versions', variables.app] })
+      queryClient.invalidateQueries({
+        queryKey: ['app-versions', variables.app],
+      })
       queryClient.invalidateQueries({ queryKey: ['apps'] })
     },
   })
@@ -53,7 +54,9 @@ export function useSetSystemVersion() {
     mutationFn: (data: { app: string; version?: string; track?: string }) =>
       requestHelpers.post(endpoints.systemVersionSet, data, NO_TOAST),
     onSuccess: (_, variables) => {
-      queryClient.invalidateQueries({ queryKey: ['app-versions', variables.app] })
+      queryClient.invalidateQueries({
+        queryKey: ['app-versions', variables.app],
+      })
       queryClient.invalidateQueries({ queryKey: ['apps'] })
     },
   })

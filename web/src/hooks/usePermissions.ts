@@ -2,11 +2,10 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import type { AppPermissions, PermissionCatalog } from '@/api/types/apps'
-import endpoints from '@/api/endpoints'
 import { requestHelpers } from '@mochi/web'
+import endpoints from '@/api/endpoints'
+import type { AppPermissions, PermissionCatalog } from '@/api/types/apps'
 
 const NO_TOAST = { mochi: { showGlobalErrorToast: false } } as const
 
@@ -46,7 +45,9 @@ export function useSetPermission() {
         NO_TOAST
       ),
     onSuccess: (_, variables) => {
-      queryClient.invalidateQueries({ queryKey: ['app-permissions', variables.app] })
+      queryClient.invalidateQueries({
+        queryKey: ['app-permissions', variables.app],
+      })
     },
   })
 }

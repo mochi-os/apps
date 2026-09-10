@@ -2,10 +2,9 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useState } from 'react'
-import { Trans, useLingui } from '@lingui/react/macro'
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
+import { Trans, useLingui } from '@lingui/react/macro'
 import {
   Button,
   cn,
@@ -34,25 +33,26 @@ import {
   ResponsiveDialogFooter,
   ResponsiveDialogHeader,
   ResponsiveDialogTitle,
-  ResponsiveDialogTrigger, naturalCompare,
+  ResponsiveDialogTrigger,
+  naturalCompare,
   Tooltip,
   TooltipContent,
   TooltipTrigger,
   getAppPath,
 } from '@mochi/web'
 import { Loader2, Plus, Shield, ShieldAlert, X, Package } from 'lucide-react'
+import type { Permission, InstalledApp } from '@/api/types/apps'
 import { useInstalledAppsQuery } from '@/hooks/useApps'
-import {
-  useAppVersions,
-  useSetUserVersion,
-  useSetSystemVersion,
-} from '@/hooks/useVersions'
 import {
   useAppPermissions,
   usePermissionCatalog,
   useSetPermission,
 } from '@/hooks/usePermissions'
-import type { Permission, InstalledApp } from '@/api/types/apps'
+import {
+  useAppVersions,
+  useSetUserVersion,
+  useSetSystemVersion,
+} from '@/hooks/useVersions'
 
 type TabType = 'details' | 'versions' | 'permissions'
 
@@ -91,7 +91,8 @@ function AppPage() {
   const goBackToApps = () => navigate({ to: '/' })
 
   // Find app in installed or development apps
-  const app = appsData?.installed?.find((a) => a.id === appId) ||
+  const app =
+    appsData?.installed?.find((a) => a.id === appId) ||
     appsData?.development?.find((a) => a.id === appId)
 
   usePageTitle(app?.name ?? t`App`)
@@ -101,18 +102,18 @@ function AppPage() {
       <>
         <PageHeader
           title={<Skeleton className='h-8 w-48' />}
-          icon={<Skeleton className='size-4 md:size-5 rounded-md' />}
+          icon={<Skeleton className='size-4 rounded-md md:size-5' />}
           back={{ label: t`Back to apps`, onFallback: goBackToApps }}
         />
-        <Main className='pt-2 space-y-8'>
+        <Main className='space-y-8 pt-2'>
           <div className='flex items-center border-b'>
-             <div className='flex gap-1 -mb-px'>
-               {[1, 2, 3].map((i) => (
-                  <div key={i} className='px-4 py-2'>
-                     <Skeleton className='h-5 w-20' />
-                  </div>
-               ))}
-             </div>
+            <div className='-mb-px flex gap-1'>
+              {[1, 2, 3].map((i) => (
+                <div key={i} className='px-4 py-2'>
+                  <Skeleton className='h-5 w-20' />
+                </div>
+              ))}
+            </div>
           </div>
           <Skeleton className='h-64 w-full rounded-xl' />
         </Main>
@@ -123,7 +124,10 @@ function AppPage() {
   if (!app) {
     return (
       <>
-        <PageHeader title={t`App not found`} back={{ label: t`Back to apps`, onFallback: goBackToApps }} />
+        <PageHeader
+          title={t`App not found`}
+          back={{ label: t`Back to apps`, onFallback: goBackToApps }}
+        />
         <Main>
           <EmptyState
             icon={Package}
@@ -137,28 +141,30 @@ function AppPage() {
 
   return (
     <>
-      <PageHeader 
+      <PageHeader
         title={app.name}
         icon={<Package className='size-4 md:size-5' />}
         back={{ label: t`Back to apps`, onFallback: goBackToApps }}
       />
-      <Main className='pt-2 space-y-6'>
+      <Main className='space-y-6 pt-2'>
         <div className='flex items-center border-b'>
           <div className='flex gap-1'>
-            {([
-              ['details', t`Details`],
-              ['versions', t`Versions`],
-              ['permissions', t`Permissions`],
-            ] as const).map(([tab, label]) => (
+            {(
+              [
+                ['details', t`Details`],
+                ['versions', t`Versions`],
+                ['permissions', t`Permissions`],
+              ] as const
+            ).map(([tab, label]) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={cn(
                   'px-4 py-2 text-sm font-medium transition-colors',
-                  'border-b-2 -mb-px',
+                  '-mb-px border-b-2',
                   activeTab === tab
                     ? 'border-primary text-foreground'
-                    : 'border-transparent text-muted-foreground hover:text-foreground'
+                    : 'text-muted-foreground hover:text-foreground border-transparent'
                 )}
               >
                 {label}
@@ -190,14 +196,12 @@ function AppPage() {
 function DetailsTab({ app }: { app: InstalledApp }) {
   const { t } = useLingui()
   return (
-    <Section
-      title={t`Identity`}
-    >
-      <div className="divide-y-0">
+    <Section title={t`Identity`}>
+      <div className='divide-y-0'>
         <FieldRow label={t`Application ID`}>
           <DataChip value={app.id} truncate='middle' />
         </FieldRow>
-        
+
         {app.fingerprint && (
           <FieldRow label={t`Fingerprint`}>
             <DataChip value={app.fingerprint} truncate='middle' />
@@ -208,30 +212,40 @@ function DetailsTab({ app }: { app: InstalledApp }) {
           <DataChip value={app.active} />
         </FieldRow>
 
-        {(!!app.classes?.length || !!app.services?.length || !!app.paths?.length) && (
-          <div className='mt-6 border-t pt-6 space-y-4'>
-            <h4 className='text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4'><Trans>Technical capabilities</Trans></h4>
-            
+        {(!!app.classes?.length ||
+          !!app.services?.length ||
+          !!app.paths?.length) && (
+          <div className='mt-6 space-y-4 border-t pt-6'>
+            <h4 className='text-muted-foreground mb-4 text-xs font-semibold tracking-wider uppercase'>
+              <Trans>Technical capabilities</Trans>
+            </h4>
+
             {app.classes && app.classes.length > 0 && (
               <FieldRow label={t`Provided classes`}>
-                <div className="flex flex-wrap gap-2">
-                  {app.classes.map(c => <DataChip key={c} value={c} />)}
+                <div className='flex flex-wrap gap-2'>
+                  {app.classes.map((c) => (
+                    <DataChip key={c} value={c} />
+                  ))}
                 </div>
               </FieldRow>
             )}
-            
+
             {app.services && app.services.length > 0 && (
               <FieldRow label={t`Enabled services`}>
-                <div className="flex flex-wrap gap-2">
-                  {app.services.map(s => <DataChip key={s} value={s} />)}
+                <div className='flex flex-wrap gap-2'>
+                  {app.services.map((s) => (
+                    <DataChip key={s} value={s} />
+                  ))}
                 </div>
               </FieldRow>
             )}
 
             {app.paths && app.paths.length > 0 && (
               <FieldRow label={t`HTTP paths`}>
-                <div className="flex flex-wrap gap-2">
-                  {app.paths.map((p) => <DataChip key={p} value={`/${p}`} />)}
+                <div className='flex flex-wrap gap-2'>
+                  {app.paths.map((p) => (
+                    <DataChip key={p} value={`/${p}`} />
+                  ))}
                 </div>
               </FieldRow>
             )}
@@ -244,7 +258,11 @@ function DetailsTab({ app }: { app: InstalledApp }) {
 
 function VersionsTab({ appId }: { appId: string }) {
   const { t } = useLingui()
-  const { data: versionData, isLoading: isLoadingVersions, isError } = useAppVersions(appId)
+  const {
+    data: versionData,
+    isLoading: isLoadingVersions,
+    isError,
+  } = useAppVersions(appId)
   const setUserVersion = useSetUserVersion()
   const setSystemVersion = useSetSystemVersion()
 
@@ -254,18 +272,23 @@ function VersionsTab({ appId }: { appId: string }) {
   const defaultTrack = versionData?.default_track ?? ''
 
   // Resolve a version preference to a dropdown value, ensuring it matches an available option
-  const resolveValue = (pref: { version: string; track: string } | null | undefined) => {
+  const resolveValue = (
+    pref: { version: string; track: string } | null | undefined
+  ) => {
     if (!pref) return 'default'
     if (pref.track) {
-      if (versionData?.tracks?.[pref.track] !== undefined) return `track:${pref.track}`
+      if (versionData?.tracks?.[pref.track] !== undefined)
+        return `track:${pref.track}`
       return 'default'
     }
     if (pref.version) {
-      if (hasMultipleVersions && versionData?.versions?.includes(pref.version)) return `version:${pref.version}`
+      if (hasMultipleVersions && versionData?.versions?.includes(pref.version))
+        return `version:${pref.version}`
       // Version set without a track — check if it matches a track's current version
       // Prefer the publisher's default track when multiple tracks share the same version
       const tracks = versionData?.tracks ?? {}
-      if (defaultTrack && tracks[defaultTrack] === pref.version) return `track:${defaultTrack}`
+      if (defaultTrack && tracks[defaultTrack] === pref.version)
+        return `track:${defaultTrack}`
       for (const [track, ver] of Object.entries(tracks)) {
         if (ver === pref.version) return `track:${track}`
       }
@@ -366,10 +389,16 @@ function VersionsTab({ appId }: { appId: string }) {
         <SelectItem value='default'>{defaultLabel}</SelectItem>
         {hasTracks && (
           <SelectGroup>
-            <SelectLabel><Trans>Track</Trans></SelectLabel>
+            <SelectLabel>
+              <Trans>Track</Trans>
+            </SelectLabel>
             {Object.entries(versionData?.tracks ?? {}).map(
               ([track, version]) => (
-                <SelectItem key={`track:${track}`} value={`track:${track}`} className='ps-6'>
+                <SelectItem
+                  key={`track:${track}`}
+                  value={`track:${track}`}
+                  className='ps-6'
+                >
                   {track === defaultTrack
                     ? t`${track} (default, version ${version})`
                     : t`${track} (version ${version})`}
@@ -380,7 +409,9 @@ function VersionsTab({ appId }: { appId: string }) {
         )}
         {hasMultipleVersions && (
           <SelectGroup>
-            <SelectLabel><Trans>Version</Trans></SelectLabel>
+            <SelectLabel>
+              <Trans>Version</Trans>
+            </SelectLabel>
             {[...(versionData?.versions ?? [])].reverse().map((version) => (
               <SelectItem
                 key={`version:${version}`}
@@ -397,14 +428,12 @@ function VersionsTab({ appId }: { appId: string }) {
   )
 
   return (
-    <div className="space-y-6">
-      <Section 
-        title={t`Version management`}
-      >
-        <div className="divide-y-0">
+    <div className='space-y-6'>
+      <Section title={t`Version management`}>
+        <div className='divide-y-0'>
           {isAdmin && (
             <FieldRow label={t`System default`}>
-              <div className="w-full max-w-sm">
+              <div className='w-full max-w-sm'>
                 {renderVersionSelect(
                   systemValue,
                   handleSystemVersionChange,
@@ -417,10 +446,8 @@ function VersionsTab({ appId }: { appId: string }) {
             </FieldRow>
           )}
 
-          <FieldRow
-            label={isAdmin ? t`Your version` : t`Preferred version`}
-          >
-            <div className="w-full max-w-sm">
+          <FieldRow label={isAdmin ? t`Your version` : t`Preferred version`}>
+            <div className='w-full max-w-sm'>
               {renderVersionSelect(
                 userValue,
                 handleUserVersionChange,
@@ -437,14 +464,26 @@ function VersionsTab({ appId }: { appId: string }) {
   )
 }
 
-function PermissionsTab({ appId, appName, isSelf }: { appId: string; appName: string; isSelf: boolean }) {
+function PermissionsTab({
+  appId,
+  appName,
+  isSelf,
+}: {
+  appId: string
+  appName: string
+  isSelf: boolean
+}) {
   const { t } = useLingui()
   const { data, isLoading, error, refetch } = useAppPermissions(appId)
   const { data: catalog } = usePermissionCatalog()
   const setPermission = useSetPermission()
   const [grantDialogOpen, setGrantDialogOpen] = useState(false)
-  const [revokingPermission, setRevokingPermission] = useState<string | null>(null)
-  const [grantingPermission, setGrantingPermission] = useState<string | null>(null)
+  const [revokingPermission, setRevokingPermission] = useState<string | null>(
+    null
+  )
+  const [grantingPermission, setGrantingPermission] = useState<string | null>(
+    null
+  )
 
   const handleRevoke = async (permission: string) => {
     setRevokingPermission(permission)
@@ -454,8 +493,7 @@ function PermissionsTab({ appId, appName, isSelf }: { appId: string; appName: st
         {
           loading: t`Revoking permission...`,
           success: t`Permission revoked`,
-          error: (err) =>
-            getErrorMessage(err, t`Failed to revoke permission`),
+          error: (err) => getErrorMessage(err, t`Failed to revoke permission`),
         }
       )
     } catch {
@@ -508,53 +546,68 @@ function PermissionsTab({ appId, appName, isSelf }: { appId: string; appName: st
   return (
     <Section
       title={t`Permissions`}
-      description={grantedPermissions.length === 0 ? t`No permissions granted to this app` : undefined}
-      action={availablePermissions.length > 0 && (
-        <ResponsiveDialog open={grantDialogOpen} onOpenChange={setGrantDialogOpen}>
-          <ResponsiveDialogTrigger asChild>
-            <Button variant='outline' size='sm'>
-              <Plus className='h-4 w-4 me-1' />
-              <Trans>Grant</Trans>
-            </Button>
-          </ResponsiveDialogTrigger>
-          <ResponsiveDialogContent className='flex flex-col overflow-hidden sm:max-w-lg data-[vaul-drawer-direction=bottom]:mt-4 data-[vaul-drawer-direction=bottom]:max-h-[calc(100dvh-1rem)]'>
-            <ResponsiveDialogHeader>
-              <ResponsiveDialogTitle><Trans>Grant permission</Trans></ResponsiveDialogTitle>
-            </ResponsiveDialogHeader>
-            <div className='min-h-0 flex-1 space-y-2 overflow-y-auto py-1'>
-              {availablePermissions.map((p) => (
-                <button
-                  key={p.permission}
-                  onClick={() => handleGrant(p.permission)}
-                  disabled={grantingPermission !== null}
-                  className='hover:bg-hover flex w-full items-center justify-between rounded-lg border p-3.5 text-start text-sm transition-colors disabled:opacity-50'
-                >
-                  <div className='flex items-center gap-3'>
-                    {p.restricted ? (
-                      <ShieldAlert className='text-destructive h-4 w-4' />
+      description={
+        grantedPermissions.length === 0
+          ? t`No permissions granted to this app`
+          : undefined
+      }
+      action={
+        availablePermissions.length > 0 && (
+          <ResponsiveDialog
+            open={grantDialogOpen}
+            onOpenChange={setGrantDialogOpen}
+          >
+            <ResponsiveDialogTrigger asChild>
+              <Button variant='outline' size='sm'>
+                <Plus className='me-1 h-4 w-4' />
+                <Trans>Grant</Trans>
+              </Button>
+            </ResponsiveDialogTrigger>
+            <ResponsiveDialogContent className='flex flex-col overflow-hidden data-[vaul-drawer-direction=bottom]:mt-4 data-[vaul-drawer-direction=bottom]:max-h-[calc(100dvh-1rem)] sm:max-w-lg'>
+              <ResponsiveDialogHeader>
+                <ResponsiveDialogTitle>
+                  <Trans>Grant permission</Trans>
+                </ResponsiveDialogTitle>
+              </ResponsiveDialogHeader>
+              <div className='min-h-0 flex-1 space-y-2 overflow-y-auto py-1'>
+                {availablePermissions.map((p) => (
+                  <button
+                    key={p.permission}
+                    onClick={() => handleGrant(p.permission)}
+                    disabled={grantingPermission !== null}
+                    className='hover:bg-hover flex w-full items-center justify-between rounded-lg border p-3.5 text-start text-sm transition-colors disabled:opacity-50'
+                  >
+                    <div className='flex items-center gap-3'>
+                      {p.restricted ? (
+                        <ShieldAlert className='text-destructive h-4 w-4' />
+                      ) : (
+                        <Shield className='text-primary h-4 w-4' />
+                      )}
+                      <span className='font-medium'>{p.name}</span>
+                    </div>
+                    {grantingPermission === p.permission ? (
+                      <Loader2 className='h-4 w-4 animate-spin' />
                     ) : (
-                      <Shield className='text-primary h-4 w-4' />
+                      <span className='text-muted-foreground font-mono text-xs'>
+                        {p.permission}
+                      </span>
                     )}
-                    <span className="font-medium">{p.name}</span>
-                  </div>
-                  {grantingPermission === p.permission ? (
-                    <Loader2 className='h-4 w-4 animate-spin' />
-                  ) : (
-                    <span className="text-xs text-muted-foreground font-mono">{p.permission}</span>
-                  )}
-                </button>
-              ))}
-            </div>
-            <ResponsiveDialogFooter className='border-t pt-3'>
-              <ResponsiveDialogClose asChild>
-                <Button variant='outline'><Trans>Cancel</Trans></Button>
-              </ResponsiveDialogClose>
-            </ResponsiveDialogFooter>
-          </ResponsiveDialogContent>
-        </ResponsiveDialog>
-      )}
+                  </button>
+                ))}
+              </div>
+              <ResponsiveDialogFooter className='border-t pt-3'>
+                <ResponsiveDialogClose asChild>
+                  <Button variant='outline'>
+                    <Trans>Cancel</Trans>
+                  </Button>
+                </ResponsiveDialogClose>
+              </ResponsiveDialogFooter>
+            </ResponsiveDialogContent>
+          </ResponsiveDialog>
+        )
+      }
     >
-      <div className='divide-y-0 space-y-2'>
+      <div className='space-y-2 divide-y-0'>
         {grantedPermissions.length > 0 ? (
           grantedPermissions.map((permission) => (
             <PermissionRow
@@ -563,15 +616,14 @@ function PermissionsTab({ appId, appName, isSelf }: { appId: string; appName: st
               onRevoke={handleRevoke}
               isRevoking={revokingPermission === permission.permission}
               appName={appName}
-              canRevoke={!(isSelf && permission.permission === 'permissions/write')}
+              canRevoke={
+                !(isSelf && permission.permission === 'permissions/write')
+              }
             />
           ))
         ) : (
-          <div className="py-8">
-            <EmptyState
-              icon={Shield}
-              title={t`No permissions granted`}
-            />
+          <div className='py-8'>
+            <EmptyState icon={Shield} title={t`No permissions granted`} />
           </div>
         )}
       </div>
@@ -596,7 +648,7 @@ function PermissionRow({
   const [confirmOpen, setConfirmOpen] = useState(false)
 
   return (
-    <div className='flex items-center justify-between group rounded-lg border px-4 py-3 transition-colors hover:bg-hover/30'>
+    <div className='group hover:bg-hover/30 flex items-center justify-between rounded-lg border px-4 py-3 transition-colors'>
       <div className='flex items-center gap-3 text-sm'>
         {permission.restricted ? (
           <ShieldAlert className='text-destructive h-4 w-4' />
@@ -604,7 +656,7 @@ function PermissionRow({
           <Shield className='text-primary h-4 w-4' />
         )}
         <div>
-          <p className="font-medium">{permission.name}</p>
+          <p className='font-medium'>{permission.name}</p>
         </div>
       </div>
       {canRevoke && (
@@ -616,17 +668,21 @@ function PermissionRow({
                 size='sm'
                 disabled={isRevoking}
                 onClick={() => setConfirmOpen(true)}
-                className="text-muted-foreground h-8 w-8 p-0 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100"
+                className='text-muted-foreground h-8 w-8 p-0 opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100'
               >
                 {isRevoking ? (
                   <Loader2 className='h-4 w-4 animate-spin' />
                 ) : (
                   <X className='h-4 w-4' />
                 )}
-                <span className='sr-only'><Trans>Revoke</Trans></span>
+                <span className='sr-only'>
+                  <Trans>Revoke</Trans>
+                </span>
               </Button>
             </TooltipTrigger>
-            <TooltipContent><Trans>Revoke</Trans></TooltipContent>
+            <TooltipContent>
+              <Trans>Revoke</Trans>
+            </TooltipContent>
           </Tooltip>
           <ConfirmDialog
             open={confirmOpen}

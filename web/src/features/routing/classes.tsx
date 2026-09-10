@@ -2,9 +2,14 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
-import { Main, PageHeader, usePageTitle, Skeleton, GeneralError } from '@mochi/web'
 import { useLingui } from '@lingui/react/macro'
+import {
+  Main,
+  PageHeader,
+  usePageTitle,
+  Skeleton,
+  GeneralError,
+} from '@mochi/web'
 import { Boxes } from 'lucide-react'
 import { RoutingTable } from './routing-table'
 import { useRoutingData } from './use-routing-data'
@@ -12,7 +17,14 @@ import { useRoutingData } from './use-routing-data'
 export function RoutingClasses() {
   const { t } = useLingui()
   usePageTitle(t`Class routing`)
-  const { data, isLoading, error, refetch, handleUserChange, handleSystemChange } = useRoutingData()
+  const {
+    data,
+    isLoading,
+    error,
+    refetch,
+    handleUserChange,
+    handleSystemChange,
+  } = useRoutingData()
 
   const classes = data?.classes ?? {}
   const isAdmin = data?.administrator ?? false

@@ -2,17 +2,18 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
+import { t } from '@lingui/core/macro'
+import { Trans } from '@lingui/react/macro'
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue, naturalCompare,} from '@mochi/web'
+  SelectValue,
+  naturalCompare,
+} from '@mochi/web'
 import { AlertTriangle } from 'lucide-react'
-import { Trans } from '@lingui/react/macro'
 import type { RoutingResource, RoutingApp } from '@/api/apps'
-import { t } from '@lingui/core/macro'
 
 function formatAppName(app: RoutingApp): string {
   return app.development ? t`${app.name} (development)` : app.name
@@ -42,8 +43,16 @@ export function RoutingTable({
   type: 'class' | 'service' | 'path'
   resources: Record<string, RoutingResource>
   isAdmin: boolean
-  onUserChange: (type: 'class' | 'service' | 'path', name: string, appId: string) => void
-  onSystemChange: (type: 'class' | 'service' | 'path', name: string, appId: string) => void
+  onUserChange: (
+    type: 'class' | 'service' | 'path',
+    name: string,
+    appId: string
+  ) => void
+  onSystemChange: (
+    type: 'class' | 'service' | 'path',
+    name: string,
+    appId: string
+  ) => void
 }) {
   const sortedNames = Object.keys(resources).sort()
 
@@ -65,16 +74,30 @@ export function RoutingTable({
     <div className='rounded-lg border'>
       <table className='w-full'>
         <thead>
-          <tr className='border-b bg-muted/50'>
+          <tr className='bg-muted/50 border-b'>
             <th className='px-4 py-3 text-start text-sm font-medium'>
-              {type === 'path' ? <Trans>Path</Trans> : type === 'class' ? <Trans>Class</Trans> : <Trans>Service</Trans>}
+              {type === 'path' ? (
+                <Trans>Path</Trans>
+              ) : type === 'class' ? (
+                <Trans>Class</Trans>
+              ) : (
+                <Trans>Service</Trans>
+              )}
             </th>
-            <th className='px-4 py-3 text-start text-sm font-medium'><Trans>Declared by</Trans></th>
+            <th className='px-4 py-3 text-start text-sm font-medium'>
+              <Trans>Declared by</Trans>
+            </th>
             {isAdmin && (
-              <th className='px-4 py-3 text-start text-sm font-medium'><Trans>System default</Trans></th>
+              <th className='px-4 py-3 text-start text-sm font-medium'>
+                <Trans>System default</Trans>
+              </th>
             )}
             <th className='px-4 py-3 text-start text-sm font-medium'>
-              {isAdmin ? <Trans>Your preference</Trans> : <Trans>Handler</Trans>}
+              {isAdmin ? (
+                <Trans>Your preference</Trans>
+              ) : (
+                <Trans>Handler</Trans>
+              )}
             </th>
           </tr>
         </thead>
@@ -91,7 +114,9 @@ export function RoutingTable({
               (resource.apps.length > 0 ? resource.apps[0].id : '')
             // May be undefined: a stale binding can point at an app that no
             // longer declares this resource.
-            const effectiveAppInfo = resource.apps.find((a) => a.id === effectiveApp)
+            const effectiveAppInfo = resource.apps.find(
+              (a) => a.id === effectiveApp
+            )
 
             return (
               <tr key={name} className='border-b last:border-b-0'>
@@ -107,7 +132,9 @@ export function RoutingTable({
                 </td>
                 <td className='px-4 py-3'>
                   <span className='text-muted-foreground text-sm'>
-                    {sortApps(resource.apps).map((a) => formatAppName(a)).join(', ')}
+                    {sortApps(resource.apps)
+                      .map((a) => formatAppName(a))
+                      .join(', ')}
                   </span>
                 </td>
                 {isAdmin && (
@@ -115,7 +142,11 @@ export function RoutingTable({
                     <Select
                       value={resource.system || '_default'}
                       onValueChange={(value) =>
-                        onSystemChange(type, name, value === '_default' ? '' : value)
+                        onSystemChange(
+                          type,
+                          name,
+                          value === '_default' ? '' : value
+                        )
                       }
                     >
                       <SelectTrigger className='w-48'>
@@ -123,7 +154,9 @@ export function RoutingTable({
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value='_default'>
-                          <span className='text-muted-foreground'><Trans>Default</Trans></span>
+                          <span className='text-muted-foreground'>
+                            <Trans>Default</Trans>
+                          </span>
                         </SelectItem>
                         {sortApps(resource.apps).map((app) => (
                           <SelectItem key={app.id} value={app.id}>
@@ -138,7 +171,11 @@ export function RoutingTable({
                   <Select
                     value={resource.user || '_default'}
                     onValueChange={(value) =>
-                      onUserChange(type, name, value === '_default' ? '' : value)
+                      onUserChange(
+                        type,
+                        name,
+                        value === '_default' ? '' : value
+                      )
                     }
                   >
                     <SelectTrigger className='w-48'>
@@ -147,7 +184,11 @@ export function RoutingTable({
                     <SelectContent>
                       <SelectItem value='_default'>
                         <span className='text-muted-foreground'>
-                          {isAdmin ? <Trans>Use system default</Trans> : <Trans>Default</Trans>}
+                          {isAdmin ? (
+                            <Trans>Use system default</Trans>
+                          ) : (
+                            <Trans>Default</Trans>
+                          )}
                           {!resource.user && effectiveAppInfo && (
                             <span className='ms-1'>
                               ({formatAppName(effectiveAppInfo)})
