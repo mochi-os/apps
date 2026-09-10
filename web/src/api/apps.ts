@@ -148,7 +148,7 @@ export interface RoutingResource {
   user: string
 }
 
-export interface RoutingData {
+interface RoutingData {
   classes: Record<string, RoutingResource>
   services: Record<string, RoutingResource>
   paths: Record<string, RoutingResource>

@@ -59,7 +59,7 @@ export interface AppPermissions {
 // One entry of the full permission catalog returned by /apps/-/permissions/catalog.
 // The catalog is the source of truth for which permissions exist, their
 // translated names, and their security levels.
-export interface PermissionCatalogEntry {
+interface PermissionCatalogEntry {
   permission: string
   name: string
   restricted: boolean
