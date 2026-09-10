@@ -441,7 +441,7 @@ export function Apps() {
         {appsData?.install.allowed && !isSearching && (
           <section>
             <h2 className='text-xl font-semibold'><Trans>Available, but not installed</Trans></h2>
-            <p className='mb-4 ms-3 text-xs font-medium tracking-wide text-muted-foreground uppercase'><Trans>Recommended</Trans></p>
+            <p className='mb-4 text-center text-xs font-medium tracking-wide text-muted-foreground uppercase'><Trans>Recommended</Trans></p>
             {isLoadingMarket ? (
               <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
                 {Array.from({ length: 6 }).map((_, i) => (
