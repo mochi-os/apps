@@ -293,9 +293,15 @@ def action_install_file(a):
 		a.error.label(400, "errors.failed_to_read_app_information")
 		return
 
-	# Prove the package installs before creating its entity: a failed install
-	# aborts the action, and an entity created first would be left orphaned.
-	mochi.app.package.install("", file, True)
+	# Refuse a package core would not install before creating its entity: the
+	# refusal is the uploader's problem and answers 400 with the reason, where
+	# the check-only install that stood here raised - a 500 that mailed the
+	# administrator - and an entity created first would be left orphaned.
+	refusal = mochi.app.package.check(file)
+	if refusal:
+		mochi.file.delete(file)
+		a.error.label(400, "errors.package_refused", reason=refusal)
+		return
 
 	# Create an entity for this app using the name from the archive
 	entity = mochi.entity.create("app", info["name"], privacy)
