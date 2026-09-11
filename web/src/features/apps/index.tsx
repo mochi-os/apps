@@ -36,9 +36,6 @@ import {
   Skeleton,
   DataChip,
   getErrorMessage,
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
   UploadProgress,
   useUploadProgress,
 } from '@mochi/web'
@@ -290,20 +287,15 @@ export function Apps() {
 
   const actionMenu = (
     <DropdownMenu>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <DropdownMenuTrigger asChild>
-            <Button variant='ghost' size='icon' aria-label={t`App actions`}>
-              {upgradeMutation.isPending ? (
-                <RefreshCw className='h-4 w-4 animate-spin' />
-              ) : (
-                <MoreHorizontal className='h-4 w-4' />
-              )}
-            </Button>
-          </DropdownMenuTrigger>
-        </TooltipTrigger>
-        <TooltipContent>{t`App actions`}</TooltipContent>
-      </Tooltip>
+      <DropdownMenuTrigger asChild>
+        <Button variant='ghost' size='icon' aria-label={t`App actions`}>
+          {upgradeMutation.isPending ? (
+            <RefreshCw className='h-4 w-4 animate-spin' />
+          ) : (
+            <MoreHorizontal className='h-4 w-4' />
+          )}
+        </Button>
+      </DropdownMenuTrigger>
       <DropdownMenuContent align='end'>
         {availableUpdates && availableUpdates.length > 0 && (
           <DropdownMenuItem
