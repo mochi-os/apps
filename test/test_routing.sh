@@ -57,7 +57,7 @@ echo "--- Routing Data (Admin) ---"
 
 # Test: Get routing data as admin
 RESPONSE=$("$CURL" /apps/-/routing/data)
-if echo "$RESPONSE" | python3 -c "import sys, json; d=json.load(sys.stdin).get('data', {}); assert 'classes' in d and 'services' in d and 'paths' in d and d.get('is_admin') == True" 2>/dev/null; then
+if echo "$RESPONSE" | python3 -c "import sys, json; d=json.load(sys.stdin).get('data', {}); assert 'classes' in d and 'services' in d and 'paths' in d and d.get('administrator') == True" 2>/dev/null; then
     CLASS_COUNT=$(echo "$RESPONSE" | python3 -c "import sys, json; d=json.load(sys.stdin)['data']; print(len(d['classes']))" 2>/dev/null)
     SERVICE_COUNT=$(echo "$RESPONSE" | python3 -c "import sys, json; d=json.load(sys.stdin)['data']; print(len(d['services']))" 2>/dev/null)
     PATH_COUNT=$(echo "$RESPONSE" | python3 -c "import sys, json; d=json.load(sys.stdin)['data']; print(len(d['paths']))" 2>/dev/null)
@@ -99,8 +99,8 @@ else
 
 # Test: Get routing data as user
 RESPONSE=$("$CURL" -a user /apps/-/routing/data)
-if echo "$RESPONSE" | python3 -c "import sys, json; d=json.load(sys.stdin).get('data', {}); assert 'classes' in d and 'services' in d and 'paths' in d and d.get('is_admin') == False" 2>/dev/null; then
-    pass "Get routing data as user (is_admin=false)"
+if echo "$RESPONSE" | python3 -c "import sys, json; d=json.load(sys.stdin).get('data', {}); assert 'classes' in d and 'services' in d and 'paths' in d and d.get('administrator') == False" 2>/dev/null; then
+    pass "Get routing data as user (administrator=false)"
 else
     fail "Get routing data as user" "$RESPONSE"
 fi
