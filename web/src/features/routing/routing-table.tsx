@@ -73,10 +73,10 @@ export function RoutingTable({
 
   return (
     <div className='rounded-lg border'>
-      <Table>
+      <Table stickyFirstColumn>
         <thead>
           <tr className='bg-muted/50 border-b'>
-            <th className='px-4 py-3 text-start text-sm font-medium'>
+            <th className='bg-muted px-4 py-3 text-start text-sm font-medium'>
               {type === 'path' ? (
                 <Trans>Path</Trans>
               ) : type === 'class' ? (
@@ -121,7 +121,7 @@ export function RoutingTable({
 
             return (
               <tr key={name} className='border-b last:border-b-0'>
-                <td className='px-4 py-3'>
+                <td className='bg-background px-4 py-3'>
                   <div className='flex items-center gap-2'>
                     <code className='text-sm'>{displayName}</code>
                     {hasConflict && (
