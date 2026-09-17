@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-import { Trans, useLingui } from '@lingui/react/macro'
+import { Trans } from '@lingui/react/macro'
 import {
   Button,
   ResponsiveDialog,
@@ -13,7 +13,7 @@ import {
   ResponsiveDialogHeader,
   ResponsiveDialogTitle,
 } from '@mochi/web'
-import { Download, Loader2 } from 'lucide-react'
+import { Download } from 'lucide-react'
 import type { MarketApp, AppInfo, Track } from '@/api/types/apps'
 
 interface InstallDialogProps {
@@ -41,7 +41,6 @@ export function InstallDialog({
   onInstall,
   isInstalling,
 }: InstallDialogProps) {
-  const { t } = useLingui()
   if (!marketApp) return null
 
   return (
@@ -119,14 +118,11 @@ export function InstallDialog({
                 )?.version ?? appInfo.tracks[0]?.version
               if (version) onInstall(version)
             }}
-            disabled={isLoading || isInstalling || !appInfo?.tracks.length}
+            loading={isInstalling}
+            icon={<Download className='size-4' />}
+            disabled={isLoading || !appInfo?.tracks.length}
           >
-            {isInstalling ? (
-              <Loader2 className='size-4 animate-spin' />
-            ) : (
-              <Download className='size-4' />
-            )}
-            {isInstalling ? t`Installing...` : t`Install`}
+            <Trans>Install</Trans>
           </Button>
         </ResponsiveDialogFooter>
       </ResponsiveDialogContent>

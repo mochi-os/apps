@@ -13,7 +13,7 @@ import {
   ResponsiveDialogTitle,
   Skeleton,
 } from '@mochi/web'
-import { Download, AlertTriangle, Loader2 } from 'lucide-react'
+import { Download, AlertTriangle } from 'lucide-react'
 import type { AppInfo, Track } from '@/api/types/apps'
 
 interface AppInfoDialogProps {
@@ -130,14 +130,10 @@ export function AppInfoDialog({
                       <Button
                         size='sm'
                         onClick={() => onInstall(track.version)}
-                        disabled={isInstalling}
+                        loading={isInstalling}
+                        icon={<Download className='size-4' />}
                       >
-                        {isInstalling ? (
-                          <Loader2 className='size-4 animate-spin' />
-                        ) : (
-                          <Download className='size-4' />
-                        )}
-                        {isInstalling ? t`Installing...` : t`Install`}
+                        <Trans>Install</Trans>
                       </Button>
                     </div>
                   ))}

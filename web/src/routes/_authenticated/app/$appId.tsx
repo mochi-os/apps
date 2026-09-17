@@ -666,15 +666,11 @@ function PermissionRow({
               <Button
                 variant='ghost'
                 size='sm'
-                disabled={isRevoking}
+                loading={isRevoking}
+                icon={<X className='h-4 w-4' />}
                 onClick={() => setConfirmOpen(true)}
                 className='text-muted-foreground h-8 w-8 p-0 opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100'
               >
-                {isRevoking ? (
-                  <Loader2 className='h-4 w-4 animate-spin' />
-                ) : (
-                  <X className='h-4 w-4' />
-                )}
                 <span className='sr-only'>
                   <Trans>Revoke</Trans>
                 </span>

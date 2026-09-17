@@ -46,7 +46,6 @@ import {
   RefreshCw,
   MoreHorizontal,
   Trash2,
-  Loader2,
 } from 'lucide-react'
 import type { DirectoryApp } from '@/api/apps'
 import type { InstalledApp, MarketApp } from '@/api/types/apps'
@@ -572,14 +571,10 @@ export function Apps() {
               </ResponsiveDialogClose>
               <Button
                 onClick={handleDirectoryInstall}
-                disabled={installByIdMutation.isPending}
+                loading={installByIdMutation.isPending}
+                icon={<Download className='size-4' />}
               >
-                {installByIdMutation.isPending ? (
-                  <Loader2 className='size-4 animate-spin' />
-                ) : (
-                  <Download className='size-4' />
-                )}
-                {installByIdMutation.isPending ? t`Installing...` : t`Install`}
+                <Trans>Install</Trans>
               </Button>
             </ResponsiveDialogFooter>
           </ResponsiveDialogContent>
@@ -625,14 +620,10 @@ export function Apps() {
               </ResponsiveDialogClose>
               <Button
                 onClick={handlePublisherInstall}
-                disabled={installByIdMutation.isPending}
+                loading={installByIdMutation.isPending}
+                icon={<Download className='size-4' />}
               >
-                {installByIdMutation.isPending ? (
-                  <Loader2 className='size-4 animate-spin' />
-                ) : (
-                  <Download className='size-4' />
-                )}
-                {installByIdMutation.isPending ? t`Installing...` : t`Install`}
+                <Trans>Install</Trans>
               </Button>
             </ResponsiveDialogFooter>
           </ResponsiveDialogContent>
@@ -685,16 +676,10 @@ export function Apps() {
               </ResponsiveDialogClose>
               <Button
                 onClick={handleFileInstall}
-                disabled={installFromFileMutation.isPending}
+                loading={installFromFileMutation.isPending}
+                icon={<Download className='size-4' />}
               >
-                {installFromFileMutation.isPending ? (
-                  <Loader2 className='size-4 animate-spin' />
-                ) : (
-                  <Download className='size-4' />
-                )}
-                {installFromFileMutation.isPending
-                  ? t`Installing...`
-                  : t`Install`}
+                <Trans>Install</Trans>
               </Button>
             </ResponsiveDialogFooter>
           </ResponsiveDialogContent>
