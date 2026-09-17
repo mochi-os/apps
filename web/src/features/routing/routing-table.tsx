@@ -10,6 +10,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
+  Table,
   naturalCompare,
 } from '@mochi/web'
 import { AlertTriangle } from 'lucide-react'
@@ -72,7 +73,7 @@ export function RoutingTable({
 
   return (
     <div className='rounded-lg border'>
-      <table className='w-full'>
+      <Table>
         <thead>
           <tr className='bg-muted/50 border-b'>
             <th className='px-4 py-3 text-start text-sm font-medium'>
@@ -208,7 +209,7 @@ export function RoutingTable({
             )
           })}
         </tbody>
-      </table>
+      </Table>
     </div>
   )
 }
