@@ -732,7 +732,9 @@ function InstalledAppCard({
     <Card
       role='button'
       tabIndex={0}
-      className='hover:bg-surface-2 hover:border-border-strong flex cursor-pointer flex-col transition-[background-color,border-color,box-shadow] hover:shadow-md'
+      className={`hover:bg-surface-2 hover:border-border-strong flex cursor-pointer flex-col transition-[background-color,border-color,box-shadow] hover:shadow-md ${
+        showId ? 'border-dashed' : ''
+      }`}
       onClick={onClick}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
