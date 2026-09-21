@@ -10,6 +10,12 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
   naturalCompare,
 } from '@mochi/web'
 import { AlertTriangle } from 'lucide-react'
@@ -71,107 +77,73 @@ export function RoutingTable({
   }
 
   return (
-    <div className='rounded-lg border'>
-      <table className='w-full'>
-        <thead>
-          <tr className='bg-muted/50 border-b'>
-            <th className='px-4 py-3 text-start text-sm font-medium'>
-              {type === 'path' ? (
-                <Trans>Path</Trans>
-              ) : type === 'class' ? (
-                <Trans>Class</Trans>
-              ) : (
-                <Trans>Service</Trans>
-              )}
-            </th>
-            <th className='px-4 py-3 text-start text-sm font-medium'>
-              <Trans>Declared by</Trans>
-            </th>
-            {isAdmin && (
-              <th className='px-4 py-3 text-start text-sm font-medium'>
-                <Trans>System default</Trans>
-              </th>
+    <Table stickyFirstColumn>
+      <TableHeader>
+        <TableRow>
+          <TableHead>
+            {type === 'path' ? (
+              <Trans>Path</Trans>
+            ) : type === 'class' ? (
+              <Trans>Class</Trans>
+            ) : (
+              <Trans>Service</Trans>
             )}
-            <th className='px-4 py-3 text-start text-sm font-medium'>
-              {isAdmin ? (
-                <Trans>Your preference</Trans>
-              ) : (
-                <Trans>Handler</Trans>
-              )}
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {sortedNames.map((name) => {
-            const resource = resources[name]
-            const hasConflict = resource.apps.length > 1
-            const displayName = type === 'path' ? `/${name}` : name
+          </TableHead>
+          <TableHead>
+            <Trans>Declared by</Trans>
+          </TableHead>
+          {isAdmin && (
+            <TableHead>
+              <Trans>System default</Trans>
+            </TableHead>
+          )}
+          <TableHead>
+            {isAdmin ? <Trans>Your preference</Trans> : <Trans>Handler</Trans>}
+          </TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {sortedNames.map((name) => {
+          const resource = resources[name]
+          const hasConflict = resource.apps.length > 1
+          const displayName = type === 'path' ? `/${name}` : name
 
-            // Determine effective handler
-            const effectiveApp =
-              resource.user ||
-              resource.system ||
-              (resource.apps.length > 0 ? resource.apps[0].id : '')
-            // May be undefined: a stale binding can point at an app that no
-            // longer declares this resource.
-            const effectiveAppInfo = resource.apps.find(
-              (a) => a.id === effectiveApp
-            )
+          // Determine effective handler
+          const effectiveApp =
+            resource.user ||
+            resource.system ||
+            (resource.apps.length > 0 ? resource.apps[0].id : '')
+          // May be undefined: a stale binding can point at an app that no
+          // longer declares this resource.
+          const effectiveAppInfo = resource.apps.find(
+            (a) => a.id === effectiveApp
+          )
 
-            return (
-              <tr key={name} className='border-b last:border-b-0'>
-                <td className='px-4 py-3'>
-                  <div className='flex items-center gap-2'>
-                    <code className='text-sm'>{displayName}</code>
-                    {hasConflict && (
-                      <span title={t`Multiple apps declare this resource`}>
-                        <AlertTriangle className='h-4 w-4 text-amber-500' />
-                      </span>
-                    )}
-                  </div>
-                </td>
-                <td className='px-4 py-3'>
-                  <span className='text-muted-foreground text-sm'>
-                    {sortApps(resource.apps)
-                      .map((a) => formatAppName(a))
-                      .join(', ')}
-                  </span>
-                </td>
-                {isAdmin && (
-                  <td className='px-4 py-3'>
-                    <Select
-                      value={resource.system || '_default'}
-                      onValueChange={(value) =>
-                        onSystemChange(
-                          type,
-                          name,
-                          value === '_default' ? '' : value
-                        )
-                      }
-                    >
-                      <SelectTrigger className='w-48'>
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value='_default'>
-                          <span className='text-muted-foreground'>
-                            <Trans>Default</Trans>
-                          </span>
-                        </SelectItem>
-                        {sortApps(resource.apps).map((app) => (
-                          <SelectItem key={app.id} value={app.id}>
-                            {formatAppName(app)}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </td>
-                )}
-                <td className='px-4 py-3'>
+          return (
+            <TableRow key={name}>
+              <TableCell>
+                <div className='flex items-center gap-2'>
+                  <code className='text-sm'>{displayName}</code>
+                  {hasConflict && (
+                    <span title={t`Multiple apps declare this resource`}>
+                      <AlertTriangle className='h-4 w-4 text-amber-500' />
+                    </span>
+                  )}
+                </div>
+              </TableCell>
+              <TableCell>
+                <span className='text-muted-foreground text-sm'>
+                  {sortApps(resource.apps)
+                    .map((a) => formatAppName(a))
+                    .join(', ')}
+                </span>
+              </TableCell>
+              {isAdmin && (
+                <TableCell>
                   <Select
-                    value={resource.user || '_default'}
+                    value={resource.system || '_default'}
                     onValueChange={(value) =>
-                      onUserChange(
+                      onSystemChange(
                         type,
                         name,
                         value === '_default' ? '' : value
@@ -184,16 +156,7 @@ export function RoutingTable({
                     <SelectContent>
                       <SelectItem value='_default'>
                         <span className='text-muted-foreground'>
-                          {isAdmin ? (
-                            <Trans>Use system default</Trans>
-                          ) : (
-                            <Trans>Default</Trans>
-                          )}
-                          {!resource.user && effectiveAppInfo && (
-                            <span className='ms-1'>
-                              ({formatAppName(effectiveAppInfo)})
-                            </span>
-                          )}
+                          <Trans>Default</Trans>
                         </span>
                       </SelectItem>
                       {sortApps(resource.apps).map((app) => (
@@ -203,12 +166,45 @@ export function RoutingTable({
                       ))}
                     </SelectContent>
                   </Select>
-                </td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
-    </div>
+                </TableCell>
+              )}
+              <TableCell>
+                <Select
+                  value={resource.user || '_default'}
+                  onValueChange={(value) =>
+                    onUserChange(type, name, value === '_default' ? '' : value)
+                  }
+                >
+                  <SelectTrigger className='w-48'>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value='_default'>
+                      <span className='text-muted-foreground'>
+                        {isAdmin ? (
+                          <Trans>Use system default</Trans>
+                        ) : (
+                          <Trans>Default</Trans>
+                        )}
+                        {!resource.user && effectiveAppInfo && (
+                          <span className='ms-1'>
+                            ({formatAppName(effectiveAppInfo)})
+                          </span>
+                        )}
+                      </span>
+                    </SelectItem>
+                    {sortApps(resource.apps).map((app) => (
+                      <SelectItem key={app.id} value={app.id}>
+                        {formatAppName(app)}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </TableCell>
+            </TableRow>
+          )
+        })}
+      </TableBody>
+    </Table>
   )
 }
