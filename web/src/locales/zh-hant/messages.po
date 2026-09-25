@@ -125,7 +125,7 @@ msgstr "{totalDescendants, plural, one {# 則回覆} other {+# 則更多回覆}}
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "{track} (default, version {version})"
-msgstr "{track} (預設,版本 {version})"
+msgstr "{track} (預設，版本 {version})"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "{track} (version {version})"
@@ -458,7 +458,7 @@ msgstr "阻擋"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Board"
-msgstr "棋盤"
+msgstr "看板"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -869,12 +869,12 @@ msgstr "預設排序"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track"
-msgstr "預設軌道"
+msgstr "預設通道"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track (version {0})"
-msgstr "預設軌道(版本 {0})"
+msgstr "預設通道 (版本 {0})"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1638,9 +1638,13 @@ msgid "Network error"
 msgstr "網路錯誤"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "新增"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "最新"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1843,11 +1847,15 @@ msgstr "找不到任何項目"
 msgid "Notifications: {0}"
 msgstr "通知：{0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "數字"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "編號"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -1923,7 +1931,7 @@ msgstr "通行金鑰驗證失敗。請再試一次。"
 
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Passkeys"
-msgstr "Passkey"
+msgstr "通行密鑰"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkeys are not available in this browser"
@@ -2497,7 +2505,7 @@ msgstr "停止關注"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "主旨"
+msgstr "使用者或群組"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Submit comment"
@@ -2521,9 +2529,13 @@ msgstr "星期日"
 msgid "Switch to view 1-9"
 msgstr "切換至檢視 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "系統"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "系統"
 
@@ -2593,7 +2605,7 @@ msgstr "麥克風要求未獲回應"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "The passkey request was not answered"
-msgstr "Passkey 要求未獲回應"
+msgstr "通行密鑰要求未獲回應"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "The requested app could not be found."
@@ -2617,7 +2629,7 @@ msgstr "此應用程式直接從其發行者安裝,尚未經過審查。它可�
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
-msgstr "此應用程式無權使用您的 Passkey。請在「設定」的「權限」中允許。"
+msgstr "此應用程式無權使用您的通行密鑰。請在「設定」的「權限」中允許。"
 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2665,12 +2677,12 @@ msgstr "要求次數過多"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "頂端"
+msgstr "最佳"
 
 #: src/features/apps/index.tsx
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Track"
-msgstr "軌道"
+msgstr "通道"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

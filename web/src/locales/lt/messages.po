@@ -125,7 +125,7 @@ msgstr "{totalDescendants, plural, one {# atsakymas} few {+# daugiau atsakymų} 
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "{track} (default, version {version})"
-msgstr "{track} (numatytoji, versija {version})"
+msgstr "{track} (numatytasis, versija {version})"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "{track} (version {version})"
@@ -278,7 +278,7 @@ msgstr "Įvyko netikėta klaida"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Android push"
-msgstr "Android push"
+msgstr "Android push pranešimai"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 #: ../../../lib/web/src/features/access/types.ts
@@ -328,7 +328,7 @@ msgstr "Programos ID"
 #: src/features/apps/index.tsx
 #: src/features/apps/index.tsx
 msgid "Apps"
-msgstr "Programėlės"
+msgstr "Programos"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -869,12 +869,12 @@ msgstr "Numatytasis rūšiavimas"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track"
-msgstr "Numatytasis track"
+msgstr "Numatytasis kanalas"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track (version {0})"
-msgstr "Numatytasis track (versija {0})"
+msgstr "Numatytasis kanalas (versija {0})"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1638,9 +1638,13 @@ msgid "Network error"
 msgstr "Tinklo klaida"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Naujas"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Naujausi"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1843,11 +1847,15 @@ msgstr "Nieko nerasta"
 msgid "Notifications: {0}"
 msgstr "Pranešimai: {0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "Skaičius"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "Numeris"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -2325,7 +2333,7 @@ msgstr "Ieškoma..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "Pasirinkti"
+msgstr "Pasirinkimas"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2497,7 +2505,7 @@ msgstr "Nebestebėti"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Tema"
+msgstr "Vartotojas ar grupė"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Submit comment"
@@ -2521,9 +2529,13 @@ msgstr "Sekmadienis"
 msgid "Switch to view 1-9"
 msgstr "Perjungti į rodinį 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Sistema"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Sistema"
 
@@ -2665,12 +2677,12 @@ msgstr "Per daug užklausų"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Viršus"
+msgstr "Geriausia"
 
 #: src/features/apps/index.tsx
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Track"
-msgstr "Track"
+msgstr "Kanalas"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

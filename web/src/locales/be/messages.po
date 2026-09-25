@@ -278,7 +278,7 @@ msgstr "Адбылася нечаканая памылка"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Android push"
-msgstr "Push для Android"
+msgstr "Пуш-апавяшчэнні для Android"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 #: ../../../lib/web/src/features/access/types.ts
@@ -869,12 +869,12 @@ msgstr "Сартаванне па змаўчанні"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track"
-msgstr "Трэк па змаўчанні"
+msgstr "Канал па змаўчанні"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track (version {0})"
-msgstr "Трэк па змаўчанні (версія {0})"
+msgstr "Канал па змаўчанні (версія {0})"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -993,7 +993,7 @@ msgstr "Адключана"
 #: ../../../lib/web/src/components/restore-banner.tsx
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Dismiss"
-msgstr "Адхіліць"
+msgstr "Закрыць"
 
 #: ../../../lib/web/src/components/ui/sidebar.tsx
 msgid "Displays the mobile sidebar."
@@ -1638,9 +1638,13 @@ msgid "Network error"
 msgstr "Памылка сеткі"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Новы"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Новае"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1843,11 +1847,15 @@ msgstr "Нічога не знойдзена"
 msgid "Notifications: {0}"
 msgstr "Апавяшчэнні: {0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "Лік"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "Нумар"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -1927,7 +1935,7 @@ msgstr "Ключы доступу"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkeys are not available in this browser"
-msgstr "Passkeys недаступныя ў гэтым браўзеры"
+msgstr "Ключы доступу недаступныя ў гэтым браўзеры"
 
 #: src/features/apps/index.tsx
 msgid "Paste the install link:"
@@ -2037,7 +2045,7 @@ msgstr "Прадастаўленыя класы"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Push notification"
-msgstr "Push-апавяшчэнне"
+msgstr "Пуш-апавяшчэнне"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Raised"
@@ -2325,7 +2333,7 @@ msgstr "Пошук..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "Абраць"
+msgstr "Выбар"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2497,7 +2505,7 @@ msgstr "Спыніць сачэнне"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Тэма"
+msgstr "Карыстальнік або група"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Submit comment"
@@ -2521,9 +2529,13 @@ msgstr "Нядзеля"
 msgid "Switch to view 1-9"
 msgstr "Пераключыцца на выгляд 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Сістэма"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Сістэма"
 
@@ -2593,7 +2605,7 @@ msgstr "Запыт мікрафона застаўся без адказу"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "The passkey request was not answered"
-msgstr "Запыт passkey застаўся без адказу"
+msgstr "Запыт ключа доступу застаўся без адказу"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "The requested app could not be found."
@@ -2617,7 +2629,7 @@ msgstr "Гэта праграма ўсталявана непасрэдна ад
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
-msgstr "Гэтай праграме не дазволена выкарыстоўваць ваш passkey. Дазвольце гэта ў Наладах, у раздзеле Дазволы."
+msgstr "Гэтай праграме не дазволена выкарыстоўваць ваш ключ доступу. Дазвольце гэта ў Наладах, у раздзеле Дазволы."
 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2665,12 +2677,12 @@ msgstr "Занадта шмат запытаў"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Верх"
+msgstr "Лепшае"
 
 #: src/features/apps/index.tsx
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Track"
-msgstr "Track"
+msgstr "Канал"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

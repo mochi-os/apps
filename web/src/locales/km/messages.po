@@ -57,7 +57,7 @@ msgstr "{0, plural, other {បានលុប # កំណែដែលមិន�
 #. placeholder {0}: app.name
 #: src/features/routing/routing-table.tsx
 msgid "{0} (development)"
-msgstr "{0} (development)"
+msgstr "{0} (ការអភិវឌ្ឍ)"
 
 #. placeholder {0}: results.length - failed
 #: src/features/apps/index.tsx
@@ -125,11 +125,11 @@ msgstr "{totalDescendants, plural, other {+# ការឆ្លើយតបប�
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "{track} (default, version {version})"
-msgstr "{track} (default, version {version})"
+msgstr "{track} (លំនាំដើម, កំណែ {version})"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "{track} (version {version})"
-msgstr "{track} (version {version})"
+msgstr "{track} (កំណែ {version})"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
@@ -382,7 +382,7 @@ msgstr "អ្នកប្រើដែលបានផ្ទៀងផ្ទាត
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Authenticator code"
-msgstr "កូដ Authenticator"
+msgstr "កូដកម្មវិធីផ្ទៀងផ្ទាត់"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Available keyboard shortcuts"
@@ -869,12 +869,12 @@ msgstr "ការតម្រៀបលំនាំដើម"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track"
-msgstr "ផ្លូវលំនាំដើម"
+msgstr "ឆានែលលំនាំដើម"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track (version {0})"
-msgstr "ផ្លូវលំនាំដើម (កំណែ {0})"
+msgstr "ឆានែលលំនាំដើម (កំណែ {0})"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1093,7 +1093,7 @@ msgstr "បញ្ចូលកូដពីអ៊ីមែលរបស់អ្ន
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Enter your authenticator code"
-msgstr "បញ្ចូលកូដ authenticator របស់អ្នក"
+msgstr "បញ្ចូលកូដកម្មវិធីផ្ទៀងផ្ទាត់របស់អ្នក"
 
 #: src/features/apps/components/install-dialog.tsx
 msgid "Entity:"
@@ -1353,7 +1353,7 @@ msgstr "ប្រវត្តិ"
 #: ../../../lib/web/src/components/layout/top-bar.tsx
 #: ../../../lib/web/src/components/layout/top-bar.tsx
 msgid "Home"
-msgstr "ដើម"
+msgstr "ទំព័រដើម"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
@@ -1378,7 +1378,7 @@ msgstr "កម្មវិធីមើលរូបភាព៖ {0}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Imperial"
-msgstr "Imperial"
+msgstr "អ៊ីមភេរៀល"
 
 #: ../../../lib/web/src/features/access/types.ts
 msgid "Including anonymous users"
@@ -1530,7 +1530,7 @@ msgstr "គ្រប់គ្រងប្រភេទ"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 msgid "Manual"
-msgstr "សៀវភៅណែនាំ"
+msgstr "ដោយដៃ"
 
 #: ../../../lib/web/src/components/layout/notification-menu.tsx
 #: ../../../lib/web/src/components/layout/notification-menu.tsx
@@ -1638,9 +1638,13 @@ msgid "Network error"
 msgstr "កំហុសបណ្តាញ"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "ថ្មី"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "ថ្មីបំផុត"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1843,9 +1847,13 @@ msgstr "រកមិនឃើញ"
 msgid "Notifications: {0}"
 msgstr "ការជូនដំណឹង៖ {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "លេខ"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "លេខ"
 
@@ -1914,12 +1922,12 @@ msgstr "មេ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Passkey"
-msgstr "សោសម្ងាត់"
+msgstr "កូនសោចូល"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkey verification failed. Please try again."
-msgstr "ការផ្ទៀងផ្ទាត់ passkey បានបរាជ័យ។ សូមព្យាយាមម្ដងទៀត។"
+msgstr "ការផ្ទៀងផ្ទាត់កូនសោចូលបានបរាជ័យ។ សូមព្យាយាមម្ដងទៀត។"
 
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Passkeys"
@@ -1927,7 +1935,7 @@ msgstr "កូនសោចូល"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkeys are not available in this browser"
-msgstr "Passkeys មិនមាននៅក្នុងកម្មវិធីរុករកនេះទេ"
+msgstr "កូនសោចូលមិនមាននៅក្នុងកម្មវិធីរុករកនេះទេ"
 
 #: src/features/apps/index.tsx
 msgid "Paste the install link:"
@@ -1975,7 +1983,7 @@ msgstr "សូមពិនិត្យការតភ្ជាប់អ៊ីន
 
 #: src/features/apps/index.tsx
 msgid "Please enter an app ID"
-msgstr "សូមបញ្ចូល app ID"
+msgstr "សូមបញ្ចូល ID កម្មវិធី"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "Please try again."
@@ -2025,7 +2033,7 @@ msgstr "កំពុងដំណើរការ…"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Prompt saved"
-msgstr "បានរក្សាទុក prompt"
+msgstr "បានរក្សាទុកការសួរ"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "Properties"
@@ -2236,7 +2244,7 @@ msgstr "មតិព័ត៌មាន RSS"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "RSS URL copied to clipboard"
-msgstr "បានចម្លង RSS URL ទៅ clipboard"
+msgstr "បានចម្លង RSS URL ទៅ ក្ដារតម្បៀតខ្ទាស់"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Saturday"
@@ -2325,7 +2333,7 @@ msgstr "កំពុងស្វែងរក..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "ជ្រើសរើស"
+msgstr "ការជ្រើសរើស"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2497,7 +2505,7 @@ msgstr "បញ្ឈប់ការតាមដាន"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "ប្រធានបទ"
+msgstr "អ្នកប្រើប្រាស់ ឬក្រុម"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Submit comment"
@@ -2521,9 +2529,13 @@ msgstr "ថ្ងៃអាទិត្យ"
 msgid "Switch to view 1-9"
 msgstr "ប្តូរទៅទិដ្ឋភាព 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "ប្រព័ន្ធ"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "ប្រព័ន្ធ"
 
@@ -2593,7 +2605,7 @@ msgstr "សំណើមីក្រូហ្វូនមិនត្រូវប
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "The passkey request was not answered"
-msgstr "សំណើ passkey មិនត្រូវបានឆ្លើយតបទេ"
+msgstr "សំណើកូនសោចូលមិនត្រូវបានឆ្លើយតបទេ"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "The requested app could not be found."
@@ -2613,11 +2625,11 @@ msgstr "កម្មវិធីនេះមិនមានការគ្រប
 
 #: src/features/apps/components/app-info-dialog.tsx
 msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
-msgstr "កម្មវិធីនេះត្រូវបានដំឡើងដោយផ្ទាល់ពីអ្នកបោះពុម្ពផ្សាយរបស់វា ហើយមិនបានពិនិត្យ។ វាអាចជា malware។"
+msgstr "កម្មវិធីនេះត្រូវបានដំឡើងដោយផ្ទាល់ពីអ្នកបោះពុម្ពផ្សាយរបស់វា ហើយមិនបានពិនិត្យ។ វាអាចជា មេរោគ។"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
-msgstr "កម្មវិធីនេះមិនត្រូវបានអនុញ្ញាតឱ្យប្រើ passkey របស់អ្នកទេ។ អនុញ្ញាតវានៅក្នុងការកំណត់ ក្រោមផ្នែកសិទ្ធិ។"
+msgstr "កម្មវិធីនេះមិនត្រូវបានអនុញ្ញាតឱ្យប្រើកូនសោចូលរបស់អ្នកទេ។ អនុញ្ញាតវានៅក្នុងការកំណត់ ក្រោមផ្នែកសិទ្ធិ។"
 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2670,7 +2682,7 @@ msgstr "កំពូល"
 #: src/features/apps/index.tsx
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Track"
-msgstr "Track"
+msgstr "ឆានែល"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
@@ -2812,7 +2824,7 @@ msgstr "ប្រើលំនាំដើមប្រព័ន្ធ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Use your passkey"
-msgstr "ប្រើ passkey របស់អ្នក"
+msgstr "ប្រើកូនសោចូលរបស់អ្នក"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 #: ../../../lib/web/src/features/access/access-dialog.tsx

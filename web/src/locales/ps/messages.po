@@ -125,7 +125,7 @@ msgstr "{totalDescendants, plural, one {# ځواب} other {+# نور ځوابو�
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "{track} (default, version {version})"
-msgstr "{track} (اصلي، نسخه {version})"
+msgstr "{track} (ډیفالټ، نسخه {version})"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "{track} (version {version})"
@@ -382,7 +382,7 @@ msgstr "تصدیق شوي کارنان"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Authenticator code"
-msgstr "د Authenticator کوډ"
+msgstr "د تصدیق کوونکي کوډ"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Available keyboard shortcuts"
@@ -869,12 +869,12 @@ msgstr "ډیفالټ ترتیب"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track"
-msgstr "ډیفالټ Track"
+msgstr "ډیفالټ کانال"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track (version {0})"
-msgstr "ډیفالټ Track (نسخه {0})"
+msgstr "ډیفالټ کانال (نسخه {0})"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -993,7 +993,7 @@ msgstr "پرېکړل شوی"
 #: ../../../lib/web/src/components/restore-banner.tsx
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Dismiss"
-msgstr "وردکړه"
+msgstr "وتړئ"
 
 #: ../../../lib/web/src/components/ui/sidebar.tsx
 msgid "Displays the mobile sidebar."
@@ -1203,7 +1203,7 @@ msgstr "د تبصرې پوسټ کولو پاتې راغلل"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to reset prompt"
-msgstr "د prompt د بیا تنظیم پاتې راغلل"
+msgstr "د پرامپټ د بیا تنظیم پاتې راغلل"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Failed to revoke permission"
@@ -1219,7 +1219,7 @@ msgstr "د خوندي کولو پاتې راغلل"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to save prompt"
-msgstr "د prompt د خوندي کولو پاتې راغلل"
+msgstr "د پرامپټ د خوندي کولو پاتې راغلل"
 
 #: src/features/apps/index.tsx
 msgid "Failed to update apps"
@@ -1266,13 +1266,13 @@ msgstr "فایلونه"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Fingerprint"
-msgstr "Fingerprint"
+msgstr "د ګوتو نښه"
 
 #: src/features/apps/components/app-info-dialog.tsx
 #: src/features/apps/components/app-info-dialog.tsx
 #: src/features/apps/components/install-dialog.tsx
 msgid "Fingerprint:"
-msgstr "Fingerprint:"
+msgstr "د ګوتو نښه:"
 
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Finish moving your account"
@@ -1342,7 +1342,7 @@ msgstr "ډله: {0}"
 
 #: src/features/routing/routing-table.tsx
 msgid "Handler"
-msgstr "Handler"
+msgstr "سمبالوونکی"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx
 msgid "History"
@@ -1378,7 +1378,7 @@ msgstr "د انځور کتونکی: {0}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Imperial"
-msgstr "Imperial"
+msgstr "امپریال"
 
 #: ../../../lib/web/src/features/access/types.ts
 msgid "Including anonymous users"
@@ -1638,9 +1638,13 @@ msgid "Network error"
 msgstr "د شبکې تېروتنه"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "نوی"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "تر ټولو نوي"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1843,9 +1847,13 @@ msgstr "هیڅ نه موندل شو"
 msgid "Notifications: {0}"
 msgstr "خبرتیاوې: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "شمیره"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "شمیره"
 
@@ -1919,15 +1927,15 @@ msgstr "پاسکي"
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkey verification failed. Please try again."
-msgstr "د پاس کیلۍ تایید ناکام شو. مهرباني وکړئ بیا هڅه وکړئ."
+msgstr "د پاسکي تایید ناکام شو. مهرباني وکړئ بیا هڅه وکړئ."
 
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Passkeys"
-msgstr "د لاسرسي کيلۍ"
+msgstr "پاسکي ګانې"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkeys are not available in this browser"
-msgstr "Passkeys په دې براوزر کې شتون نلري"
+msgstr "پاسکي په دې براوزر کې شتون نلري"
 
 #: src/features/apps/index.tsx
 msgid "Paste the install link:"
@@ -2049,7 +2057,7 @@ msgstr "پر دې سرور خپل حسابونه بیا وصل کړئ"
 
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Re-register your passkeys on this server"
-msgstr "خپل د لاسرسي کيلۍ پدې سرور کې بیا ثبت کړئ"
+msgstr "خپل پاسکي ګانې پدې سرور کې بیا ثبت کړئ"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx
 #: src/features/apps/index.tsx
@@ -2325,7 +2333,7 @@ msgstr "د لټون په حال کې..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "وټاکئ"
+msgstr "ټاکنه"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2497,7 +2505,7 @@ msgstr "کتل بند کړئ"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "موضوع"
+msgstr "کاروونکی یا ګروپ"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Submit comment"
@@ -2521,9 +2529,13 @@ msgstr "یکشنبه"
 msgid "Switch to view 1-9"
 msgstr "د 1-9 لیدلو ته بدل کړئ"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "سیسټم"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "سیسټم"
 
@@ -2593,7 +2605,7 @@ msgstr "د مایکروفون غوښتنې ته ځواب ورنکړل شو"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "The passkey request was not answered"
-msgstr "د passkey غوښتنې ته ځواب ورنکړل شو"
+msgstr "د پاسکي غوښتنې ته ځواب ورنکړل شو"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "The requested app could not be found."
@@ -2613,11 +2625,11 @@ msgstr "دا اپ د نسخې مدیریت نه لري"
 
 #: src/features/apps/components/app-info-dialog.tsx
 msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
-msgstr "دا اپ مستقیم له خپل خپروونکي څخه نصب شوی او څارل شوی نه دی. دا کېدای شي malware وي."
+msgstr "دا اپ مستقیم له خپل خپروونکي څخه نصب شوی او څارل شوی نه دی. دا کېدای شي ناوړه سافټویر وي."
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
-msgstr "دې اپ ته اجازه نشته چې ستاسو passkey وکاروي. په تنظیماتو کې، د اجازو لاندې یې اجازه ورکړئ."
+msgstr "دې اپ ته اجازه نشته چې ستاسو پاسکي وکاروي. په تنظیماتو کې، د اجازو لاندې یې اجازه ورکړئ."
 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2665,12 +2677,12 @@ msgstr "ډېرې زیاتې غوښتنې"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "بره"
+msgstr "غوره"
 
 #: src/features/apps/index.tsx
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Track"
-msgstr "تعقیبول"
+msgstr "کانال"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
@@ -2812,7 +2824,7 @@ msgstr "د سیسټم اصلي وکاروئ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Use your passkey"
-msgstr "خپله پاس کیلۍ وکاروئ"
+msgstr "خپل پاسکي وکاروئ"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 #: ../../../lib/web/src/features/access/access-dialog.tsx
@@ -2860,7 +2872,7 @@ msgstr "نسخې"
 
 #: ../../../lib/web/src/components/attachment-gallery.tsx
 msgid "Video thumbnail"
-msgstr "د ویډیو thumbnail"
+msgstr "د ویډیو کوچنی انځور"
 
 #. placeholder {0}: currentMedia.name
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx

@@ -328,7 +328,7 @@ msgstr "شناسهٔ برنامه"
 #: src/features/apps/index.tsx
 #: src/features/apps/index.tsx
 msgid "Apps"
-msgstr "برنامه‌ها"
+msgstr "اپ‌ها"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -458,7 +458,7 @@ msgstr "بلوک‌ها"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Board"
-msgstr "تخته"
+msgstr "تابلو"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -869,12 +869,12 @@ msgstr "مرتب‌سازی پیش‌فرض"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track"
-msgstr "Track پیش‌فرض"
+msgstr "کانال پیش‌فرض"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track (version {0})"
-msgstr "Track پیش‌فرض (نسخهٔ {0})"
+msgstr "کانال پیش‌فرض (نسخهٔ {0})"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1203,7 +1203,7 @@ msgstr "ارسال دیدگاه ناموفق بود"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to reset prompt"
-msgstr "بازنشانی prompt ناموفق بود"
+msgstr "بازنشانی پرامپت ناموفق بود"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Failed to revoke permission"
@@ -1219,7 +1219,7 @@ msgstr "ذخیره ناموفق بود"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to save prompt"
-msgstr "ذخیره prompt ناموفق بود"
+msgstr "ذخیره پرامپت ناموفق بود"
 
 #: src/features/apps/index.tsx
 msgid "Failed to update apps"
@@ -1342,7 +1342,7 @@ msgstr "گروه: {0}"
 
 #: src/features/routing/routing-table.tsx
 msgid "Handler"
-msgstr "Handler"
+msgstr "کنترل‌کننده"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx
 msgid "History"
@@ -1413,7 +1413,7 @@ msgstr "نصب از فایل"
 #: src/features/apps/index.tsx
 #: src/features/apps/index.tsx
 msgid "Install from publisher"
-msgstr "نصب از publisher"
+msgstr "نصب از ناشر برنامه"
 
 #: src/features/apps/index.tsx
 msgid "Installed apps"
@@ -1638,9 +1638,13 @@ msgid "Network error"
 msgstr "خطای شبکه"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "جدید"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "جدیدترین"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1843,9 +1847,13 @@ msgstr "چیزی یافت نشد"
 msgid "Notifications: {0}"
 msgstr "اعلان‌ها: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "شماره"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "شماره"
 
@@ -1939,7 +1947,7 @@ msgstr "مسیر"
 
 #: src/features/routing/paths.tsx
 msgid "Path routing"
-msgstr "مسیریابی Path"
+msgstr "مسیریابی بر اساس مسیر"
 
 #: src/components/layout/apps-layout.tsx
 #: src/features/routing/paths.tsx
@@ -2025,7 +2033,7 @@ msgstr "در حال پردازش…"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Prompt saved"
-msgstr "Prompt ذخیره شد"
+msgstr "پرامپت ذخیره شد"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "Properties"
@@ -2497,7 +2505,7 @@ msgstr "توقف تماشا"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "موضوع"
+msgstr "کاربر یا گروه"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Submit comment"
@@ -2521,9 +2529,13 @@ msgstr "یکشنبه"
 msgid "Switch to view 1-9"
 msgstr "تغییر به نمای ۱ تا ۹"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "سیستم"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "سیستم"
 
@@ -2665,12 +2677,12 @@ msgstr "درخواست‌های بیش از حد"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "بالا"
+msgstr "برترین"
 
 #: src/features/apps/index.tsx
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Track"
-msgstr "Track"
+msgstr "کانال"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

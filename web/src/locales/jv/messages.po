@@ -57,7 +57,7 @@ msgstr "{0, plural, other {# versi ora kepakai dibusak}}"
 #. placeholder {0}: app.name
 #: src/features/routing/routing-table.tsx
 msgid "{0} (development)"
-msgstr "{0} (development)"
+msgstr "{0} (pangembangan)"
 
 #. placeholder {0}: results.length - failed
 #: src/features/apps/index.tsx
@@ -296,7 +296,7 @@ msgstr "Kabeh sing langganan feed iki bakal mandheg nampa. Sampeyan bisa nyalin 
 #: src/features/apps/index.tsx
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "App"
-msgstr "App"
+msgstr "Aplikasi"
 
 #: src/features/apps/index.tsx
 msgid "App actions"
@@ -869,12 +869,12 @@ msgstr "Urutan standar"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track"
-msgstr "Track standar"
+msgstr "Saluran standar"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track (version {0})"
-msgstr "Track standar (versi {0})"
+msgstr "Saluran standar (versi {0})"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1013,7 +1013,7 @@ msgstr "Rampung"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Download"
-msgstr "Download"
+msgstr "Undhuh"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1256,7 +1256,7 @@ msgstr "Gagal ngunggah lampiran"
 
 #: src/features/apps/index.tsx
 msgid "File:"
-msgstr "File:"
+msgstr "Berkas:"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -1266,13 +1266,13 @@ msgstr "File"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Fingerprint"
-msgstr "Fingerprint"
+msgstr "Sidik jari"
 
 #: src/features/apps/components/app-info-dialog.tsx
 #: src/features/apps/components/app-info-dialog.tsx
 #: src/features/apps/components/install-dialog.tsx
 msgid "Fingerprint:"
-msgstr "Fingerprint:"
+msgstr "Sidik jari:"
 
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Finish moving your account"
@@ -1638,9 +1638,13 @@ msgid "Network error"
 msgstr "Kaluputan jaringan"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Anyar"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Paling anyar"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1843,9 +1847,13 @@ msgstr "Ora ana ditemokaké"
 msgid "Notifications: {0}"
 msgstr "Notifikasi: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "Nomer"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "Nomer"
 
@@ -2325,7 +2333,7 @@ msgstr "Lagi goleki..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "Pilih"
+msgstr "Pilihan"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2449,7 +2457,7 @@ msgstr "Nampilaké {totalShown} saka {total}"
 
 #: ../../../lib/web/src/components/ui/sidebar.tsx
 msgid "Sidebar"
-msgstr "Sidebar"
+msgstr "Bilah sisih"
 
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
@@ -2497,7 +2505,7 @@ msgstr "Mandheg nonton"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Subyek"
+msgstr "Panganggo utawa grup"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Submit comment"
@@ -2521,9 +2529,13 @@ msgstr "Minggu"
 msgid "Switch to view 1-9"
 msgstr "Pindah menyang tampilan 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Sistem"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Sistem"
 
@@ -2665,12 +2677,12 @@ msgstr "Kakehan panjalukan"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Ndhuwur"
+msgstr "Paling apik"
 
 #: src/features/apps/index.tsx
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Track"
-msgstr "Track"
+msgstr "Saluran"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
@@ -2769,7 +2781,7 @@ msgstr "Tanpa judul"
 
 #: src/features/apps/index.tsx
 msgid "Update"
-msgstr "Update"
+msgstr "Anyari"
 
 #: src/features/apps/index.tsx
 msgid "Update all"

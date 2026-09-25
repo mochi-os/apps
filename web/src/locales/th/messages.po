@@ -382,7 +382,7 @@ msgstr "ผู้ใช้ที่ยืนยันตัวตนแล้ว
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Authenticator code"
-msgstr "รหัส Authenticator"
+msgstr "รหัสยืนยันตัวตน"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Available keyboard shortcuts"
@@ -869,12 +869,12 @@ msgstr "การเรียงลำดับเริ่มต้น"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track"
-msgstr "แทร็กเริ่มต้น"
+msgstr "ช่องทางเริ่มต้น"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track (version {0})"
-msgstr "แทร็กเริ่มต้น (เวอร์ชัน {0})"
+msgstr "ช่องทางเริ่มต้น (เวอร์ชัน {0})"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1158,7 +1158,7 @@ msgstr "ไม่สามารถลบลิงก์ได้"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Failed to get RSS token"
-msgstr "ไม่สามารถรับ RSS token ได้"
+msgstr "ไม่สามารถรับโทเคน RSS ได้"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Failed to grant permission"
@@ -1203,7 +1203,7 @@ msgstr "ไม่สามารถโพสต์ความคิดเห็
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to reset prompt"
-msgstr "ไม่สามารถรีเซ็ต prompt ได้"
+msgstr "ไม่สามารถรีเซ็ตพรอมต์ได้"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Failed to revoke permission"
@@ -1219,7 +1219,7 @@ msgstr "ไม่สามารถบันทึกได้"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to save prompt"
-msgstr "ไม่สามารถบันทึก prompt ได้"
+msgstr "ไม่สามารถบันทึกพรอมต์ได้"
 
 #: src/features/apps/index.tsx
 msgid "Failed to update apps"
@@ -1266,7 +1266,7 @@ msgstr "ไฟล์"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Fingerprint"
-msgstr "Fingerprint"
+msgstr "ลายนิ้วมือ"
 
 #: src/features/apps/components/app-info-dialog.tsx
 #: src/features/apps/components/app-info-dialog.tsx
@@ -1280,7 +1280,7 @@ msgstr "เสร็จสิ้นการย้ายบัญชี"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 msgid "Flags"
-msgstr "Flags"
+msgstr "แฟล็ก"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Flat"
@@ -1369,7 +1369,7 @@ msgstr "รหัส"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Identity"
-msgstr "Identity"
+msgstr "ตัวตน"
 
 #. placeholder {0}: currentMedia.name
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1378,7 +1378,7 @@ msgstr "โปรแกรมดูรูปภาพ: {0}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Imperial"
-msgstr "Imperial"
+msgstr "อิมพีเรียล"
 
 #: ../../../lib/web/src/features/access/types.ts
 msgid "Including anonymous users"
@@ -1413,7 +1413,7 @@ msgstr "ติดตั้งจากไฟล์"
 #: src/features/apps/index.tsx
 #: src/features/apps/index.tsx
 msgid "Install from publisher"
-msgstr "ติดตั้งจาก Publisher"
+msgstr "ติดตั้งจากผู้เผยแพร่"
 
 #: src/features/apps/index.tsx
 msgid "Installed apps"
@@ -1638,9 +1638,13 @@ msgid "Network error"
 msgstr "ข้อผิดพลาดของเครือข่าย"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "ใหม่"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "ใหม่ล่าสุด"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1843,11 +1847,15 @@ msgstr "ไม่พบสิ่งใด"
 msgid "Notifications: {0}"
 msgstr "การแจ้งเตือน: {0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "ตัวเลข"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "หมายเลข"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -1927,7 +1935,7 @@ msgstr "พาสคีย์"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkeys are not available in this browser"
-msgstr "Passkeys ไม่พร้อมใช้งานในเบราว์เซอร์นี้"
+msgstr "พาสคีย์ไม่พร้อมใช้งานในเบราว์เซอร์นี้"
 
 #: src/features/apps/index.tsx
 msgid "Paste the install link:"
@@ -1935,16 +1943,16 @@ msgstr "วางลิงก์ติดตั้ง:"
 
 #: src/features/routing/routing-table.tsx
 msgid "Path"
-msgstr "Path"
+msgstr "เส้นทาง"
 
 #: src/features/routing/paths.tsx
 msgid "Path routing"
-msgstr "การกำหนดเส้นทาง path"
+msgstr "การกำหนดเส้นทางตามพาธ"
 
 #: src/components/layout/apps-layout.tsx
 #: src/features/routing/paths.tsx
 msgid "Paths"
-msgstr "Paths"
+msgstr "เส้นทาง"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 msgid "Pattern (regex)"
@@ -2025,7 +2033,7 @@ msgstr "กำลังประมวลผล…"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Prompt saved"
-msgstr "บันทึก prompt แล้ว"
+msgstr "บันทึกพรอมต์แล้ว"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "Properties"
@@ -2325,7 +2333,7 @@ msgstr "กำลังค้นหา..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "เลือก"
+msgstr "ตัวเลือก"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2497,7 +2505,7 @@ msgstr "หยุดติดตาม"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "หัวเรื่อง"
+msgstr "ผู้ใช้หรือกลุ่ม"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Submit comment"
@@ -2521,9 +2529,13 @@ msgstr "วันอาทิตย์"
 msgid "Switch to view 1-9"
 msgstr "เปลี่ยนเป็นมุมมอง 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "ระบบ"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "ระบบ"
 
@@ -2593,7 +2605,7 @@ msgstr "คำขอไมโครโฟนไม่ได้รับการ
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "The passkey request was not answered"
-msgstr "คำขอ passkey ไม่ได้รับการตอบกลับ"
+msgstr "คำขอพาสคีย์ไม่ได้รับการตอบกลับ"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "The requested app could not be found."
@@ -2617,7 +2629,7 @@ msgstr "แอปนี้ติดตั้งโดยตรงจากผู
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
-msgstr "แอปนี้ไม่ได้รับอนุญาตให้ใช้ passkey ของคุณ อนุญาตได้ในการตั้งค่า ภายใต้สิทธิ์"
+msgstr "แอปนี้ไม่ได้รับอนุญาตให้ใช้พาสคีย์ของคุณ อนุญาตได้ในการตั้งค่า ภายใต้สิทธิ์"
 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2665,12 +2677,12 @@ msgstr "คำขอมากเกินไป"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "บนสุด"
+msgstr "คะแนนสูงสุด"
 
 #: src/features/apps/index.tsx
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Track"
-msgstr "แทร็ก"
+msgstr "ช่องทาง"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

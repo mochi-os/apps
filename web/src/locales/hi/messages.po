@@ -869,12 +869,12 @@ msgstr "डिफ़ॉल्ट सॉर्ट"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track"
-msgstr "डिफ़ॉल्ट ट्रैक"
+msgstr "डिफ़ॉल्ट चैनल"
 
 #. placeholder {0}: versionData.tracks[defaultTrack]
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Default track (version {0})"
-msgstr "डिफ़ॉल्ट ट्रैक (संस्करण {0})"
+msgstr "डिफ़ॉल्ट चैनल (संस्करण {0})"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1013,7 +1013,7 @@ msgstr "पूर्ण"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Download"
-msgstr "डाउनलोड"
+msgstr "डाउनलोड करें"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1638,9 +1638,13 @@ msgid "Network error"
 msgstr "नेटवर्क त्रुटि"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "नया"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "नवीनतम"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1843,11 +1847,15 @@ msgstr "कुछ नहीं मिला"
 msgid "Notifications: {0}"
 msgstr "सूचनाएँ: {0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "संख्या"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "क्रमांक"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -2325,7 +2333,7 @@ msgstr "खोजा जा रहा है..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "चुनें"
+msgstr "चयन"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2497,7 +2505,7 @@ msgstr "देखना बंद करें"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "विषय"
+msgstr "यूज़र या ग्रुप"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Submit comment"
@@ -2521,9 +2529,13 @@ msgstr "रविवार"
 msgid "Switch to view 1-9"
 msgstr "व्यू 1-9 पर स्विच करें"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "सिस्टम"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "सिस्टम"
 
@@ -2670,7 +2682,7 @@ msgstr "टॉप"
 #: src/features/apps/index.tsx
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Track"
-msgstr "ट्रैक"
+msgstr "चैनल"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
