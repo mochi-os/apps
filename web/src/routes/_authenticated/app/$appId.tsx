@@ -686,6 +686,7 @@ function PermissionRow({
             title={t`Revoke permission?`}
             desc={t`This will revoke the "${permission.name}" permission from ${appName}. The app may stop working correctly.`}
             confirmText={t`Revoke permission`}
+            icon={<X className='size-4' />}
             destructive
             handleConfirm={() => onRevoke(permission.permission)}
             isLoading={isRevoking}
