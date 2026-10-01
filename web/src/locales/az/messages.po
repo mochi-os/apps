@@ -42,7 +42,7 @@ msgstr "[təyin edilməyib]"
 #. placeholder {0}: visible.length
 #: ../../../lib/web/src/components/inline-entity-search.tsx
 msgid "{0, plural, one {# result} other {# results}}"
-msgstr "{0, plural, one {# seçildi} other {# seçildi}}"
+msgstr "{0, plural, one {# nəticə} other {# nəticə}}"
 
 #. placeholder {0}: displayInfo.count
 #. placeholder {0}: selectedIds.length
@@ -51,7 +51,7 @@ msgstr "{0, plural, one {# seçildi} other {# seçildi}}"
 #: ../../../lib/web/src/components/person-picker.tsx
 #: ../../../lib/web/src/components/person-picker.tsx
 msgid "{0, plural, one {# selected} other {# selected}}"
-msgstr "{0, plural, one {# istifadəçi banlandı} other {# istifadəçi banlandı}}"
+msgstr "{0, plural, one {# seçildi} other {# seçildi}}"
 
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx
@@ -66,7 +66,7 @@ msgstr "{0, plural, one {# istifadə olunmayan versiya silindi} other {# istifad
 #. placeholder {0}: app.name
 #: src/features/routing/routing-table.tsx
 msgid "{0} (development)"
-msgstr "{0} - Dizayn"
+msgstr "{0} (inkişaf)"
 
 #. placeholder {0}: results.length - failed
 #: src/features/apps/index.tsx
@@ -114,7 +114,7 @@ msgstr "{from} ilə {to} arası"
 
 #: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx
 msgid "{opponentName} offered a draw"
-msgstr "{opponentName} qazandı"
+msgstr "{opponentName} heç-heçə təklif etdi"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/ui/upload-progress.tsx
@@ -1218,11 +1218,11 @@ msgstr "Promptu sıfırlamaq alınmadı"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Failed to revoke permission"
-msgstr "İcazəni ləğv etmək alınmadı"
+msgstr "İcazəni geri çağırmaq alınmadı"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Failed to revoke RSS access"
-msgstr "RSS girişini ləğv etmək alınmadı"
+msgstr "RSS girişini geri çağırmaq alınmadı"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "Failed to save"
@@ -2241,7 +2241,7 @@ msgstr "RSS girişi geri çağırılsın?"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Revoking permission..."
-msgstr "İcazə ləğv edilir..."
+msgstr "İcazə geri çağırılır..."
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
@@ -2254,7 +2254,7 @@ msgstr "Sətirlər qruplaşdır"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "RSS access revoked"
-msgstr "RSS girişi ləğv edildi"
+msgstr "RSS girişi geri çağırıldı"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "RSS feed"
@@ -2632,7 +2632,7 @@ msgstr "Giriş açarı sorğusu cavablandırılmadı"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "The requested app could not be found."
-msgstr "Onların cavabı"
+msgstr "Tələb olunan tətbiq tapılmadı."
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "The requested content could not be found."
@@ -2644,11 +2644,11 @@ msgstr "Server məlumat əvəzinə veb səhifə qaytardı."
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "This app does not have version management"
-msgstr "Bu tətbiq test rejimindədir. Onu real satış və ya alışlar üçün istifadə etməyin."
+msgstr "Bu tətbiqdə versiya idarəetməsi yoxdur"
 
 #: src/features/apps/components/app-info-dialog.tsx
 msgid "This app is installed directly from its publisher and has not been vetted. It may be malware."
-msgstr "Bu qaralama elan daimi olaraq silinəcək."
+msgstr "Bu tətbiq birbaşa naşirindən quraşdırılıb və yoxlanılmayıb. Zərərli proqram ola bilər."
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
@@ -2687,12 +2687,12 @@ msgstr "Yan paneli aç/bağla"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Toggle view options"
-msgstr "Token mübadilə yaddaşına kopyalandı"
+msgstr "Görünüş seçimlərini aç/bağla"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 msgid "Toggle watched filter"
-msgstr "Token yaradıldı"
+msgstr "İzlənilənlər filtrini aç/bağla"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "Too many requests"
@@ -2713,7 +2713,7 @@ msgstr "Səyahət"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx
 msgid "Try adjusting your search terms"
-msgstr "Fərqli axtarış termini sınayın."
+msgstr "Axtarış sözlərini dəyişməyə cəhd edin"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 #: ../../../lib/web/src/features/errors/general-error.tsx
@@ -2731,15 +2731,15 @@ msgstr "Növ"
 
 #: ../../../lib/web/src/components/command-menu.tsx
 msgid "Type a command or search..."
-msgstr "Mesaj yazın…"
+msgstr "Əmr yazın və ya axtarın..."
 
 #: ../../../lib/web/src/components/game/game-chat-input.tsx
 msgid "Type a message…"
-msgstr "İstifadəçiləri axtarmaq üçün yazın"
+msgstr "Mesaj yazın…"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx
 msgid "Type to search users"
-msgstr "Mesajınızı yazın…"
+msgstr "İstifadəçiləri axtarmaq üçün yazın"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx
 msgid "Type to search..."
@@ -2751,15 +2751,15 @@ msgstr "Uzaq serverə qoşulmaq mümkün olmadı"
 
 #: src/features/apps/index.tsx
 msgid "Unable to connect to the recommendations service"
-msgstr "Versiya məlumatlarını yükləmək mümkün deyil"
+msgstr "Tövsiyələr xidmətinə qoşulmaq mümkün deyil"
 
 #: src/features/apps/components/app-info-dialog.tsx
 msgid "Unable to load app information. The app may not exist or the publisher may be offline."
-msgstr "Daxilolma səhifəsinə yönləndirmək mümkün deyil. Yenidən cəhd edin."
+msgstr "Tətbiq məlumatlarını yükləmək mümkün deyil. Tətbiq mövcud olmaya bilər və ya naşir oflayn ola bilər."
 
 #: src/features/apps/components/install-dialog.tsx
 msgid "Unable to load version information"
-msgstr "Lentlər xidməti ilə sinxronlaşdırmaq mümkün deyil. Önbelləkdəki məlumat göstərilir."
+msgstr "Versiya məlumatlarını yükləmək mümkün deyil"
 
 #: ../../../lib/web/src/lib/auth-manager.ts
 #: ../../../lib/web/src/lib/auth-manager.ts
@@ -2887,7 +2887,7 @@ msgstr "Versiya dəyişdi"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Version management"
-msgstr "Versiya yükləndi"
+msgstr "Versiya idarəetməsi"
 
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "Versions"
@@ -2895,7 +2895,7 @@ msgstr "Versiyalar"
 
 #: ../../../lib/web/src/components/attachment-gallery.tsx
 msgid "Video thumbnail"
-msgstr "Hamısına bax"
+msgstr "Video miniatürü"
 
 #. placeholder {0}: currentMedia.name
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -2905,11 +2905,11 @@ msgstr "Video göstəricisi: {0}"
 #: ../../../lib/web/src/components/layout/notification-menu.tsx
 #: ../../../lib/web/src/components/layout/notification-menu.tsx
 msgid "View all notifications"
-msgstr "Element təfərrüatlarına baxın və redaktə edin"
+msgstr "Bütün bildirişlərə bax"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "View and edit item details"
-msgstr "Görünüş idarəetmələri"
+msgstr "Element təfərrüatlarına baxın və redaktə edin"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 msgid "View controls"
@@ -2960,7 +2960,7 @@ msgstr "Qoşmalarınız itiriləcək."
 
 #: src/features/routing/routing-table.tsx
 msgid "Your preference"
-msgstr "Alışınız hazırdır"
+msgstr "Seçiminiz"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Your text and attachments will be lost."
