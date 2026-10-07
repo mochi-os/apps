@@ -669,7 +669,7 @@ function PermissionRow({
                 loading={isRevoking}
                 icon={<X className='h-4 w-4' />}
                 onClick={() => setConfirmOpen(true)}
-                className='text-muted-foreground h-8 w-8 p-0 opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100'
+                className='text-muted-foreground h-8 w-8 p-0 opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100 [@media(hover:none)]:opacity-100'
               >
                 <span className='sr-only'>
                   <Trans>Revoke</Trans>
