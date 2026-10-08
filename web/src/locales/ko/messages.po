@@ -26,6 +26,11 @@ msgstr "(편집됨)"
 msgid "(expand)"
 msgstr "(확장)"
 
+#. placeholder {0}: file.oldPath
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "(from {0})"
+msgstr ""
+
 #: ../../../lib/web/src/components/calendar/event-title.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "(No title)"
@@ -41,6 +46,11 @@ msgstr "(나)"
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx
 msgid "[not set]"
 msgstr "[설정 안 됨]"
+
+#. placeholder {0}: files.length
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "{0, plural, one {# file changed} other {# files changed}}"
+msgstr ""
 
 #. placeholder {0}: visible.length
 #: ../../../lib/web/src/components/inline-entity-search.tsx
@@ -139,6 +149,10 @@ msgstr "{track} (기본값, 버전 {version})"
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "{track} (version {version})"
 msgstr "{track} (버전 {version})"
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "{truncated, plural, one {# more file not shown} other {# more files not shown}}"
+msgstr ""
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
@@ -445,6 +459,10 @@ msgstr "배너 제거됨"
 #: ../../../lib/web/src/components/banner-section.tsx
 msgid "Banner updated"
 msgstr "배너 업데이트됨"
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Binary file not shown"
+msgstr ""
 
 #: ../../../lib/web/src/components/member-list.tsx
 #: ../../../lib/web/src/components/member-list.tsx
@@ -760,6 +778,7 @@ msgstr "클립보드에 복사되었어요"
 
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
@@ -1698,6 +1717,10 @@ msgstr "업데이트할 수 있는 앱이 없어요."
 msgid "No apps installed"
 msgstr "설치된 앱이 없어요"
 
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "No changes to display"
+msgstr ""
+
 #: src/features/routing/routing-table.tsx
 msgid "No classes configured."
 msgstr "구성된 클래스가 없습니다."
@@ -1832,6 +1855,15 @@ msgstr "없음"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Normal"
 msgstr "기본"
+
+#. placeholder {0}: formatFileSize(file.limit)
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Not compared: larger than {0}"
+msgstr ""
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Not compared: over the size limit"
+msgstr ""
 
 #: ../../../lib/web/src/components/attachment-image.tsx
 #: ../../../lib/web/src/features/errors/general-error.tsx
@@ -2509,6 +2541,10 @@ msgstr "소스"
 msgid "Spacious"
 msgstr "여유로운"
 
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Split"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx
 msgid "Start the discussion by adding the first comment."
 msgstr "첫 번째 댓글을 추가하여 토론을 시작해 주세요."
@@ -2775,6 +2811,10 @@ msgstr "사용할 수 없음"
 #: ../../../lib/web/src/lib/request.ts
 msgid "Unexpected API error"
 msgstr "예기치 않은 API 오류"
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Unified"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "United States"

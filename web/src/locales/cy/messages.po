@@ -26,6 +26,11 @@ msgstr "(golygwyd)"
 msgid "(expand)"
 msgstr "(ehangu)"
 
+#. placeholder {0}: file.oldPath
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "(from {0})"
+msgstr ""
+
 #: ../../../lib/web/src/components/calendar/event-title.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "(No title)"
@@ -41,6 +46,11 @@ msgstr "(chi)"
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx
 msgid "[not set]"
 msgstr "[heb ei osod]"
+
+#. placeholder {0}: files.length
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "{0, plural, one {# file changed} other {# files changed}}"
+msgstr ""
 
 #. placeholder {0}: visible.length
 #: ../../../lib/web/src/components/inline-entity-search.tsx
@@ -139,6 +149,10 @@ msgstr "{track} (diofyn, fersiwn {version})"
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "{track} (version {version})"
 msgstr "{track} (fersiwn {version})"
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "{truncated, plural, one {# more file not shown} other {# more files not shown}}"
+msgstr ""
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
@@ -445,6 +459,10 @@ msgstr "Baner wedi'i thynnu"
 #: ../../../lib/web/src/components/banner-section.tsx
 msgid "Banner updated"
 msgstr "Baner wedi'i diweddaru"
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Binary file not shown"
+msgstr ""
 
 #: ../../../lib/web/src/components/member-list.tsx
 #: ../../../lib/web/src/components/member-list.tsx
@@ -760,6 +778,7 @@ msgstr "Wedi'i gopïo i'r clipfwrdd"
 
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
@@ -1698,6 +1717,10 @@ msgstr "Ni ellid diweddaru unrhyw apiau."
 msgid "No apps installed"
 msgstr "Dim apiau wedi'u gosod"
 
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "No changes to display"
+msgstr ""
+
 #: src/features/routing/routing-table.tsx
 msgid "No classes configured."
 msgstr "Dim dosbarthiadau wedi'u ffurfweddu."
@@ -1832,6 +1855,15 @@ msgstr "Dim"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Normal"
 msgstr "Arferol"
+
+#. placeholder {0}: formatFileSize(file.limit)
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Not compared: larger than {0}"
+msgstr ""
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Not compared: over the size limit"
+msgstr ""
 
 #: ../../../lib/web/src/components/attachment-image.tsx
 #: ../../../lib/web/src/features/errors/general-error.tsx
@@ -2509,6 +2541,10 @@ msgstr "Ffynonellau"
 msgid "Spacious"
 msgstr "Helaeth"
 
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Split"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx
 msgid "Start the discussion by adding the first comment."
 msgstr "Cychwynnwch y drafodaeth drwy ychwanegu'r sylw cyntaf."
@@ -2775,6 +2811,10 @@ msgstr "Ddim ar gael"
 #: ../../../lib/web/src/lib/request.ts
 msgid "Unexpected API error"
 msgstr "Gwall API annisgwyl"
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Unified"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "United States"

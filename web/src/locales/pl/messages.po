@@ -26,6 +26,11 @@ msgstr "(edytowane)"
 msgid "(expand)"
 msgstr "(rozwiń)"
 
+#. placeholder {0}: file.oldPath
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "(from {0})"
+msgstr ""
+
 #: ../../../lib/web/src/components/calendar/event-title.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "(No title)"
@@ -41,6 +46,11 @@ msgstr "(ty)"
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx
 msgid "[not set]"
 msgstr "[nie ustawiono]"
+
+#. placeholder {0}: files.length
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "{0, plural, one {# file changed} other {# files changed}}"
+msgstr ""
 
 #. placeholder {0}: visible.length
 #: ../../../lib/web/src/components/inline-entity-search.tsx
@@ -139,6 +149,10 @@ msgstr "{track} (domyślny, wersja {version})"
 #: src/routes/_authenticated/app/$appId.tsx
 msgid "{track} (version {version})"
 msgstr "{track} (wersja {version})"
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "{truncated, plural, one {# more file not shown} other {# more files not shown}}"
+msgstr ""
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
@@ -445,6 +459,10 @@ msgstr "Banner usunięty"
 #: ../../../lib/web/src/components/banner-section.tsx
 msgid "Banner updated"
 msgstr "Banner zaktualizowany"
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Binary file not shown"
+msgstr ""
 
 #: ../../../lib/web/src/components/member-list.tsx
 #: ../../../lib/web/src/components/member-list.tsx
@@ -760,6 +778,7 @@ msgstr "Skopiowano do schowka"
 
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
@@ -1698,6 +1717,10 @@ msgstr "Nie można było zaktualizować żadnej aplikacji."
 msgid "No apps installed"
 msgstr "Nie zainstalowano żadnych aplikacji"
 
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "No changes to display"
+msgstr ""
+
 #: src/features/routing/routing-table.tsx
 msgid "No classes configured."
 msgstr "Nie skonfigurowano żadnych klas."
@@ -1832,6 +1855,15 @@ msgstr "Brak"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Normal"
 msgstr "Normalny"
+
+#. placeholder {0}: formatFileSize(file.limit)
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Not compared: larger than {0}"
+msgstr ""
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Not compared: over the size limit"
+msgstr ""
 
 #: ../../../lib/web/src/components/attachment-image.tsx
 #: ../../../lib/web/src/features/errors/general-error.tsx
@@ -2509,6 +2541,10 @@ msgstr "Źródła"
 msgid "Spacious"
 msgstr "Przestronne"
 
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Split"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx
 msgid "Start the discussion by adding the first comment."
 msgstr "Rozpocznij dyskusję, dodając pierwszy komentarz."
@@ -2775,6 +2811,10 @@ msgstr "Niedostępne"
 #: ../../../lib/web/src/lib/request.ts
 msgid "Unexpected API error"
 msgstr "Nieoczekiwany błąd API"
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Unified"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "United States"
