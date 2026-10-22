@@ -13,6 +13,7 @@ import {
   isInShell,
   getRouterBasepath,
   I18nProvider,
+  startRoutePrefetch,
   type Catalogs,
 } from '@mochi/web'
 import { routeTree } from './routeTree.gen'
@@ -143,6 +144,9 @@ const router = createRouter({
   basepath: getRouterBasepath(),
   defaultPreload: false,
 })
+
+// Fetch page code on hover, press or focus; never route data
+startRoutePrefetch(router)
 
 declare module '@tanstack/react-router' {
   interface Register {
