@@ -30,9 +30,6 @@ UPDATES_CACHE_TTL = 300
 # which starts with the apps checked longest ago.
 UPDATES_BUDGET = 5
 
-# The Recommendations service entity queried by action_market.
-RECOMMENDATIONS_ENTITY = "1JYmMpQU7fxvTrwHpNpiwKCgUg3odWqX7s9t1cLswSMAro5M2P"
-
 def database_upgrade(version):
 	if version == 2:
 		# Drop the broadcast tables left in the app data DB when broadcast state moved
@@ -135,28 +132,16 @@ def user_language(a):
 
 # Get available apps from the Recommendations service that are not installed
 def action_market(a):
-	s = mochi.remote.stream(RECOMMENDATIONS_ENTITY, "recommendations", "list", {"type": "app", "language": user_language(a)})
-	if not s:
-		a.error.label(500, "errors.failed_to_connect_to_recommendations")
-		return
-	r = s.read()
-	# The header frame is written by the responding app's own handler, not by
-	# core, so it is exactly as untrusted as the body after it: .get on a
-	# list or a string raises, and Starlark has no try/except.
-	if type(r) != "dict" or r.get("status") != "200":
+	# Recommendations from the service, cached for an hour
+	items = recommendation_list("app", user_language(a))
+	if items == None:
 		a.error.label(500, "errors.failed_to_connect_to_recommendations")
 		return
 
 	market = []
-	items = s.read()
-	if type(items) not in ["list", "tuple"]:
-		a.error.label(500, "errors.invalid_response_from_recommendations")
-		return
 	for item in items:
-		if type(item) != "dict":
-			continue
-		entity = item.get("entity")
-		if type(entity) != "string" or not entity or mochi.app.get(entity):
+		entity = item.get("entity", "")
+		if not entity or mochi.app.get(entity):
 			continue
 		market.append({"id": entity, "name": item.get("name", ""), "blurb": item.get("blurb", "")})
 

@@ -13,7 +13,8 @@
 	"services": ["apps"],
 
 	"architecture": {"engine": "starlark", "version": 4},
-	"execute": ["apps.star"],
+	"execute": ["lib/recommendations.star", "apps.star"],
+	"require": {"version": {"minimum": "0.4.244"}},
 
 	"database": {
 		"schema": 2,
