@@ -417,11 +417,41 @@ def is_newer_version(a, b):
 			return False
 	return False
 
+# updates_query(app, publisher) -> dict or None: the publisher's version
+# answer for app, cached when well formed; None when it cannot be had.
+def updates_query(app, publisher):
+	if not publisher:
+		entry = mochi.directory.get(app["id"])
+		if not entry:
+			return None  # Not in directory
+	# Query publisher for version info (includes all tracks)
+	if publisher:
+		s = mochi.remote.stream(publisher, "publisher", "version", {"app": app["id"]})
+	else:
+		s = mochi.remote.stream(app["id"], "publisher", "version", {"app": app["id"]})
+	if not s:
+		return None
+	r = s.read()
+	# The header frame comes from the publisher's own handler, not from
+	# core, so it is exactly as untrusted as the body below.
+	if type(r) != "dict" or r.get("status") != "200":
+		return None
+	remote = s.read()
+	# This loop runs over every installed app, so one publisher answering
+	# with the wrong shape must cost its own row rather than raise and 500
+	# the whole update check.
+	if type(remote) != "dict":
+		return None
+	# Cache only a well-formed response. Caching first would persist the bad
+	# shape for UPDATES_CACHE_TTL and break every later check too.
+	mochi.db.execute("replace into updates_cache ( app, data, checked ) values ( ?, ?, ? )", app["id"], json.encode(remote), mochi.time.now())
+	return remote
+
 # Check for updates for all installed apps. Per-publisher version queries are
 # cached in updates_cache for UPDATES_CACHE_TTL seconds, and what the cache does
-# not cover is bounded by UPDATES_BUDGET: the answer is whatever resolved in
-# time, and successive calls work through the rest oldest-first. Without either,
-# this is one sequential P2P round trip per installed app.
+# not cover is bounded by UPDATES_BUDGET: apps past it are reported from their
+# last answer, and successive calls refresh the rest oldest-first. Without
+# either, this is one sequential P2P round trip per installed app.
 def action_updates(a):
 	updates = []
 	started = mochi.time.now()
@@ -462,52 +492,30 @@ def action_updates(a):
 		if publisher_config:
 			publisher = publisher_config.get("peer", "")
 
-		# Try cache before talking to the publisher
+		# Try cache before talking to the publisher. A corrupt row, or one
+		# written before the shape guards below existed, is no answer.
 		remote = None
+		stale = None
 		cached = cache.get(app["id"])
-		if cached and cached["checked"] >= cutoff:
-			remote = json.decode(cached["data"], None)
-
-		# A corrupt row, or one written before the shape guards below existed,
-		# falls through to the network path rather than aborting the whole check.
-		if type(remote) != "dict":
-			remote = None
+		if cached:
+			held = json.decode(cached["data"], None)
+			if type(held) == "dict":
+				if cached["checked"] >= cutoff:
+					remote = held
+				else:
+					stale = held
 
 		if remote == None:
-			# Past the budget this app keeps its stale answer (or none) and is
-			# simply not reported this time. Cached apps are still evaluated
-			# below - only the round trip is skipped.
-			if mochi.time.now() - started >= UPDATES_BUDGET:
+			# Past the budget, or when the publisher does not answer, an app
+			# is reported from its last answer, however old, and asked again
+			# on a later call. Leaving it out instead listed at most the half
+			# of the updates whose publishers answered in time.
+			if mochi.time.now() - started < UPDATES_BUDGET:
+				remote = updates_query(app, publisher)
+			if remote == None:
+				remote = stale
+			if remote == None:
 				continue
-
-			if not publisher:
-				entry = mochi.directory.get(app["id"])
-				if not entry:
-					continue  # Not in directory, skip
-
-			# Query publisher for version info (includes all tracks)
-			if publisher:
-				s = mochi.remote.stream(publisher, "publisher", "version", {"app": app["id"]})
-			else:
-				s = mochi.remote.stream(app["id"], "publisher", "version", {"app": app["id"]})
-			if not s:
-				continue
-			r = s.read()
-			# The header frame comes from the publisher's own handler, not from
-			# core, so it is exactly as untrusted as the body below.
-			if type(r) != "dict" or r.get("status") != "200":
-				continue
-
-			remote = s.read()
-			# This loop runs over every installed app, so one publisher
-			# answering with the wrong shape must cost its own row rather than
-			# raise and 500 the whole update check.
-			if type(remote) != "dict":
-				continue
-
-			# Cache only a well-formed response. Caching first would persist the
-			# bad shape for UPDATES_CACHE_TTL and break every later check too.
-			mochi.db.execute("replace into updates_cache ( app, data, checked ) values ( ?, ?, ? )", app["id"], json.encode(remote), mochi.time.now())
 
 		tracks = remote.get("tracks", [])
 		if type(tracks) not in ["list", "tuple"]:
