@@ -354,7 +354,7 @@ export function Apps() {
           <HeaderSearch
             value={searchQuery}
             onValueChange={setSearchQuery}
-            placeholder={t`Search apps...`}
+            placeholder={t`Search apps`}
             label={t`Search apps`}
           />
         }
