@@ -30,6 +30,9 @@ UPDATES_CACHE_TTL = 300
 # which starts with the apps checked longest ago.
 UPDATES_BUDGET = 5
 
+# Most publishers asked in one mochi.remote.requests call, its own maximum.
+UPDATES_STREAMS = 32
+
 # How long a publisher's last answer is reported while it does not answer
 # (seconds). Past it the app is listed as having no update: a version the
 # publisher has since withdrawn must not stay on offer for ever.
@@ -428,36 +431,45 @@ def is_newer_version(a, b):
 			return False
 	return False
 
-# updates_fetch(app, publisher) -> (header, body): What app's publisher
-# answers for its version: the header frame and, on a 200, the body after it;
-# (None, None) when it cannot be asked.
-def updates_fetch(app, publisher):
-	if not publisher:
-		entry = mochi.directory.get(app["id"])
-		if not entry:
-			return (None, None)  # Not in directory
-	# Query publisher for version info (includes all tracks)
-	if publisher:
-		s = mochi.remote.stream(publisher, "publisher", "version", {"app": app["id"]})
-	else:
-		s = mochi.remote.stream(app["id"], "publisher", "version", {"app": app["id"]})
-	if not s:
-		return (None, None)
-	header = s.read()
-	if type(header) == "dict" and header.get("status") == "200":
-		return (header, s.read())
-	return (header, None)
+# updates_stamp(app): marks app as asked now, answered or not. The stamp
+# outlives an emptied answer, so the next call asks the others first.
+def updates_stamp(app):
+	mochi.db.execute("insert into updates_cache ( app, data, checked, attempted ) values ( ?, '', 0, ? ) on conflict ( app ) do update set attempted=excluded.attempted", app["id"], mochi.time.now())
 
-# updates_query(app, publisher) -> (dict or None, bool): the publisher's
+# updates_request(app, publisher) -> dict or None: the ask for app's version,
+# as mochi.remote.requests takes it: to the app's own entity, through the
+# publisher it was installed from when one was named, as install and upgrade
+# address it; None when neither the publisher nor the directory can place it.
+def updates_request(app, publisher):
+	if not publisher and not mochi.directory.get(app["id"]):
+		return None  # Not in directory
+	# Query publisher for version info (includes all tracks)
+	return {"entity": app["id"], "peer": publisher, "service": "publisher", "event": "version", "payload": {"app": app["id"]}}
+
+# updates_ask(requests, deadline) -> list: each request's answer as the list of
+# its segments - the header, then on a 200 the body - or None where none could
+# be had. mochi.remote.requests sends them together and reads every answer at
+# once until the deadline; a core before it asks one at a time, a request a
+# call, waiting each stream's own 30 seconds.
+def updates_ask(requests, deadline):
+	if hasattr(mochi.remote, "requests"):
+		return mochi.remote.requests(requests, timeout=max(1, deadline - mochi.time.now()), segments=2)
+	answers = []
+	for r in requests:
+		s = mochi.remote.stream(r["entity"], r["service"], r["event"], r["payload"], r["peer"])
+		if not s:
+			answers.append(None)
+			continue
+		header = s.read()
+		answers.append([header, s.read()] if type(header) == "dict" and header.get("status") == "200" else [header])
+	return answers
+
+# updates_answer(app, header, remote) -> (dict or None, bool): the publisher's
 # version answer for app, cached when well formed, or None when it cannot be
 # had; and whether the publisher refused it outright - a 4xx, the app gone
 # from it or restricted - when the cached answer is emptied too, as nothing
-# is on offer. A 408 or 429 is the publisher busy, not a refusal. Every ask is
-# stamped, answered or not, and the stamp outlives an emptied answer, so the
-# next call asks the others first.
-def updates_query(app, publisher):
-	mochi.db.execute("insert into updates_cache ( app, data, checked, attempted ) values ( ?, '', 0, ? ) on conflict ( app ) do update set attempted=excluded.attempted", app["id"], mochi.time.now())
-	header, remote = updates_fetch(app, publisher)
+# is on offer. A 408 or 429 is the publisher busy, not a refusal.
+def updates_answer(app, header, remote):
 	# The header frame comes from the publisher's own handler, not from
 	# core, so it is exactly as untrusted as the body.
 	if type(header) != "dict":
@@ -481,9 +493,9 @@ def updates_query(app, publisher):
 
 # Check for updates for all installed apps. Per-publisher version queries are
 # cached in updates_cache for UPDATES_CACHE_TTL seconds, and what the cache does
-# not cover is bounded by UPDATES_BUDGET: apps past it are reported from their
-# last answer, and successive calls refresh the rest oldest-first. Without
-# either, this is one sequential P2P round trip per installed app.
+# not cover is asked of the publishers together and bounded by UPDATES_BUDGET:
+# apps past it are reported from their last answer, and successive calls
+# refresh the rest oldest-first.
 def action_updates(a):
 	updates = []
 	started = mochi.time.now()
@@ -504,6 +516,9 @@ def action_updates(a):
 
 	all_apps = sorted(mochi.app.list(), key=staleness)
 
+	# What each app to report needs: an answer the cache holds, or one to ask
+	# its publisher for.
+	entries = []
 	for app in all_apps:
 		if app.get("engine") != "starlark":
 			continue
@@ -538,19 +553,49 @@ def action_updates(a):
 				elif cached["checked"] >= started - UPDATES_KEPT:
 					stale = held
 
+		entries.append({"app": app, "publisher": publisher, "track": user_track, "remote": remote, "stale": stale, "refused": False})
+
+	# Ask every publisher the cache does not answer for, within the budget.
+	# Each stream's open waits on its own handshake, so a core that asks them
+	# together (mochi.remote.requests) is asked a batch at a time and costs
+	# about one round trip for all of them, where asking one after another
+	# cost one per app. Past the budget, or when the publisher does not answer,
+	# an app is reported from its last answer, up to UPDATES_KEPT old, and asked
+	# again on a later call; leaving it out instead listed at most the half of
+	# the updates whose publishers answered in time. A publisher refusing the
+	# app outright leaves nothing on offer.
+	asks = [entry for entry in entries if entry["remote"] == None]
+	deadline = started + UPDATES_BUDGET
+	size = UPDATES_STREAMS if hasattr(mochi.remote, "requests") else 1
+	for first in range(0, len(asks), size):
+		if mochi.time.now() >= deadline:
+			break
+		requests = []
+		asked = []
+		for entry in asks[first:first + size]:
+			updates_stamp(entry["app"])
+			r = updates_request(entry["app"], entry["publisher"])
+			if r:
+				requests.append(r)
+				asked.append(entry)
+		# The batch's answers come back together, each read in full or not at
+		# all by the deadline, so a publisher that does not answer costs the
+		# others nothing; the next call asks the apps of batches not reached
+		# before those that were.
+		answers = updates_ask(requests, deadline) if requests else []
+		for i, entry in enumerate(asked):
+			answer = answers[i] or []
+			header = answer[0] if len(answer) > 0 else None
+			body = answer[1] if len(answer) > 1 else None
+			entry["remote"], entry["refused"] = updates_answer(entry["app"], header, body)
+
+	for entry in entries:
+		app, publisher, user_track = entry["app"], entry["publisher"], entry["track"]
+		remote = entry["remote"]
+		if remote == None and not entry["refused"]:
+			remote = entry["stale"]
 		if remote == None:
-			# Past the budget, or when the publisher does not answer, an app
-			# is reported from its last answer, up to UPDATES_KEPT old, and
-			# asked again on a later call. Leaving it out instead listed at
-			# most the half of the updates whose publishers answered in time.
-			# A publisher refusing the app outright leaves nothing on offer.
-			refused = False
-			if mochi.time.now() - started < UPDATES_BUDGET:
-				remote, refused = updates_query(app, publisher)
-			if remote == None and not refused:
-				remote = stale
-			if remote == None:
-				continue
+			continue
 
 		tracks = remote.get("tracks", [])
 		if type(tracks) not in ["list", "tuple"]:
